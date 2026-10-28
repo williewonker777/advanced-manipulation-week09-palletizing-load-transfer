@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "name": "final-baseline-tool-torque",
+    "controller": "torque_controller",
+    "detector": "my_detector",
+    "workers": 1,
+    "baseline": false,
+    "case_count": 1,
+    "elapsed_seconds": 1.5629768371582031,
+    "mem_available_gib_before": 12.794380187988281,
+    "integrity": {
+      "status": "ok",
+      "files": 20,
+      "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+    }
+  },
+  "results": [
+    {
+      "controller": "torque_controller",
+      "detector": "my_detector",
+      "pick_offset": [
+        0.03,
+        0.0,
+        0.0
+      ],
+      "case_id": 0,
+      "kind": "reference",
+      "mass": 8.0,
+      "com": [
+        0.02,
+        -0.01,
+        0.03
+      ],
+      "collision": null,
+      "rms_mm": 7.882588223142615,
+      "max_mm": 14.423593630717638,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 57.840024941337504,
+      "torque_step_place_nm": 72.16984827419414,
+      "table_force_place_max_n": 332.65471646704617,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 1,
+      "false_alarms_other": 0,
+      "timing": {
+        "controller": {
+          "samples": 6000,
+          "median_us": 14.255056157708168,
+          "p99_us": 32.93035202659667,
+          "max_us": 73.53001274168491
+        },
+        "detector": {
+          "samples": 6000,
+          "median_us": 84.12502938881516,
+          "p99_us": 173.3539230190221,
+          "max_us": 309.98908914625645
+        },
+        "combined": {
+          "samples": 6000,
+          "median_us": 98.79952995106578,
+          "p99_us": 201.51338423602292,
+          "max_us": 341.4680249989033
+        }
+      },
+      "runner_ctrl_median_us": 15.030032955110073,
+      "torque_jitter_nm": 0.35472802628472944,
+      "tool_contact_peak_n": 29.660953407093906,
+      "tool_contact_first_s": 1.304,
+      "r_peak_nm": [
+        22.731862306165702,
+        149.57322413243767,
+        61.84239865748681,
+        5.1428250431158045,
+        8.65132220358884,
+        0.9692880545800029
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 1,
+      "tool_contact_delay_ms": 19.0
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "servo": {
+    "tests": {
+      "pick_reduction_75pct": true,
+      "place_reduction_75pct": true,
+      "table_le_1p1mg": true,
+      "tcp_max_le_baseline": true,
+      "zero_saturation": true,
+      "zero_false_alarms_all_official_masses": true,
+      "no_prior_or_indistinguishable": true,
+      "transport_minimum_below_15n": false,
+      "same_pc_delay_no_regression": false,
+      "strict_observed_every_cycle_below_1ms": false
+    },
+    "observed_max_us": 3267.6509581506252,
+    "delay_comparisons": [
+      {
+        "time_s": 3.0,
+        "force": "15N",
+        "baseline_ms": 68.0,
+        "final_ms": 83.0,
+        "no_regression": false
+      },
+      {
+        "time_s": 3.0,
+        "force": "40N",
+        "baseline_ms": 26.0,
+        "final_ms": 27.0,
+        "no_regression": false
+      },
+      {
+        "time_s": 3.0,
+        "force": "100N",
+        "baseline_ms": 17.0,
+        "final_ms": 18.0,
+        "no_regression": false
+      }
+    ],
+    "pick_reduction_pct": 83.1304347826087,
+    "place_reduction_pct": 80.21680216802169,
+    "sustained_pre_release_handover": false,
+    "overall_acceptance": false
+  },
+  "torque": {
+    "tests": {
+      "pick_reduction_75pct": true,
+      "place_reduction_75pct": true,
+      "table_le_1p1mg": true,
+      "tcp_max_le_baseline": true,
+      "zero_saturation": true,
+      "zero_false_alarms_all_official_masses": true,
+      "no_prior_or_indistinguishable": true,
+      "transport_minimum_below_15n": false,
+      "same_pc_delay_no_regression": false,
+      "strict_observed_every_cycle_below_1ms": false
+    },
+    "observed_max_us": 3205.082146450877,
+    "delay_comparisons": [
+      {
+        "time_s": 3.0,
+        "force": "10N",
+        "baseline_ms": 97.0,
+        "final_ms": null,
+        "no_regression": false
+      },
+      {
+        "time_s": 3.0,
+        "force": "15N",
+        "baseline_ms": 68.0,
+        "final_ms": 83.0,
+        "no_regression": false
+      },
+      {
+        "time_s": 3.0,
+        "force": "40N",
+        "baseline_ms": 27.0,
+        "final_ms": 26.0,
+        "no_regression": true
+      },
+      {
+        "time_s": 3.0,
+        "force": "100N",
+        "baseline_ms": 17.0,
+        "final_ms": 18.0,
+        "no_regression": false
+      }
+    ],
+    "pick_reduction_pct": 84.26573426573427,
+    "place_reduction_pct": 82.48663101604278,
+    "sustained_pre_release_handover": false,
+    "overall_acceptance": false
+  }
+}

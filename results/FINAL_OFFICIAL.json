@@ -1,0 +1,903 @@
+{
+  "official": true,
+  "source": "evaluate_checked.py -> unchanged evaluate.py",
+  "source_sha256": {
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "fbb3cef5c81fd34a076bca69ae7ea3eac4ed2221a9cef39a37e40d6142f8f8dd"
+  },
+  "mem_available_gib_before": 13.192081451416016,
+  "elapsed_seconds": 165.2813447479857,
+  "combinations": {
+    "servo_base_base": {
+      "controller": "servo_controller",
+      "detector": "collision_detector",
+      "control": {
+        "0.0": {
+          "rms_mm": 4.69,
+          "max_mm": 10.49,
+          "saturation_pct": 0.0,
+          "pick_nm": 3.7,
+          "place_nm": 3.3,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 5.37,
+          "max_mm": 12.4,
+          "saturation_pct": 0.0,
+          "pick_nm": 28.6,
+          "place_nm": 38.4,
+          "table_n": 54.0,
+          "false_alarms": [
+            2,
+            4,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 6.14,
+          "max_mm": 14.0,
+          "saturation_pct": 0.0,
+          "pick_nm": 57.5,
+          "place_nm": 73.8,
+          "table_n": 101.0,
+          "false_alarms": [
+            5,
+            2,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "28",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "97",
+          "40N": "28",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "10N": "50",
+          "15N": "50",
+          "40N": "31",
+          "100N": "20",
+          "false_max": "0회",
+          "minimum": "10 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "10N": "구분 불가",
+          "15N": "구분 불가",
+          "40N": "구분 불가",
+          "100N": "구분 불가",
+          "false_max": "4회",
+          "minimum": "—"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "68",
+          "40N": "26",
+          "100N": "17",
+          "false_max": "8회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "10N": "경보 중",
+          "15N": "경보 중",
+          "40N": "경보 중",
+          "100N": "경보 중",
+          "false_max": "6회",
+          "minimum": "—"
+        }
+      ]
+    },
+    "servo_base_final": {
+      "controller": "servo_controller",
+      "detector": "my_detector",
+      "control": {
+        "0.0": {
+          "rms_mm": 4.69,
+          "max_mm": 10.49,
+          "saturation_pct": 0.0,
+          "pick_nm": 3.7,
+          "place_nm": 3.3,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 5.37,
+          "max_mm": 12.4,
+          "saturation_pct": 0.0,
+          "pick_nm": 28.6,
+          "place_nm": 38.4,
+          "table_n": 54.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 6.14,
+          "max_mm": 14.0,
+          "saturation_pct": 0.0,
+          "pick_nm": 57.5,
+          "place_nm": 73.8,
+          "table_n": 101.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "36",
+          "100N": "23",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "74",
+          "40N": "27",
+          "100N": "18",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "78",
+          "40N": "28",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "34",
+          "100N": "22",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "77",
+          "40N": "24",
+          "100N": "18",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "64",
+          "40N": "42",
+          "100N": "27",
+          "false_max": "0회",
+          "minimum": "15 N"
+        }
+      ]
+    },
+    "servo_final_base": {
+      "controller": "my_servo",
+      "detector": "collision_detector",
+      "control": {
+        "0.0": {
+          "rms_mm": 1.18,
+          "max_mm": 3.94,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 5.1,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 1.15,
+          "max_mm": 3.79,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 7.6,
+          "table_n": 40.0,
+          "false_alarms": [
+            4,
+            1,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 1.17,
+          "max_mm": 3.91,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 14.6,
+          "table_n": 79.0,
+          "false_alarms": [
+            3,
+            7,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "27",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "28",
+          "100N": "17",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "43",
+          "40N": "29",
+          "100N": "20",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "10N": "경보 중",
+          "15N": "경보 중",
+          "40N": "경보 중",
+          "100N": "경보 중",
+          "false_max": "9회",
+          "minimum": "—"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "26",
+          "100N": "17",
+          "false_max": "13회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "10N": "경보 중",
+          "15N": "경보 중",
+          "40N": "경보 중",
+          "100N": "경보 중",
+          "false_max": "4회",
+          "minimum": "—"
+        }
+      ]
+    },
+    "servo_final_final": {
+      "controller": "my_servo",
+      "detector": "my_detector",
+      "control": {
+        "0.0": {
+          "rms_mm": 1.18,
+          "max_mm": 3.94,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 5.1,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 1.15,
+          "max_mm": 3.79,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 7.6,
+          "table_n": 40.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 1.17,
+          "max_mm": 3.91,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 14.6,
+          "table_n": 79.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "36",
+          "100N": "23",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "62",
+          "40N": "25",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "78",
+          "40N": "31",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "36",
+          "100N": "24",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "83",
+          "40N": "27",
+          "100N": "18",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "69",
+          "40N": "33",
+          "100N": "21",
+          "false_max": "0회",
+          "minimum": "15 N"
+        }
+      ]
+    },
+    "torque_base_base": {
+      "controller": "torque_controller",
+      "detector": "collision_detector",
+      "control": {
+        "0.0": {
+          "rms_mm": 6.27,
+          "max_mm": 13.1,
+          "saturation_pct": 0.0,
+          "pick_nm": 4.7,
+          "place_nm": 5.3,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 6.58,
+          "max_mm": 13.1,
+          "saturation_pct": 0.0,
+          "pick_nm": 28.2,
+          "place_nm": 38.8,
+          "table_n": 199.0,
+          "false_alarms": [
+            3,
+            3,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 7.04,
+          "max_mm": 13.18,
+          "saturation_pct": 0.0,
+          "pick_nm": 57.2,
+          "place_nm": 74.8,
+          "table_n": 295.0,
+          "false_alarms": [
+            5,
+            4,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "27",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "27",
+          "100N": "17",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "70",
+          "40N": "29",
+          "100N": "20",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "10N": "경보 중",
+          "15N": "경보 중",
+          "40N": "경보 중",
+          "100N": "경보 중",
+          "false_max": "8회",
+          "minimum": "—"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "10N": "97",
+          "15N": "68",
+          "40N": "27",
+          "100N": "17",
+          "false_max": "12회",
+          "minimum": "10 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "10N": "경보 중",
+          "15N": "경보 중",
+          "40N": "경보 중",
+          "100N": "경보 중",
+          "false_max": "7회",
+          "minimum": "—"
+        }
+      ]
+    },
+    "torque_base_final": {
+      "controller": "torque_controller",
+      "detector": "my_detector",
+      "control": {
+        "0.0": {
+          "rms_mm": 6.27,
+          "max_mm": 13.1,
+          "saturation_pct": 0.0,
+          "pick_nm": 4.7,
+          "place_nm": 5.3,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 6.58,
+          "max_mm": 13.1,
+          "saturation_pct": 0.0,
+          "pick_nm": 28.2,
+          "place_nm": 38.8,
+          "table_n": 199.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 7.04,
+          "max_mm": 13.18,
+          "saturation_pct": 0.0,
+          "pick_nm": 57.2,
+          "place_nm": 74.8,
+          "table_n": 295.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "36",
+          "100N": "24",
+          "false_max": "1회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "68",
+          "40N": "27",
+          "100N": "18",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "88",
+          "40N": "28",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "42",
+          "100N": "24",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "85",
+          "40N": "29",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "61",
+          "40N": "40",
+          "100N": "25",
+          "false_max": "0회",
+          "minimum": "15 N"
+        }
+      ]
+    },
+    "torque_final_base": {
+      "controller": "my_torque",
+      "detector": "collision_detector",
+      "control": {
+        "0.0": {
+          "rms_mm": 2.09,
+          "max_mm": 4.05,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 4.8,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 2.32,
+          "max_mm": 4.42,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 6.8,
+          "table_n": 39.0,
+          "false_alarms": [
+            3,
+            3,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 3.23,
+          "max_mm": 8.44,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 13.1,
+          "table_n": 80.0,
+          "false_alarms": [
+            5,
+            9,
+            3
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "28",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "97",
+          "40N": "28",
+          "100N": "17",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "43",
+          "40N": "31",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "10N": "경보 중",
+          "15N": "경보 중",
+          "40N": "경보 중",
+          "100N": "경보 중",
+          "false_max": "16회",
+          "minimum": "—"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "68",
+          "40N": "26",
+          "100N": "17",
+          "false_max": "19회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "10N": "구분 불가",
+          "15N": "구분 불가",
+          "40N": "구분 불가",
+          "100N": "구분 불가",
+          "false_max": "9회",
+          "minimum": "—"
+        }
+      ]
+    },
+    "torque_final_final": {
+      "controller": "my_torque",
+      "detector": "my_detector",
+      "control": {
+        "0.0": {
+          "rms_mm": 2.09,
+          "max_mm": 4.05,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 4.8,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 2.32,
+          "max_mm": 4.42,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 6.8,
+          "table_n": 39.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 3.23,
+          "max_mm": 8.44,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 13.1,
+          "table_n": 80.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "37",
+          "100N": "22",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "83",
+          "40N": "27",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "78",
+          "40N": "30",
+          "100N": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "10N": "놓침",
+          "15N": "놓침",
+          "40N": "36",
+          "100N": "24",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "10N": "놓침",
+          "15N": "83",
+          "40N": "26",
+          "100N": "18",
+          "false_max": "1회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "10N": "놓침",
+          "15N": "91",
+          "40N": "42",
+          "100N": "22",
+          "false_max": "0회",
+          "minimum": "15 N"
+        }
+      ]
+    }
+  },
+  "post_run_audit_evaluation_sha256": {
+    "servo_base_base": "b94cbb35560d7b54b77b373c74154aa099ac6c17613206448baa4751c4b2df64",
+    "servo_base_final": "ab5f922a9257cc4e142e36eab64200f27694719bf6a299f54c71e1f7888484dd",
+    "servo_final_base": "ad8d391173e9380032ed4cf899f640bd4925cd688440c8d8705e41358de68d09",
+    "servo_final_final": "601b6ad12b2b32b355f4ad6a8c5c4d47ecd90a42bb29bc7b395110bd758141e5",
+    "torque_base_base": "d0f4d5fc3614dd34385eb5a0667f5bdbe1053922f995139cc9eb9f8d1c7414f7",
+    "torque_base_final": "3ac259d202c753c68c6412e5af9830c783b20b2a648c779f4293f6d530814bce",
+    "torque_final_base": "d83f37b00086592e538fd6a7439ef41b06fef52a2b9a7abf04f371ba5de6ef12",
+    "torque_final_final": "e756760a8d85af2dbba64291fbb37848d6ffbb39c4e205d3e61b4b7ded016f01"
+  }
+}

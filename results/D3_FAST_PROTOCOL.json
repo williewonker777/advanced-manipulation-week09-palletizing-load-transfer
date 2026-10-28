@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "created_before_fast_candidate_collection": true,
+  "purpose": "collision-blind calibration of a direction-neutral grip-off fast channel and mass-aware table gate",
+  "frozen_reference_detector_sha256": "2563972c5f9790904b8c7721be0e0d619484977369059ef0845ff06c0ad437ef",
+  "upstream_changes": {
+    "V": "unchanged after D3_STATE_PROTOCOL rejected every candidate",
+    "B": "unchanged",
+    "W_main": "table explanation additionally requires box_mass > 0; reconstruction/projection unchanged",
+    "fast_channel": "before updating an EMA, innovation = raw reconstructed wrench - EMA; EMA alpha=observer_gain*dt=0.05; channel enabled only while grip=0; grip=1 clears its persistence counter",
+    "jacobian_conditioning": "unchanged solve/lstsq fallback; D1 observed condition <=8, so no unsupported regularization is added"
+  },
+  "prohibited_selection_inputs": [
+    "collision or pick-offset episodes",
+    "collision time, direction, force, or delay",
+    "configured JTS offset, drift, or seed"
+  ],
+  "sampling": {
+    "training_seed": 9363,
+    "holdout_seed": 10363,
+    "training_cases": 12,
+    "holdout_cases": 6,
+    "controllers": ["servo_controller", "torque_controller"],
+    "mass_kg": "training includes 0 and 8 plus continuous uniform [0,8]",
+    "com_grid_m": {"x": [-0.08, 0.0, 0.08], "y": [-0.05, 0.0, 0.05], "z": [-0.04, 0.0, 0.04]},
+    "collision": null
+  },
+  "features": {
+    "main_groups": ["max(abs Fx,abs Fy)", "negative Fz", "max(abs Mx,abs My)", "abs Mz", "out-of-height positive Fz"],
+    "fast_groups": ["max(abs innovation Fx,abs innovation Fy)", "negative innovation Fz", "max(abs innovation Mx,abs innovation My)", "abs innovation Mz", "positive innovation Fz"],
+    "symmetry": "Fx=Fy and Mx=My in both channels",
+    "units": ["N", "N", "N m", "N m", "N"]
+  },
+  "selection": {
+    "main_persistence_candidates": [4, 8, 16, 32],
+    "fast_persistence_candidates": [2, 4, 8],
+    "base": "maximum training sliding-window minimum amplitude per group",
+    "threshold": "1.25*base + unit margin; then shared feature-switch scale max(1,1.25*q)",
+    "unit_margins": [0.5, 0.5, 0.05, 0.05, 0.5],
+    "noise_scale": "max(1.4826*MAD,unit margin)",
+    "channel_cost": "mean(log1p(threshold/noise_scale))+persistence/20",
+    "joint_cost": "main channel cost + fast channel cost",
+    "selection_rule": "minimum joint cost; exact tie lower main persistence then lower fast persistence"
+  },
+  "validation": {
+    "cold_collection": "both alarms forced false so provisional thresholds cannot alter bias freeze",
+    "training_replay": "normal combined alarm; up to two training-only 10% score-derived inflation passes",
+    "holdout": "one validation pass only; never fit",
+    "collision_testing": "forbidden until protocol, selected parameters, training, holdout, and production SHA are leader-reviewed and frozen"
+  }
+}

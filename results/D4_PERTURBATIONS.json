@@ -1,0 +1,548 @@
+{
+  "classification": "supplemental analysis-only perturbations; not official evaluate.py",
+  "case_count": 50,
+  "source_sha256": {
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "fbb3cef5c81fd34a076bca69ae7ea3eac4ed2221a9cef39a37e40d6142f8f8dd"
+  },
+  "nominal_parity": {
+    "result_equal_except_timing": true,
+    "arrays_bit_exact": {
+      "t": true,
+      "e_mm": true,
+      "q": true,
+      "q_d": true,
+      "tau": true,
+      "f_table": true,
+      "f_tool": true,
+      "f_ext": true
+    }
+  },
+  "modes": {
+    "servo": {
+      "noncollision": {
+        "max_rms_mm": 1.8867708815766984,
+        "max_max_mm": 5.277437770364345,
+        "max_pick_step_Nm": 9.656772698279909,
+        "max_place_step_Nm": 16.30821313409254,
+        "max_place_force_N": 86.68822889382565,
+        "max_saturation_pct": 0.0,
+        "max_ctrl_median_us": 27.820002287626266,
+        "divergence_count": 0,
+        "false_alarm_count": 4
+      },
+      "families": {
+        "noise": {
+          "max_rms_mm": 1.1806563303787447,
+          "max_max_mm": 3.939669892446793,
+          "max_pick_step_Nm": 9.656772698279909,
+          "max_place_step_Nm": 15.394099057517394,
+          "max_place_force_N": 78.83059423322081,
+          "max_saturation_pct": 0.0,
+          "max_ctrl_median_us": 27.820002287626266,
+          "divergence_count": 0,
+          "false_alarm_count": 0
+        },
+        "friction": {
+          "max_rms_mm": 1.6252673377817919,
+          "max_max_mm": 4.653917611030734,
+          "max_pick_step_Nm": 9.649336099743593,
+          "max_place_step_Nm": 15.266091965881571,
+          "max_place_force_N": 78.91426147879103,
+          "max_saturation_pct": 0.0,
+          "max_ctrl_median_us": 27.760048396885395,
+          "divergence_count": 0,
+          "false_alarm_count": 0
+        },
+        "stiffness": {
+          "max_rms_mm": 1.7793363962804396,
+          "max_max_mm": 5.277437770364345,
+          "max_pick_step_Nm": 9.02734634169849,
+          "max_place_step_Nm": 16.30821313409254,
+          "max_place_force_N": 86.68822889382565,
+          "max_saturation_pct": 0.0,
+          "max_ctrl_median_us": 27.769943699240685,
+          "divergence_count": 0,
+          "false_alarm_count": 2
+        },
+        "corner": {
+          "max_rms_mm": 1.8867708815766984,
+          "max_max_mm": 4.7592577407473495,
+          "max_pick_step_Nm": 9.018951355529325,
+          "max_place_step_Nm": 16.187871357402912,
+          "max_place_force_N": 79.1343667538282,
+          "max_saturation_pct": 0.0,
+          "max_ctrl_median_us": 27.54002343863249,
+          "divergence_count": 0,
+          "false_alarm_count": 2
+        }
+      }
+    },
+    "torque": {
+      "noncollision": {
+        "max_rms_mm": 9.969711979305998,
+        "max_max_mm": 17.259889077753574,
+        "max_pick_step_Nm": 9.16774133942944,
+        "max_place_step_Nm": 14.674388326535478,
+        "max_place_force_N": 138.45885628856593,
+        "max_saturation_pct": 0.0,
+        "max_ctrl_median_us": 30.910014174878597,
+        "divergence_count": 0,
+        "false_alarm_count": 7
+      },
+      "families": {
+        "noise": {
+          "max_rms_mm": 3.236294978675589,
+          "max_max_mm": 8.453077274935383,
+          "max_pick_step_Nm": 8.98074462611001,
+          "max_place_step_Nm": 13.172105270023138,
+          "max_place_force_N": 79.59183643774114,
+          "max_saturation_pct": 0.0,
+          "max_ctrl_median_us": 30.82898911088705,
+          "divergence_count": 0,
+          "false_alarm_count": 0
+        },
+        "friction": {
+          "max_rms_mm": 9.969711979305998,
+          "max_max_mm": 16.929011259580403,
+          "max_pick_step_Nm": 9.009832296465348,
+          "max_place_step_Nm": 13.302915378176635,
+          "max_place_force_N": 115.2196642411497,
+          "max_saturation_pct": 0.0,
+          "max_ctrl_median_us": 30.52898682653904,
+          "divergence_count": 0,
+          "false_alarm_count": 0
+        },
+        "stiffness": {
+          "max_rms_mm": 3.9422653698215515,
+          "max_max_mm": 9.80608526716789,
+          "max_pick_step_Nm": 9.16774133942944,
+          "max_place_step_Nm": 14.483923768412694,
+          "max_place_force_N": 80.38603265428267,
+          "max_saturation_pct": 0.0,
+          "max_ctrl_median_us": 30.589988455176353,
+          "divergence_count": 0,
+          "false_alarm_count": 4
+        },
+        "corner": {
+          "max_rms_mm": 9.760859252997246,
+          "max_max_mm": 17.259889077753574,
+          "max_pick_step_Nm": 9.023484728211699,
+          "max_place_step_Nm": 14.674388326535478,
+          "max_place_force_N": 138.45885628856593,
+          "max_saturation_pct": 0.0,
+          "max_ctrl_median_us": 30.910014174878597,
+          "divergence_count": 0,
+          "false_alarm_count": 3
+        }
+      }
+    }
+  },
+  "failures": [
+    {
+      "mode": "servo",
+      "family": "friction",
+      "seed": 7,
+      "mass": 4.3,
+      "viscous_scale": 0.8,
+      "stiffness_scale": 1.0,
+      "coulomb_scale": 0.8,
+      "max_mm": 4.490255003018129,
+      "place_force_N": 50.66042851829035,
+      "saturation_pct": 0.0,
+      "false_alarms": 0,
+      "reasons": [
+        "place_force>1.1mg"
+      ]
+    },
+    {
+      "mode": "servo",
+      "family": "stiffness",
+      "seed": 7,
+      "mass": 4.3,
+      "viscous_scale": 1.0,
+      "stiffness_scale": 0.8,
+      "coulomb_scale": 1.0,
+      "max_mm": 5.014904934100907,
+      "place_force_N": 59.27193417138518,
+      "saturation_pct": 0.0,
+      "false_alarms": 0,
+      "reasons": [
+        "place_force>1.1mg"
+      ]
+    },
+    {
+      "mode": "servo",
+      "family": "stiffness",
+      "seed": 7,
+      "mass": 8.0,
+      "viscous_scale": 1.0,
+      "stiffness_scale": 0.8,
+      "coulomb_scale": 1.0,
+      "max_mm": 5.277437770364345,
+      "place_force_N": 86.68822889382565,
+      "saturation_pct": 0.0,
+      "false_alarms": 1,
+      "reasons": [
+        "place_force>1.1mg",
+        "false_alarm"
+      ]
+    },
+    {
+      "mode": "servo",
+      "family": "stiffness",
+      "seed": 7,
+      "mass": 8.0,
+      "viscous_scale": 1.0,
+      "stiffness_scale": 1.2,
+      "coulomb_scale": 1.0,
+      "max_mm": 3.297792167486216,
+      "place_force_N": 79.0327064879482,
+      "saturation_pct": 0.0,
+      "false_alarms": 1,
+      "reasons": [
+        "false_alarm"
+      ]
+    },
+    {
+      "mode": "servo",
+      "family": "corner",
+      "seed": 7,
+      "mass": 8.0,
+      "viscous_scale": 0.8,
+      "stiffness_scale": 1.2,
+      "coulomb_scale": 0.8,
+      "max_mm": 4.261457798946871,
+      "place_force_N": 79.1343667538282,
+      "saturation_pct": 0.0,
+      "false_alarms": 1,
+      "reasons": [
+        "false_alarm"
+      ]
+    },
+    {
+      "mode": "servo",
+      "family": "corner",
+      "seed": 7,
+      "mass": 8.0,
+      "viscous_scale": 1.2,
+      "stiffness_scale": 0.8,
+      "coulomb_scale": 1.2,
+      "max_mm": 4.7592577407473495,
+      "place_force_N": 78.72586242899558,
+      "saturation_pct": 0.0,
+      "false_alarms": 1,
+      "reasons": [
+        "false_alarm"
+      ]
+    },
+    {
+      "mode": "torque",
+      "family": "friction",
+      "seed": 7,
+      "mass": 4.3,
+      "viscous_scale": 0.8,
+      "stiffness_scale": 1.0,
+      "coulomb_scale": 0.8,
+      "max_mm": 16.708440052677897,
+      "place_force_N": 50.71242661757145,
+      "saturation_pct": 0.0,
+      "false_alarms": 0,
+      "reasons": [
+        "max_tcp>14mm",
+        "place_force>1.1mg"
+      ]
+    },
+    {
+      "mode": "torque",
+      "family": "friction",
+      "seed": 7,
+      "mass": 8.0,
+      "viscous_scale": 0.8,
+      "stiffness_scale": 1.0,
+      "coulomb_scale": 0.8,
+      "max_mm": 16.929011259580403,
+      "place_force_N": 81.54851899947727,
+      "saturation_pct": 0.0,
+      "false_alarms": 0,
+      "reasons": [
+        "max_tcp>14mm"
+      ]
+    },
+    {
+      "mode": "torque",
+      "family": "stiffness",
+      "seed": 7,
+      "mass": 8.0,
+      "viscous_scale": 1.0,
+      "stiffness_scale": 0.8,
+      "coulomb_scale": 1.0,
+      "max_mm": 9.80608526716789,
+      "place_force_N": 79.28618238752112,
+      "saturation_pct": 0.0,
+      "false_alarms": 2,
+      "reasons": [
+        "false_alarm"
+      ]
+    },
+    {
+      "mode": "torque",
+      "family": "friction",
+      "seed": 7,
+      "mass": 4.3,
+      "viscous_scale": 1.2,
+      "stiffness_scale": 1.0,
+      "coulomb_scale": 1.2,
+      "max_mm": 11.121455772581259,
+      "place_force_N": 82.33684477835183,
+      "saturation_pct": 0.0,
+      "false_alarms": 0,
+      "reasons": [
+        "place_force>1.1mg"
+      ]
+    },
+    {
+      "mode": "torque",
+      "family": "friction",
+      "seed": 7,
+      "mass": 8.0,
+      "viscous_scale": 1.2,
+      "stiffness_scale": 1.0,
+      "coulomb_scale": 1.2,
+      "max_mm": 11.546312754240448,
+      "place_force_N": 115.2196642411497,
+      "saturation_pct": 0.0,
+      "false_alarms": 0,
+      "reasons": [
+        "place_force>1.1mg"
+      ]
+    },
+    {
+      "mode": "torque",
+      "family": "stiffness",
+      "seed": 7,
+      "mass": 8.0,
+      "viscous_scale": 1.0,
+      "stiffness_scale": 1.2,
+      "coulomb_scale": 1.0,
+      "max_mm": 8.051077493586607,
+      "place_force_N": 80.38603265428267,
+      "saturation_pct": 0.0,
+      "false_alarms": 2,
+      "reasons": [
+        "false_alarm"
+      ]
+    },
+    {
+      "mode": "torque",
+      "family": "corner",
+      "seed": 7,
+      "mass": 8.0,
+      "viscous_scale": 0.8,
+      "stiffness_scale": 1.2,
+      "coulomb_scale": 0.8,
+      "max_mm": 17.259889077753574,
+      "place_force_N": 80.82633875546198,
+      "saturation_pct": 0.0,
+      "false_alarms": 2,
+      "reasons": [
+        "max_tcp>14mm",
+        "false_alarm"
+      ]
+    },
+    {
+      "mode": "torque",
+      "family": "corner",
+      "seed": 7,
+      "mass": 8.0,
+      "viscous_scale": 1.2,
+      "stiffness_scale": 0.8,
+      "coulomb_scale": 1.2,
+      "max_mm": 12.680011925556137,
+      "place_force_N": 138.45885628856593,
+      "saturation_pct": 0.0,
+      "false_alarms": 1,
+      "reasons": [
+        "place_force>1.1mg",
+        "false_alarm"
+      ]
+    }
+  ],
+  "collisions": [
+    {
+      "mode": "servo",
+      "collision": [
+        3.0,
+        [
+          -40.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "detect_delay_ms": 32.00000000000003,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    },
+    {
+      "mode": "servo",
+      "collision": [
+        3.0,
+        [
+          40.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "detect_delay_ms": 26.000000000000245,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    },
+    {
+      "mode": "servo",
+      "collision": [
+        3.0,
+        [
+          0.0,
+          -40.0,
+          0.0
+        ]
+      ],
+      "detect_delay_ms": 30.00000000000025,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    },
+    {
+      "mode": "servo",
+      "collision": [
+        3.0,
+        [
+          0.0,
+          40.0,
+          0.0
+        ]
+      ],
+      "detect_delay_ms": 27.000000000000135,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    },
+    {
+      "mode": "servo",
+      "collision": [
+        3.0,
+        [
+          0.0,
+          0.0,
+          -40.0
+        ]
+      ],
+      "detect_delay_ms": 31.00000000000014,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    },
+    {
+      "mode": "servo",
+      "collision": [
+        3.0,
+        [
+          0.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "detect_delay_ms": 44.00000000000004,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    },
+    {
+      "mode": "torque",
+      "collision": [
+        3.0,
+        [
+          -40.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "detect_delay_ms": 34.000000000000256,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    },
+    {
+      "mode": "torque",
+      "collision": [
+        3.0,
+        [
+          40.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "detect_delay_ms": 26.000000000000245,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    },
+    {
+      "mode": "torque",
+      "collision": [
+        3.0,
+        [
+          0.0,
+          -40.0,
+          0.0
+        ]
+      ],
+      "detect_delay_ms": 30.00000000000025,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    },
+    {
+      "mode": "torque",
+      "collision": [
+        3.0,
+        [
+          0.0,
+          40.0,
+          0.0
+        ]
+      ],
+      "detect_delay_ms": 26.000000000000245,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    },
+    {
+      "mode": "torque",
+      "collision": [
+        3.0,
+        [
+          0.0,
+          0.0,
+          -40.0
+        ]
+      ],
+      "detect_delay_ms": 31.00000000000014,
+      "alarm_before_collision": false,
+      "false_alarms": 1
+    },
+    {
+      "mode": "torque",
+      "collision": [
+        3.0,
+        [
+          0.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "detect_delay_ms": 48.99999999999993,
+      "alarm_before_collision": false,
+      "false_alarms": 0
+    }
+  ],
+  "shared_core_provenance": {
+    "freeze_declared_sha256": "0da0416695399b38293ff3052a91451031017e5ec220aaca57262d5a1137da53",
+    "template_file_sha256": "fd72678e4625f3b15bb241288891e2c51c597550c74fade21b81ccdd8edaf8ec",
+    "embedded_class_source_sha256": "303eb45945eeb6080ffc5b72e7fe23f9fa99d41a715aadfb67dcd64a232d8320",
+    "embedded_class_equal_across_A_B_D_and_template": true
+  }
+}

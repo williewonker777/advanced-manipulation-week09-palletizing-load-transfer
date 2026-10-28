@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "created_before_candidate_runs": true,
+  "purpose": "bounded no-collision-only causal link-state estimator comparison",
+  "frozen_reference_detector_sha256": "2563972c5f9790904b8c7721be0e0d619484977369059ef0845ff06c0ad437ef",
+  "collision_information_used": false,
+  "oracle": "analysis-only true-state momentum observer from tools/analysis_wrench.py; never fed production",
+  "episodes": {
+    "controller": "unchanged servo_controller",
+    "masses_kg": [0, 4, 8],
+    "com_m": [0.02, -0.01, 0.03],
+    "collisions": null
+  },
+  "windows_s": {
+    "pick": [1.39, 1.5],
+    "transport": [1.8, 3.6],
+    "place": [3.8, 3.95]
+  },
+  "candidate_grid": [
+    {"name": "lead0", "lead_s": 0.0, "deflection_alpha": 0.2, "velocity_alpha": 0.2},
+    {"name": "lead0p5", "lead_s": 0.0005, "deflection_alpha": 0.2, "velocity_alpha": 0.2},
+    {"name": "current", "lead_s": 0.001, "deflection_alpha": 0.2, "velocity_alpha": 0.2},
+    {"name": "lead1p5", "lead_s": 0.0015, "deflection_alpha": 0.2, "velocity_alpha": 0.2},
+    {"name": "defl_slow", "lead_s": 0.001, "deflection_alpha": 0.1, "velocity_alpha": 0.2},
+    {"name": "defl_fast", "lead_s": 0.001, "deflection_alpha": 0.3, "velocity_alpha": 0.2},
+    {"name": "velocity_slow", "lead_s": 0.001, "deflection_alpha": 0.2, "velocity_alpha": 0.1},
+    {"name": "velocity_fast", "lead_s": 0.001, "deflection_alpha": 0.2, "velocity_alpha": 0.3}
+  ],
+  "bias_for_isolation": "disabled in every candidate; comparison isolates V",
+  "metrics": {
+    "primary": "mean force RMSE against oracle across 3 masses x 3 windows",
+    "secondary": "mean absolute error of positive Fz peak across the same windows",
+    "guard": "no individual force-RMSE window may exceed current by more than 10%"
+  },
+  "selection": "lowest primary metric among guarded candidates; tie within 0.1% chooses lower secondary, then current",
+  "adoption": "no production edit unless selected candidate beats current primary and secondary; any adoption requires fresh collision-blind symmetric T calibration before collision testing"
+}
