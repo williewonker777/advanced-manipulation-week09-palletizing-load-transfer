@@ -5,7 +5,7 @@
 Same-PC recorded environment: Ubuntu 24.04, Python 3.12.3, MuJoCo 3.17.0,
 NumPy 2.5.4, Matplotlib 3.11.2. Full package versions: results/ENV.md.
 Obtain the course kit independently; this project contains no simulator/models.
-Use a disposable work copy. Overlay our files without changing protected trees.
+Use a disposable work copy. Overlay our three final modules and tools without changing protected trees; create `results/` before evaluator output. For published artifact/README tests and media validation, also copy our `results/` and `artifacts/media/` into the work copy.
 
 On a Python installation without ensurepip, the recorded installation method is:
 
@@ -61,8 +61,14 @@ Do not use collision labels to change thresholds or fit holdout cases.
 
 ## Public package check (no kit needed)
 
+Media inspection requires a local `ffprobe`; add it to PATH or pass `--ffprobe`.
+An unreadable media file or unavailable probe fails the check rather than skipping it.
+
 ```bash
-python3 tools/audit_public.py .
+FFPROBE="$(command -v ffprobe)"
+test -n "$FFPROBE"
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 python3 tools/audit_public.py . --require-media --ffprobe "$FFPROBE"
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 python3 tools/validate_media.py --root . --ffprobe "$FFPROBE"
 sha256sum -c artifacts/SHA256SUMS
 ```
 

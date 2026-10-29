@@ -1,0 +1,734 @@
+{
+  "schema_version": 1,
+  "generation_command": "env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 MUJOCO_GL=glfw LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe __GLX_VENDOR_LIBRARY_NAME=mesa .venv/bin/python tools/render_comparison.py --output-dir artifacts/media --raw-dir \"$RAW_DIR\" --ffmpeg ffmpeg",
+  "simulation_source": "eight fresh unmodified sim.runner.run_episode media episodes plus eight independent run.py verification episodes",
+  "rendering_note": "qpos replay in separate MjData; physical geometry is actual scale; desired TCP marker radius is 15 mm; anchored 3D force arrow scale is 0.20 m per 15 N; separate depth-independent 2D direction legend is display-only, projects world +y through the camera, and is normalized to 85 px at 15 N",
+  "force_plot_note": "detector joint residual converted offline with analysis-only true link q to bottom-centre wrench; never fed to control or detection; collision panel overlays the actual trapezoidal +y applied-force waveform",
+  "ffmpeg": "ffmpeg version 7.1.1",
+  "integrity_before": {
+    "status": "ok",
+    "files": 20,
+    "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "integrity_after": {
+    "status": "ok",
+    "files": 20,
+    "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "total_media_bytes": 3185250,
+  "scenarios": [
+    {
+      "name": "01_servo_no_collision",
+      "condition": {
+        "box_mass_kg": 8.0,
+        "box_com_m": [
+          0.02,
+          -0.01,
+          0.03
+        ],
+        "collision": null
+      },
+      "combination": {
+        "baseline": "servo_controller + collision_detector",
+        "ours": "my_servo + my_detector"
+      },
+      "timewarp": [
+        {
+          "simulation_start_s": 0.0,
+          "simulation_end_s": 1.25,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 1.25,
+          "simulation_end_s": 1.7,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 1.7,
+          "simulation_end_s": 3.65,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 3.65,
+          "simulation_end_s": 4.2,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 4.2,
+          "simulation_end_s": 6.0,
+          "playback_speed": 1.3
+        }
+      ],
+      "source_simulation_frames": 6000,
+      "rendered_frame_count": 101,
+      "software_gl": {
+        "vendor": "Mesa",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "version": "4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2"
+      },
+      "run_py_equivalent": {
+        "baseline": {
+          "tcp_rms_mm": 6.14,
+          "tcp_max_mm": 14.0,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.16,
+          "false_alarm_rises_in_this_episode": 7,
+          "false_alarm_times_s": [
+            1.402,
+            1.425,
+            1.428,
+            1.432,
+            1.435,
+            3.858,
+            3.912
+          ],
+          "detect_delay_ms_raw": null,
+          "alarm_before_collision": false,
+          "diverged": false
+        },
+        "ours": {
+          "tcp_rms_mm": 1.17,
+          "tcp_max_mm": 3.91,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.154,
+          "false_alarm_rises_in_this_episode": 0,
+          "false_alarm_times_s": [],
+          "detect_delay_ms_raw": null,
+          "alarm_before_collision": false,
+          "diverged": false
+        }
+      },
+      "run_py_validation": {
+        "baseline": {
+          "command": ".venv/bin/python run.py --box 8 --ctrl servo_controller --detector collision_detector --plot $RAW_DIR/run_py/01_servo_no_collision_baseline.png",
+          "parsed": {
+            "tcp_rms_mm": 6.14,
+            "tcp_max_mm": 14.0,
+            "saturation_pct": 0.0,
+            "torque_jitter": 0.16,
+            "false_alarm_rises_in_this_episode": 7,
+            "alarm_before_collision": false,
+            "detect_delay_ms_raw": null
+          },
+          "matches_direct_run_episode": true
+        },
+        "ours": {
+          "command": ".venv/bin/python run.py --box 8 --ctrl my_servo --detector my_detector --plot $RAW_DIR/run_py/01_servo_no_collision_ours.png",
+          "parsed": {
+            "tcp_rms_mm": 1.17,
+            "tcp_max_mm": 3.91,
+            "saturation_pct": 0.0,
+            "torque_jitter": 0.15,
+            "false_alarm_rises_in_this_episode": 0,
+            "alarm_before_collision": false,
+            "detect_delay_ms_raw": null
+          },
+          "matches_direct_run_episode": true
+        }
+      },
+      "evaluate_classification": null,
+      "classification_method": "tools.sweep.classify_collision; alarm-before, miss, matching-reference active within +/-20 ms at detected-rise index, then detected",
+      "reference_no_collision": {
+        "baseline": {
+          "controller": "servo_controller",
+          "detector": "collision_detector",
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 7
+        },
+        "ours": {
+          "controller": "my_servo",
+          "detector": "my_detector",
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 0
+        },
+        "matching_rule": "this no-collision episode is the matching reference"
+      },
+      "artifacts": [
+        {
+          "file": "artifacts/media/01_servo_no_collision.mp4",
+          "bytes": 255553,
+          "sha256": "77c028d1f377eab39c4a2b33b80ea6e8140a1db52b7a27d9909bbfda3b5f0b7b",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "15/1",
+          "r_frame_rate": "15/1",
+          "fps": 15.000000742574294,
+          "frame_count": 101,
+          "duration_s": 6.733333
+        },
+        {
+          "file": "artifacts/media/01_servo_no_collision.gif",
+          "bytes": 521791,
+          "sha256": "60011731fc6a88ff7cbd7564f8fb79d1f8106047670b73bafc10b86918c39cc0",
+          "width": 640,
+          "height": 360,
+          "avg_frame_rate": "25/3",
+          "r_frame_rate": "8/1",
+          "fps": 7.988165680473373,
+          "frame_count": 54,
+          "duration_s": 6.76
+        }
+      ]
+    },
+    {
+      "name": "02_torque_no_collision",
+      "condition": {
+        "box_mass_kg": 8.0,
+        "box_com_m": [
+          0.02,
+          -0.01,
+          0.03
+        ],
+        "collision": null
+      },
+      "combination": {
+        "baseline": "torque_controller + collision_detector",
+        "ours": "my_torque + my_detector"
+      },
+      "timewarp": [
+        {
+          "simulation_start_s": 0.0,
+          "simulation_end_s": 1.25,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 1.25,
+          "simulation_end_s": 1.7,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 1.7,
+          "simulation_end_s": 3.65,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 3.65,
+          "simulation_end_s": 4.2,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 4.2,
+          "simulation_end_s": 6.0,
+          "playback_speed": 1.3
+        }
+      ],
+      "source_simulation_frames": 6000,
+      "rendered_frame_count": 101,
+      "software_gl": {
+        "vendor": "Mesa",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "version": "4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2"
+      },
+      "run_py_equivalent": {
+        "baseline": {
+          "tcp_rms_mm": 7.04,
+          "tcp_max_mm": 13.18,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.358,
+          "false_alarm_rises_in_this_episode": 9,
+          "false_alarm_times_s": [
+            1.402,
+            1.418,
+            1.432,
+            1.454,
+            1.46,
+            3.776,
+            3.824,
+            3.91,
+            3.926
+          ],
+          "detect_delay_ms_raw": null,
+          "alarm_before_collision": false,
+          "diverged": false
+        },
+        "ours": {
+          "tcp_rms_mm": 3.23,
+          "tcp_max_mm": 8.44,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.088,
+          "false_alarm_rises_in_this_episode": 0,
+          "false_alarm_times_s": [],
+          "detect_delay_ms_raw": null,
+          "alarm_before_collision": false,
+          "diverged": false
+        }
+      },
+      "run_py_validation": {
+        "baseline": {
+          "command": ".venv/bin/python run.py --box 8 --ctrl torque_controller --detector collision_detector --plot $RAW_DIR/run_py/02_torque_no_collision_baseline.png",
+          "parsed": {
+            "tcp_rms_mm": 7.04,
+            "tcp_max_mm": 13.18,
+            "saturation_pct": 0.0,
+            "torque_jitter": 0.36,
+            "false_alarm_rises_in_this_episode": 9,
+            "alarm_before_collision": false,
+            "detect_delay_ms_raw": null
+          },
+          "matches_direct_run_episode": true
+        },
+        "ours": {
+          "command": ".venv/bin/python run.py --box 8 --ctrl my_torque --detector my_detector --plot $RAW_DIR/run_py/02_torque_no_collision_ours.png",
+          "parsed": {
+            "tcp_rms_mm": 3.23,
+            "tcp_max_mm": 8.44,
+            "saturation_pct": 0.0,
+            "torque_jitter": 0.09,
+            "false_alarm_rises_in_this_episode": 0,
+            "alarm_before_collision": false,
+            "detect_delay_ms_raw": null
+          },
+          "matches_direct_run_episode": true
+        }
+      },
+      "evaluate_classification": null,
+      "classification_method": "tools.sweep.classify_collision; alarm-before, miss, matching-reference active within +/-20 ms at detected-rise index, then detected",
+      "reference_no_collision": {
+        "baseline": {
+          "controller": "torque_controller",
+          "detector": "collision_detector",
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 9
+        },
+        "ours": {
+          "controller": "my_torque",
+          "detector": "my_detector",
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 0
+        },
+        "matching_rule": "this no-collision episode is the matching reference"
+      },
+      "artifacts": [
+        {
+          "file": "artifacts/media/02_torque_no_collision.mp4",
+          "bytes": 257849,
+          "sha256": "84c8e276c0e75aebf1f612fe027c6f1d30821c46c8150fb12323523d47a7ddeb",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "15/1",
+          "r_frame_rate": "15/1",
+          "fps": 15.000000742574294,
+          "frame_count": 101,
+          "duration_s": 6.733333
+        },
+        {
+          "file": "artifacts/media/02_torque_no_collision.gif",
+          "bytes": 511454,
+          "sha256": "99a2d0970cac34d73ede3212ad96552ba5b159038d36a75667f01066b5e25253",
+          "width": 640,
+          "height": 360,
+          "avg_frame_rate": "25/3",
+          "r_frame_rate": "8/1",
+          "fps": 7.988165680473373,
+          "frame_count": 54,
+          "duration_s": 6.76
+        }
+      ]
+    },
+    {
+      "name": "03_servo_place_collision",
+      "condition": {
+        "box_mass_kg": 8.0,
+        "box_com_m": [
+          0.02,
+          -0.01,
+          0.03
+        ],
+        "collision": {
+          "time_s": 3.86,
+          "force_n": [
+            0.0,
+            15.0,
+            0.0
+          ]
+        }
+      },
+      "combination": {
+        "baseline": "servo_controller + collision_detector",
+        "ours": "my_servo + my_detector"
+      },
+      "timewarp": [
+        {
+          "simulation_start_s": 0.0,
+          "simulation_end_s": 1.25,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 1.25,
+          "simulation_end_s": 1.7,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 1.7,
+          "simulation_end_s": 3.65,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 3.65,
+          "simulation_end_s": 4.2,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 4.2,
+          "simulation_end_s": 6.0,
+          "playback_speed": 1.3
+        }
+      ],
+      "source_simulation_frames": 6000,
+      "rendered_frame_count": 101,
+      "software_gl": {
+        "vendor": "Mesa",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "version": "4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2"
+      },
+      "run_py_equivalent": {
+        "baseline": {
+          "tcp_rms_mm": 6.15,
+          "tcp_max_mm": 13.75,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.161,
+          "false_alarm_rises_in_this_episode": 6,
+          "false_alarm_times_s": [
+            1.402,
+            1.425,
+            1.428,
+            1.432,
+            1.435,
+            3.858
+          ],
+          "detect_delay_ms_raw": null,
+          "alarm_before_collision": true,
+          "diverged": false
+        },
+        "ours": {
+          "tcp_rms_mm": 1.24,
+          "tcp_max_mm": 3.91,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.155,
+          "false_alarm_rises_in_this_episode": 0,
+          "false_alarm_times_s": [],
+          "detect_delay_ms_raw": 69,
+          "alarm_before_collision": false,
+          "diverged": false
+        }
+      },
+      "run_py_validation": {
+        "baseline": {
+          "command": ".venv/bin/python run.py --box 8 --ctrl servo_controller --detector collision_detector --plot $RAW_DIR/run_py/03_servo_place_collision_baseline.png --collision 3.86 --col-force 15",
+          "parsed": {
+            "tcp_rms_mm": 6.15,
+            "tcp_max_mm": 13.75,
+            "saturation_pct": 0.0,
+            "torque_jitter": 0.16,
+            "false_alarm_rises_in_this_episode": 6,
+            "alarm_before_collision": true,
+            "detect_delay_ms_raw": null
+          },
+          "matches_direct_run_episode": true
+        },
+        "ours": {
+          "command": ".venv/bin/python run.py --box 8 --ctrl my_servo --detector my_detector --plot $RAW_DIR/run_py/03_servo_place_collision_ours.png --collision 3.86 --col-force 15",
+          "parsed": {
+            "tcp_rms_mm": 1.24,
+            "tcp_max_mm": 3.91,
+            "saturation_pct": 0.0,
+            "torque_jitter": 0.16,
+            "false_alarm_rises_in_this_episode": 0,
+            "alarm_before_collision": false,
+            "detect_delay_ms_raw": 69.0
+          },
+          "matches_direct_run_episode": true
+        }
+      },
+      "evaluate_classification": {
+        "baseline": {
+          "collision_outcome": "alarm_before_collision",
+          "collision_label": "경보 중",
+          "detect_delay_ms": null,
+          "alarm_before_collision": true,
+          "false_alarms": 6,
+          "tool_contact_delay_ms": null
+        },
+        "ours": {
+          "collision_outcome": "detected",
+          "collision_label": "69 ms",
+          "detect_delay_ms": 69.0000000000004,
+          "alarm_before_collision": false,
+          "false_alarms": 0,
+          "tool_contact_delay_ms": null
+        }
+      },
+      "classification_method": "tools.sweep.classify_collision; alarm-before, miss, matching-reference active within +/-20 ms at detected-rise index, then detected",
+      "reference_no_collision": {
+        "baseline": {
+          "controller": "servo_controller",
+          "detector": "collision_detector",
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 7
+        },
+        "ours": {
+          "controller": "my_servo",
+          "detector": "my_detector",
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 0
+        },
+        "matching_rule": "same controller, detector, mass and COM; no collision"
+      },
+      "artifacts": [
+        {
+          "file": "artifacts/media/03_servo_place_collision.mp4",
+          "bytes": 264741,
+          "sha256": "f1d6e6de7d1ffca3687ec947a8653138e35591cf1b6deafa8a9cafbc70e1bddf",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "15/1",
+          "r_frame_rate": "15/1",
+          "fps": 15.000000742574294,
+          "frame_count": 101,
+          "duration_s": 6.733333
+        },
+        {
+          "file": "artifacts/media/03_servo_place_collision.gif",
+          "bytes": 516865,
+          "sha256": "17864cc727ce75ac351afd42ec54af2aa757c94e9d0282bb42c93d281e61bf1f",
+          "width": 640,
+          "height": 360,
+          "avg_frame_rate": "25/3",
+          "r_frame_rate": "8/1",
+          "fps": 7.988165680473373,
+          "frame_count": 54,
+          "duration_s": 6.76
+        }
+      ]
+    },
+    {
+      "name": "04_servo_transport_collision",
+      "condition": {
+        "box_mass_kg": 8.0,
+        "box_com_m": [
+          0.02,
+          -0.01,
+          0.03
+        ],
+        "collision": {
+          "time_s": 3.0,
+          "force_n": [
+            0.0,
+            15.0,
+            0.0
+          ]
+        }
+      },
+      "combination": {
+        "baseline": "servo_controller + collision_detector",
+        "ours": "my_servo + my_detector"
+      },
+      "timewarp": [
+        {
+          "simulation_start_s": 0.0,
+          "simulation_end_s": 1.25,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 1.25,
+          "simulation_end_s": 1.7,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 1.7,
+          "simulation_end_s": 2.85,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 2.85,
+          "simulation_end_s": 3.3,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 3.3,
+          "simulation_end_s": 3.65,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 3.65,
+          "simulation_end_s": 4.2,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 4.2,
+          "simulation_end_s": 6.0,
+          "playback_speed": 1.3
+        }
+      ],
+      "source_simulation_frames": 6000,
+      "rendered_frame_count": 115,
+      "software_gl": {
+        "vendor": "Mesa",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "version": "4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2"
+      },
+      "run_py_equivalent": {
+        "baseline": {
+          "tcp_rms_mm": 6.17,
+          "tcp_max_mm": 14.07,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.161,
+          "false_alarm_rises_in_this_episode": 8,
+          "false_alarm_times_s": [
+            1.402,
+            1.425,
+            1.428,
+            1.432,
+            1.435,
+            3.858,
+            3.898,
+            3.912
+          ],
+          "detect_delay_ms_raw": 68,
+          "alarm_before_collision": false,
+          "diverged": false
+        },
+        "ours": {
+          "tcp_rms_mm": 1.33,
+          "tcp_max_mm": 3.92,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.156,
+          "false_alarm_rises_in_this_episode": 0,
+          "false_alarm_times_s": [],
+          "detect_delay_ms_raw": 83,
+          "alarm_before_collision": false,
+          "diverged": false
+        }
+      },
+      "run_py_validation": {
+        "baseline": {
+          "command": ".venv/bin/python run.py --box 8 --ctrl servo_controller --detector collision_detector --plot $RAW_DIR/run_py/04_servo_transport_collision_baseline.png --collision 3.0 --col-force 15",
+          "parsed": {
+            "tcp_rms_mm": 6.17,
+            "tcp_max_mm": 14.07,
+            "saturation_pct": 0.0,
+            "torque_jitter": 0.16,
+            "false_alarm_rises_in_this_episode": 8,
+            "alarm_before_collision": false,
+            "detect_delay_ms_raw": 68.0
+          },
+          "matches_direct_run_episode": true
+        },
+        "ours": {
+          "command": ".venv/bin/python run.py --box 8 --ctrl my_servo --detector my_detector --plot $RAW_DIR/run_py/04_servo_transport_collision_ours.png --collision 3.0 --col-force 15",
+          "parsed": {
+            "tcp_rms_mm": 1.33,
+            "tcp_max_mm": 3.92,
+            "saturation_pct": 0.0,
+            "torque_jitter": 0.16,
+            "false_alarm_rises_in_this_episode": 0,
+            "alarm_before_collision": false,
+            "detect_delay_ms_raw": 83.0
+          },
+          "matches_direct_run_episode": true
+        }
+      },
+      "evaluate_classification": {
+        "baseline": {
+          "collision_outcome": "detected",
+          "collision_label": "68 ms",
+          "detect_delay_ms": 68.00000000000006,
+          "alarm_before_collision": false,
+          "false_alarms": 8,
+          "tool_contact_delay_ms": null
+        },
+        "ours": {
+          "collision_outcome": "detected",
+          "collision_label": "83 ms",
+          "detect_delay_ms": 83.00000000000018,
+          "alarm_before_collision": false,
+          "false_alarms": 0,
+          "tool_contact_delay_ms": null
+        }
+      },
+      "classification_method": "tools.sweep.classify_collision; alarm-before, miss, matching-reference active within +/-20 ms at detected-rise index, then detected",
+      "reference_no_collision": {
+        "baseline": {
+          "controller": "servo_controller",
+          "detector": "collision_detector",
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 7
+        },
+        "ours": {
+          "controller": "my_servo",
+          "detector": "my_detector",
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 0
+        },
+        "matching_rule": "same controller, detector, mass and COM; no collision"
+      },
+      "artifacts": [
+        {
+          "file": "artifacts/media/04_servo_transport_collision.mp4",
+          "bytes": 289149,
+          "sha256": "a4bdffedbbfe6a43fbe31950f2d894f99be36910349da35e60c98e3db6b443a4",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "15/1",
+          "r_frame_rate": "15/1",
+          "fps": 14.999999347826115,
+          "frame_count": 115,
+          "duration_s": 7.666667
+        },
+        {
+          "file": "artifacts/media/04_servo_transport_collision.gif",
+          "bytes": 567848,
+          "sha256": "6375b9b6f6646d26973fbf21db75ded7fa11eb9f86274281433c79ce25bce419",
+          "width": 640,
+          "height": 360,
+          "avg_frame_rate": "25/3",
+          "r_frame_rate": "8/1",
+          "fps": 7.99475753604194,
+          "frame_count": 61,
+          "duration_s": 7.63
+        }
+      ]
+    }
+  ],
+  "metadata_reconciliation": "Collision panels were regenerated from the private fresh-run signals to plot the actual trapezoidal force; media metadata and hashes were then recomputed with ffprobe count_frames. The on-screen projected-force legend was labeled with its 15 N = 85 px display normalization before final encoding."
+}
