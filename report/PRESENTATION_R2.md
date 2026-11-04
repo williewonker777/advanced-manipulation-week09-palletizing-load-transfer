@@ -48,14 +48,18 @@ PDF는 아래 16개 슬라이드를 같은 순서로 생성한다.
 - strict 1 ms 미달; 원인 단정 없음
 
 ## 9. T1–T3 동일 조건
-- T1 놓기 전 마지막 20 ms 평균 지지율: R1 A 0.2098 / B 11.1507 → R2 A 0.2098 / B 11.1507
-- T2 놓기 토크 계단: R1 A 14.626 / B 13.126 → R2 A 14.626 / B 13.126
-- T3 분석 섭동 최악 TCP/놓기힘/오감지: R1 A 14.777 mm / 212.734 N / FA 6; B 45.652 mm / 362.600 N / FA 10 → R2 A 14.777 mm / 212.734 N / FA 6; B 45.652 mm / 362.600 N / FA 10
+| 항목 | 조건·단위 | 기준 | v1 | R1 | R2 |
+|---|---|---|---|---|---|
+| T1 놓기 전 마지막 20 ms 평균 지지율 | 8 kg, 동일 COM, release 직전 20 ms<br>[% of mg (A/B)] | A 0.0000 / B 0.0557 | A 0.2098 / B 11.1507 | A 0.2098 / B 11.1507 | A 0.2098 / B 11.1507 |
+| T2 놓기 토크 계단 | 8 kg, 동일 COM, place step<br>[N m (A/B)] | A 73.842 / B 74.797 | A 14.626 / B 13.126 | A 14.626 / B 13.126 | A 14.626 / B 13.126 |
+| T3 분석 섭동 최악 TCP/놓기힘/오감지 | fresh 34 perturbation rows per architecture; 34=28 normal+6 external<br>[mm / N / rises] | A 22.731 mm / 208.997 N / FA 221; B 17.171 mm / 352.140 N / FA 309 | A 14.777 mm / 212.734 N / FA 4; B 45.652 mm / 362.600 N / FA 8 | A 14.777 mm / 212.734 N / FA 6; B 45.652 mm / 362.600 N / FA 10 | A 14.777 mm / 212.734 N / FA 6; B 45.652 mm / 362.600 N / FA 10 |
 
 ## 10. T4–T6 동일 조건
-- T4 질량·COM 격자 포화/놓기 peak: R1 A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg → R2 A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg
-- T5 TCP 추적 RMS/최대: R1 A 1.174/3.914; B 3.232/8.444 → R2 A 1.174/3.914; B 3.232/8.444
-- T6 D4 감지/놓침/masked: R1 A 111/69/0; B 111/69/0 → R2 A 111/69/0; B 111/69/0
+| 항목 | 조건·단위 | 기준 | v1 | R1 | R2 |
+|---|---|---|---|---|---|
+| T4 질량·COM 격자 포화/놓기 peak | 189 no-collision reference rows per architecture<br>[rows / mg] | A sat 0/189, peak 2.0359 mg; B sat 0/189, peak 9.8822 mg | A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg | A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg | A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg |
+| T5 TCP 추적 RMS/최대 | 8 kg, 동일 COM, no collision<br>[mm (A/B)] | A 6.144/14.000; B 7.042/13.183 | A 1.174/3.914; B 3.232/8.444 | A 1.174/3.914; B 3.232/8.444 | A 1.174/3.914; B 3.232/8.444 |
+| T6 D4 감지/놓침/masked | 180 collision rows per architecture; masked kept separate<br>[episodes] | A 88/43/49; B 78/42/60 | A 94/86/0; B 91/89/0 | A 111/69/0; B 111/69/0 | A 111/69/0; B 111/69/0 |
 
 ## 11. 후보 판정
 - C1: 4개 변형, 모두 reject
@@ -94,8 +98,9 @@ PDF는 아래 16개 슬라이드를 같은 순서로 생성한다.
 - holdout 0.75 kg은 C5 학습 질량 하나와 겹친다. 새 joint condition과 seed만으로 모든 질량 unseen 일반화를 주장하지 않는다.
 - pRNE-only의 4회/architecture 감지 손실은 ridge 제거가 함께 있어 pRNE에만 귀속할 수 없다. matched ridge와 pRNE+ridge의 15/24 대 15/24가 isolated zero effect다.
 
-## 16. 최종 상태
+## 16. 최종 결론
 - 이 유한 시뮬레이션에서 사전 등록한 새 제어 25개 구성과 C5 관측기 변형은 모두 엄격 게이트를 통과하지 못했다. 방법 계열 자체가 불가능하다는 뜻은 아니다. 최종 R2는 R1 제어기와 감지기의 exact-source alias이며, 새 후보를 억지로 채택하지 않았다.
-- 원격 작업 0회
-- 로컬 staging only
-- push 미승인·미게시
+- 새 후보 채택 0개; 최종 R2=R1 exact-source alias
+- 재설계 가족별 1회 허용·사용 0회; 미사용 사유 기록 없음
+- P0/G4와 T1–T6 추가 개선 목표는 미달
+- 실기·hidden·전역 안정성은 검증하지 않음

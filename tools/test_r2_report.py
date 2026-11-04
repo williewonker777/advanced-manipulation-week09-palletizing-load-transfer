@@ -98,7 +98,9 @@ class ManifestFixture:
                     "redesigns_used": 0}
         freeze = {"holdout_opened": False, "official_used_for_selection": False,
                   "post_holdout_and_official_tuning_allowed": False}
-        protocol = {"remote_operations_allowed": 0}
+        protocol = {"remote_operations_allowed": 0,
+                    "redesign": {"max_per_family": 1,
+                                 "post_official_allowed": False}}
         artifacts = {
             "p0": self.write("R2_P0_BASELINE.json", generic),
             "protocol": self.write("PROTOCOL_R2.json", protocol),
@@ -165,9 +167,13 @@ class ManifestFixture:
         for index in range(1, 7):
             candidates.append({
                 "id": f"C{index}-fixture", "family": f"C{index}",
-                "method": f"method {index}", "decision": "reject",
-                "gate_results": ["strict gate failed"],
-                "measured_effect": "negative fixture", "cost": "fixture cost",
+                "method": f"method {index}", "architecture": "servo",
+                "decision": "reject", "failed_gates": ["strict_gate"],
+                "false_rises": index, "g4_pass_cases": 0,
+                "worst_max_ratio": 1.1, "worst_rms_ratio": 1.2,
+                "worst_place_step_ratio": 1.3,
+                "combined_p99_us": 300.0, "combined_max_us": 600.0,
+                "local_radius_pass": "5/6",
                 "source_keys": ["validation_review"],
             })
         method_documents = []
@@ -179,7 +185,6 @@ class ManifestFixture:
         return {
             "schema": "R2_REPORT_MANIFEST.v1", "status": "frozen",
             "remote_operations": 0,
-            "publication": {"state": "local_staging_only", "push_approved": False},
             "artifacts": artifacts, "metrics": metrics,
             "candidate_decisions": candidates,
             "lie_group_usage": [{
@@ -261,13 +266,53 @@ class R2ReportTests(unittest.TestCase):
         for metric in ("T1", "T2", "T3", "T4", "T5", "T6"):
             self.assertIn(metric, rendered)
         self.assertIn("fresh", rendered)
-        self.assertIn("원격 작업: 0회", rendered)
+        self.assertIn("6개 판정 행은 모두 최종 reject", rendered)
+        self.assertIn("observer 효능 판정은 별도", rendered)
+        for forbidden in ("로컬 staging", "미게시", "push 미승인", "공개 상태",
+                          "원격 작업: 0회"):
+            self.assertNotIn(forbidden, rendered)
+
+    def test_candidate_table_is_readable_and_retains_every_row(self):
+        context = r2_report.validate_manifest(self.manifest)
+        rendered = r2_report._candidate_table(context["candidates"])
+        self.assertEqual(rendered.count("\n") - 1, 6)
+        for heading in ("실패 관문", "오감지", "G4", "TCP 최대/RMS", "놓기 계단",
+                        "p99/최대", "radius"):
+            self.assertIn(heading, rendered)
+        self.assertNotIn('{"', rendered)
+        self.assertIn("1.100/1.200", rendered)
+
+    def test_redesign_status_is_explicit_and_frozen(self):
+        context = r2_report.validate_manifest(self.manifest)
+        context["adoption"]["redesigns_used"] = 0
+        rendered = r2_report._redesign_section(context)
+        self.assertIn("가족별 최대 1회", rendered)
+        self.assertIn("사용 0회", rendered)
+        self.assertIn("공식 회귀 이후 재설계 금지", rendered)
+        self.assertIn("사유 기록 없음", rendered)
 
     def test_deck_has_sixteen_slides(self):
         context = r2_report.validate_manifest(self.manifest)
         slides = r2_report._slide_specs(context)
         self.assertEqual(len(slides), 16)
-        self.assertIn("push 미승인", " ".join(slides[-1]["lines"]))
+        self.assertNotIn("push", " ".join(slides[-1]["lines"]))
+        self.assertNotIn("미게시", " ".join(slides[-1]["lines"]))
+        self.assertIn("사용 0회", " ".join(slides[-1]["lines"]))
+        columns, rows = r2_report._metric_table_data(context["metrics"][:3])
+        self.assertEqual(columns[-4:], ["기준", "v1", "R1", "R2"])
+        self.assertEqual(len(rows), 3)
+        notes = r2_report.render_presentation_notes(context)
+        self.assertIn("| 기준 | v1 | R1 | R2 |", notes)
+        self.assertIn("| T1 fixture 1 |", notes)
+        self.assertIn("34=28 normal+6 external", notes)
+        production = json.loads((r2_report.ROOT / "results" / "v2_protocol" /
+                                 "R2_REPORT_MANIFEST.json").read_text())
+        t3 = next(row for row in production["metrics"] if row["id"] == "T3")
+        self.assertEqual(t3["condition"], "fresh 34 perturbation rows per architecture")
+        self.assertEqual(t3["unit"], "mm / N / rises")
+        self.assertEqual(t3["r1"],
+                         "A 14.777 mm / 212.734 N / FA 6; "
+                         "B 45.652 mm / 362.600 N / FA 10")
 
     def test_fixture_pdf_is_generated_without_touching_r1_pdf(self):
         context = r2_report.validate_manifest(self.manifest)

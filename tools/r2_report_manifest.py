@@ -131,40 +131,57 @@ def _candidate_rows(adoption: dict[str, Any]) -> list[dict[str, Any]]:
         family = row.get("family")
         if family not in {f"C{i}" for i in range(1, 7)}:
             raise ValueError(f"unknown candidate family: {family!r}")
-        measured = {
-            "architecture": row.get("architecture"),
-            "episodes": row.get("episodes"),
-            "false_rises": row.get("false_rises"),
-            "G4_pass_cases": row.get("G4_pass_cases"),
-            "residual_joint_RMS_ratio": row.get("residual_joint_RMS_ratio"),
-        }
-        cost = {
-            "worst_ratio": row.get("worst_ratio"),
-            "combined_p99_us": row.get("combined_p99_us"),
-            "combined_max_us": row.get("combined_max_us"),
-            "local_stability": row.get("local_stability"),
-        }
+        worst = row.get("worst_ratio") or {}
+        local = row.get("local_stability") or {}
+        failed = [name for name, passed in row.get("gates", {}).items() if passed is not True]
         candidates.append({
             "id": f"{row.get('id')}/{row.get('architecture')}",
             "family": family,
             "method": str(row.get("id")),
+            "architecture": str(row.get("architecture")),
             "decision": "reject",
-            "gate_results": _gate_lines(row.get("gates")),
-            "measured_effect": json.dumps(measured, ensure_ascii=False, sort_keys=True),
-            "cost": json.dumps(cost, ensure_ascii=False, sort_keys=True),
+            "failed_gates": (failed or
+                             (["없음(validation; observer 판정 별도)"]
+                              if family == "C5" else ["none"])),
+            "false_rises": row.get("false_rises"),
+            "g4_pass_cases": f"{row.get('G4_pass_cases')}/{row.get('episodes')}",
+            "worst_max_ratio": worst.get("max_mm"),
+            "worst_rms_ratio": worst.get("rms_mm"),
+            "worst_place_step_ratio": worst.get("torque_step_place_nm"),
+            "combined_p99_us": row.get("combined_p99_us"),
+            "combined_max_us": row.get("combined_max_us"),
+            "local_radius_pass": (f"{local.get('protocol_pass_cases')}/{local.get('cases')}"
+                                  if local else "N/A"),
             "source_keys": ["validation_review", "adoption", "stability_compact"],
         })
     for row in observers:
-        measured = {key: row.get(key) for key in
-                    ("detected_gain", "normal_RMS_worst_ratio", "development")}
+        development = row.get("development") or []
+        failed = [name for name, passed in row.get("gates", {}).items() if passed is not True]
+        by_arch = {str(item.get("architecture")): item for item in development}
+        false_rises = "/".join(str(by_arch.get(arch, {}).get("false_rises", "N/A"))
+                               for arch in ("servo", "torque"))
+        p99 = "; ".join(
+            f"{label} {float(by_arch[arch]['p99_us']):.3f}"
+            if arch in by_arch and by_arch[arch].get("p99_us") is not None
+            else f"{label} N/A"
+            for label, arch in (("A", "servo"), ("B", "torque"))
+        )
         candidates.append({
             "id": f"{row.get('id')}/observer",
             "family": "C5",
             "method": str(row.get("id")),
+            "architecture": "observer (A/B)",
             "decision": "reject",
-            "gate_results": _gate_lines(row.get("gates")),
-            "measured_effect": json.dumps(measured, ensure_ascii=False, sort_keys=True),
-            "cost": "development timing is retained in the measured rows",
+            "failed_gates": failed or ["none"],
+            "false_rises": false_rises,
+            "g4_pass_cases": "N/A",
+            "worst_max_ratio": "N/A",
+            # The observer review reports joint-residual RMS, not TCP RMS.
+            "worst_rms_ratio": "N/A",
+            "worst_place_step_ratio": "N/A",
+            "combined_p99_us": p99,
+            "combined_max_us": "N/A",
+            "local_radius_pass": "N/A",
             "source_keys": ["development", "development_review", "adoption"],
         })
     if Counter(row["decision"] for row in candidates) != {"reject": len(candidates)}:
@@ -368,7 +385,6 @@ def build_manifest(curation_path: Path = DEFAULT_CURATION) -> dict[str, Any]:
         "schema": "R2_REPORT_MANIFEST.v1",
         "status": "frozen",
         "remote_operations": 0,
-        "publication": {"state": "local_staging_only", "push_approved": False},
         "artifacts": _collect_artifacts(),
         "method_documents": _method_documents(),
         "candidate_decisions": _candidate_rows(evidence["adoption"]),

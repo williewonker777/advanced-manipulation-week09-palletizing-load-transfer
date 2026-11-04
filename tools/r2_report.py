@@ -153,13 +153,16 @@ def _validate_candidates(candidates: Any) -> list[dict[str, Any]]:
         raise ValueError("candidate_decisions must be a non-empty array")
     families = set()
     for row in candidates:
-        require_keys(row, ("id", "family", "method", "decision", "gate_results",
-                           "measured_effect", "cost", "source_keys"),
+        require_keys(row, ("id", "family", "method", "architecture", "decision",
+                           "failed_gates", "false_rises", "g4_pass_cases",
+                           "worst_max_ratio", "worst_rms_ratio",
+                           "worst_place_step_ratio", "combined_p99_us",
+                           "combined_max_us", "local_radius_pass", "source_keys"),
                      f"candidate {row.get('id', '?')}")
         families.add(row["family"])
         if row["decision"] not in DECISIONS:
             raise ValueError(f"candidate {row['id']} has invalid decision")
-        if not isinstance(row["gate_results"], list) or not row["gate_results"]:
+        if not isinstance(row["failed_gates"], list) or not row["failed_gates"]:
             raise ValueError(f"candidate {row['id']} must retain its gate results")
         if not isinstance(row["source_keys"], list) or not row["source_keys"]:
             raise ValueError(f"candidate {row['id']} must cite source keys")
@@ -194,7 +197,7 @@ def _validate_lie_usage(rows: Any) -> list[dict[str, Any]]:
 
 
 def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
-    require_keys(manifest, ("schema", "status", "remote_operations", "publication",
+    require_keys(manifest, ("schema", "status", "remote_operations",
                             "artifacts", "metrics", "candidate_decisions",
                             "lie_group_usage", "misses_and_outliers", "verification",
                             "method_documents", "literature_updates", "changed_paths",
@@ -204,12 +207,6 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
         raise ValueError("final report requires a frozen R2_REPORT_MANIFEST.v1")
     if manifest["remote_operations"] != 0:
         raise ValueError("remote_operations must be exactly 0")
-    publication = manifest["publication"]
-    if not isinstance(publication, dict):
-        raise ValueError("publication must be an object")
-    require_keys(publication, ("state", "push_approved"), "publication")
-    if publication != {"state": "local_staging_only", "push_approved": False}:
-        raise ValueError("report may only describe local staging with no push approval")
     entries = _artifact_entries(manifest)
     method_documents = _validate_public_documents(manifest)
     metrics = _validate_metrics(manifest["metrics"])
@@ -278,6 +275,10 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
     protocol = _one_document(entries, "protocol")
     if protocol.get("remote_operations_allowed") != 0:
         raise ValueError("PROTOCOL_R2 must prohibit remote operations")
+    redesign = protocol.get("redesign")
+    if (not isinstance(redesign, dict) or redesign.get("max_per_family") != 1
+            or redesign.get("post_official_allowed") is not False):
+        raise ValueError("PROTOCOL_R2 redesign rule must remain one per family and post-official forbidden")
     adoption = _one_document(entries, "adoption")
     require_keys(adoption, ("decision", "holdout_opened", "official_used_for_selection",
                             "post_holdout_or_official_tuning_allowed", "redesigns_used"),
@@ -286,6 +287,8 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
         raise ValueError("adoption must precede holdout and official exposure")
     if adoption["post_holdout_or_official_tuning_allowed"] is not False:
         raise ValueError("post-holdout or post-official tuning must remain prohibited")
+    if adoption["redesigns_used"] != 0:
+        raise ValueError("frozen adoption must retain zero redesigns used")
     freeze = _one_document(entries, "freeze")
     require_keys(freeze, ("holdout_opened", "official_used_for_selection",
                           "post_holdout_and_official_tuning_allowed"), "R2 freeze")
@@ -395,6 +398,7 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
         "parity": control_parity,
         "lie_comparison": lie_comparison,
         "environment": environment,
+        "protocol": protocol,
         "adoption": adoption,
         "freeze": freeze,
         "d4": d4,
@@ -447,13 +451,49 @@ def _metric_table(metrics: list[dict[str, Any]]) -> str:
 
 
 def _candidate_table(rows: list[dict[str, Any]]) -> str:
-    lines = ["| 후보 | 방법 | 판정 | 게이트 결과 | 측정 효과 | 비용 | 출처 |",
-             "|---|---|---|---|---|---|---|"]
+    def scalar(value: Any, digits: int = 3) -> str:
+        if value is None or value == "N/A":
+            return "N/A"
+        if isinstance(value, int):
+            return str(value)
+        if isinstance(value, float):
+            return f"{value:.{digits}f}"
+        return _cell(value)
+
+    lines = ["| 후보 | 방식 | 실패 관문 | 오감지 | G4 통과 수 | TCP 최대/RMS 최악 비 | 놓기 계단 최악 비 | p99/최대 계산시간 [us] | 국소 radius 통과 수 |",
+             "|---|---|---|---:|---:|---:|---:|---:|---:|"]
     for row in rows:
-        gates = "; ".join(str(item) for item in row["gate_results"])
-        lines.append(f"| {row['id']} | {_cell(row['method'])} | {row['decision']} | "
-                     f"{_cell(gates)} | {_cell(row['measured_effect'])} | {_cell(row['cost'])} | "
-                     f"{', '.join(row['source_keys'])} |")
+        gates = ", ".join(str(item) for item in row["failed_gates"])
+        tcp = f"{scalar(row['worst_max_ratio'])}/{scalar(row['worst_rms_ratio'])}"
+        if str(row["architecture"]).startswith("observer"):
+            timing = "; ".join(f"{part}/N/A" for part in
+                               str(row["combined_p99_us"]).split("; "))
+        else:
+            timing = f"{scalar(row['combined_p99_us'])}/{scalar(row['combined_max_us'])}"
+        lines.append(f"| `{row['method']}` | {_cell(row['architecture'])} | {_cell(gates)} | "
+                     f"{scalar(row['false_rises'])} | {scalar(row['g4_pass_cases'])} | {tcp} | "
+                     f"{scalar(row['worst_place_step_ratio'])} | {timing} | "
+                     f"{_cell(row['local_radius_pass'])} |")
+    return "\n".join(lines)
+
+
+def _redesign_section(context: dict[str, Any]) -> str:
+    rule = context["protocol"]["redesign"]
+    used = context["adoption"]["redesigns_used"]
+    cost_only = {row["id"] for row in context["candidates"]
+                 if row["failed_gates"] == ["cost"]}
+    lines = [
+        f"- protocol 허용량: 가족별 최대 {rule['max_per_family']}회; 실제 사용 {used}회.",
+        "- 공식 회귀 이후 재설계 금지. holdout·공식 결과를 본 뒤 후보를 고치거나 재승격하지 않았다.",
+    ]
+    named = []
+    for candidate in ("C3_DOB_w4.5/servo", "C4_P-IDC_w4.5_d1/torque"):
+        if candidate in cost_only:
+            named.append(f"`{candidate}`")
+    if named:
+        lines.append(f"- {', '.join(named)}: cost 관문만 실패한 상태에서 재설계 미사용; 사유 기록 없음.")
+    else:
+        lines.append("- 재설계 미사용 사유 기록 없음.")
     return "\n".join(lines)
 
 
@@ -482,8 +522,7 @@ def render_results(context: dict[str, Any]) -> str:
 
 {manifest.get('conclusion', '동결된 채택 판정은 아래 후보 표와 수치표를 따른다.')}
 
-공식 평가는 마지막 회귀 확인에만 사용했다. 원격 작업은 **0회**이며, 현재 상태는
-**로컬 staging only·push 미승인**이다.
+공식 평가는 마지막 회귀 확인에만 사용했다. 후보 선정·임계값 조정에는 사용하지 않았다.
 
 ## T1–T6 동일 조건 비교
 
@@ -497,8 +536,15 @@ def render_results(context: dict[str, Any]) -> str:
 
 {_candidate_table(context['candidates'])}
 
-모든 등록 후보와 불리한 결과를 유지했다. 검증 단계에서 버린 후보를 holdout이나
+표의 {len(context['candidates'])}개 판정 행은 모두 최종 reject다. C5 정상 validation 6행은
+제어 gate를 통과했지만 새 채택이 아니며, observer 효능 판정은 별도 행에서
+reject로 기록했다. 모든 등록 후보와 불리한 결과를 유지했다. 검증 단계에서 버린 후보를 holdout이나
 공식 평가 결과를 본 뒤 되살리지 않았다.
+[원자료: `R2_ADOPTION.json`](../results/v2_protocol/R2_ADOPTION.json)
+
+### 재설계 사용 여부
+
+{_redesign_section(context)}
 
 ## Lie group 사용 내역
 
@@ -586,12 +632,6 @@ observer 대비 속도 향상이나 제어기 채택 근거로 사용하지 않�
 {chr(10).join('- `' + item['path'] + '`' for item in context['method_documents'])}
 
 {chr(10).join('- [' + item['title'] + '](' + item['url'] + ')' for item in manifest['literature_updates'])}
-
-## 공개 상태
-
-- 원격 작업: 0회
-- push 승인: 없음
-- 공개 상태: 로컬 staging only, 아직 게시하지 않음
 """
 
 
@@ -621,15 +661,19 @@ def _slide_specs(context: dict[str, Any]) -> list[dict[str, Any]]:
                                      f"A p99/max {timing_rows['servo']['largest_row_p99_us']:.1f}/{timing_rows['servo']['maximum_wall_us']:.1f} us; overrun {timing_rows['servo']['overrun_cycles']}",
                                      f"B p99/max {timing_rows['torque']['largest_row_p99_us']:.1f}/{timing_rows['torque']['maximum_wall_us']:.1f} us; overrun {timing_rows['torque']['overrun_cycles']}",
                                      "strict 1 ms 미달; 원인 단정 없음"]),
-        ("T1–T3 동일 조건", [f"{r['id']} {r['name']}: R1 {_cell(r['r1'])} → R2 {_cell(r['r2'])}" for r in context['metrics'][:3]]),
-        ("T4–T6 동일 조건", [f"{r['id']} {r['name']}: R1 {_cell(r['r1'])} → R2 {_cell(r['r2'])}" for r in context['metrics'][3:]]),
+        ("T1–T3 동일 조건", ["기준/v1/R1/R2 네 열 표"]),
+        ("T4–T6 동일 조건", ["기준/v1/R1/R2 네 열 표"]),
         ("후보 판정", family_lines),
         ("Lie group 적용", [f"{r['method']}: {r['decision']}" for r in context['lie_usage']]),
         ("강건성·holdout", [str(x) for x in manifest.get("holdout_findings", ["동결 뒤 새 seed holdout을 한 번만 개봉"])]),
         ("공식 회귀 확인", [str(x) for x in manifest.get("official_findings", ["공식 결과는 선택에 사용하지 않음"])]),
         ("미달·한계·outlier", ([str(x) for x in manifest["misses_and_outliers"].get("summary", [])]
                               + [str(x) for x in manifest["limitations"][:3]])),
-        ("최종 상태", [manifest.get("conclusion", "동결된 판정을 유지"), "원격 작업 0회", "로컬 staging only", "push 미승인·미게시"]),
+        ("최종 결론", [manifest.get("conclusion", "동결된 판정을 유지"),
+                       "새 후보 채택 0개; 최종 R2=R1 exact-source alias",
+                       "재설계 가족별 1회 허용·사용 0회; 미사용 사유 기록 없음",
+                       "P0/G4와 T1–T6 추가 개선 목표는 미달",
+                       "실기·hidden·전역 안정성은 검증하지 않음"]),
     ]
     answer = [{"title": title, "lines": lines} for title, lines in slides]
     if len(answer) != 16:
@@ -641,8 +685,50 @@ def render_presentation_notes(context: dict[str, Any]) -> str:
     sections = ["# R2 발표 자료 원고", "", "PDF는 아래 16개 슬라이드를 같은 순서로 생성한다."]
     for index, slide in enumerate(_slide_specs(context), 1):
         sections += ["", f"## {index}. {slide['title']}"]
-        sections += [f"- {line}" for line in slide["lines"]]
+        if index in {9, 10}:
+            subset = context["metrics"][:3] if index == 9 else context["metrics"][3:]
+            columns, rows = _metric_table_data(subset)
+            sections += ["| " + " | ".join(columns) + " |",
+                         "|" + "|".join("---" for _ in columns) + "|"]
+            sections += ["| " + " | ".join(cell.replace("\n", "<br>") for cell in row) + " |"
+                         for row in rows]
+        else:
+            sections += [f"- {line}" for line in slide["lines"]]
     return "\n".join(sections) + "\n"
+
+
+def _metric_table_data(metrics: list[dict[str, Any]]) -> tuple[list[str], list[list[str]]]:
+    columns = ["항목", "조건·단위", "기준", "v1", "R1", "R2"]
+    rows = []
+    for row in metrics:
+        condition = f"{row['condition']}\n[{row['unit']}]"
+        if row["id"] == "T3":
+            condition = f"{row['condition']}; 34=28 normal+6 external\n[{row['unit']}]"
+        rows.append([f"{row['id']} {row['name']}", condition,
+                     _cell(row["baseline"]), _cell(row["v1"]),
+                     _cell(row["r1"]), _cell(row["r2"])])
+    return columns, rows
+
+
+def _draw_metric_table(fig: Any, metrics: list[dict[str, Any]]) -> None:
+    columns, rows = _metric_table_data(metrics)
+    ax = fig.add_axes([.025, .105, .95, .73])
+    ax.axis("off")
+    wrap_widths = [12, 24, 19, 19, 19, 19]
+    wrapped = [["\n".join(textwrap.wrap(str(cell), width=wrap_widths[column],
+                                         break_long_words=True,
+                                         break_on_hyphens=False))
+                for column, cell in enumerate(row)] for row in rows]
+    table = ax.table(cellText=wrapped, colLabels=columns, cellLoc="left", colLoc="center",
+                     colWidths=[.18, .20, .155, .155, .155, .155], loc="center")
+    table.auto_set_font_size(False)
+    table.set_fontsize(8.4)
+    table.scale(1.0, 4.1)
+    for (row, _column), cell in table.get_celld().items():
+        cell.set_edgecolor("#b0bec5")
+        if row == 0:
+            cell.set_facecolor("#dbe7f3")
+            cell.set_text_props(weight="bold", color="#183153")
 
 
 def _configure_plotting() -> None:
@@ -690,21 +776,23 @@ def make_pdf(path: Path, context: dict[str, Any]) -> None:
         for index, slide in enumerate(slides, 1):
             fig = plt.figure(figsize=(13.333, 7.5), facecolor="#f6f8fb")
             fig.text(.055, .91, slide["title"], fontsize=23, weight="bold", color="#183153")
+            metric_table = index in {9, 10}
             use_plot = index in {6, 11}
             width = 55 if use_plot else 82
             y = .81
-            for bullet in slide["lines"]:
-                for line in textwrap.wrap("• " + str(bullet), width=width):
-                    fig.text(.06, y, line, fontsize=14, color="#263238")
-                    y -= .052
-                y -= .015
+            if metric_table:
+                subset = context["metrics"][:3] if index == 9 else context["metrics"][3:]
+                _draw_metric_table(fig, subset)
+            else:
+                for bullet in slide["lines"]:
+                    for line in textwrap.wrap("• " + str(bullet), width=width):
+                        fig.text(.06, y, line, fontsize=14, color="#263238")
+                        y -= .052
+                    y -= .015
             if use_plot:
                 ax = fig.add_axes([.54, .16, .41, .60])
                 if index == 6:
                     _stability_plot(ax, context)
-                elif index in {9, 10}:
-                    subset = context["metrics"][:3] if index == 9 else context["metrics"][3:]
-                    _metric_plot(ax, subset)
                 else:
                     families: dict[str, set[str]] = {}
                     for row in context["candidates"]:
@@ -715,7 +803,7 @@ def make_pdf(path: Path, context: dict[str, Any]) -> None:
                     ax.set_ylabel("검증한 변형 수")
                     ax.set_title("가족별 변형: 모두 엄격 gate 탈락")
                     ax.grid(axis="y", alpha=.2)
-            fig.text(.055, .025, f"R2 제어·Lie group 검증 | {index}/16 | 로컬 staging only, 미게시",
+            fig.text(.055, .025, f"R2 제어·Lie group 검증 | {index}/16",
                      fontsize=9, color="#607d8b")
             pdf.savefig(fig); plt.close(fig)
 
