@@ -1,0 +1,29 @@
+{
+  "schema": "R3_DIAGNOSTIC_SELECTION.v1",
+  "chosen_specs": [
+    {
+      "id": "A_handoff_long",
+      "family": "R3_A",
+      "architecture": "servo",
+      "bandwidth": 4.5,
+      "profile": "quintic",
+      "fade_start_s": 3.1,
+      "fade_end_s": 3.6
+    },
+    {
+      "id": "B_mass",
+      "family": "R3_B",
+      "architecture": "torque",
+      "rate": 4.5,
+      "damping_scale": 1.0,
+      "schedule": "mass",
+      "mass_start_kg": 3.15,
+      "mass_full_kg": 5.65,
+      "handoff_start_s": 3.6,
+      "handoff_end_s": 3.84
+    }
+  ],
+  "adoption_eligible": false,
+  "no_later_revival": true,
+  "selection_rule": "predeclared lowest worst same-case cost score; diagnostic only"
+}

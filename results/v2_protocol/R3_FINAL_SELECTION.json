@@ -1,0 +1,46 @@
+{
+  "schema": "R3_FINAL_SELECTION.v1",
+  "decision": "R1 retained independently for both architectures; no new adoption",
+  "architectures": {
+    "servo": {
+      "final_spec": {
+        "architecture": "servo",
+        "family": "R1",
+        "id": "R1"
+      },
+      "rejected_diagnostic": "A_handoff_long",
+      "official_regression": "PASS",
+      "my_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "r1_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "no_redesign_or_promotion_after_exposure": true
+    },
+    "torque": {
+      "final_spec": {
+        "architecture": "torque",
+        "family": "R1",
+        "id": "R1"
+      },
+      "rejected_diagnostic": "B_mass",
+      "official_regression": "PASS",
+      "my_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "r1_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "no_redesign_or_promotion_after_exposure": true
+    }
+  },
+  "detector_sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+  "source_files_frozen": 101,
+  "evidence_sha256": {
+    "R3_FREEZE.json": "d65123d06a9907f6915b7b308f26401c21d70d281f6198e6b08a80ebf7c94c65",
+    "R3_PREFREEZE_DECISION.json": "2d9c45459cd7aacceb575dfebf402a16fcb4718d8592852c1bbe858533e27ded",
+    "R3_HOLDOUT_REVIEW.json": "75ef2664bfab88f48d2a48b1198feaa07e27ddc4b4f39d14fb96a7ad7f65b899",
+    "R3_OFFICIAL_REGRESSION.json": "cdab156443ad415fd5e316c3adc05d17cb691e04c3acb1efa756b412fc8daa90"
+  },
+  "changes_after_holdout": {
+    "scientific_source": false,
+    "gains": false,
+    "thresholds": false,
+    "weights": false,
+    "selection": false
+  },
+  "publication_postprocessing_excluded_from_freeze": true
+}

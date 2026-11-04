@@ -1,0 +1,37 @@
+{
+  "schema": "R3_REDESIGN_DECISION.v1",
+  "recorded_utc": "2026-11-04T12:48:52.758658+00:00",
+  "stage": "after normal validation and corrected forced stability; before development or any collision",
+  "redesigns_allowed_per_architecture": 1,
+  "redesigns_used": {
+    "servo": 0,
+    "torque": 0
+  },
+  "architectures": {
+    "servo": {
+      "used": false,
+      "reason": "A initial settings fail not only same-case cost (short worst place-step ratio 1.09480; long 1.06095) but multiple convergent active-point stability gates. The registered cost-dominated redesign trigger is not met. The mass-dependent quantized nonlinear phase remains incompletely identified; selecting an extra fade time or a 0.5 amplitude would lack a measured causal remedy and risk gate-driven search. No additional configuration is evaluated. A_handoff_long is the fixed, irreversibly non-adoptable diagnostic challenger.",
+      "diagnostic_challenger": "A_handoff_long",
+      "adoption_eligible": false
+    },
+    "torque": {
+      "used": false,
+      "reason": "B_mass already passes every validation cost (worst 1.03360) and mean tracking efficacy (RMS ratio 0.83355/max ratio 0.83789). Its blocker is forced-point stability rather than cost, so the cost-dominated redesign trigger is not met. Corrected analysis removes inactive integral unit poles without changing runtime bytes, but active radius/FD failures remain. No new controller parameters are evaluated. B_mass is the fixed, irreversibly non-adoptable diagnostic challenger.",
+      "diagnostic_challenger": "B_mass",
+      "adoption_eligible": false
+    }
+  },
+  "normal_detector": {
+    "recalibrations_used": {
+      "servo": 0,
+      "torque": 0
+    },
+    "reason": "frozen R1 detector had zero false alarms in all normal validation; no recalibration needed or performed"
+  },
+  "source_evidence_sha256": {
+    "PROTOCOL_R3.json": "dcb76b495d8c2e73a5047f253a7a43a9fc46b642653e4054c5d947109f8f6c39",
+    "R3_VALIDATION_REVIEW.json": "6b9f5a547690e5e58856c207d3dd8fd56741c121a22d2e7074e505bc79f68eac",
+    "R3_FORCED_STABILITY.json": "b54cdfae37d78f8cd22a093541d676f76dfb5beac1de075cb51485eb2a3bd89e"
+  },
+  "after_holdout_or_official_modifications_permitted": false
+}

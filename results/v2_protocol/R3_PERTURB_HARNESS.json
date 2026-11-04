@@ -1,0 +1,16 @@
+{
+  "schema": "R3_PERTURB_HARNESS.v1",
+  "episodes_run": 0,
+  "prior_harness_sha256": "bd1357e5e5b4f33ebb7da8f367b9e26dba25148ec93cbefa1e1a4fbc0f6c0ac7",
+  "instrumented_harness_sha256": "ed769acd63fa85f5b7b19569bb1d28d009fbac4c76552defd1423f5e5c55b0f7",
+  "physical_matrix_AST_identical": true,
+  "PerturbedPlant_AST_identical": true,
+  "changes": [
+    "optional pick_offset=None keyword accepted; non-None explicitly rejected",
+    "log actual post-step qpos for strict physical-array parity",
+    "log existing plant.tool_force when tool_contact; no signal/physics modification"
+  ],
+  "sim_and_model_modules_modified_or_monkeypatched": false,
+  "nominal_all_nontiming_array_parity_required_before_perturbation": true,
+  "source_not_public": true
+}

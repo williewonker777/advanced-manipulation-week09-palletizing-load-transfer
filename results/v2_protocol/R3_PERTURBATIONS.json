@@ -1,0 +1,44 @@
+{
+  "schema": "R3_PERTURBATIONS.v1",
+  "official": false,
+  "classification": "analysis-only; never official or fit data",
+  "harness_sha256": "ed769acd63fa85f5b7b19569bb1d28d009fbac4c76552defd1423f5e5c55b0f7",
+  "orchestration_sha256": {
+    "tools/r3_extended.py": "e234b3a7d9bde16eade2246c44d095f9715c35ef8adb7832a6b192b42d4eab74",
+    "tools/d4_robustness.py": "97420c69151a008a24b839a3df9b2b11eafc33033c4393cf6512fd91fb1f62e6",
+    "tools/r2_extended_study.py": "83744de0474c66a3ca433fb1885a246aed5dc447b6334d4b8b9b69df73dace30",
+    "results/v2_protocol/PROTOCOL_R3.json": "dcb76b495d8c2e73a5047f253a7a43a9fc46b642653e4054c5d947109f8f6c39"
+  },
+  "nominal_parity_file": "R3_PERTURB_PARITY.json",
+  "nominal_parity_sha256": "2584b4b6e66b7b664aa01343025de31aeffb9d046279e6539666030c0cb5e313",
+  "groups": [
+    {
+      "variant": "A_handoff_long",
+      "architecture": "servo",
+      "result_file": "R3_PERTURB_A_handoff_long_servo.json",
+      "result_sha256": "c7808ba3ef36e1fe7970fafc6a941655830b56c7d8224848a6049e84f9a3954f",
+      "rows": 34
+    },
+    {
+      "variant": "B_mass",
+      "architecture": "torque",
+      "result_file": "R3_PERTURB_B_mass_torque.json",
+      "result_sha256": "e106ddd9240aa786339696349bddd4b81f65ec60cdce7b4339963e057af5ab87",
+      "rows": 34
+    },
+    {
+      "variant": "R1",
+      "architecture": "servo",
+      "result_file": "R3_PERTURB_R1_servo.json",
+      "result_sha256": "91b638bdcab2cddcbb6d28ff4e36de90754ee16fba4da6c120f43173360de4d8",
+      "rows": 34
+    },
+    {
+      "variant": "R1",
+      "architecture": "torque",
+      "result_file": "R3_PERTURB_R1_torque.json",
+      "result_sha256": "9aca1a7283797b3e86130f42329d2f40d59aad13132d48eae830b7c5f8177ace",
+      "rows": 34
+    }
+  ]
+}

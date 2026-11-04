@@ -1,0 +1,81 @@
+{
+  "schema": "R3_CAUSE_ANALYSIS.v1",
+  "recorded_utc": "2026-11-04T11:57:01.360041+00:00",
+  "base_work_commit": "c8b27afc439b14fc75360f4e300e20ca4748ffb3",
+  "candidate_source_changed": false,
+  "new_plant_episodes": 0,
+  "official_traces_used": false,
+  "inputs": "R2 nonofficial validation observations only; exposed design data, not independent efficacy",
+  "derived_evidence_sha256": {
+    "A_replay": "d93693b7b1b7e10292746ee33261d9c61aff4bb0b11cd285a0039e766f380d43",
+    "A_phase": "be400a4e60babd0f545b89867e768a4190a2381e8ab5d9a78b88a398617b021f",
+    "B_replay": "954d8e583517a3ea7df327e05d7490ceb369f75332d1216bb81aaf8f8b30c106",
+    "B_phase": "553f60f823c634f7386c6f7edcb8004c8a756a52e5f7f0e8064c475e14099fcf",
+    "B_math": "555768728ab5b0379c1a2107c9a3a4be36072d7a00e49ac7e7875218050a303c"
+  },
+  "A": {
+    "mass": 5.65,
+    "joint": 2,
+    "time_s": 3.902,
+    "R1_step_nm": 10.752119,
+    "DOB_step_nm": 11.335217,
+    "direct_DOB_step_contribution_nm": 0.0,
+    "extra_FF_nm": 0.254429,
+    "extra_velocity_feedback_nm": 0.33135,
+    "extra_integral_nm": -0.002681,
+    "gate_start_s": 3.6,
+    "qualification": "exact observed-input command replay; quantized state-history attribution, nonlinear mass-specific phase not identified",
+    "global_TCP_gain_percent_range": [
+      17.06,
+      19.06
+    ],
+    "global_TCP_peak_s_range": [
+      3.824,
+      3.827
+    ]
+  },
+  "B": {
+    "light_masses": [
+      1.05,
+      3.15
+    ],
+    "light_max_time_s": [
+      4.45,
+      4.451
+    ],
+    "light_max_joint": 1,
+    "light_step_joint": 2,
+    "light_step_feedback_nm": [
+      3.148,
+      3.859
+    ],
+    "light_step_load_blend_nm": [
+      0.336,
+      0.838
+    ],
+    "heavy_masses": [
+      5.65,
+      7.55
+    ],
+    "heavy_lift_RMS_R1_mm": [
+      4.825,
+      6.159
+    ],
+    "heavy_lift_RMS_PIDC_mm": [
+      1.137,
+      1.272
+    ],
+    "proposal": "phase-local smooth link-law handoff to R1 before UNLOAD_START, mass schedule as comparator, no raw-load activation",
+    "qualification": "counterfactual decomposition order-dependent and cannot predict new closed-loop motion"
+  },
+  "compute": {
+    "blended_inertia_single_PRNE_action_max_abs_error_nm": 7.11e-15,
+    "approximate_fractional_payload_Mg_not_used": true,
+    "timing_gain_not_measured": true
+  },
+  "unidentified": [
+    "A continuous nonlinear reason why precisely 5.65kg lands on the adverse quantization phase",
+    "B causal closed-loop split of P/V/integral/load paths beyond replay attribution",
+    "new-profile efficacy/stability/timing before actual R3 tests"
+  ]
+}

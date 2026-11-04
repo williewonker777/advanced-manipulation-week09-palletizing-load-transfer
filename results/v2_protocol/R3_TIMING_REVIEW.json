@@ -1,0 +1,1676 @@
+{
+  "schema": "R3_TIMING_REVIEW.v1",
+  "source_sha256": {
+    "results/v2_protocol/R3_DIAGNOSTIC_R1_torque_4.4.json": "aff8a960e675a99bc976f02b48dc79e73292ad84db8dfd80e10b0efd6026dc2a",
+    "results/v2_protocol/R3_HOLDOUT.json": "0243ddb15d0ed115852ea823955a1e647d36a2275c5b139f3daf8e0cf5bccdf8",
+    "results/v2_protocol/R3_VALIDATION_R1_servo.json": "af171dda2c908f24cf765e9fbe13d6dba78e86e269ea2725bca8f7ae50ff7465",
+    "results/v2_protocol/R3_VALIDATION_R1_torque.json": "9261ec48f5fa7e4d10b74d461ee68b3cef04a2c8f5ab9c98369c31e2113a42f6",
+    "results/v2_protocol/R3_VALIDATION_A_handoff_short_servo.json": "4b8a0df7743440935cb7df40250f4823560a3c3decc38f8d3ccd2613b6eeba45",
+    "results/v2_protocol/R3_VALIDATION_A_handoff_long_servo.json": "6214e57de0dda25d590f25e38d633dc475fa724a551a9c9cd435565619932645",
+    "results/v2_protocol/R3_VALIDATION_B_phase_torque.json": "f3d73a757bfc30aa7e3e2d8366e24fad70d0d1d5bdcf1df188b703fb7e0a7e03",
+    "results/v2_protocol/R3_VALIDATION_B_mass_torque.json": "a4c7857f290e9dd8514b55122535e2ba021c3ed6ef3b7056924c23abcb61a6d4",
+    "results/v2_protocol/R3_VALIDATION_B_mass_phase_torque.json": "161deb71a731244a6e2d791a2934453dc08befcc89057b762eac581e916e2ba4",
+    "results/v2_protocol/R3_DEVELOPMENT_A_handoff_long_servo.json": "984e951fedb09e8a85c746acbaf3e393f0c2ca8672e882abd8697be61d9d3d5d",
+    "results/v2_protocol/R3_DEVELOPMENT_R1_servo.json": "f735be67f12bb919d3f6ae23d98e1173cd48a28acb160cb8e698053aaf75bf79",
+    "results/v2_protocol/R3_DEVELOPMENT_B_mass_torque.json": "71b12b2d2ff8f47fa451aaafe7737940c224b88433b0157972d84ee294459447",
+    "results/v2_protocol/R3_DEVELOPMENT_R1_torque.json": "4de1f03345754237d192b68a709f4964698a12fffcc852d8330da0937536d9b3",
+    "results/v2_protocol/R3_D4_A_handoff_long_servo.json": "3fc85296a198e7a49ff1f7d097c3a897de5e0afb7226c9c855f8b5c45aaae1a0",
+    "results/v2_protocol/R3_D4_R1_servo.json": "5141edbdfe4a1e3cbac4504cd0732f3297b7cc759f69b4723c5f0491ed442b5e",
+    "results/v2_protocol/R3_D4_B_mass_torque.json": "5f730f74f3912b8156805e017b54af37fa9825c693d5ea134cb988f37144b750",
+    "results/v2_protocol/R3_D4_R1_torque.json": "a7a271793b58ab1e762cc20d317f3be94a470fb64c8bed845247acd74b7ea994",
+    "results/v2_protocol/R3_PERTURB_A_handoff_long_servo.json": "c7808ba3ef36e1fe7970fafc6a941655830b56c7d8224848a6049e84f9a3954f",
+    "results/v2_protocol/R3_PERTURB_R1_servo.json": "91b638bdcab2cddcbb6d28ff4e36de90754ee16fba4da6c120f43173360de4d8",
+    "results/v2_protocol/R3_PERTURB_B_mass_torque.json": "e106ddd9240aa786339696349bddd4b81f65ec60cdce7b4339963e057af5ab87",
+    "results/v2_protocol/R3_PERTURB_R1_torque.json": "9aca1a7283797b3e86130f42329d2f40d59aad13132d48eae830b7c5f8177ace",
+    "results/v2_protocol/R3_REPLAY_TIMING.json": "37b96b47db414dc3ad5fd08993420d306eb53b51a073a4d61c41aabe01f668a9"
+  },
+  "results": [
+    {
+      "architecture": "servo",
+      "variant": "A_handoff_long",
+      "rows": 449,
+      "cycles": 2694000,
+      "largest_row_p99_us": 364.35501000000016,
+      "maximum_wall_us": 7156.108,
+      "maximum_thread_cpu_us": 7153.273,
+      "maximum_case": {
+        "stage": "d4",
+        "case_id": 353
+      },
+      "overrun_cycles": 7,
+      "all_outliers": [
+        {
+          "stage": "d4",
+          "case_id": 6,
+          "cycle": 343,
+          "simulated_t_s": 0.343,
+          "controller": {
+            "wall_ns": 59190,
+            "cpu_ns": 58150,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 4357957,
+            "cpu_ns": 4356384,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 4417147,
+            "cpu_ns": 4414534,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 121,
+          "cycle": 5267,
+          "simulated_t_s": 5.267,
+          "controller": {
+            "wall_ns": 57439,
+            "cpu_ns": 56440,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5744592,
+            "cpu_ns": 5743088,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 5802031,
+            "cpu_ns": 5799528,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 126,
+          "cycle": 349,
+          "simulated_t_s": 0.34900000000000003,
+          "controller": {
+            "wall_ns": 55839,
+            "cpu_ns": 54829,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5021820,
+            "cpu_ns": 5020151,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 5077659,
+            "cpu_ns": 5074980,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 156,
+          "cycle": 2505,
+          "simulated_t_s": 2.505,
+          "controller": {
+            "wall_ns": 69280,
+            "cpu_ns": 68210,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 6610138,
+            "cpu_ns": 6608505,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 6679418,
+            "cpu_ns": 6676715,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 219,
+          "cycle": 4807,
+          "simulated_t_s": 4.807,
+          "controller": {
+            "wall_ns": 54209,
+            "cpu_ns": 53299,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 6096879,
+            "cpu_ns": 6095347,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 6151088,
+            "cpu_ns": 6148646,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 285,
+          "cycle": 1037,
+          "simulated_t_s": 1.037,
+          "controller": {
+            "wall_ns": 54470,
+            "cpu_ns": 53480,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 6599949,
+            "cpu_ns": 6598325,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 6654419,
+            "cpu_ns": 6651805,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 353,
+          "cycle": 5037,
+          "simulated_t_s": 5.037,
+          "controller": {
+            "wall_ns": 61119,
+            "cpu_ns": 59940,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 7094989,
+            "cpu_ns": 7093333,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 7156108,
+            "cpu_ns": 7153273,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        }
+      ],
+      "maximum_wall_outlier": {
+        "stage": "d4",
+        "case_id": 353,
+        "cycle": 5037,
+        "simulated_t_s": 5.037,
+        "controller": {
+          "wall_ns": 61119,
+          "cpu_ns": 59940,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "detector": {
+          "wall_ns": 7094989,
+          "cpu_ns": 7093333,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "combined": {
+          "wall_ns": 7156108,
+          "cpu_ns": 7153273,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        }
+      },
+      "global_GC_changes": false,
+      "serial_owned_simulations": 1
+    },
+    {
+      "architecture": "servo",
+      "variant": "A_handoff_short",
+      "rows": 4,
+      "cycles": 24000,
+      "largest_row_p99_us": 319.9587,
+      "maximum_wall_us": 614.987,
+      "maximum_thread_cpu_us": 612.418,
+      "maximum_case": {
+        "stage": "validation",
+        "case_id": 0
+      },
+      "overrun_cycles": 0,
+      "all_outliers": [],
+      "maximum_wall_outlier": null,
+      "global_GC_changes": false,
+      "serial_owned_simulations": 1
+    },
+    {
+      "architecture": "servo",
+      "variant": "R1",
+      "rows": 487,
+      "cycles": 2922000,
+      "largest_row_p99_us": 327.67129000000006,
+      "maximum_wall_us": 11702.85,
+      "maximum_thread_cpu_us": 11700.396,
+      "maximum_case": {
+        "stage": "d4",
+        "case_id": 169
+      },
+      "overrun_cycles": 8,
+      "all_outliers": [
+        {
+          "stage": "development",
+          "case_id": 1,
+          "cycle": 2046,
+          "simulated_t_s": 2.0460000000000003,
+          "controller": {
+            "wall_ns": 35710,
+            "cpu_ns": 34730,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5937010,
+            "cpu_ns": 5935528,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 5972720,
+            "cpu_ns": 5970258,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 9,
+          "cycle": 346,
+          "simulated_t_s": 0.34600000000000003,
+          "controller": {
+            "wall_ns": 35289,
+            "cpu_ns": 34310,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 9897869,
+            "cpu_ns": 9896312,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 9933158,
+            "cpu_ns": 9930622,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 99,
+          "cycle": 2276,
+          "simulated_t_s": 2.2760000000000002,
+          "controller": {
+            "wall_ns": 36280,
+            "cpu_ns": 35200,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 10646591,
+            "cpu_ns": 10644570,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 10682871,
+            "cpu_ns": 10679770,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 107,
+          "cycle": 350,
+          "simulated_t_s": 0.35000000000000003,
+          "controller": {
+            "wall_ns": 34100,
+            "cpu_ns": 33240,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 10079302,
+            "cpu_ns": 10077681,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 10113402,
+            "cpu_ns": 10110921,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 169,
+          "cycle": 4347,
+          "simulated_t_s": 4.347,
+          "controller": {
+            "wall_ns": 37160,
+            "cpu_ns": 36270,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 11665690,
+            "cpu_ns": 11664126,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 11702850,
+            "cpu_ns": 11700396,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 178,
+          "cycle": 350,
+          "simulated_t_s": 0.35000000000000003,
+          "controller": {
+            "wall_ns": 35120,
+            "cpu_ns": 34180,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 10688692,
+            "cpu_ns": 10687049,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 10723812,
+            "cpu_ns": 10721229,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 243,
+          "cycle": 1385,
+          "simulated_t_s": 1.385,
+          "controller": {
+            "wall_ns": 35889,
+            "cpu_ns": 34960,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 11275005,
+            "cpu_ns": 11273297,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 11310894,
+            "cpu_ns": 11308257,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "perturb",
+          "case_id": 5,
+          "cycle": 350,
+          "simulated_t_s": 0.35000000000000003,
+          "controller": {
+            "wall_ns": 44110,
+            "cpu_ns": 42970,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 4841662,
+            "cpu_ns": 4834442,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 4885772,
+            "cpu_ns": 4877412,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        }
+      ],
+      "maximum_wall_outlier": {
+        "stage": "d4",
+        "case_id": 169,
+        "cycle": 4347,
+        "simulated_t_s": 4.347,
+        "controller": {
+          "wall_ns": 37160,
+          "cpu_ns": 36270,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "detector": {
+          "wall_ns": 11665690,
+          "cpu_ns": 11664126,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "combined": {
+          "wall_ns": 11702850,
+          "cpu_ns": 11700396,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        }
+      },
+      "global_GC_changes": false,
+      "serial_owned_simulations": 1
+    },
+    {
+      "architecture": "torque",
+      "variant": "B_mass",
+      "rows": 449,
+      "cycles": 2694000,
+      "largest_row_p99_us": 671.9899800000019,
+      "maximum_wall_us": 9648.991,
+      "maximum_thread_cpu_us": 9645.974,
+      "maximum_case": {
+        "stage": "d4",
+        "case_id": 230
+      },
+      "overrun_cycles": 12,
+      "all_outliers": [
+        {
+          "stage": "development",
+          "case_id": 3,
+          "cycle": 342,
+          "simulated_t_s": 0.342,
+          "controller": {
+            "wall_ns": 45960,
+            "cpu_ns": 44980,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 6026309,
+            "cpu_ns": 6024577,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 6072269,
+            "cpu_ns": 6069557,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "development",
+          "case_id": 22,
+          "cycle": 2741,
+          "simulated_t_s": 2.741,
+          "controller": {
+            "wall_ns": 960525,
+            "cpu_ns": 313859,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "detector": {
+            "wall_ns": 218889,
+            "cpu_ns": 217099,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 1179414,
+            "cpu_ns": 530958,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 31,
+          "cycle": 341,
+          "simulated_t_s": 0.341,
+          "controller": {
+            "wall_ns": 68580,
+            "cpu_ns": 67390,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 7738138,
+            "cpu_ns": 7736680,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 7806718,
+            "cpu_ns": 7804070,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 74,
+          "cycle": 3422,
+          "simulated_t_s": 3.422,
+          "controller": {
+            "wall_ns": 48979,
+            "cpu_ns": 47980,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 7868358,
+            "cpu_ns": 7866780,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 7917337,
+            "cpu_ns": 7914760,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 230,
+          "cycle": 2272,
+          "simulated_t_s": 2.2720000000000002,
+          "controller": {
+            "wall_ns": 273898,
+            "cpu_ns": 272499,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 9375093,
+            "cpu_ns": 9373475,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 9648991,
+            "cpu_ns": 9645974,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 240,
+          "cycle": 1431,
+          "simulated_t_s": 1.431,
+          "controller": {
+            "wall_ns": 817035,
+            "cpu_ns": 105840,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "detector": {
+            "wall_ns": 266778,
+            "cpu_ns": 264859,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 1083813,
+            "cpu_ns": 370699,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 241,
+          "cycle": 341,
+          "simulated_t_s": 0.341,
+          "controller": {
+            "wall_ns": 275768,
+            "cpu_ns": 274399,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 8720527,
+            "cpu_ns": 8718947,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 8996295,
+            "cpu_ns": 8993346,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 248,
+          "cycle": 341,
+          "simulated_t_s": 0.341,
+          "controller": {
+            "wall_ns": 271218,
+            "cpu_ns": 269959,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 8706357,
+            "cpu_ns": 8704797,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 8977575,
+            "cpu_ns": 8974756,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 330,
+          "cycle": 3422,
+          "simulated_t_s": 3.422,
+          "controller": {
+            "wall_ns": 48509,
+            "cpu_ns": 47490,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 9569302,
+            "cpu_ns": 9567653,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 9617811,
+            "cpu_ns": 9615143,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "perturb",
+          "case_id": 1,
+          "cycle": 340,
+          "simulated_t_s": 0.34,
+          "controller": {
+            "wall_ns": 266789,
+            "cpu_ns": 265479,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5510901,
+            "cpu_ns": 5508569,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 5777690,
+            "cpu_ns": 5774048,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "perturb",
+          "case_id": 6,
+          "cycle": 5816,
+          "simulated_t_s": 5.816,
+          "controller": {
+            "wall_ns": 1680414,
+            "cpu_ns": 58590,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "detector": {
+            "wall_ns": 166689,
+            "cpu_ns": 155919,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 1847103,
+            "cpu_ns": 214509,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 2
+          }
+        },
+        {
+          "stage": "perturb",
+          "case_id": 26,
+          "cycle": 3422,
+          "simulated_t_s": 3.422,
+          "controller": {
+            "wall_ns": 352299,
+            "cpu_ns": 350669,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 6085808,
+            "cpu_ns": 6077756,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 6438107,
+            "cpu_ns": 6428425,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        }
+      ],
+      "maximum_wall_outlier": {
+        "stage": "d4",
+        "case_id": 230,
+        "cycle": 2272,
+        "simulated_t_s": 2.2720000000000002,
+        "controller": {
+          "wall_ns": 273898,
+          "cpu_ns": 272499,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "detector": {
+          "wall_ns": 9375093,
+          "cpu_ns": 9373475,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "combined": {
+          "wall_ns": 9648991,
+          "cpu_ns": 9645974,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        }
+      },
+      "global_GC_changes": false,
+      "serial_owned_simulations": 1
+    },
+    {
+      "architecture": "torque",
+      "variant": "B_mass_phase",
+      "rows": 4,
+      "cycles": 24000,
+      "largest_row_p99_us": 598.9427000000002,
+      "maximum_wall_us": 798.176,
+      "maximum_thread_cpu_us": 787.857,
+      "maximum_case": {
+        "stage": "validation",
+        "case_id": 1
+      },
+      "overrun_cycles": 0,
+      "all_outliers": [],
+      "maximum_wall_outlier": null,
+      "global_GC_changes": false,
+      "serial_owned_simulations": 1
+    },
+    {
+      "architecture": "torque",
+      "variant": "B_phase",
+      "rows": 4,
+      "cycles": 24000,
+      "largest_row_p99_us": 554.4429200000002,
+      "maximum_wall_us": 843.326,
+      "maximum_thread_cpu_us": 840.267,
+      "maximum_case": {
+        "stage": "validation",
+        "case_id": 0
+      },
+      "overrun_cycles": 0,
+      "all_outliers": [],
+      "maximum_wall_outlier": null,
+      "global_GC_changes": false,
+      "serial_owned_simulations": 1
+    },
+    {
+      "architecture": "torque",
+      "variant": "R1",
+      "rows": 488,
+      "cycles": 2928000,
+      "largest_row_p99_us": 350.4397100000003,
+      "maximum_wall_us": 14162.769,
+      "maximum_thread_cpu_us": 14159.826,
+      "maximum_case": {
+        "stage": "d4",
+        "case_id": 144
+      },
+      "overrun_cycles": 4,
+      "all_outliers": [
+        {
+          "stage": "holdout",
+          "case_id": 18,
+          "cycle": 695,
+          "simulated_t_s": 0.6950000000000001,
+          "controller": {
+            "wall_ns": 39449,
+            "cpu_ns": 38570,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 4917328,
+            "cpu_ns": 4915471,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 4956777,
+            "cpu_ns": 4954041,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 36,
+          "cycle": 2968,
+          "simulated_t_s": 2.968,
+          "controller": {
+            "wall_ns": 39979,
+            "cpu_ns": 38960,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 12928699,
+            "cpu_ns": 12927001,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 12968678,
+            "cpu_ns": 12965961,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 144,
+          "cycle": 2507,
+          "simulated_t_s": 2.507,
+          "controller": {
+            "wall_ns": 40590,
+            "cpu_ns": 39500,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 14122179,
+            "cpu_ns": 14120326,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 14162769,
+            "cpu_ns": 14159826,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "stage": "d4",
+          "case_id": 214,
+          "cycle": 3688,
+          "simulated_t_s": 3.688,
+          "controller": {
+            "wall_ns": 35820,
+            "cpu_ns": 34850,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1216103,
+            "cpu_ns": 197549,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 1251923,
+            "cpu_ns": 232399,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        }
+      ],
+      "maximum_wall_outlier": {
+        "stage": "d4",
+        "case_id": 144,
+        "cycle": 2507,
+        "simulated_t_s": 2.507,
+        "controller": {
+          "wall_ns": 40590,
+          "cpu_ns": 39500,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "detector": {
+          "wall_ns": 14122179,
+          "cpu_ns": 14120326,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "combined": {
+          "wall_ns": 14162769,
+          "cpu_ns": 14159826,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        }
+      },
+      "global_GC_changes": false,
+      "serial_owned_simulations": 1
+    }
+  ],
+  "p99_selection_limit_us": 800,
+  "maximum_goal_us": 1000,
+  "samples_are_per_case_not_pooled_p99": true,
+  "all_outliers_retained": true,
+  "aggregation": "publication-only exact episode inventory; nominal parity has no paired timing",
+  "frozen_helper_limitation": "r3_review timing glob includes parity records; frozen source unchanged",
+  "unwrapped_nominal_parity_episodes": 8,
+  "equivalent_action_replay": {
+    "schema": "R3_REPLAY_TIMING.v1",
+    "episodes_run": 0,
+    "method": "6000 identical allowed-observation cycles each; R2 then R3, serial, no warmup/outlier removal",
+    "scope": "descriptive implementation-cost comparison only; not closed-loop efficacy or selection",
+    "limitations": "single fixed order and host realization; no randomized benchmark or global real-time guarantee",
+    "mass_kg": 7.17,
+    "com": [
+      -0.0022911210386432276,
+      0.024093754097509135,
+      0.022290483443776828
+    ],
+    "input_sha256": "4abc13cc3ee4778b77e9a42395d029f07975f17c99490ec6001c17a6a8b67ee3",
+    "maximum_torque_output_abs_difference_nm": 1.7053025658242404e-13,
+    "global_gc_changes": false,
+    "results": [
+      {
+        "label": "R2_unoptimized",
+        "timing": {
+          "controller": {
+            "wall": {
+              "samples": 6000,
+              "median_us": 359.619,
+              "p99_us": 597.8243100000002,
+              "max_us": 821.627,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5534,
+                346,
+                119,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            },
+            "thread_cpu": {
+              "samples": 6000,
+              "median_us": 358.534,
+              "p99_us": 595.9896000000002,
+              "max_us": 820.307,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5548,
+                333,
+                118,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            }
+          },
+          "detector": {
+            "wall": {
+              "samples": 6000,
+              "median_us": 83.9995,
+              "p99_us": 240.9140000000001,
+              "max_us": 367.058,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                1118,
+                2280,
+                62,
+                670,
+                1357,
+                347,
+                121,
+                39,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            },
+            "thread_cpu": {
+              "samples": 6000,
+              "median_us": 82.86500000000001,
+              "p99_us": 239.67950000000002,
+              "max_us": 365.549,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                1563,
+                1842,
+                56,
+                843,
+                1219,
+                315,
+                117,
+                40,
+                5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            }
+          },
+          "combined": {
+            "wall": {
+              "samples": 6000,
+              "median_us": 450.1935,
+              "p99_us": 772.1894000000001,
+              "max_us": 1001.346,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                3395,
+                2530,
+                74,
+                1,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            },
+            "thread_cpu": {
+              "samples": 6000,
+              "median_us": 447.898,
+              "p99_us": 769.46849,
+              "max_us": 998.897,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                3441,
+                2487,
+                72,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            }
+          },
+          "outlier_threshold_us": 1000.0,
+          "outliers": [
+            {
+              "cycle": 1467,
+              "simulated_t_s": 1.467,
+              "controller": {
+                "wall_ns": 821627,
+                "cpu_ns": 820307,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 179719,
+                "cpu_ns": 178590,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 1001346,
+                "cpu_ns": 998897,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            }
+          ],
+          "capacity_guard_count": 24,
+          "capacity_guard_max_foreign_heavy_count": 0,
+          "capacity_guard_peak_load_average_1min": 1.76708984375,
+          "capacity_guard_min_mem_available_gib": 18.548988342285156
+        }
+      },
+      {
+        "label": "R3_optimized_alpha1",
+        "timing": {
+          "controller": {
+            "wall": {
+              "samples": 6000,
+              "median_us": 236.79399999999998,
+              "p99_us": 308.9995,
+              "max_us": 466.688,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5500,
+                420,
+                49,
+                31,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            },
+            "thread_cpu": {
+              "samples": 6000,
+              "median_us": 235.719,
+              "p99_us": 306.7271000000002,
+              "max_us": 465.019,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5570,
+                355,
+                45,
+                30,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            }
+          },
+          "detector": {
+            "wall": {
+              "samples": 6000,
+              "median_us": 81.8445,
+              "p99_us": 192.82070000000024,
+              "max_us": 404.989,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                1185,
+                2226,
+                45,
+                840,
+                1501,
+                153,
+                40,
+                8,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            },
+            "thread_cpu": {
+              "samples": 6000,
+              "median_us": 80.785,
+              "p99_us": 191.31990000000002,
+              "max_us": 403.599,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                1712,
+                1707,
+                38,
+                1087,
+                1274,
+                137,
+                36,
+                7,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            }
+          },
+          "combined": {
+            "wall": {
+              "samples": 6000,
+              "median_us": 319.48850000000004,
+              "p99_us": 475.5087,
+              "max_us": 760.157,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                457,
+                4601,
+                898,
+                43,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            },
+            "thread_cpu": {
+              "samples": 6000,
+              "median_us": 317.269,
+              "p99_us": 469.71859000000023,
+              "max_us": 756.627,
+              "histogram_edges_us": [
+                0.0,
+                25.0,
+                50.0,
+                75.0,
+                100.0,
+                125.0,
+                150.0,
+                175.0,
+                200.0,
+                250.0,
+                300.0,
+                400.0,
+                500.0,
+                750.0,
+                1000.0,
+                2000.0,
+                5000.0,
+                10000.0,
+                1000000.0
+              ],
+              "histogram_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                651,
+                4534,
+                773,
+                41,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "histogram_underflow": 0,
+              "histogram_overflow": 0
+            }
+          },
+          "outlier_threshold_us": 1000.0,
+          "outliers": [],
+          "capacity_guard_count": 24,
+          "capacity_guard_max_foreign_heavy_count": 0,
+          "capacity_guard_peak_load_average_1min": 1.76708984375,
+          "capacity_guard_min_mem_available_gib": 18.428565979003906
+        }
+      }
+    ],
+    "source_sha256": {
+      "experiments/r2_robust.py": "84e8622110c248e090d1fc1cfa1e5431d7a388fa8c71cda43629f4c0460b2864",
+      "experiments/r2_prne.py": "64d4b59c4b2711225a07c8c80a37829fb93a2faa73350613a1167ba1ccc1f04b",
+      "experiments/r3_generated/B_mass_torque.py": "82a45c3d460eb7e1e634a813aa31e2d1edd76aadcabad29772f6feec5ab812c8",
+      "tools/r3_replay_timing.py": "cedf222c8671ccb83301a1348dc0ba11f3a39079cb26a622f6d22ce1c22c2e54",
+      "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "r1_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+      "tools/r2_stability.py": "cf7f37510cbe545fb0474ab58c06e7ccd73c8a7d4b4f00d3106b7449923fdbea",
+      "tools/v2_study.py": "229890028044bdee29bcb938e87f84e2a10c8cc2e6e4b20ed843cef9f4e6c40f",
+      "sim/nominal.py": "08d45260e1fa90fe7919394a27e3e238c32c0f81033d1d176c066439d3a3a489"
+    }
+  }
+}

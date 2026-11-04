@@ -1,0 +1,943 @@
+{
+  "schema": "R3_REPORT_MANIFEST.v1",
+  "status": "frozen",
+  "candidates": [
+    {
+      "id": "A_handoff_short",
+      "method": "DOB 4.5 + handoff",
+      "architecture": "servo",
+      "validation_cost": "FAIL; 최악 1.095×",
+      "validation_gain": "평균 RMS 비 0.955 / 최대 비 0.850 (참고; 효능은 섭동에서 판정)",
+      "forced_stability": "22/28 radius+FD",
+      "actual_stability": "미실행: 비선정",
+      "timing": "320.0/615.0 us",
+      "decision": "reject",
+      "reason": "질량별 비용·국소 안정성/FD"
+    },
+    {
+      "id": "A_handoff_long",
+      "method": "DOB 4.5 + handoff",
+      "architecture": "servo",
+      "validation_cost": "FAIL; 최악 1.061×",
+      "validation_gain": "평균 RMS 비 0.976 / 최대 비 0.948 (참고; 효능은 섭동에서 판정)",
+      "forced_stability": "22/28 radius+FD",
+      "actual_stability": "54/64 radius+FD",
+      "timing": "364.4/7156.1 us",
+      "decision": "reject",
+      "reason": "질량별 비용·국소 안정성/FD"
+    },
+    {
+      "id": "B_phase",
+      "method": "P-IDC 4.5/1 + phase",
+      "architecture": "torque",
+      "validation_cost": "FAIL; 최악 3.841×",
+      "validation_gain": "평균 RMS 비 0.906 / 최대 비 1.054",
+      "forced_stability": "45/50 radius+FD",
+      "actual_stability": "미실행: 비선정",
+      "timing": "554.4/843.3 us",
+      "decision": "reject",
+      "reason": "질량별 비용·국소 안정성/FD·10% 효능"
+    },
+    {
+      "id": "B_mass",
+      "method": "P-IDC 4.5/1 + mass",
+      "architecture": "torque",
+      "validation_cost": "PASS; 최악 1.034×",
+      "validation_gain": "평균 RMS 비 0.834 / 최대 비 0.838",
+      "forced_stability": "43/50 radius+FD",
+      "actual_stability": "45/48 radius+FD",
+      "timing": "672.0/9649.0 us",
+      "decision": "reject",
+      "reason": "국소 안정성/FD"
+    },
+    {
+      "id": "B_mass_phase",
+      "method": "P-IDC 4.5/1 + mass_phase",
+      "architecture": "torque",
+      "validation_cost": "FAIL; 최악 1.620×",
+      "validation_gain": "평균 RMS 비 0.911 / 최대 비 0.928",
+      "forced_stability": "45/50 radius+FD",
+      "actual_stability": "미실행: 비선정",
+      "timing": "598.9/798.2 us",
+      "decision": "reject",
+      "reason": "질량별 비용·국소 안정성/FD·10% 효능"
+    }
+  ],
+  "per_mass_validation": [
+    {
+      "candidate": "A_handoff_short",
+      "architecture": "servo",
+      "mass_kg": 1.27,
+      "r1_rms_mm": 1.1582679353182883,
+      "diagnostic_rms_mm": 1.1173857223542163,
+      "r1_max_mm": 3.8381698140862635,
+      "diagnostic_max_mm": 3.2574118655459015,
+      "r1_place_step_nm": 4.7528625757478125,
+      "diagnostic_place_step_nm": 5.203444241033509,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "A_handoff_short",
+      "architecture": "servo",
+      "mass_kg": 3.67,
+      "r1_rms_mm": 1.1481011315098348,
+      "diagnostic_rms_mm": 1.101300246200762,
+      "r1_max_mm": 3.7875300825512177,
+      "diagnostic_max_mm": 3.207149620239676,
+      "r1_place_step_nm": 6.948083221592313,
+      "diagnostic_place_step_nm": 7.304387100437438,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "A_handoff_short",
+      "architecture": "servo",
+      "mass_kg": 5.47,
+      "r1_rms_mm": 1.153650190327326,
+      "diagnostic_rms_mm": 1.0966528665904043,
+      "r1_max_mm": 3.825935944894682,
+      "diagnostic_max_mm": 3.249307015160649,
+      "r1_place_step_nm": 10.636155005349309,
+      "diagnostic_place_step_nm": 11.107892081147014,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "A_handoff_short",
+      "architecture": "servo",
+      "mass_kg": 7.17,
+      "r1_rms_mm": 1.1767913639932095,
+      "diagnostic_rms_mm": 1.1109881809549975,
+      "r1_max_mm": 3.8683126027201657,
+      "diagnostic_max_mm": 3.3008232178373182,
+      "r1_place_step_nm": 14.310700947313478,
+      "diagnostic_place_step_nm": 14.088674131098543,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "A_handoff_long",
+      "architecture": "servo",
+      "mass_kg": 1.27,
+      "r1_rms_mm": 1.1582679353182883,
+      "diagnostic_rms_mm": 1.1398513330061573,
+      "r1_max_mm": 3.8381698140862635,
+      "diagnostic_max_mm": 3.665834970976532,
+      "r1_place_step_nm": 4.7528625757478125,
+      "diagnostic_place_step_nm": 4.690141005536972,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "A_handoff_long",
+      "architecture": "servo",
+      "mass_kg": 3.67,
+      "r1_rms_mm": 1.1481011315098348,
+      "diagnostic_rms_mm": 1.1249312350276286,
+      "r1_max_mm": 3.7875300825512177,
+      "diagnostic_max_mm": 3.589185789240015,
+      "r1_place_step_nm": 6.948083221592313,
+      "diagnostic_place_step_nm": 7.371582330934189,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "A_handoff_long",
+      "architecture": "servo",
+      "mass_kg": 5.47,
+      "r1_rms_mm": 1.153650190327326,
+      "diagnostic_rms_mm": 1.1230951061356929,
+      "r1_max_mm": 3.825935944894682,
+      "diagnostic_max_mm": 3.6137726998864372,
+      "r1_place_step_nm": 10.636155005349309,
+      "diagnostic_place_step_nm": 10.846255684378235,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "A_handoff_long",
+      "architecture": "servo",
+      "mass_kg": 7.17,
+      "r1_rms_mm": 1.1767913639932095,
+      "diagnostic_rms_mm": 1.139145835985011,
+      "r1_max_mm": 3.8683126027201657,
+      "diagnostic_max_mm": 3.6528608214477494,
+      "r1_place_step_nm": 14.310700947313478,
+      "diagnostic_place_step_nm": 13.789216432000103,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_phase",
+      "architecture": "torque",
+      "mass_kg": 1.27,
+      "r1_rms_mm": 2.0480837709839945,
+      "diagnostic_rms_mm": 2.011653357437423,
+      "r1_max_mm": 4.005678449819905,
+      "diagnostic_max_mm": 4.980893656488527,
+      "r1_place_step_nm": 4.92322128277425,
+      "diagnostic_place_step_nm": 5.303887416362798,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_phase",
+      "architecture": "torque",
+      "mass_kg": 3.67,
+      "r1_rms_mm": 2.2630412671477815,
+      "diagnostic_rms_mm": 2.1013579338819466,
+      "r1_max_mm": 4.075474282065663,
+      "diagnostic_max_mm": 5.0809653741351335,
+      "r1_place_step_nm": 6.191477940643011,
+      "diagnostic_place_step_nm": 6.862593821755723,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_phase",
+      "architecture": "torque",
+      "mass_kg": 5.47,
+      "r1_rms_mm": 2.587166804516576,
+      "diagnostic_rms_mm": 2.2921905951764727,
+      "r1_max_mm": 5.727107568520188,
+      "diagnostic_max_mm": 5.1901303101127265,
+      "r1_place_step_nm": 9.10163564369978,
+      "diagnostic_place_step_nm": 9.649675657250384,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_phase",
+      "architecture": "torque",
+      "mass_kg": 7.17,
+      "r1_rms_mm": 3.0283036459300705,
+      "diagnostic_rms_mm": 2.5002737923545726,
+      "r1_max_mm": 7.608174708398645,
+      "diagnostic_max_mm": 6.23769566904398,
+      "r1_place_step_nm": 12.189681668381354,
+      "diagnostic_place_step_nm": 12.572121287493076,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_mass",
+      "architecture": "torque",
+      "mass_kg": 1.27,
+      "r1_rms_mm": 2.0480837709839945,
+      "diagnostic_rms_mm": 2.0480837709839945,
+      "r1_max_mm": 4.005678449819905,
+      "diagnostic_max_mm": 4.005678449819905,
+      "r1_place_step_nm": 4.92322128277425,
+      "diagnostic_place_step_nm": 4.92322128277425,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_mass",
+      "architecture": "torque",
+      "mass_kg": 3.67,
+      "r1_rms_mm": 2.2630412671477815,
+      "diagnostic_rms_mm": 2.1226919134106894,
+      "r1_max_mm": 4.075474282065663,
+      "diagnostic_max_mm": 4.139929558212479,
+      "r1_place_step_nm": 6.191477940643011,
+      "diagnostic_place_step_nm": 6.3008625084287075,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_mass",
+      "architecture": "torque",
+      "mass_kg": 5.47,
+      "r1_rms_mm": 2.587166804516576,
+      "diagnostic_rms_mm": 1.9318832836090467,
+      "r1_max_mm": 5.727107568520188,
+      "diagnostic_max_mm": 4.356123367214671,
+      "r1_place_step_nm": 9.10163564369978,
+      "diagnostic_place_step_nm": 9.249262834700431,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_mass",
+      "architecture": "torque",
+      "mass_kg": 7.17,
+      "r1_rms_mm": 3.0283036459300705,
+      "diagnostic_rms_mm": 1.9669173146616532,
+      "r1_max_mm": 7.608174708398645,
+      "diagnostic_max_mm": 4.375768557865683,
+      "r1_place_step_nm": 12.189681668381354,
+      "diagnostic_place_step_nm": 12.599255229090772,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_mass_phase",
+      "architecture": "torque",
+      "mass_kg": 1.27,
+      "r1_rms_mm": 2.0480837709839945,
+      "diagnostic_rms_mm": 2.0480837709839945,
+      "r1_max_mm": 4.005678449819905,
+      "diagnostic_max_mm": 4.005678449819905,
+      "r1_place_step_nm": 4.92322128277425,
+      "diagnostic_place_step_nm": 4.92322128277425,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_mass_phase",
+      "architecture": "torque",
+      "mass_kg": 3.67,
+      "r1_rms_mm": 2.2630412671477815,
+      "diagnostic_rms_mm": 2.114937906183981,
+      "r1_max_mm": 4.075474282065663,
+      "diagnostic_max_mm": 4.014470897526138,
+      "r1_place_step_nm": 6.191477940643011,
+      "diagnostic_place_step_nm": 6.190841429892487,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_mass_phase",
+      "architecture": "torque",
+      "mass_kg": 5.47,
+      "r1_rms_mm": 2.587166804516576,
+      "diagnostic_rms_mm": 2.2898524241694904,
+      "r1_max_mm": 5.727107568520188,
+      "diagnostic_max_mm": 5.18431087580726,
+      "r1_place_step_nm": 9.10163564369978,
+      "diagnostic_place_step_nm": 9.644008846738018,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    },
+    {
+      "candidate": "B_mass_phase",
+      "architecture": "torque",
+      "mass_kg": 7.17,
+      "r1_rms_mm": 3.0283036459300705,
+      "diagnostic_rms_mm": 2.5002737923545726,
+      "r1_max_mm": 7.608174708398645,
+      "diagnostic_max_mm": 6.23769566904398,
+      "r1_place_step_nm": 12.189681668381354,
+      "diagnostic_place_step_nm": 12.572121287493076,
+      "validation_status": "reject",
+      "final_r3_alias": "R1"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "T1",
+      "name": "놓기 전 마지막 20 ms 평균 지지율",
+      "condition": "8 kg, 동일 COM, release 직전 20 ms",
+      "unit": "% of mg (A/B)",
+      "baseline": "A 0.0000 / B 0.0557",
+      "v1": "A 0.2098 / B 11.1507",
+      "r1": "A 0.2098 / B 11.1507",
+      "r3": "A 0.2098 / B 11.1507",
+      "status": "not_met"
+    },
+    {
+      "id": "T2",
+      "name": "놓기 토크 계단",
+      "condition": "8 kg, 동일 COM, place step",
+      "unit": "N m (A/B)",
+      "baseline": "A 73.842 / B 74.797",
+      "v1": "A 14.626 / B 13.126",
+      "r1": "A 14.626 / B 13.126",
+      "r3": "A 14.626 / B 13.126",
+      "status": "not_met"
+    },
+    {
+      "id": "T3",
+      "name": "분석 섭동 최악 TCP/놓기힘/오감지",
+      "condition": "fresh 34 perturbation rows per architecture",
+      "unit": "mm / N / rises",
+      "baseline": "A 22.731 mm / 208.997 N / FA 221; B 17.171 mm / 352.140 N / FA 309",
+      "v1": "A 14.777 mm / 212.734 N / FA 4; B 45.652 mm / 362.600 N / FA 8",
+      "r1": "A 14.777 mm / 212.734 N / FA 6; B 45.652 mm / 362.600 N / FA 10",
+      "r3": "A 14.777 mm / 212.734 N / FA 6; B 45.652 mm / 362.600 N / FA 10",
+      "status": "not_met"
+    },
+    {
+      "id": "T4",
+      "name": "질량·COM 격자 포화/놓기 peak",
+      "condition": "189 no-collision reference rows per architecture",
+      "unit": "rows / mg",
+      "baseline": "A sat 0/189, peak 2.0359 mg; B sat 0/189, peak 9.8822 mg",
+      "v1": "A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg",
+      "r1": "A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg",
+      "r3": "A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg",
+      "status": "not_met"
+    },
+    {
+      "id": "T5",
+      "name": "TCP 추적 RMS/최대",
+      "condition": "8 kg, 동일 COM, no collision",
+      "unit": "mm (A/B)",
+      "baseline": "A 6.144/14.000; B 7.042/13.183",
+      "v1": "A 1.174/3.914; B 3.232/8.444",
+      "r1": "A 1.174/3.914; B 3.232/8.444",
+      "r3": "A 1.174/3.914; B 3.232/8.444",
+      "status": "not_met"
+    },
+    {
+      "id": "T6",
+      "name": "D4 감지/놓침/masked",
+      "condition": "180 collision rows per architecture; masked kept separate",
+      "unit": "episodes",
+      "baseline": "A 88/43/49; B 78/42/60",
+      "v1": "A 94/86/0; B 91/89/0",
+      "r1": "A 111/69/0; B 111/69/0",
+      "r3": "A 111/69/0; B 111/69/0",
+      "status": "not_met"
+    }
+  ],
+  "final_architectures": [
+    {
+      "architecture": "servo",
+      "decision": "reject",
+      "selected": "A_handoff_long",
+      "final_alias": "R1",
+      "my_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "r1_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "reason": "사전 관문 탈락 기록 유지; D4·섭동 비용·오감지 실패도 확인"
+    },
+    {
+      "architecture": "torque",
+      "decision": "reject",
+      "selected": "B_mass",
+      "final_alias": "R1",
+      "my_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "r1_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "reason": "사전 관문 탈락 기록 유지; D4·섭동 비용·오감지 실패도 확인"
+    }
+  ],
+  "redesign": [
+    {
+      "architecture": "servo",
+      "used": 0,
+      "reason": "비용 외 수렴한 국소 관문도 실패했다. 미식별 위상에 추가 시각/gain을 정할 근거가 없어 비용 중심 재설계 조건이 아니다.",
+      "recorded_before_development": true,
+      "arbitrary_parameter_search_performed": false
+    },
+    {
+      "architecture": "torque",
+      "used": 0,
+      "reason": "B_mass는 비용·효능을 이미 통과했다. 막힌 것은 국소 관문이므로 비용 중심 재설계 조건이 아니다.",
+      "recorded_before_development": true,
+      "arbitrary_parameter_search_performed": false
+    }
+  ],
+  "lie_group_usage": [
+    {
+      "method": "A motor DOB",
+      "section": "자체 유도",
+      "equation": "dhat=z+LBv; quintic handoff",
+      "elastic_1ms_zoh_delay_adaptation": "elastic motor + 자체 Drive queue; 1 ms ZOH, command/JTS delay",
+      "comparison": "유클리드 R1 대비 A-long 최대 TCP 약4.5–5.6% 감소; 독립 Lie 효과 아님",
+      "decision": "reject"
+    },
+    {
+      "method": "B P-IDC",
+      "section": "Lie Group Robot Control §10.1.6",
+      "equation": "tau=M*a_r+C*v_r+g+M*r*s",
+      "elastic_1ms_zoh_delay_adaptation": "elastic lift + clip + mass/phase schedule; 1 ms ZOH, one-cycle delay",
+      "comparison": "B-mass 질량별 RMS비 평균 .833553; 제어·스케줄 동시 변경이라 기하 단독 효과 미분리",
+      "decision": "reject"
+    },
+    {
+      "method": "B pRNE",
+      "section": "Lie Group Robotics 목차 §8.3, 본문 미확인; 자체 유도",
+      "equation": "ad(V), X^T, C(q,v)u; Mdot=C+C^T",
+      "elastic_1ms_zoh_delay_adaptation": "rigid nominal C만 계산; elastic 플랜트는 별도 1 ms ZOH/delay 국소 검사",
+      "comparison": "유한차분 항등식 오차 2.8e-09; 같은 관측 p99 772.2→475.5us (고정 순서 참고, 기하 단독 효과 미분리)",
+      "decision": "reject"
+    }
+  ],
+  "normal_false_alarms": [
+    {
+      "stage": "validation 후보 전체",
+      "architecture": "servo",
+      "count": 0,
+      "rise_vs_r1": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "validation 후보 전체",
+      "architecture": "torque",
+      "count": 0,
+      "rise_vs_r1": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "development R1",
+      "architecture": "servo",
+      "count": 0,
+      "rise_vs_r1": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "development 후보",
+      "architecture": "servo",
+      "count": 0,
+      "rise_vs_r1": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "development R1",
+      "architecture": "torque",
+      "count": 0,
+      "rise_vs_r1": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "development 후보",
+      "architecture": "torque",
+      "count": 0,
+      "rise_vs_r1": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "D4 R1",
+      "architecture": "servo",
+      "count": 0,
+      "rise_vs_r1": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "D4 후보",
+      "architecture": "servo",
+      "count": 0,
+      "rise_vs_r1": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "D4 R1",
+      "architecture": "torque",
+      "count": 0,
+      "rise_vs_r1": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "D4 후보",
+      "architecture": "torque",
+      "count": 0,
+      "rise_vs_r1": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "분석 섭동 R1",
+      "architecture": "servo",
+      "count": 6,
+      "rise_vs_r1": 0,
+      "status": "FAIL"
+    },
+    {
+      "stage": "분석 섭동 후보",
+      "architecture": "servo",
+      "count": 5,
+      "rise_vs_r1": -1,
+      "status": "FAIL"
+    },
+    {
+      "stage": "분석 섭동 R1",
+      "architecture": "torque",
+      "count": 9,
+      "rise_vs_r1": 0,
+      "status": "FAIL"
+    },
+    {
+      "stage": "분석 섭동 후보",
+      "architecture": "torque",
+      "count": 64,
+      "rise_vs_r1": 55,
+      "status": "FAIL"
+    }
+  ],
+  "timing": [
+    {
+      "stage": "A_handoff_long",
+      "architecture": "servo",
+      "p99_us": 364.35501000000016,
+      "max_us": 7156.108,
+      "outlier_count": 7,
+      "outliers_retained_raw": true,
+      "p99_gate_pass": true,
+      "max_1000_goal_met": false,
+      "status": "PASS"
+    },
+    {
+      "stage": "A_handoff_short",
+      "architecture": "servo",
+      "p99_us": 319.9587,
+      "max_us": 614.987,
+      "outlier_count": 0,
+      "outliers_retained_raw": true,
+      "p99_gate_pass": true,
+      "max_1000_goal_met": true,
+      "status": "PASS"
+    },
+    {
+      "stage": "R1",
+      "architecture": "servo",
+      "p99_us": 327.67129000000006,
+      "max_us": 11702.85,
+      "outlier_count": 8,
+      "outliers_retained_raw": true,
+      "p99_gate_pass": true,
+      "max_1000_goal_met": false,
+      "status": "PASS"
+    },
+    {
+      "stage": "B_mass",
+      "architecture": "torque",
+      "p99_us": 671.9899800000019,
+      "max_us": 9648.991,
+      "outlier_count": 12,
+      "outliers_retained_raw": true,
+      "p99_gate_pass": true,
+      "max_1000_goal_met": false,
+      "status": "PASS"
+    },
+    {
+      "stage": "B_mass_phase",
+      "architecture": "torque",
+      "p99_us": 598.9427000000002,
+      "max_us": 798.176,
+      "outlier_count": 0,
+      "outliers_retained_raw": true,
+      "p99_gate_pass": true,
+      "max_1000_goal_met": true,
+      "status": "PASS"
+    },
+    {
+      "stage": "B_phase",
+      "architecture": "torque",
+      "p99_us": 554.4429200000002,
+      "max_us": 843.326,
+      "outlier_count": 0,
+      "outliers_retained_raw": true,
+      "p99_gate_pass": true,
+      "max_1000_goal_met": true,
+      "status": "PASS"
+    },
+    {
+      "stage": "R1",
+      "architecture": "torque",
+      "p99_us": 350.4397100000003,
+      "max_us": 14162.769,
+      "outlier_count": 4,
+      "outliers_retained_raw": true,
+      "p99_gate_pass": true,
+      "max_1000_goal_met": false,
+      "status": "PASS"
+    }
+  ],
+  "exposure": {
+    "holdout": {
+      "opened_after_freeze": true,
+      "batches": 1,
+      "no_tuning_after": true
+    },
+    "official": {
+      "executed_last": true,
+      "no_tuning_after": true
+    }
+  },
+  "stage_outcomes": [
+    "development: servo: 검출 15→15회, PASS; torque: 검출 15→15회, PASS (재승격 없음)",
+    "D4: servo: 검출 111→111회, FAIL; torque: 검출 111→111회, FAIL (재승격 없음)",
+    "분석 섭동: servo: 검출 6→6회, FAIL; torque: 검출 6→6회, FAIL (재승격 없음)",
+    "D4 동일 조건 비용 최악 비 A 1.136/B 1.255. A 편향 조건 오감지 8→9회, B 6→4회지만 동일 조건 추가 오감지 1회가 있어 두 방식 모두 실패했다.",
+    "분석 섭동 A 비용 비 1.058/기존 효능 점수 0.951, B 비용 비 1.473/정상 오감지 9→64회로 실패했다. 두 방식 모두 40 N, 6방향을 6/6 검출했다.",
+    "D4 포화 A: 기준 무충돌 189조건은 2회, 전체 385조건은 R1/후보 모두 4회다. 사전 전체 한도 2회/0.15%는 완화하지 않았다.",
+    "후보 실제점 radius/FD 동시 통과는 A-long 54/64, B-mass 45/48이다. R1의 68/78은 별도의 같은 강제격자 범위다. 이 관문 단독으로 후보와 R1을 가를 수 없으며 전역 발산 증거도 아니다.",
+    "새 holdout 한 배치에서 최종 R1만 76회 검사했다: servo 검출 24/30·편향 조건 오감지 0회; torque 검출 22/30·편향 조건 오감지 1회",
+    "마지막 공식 58회: PASS. 8 kg 추적·감지는 최종 R1 소스의 회귀 확인이며 후보 효능 자료가 아니다."
+  ],
+  "verification": {
+    "executed": [
+      "보존 실험: 사전 검증 28회·개발 104회·D4 1540회·섭동 136회·일치 검사 8회·holdout 76회·공식 58회",
+      "강제점 206점·실제 후보점 112점·같은 강제격자 R1 78점, pRNE 16표본·전체 시간·동일 관측 재생 검사",
+      "문서 검증: 전체 unittest 작업 352개/공개 overlay 333개, 보고서 17개, 별도 함수 18회씩(일부 중복)",
+      "동결 101/기존 R2 53/보호 20/원본 29/환경 21 불변, 최종 3파일은 R1과 바이트 동일",
+      "작업·공개 보고서 검사, AST, 공개 감사(원본 코드·가이드·ffprobe), 매체·전수 SHA·PDF 시각 검사"
+    ],
+    "not_executed": [
+      "이번 문서 정리에서 시뮬레이션·holdout·공식 재실행 없음; 탈락 후보의 holdout·공식 효능 없음",
+      "실물·hidden·Windows·전역/LTV/hybrid/수동성 보장",
+      "분석 전용 runner/원시 trace 포함 새 수집부터의 독립 완전 재현",
+      "Python LSP: 실행파일 없음; AST/단위검사로 별도 확인"
+    ]
+  },
+  "limitations": [
+    "모든 개선 수치는 유한 비공식 조건의 진단 결과다. R2에서 고른 방법의 선택 편향과 새 validation/고정 위상 국소 분석의 한계가 있다.",
+    "G4 지속 지지, 엄격 최대1ms, 격자 포화·섭동 오감지·약한 힘 감지의 기존 미달은 해소하지 못했다.",
+    "진단 후보의 새 holdout/공식 효능은 미실행이다. 사전 탈락 뒤 최종 R1만 검사했고 재승격·튜닝·공식 재실행하지 않았다.",
+    "기준/v1은 새 R3 split에서 재실행하지 않았다. 네 열 T1–T6은 보존 동일조건 수치와 exact-source alias다.",
+    "분석 전용 runner/원시 trace를 포함한 새 수집부터 완전 재현, 실제 로봇·전역/LTV/hybrid/수동성 보장은 검증하지 않았다."
+  ],
+  "document_details": {
+    "stability": [
+      {
+        "candidate": "A_handoff_short",
+        "forced": "22/28",
+        "actual": "미실행: 비선정",
+        "r1": "22/28"
+      },
+      {
+        "candidate": "A_handoff_long",
+        "forced": "22/28",
+        "actual": "54/64",
+        "r1": "22/28"
+      },
+      {
+        "candidate": "B_phase",
+        "forced": "45/50",
+        "actual": "미실행: 비선정",
+        "r1": "46/50"
+      },
+      {
+        "candidate": "B_mass",
+        "forced": "43/50",
+        "actual": "45/48",
+        "r1": "46/50"
+      },
+      {
+        "candidate": "B_mass_phase",
+        "forced": "45/50",
+        "actual": "미실행: 비선정",
+        "r1": "46/50"
+      }
+    ],
+    "costs": [
+      {
+        "stage": "D4",
+        "architecture": "servo",
+        "exceeded": 20,
+        "total": 189,
+        "worst_ratio": 1.1356495293401123,
+        "metrics": "놓기 계단 20행",
+        "masses": "1.3 kg 8행; 2 kg 4행; 3.7 kg 3행; 4 kg 1행; 6.25 kg 2행; 8 kg 2행",
+        "mass_metrics": "1.3 kg 놓기 계단 8행; 2 kg 놓기 계단 4행; 3.7 kg 놓기 계단 3행; 4 kg 놓기 계단 1행; 6.25 kg 놓기 계단 2행; 8 kg 놓기 계단 2행"
+      },
+      {
+        "stage": "D4",
+        "architecture": "torque",
+        "exceeded": 42,
+        "total": 189,
+        "worst_ratio": 1.2552456187359562,
+        "metrics": "놓기 계단 38행; 집기 계단 4행",
+        "masses": "3.7 kg 7행; 4 kg 27행; 6.25 kg 6행; 8 kg 2행",
+        "mass_metrics": "3.7 kg 놓기 계단 7행; 4 kg 놓기 계단 27행; 6.25 kg 집기 계단 2행; 6.25 kg 놓기 계단 4행; 8 kg 집기 계단 2행"
+      },
+      {
+        "stage": "분석 섭동",
+        "architecture": "servo",
+        "exceeded": 2,
+        "total": 28,
+        "worst_ratio": 1.0584158500327663,
+        "metrics": "놓기 계단 2행",
+        "masses": "8 kg 2행",
+        "mass_metrics": "8 kg 놓기 계단 2행"
+      },
+      {
+        "stage": "분석 섭동",
+        "architecture": "torque",
+        "exceeded": 16,
+        "total": 28,
+        "worst_ratio": 1.4726779506177223,
+        "metrics": "놓기 계단 10행; 집기 계단 9행; 놓기 힘 3행; TCP 최대 1행",
+        "masses": "4.3 kg 9행; 8 kg 7행",
+        "mass_metrics": "4.3 kg TCP 최대 1행; 4.3 kg 놓기 힘 2행; 4.3 kg 집기 계단 3행; 4.3 kg 놓기 계단 6행; 8 kg 놓기 힘 1행; 8 kg 집기 계단 6행; 8 kg 놓기 계단 4행"
+      }
+    ],
+    "positive_mass_perturbation": [
+      {
+        "architecture": "servo",
+        "rows": 22,
+        "rms_ratio": 0.9787099527659376,
+        "max_ratio": 0.9514511857170045
+      },
+      {
+        "architecture": "torque",
+        "rows": 22,
+        "rms_ratio": 0.6536041838672244,
+        "max_ratio": 0.6875245745164557
+      }
+    ],
+    "stability_notes": [
+      "임계값은 R2와 같지만 검사점은 R3에서 늘었다. A의 강제 실패 6점과 실제 실패 10점은 모두 추가한 3.1–3.6 s 구간이고 기존 2.5, 3.75, 3.89 s에는 없다.",
+      "A의 강제 실패 6점은 R1도 같은 점에서 실패했다. 강제 실패 6점에서, 두 설정을 통틀어 R1 대비 radius 차이 최대는 3.78e-05로 약 3.8e-5다.",
+      "B-mass의 강제 실패 7점은 radius 실패 3점과 radius 통과·FD 미수렴 4점이다. radius 실패 3점은 R1도 실패했고, 5.65/4.4 kg의 2.5 s 두 점은 B가 1에 더 가깝다. R1이 실패한 7.7 kg, 2.5 s는 B가 통과했다.",
+      "같은 강제점 R1은 R1 관측·물리점 격자의 비교이며 후보 실제 궤적의 R1 재생이 아니다. 이 국소 관문만으로 후보와 R1을 가를 수 없다. 규칙과 탈락 판정은 그대로 두고 D4·섭동 비용·오감지 근거를 함께 판단한다.",
+      "D4 전체 385조건에서 R1 A도 포화 4회/최대 0.166667%로 상한 2회/0.15%를 넘었다. A-long도 4회이고 최대율은 0.150000%다. 무충돌 189조건의 2회와 혼동하지 않는다."
+    ],
+    "redesign_context": [
+      "재설계 결정은 R1 비교 파일보다 먼저 저장됐다. 결정은 연구 작업 커밋 5a86c02, R1 비교 파일은 그 뒤 커밋 8b57c79에서 추가됐다. 두 커밋은 비공개 작업 이력이라 공개 이력에서는 찾을 수 없다. A의 당시 국소 관문 실패는 그 뒤 R1과 같은 위치로 확인돼 단독 식별 근거가 약해졌다.",
+      "결정 기록 자체는 바꾸지 않는다. 질량별 비선형 위상·원인 미식별과 추가 시각/gain의 인과적 해결책 부재 사유는 그대로 유효하다. 이후 holdout·공식 결과로 재설계를 하지 않았다."
+    ],
+    "cost_notes": [
+      "비용은 같은 무충돌 조건마다 후보/R1 비를 계산했다. 한 행에서 여러 지표가 초과할 수 있어 지표 합계와 초과 행 수는 다르다. 관문 1.05는 완화하지 않았다.",
+      "B-mass의 8 kg, 강성 1.2배 조건(case 16)은 오감지 2→32회, 강성 1.2배·마찰 0.8배 복합 모서리 조건(case 17)은 2→28회였다. 반면 강성 0.8배(case 12)는 3→2회로 감소했다.",
+      "양의 질량 무충돌 섭동 22행은 각 같은 조건의 비를 먼저 계산한 산술평균이다. 아래 평균은 효능 관문이 아닌 참고값이며, 평균 개선이 조건별 비용·오감지 통과를 뜻하지 않는다."
+    ],
+    "causes": [
+      "A: 놓기 계단 순간 직접 DOB 보상은 이미 0이었다. 그 순간 보상을 더 감쇠한다는 가설은 맞지 않았다. 차이는 이전 궤적의 feedforward·속도 피드백 이력에 연결되며 5.65 kg만 불리한 비선형 위상은 완전히 식별하지 못했다.",
+      "B: 경량에서 남은 P/V 피드백 기여 3.148/3.859 N·m가 하중 보간 0.336/0.838 N·m보다 컸다. 분해는 고정 순서의 명령 차분이며 마찰·클리핑이 있는 폐루프의 유일한 인과 분해가 아니다."
+    ]
+  },
+  "conclusion": "새 채택 0개. 서보와 토크 모두 독립 판정해 R1을 유지한다. 국소 관문 단독으로 R1과 후보를 가를 수는 없지만 규칙을 완화하지 않았다. D4·섭동의 비용·오감지 악화도 확인해 탈락 판정을 유지한다. 음성 결과를 방법 계열 자체의 불가능성으로 일반화하지 않는다.",
+  "artifacts": {
+    "protocol": {
+      "path": "results/v2_protocol/PROTOCOL_R3.json",
+      "sha256": "dcb76b495d8c2e73a5047f253a7a43a9fc46b642653e4054c5d947109f8f6c39",
+      "provenance": "fresh"
+    },
+    "r2_report_manifest": {
+      "path": "results/v2_protocol/R2_REPORT_MANIFEST.json",
+      "sha256": "d8471a620b7bef8f5509c252dd841141ea210a2f39864397612d405e33380228",
+      "provenance": "literal_copy",
+      "prepublication_work_sha256": "e4d099f05288fef2fccf0e0e5cc295f8414458e914deb86a9c1db9915a93e24f"
+    },
+    "validation_review": {
+      "path": "results/v2_protocol/R3_BOUND_STABILITY_REVIEW.json",
+      "sha256": "3330a57f59a3f07f5442e299c05812c2d99ddd9442e1fe8495e2e6f30974cc67",
+      "provenance": "fresh"
+    },
+    "challengers": {
+      "path": "results/v2_protocol/R3_CHALLENGERS.json",
+      "sha256": "1497e3ae314803b5e2b546dd36a2a05f9a7f156069e7ad561ffff92519d7b322",
+      "provenance": "fresh"
+    },
+    "forced_stability": {
+      "path": "results/v2_protocol/R3_FORCED_STABILITY.json",
+      "sha256": "c0163e3c7a2736f1485aacc97b1d978f128cc34246cf6a0822fa5839b5c12670",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "b54cdfae37d78f8cd22a093541d676f76dfb5beac1de075cb51485eb2a3bd89e"
+    },
+    "actual_stability": {
+      "path": "results/v2_protocol/R3_ACTUAL_STABILITY.json",
+      "sha256": "5ca05e3f314048c3736f96b5d6baf897f7ec573254d54ea5ed1a13dcb74c8db9",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "fd5000568464a41cb5d3ca806d924b9c40fd527651ecb1efb910bc34b1bd8c0b"
+    },
+    "redesign_decision": {
+      "path": "results/v2_protocol/R3_REDESIGN_DECISION.json",
+      "sha256": "30ba5c35f80db6bcd91205fa2b0da6f519d92437eeaef62d7a16c5a4559a32c7",
+      "provenance": "fresh"
+    },
+    "development_review": {
+      "path": "results/v2_protocol/R3_DEVELOPMENT_REVIEW.json",
+      "sha256": "a3ca081bd817b762c96956923a8ac1d87ee92d6cfbae7b0eb57a99d77150b036",
+      "provenance": "fresh"
+    },
+    "d4_review": {
+      "path": "results/v2_protocol/R3_D4_REVIEW.json",
+      "sha256": "a0fa9259da98633e43ef51e41b5825e81156785c77f4d9a49d0a9a5fa2d29f08",
+      "provenance": "fresh"
+    },
+    "perturbation_review": {
+      "path": "results/v2_protocol/R3_PERTURB_REVIEW.json",
+      "sha256": "d67ee22f406d9f0e98cb2903abfbb6e6869f471e6f655fd544e2e58af0d1c5e7",
+      "provenance": "fresh"
+    },
+    "freeze": {
+      "path": "results/v2_protocol/R3_FREEZE.json",
+      "sha256": "d65123d06a9907f6915b7b308f26401c21d70d281f6198e6b08a80ebf7c94c65",
+      "provenance": "fresh"
+    },
+    "holdout_review": {
+      "path": "results/v2_protocol/R3_HOLDOUT_REVIEW.json",
+      "sha256": "75ef2664bfab88f48d2a48b1198feaa07e27ddc4b4f39d14fb96a7ad7f65b899",
+      "provenance": "fresh"
+    },
+    "official_review": {
+      "path": "results/v2_protocol/R3_OFFICIAL_REGRESSION.json",
+      "sha256": "52c6d3d8fb3cd2f5457d3a20086ce01bca1f8af222b73a1ba2787386e1b0e841",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "cdab156443ad415fd5e316c3adc05d17cb691e04c3acb1efa756b412fc8daa90"
+    },
+    "timing_review": {
+      "path": "results/v2_protocol/R3_TIMING_REVIEW.json",
+      "sha256": "7bb67cde639f3a60af63a38ef416b4fc1c4d1de7bb6a9523ee001ca6582c9b74",
+      "provenance": "fresh"
+    },
+    "final_selection": {
+      "path": "results/v2_protocol/R3_FINAL_SELECTION.json",
+      "sha256": "ea9f03c6420bac7f42bab0b1830d83c66a3fb8381ec68781d0b693ba15c779d6",
+      "provenance": "fresh"
+    },
+    "integrity": {
+      "path": "results/v2_protocol/R3_INTEGRITY.json",
+      "sha256": "90c527506f04d5fc3a874c8d769dfd7af0bfadaa4654f39a1f8578d0fc0df586",
+      "provenance": "fresh"
+    },
+    "r1_stability": {
+      "path": "results/v2_protocol/R3_R1_STABILITY.json",
+      "sha256": "84d27fcd6f6364f85f8a40c32911a56bcbb758ca47bb060514d7f8ad48a22dc6",
+      "provenance": "fresh"
+    },
+    "cause_analysis": {
+      "path": "results/v2_protocol/R3_CAUSE_ANALYSIS.json",
+      "sha256": "0a2fcbbf6eec560e50b762b4294c38a5623b5213c8cff74746b0c93ffe308afa",
+      "provenance": "fresh"
+    },
+    "d4_servo_r1": {
+      "path": "results/v2_protocol/R3_D4_R1_servo.json",
+      "sha256": "bb199b0c0a73450cce65b94b6236c02dd499025e59dc8c3acf8649fbecbaea77",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "5141edbdfe4a1e3cbac4504cd0732f3297b7cc759f69b4723c5f0491ed442b5e"
+    },
+    "d4_servo_candidate": {
+      "path": "results/v2_protocol/R3_D4_A_handoff_long_servo.json",
+      "sha256": "3158315c0a26979cfa40607dc01389edaf94531340b42a6e6e9334e68f826131",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "3fc85296a198e7a49ff1f7d097c3a897de5e0afb7226c9c855f8b5c45aaae1a0"
+    },
+    "d4_torque_r1": {
+      "path": "results/v2_protocol/R3_D4_R1_torque.json",
+      "sha256": "e09ff228307bf36c30adcd74190e535c4b0ef59addb98a9c787f8aa3bad39a2b",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "a7a271793b58ab1e762cc20d317f3be94a470fb64c8bed845247acd74b7ea994"
+    },
+    "d4_torque_candidate": {
+      "path": "results/v2_protocol/R3_D4_B_mass_torque.json",
+      "sha256": "f24fc87ce00c18ae4044df8150d1b901dc454314411aa9e6fdcfd0cd7f3b2435",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "5f730f74f3912b8156805e017b54af37fa9825c693d5ea134cb988f37144b750"
+    },
+    "perturb_servo_r1": {
+      "path": "results/v2_protocol/R3_PERTURB_R1_servo.json",
+      "sha256": "7444c08de09efd7ca4d433b265b41df858daa349e9fb637647e9c0bf0ef3c05a",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "91b638bdcab2cddcbb6d28ff4e36de90754ee16fba4da6c120f43173360de4d8"
+    },
+    "perturb_servo_candidate": {
+      "path": "results/v2_protocol/R3_PERTURB_A_handoff_long_servo.json",
+      "sha256": "3c2888387d72588a7127b69888d03844a32478de76a8b9cfddbbe8eaac0bf129",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "c7808ba3ef36e1fe7970fafc6a941655830b56c7d8224848a6049e84f9a3954f"
+    },
+    "perturb_torque_r1": {
+      "path": "results/v2_protocol/R3_PERTURB_R1_torque.json",
+      "sha256": "f26c709a5c3f24ecb0959a3caa0dc643c5077b83580af240b3382cc61350ce28",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "9aca1a7283797b3e86130f42329d2f40d59aad13132d48eae830b7c5f8177ace"
+    },
+    "perturb_torque_candidate": {
+      "path": "results/v2_protocol/R3_PERTURB_B_mass_torque.json",
+      "sha256": "766cc9c53fadab335a40f5dd9cf63b9f18ac1579c7537de34fb1428f694c7ec3",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "e106ddd9240aa786339696349bddd4b81f65ec60cdce7b4339963e057af5ab87"
+    },
+    "r2_presentation": {
+      "path": "results/presentation_R2.pdf",
+      "sha256": "6365538c1c7a46c071b0231c0d8f59baee1e0d6a725e1acf91859ceec936d8eb",
+      "provenance": "reused_exact_source"
+    }
+  },
+  "prepublication_work_manifest_sha256": "12d798a6f61d4903b0ecab86b72429edf2541ea442ebc3d8ff47250ad581cde6",
+  "publication_byte_binding": "Artifact SHA256 entries name published bytes after process-identifier sanitization or lossless whitespace compaction; prepublication work hashes are retained separately. Every case, score, eigenvalue and timing outlier is preserved."
+}

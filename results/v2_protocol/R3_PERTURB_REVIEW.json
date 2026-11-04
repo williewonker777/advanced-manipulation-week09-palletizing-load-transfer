@@ -1,0 +1,3481 @@
+{
+  "architectures": {
+    "servo": {
+      "R1_summary": {
+        "collision_false_alarms": 0,
+        "counts": {
+          "alarm_before_collision": 0,
+          "detected": 6,
+          "indistinguishable": 0,
+          "missed": 0
+        },
+        "diverged": 0,
+        "max_saturation_pct": 0.0,
+        "offset_false_alarms": 0,
+        "reference_false_alarms": 6,
+        "rows": 34,
+        "saturation_episodes": 0,
+        "tool_contact_misses": 0
+      },
+      "candidate_summary": {
+        "collision_false_alarms": 0,
+        "counts": {
+          "alarm_before_collision": 0,
+          "detected": 6,
+          "indistinguishable": 0,
+          "missed": 0
+        },
+        "diverged": 0,
+        "max_saturation_pct": 0.0,
+        "offset_false_alarms": 0,
+        "reference_false_alarms": 5,
+        "rows": 34,
+        "saturation_episodes": 0,
+        "tool_contact_misses": 0
+      },
+      "challenger": "A_handoff_long",
+      "review": {
+        "costs": {
+          "rows": [
+            {
+              "case_id": 0,
+              "condition_key": "('servo', 0, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":3,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9591583147470729
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9857527456579516
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8597789005730818
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 1,
+              "condition_key": "('servo', 1, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":3,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9480647414096172
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.977404301535096
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.998627730364081
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.017564922467539
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 10,
+              "condition_key": "('servo', 10, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":0.8,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":0.8},\"perturb_family\":\"friction\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9606439612058051
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.935547405892147
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9996680394338968
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9980064443774728
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 11,
+              "condition_key": "('servo', 11, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":0.8,\"viscous_scale\":1.0},\"perturb_family\":\"stiffness\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9615356131431394
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9774914779475785
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.943307197636145
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9419768187858869
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 12,
+              "condition_key": "('servo', 12, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":0.8,\"viscous_scale\":1.0},\"perturb_family\":\"stiffness\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9573714341101892
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9733330710775429
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9385799384957401
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.010333742694188
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 13,
+              "condition_key": "('servo', 13, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.2,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":1.2},\"perturb_family\":\"friction\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9425078602286459
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0417547135018137
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9991041339029619
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9353332263197884
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 14,
+              "condition_key": "('servo', 14, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.2,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":1.2},\"perturb_family\":\"friction\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9370290402909826
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0435376749616634
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9997242424568212
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0166058243242384
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 15,
+              "condition_key": "('servo', 15, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":1.2,\"viscous_scale\":1.0},\"perturb_family\":\"stiffness\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9371531812528355
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9921482141918923
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.999155440829708
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9991050908520083
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 16,
+              "condition_key": "('servo', 16, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":1.2,\"viscous_scale\":1.0},\"perturb_family\":\"stiffness\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.985794040265391
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9898412208818722
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9996790598832763
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.001737430908705
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 17,
+              "condition_key": "('servo', 17, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":0.8,\"seed\":7,\"stiffness_scale\":1.2,\"viscous_scale\":0.8},\"perturb_family\":\"corner\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.956468068762342
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9558152564182769
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9992105850304069
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9553998021480683
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 18,
+              "condition_key": "('servo', 18, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.2,\"seed\":7,\"stiffness_scale\":0.8,\"viscous_scale\":1.2},\"perturb_family\":\"corner\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9563045504886444
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0022599219484498
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9998529401371767
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0085503742058972
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 2,
+              "condition_key": "('servo', 2, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":3,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9474590671303308
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9693454541325317
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9996794879472086
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9641552963789776
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 25,
+              "condition_key": "('servo', 25, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9301,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9618584801887986
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9862172368463155
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9851751834491246
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 26,
+              "condition_key": "('servo', 26, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9301,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9489631461724282
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9776574411634675
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9986771628364488
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0187112433388879
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 27,
+              "condition_key": "('servo', 27, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9301,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9483327533699347
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9694892809231107
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9996992006575035
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.0584158500327663
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 28,
+              "condition_key": "('servo', 28, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9302,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9606539336598485
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9851705771218481
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8602985602732428
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 29,
+              "condition_key": "('servo', 29, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9302,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9508172227341135
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9773571449377846
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9986629285480657
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0095549003443975
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 3,
+              "condition_key": "('servo', 3, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9609249231595856
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9861902076225514
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9802377680619085
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 30,
+              "condition_key": "('servo', 30, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9302,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.950583576120727
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9691588888399943
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9996920597200635
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0060183013744968
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 31,
+              "condition_key": "('servo', 31, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9303,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9599423882332704
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9856802386856741
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8597976173398919
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 32,
+              "condition_key": "('servo', 32, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9303,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9492684377994086
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9776338819191901
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9986447416231551
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0149304471627634
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 33,
+              "condition_key": "('servo', 33, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9303,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9469976706738452
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.968238674048481
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9996029828726869
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0082098626689036
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 4,
+              "condition_key": "('servo', 4, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9476576028109784
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9772632036868513
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.998631299973969
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0165625414978323
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 5,
+              "condition_key": "('servo', 5, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9456560443353224
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9685722781613654
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9996524312323546
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.057481504753949
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 6,
+              "condition_key": "('servo', 6, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":11,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9593096270151372
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9856093433387558
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8597922393197791
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 7,
+              "condition_key": "('servo', 7, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":11,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9476466107080929
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9772738524434142
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9986945602860227
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9938320872387647
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 8,
+              "condition_key": "('servo', 8, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":11,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9454265054155586
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9677392728317594
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.999629859743455
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9676615869349036
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 9,
+              "condition_key": "('servo', 9, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":0.8,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":0.8},\"perturb_family\":\"friction\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9602449573457668
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9427563294063477
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9801741000768768
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0074839017757
+                }
+              },
+              "pass": true
+            }
+          ],
+          "status": "FAIL",
+          "worst_ratio": 1.0584158500327663
+        },
+        "detection": {
+          "rows": [
+            {
+              "case_id": 0,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 1,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 10,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 11,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 12,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": false,
+              "reference_false_alarm": true,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 13,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 14,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 15,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 16,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 17,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": false,
+              "reference_false_alarm": true,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 18,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": false,
+              "reference_false_alarm": true,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 19,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 2,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 20,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 21,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 22,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 23,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 24,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 25,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 26,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 27,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 28,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 29,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 3,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 30,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 31,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 32,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 33,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 4,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 5,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 6,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 7,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 8,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 9,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            }
+          ],
+          "status": "FAIL"
+        },
+        "safety": {
+          "rows": [
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 0,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 1,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 10,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 11,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 12,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 13,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 14,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 15,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 16,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 17,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 18,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 19,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 2,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 20,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 21,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 22,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 23,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 24,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 25,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 26,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 27,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 28,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 29,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 3,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 30,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 31,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 32,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 33,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 4,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 5,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 6,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 7,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 8,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 9,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            }
+          ],
+          "status": "PASS"
+        },
+        "status": "FAIL",
+        "timing": {
+          "max_goal_is_record_only": true,
+          "rows": [
+            {
+              "case_id": 0,
+              "max_1000_goal_met": true,
+              "max_us": 426.949,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 292.8291900000002
+            },
+            {
+              "case_id": 1,
+              "max_1000_goal_met": true,
+              "max_us": 470.338,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 283.16329000000025
+            },
+            {
+              "case_id": 2,
+              "max_1000_goal_met": true,
+              "max_us": 407.478,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 273.96069000000006
+            },
+            {
+              "case_id": 3,
+              "max_1000_goal_met": true,
+              "max_us": 463.709,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 256.46480000000014
+            },
+            {
+              "case_id": 4,
+              "max_1000_goal_met": true,
+              "max_us": 399.579,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 266.1734900000001
+            },
+            {
+              "case_id": 5,
+              "max_1000_goal_met": true,
+              "max_us": 367.078,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 258.03929999999997
+            },
+            {
+              "case_id": 6,
+              "max_1000_goal_met": true,
+              "max_us": 381.549,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 262.67150000000004
+            },
+            {
+              "case_id": 7,
+              "max_1000_goal_met": true,
+              "max_us": 400.948,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 274.1598
+            },
+            {
+              "case_id": 8,
+              "max_1000_goal_met": true,
+              "max_us": 422.519,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 283.0395000000002
+            },
+            {
+              "case_id": 9,
+              "max_1000_goal_met": true,
+              "max_us": 380.889,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 273.4033000000001
+            },
+            {
+              "case_id": 10,
+              "max_1000_goal_met": true,
+              "max_us": 407.189,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 247.56081000000003
+            },
+            {
+              "case_id": 11,
+              "max_1000_goal_met": true,
+              "max_us": 352.289,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 247.5394
+            },
+            {
+              "case_id": 12,
+              "max_1000_goal_met": true,
+              "max_us": 418.169,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 268.9855000000001
+            },
+            {
+              "case_id": 13,
+              "max_1000_goal_met": true,
+              "max_us": 386.509,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 264.1806
+            },
+            {
+              "case_id": 14,
+              "max_1000_goal_met": true,
+              "max_us": 401.779,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 246.35920000000002
+            },
+            {
+              "case_id": 15,
+              "max_1000_goal_met": true,
+              "max_us": 434.608,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 272.3043900000001
+            },
+            {
+              "case_id": 16,
+              "max_1000_goal_met": true,
+              "max_us": 408.539,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 299.0112000000001
+            },
+            {
+              "case_id": 17,
+              "max_1000_goal_met": true,
+              "max_us": 342.26,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 266.7699
+            },
+            {
+              "case_id": 18,
+              "max_1000_goal_met": true,
+              "max_us": 412.409,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 286.74170000000004
+            },
+            {
+              "case_id": 19,
+              "max_1000_goal_met": true,
+              "max_us": 553.788,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 332.94530000000015
+            },
+            {
+              "case_id": 20,
+              "max_1000_goal_met": true,
+              "max_us": 442.788,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 330.3
+            },
+            {
+              "case_id": 21,
+              "max_1000_goal_met": true,
+              "max_us": 488.459,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 348.80909
+            },
+            {
+              "case_id": 22,
+              "max_1000_goal_met": true,
+              "max_us": 443.189,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 328.46921
+            },
+            {
+              "case_id": 23,
+              "max_1000_goal_met": true,
+              "max_us": 444.019,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 323.0539000000001
+            },
+            {
+              "case_id": 24,
+              "max_1000_goal_met": true,
+              "max_us": 442.539,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 263.47590000000014
+            },
+            {
+              "case_id": 25,
+              "max_1000_goal_met": true,
+              "max_us": 318.749,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 240.6240000000001
+            },
+            {
+              "case_id": 26,
+              "max_1000_goal_met": true,
+              "max_us": 459.148,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 279.2551000000003
+            },
+            {
+              "case_id": 27,
+              "max_1000_goal_met": true,
+              "max_us": 311.638,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 257.50830000000025
+            },
+            {
+              "case_id": 28,
+              "max_1000_goal_met": true,
+              "max_us": 468.088,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 279.7301
+            },
+            {
+              "case_id": 29,
+              "max_1000_goal_met": true,
+              "max_us": 395.308,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 304.24060000000003
+            },
+            {
+              "case_id": 30,
+              "max_1000_goal_met": true,
+              "max_us": 419.509,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 294.1837000000001
+            },
+            {
+              "case_id": 31,
+              "max_1000_goal_met": true,
+              "max_us": 425.968,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 263.8539900000003
+            },
+            {
+              "case_id": 32,
+              "max_1000_goal_met": true,
+              "max_us": 353.629,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 278.9093
+            },
+            {
+              "case_id": 33,
+              "max_1000_goal_met": true,
+              "max_us": 426.568,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 290.6088000000002
+            }
+          ],
+          "status": "PASS"
+        },
+        "tracking_efficacy": {
+          "mean_max_ratio": 0.9514511857170045,
+          "mean_rms_ratio": 0.9787099527659376,
+          "score": 0.9514511857170045,
+          "status": "FAIL"
+        }
+      }
+    },
+    "torque": {
+      "R1_summary": {
+        "collision_false_alarms": 1,
+        "counts": {
+          "alarm_before_collision": 0,
+          "detected": 6,
+          "indistinguishable": 0,
+          "missed": 0
+        },
+        "diverged": 0,
+        "max_saturation_pct": 0.0,
+        "offset_false_alarms": 0,
+        "reference_false_alarms": 9,
+        "rows": 34,
+        "saturation_episodes": 0,
+        "tool_contact_misses": 0
+      },
+      "candidate_summary": {
+        "collision_false_alarms": 0,
+        "counts": {
+          "alarm_before_collision": 0,
+          "detected": 6,
+          "indistinguishable": 0,
+          "missed": 0
+        },
+        "diverged": 0,
+        "max_saturation_pct": 0.0,
+        "offset_false_alarms": 0,
+        "reference_false_alarms": 64,
+        "rows": 34,
+        "saturation_episodes": 0,
+        "tool_contact_misses": 0
+      },
+      "challenger": "B_mass",
+      "review": {
+        "costs": {
+          "rows": [
+            {
+              "case_id": 0,
+              "condition_key": "('torque', 0, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":3,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 1,
+              "condition_key": "('torque', 1, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":3,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9251013061642129
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8272251741348593
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9975682134495351
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8964280406809638
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.1341241234585027
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 10,
+              "condition_key": "('torque', 10, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":0.8,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":0.8},\"perturb_family\":\"friction\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5336631626699844
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.43303299373570237
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9657418188604775
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.159047891338014
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.4726779506177223
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 11,
+              "condition_key": "('torque', 11, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":0.8,\"viscous_scale\":1.0},\"perturb_family\":\"stiffness\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8274501568077163
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.7400283329561199
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.2829067424122589
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9288811994889301
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0183324158739762
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 12,
+              "condition_key": "('torque', 12, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":0.8,\"viscous_scale\":1.0},\"perturb_family\":\"stiffness\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5937600736202132
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5665944893143066
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.2161898810265124
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.1004139018351662
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.1258413458564087
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 13,
+              "condition_key": "('torque', 13, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.2,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":1.2},\"perturb_family\":\"friction\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.6166539048357487
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5101654511596324
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.0619135447418113
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8474987734023187
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9986082095257298
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 14,
+              "condition_key": "('torque', 14, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.2,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":1.2},\"perturb_family\":\"friction\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.486856250449592
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.35463989434396265
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.7033763438086711
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9905708678288615
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9960350440535669
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 15,
+              "condition_key": "('torque', 15, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":1.2,\"viscous_scale\":1.0},\"perturb_family\":\"stiffness\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.0668001645771674
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9453143484381845
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9921504447939125
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8802728857563408
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9936698461298213
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 16,
+              "condition_key": "('torque', 16, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":1.2,\"viscous_scale\":1.0},\"perturb_family\":\"stiffness\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.6302858405576542
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.737931795400415
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.979435493354751
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9907454253409833
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.311745853296315
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 17,
+              "condition_key": "('torque', 17, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":0.8,\"seed\":7,\"stiffness_scale\":1.2,\"viscous_scale\":0.8},\"perturb_family\":\"corner\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.572490514373567
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.48722445849602647
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9730934929546
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.137611670272641
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.454626237780464
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 18,
+              "condition_key": "('torque', 18, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.2,\"seed\":7,\"stiffness_scale\":0.8,\"viscous_scale\":1.2},\"perturb_family\":\"corner\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.44998752627706595
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.366495777462154
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9543367971346105
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9951840357893764
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9867754865653494
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 2,
+              "condition_key": "('torque', 2, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":3,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5171225162119526
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.6111982788011349
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9897860973685266
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8923616349685032
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0238410494466017
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 25,
+              "condition_key": "('torque', 25, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9301,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 26,
+              "condition_key": "('torque', 26, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9301,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9289965242935856
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8309247516727911
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9995066025236206
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.1336697761657808
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.1539989075256636
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 27,
+              "condition_key": "('torque', 27, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9301,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5156542457146821
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.6098995575905204
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9910116573874826
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.0825088034319625
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0153418793230442
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 28,
+              "condition_key": "('torque', 28, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9302,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 29,
+              "condition_key": "('torque', 29, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9302,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9268465702846573
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8274063644025755
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9994824225748604
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.151789388677796
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.0588314916405726
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 3,
+              "condition_key": "('torque', 3, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 30,
+              "condition_key": "('torque', 30, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9302,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5156113414210607
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.6076370941353159
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9943352177668819
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.1182326018820328
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0291503742986217
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 31,
+              "condition_key": "('torque', 31, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9303,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 32,
+              "condition_key": "('torque', 32, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9303,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.932335304875942
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8342772416577066
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9952762396591538
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.137277035925744
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.0719663677798585
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 33,
+              "condition_key": "('torque', 33, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":9303,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"new_noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5190931136710362
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.6149681046215633
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9888910905194394
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.3076919058423155
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0172403972982553
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 4,
+              "condition_key": "('torque', 4, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9266394048688642
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8328531431380125
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9966030542573061
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9987889927648346
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.2742665463075236
+                }
+              },
+              "pass": false
+            },
+            {
+              "case_id": 5,
+              "condition_key": "('torque', 5, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5183416123718741
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.6131619270307723
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9892616992252927
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0267649405876784
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0214296599032462
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 6,
+              "condition_key": "('torque', 6, 0.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":11,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 0.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.0
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 7,
+              "condition_key": "('torque', 7, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":11,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9270433876535114
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8333280625712728
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.995340188502635
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9141074823305123
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9234391050673963
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 8,
+              "condition_key": "('torque', 8, 8.0, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":1.0,\"seed\":11,\"stiffness_scale\":1.0,\"viscous_scale\":1.0},\"perturb_family\":\"noise\",\"pick_offset\":null}')",
+              "mass": 8.0,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5187288638055583
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.6142385927848625
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9890916597094535
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0442131278890938
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 1.0363510257970354
+                }
+              },
+              "pass": true
+            },
+            {
+              "case_id": 9,
+              "condition_key": "('torque', 9, 4.3, (0.02, -0.01, 0.03), '{\"collision\":null,\"kind\":\"reference\",\"perturb\":{\"coulomb_scale\":0.8,\"seed\":7,\"stiffness_scale\":1.0,\"viscous_scale\":0.8},\"perturb_family\":\"friction\",\"pick_offset\":null}')",
+              "mass": 4.3,
+              "metrics": {
+                "max_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.6760788538563777
+                },
+                "rms_mm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.5807462112310466
+                },
+                "table_force_place_max_n": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.8624462039983918
+                },
+                "torque_step_pick_nm": {
+                  "pass_le_1_05": true,
+                  "ratio": 0.9069012249765179
+                },
+                "torque_step_place_nm": {
+                  "pass_le_1_05": false,
+                  "ratio": 1.0602674642724892
+                }
+              },
+              "pass": false
+            }
+          ],
+          "status": "FAIL",
+          "worst_ratio": 1.4726779506177223
+        },
+        "detection": {
+          "rows": [
+            {
+              "case_id": 0,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 1,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 10,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 11,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 12,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": false,
+              "reference_false_alarm": true,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 13,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 14,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 15,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 16,
+              "extra_false_alarm": true,
+              "lost_R1_detection": false,
+              "pass": false,
+              "reference_false_alarm": true,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 17,
+              "extra_false_alarm": true,
+              "lost_R1_detection": false,
+              "pass": false,
+              "reference_false_alarm": true,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 18,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": false,
+              "reference_false_alarm": true,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 19,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 2,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 20,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 21,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 22,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 23,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 24,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 25,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 26,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 27,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 28,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 29,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 3,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 30,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 31,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 32,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 33,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 4,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 5,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 6,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 7,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 8,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            },
+            {
+              "case_id": 9,
+              "extra_false_alarm": false,
+              "lost_R1_detection": false,
+              "pass": true,
+              "reference_false_alarm": false,
+              "tool_contact_loss": false
+            }
+          ],
+          "status": "FAIL"
+        },
+        "safety": {
+          "rows": [
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 0,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 1,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 10,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 11,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 12,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 13,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 14,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 15,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 16,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 17,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 18,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 19,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 2,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 20,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 21,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 22,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 23,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 24,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 25,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 26,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 27,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 28,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 29,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 3,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 30,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 31,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 32,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 33,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 4,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 5,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 6,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 7,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 8,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            },
+            {
+              "baseline_saturation_pct": 0.0,
+              "candidate_saturation_pct": 0.0,
+              "case_id": 9,
+              "diverged": false,
+              "pass": true,
+              "saturation_regression": false,
+              "zero_saturation_required": false
+            }
+          ],
+          "status": "PASS"
+        },
+        "status": "FAIL",
+        "timing": {
+          "max_goal_is_record_only": true,
+          "rows": [
+            {
+              "case_id": 0,
+              "max_1000_goal_met": true,
+              "max_us": 419.769,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 286.1323000000003
+            },
+            {
+              "case_id": 1,
+              "max_1000_goal_met": false,
+              "max_us": 5777.69,
+              "outliers": [
+                {
+                  "combined": {
+                    "cpu_ns": 5774048,
+                    "involuntary_context_switches": 0,
+                    "voluntary_context_switches": 0,
+                    "wall_ns": 5777690
+                  },
+                  "controller": {
+                    "cpu_ns": 265479,
+                    "involuntary_context_switches": 0,
+                    "voluntary_context_switches": 0,
+                    "wall_ns": 266789
+                  },
+                  "cycle": 340,
+                  "detector": {
+                    "cpu_ns": 5508569,
+                    "involuntary_context_switches": 0,
+                    "voluntary_context_switches": 0,
+                    "wall_ns": 5510901
+                  },
+                  "simulated_t_s": 0.34
+                }
+              ],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 499.76459000000034
+            },
+            {
+              "case_id": 2,
+              "max_1000_goal_met": true,
+              "max_us": 908.906,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 534.3933000000002
+            },
+            {
+              "case_id": 3,
+              "max_1000_goal_met": true,
+              "max_us": 337.009,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 205.34549000000013
+            },
+            {
+              "case_id": 4,
+              "max_1000_goal_met": true,
+              "max_us": 650.098,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 468.77180000000004
+            },
+            {
+              "case_id": 5,
+              "max_1000_goal_met": true,
+              "max_us": 775.487,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 481.80510000000015
+            },
+            {
+              "case_id": 6,
+              "max_1000_goal_met": false,
+              "max_us": 1847.103,
+              "outliers": [
+                {
+                  "combined": {
+                    "cpu_ns": 214509,
+                    "involuntary_context_switches": 2,
+                    "voluntary_context_switches": 0,
+                    "wall_ns": 1847103
+                  },
+                  "controller": {
+                    "cpu_ns": 58590,
+                    "involuntary_context_switches": 1,
+                    "voluntary_context_switches": 0,
+                    "wall_ns": 1680414
+                  },
+                  "cycle": 5816,
+                  "detector": {
+                    "cpu_ns": 155919,
+                    "involuntary_context_switches": 1,
+                    "voluntary_context_switches": 0,
+                    "wall_ns": 166689
+                  },
+                  "simulated_t_s": 5.816
+                }
+              ],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 305.29619000000014
+            },
+            {
+              "case_id": 7,
+              "max_1000_goal_met": true,
+              "max_us": 831.269,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 636.8155100000001
+            },
+            {
+              "case_id": 8,
+              "max_1000_goal_met": true,
+              "max_us": 738.068,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 500.52950000000004
+            },
+            {
+              "case_id": 9,
+              "max_1000_goal_met": true,
+              "max_us": 608.307,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 468.3448000000002
+            },
+            {
+              "case_id": 10,
+              "max_1000_goal_met": true,
+              "max_us": 738.769,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 519.02919
+            },
+            {
+              "case_id": 11,
+              "max_1000_goal_met": true,
+              "max_us": 648.878,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 481.28120000000007
+            },
+            {
+              "case_id": 12,
+              "max_1000_goal_met": true,
+              "max_us": 793.837,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 570.5379100000002
+            },
+            {
+              "case_id": 13,
+              "max_1000_goal_met": true,
+              "max_us": 758.108,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 567.8513100000001
+            },
+            {
+              "case_id": 14,
+              "max_1000_goal_met": true,
+              "max_us": 739.697,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 561.8560100000002
+            },
+            {
+              "case_id": 15,
+              "max_1000_goal_met": true,
+              "max_us": 675.928,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 511.60780000000045
+            },
+            {
+              "case_id": 16,
+              "max_1000_goal_met": true,
+              "max_us": 659.847,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 504.09850000000023
+            },
+            {
+              "case_id": 17,
+              "max_1000_goal_met": true,
+              "max_us": 537.179,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 468.2185
+            },
+            {
+              "case_id": 18,
+              "max_1000_goal_met": true,
+              "max_us": 635.818,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 475.31999
+            },
+            {
+              "case_id": 19,
+              "max_1000_goal_met": true,
+              "max_us": 687.138,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 502.148
+            },
+            {
+              "case_id": 20,
+              "max_1000_goal_met": true,
+              "max_us": 842.477,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 494.31201000000056
+            },
+            {
+              "case_id": 21,
+              "max_1000_goal_met": true,
+              "max_us": 635.468,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 467.24019
+            },
+            {
+              "case_id": 22,
+              "max_1000_goal_met": true,
+              "max_us": 724.118,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 533.0662000000002
+            },
+            {
+              "case_id": 23,
+              "max_1000_goal_met": true,
+              "max_us": 825.257,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 622.1333000000004
+            },
+            {
+              "case_id": 24,
+              "max_1000_goal_met": true,
+              "max_us": 812.847,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 577.3189900000002
+            },
+            {
+              "case_id": 25,
+              "max_1000_goal_met": true,
+              "max_us": 376.699,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 260.78931000000006
+            },
+            {
+              "case_id": 26,
+              "max_1000_goal_met": false,
+              "max_us": 6438.107,
+              "outliers": [
+                {
+                  "combined": {
+                    "cpu_ns": 6428425,
+                    "involuntary_context_switches": 1,
+                    "voluntary_context_switches": 0,
+                    "wall_ns": 6438107
+                  },
+                  "controller": {
+                    "cpu_ns": 350669,
+                    "involuntary_context_switches": 0,
+                    "voluntary_context_switches": 0,
+                    "wall_ns": 352299
+                  },
+                  "cycle": 3422,
+                  "detector": {
+                    "cpu_ns": 6077756,
+                    "involuntary_context_switches": 1,
+                    "voluntary_context_switches": 0,
+                    "wall_ns": 6085808
+                  },
+                  "simulated_t_s": 3.422
+                }
+              ],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 591.7056000000001
+            },
+            {
+              "case_id": 27,
+              "max_1000_goal_met": true,
+              "max_us": 713.147,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 496.7586
+            },
+            {
+              "case_id": 28,
+              "max_1000_goal_met": true,
+              "max_us": 335.358,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 217.88901
+            },
+            {
+              "case_id": 29,
+              "max_1000_goal_met": true,
+              "max_us": 766.047,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 588.437310000001
+            },
+            {
+              "case_id": 30,
+              "max_1000_goal_met": true,
+              "max_us": 620.927,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 472.9895
+            },
+            {
+              "case_id": 31,
+              "max_1000_goal_met": true,
+              "max_us": 410.219,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 300.0000900000002
+            },
+            {
+              "case_id": 32,
+              "max_1000_goal_met": true,
+              "max_us": 824.417,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 531.1510900000003
+            },
+            {
+              "case_id": 33,
+              "max_1000_goal_met": true,
+              "max_us": 794.538,
+              "outliers": [],
+              "p99_pass_strict_lt_800": true,
+              "p99_us": 492.28960000000114
+            }
+          ],
+          "status": "PASS"
+        },
+        "tracking_efficacy": {
+          "status": "not_required_after_validation"
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "results/v2_protocol/R3_PERTURB_A_handoff_long_servo.json": "c7808ba3ef36e1fe7970fafc6a941655830b56c7d8224848a6049e84f9a3954f",
+    "results/v2_protocol/R3_PERTURB_B_mass_torque.json": "e106ddd9240aa786339696349bddd4b81f65ec60cdce7b4339963e057af5ab87",
+    "results/v2_protocol/R3_PERTURB_R1_servo.json": "91b638bdcab2cddcbb6d28ff4e36de90754ee16fba4da6c120f43173360de4d8",
+    "results/v2_protocol/R3_PERTURB_R1_torque.json": "9aca1a7283797b3e86130f42329d2f40d59aad13132d48eae830b7c5f8177ace"
+  },
+  "diagnostic_only": true,
+  "no_revival": true,
+  "official": false,
+  "schema": "R3_STAGE_REVIEW.v1",
+  "stage": "perturb"
+}

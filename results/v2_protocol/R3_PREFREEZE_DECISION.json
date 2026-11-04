@@ -1,0 +1,70 @@
+{
+  "architectures": {
+    "servo": {
+      "challenger": "A_handoff_long",
+      "effective_selection": {
+        "architecture": "servo",
+        "family": "R1",
+        "id": "R1"
+      },
+      "irreversibly_ineligible_for_adoption": true,
+      "preholdout_adoption_eligible": false,
+      "reason": "validation/forced-point stability rejection is irreversible; no diagnostic revival",
+      "stage_status": {
+        "d4": "FAIL",
+        "development": "PASS",
+        "perturbations": "FAIL"
+      }
+    },
+    "torque": {
+      "challenger": "B_mass",
+      "effective_selection": {
+        "architecture": "torque",
+        "family": "R1",
+        "id": "R1"
+      },
+      "irreversibly_ineligible_for_adoption": true,
+      "preholdout_adoption_eligible": false,
+      "reason": "validation/forced-point stability rejection is irreversible; no diagnostic revival",
+      "stage_status": {
+        "d4": "FAIL",
+        "development": "PASS",
+        "perturbations": "FAIL"
+      }
+    }
+  },
+  "chosen_specs": [
+    {
+      "architecture": "servo",
+      "family": "R1",
+      "id": "R1"
+    },
+    {
+      "architecture": "torque",
+      "family": "R1",
+      "id": "R1"
+    }
+  ],
+  "new_video_pairs_required": false,
+  "no_runner_up_or_diagnostic_revival": true,
+  "no_tuning_after_holdout": true,
+  "recorded_utc": "2026-11-04T14:34:49.117998+00:00",
+  "schema": "R3_PREFREEZE_DECISION.v1",
+  "source_evidence_sha256": {
+    "results/v2_protocol/PROTOCOL_R3.json": "dcb76b495d8c2e73a5047f253a7a43a9fc46b642653e4054c5d947109f8f6c39",
+    "results/v2_protocol/R3_BOUND_STABILITY_REVIEW.json": "3330a57f59a3f07f5442e299c05812c2d99ddd9442e1fe8495e2e6f30974cc67",
+    "results/v2_protocol/R3_CHALLENGERS.json": "1497e3ae314803b5e2b546dd36a2a05f9a7f156069e7ad561ffff92519d7b322",
+    "results/v2_protocol/R3_D4_REVIEW.json": "a0fa9259da98633e43ef51e41b5825e81156785c77f4d9a49d0a9a5fa2d29f08",
+    "results/v2_protocol/R3_D4_SCOPE_PARITY.json": "bc2afd090ca927881083467c3f92fafb695db1d5304b07371ff8827258a44c3c",
+    "results/v2_protocol/R3_DEVELOPMENT_REVIEW.json": "a3ca081bd817b762c96956923a8ac1d87ee92d6cfbae7b0eb57a99d77150b036",
+    "results/v2_protocol/R3_PERTURBATIONS.json": "c070fcbbe585cc1a4daa0fec0da5e43a577cfe36b7ee04e63d2f167c5d712e6f",
+    "results/v2_protocol/R3_PERTURB_PARITY.json": "2584b4b6e66b7b664aa01343025de31aeffb9d046279e6539666030c0cb5e313",
+    "results/v2_protocol/R3_PERTURB_REVIEW.json": "d67ee22f406d9f0e98cb2903abfbb6e6869f471e6f655fd544e2e58af0d1c5e7",
+    "results/v2_protocol/R3_PREFREEZE_INTEGRITY.json": "7d5f65aaeb364390bfa4dd019e5e55b102882c076d146972cd9db085b0228529",
+    "results/v2_protocol/R3_PRNE_MATH.json": "0dcbd1620111f949d88536560ac4f0c7f155fb16c02d5e757f7aa52edcd0d807",
+    "results/v2_protocol/R3_REDESIGN_DECISION.json": "30ba5c35f80db6bcd91205fa2b0da6f519d92437eeaef62d7a16c5a4559a32c7",
+    "results/v2_protocol/R3_REPLAY_TIMING.json": "37b96b47db414dc3ad5fd08993420d306eb53b51a073a4d61c41aabe01f668a9",
+    "results/v2_protocol/R3_SIGNAL_ANALYSIS.json": "5f77b23fbc742f5072deda4615d984d8421589ce29bbeae4414d4c818961458d"
+  },
+  "video_reason": "neither architecture adopts a new method; existing comparison media unchanged"
+}

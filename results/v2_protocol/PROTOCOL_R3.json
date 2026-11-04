@@ -1,0 +1,593 @@
+{
+  "schema": "R3_PROTOCOL.v1",
+  "registered_utc": "2026-11-04T12:08:38.830641+00:00",
+  "round": "separate R3 protocol, not post-official R2 tuning",
+  "base_work_commit": "c8b27afc439b14fc75360f4e300e20ca4748ffb3",
+  "public_start_commit": "c289640f1026b07282c732aa488cc7a6166a4cec",
+  "baseline_freeze_commit": "4f01066",
+  "cause_analysis_commit": "2b3fdb805e8d9b5f8170119b5a7ce4d374839140",
+  "cause_analysis_sha256": "0a2fcbbf6eec560e50b762b4294c38a5623b5213c8cff74746b0c93ffe308afa",
+  "R2_protocol_sha256": "4350e03d668ecb5748d7237c025c867ebcf3283cb9fd5b0caf6070244c83a27c",
+  "candidate_episodes_before_registration": 0,
+  "candidate_source_edits_before_registration": 0,
+  "selection_bias": "R2 validation is exposed design data; prior official is exposed regression data, never independent R3 efficacy",
+  "G4": {
+    "window_s_before_release": 0.02,
+    "mean_support_over_mg_at_least": 0.5,
+    "minimum_support_over_mg_at_least": 0.25,
+    "mean_increase_over_v1_at_least": 0.25,
+    "peak_place_support_over_mg_at_most": 1.1,
+    "applies_to": "positive masses, specifically final 8kg A/B; failure remains failure"
+  },
+  "safety_gates": {
+    "saturation_pct_max": 0.0,
+    "divergence": false,
+    "nominal_false_alarm_rises": 0,
+    "reference_sweep_false_alarm_rises": 0,
+    "tool_contact_regression": false
+  },
+  "cost_gates": {
+    "max_RMS_ratio_vs_R1": 1.05,
+    "max_TCP_ratio_vs_R1": 1.05,
+    "max_torque_step_ratio_vs_R1": 1.05,
+    "max_place_peak_ratio_vs_R1": 1.05,
+    "G4_peak_over_mg_max": 1.1
+  },
+  "timing": {
+    "selection_combined_p99_us_max": 800.0,
+    "strict_goal_max_us": 1000.0,
+    "record_all_outliers": true,
+    "metric": "paired controller+detector wall/thread CPU including allocation; guard outside measured methods",
+    "global_gc_changes": false
+  },
+  "stability": {
+    "plant": "elastic joints + nominal rigid rotor armature + native viscosity/smooth Coulomb + actual local contact/weld where applicable; exact1ms ZOH;1cycle command delay; Drive PI current measured encoder and old command; JTS300Hz/1cycle; sampled encoder difference explicit",
+    "poses_s": [
+      2.5,
+      3.75,
+      3.89
+    ],
+    "masses_kg": [
+      0.85,
+      7.7
+    ],
+    "controller_states": "all output-affecting filters/integrators/previous samples, freeze phase/reference/discrete switches",
+    "noise": "unquantized derivative, noise/quantization disturbances not poles",
+    "FD": "central h/h2 convergence, branch qualification",
+    "margins": "structured scalar and worst-axis feedback gain scaling, not universal MIMO margin; pure FF margin N/A",
+    "control_adoption": "all tested active-mode pole radii<1+1e-6 and convergent FD; if R1 moving-point itself fails report it, do not transfer book guarantees"
+  },
+  "normal_detector_policy": "Every changed control checked first on independent normal validation with frozen R1 detector. Extra FA -> reject OR one registered normal-only recalibration with new seed before any collision. No threshold tuning from collisions. C5 changed observer uses new normal targets/features ridge .02 and threshold max(3,1.2*max normal validation+.5), freeze before dev. Runtime numpy only; no official conditions in fit.",
+  "C3_selection": ">=10% RMS or max improvement in analysis-perturbation matched development, no >5% nominal TCP/torque step regression, no lost R1 dev collision detection, no extra FA; all safety/detector/stability/timing gates",
+  "C4_selection": ">=10% RMS or max improvement vs R1 and no >5% peak/step/nominal regression; all safety/detector/stability/timing gates",
+  "seeds": {
+    "validation": 369802,
+    "redesign_validation": 369812,
+    "development": 369803,
+    "normal_recalibration": 369801,
+    "holdout": 369903,
+    "analysis_noise": [
+      9301,
+      9302,
+      9303
+    ]
+  },
+  "validation": [
+    {
+      "mass": 1.27,
+      "com": [
+        -0.000783267392796095,
+        -0.0007421998071828473,
+        0.028891383372961665
+      ]
+    },
+    {
+      "mass": 3.67,
+      "com": [
+        0.023617035911542364,
+        -0.005611696974651477,
+        0.029522388161455713
+      ]
+    },
+    {
+      "mass": 5.47,
+      "com": [
+        0.01025967589081811,
+        0.014648133452979668,
+        0.03825206193965912
+      ]
+    },
+    {
+      "mass": 7.17,
+      "com": [
+        -0.0022911210386432276,
+        0.024093754097509135,
+        0.022290483443776828
+      ]
+    }
+  ],
+  "redesign_validation": [
+    {
+      "mass": 1.47,
+      "com": [
+        -0.010337161684938562,
+        -0.0036590635386105456,
+        0.020471012852245875
+      ]
+    },
+    {
+      "mass": 3.87,
+      "com": [
+        0.0019697892253286095,
+        0.0121838135857704,
+        0.03410240313323662
+      ]
+    },
+    {
+      "mass": 5.37,
+      "com": [
+        0.012161840783921476,
+        0.0012440977761471253,
+        0.025365021325063762
+      ]
+    },
+    {
+      "mass": 7.07,
+      "com": [
+        -0.008432550714821112,
+        -0.005900638108856077,
+        0.04360054295038092
+      ]
+    }
+  ],
+  "development": {
+    "conditions": [
+      {
+        "mass": 1.57,
+        "com": [
+          -0.00800491069631163,
+          -0.0047196415783453335,
+          0.038880833431910206
+        ]
+      },
+      {
+        "mass": 6.87,
+        "com": [
+          0.023171287474878906,
+          0.014428317958176763,
+          0.022177417611668367
+        ]
+      }
+    ],
+    "times_s": [
+      1.453,
+      2.643,
+      3.827
+    ],
+    "forces_N": [
+      11.0,
+      27.0
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy"
+    ],
+    "rows_per_architecture": 26,
+    "design": "2 matched references plus24 balanced signs/phases/forces, matched R1"
+  },
+  "candidate_grid": [
+    {
+      "id": "A_handoff_short",
+      "family": "R3_A",
+      "architecture": "servo",
+      "bandwidth": 4.5,
+      "profile": "quintic",
+      "fade_start_s": 3.35,
+      "fade_end_s": 3.6
+    },
+    {
+      "id": "A_handoff_long",
+      "family": "R3_A",
+      "architecture": "servo",
+      "bandwidth": 4.5,
+      "profile": "quintic",
+      "fade_start_s": 3.1,
+      "fade_end_s": 3.6
+    },
+    {
+      "id": "B_phase",
+      "family": "R3_B",
+      "architecture": "torque",
+      "rate": 4.5,
+      "damping_scale": 1.0,
+      "schedule": "phase",
+      "mass_start_kg": 3.15,
+      "mass_full_kg": 5.65,
+      "handoff_start_s": 3.6,
+      "handoff_end_s": 3.84
+    },
+    {
+      "id": "B_mass",
+      "family": "R3_B",
+      "architecture": "torque",
+      "rate": 4.5,
+      "damping_scale": 1.0,
+      "schedule": "mass",
+      "mass_start_kg": 3.15,
+      "mass_full_kg": 5.65,
+      "handoff_start_s": 3.6,
+      "handoff_end_s": 3.84
+    },
+    {
+      "id": "B_mass_phase",
+      "family": "R3_B",
+      "architecture": "torque",
+      "rate": 4.5,
+      "damping_scale": 1.0,
+      "schedule": "mass_phase",
+      "mass_start_kg": 3.15,
+      "mass_full_kg": 5.65,
+      "handoff_start_s": 3.6,
+      "handoff_end_s": 3.84
+    }
+  ],
+  "maximum_configurations_per_architecture_including_redesign": 4,
+  "design_derivation": {
+    "A": "Direct place DOB already0. Continue observer and quintic-fade correction before3.6:3.35-3.60 is1.125 observer time constants,3.10-3.60 is2.25; pre3.1 benefit retained but inherited place efficacy unknown.",
+    "B": "Light terminal P/V feedback causes identified failures. Link-law handoff3.60 to existing UNLOAD_START3.84; mass-only comparator uses exposed3.15/5.65 boundaries; combined protects light and terminal scopes. No raw load-fraction activation.",
+    "B_compute": "single blended-inertia pRNE action with shared kinematics/preallocated workspaces, exact endpoint M/g blending and reuse one R1 baseline; no fractional-payload model approximation, globalGC unchanged"
+  },
+  "diagnostic_exclusions": {
+    "R2_anchor": "known failed old anchor only in existing-observation replay/math tests, never adopt by lucky new validation",
+    "early_hardoff": "not implemented/evaluated for adoption: could move step outside evaluation window; full-cycle step always recorded"
+  },
+  "operational_gates": {
+    "cost_metrics": [
+      "rms_mm",
+      "max_mm",
+      "torque_step_pick_nm",
+      "torque_step_place_nm",
+      "table_force_place_max_n"
+    ],
+    "cost_rule": "EVERY matched case <=1.05*same-case R1; never ratio of architecture-wide maxima; zero baseline permits zero only",
+    "cost_scope": [
+      "normal validation",
+      "redesign normal validation",
+      "development references",
+      "D4 nominal references",
+      "analysis perturbation references"
+    ],
+    "G4_applicability": "Preserve R2 selector semantics: C3/C4 report G4 thresholds/peak/pass count unchanged, no new G4 pass-count adoption requirement; G4 remains unmet unless original mean/min/increase/peak all pass.",
+    "efficacy_A": "min(mean(per-case RMS ratio),mean(per-case max-TCP ratio))<=0.90 on preregistered matched positive-mass no-collision analysis perturbations",
+    "efficacy_B": "R2 C4 rule: min(mean per-case validation RMS ratio,mean per-case max ratio)<=0.90",
+    "timing": "maximum row combined wall p99<800us with self-contained candidates/R1 serial; max1000us remains goal not new automatic rejection",
+    "detector": "R1 bytes first; no lost R1 development/official detections or tool-contact detection, no increased per-case extra/referenceFA; no collision-based calibration",
+    "normal_recalibration": "at most1/architecture before any collision, new normal-only seed/data; if used reason recorded and parameters frozen before development; otherarchitecture inference exact; conservative reject allowed"
+  },
+  "selection": {
+    "priority": {
+      "servo": [
+        "A_handoff_long",
+        "A_handoff_short"
+      ],
+      "torque": [
+        "B_mass_phase",
+        "B_phase",
+        "B_mass"
+      ]
+    },
+    "priority_reason": "Only among validation cost/safety/timing and forced-point stability passes (plus B validation efficacy): predeclared more R1-preserving scope first, not best collision score.",
+    "one_challenger_per_architecture": true,
+    "no_promotion_after_development": true,
+    "if_no_validation_eligible": "best initially eligible-design cost-score setting may be diagnostic challenger for fixed development/D4/perturb, irreversibly non-adoptable; no later revival",
+    "redesign": {
+      "max_per_family": 1,
+      "condition": "physical failure explanation recorded first, never from holdout/official, must use new validation seed; registered sweeps do not count as redesign",
+      "post_official_allowed": false
+    },
+    "redesign_default": "If none passes and failure cost-dominated with physical explanation, use1 redesign by default; otherwise record exact contemporaneous unused reason BEFORE development",
+    "redesign_artifact": "PROTOCOL_R3_REDESIGN_A/B.json and cause/decision committed BEFORE new params/source,1 new setting perarchitecture on369812 conditions; originalprotocol immutable",
+    "advance_rule": "Advance one priority-first configuration per architecture after validation cost/safety/timing/forced stability (and B validation tracking gain). Recheck actual candidate operating-point stability before development. A perturbation efficacy is deferred. The same challenger must then pass development detection/efficacy, D4 and perturbations; no runner-up promotion after development or actual-point failure."
+  },
+  "stability_R3": {
+    "first": "forced-R1 physical points for all initial/redo settings BEFORE candidate validation",
+    "second": "actual candidate physical/controller/queue/drive snapshots from normal validation BEFORE development for adoption-eligible candidates",
+    "base_masses_kg": [
+      0.85,
+      7.7
+    ],
+    "mass_schedule_midpoint_kg": 4.4,
+    "A_times_s": [
+      2.5,
+      3.099,
+      3.1,
+      3.101,
+      3.225,
+      3.349,
+      3.35,
+      3.351,
+      3.475,
+      3.599,
+      3.6,
+      3.601,
+      3.75,
+      3.89
+    ],
+    "B_times_s": [
+      2.5,
+      3.599,
+      3.6,
+      3.601,
+      3.72,
+      3.75,
+      3.839,
+      3.84,
+      3.841,
+      3.89
+    ],
+    "actual_peak_points": "add actual TCPmax and place-step samples; weights0/.5/1 represented; all active radii<1+1e-6 and convergentFD; neutral modes marginal",
+    "scope": "fixed-phase/fixed-contact local checks, not nonlinear/LTV/hybrid/passivity guarantee",
+    "B_mass_knots_kg": [
+      3.15,
+      4.4,
+      5.65
+    ],
+    "B_mass_branch_qualification_kg": [
+      3.149,
+      3.15,
+      3.151,
+      5.649,
+      5.65,
+      5.651
+    ],
+    "mass_branch_method": "Pole checks at true mass knots/midpoint; explicitly check continuous schedule weights and one-sided branch/derivative at knot+-0.001kg. Exposed R2 R1 traces at3.15/5.65 are design-only operating points, NOT reused R3 validation/efficacy;4.4 may need fresh nonofficial R1 diagnostic."
+  },
+  "D4": {
+    "design": "same385/architecture R1 grid, deliberate new-split exception",
+    "detected_min": 111,
+    "missed_max": 69,
+    "reference_FA_max": 0,
+    "no_new_reference_FA_or_saturation": true,
+    "saturation_episode_max": {
+      "servo": 2,
+      "torque": 0
+    },
+    "max_saturation_pct_max": {
+      "servo": 0.15,
+      "torque": 0.0
+    },
+    "extra_FA_max_vs_R1": "no increase per-case or total",
+    "source_reuse": "exact source/conditions hash plus fresh selected-array parity proof only; never independent rerun claim"
+  },
+  "perturbations": {
+    "physical_matrix": "same finite R1 analysis-only private instance matrix",
+    "noise_seeds": [
+      9301,
+      9302,
+      9303
+    ],
+    "new_noise_masses_kg": [
+      0.0,
+      4.3,
+      8.0
+    ],
+    "nominal_runner_parity_required": true,
+    "official": false,
+    "runtime_signals_unchanged": true
+  },
+  "holdout": {
+    "seed": 369903,
+    "open_only_after_committed_freeze": true,
+    "batches": 1,
+    "conditions_not_generated_before_freeze": true,
+    "mass_ranges_kg": [
+      [
+        0.7,
+        2.1
+      ],
+      [
+        3.4,
+        4.7
+      ],
+      [
+        5.2,
+        6.7
+      ],
+      [
+        7.0,
+        7.9
+      ]
+    ],
+    "mass_round_digits": 4,
+    "exclude_masses_kg": [
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1.05,
+      1.15,
+      1.25,
+      1.27,
+      1.35,
+      1.47,
+      1.57,
+      1.7,
+      1.85,
+      2.25,
+      2.45,
+      2.85,
+      2.95,
+      3.15,
+      3.25,
+      3.35,
+      3.45,
+      3.55,
+      3.65,
+      3.67,
+      3.87,
+      4.65,
+      5.05,
+      5.15,
+      5.37,
+      5.47,
+      5.65,
+      5.75,
+      5.85,
+      5.95,
+      6.05,
+      6.4,
+      6.55,
+      6.85,
+      6.87,
+      6.95,
+      7.07,
+      7.17,
+      7.25,
+      7.35,
+      7.45,
+      7.55,
+      7.65,
+      7.7,
+      7.75,
+      7.8,
+      7.85,
+      7.95
+    ],
+    "com_ranges_m": [
+      [
+        -0.027,
+        -0.027,
+        0.006
+      ],
+      [
+        0.027,
+        0.027,
+        0.046
+      ]
+    ],
+    "phase_time_ranges_s": {
+      "pick": [
+        1.375,
+        1.515
+      ],
+      "transport": [
+        2.05,
+        3.35
+      ],
+      "place": [
+        3.775,
+        3.945
+      ]
+    },
+    "force_range_N": [
+      8.0,
+      45.0
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy",
+      "+xyz",
+      "-xyz"
+    ],
+    "rows_per_source_architecture": {
+      "references": 4,
+      "collisions": 30,
+      "offsets": 4
+    },
+    "pick_offsets_m": [
+      [
+        0.018,
+        0.0,
+        0.012
+      ],
+      [
+        -0.018,
+        0.0,
+        0.012
+      ],
+      [
+        0.011,
+        -0.014,
+        0.008
+      ],
+      [
+        -0.012,
+        0.013,
+        -0.009
+      ]
+    ],
+    "gate": "same per-case cost/normalFA/no lost R1 collision or tool detection/no increased outside-eventFA; never tune/promote after results",
+    "deduplicate_exact_R1_alias": true,
+    "marker": "exclusive fsynced marker BEFORE real RNG, verify committed source/params/weights/git objects; one batch only"
+  },
+  "freeze": {
+    "candidate_and_R1_fallback_both_hashed": true,
+    "all_source_protocol_design_weights_included": true,
+    "no_source_parameter_threshold_or_gain_edits_after_holdout": true,
+    "fallback": "Only selecting/materializing already-frozen immutable R1 bytes after failure; no candidate edits, alternative promotion or second official. This is frozen artifact selection, not tuning."
+  },
+  "official": {
+    "stage": "LAST after newholdout; one A+B default-name unchanged-kit batch58episodes",
+    "prior_exposure": "regression only, never independent efficacy or fit",
+    "max_additional_delay_ms": 5.0,
+    "eight_kg_transport_delay_caps_ms": {
+      "servo": {
+        "15N": 50.0,
+        "10N": 67.0
+      },
+      "torque": {
+        "15N": 48.0,
+        "10N": 61.0
+      }
+    },
+    "all_previously_detected_must_remain_detected": true,
+    "reference_FA_0_4_8_kg": 0,
+    "saturation_pct": 0.0,
+    "divergence": false,
+    "control_cost_ratio_vs_R1_max": 1.05,
+    "no_extra_collision_FA_vs_R1": true,
+    "after_failure": "affectedarchitecture immutable R1 fallback; shared unidentifiedfailure bothR1; neverrepair/retune/retest"
+  },
+  "fallback_R1_sha256": {
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "r1_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+  },
+  "submission": "self-contained my_servo/my_torque/my_detector, NumPy/MuJoCo and publicsim.config/trajectory only; no experiment imports/file I/O",
+  "resources": {
+    "total_simulations_max": 4,
+    "owned_episode_workers": 1,
+    "min_available_ram_gib": 6.0,
+    "gpu_jobs": 0,
+    "timing_serial": true,
+    "foreign_process_signals": 0,
+    "python": "env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 BLAS/OMP1",
+    "official_venv_package_additions": 0
+  },
+  "documents": {
+    "preserve_R1_R2_reports": true,
+    "comparison": "baseline/v1/R1/R3 and per-mass same-condition numbers",
+    "publication_state_claims": false,
+    "new_comparison_video_pairs": 2,
+    "video_only_if_any_new_mode_adopted": true,
+    "software_GL": "Mesa llvmpipe only"
+  },
+  "stop": "local public commit, no push",
+  "remote_operations_allowed": 0
+}

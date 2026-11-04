@@ -1,0 +1,99 @@
+{
+  "schema": "R3_S6_VALIDATION.v1",
+  "checked_utc": "2026-11-04T17:19:40.485931+00:00",
+  "scientific_evidence": {
+    "source_commit": "8b57c79693d76d7a33e820adcd9fd7af9ec19bb8",
+    "freeze_commit": "4d2c5e3",
+    "source_files": 101,
+    "source_current_HEAD_Git_verified": true,
+    "protocol_gates_unchanged_from_R2": true,
+    "final_three_files_R1_byte_identical": true,
+    "holdout_batches": 1,
+    "holdout_episodes": 76,
+    "official_batches": 1,
+    "official_episodes": 58,
+    "official_status": "PASS",
+    "scientific_tuning_after_holdout": false
+  },
+  "unit_tests": {
+    "work": 352,
+    "public_pristine_overlay": 333,
+    "report": 17,
+    "additional_function_calls_per_environment": 18,
+    "additional_calls_not_all_unique_tests": true
+  },
+  "checks": {
+    "production_AST_work_and_public": "pass",
+    "all_153_public_Python_files_AST_equivalent_to_work": true,
+    "work_and_public_report_checks": "pass",
+    "R2_report_check": "pass",
+    "audit_public_kit_guide_ffprobe_require_media": "pass",
+    "validate_media": "pass",
+    "checksums_exhaustive": "pass",
+    "original_29_exact": true,
+    "protected_20": true,
+    "R2_source_53": true,
+    "official_packages_21": true,
+    "retained_R1_R2_reports_PDF": true,
+    "git_diff_check": "pass"
+  },
+  "pdf": {
+    "pages": 18,
+    "visual_pages": [
+      4,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      15,
+      17,
+      18
+    ],
+    "publication_state_footer_absent": true,
+    "numeric_tokens_wrap_without_splitting": true
+  },
+  "media": {
+    "files": 16,
+    "total_bytes": 7641724,
+    "new_R3_rendering": false,
+    "reason": "neither method adopted"
+  },
+  "publication_only_formatting": {
+    "file": "tools/test_r3_stability.py",
+    "reason": "common zero-buffer allocation plus public API signature accidentally matched ten guide tokens",
+    "change": "parenthesize one buffer initializer; complete Python AST required identical",
+    "original_research_file_unchanged": true,
+    "work_sha256": "f44b1607961bf3f50b46efe355af48cd4cfefee93309c2d301018dff4e77787c",
+    "public_sha256": "fb81369c8d86262f0a50d62f066c7ff6ab5586456a6f2d785c69b2d1604de1a1",
+    "auditor_policy_unchanged": true
+  },
+  "known_aggregation_limitation": "Frozen r3_review timing glob includes non-instrumented parity; publication-only explicit inventory retains all1885episodes/11310000cycles, no measured row omitted",
+  "evidence_sha256": {
+    "PROTOCOL_R3.json": "dcb76b495d8c2e73a5047f253a7a43a9fc46b642653e4054c5d947109f8f6c39",
+    "R3_FREEZE.json": "d65123d06a9907f6915b7b308f26401c21d70d281f6198e6b08a80ebf7c94c65",
+    "R3_FINAL_SELECTION.json": "ea9f03c6420bac7f42bab0b1830d83c66a3fb8381ec68781d0b693ba15c779d6",
+    "R3_HOLDOUT_REVIEW.json": "75ef2664bfab88f48d2a48b1198feaa07e27ddc4b4f39d14fb96a7ad7f65b899",
+    "R3_OFFICIAL_REGRESSION.json": "cdab156443ad415fd5e316c3adc05d17cb691e04c3acb1efa756b412fc8daa90",
+    "R3_INTEGRITY.json": "90c527506f04d5fc3a874c8d769dfd7af0bfadaa4654f39a1f8578d0fc0df586",
+    "R3_TIMING_REVIEW.json": "7bb67cde639f3a60af63a38ef416b4fc1c4d1de7bb6a9523ee001ca6582c9b74"
+  },
+  "verification": {
+    "executed": [
+      "validation28/development104/D4 1540/섭동136+parity8/holdout76/마지막 공식58회",
+      "forced206+actual112+R1 78점; pRNE16표본; 전수 시간1885episode와 동일관측 replay",
+      "unittest 작업352/공개 pristine-overlay333, report17, 별도함수18회씩(일부중복) PASS",
+      "동결101/기존R2 53/보호20/원본29/환경21 불변·최종3파일 R1 byte 동일",
+      "작업·공개 report --check/AST·audit(kit·guide·ffprobe)/media·전수SHA·PDF 시각 검사 PASS"
+    ],
+    "not_executed": [
+      "사전 탈락 후보의 holdout·공식 효능, 기준/v1의 새 R3 split 재실행",
+      "실물·hidden·Windows·전역/LTV/hybrid/수동성 보장",
+      "분석 전용 runner/원시 trace 포함 새 수집부터의 독립 완전 재현",
+      "Python LSP: 실행파일 없음; AST/단위검사로 별도 확인"
+    ]
+  },
+  "scope": "finite local reproduction, not robot safety, hard real-time or global stability proof"
+}

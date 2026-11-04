@@ -1,0 +1,126 @@
+{
+  "schema": "R3_D4_SCOPE_PARITY.v1",
+  "warning": "T4 historical saturation2 is reference-only189; frozen D4 ceiling2/.15 applied conservatively to all385, not relaxed after data",
+  "scope": "reported non-timing matched fields only; old raw arrays unavailable; all R3 D4 cases freshly run",
+  "artifacts": {
+    "S5_D4.json": "c1d3446c7b14661cebbc1360083eb54e4b5a0bc4089ffd1b30d51cb269d93281",
+    "R3_D4_R1_servo.json": "5141edbdfe4a1e3cbac4504cd0732f3297b7cc759f69b4723c5f0491ed442b5e",
+    "R3_D4_A_handoff_long_servo.json": "3fc85296a198e7a49ff1f7d097c3a897de5e0afb7226c9c855f8b5c45aaae1a0",
+    "R3_D4_R1_torque.json": "a7a271793b58ab1e762cc20d317f3be94a470fb64c8bed845247acd74b7ea994",
+    "R3_D4_B_mass_torque.json": "5f730f74f3912b8156805e017b54af37fa9825c693d5ea134cb988f37144b750"
+  },
+  "architectures": {
+    "servo": {
+      "R1": {
+        "all": {
+          "rows": 385,
+          "saturation_episodes": 4,
+          "max_saturation_pct": 0.16666666666666666,
+          "reference_peak_over_mg": null
+        },
+        "reference": {
+          "rows": 189,
+          "saturation_episodes": 2,
+          "max_saturation_pct": 0.15,
+          "reference_peak_over_mg": 1.6097732142785424
+        },
+        "collision": {
+          "rows": 180,
+          "saturation_episodes": 2,
+          "max_saturation_pct": 0.16666666666666666,
+          "reference_peak_over_mg": null
+        },
+        "offset": {
+          "rows": 16,
+          "saturation_episodes": 0,
+          "max_saturation_pct": 0.0,
+          "reference_peak_over_mg": null
+        }
+      },
+      "candidate": {
+        "all": {
+          "rows": 385,
+          "saturation_episodes": 4,
+          "max_saturation_pct": 0.15,
+          "reference_peak_over_mg": null
+        },
+        "reference": {
+          "rows": 189,
+          "saturation_episodes": 2,
+          "max_saturation_pct": 0.15,
+          "reference_peak_over_mg": 1.5287998930203215
+        },
+        "collision": {
+          "rows": 180,
+          "saturation_episodes": 2,
+          "max_saturation_pct": 0.13333333333333333,
+          "reference_peak_over_mg": null
+        },
+        "offset": {
+          "rows": 16,
+          "saturation_episodes": 0,
+          "max_saturation_pct": 0.0,
+          "reference_peak_over_mg": null
+        }
+      },
+      "historical_R1_reported_field_parity": true,
+      "mismatches": []
+    },
+    "torque": {
+      "R1": {
+        "all": {
+          "rows": 385,
+          "saturation_episodes": 0,
+          "max_saturation_pct": 0.0,
+          "reference_peak_over_mg": null
+        },
+        "reference": {
+          "rows": 189,
+          "saturation_episodes": 0,
+          "max_saturation_pct": 0.0,
+          "reference_peak_over_mg": 1.0357905462569215
+        },
+        "collision": {
+          "rows": 180,
+          "saturation_episodes": 0,
+          "max_saturation_pct": 0.0,
+          "reference_peak_over_mg": null
+        },
+        "offset": {
+          "rows": 16,
+          "saturation_episodes": 0,
+          "max_saturation_pct": 0.0,
+          "reference_peak_over_mg": null
+        }
+      },
+      "candidate": {
+        "all": {
+          "rows": 385,
+          "saturation_episodes": 0,
+          "max_saturation_pct": 0.0,
+          "reference_peak_over_mg": null
+        },
+        "reference": {
+          "rows": 189,
+          "saturation_episodes": 0,
+          "max_saturation_pct": 0.0,
+          "reference_peak_over_mg": 1.0357905462569215
+        },
+        "collision": {
+          "rows": 180,
+          "saturation_episodes": 0,
+          "max_saturation_pct": 0.0,
+          "reference_peak_over_mg": null
+        },
+        "offset": {
+          "rows": 16,
+          "saturation_episodes": 0,
+          "max_saturation_pct": 0.0,
+          "reference_peak_over_mg": null
+        }
+      },
+      "historical_R1_reported_field_parity": true,
+      "mismatches": []
+    }
+  }
+}

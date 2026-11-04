@@ -205,4 +205,36 @@ env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 \
   .venv/bin/python tools/audit_public.py publish/repo --require-media --ffprobe "$FFPROBE"
 ```
 
-공개 검사는 source/자료/연락처/경로·매체 메타데이터·SHA·8개 MP4/GIF 쌍을 확인한다. Python 행렬곱 @는 토큰으로 구분하지만 문자열·주석의 실제 연락처는 계속 거부한다. 최종 push는 별도 승인 전까지 실행하지 않는다.
+공개 검사는 source/자료/연락처/경로·매체 메타데이터·SHA·8개 MP4/GIF 쌍을 확인한다. Python 행렬곱 @는 토큰으로 구분하지만 문자열·주석의 실제 연락처는 계속 거부한다.
+
+## R3: DOB/P-IDC 원인 분석과 새 protocol
+
+R3은 R2의 사후 재설계가 아니라 별도 사전 protocol의 새 라운드다. R2 validation에서 방법을 골랐다는 선택 편향과 이미 노출된 공식 조건을 숨기지 않는다. 최종 세 진입점은 R1과 바이트가 같고, A-long/B-mass는 탈락한 진단 후보일 뿐 최종 제출이 아니다. R1/R2 문서·PDF와 기존 영상은 보존한다.
+
+### 완료한 비공식 검사와 기록 범위
+
+- 원인 분석을 먼저 커밋한 뒤 PROTOCOL_R3.json을 고정했다. R2의 1.05배 비용, p99<800us, 국소 radius/FD·감지 관문을 완화하지 않았다. 새 validation28회, development104회, D4 전체1540회, 분석섭동136회와 별도 nominal parity8회를 직렬 실행했다. 같은 관측6000주기씩의 R2/R3 계산 replay는 플랜트 episode가 아니다.
+- A2/B3설정과 별도 탄성 관절·1ms ZOH·한 주기 지연 분석이 실험 소스에 있다. 재설계 A0/B0의 그 시점 사유는 R3_REDESIGN_DECISION.json에 고정했다. 정상 감지기·가중치·임계값은 R1 그대로이고, 충돌/holdout에서 재보정하지 않았다.
+- 최종101파일과 선정 근거를 커밋 동결한 뒤 새 holdout369903을 한 배치76회 열었다. 현재 기록은 이미 개봉된 조건이므로 재실행해도 새 독립 holdout이 아니다. marker를 지우거나 실패를 숨긴 재개는 허용하지 않는다.
+- 1885개 계측 episode/11,310,000cycle의 시간은 R3_TIMING_REVIEW.json에 전수 집계했다. 비계측 parity8회와 별도 관측 replay12000cycle은 구분한다. 최대 row p99와 관측 최대를 혼동하지 않고 outlier·thread CPU·context-switch를 모두 남겼다. R1과 challenger의 전체 행 수가 달라, 속도 비는 동일6000관측 replay에서만 별도로 비교한다.
+- 동결된 연구 집계기의 timing glob이 비계측 parity도 잡는 알려진 오류는 고치지 않았다. 명시적 입력 inventory를 쓰는 publication-only r3_report_manifest.py로 같은 측정치를 표현했다. 기존 R3_TIMING_REVIEW.json의 덮어쓰기는 거부한다.
+
+### 공개된 값의 재검증
+
+원본 키트는 별도로 제공되어야 한다. 제공된 키트를 복사한 임시 작업 폴더에 이 코드/결과를 overlay하고 다음 검사를 실행한다. 원본 sim/model이나 다른 실행 세션은 수정하지 않는다. 아래 명령은 시뮬레이션이나 이미 열린 공식/holdout을 재실행하지 않는다.
+
+```bash
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES='' \
+  .venv/bin/python -m unittest discover -s tools -p 'test*.py'
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 CUDA_VISIBLE_DEVICES='' \
+  .venv/bin/python tools/r3_report.py --check
+sha256sum -c artifacts/SHA256SUMS
+```
+
+보고서 manifest는 표현한 증거 파일의 SHA를 검증한다. 큰 JSON은 값 손실 없는 공백 축약, 프로세스 PID는 개수로 바꿨고 전후 SHA를 남긴다. 모든 조건·수치·pole·outlier는 보존했다. 원 연구 Git 객체를 요구하는101파일 동결 증명은 연구 작업 저장소의 기록이며, 다른 저장소의 Git 이력이 같다고 가정하지 않는다. 배포 파일 바이트는 별도 SHA256SUMS로 확인한다.
+
+새 수집부터 전 과정을 독립 재현한 것은 아니다. 분석 전용 비공개 runner와 원시 trace는 외부 자료 구조를 포함해 배포하지 않으며, source SHA·AST parity·모든 조건/결과·원본 runner와의8회 nominal parity를 근거로 범위를 한정한다. 최초 비공식 smoke에서 Python 환경 prefix 누락으로 생긴 bytecode3개는 별도 증거를 남겨 제거하고 공식 venv로 재검증했다. 최종 원본29/보호20/기존R2동결53/환경21패키지 불변을 확인하며, 전 과정에 사건이 없었다고 주장하지 않는다. 실제 로봇·hidden 조건·Windows·전역/LTV/hybrid/수동성 보장은 미검증이다.
+
+마지막 공식 회귀는 원본 기본 파일명 overlay로 A/B 각 한 번, 총58episode였고 두 방식 모두 PASS했다. 0/4/8kg 정상FA0/0/0·포화0·발산없음, 8kg 운반15N45/43ms와10N62/56ms를 유지했다. 집기 약한힘·놓기10N 미검출과 B운반FA1회는 남겼다. 공식 노출 뒤 과학 source/가중치/임계값/파라미터 수정이나 공식 재실행은 없다.
+
+공개 검사에서 안정성 test fixture의 일반적인 zero-buffer 할당과 공개 compute 서명이 이어져 가이드10토큰 일치가 발생했다. 원 연구101파일과 audit 기준은 바꾸지 않고, 배포용 그 test 할당 한 줄에 괄호만 추가했다. 전체 Python AST가 동일함을 강제하고 공개 overlay의 전체 unittest도 다시 실행했다. 이 단일 test의 원 연구 SHA와 배포 SHA는 서로 다르며, 나머지 측정·제어·임계값 변경을 뜻하지 않는다.

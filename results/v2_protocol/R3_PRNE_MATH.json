@@ -1,0 +1,152 @@
+{
+  "schema": "R3_PRNE_MATH.v1",
+  "episodes_run": 0,
+  "seed": 369804,
+  "scope": "rigid nominal C action qualification, not elastic-plant stability",
+  "equations": [
+    "C(q,v)u",
+    "Mdot(q;v)=C(q,v)+C(q,v)^T"
+  ],
+  "source_sha256": {
+    "experiments/r3_torque.py": "69e2d6932b56b10b309892f0c4a7b5fd7959c5d21dc2a3952d0cfe1cb15b152e",
+    "experiments/r2_prne.py": "64d4b59c4b2711225a07c8c80a37829fb93a2faa73350613a1167ba1ccc1f04b",
+    "tools/r3_math.py": "46b8cb3bc525858d99a65dbd43c7a8998ae6d237bb2ea7181210aed220459361"
+  },
+  "rows": [
+    {
+      "sample": 0,
+      "load_fraction": 0.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 8.326672684688674e-17,
+      "mdot_minus_C_plus_CT_max_abs_error": 5.276173387080973e-10,
+      "mdot_h_h2_max_abs_difference": 5.329070518200751e-10
+    },
+    {
+      "sample": 1,
+      "load_fraction": 0.5,
+      "endpoint_matrix_max_abs_error": 6.106226635438361e-16,
+      "action_max_abs_error": 1.6653345369377348e-16,
+      "mdot_minus_C_plus_CT_max_abs_error": 6.538527497212954e-10,
+      "mdot_h_h2_max_abs_difference": 7.105427357601002e-10
+    },
+    {
+      "sample": 2,
+      "load_fraction": 1.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 3.191891195797325e-16,
+      "mdot_minus_C_plus_CT_max_abs_error": 1.939255145355645e-09,
+      "mdot_h_h2_max_abs_difference": 2.1316282072803006e-09
+    },
+    {
+      "sample": 3,
+      "load_fraction": 0.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 4.440892098500626e-16,
+      "mdot_minus_C_plus_CT_max_abs_error": 5.371477151960846e-10,
+      "mdot_h_h2_max_abs_difference": 3.9968028886505635e-10
+    },
+    {
+      "sample": 4,
+      "load_fraction": 0.5,
+      "endpoint_matrix_max_abs_error": 3.3306690738754696e-16,
+      "action_max_abs_error": 6.938893903907228e-17,
+      "mdot_minus_C_plus_CT_max_abs_error": 1.5680828857611573e-09,
+      "mdot_h_h2_max_abs_difference": 1.4210854715202004e-09
+    },
+    {
+      "sample": 5,
+      "load_fraction": 1.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 5.551115123125783e-17,
+      "mdot_minus_C_plus_CT_max_abs_error": 1.0925156890273513e-09,
+      "mdot_h_h2_max_abs_difference": 9.769962616701378e-10
+    },
+    {
+      "sample": 6,
+      "load_fraction": 0.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 2.498001805406602e-16,
+      "mdot_minus_C_plus_CT_max_abs_error": 1.7722627532190671e-09,
+      "mdot_h_h2_max_abs_difference": 2.1316282072803006e-09
+    },
+    {
+      "sample": 7,
+      "load_fraction": 0.5,
+      "endpoint_matrix_max_abs_error": 1.3322676295501878e-15,
+      "action_max_abs_error": 4.440892098500626e-16,
+      "mdot_minus_C_plus_CT_max_abs_error": 1.471224905791324e-09,
+      "mdot_h_h2_max_abs_difference": 3.375077994860476e-09
+    },
+    {
+      "sample": 8,
+      "load_fraction": 1.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 5.551115123125783e-17,
+      "mdot_minus_C_plus_CT_max_abs_error": 2.047134683991203e-09,
+      "mdot_h_h2_max_abs_difference": 2.6645352591003757e-09
+    },
+    {
+      "sample": 9,
+      "load_fraction": 0.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 3.469446951953614e-17,
+      "mdot_minus_C_plus_CT_max_abs_error": 2.2970488844364922e-09,
+      "mdot_h_h2_max_abs_difference": 1.5099033134902129e-09
+    },
+    {
+      "sample": 10,
+      "load_fraction": 0.5,
+      "endpoint_matrix_max_abs_error": 8.881784197001252e-16,
+      "action_max_abs_error": 4.440892098500626e-16,
+      "mdot_minus_C_plus_CT_max_abs_error": 6.635820226641442e-10,
+      "mdot_h_h2_max_abs_difference": 8.881784197001252e-10
+    },
+    {
+      "sample": 11,
+      "load_fraction": 1.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 2.220446049250313e-16,
+      "mdot_minus_C_plus_CT_max_abs_error": 2.8046132083403563e-09,
+      "mdot_h_h2_max_abs_difference": 4.973799150320701e-09
+    },
+    {
+      "sample": 12,
+      "load_fraction": 0.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 2.7755575615628914e-16,
+      "mdot_minus_C_plus_CT_max_abs_error": 8.305852672307878e-10,
+      "mdot_h_h2_max_abs_difference": 7.105427357601002e-10
+    },
+    {
+      "sample": 13,
+      "load_fraction": 0.5,
+      "endpoint_matrix_max_abs_error": 1.7763568394002505e-15,
+      "action_max_abs_error": 4.440892098500626e-16,
+      "mdot_minus_C_plus_CT_max_abs_error": 1.5727015800770516e-09,
+      "mdot_h_h2_max_abs_difference": 7.549516567451064e-10
+    },
+    {
+      "sample": 14,
+      "load_fraction": 1.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 6.938893903907228e-17,
+      "mdot_minus_C_plus_CT_max_abs_error": 6.453080309692938e-10,
+      "mdot_h_h2_max_abs_difference": 7.105427357601002e-10
+    },
+    {
+      "sample": 15,
+      "load_fraction": 0.0,
+      "endpoint_matrix_max_abs_error": 0.0,
+      "action_max_abs_error": 2.7755575615628914e-17,
+      "mdot_minus_C_plus_CT_max_abs_error": 3.5176295209993214e-10,
+      "mdot_h_h2_max_abs_difference": 5.88418203051333e-10
+    }
+  ],
+  "worst": {
+    "endpoint_matrix_max_abs_error": 1.7763568394002505e-15,
+    "action_max_abs_error": 4.440892098500626e-16,
+    "mdot_minus_C_plus_CT_max_abs_error": 2.8046132083403563e-09,
+    "mdot_h_h2_max_abs_difference": 4.973799150320701e-09
+  },
+  "passed": true
+}

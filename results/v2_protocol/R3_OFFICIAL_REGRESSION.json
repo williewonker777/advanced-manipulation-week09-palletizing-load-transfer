@@ -1,0 +1,5238 @@
+{
+  "schema": "R3_OFFICIAL_GATE.v1",
+  "official": true,
+  "status": "PASS",
+  "shared_unidentified_failure": false,
+  "architectures": {
+    "servo": {
+      "status": "PASS",
+      "frozen_selection": {
+        "architecture": "servo",
+        "family": "R1",
+        "id": "R1"
+      },
+      "effective_selection": {
+        "architecture": "servo",
+        "family": "R1",
+        "id": "R1"
+      },
+      "fallback_to_R1": false,
+      "control": [
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 0.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 4.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "collisions": [
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 36.0,
+              "R3_delay_ms": 36.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 23.0,
+              "R3_delay_ms": 23.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 62.0,
+              "R3_delay_ms": 62.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 43.0,
+              "R3_delay_ms": 43.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 25.0,
+              "R3_delay_ms": 25.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 78.0,
+              "R3_delay_ms": 78.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 31.0,
+              "R3_delay_ms": 31.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 36.0,
+              "R3_delay_ms": 36.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 24.0,
+              "R3_delay_ms": 24.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 62.0,
+              "R3_delay_ms": 62.0,
+              "fixed_cap_ms": 67.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 45.0,
+              "R3_delay_ms": 45.0,
+              "fixed_cap_ms": 50.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 27.0,
+              "R3_delay_ms": 27.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 18.0,
+              "R3_delay_ms": 18.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 69.0,
+              "R3_delay_ms": 69.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 33.0,
+              "R3_delay_ms": 33.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 21.0,
+              "R3_delay_ms": 21.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "errors": [],
+      "no_runner_up_promotion": true,
+      "retest_permitted": false
+    },
+    "torque": {
+      "status": "PASS",
+      "frozen_selection": {
+        "architecture": "torque",
+        "family": "R1",
+        "id": "R1"
+      },
+      "effective_selection": {
+        "architecture": "torque",
+        "family": "R1",
+        "id": "R1"
+      },
+      "fallback_to_R1": false,
+      "control": [
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 0.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 4.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "collisions": [
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 37.0,
+              "R3_delay_ms": 37.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 22.0,
+              "R3_delay_ms": 22.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 57.0,
+              "R3_delay_ms": 57.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 42.0,
+              "R3_delay_ms": 42.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 27.0,
+              "R3_delay_ms": 27.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 78.0,
+              "R3_delay_ms": 78.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 30.0,
+              "R3_delay_ms": 30.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 36.0,
+              "R3_delay_ms": 36.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 24.0,
+              "R3_delay_ms": 24.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 56.0,
+              "R3_delay_ms": 56.0,
+              "fixed_cap_ms": 61.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 43.0,
+              "R3_delay_ms": 43.0,
+              "fixed_cap_ms": 48.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 26.0,
+              "R3_delay_ms": 26.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 18.0,
+              "R3_delay_ms": 18.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 1,
+          "R3_false_alarms": 1,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 91.0,
+              "R3_delay_ms": 91.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 42.0,
+              "R3_delay_ms": 42.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 22.0,
+              "R3_delay_ms": 22.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "errors": [],
+      "no_runner_up_promotion": true,
+      "retest_permitted": false
+    }
+  },
+  "all_pass": true,
+  "independent_architecture_fallback": true,
+  "source": "unchanged evaluate.py; pristine default-name overlays; one A+B batch",
+  "expected_episodes": 58,
+  "results": {
+    "servo": {
+      "kit_integrity": {
+        "status": "ok",
+        "files": 20,
+        "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+      },
+      "source_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "self_contained_default_names": true,
+      "control_and_collisions": {
+        "control": {
+          "0.0": [
+            "1.18",
+            "3.94",
+            "0.0",
+            "9.7",
+            "5.1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "4.0": [
+            "1.15",
+            "3.79",
+            "0.0",
+            "9.7",
+            "7.6",
+            "40",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "8.0": [
+            "1.17",
+            "3.91",
+            "0.0",
+            "9.7",
+            "14.6",
+            "79",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ]
+        },
+        "collisions": [
+          {
+            "mass": 0.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "23",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.0,
+            "cells": [
+              "62",
+              "43",
+              "25",
+              "19",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "78",
+              "31",
+              "19",
+              "0회",
+              "15 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "24",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.0,
+            "cells": [
+              "62",
+              "45",
+              "27",
+              "18",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "69",
+              "33",
+              "21",
+              "0회",
+              "15 N"
+            ]
+          }
+        ]
+      }
+    },
+    "torque": {
+      "kit_integrity": {
+        "status": "ok",
+        "files": 20,
+        "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+      },
+      "source_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "self_contained_default_names": true,
+      "control_and_collisions": {
+        "control": {
+          "0.0": [
+            "2.09",
+            "4.05",
+            "0.0",
+            "9.0",
+            "4.8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "4.0": [
+            "2.32",
+            "4.42",
+            "0.0",
+            "9.0",
+            "6.8",
+            "39",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "8.0": [
+            "3.23",
+            "8.44",
+            "0.0",
+            "9.0",
+            "13.1",
+            "80",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ]
+        },
+        "collisions": [
+          {
+            "mass": 0.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "37",
+              "22",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.0,
+            "cells": [
+              "57",
+              "42",
+              "27",
+              "19",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "78",
+              "30",
+              "19",
+              "0회",
+              "15 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "24",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.0,
+            "cells": [
+              "56",
+              "43",
+              "26",
+              "18",
+              "1회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "91",
+              "42",
+              "22",
+              "0회",
+              "15 N"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "selected_source_sha256": {
+    "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+  },
+  "detector_sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+  "protocol_sha256": "dcb76b495d8c2e73a5047f253a7a43a9fc46b642653e4054c5d947109f8f6c39",
+  "wrapper_selection": {
+    "servo": {
+      "specification": {
+        "architecture": "servo",
+        "family": "R1",
+        "id": "R1"
+      },
+      "relative_source": "r1_servo.py",
+      "sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "overlay_module": "servo_controller"
+    },
+    "torque": {
+      "specification": {
+        "architecture": "torque",
+        "family": "R1",
+        "id": "R1"
+      },
+      "relative_source": "r1_torque.py",
+      "sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "overlay_module": "torque_controller"
+    }
+  },
+  "fallback_R1_sha256": {
+    "r1_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+  },
+  "freeze_sha256": "d65123d06a9907f6915b7b308f26401c21d70d281f6198e6b08a80ebf7c94c65",
+  "holdout_sha256": "0243ddb15d0ed115852ea823955a1e647d36a2275c5b139f3daf8e0cf5bccdf8",
+  "holdout_review_sha256": "75ef2664bfab88f48d2a48b1198feaa07e27ddc4b4f39d14fb96a7ad7f65b899",
+  "holdout_review": {
+    "architectures": {
+      "servo": {
+        "effective_selection": {
+          "architecture": "servo",
+          "family": "R1",
+          "id": "R1"
+        },
+        "review": {
+          "costs": {
+            "rows": [
+              {
+                "case_id": 0,
+                "condition_key": "('servo', 0, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":null,\"kind\":\"reference\",\"phase\":\"none\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 1,
+                "condition_key": "('servo', 1, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":null,\"kind\":\"reference\",\"phase\":\"none\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 10,
+                "condition_key": "('servo', 10, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[1.430654903115028,[0.0,26.164708618708296,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 11,
+                "condition_key": "('servo', 11, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[1.430654903115028,[0.0,-26.164708618708296,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 12,
+                "condition_key": "('servo', 12, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[2.592477872084576,[0.0,12.88969127034594,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 13,
+                "condition_key": "('servo', 13, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[2.592477872084576,[0.0,-12.88969127034594,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 14,
+                "condition_key": "('servo', 14, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[3.8326526394106257,[0.0,28.59224232961693,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 15,
+                "condition_key": "('servo', 15, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[3.8326526394106257,[0.0,-28.59224232961693,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 16,
+                "condition_key": "('servo', 16, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[1.5007615890132482,[0.0,0.0,13.42390836586533]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 17,
+                "condition_key": "('servo', 17, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[1.5007615890132482,[0.0,0.0,-13.42390836586533]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 18,
+                "condition_key": "('servo', 18, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[2.511086178608744,[0.0,0.0,9.372087568534958]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 19,
+                "condition_key": "('servo', 19, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[2.511086178608744,[0.0,0.0,-9.372087568534958]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 2,
+                "condition_key": "('servo', 2, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":null,\"kind\":\"reference\",\"phase\":\"none\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 20,
+                "condition_key": "('servo', 20, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[3.8267177034478115,[0.0,0.0,42.24491672386504]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 21,
+                "condition_key": "('servo', 21, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[3.8267177034478115,[0.0,0.0,-42.24491672386504]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 22,
+                "condition_key": "('servo', 22, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[1.39196668978437,[9.084435164345907,9.084435164345907,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 23,
+                "condition_key": "('servo', 23, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[1.39196668978437,[-9.084435164345907,-9.084435164345907,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 24,
+                "condition_key": "('servo', 24, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[3.0529894914777076,[29.648730689063413,29.648730689063413,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 25,
+                "condition_key": "('servo', 25, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[3.0529894914777076,[-29.648730689063413,-29.648730689063413,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 26,
+                "condition_key": "('servo', 26, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[3.8659442386931886,[20.34850447597832,20.34850447597832,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 27,
+                "condition_key": "('servo', 27, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[3.8659442386931886,[-20.34850447597832,-20.34850447597832,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 28,
+                "condition_key": "('servo', 28, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[1.4123887206884724,[14.32479491999456,14.32479491999456,14.32479491999456]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 29,
+                "condition_key": "('servo', 29, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[1.4123887206884724,[-14.32479491999456,-14.32479491999456,-14.32479491999456]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 3,
+                "condition_key": "('servo', 3, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":null,\"kind\":\"reference\",\"phase\":\"none\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 30,
+                "condition_key": "('servo', 30, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[2.5789362739478046,[6.300458470977984,6.300458470977984,6.300458470977984]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 31,
+                "condition_key": "('servo', 31, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[2.5789362739478046,[-6.300458470977984,-6.300458470977984,-6.300458470977984]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 32,
+                "condition_key": "('servo', 32, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[3.944185075929559,[11.741404432635445,11.741404432635445,11.741404432635445]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 33,
+                "condition_key": "('servo', 33, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[3.944185075929559,[-11.741404432635445,-11.741404432635445,-11.741404432635445]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 34,
+                "condition_key": "('servo', 34, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":null,\"kind\":\"offset\",\"phase\":\"pick\",\"pick_offset\":[0.018,0.0,0.012]}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 35,
+                "condition_key": "('servo', 35, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":null,\"kind\":\"offset\",\"phase\":\"pick\",\"pick_offset\":[-0.018,0.0,0.012]}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 36,
+                "condition_key": "('servo', 36, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":null,\"kind\":\"offset\",\"phase\":\"pick\",\"pick_offset\":[0.011,-0.014,0.008]}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 37,
+                "condition_key": "('servo', 37, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":null,\"kind\":\"offset\",\"phase\":\"pick\",\"pick_offset\":[-0.012,0.013,-0.009]}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 4,
+                "condition_key": "('servo', 4, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[1.4260663599394683,[31.658593879931246,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 5,
+                "condition_key": "('servo', 5, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[1.4260663599394683,[-31.658593879931246,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 6,
+                "condition_key": "('servo', 6, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[2.31633359982312,[20.061402423589023,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 7,
+                "condition_key": "('servo', 7, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[2.31633359982312,[-20.061402423589023,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 8,
+                "condition_key": "('servo', 8, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[3.8613538782610455,[20.57324386829383,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 9,
+                "condition_key": "('servo', 9, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[3.8613538782610455,[-20.57324386829383,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              }
+            ],
+            "status": "PASS",
+            "worst_ratio": 1.0
+          },
+          "detection": {
+            "rows": [
+              {
+                "case_id": 0,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 1,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 10,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 11,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 12,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 13,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 14,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 15,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 16,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 17,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 18,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 19,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 2,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 20,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 21,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 22,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 23,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 24,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 25,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 26,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 27,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 28,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 29,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 3,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 30,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 31,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 32,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 33,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 34,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 35,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 36,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 37,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 4,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 5,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 6,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 7,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 8,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 9,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              }
+            ],
+            "status": "PASS"
+          },
+          "no_tuning_permitted": true,
+          "safety": {
+            "rows": [
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 0,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 1,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 10,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 11,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 12,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 13,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 14,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 15,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 16,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 17,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 18,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 19,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 2,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 20,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 21,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 22,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 23,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 24,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 25,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 26,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 27,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 28,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 29,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 3,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 30,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 31,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 32,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 33,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 34,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 35,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 36,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 37,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 4,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 5,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 6,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 7,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 8,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 9,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              }
+            ],
+            "status": "PASS"
+          },
+          "status": "PASS",
+          "timing": {
+            "max_goal_is_record_only": true,
+            "rows": [
+              {
+                "case_id": 0,
+                "max_1000_goal_met": true,
+                "max_us": 524.008,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 280.59831
+              },
+              {
+                "case_id": 1,
+                "max_1000_goal_met": true,
+                "max_us": 399.569,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 256.09290000000016
+              },
+              {
+                "case_id": 2,
+                "max_1000_goal_met": true,
+                "max_us": 267.929,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 228.11950000000002
+              },
+              {
+                "case_id": 3,
+                "max_1000_goal_met": true,
+                "max_us": 348.959,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 229.1293
+              },
+              {
+                "case_id": 4,
+                "max_1000_goal_met": true,
+                "max_us": 370.648,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 260.84550000000036
+              },
+              {
+                "case_id": 5,
+                "max_1000_goal_met": true,
+                "max_us": 268.679,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 226.18039000000002
+              },
+              {
+                "case_id": 6,
+                "max_1000_goal_met": true,
+                "max_us": 281.329,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 228.16670000000016
+              },
+              {
+                "case_id": 7,
+                "max_1000_goal_met": true,
+                "max_us": 377.878,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 238.49080000000046
+              },
+              {
+                "case_id": 8,
+                "max_1000_goal_met": true,
+                "max_us": 356.089,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 251.80891000000003
+              },
+              {
+                "case_id": 9,
+                "max_1000_goal_met": true,
+                "max_us": 407.069,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 268.6840900000001
+              },
+              {
+                "case_id": 10,
+                "max_1000_goal_met": true,
+                "max_us": 369.868,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 252.92280000000008
+              },
+              {
+                "case_id": 11,
+                "max_1000_goal_met": true,
+                "max_us": 358.519,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 232.07278000000005
+              },
+              {
+                "case_id": 12,
+                "max_1000_goal_met": true,
+                "max_us": 384.818,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 268.12040000000025
+              },
+              {
+                "case_id": 13,
+                "max_1000_goal_met": true,
+                "max_us": 359.489,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 237.45151000000007
+              },
+              {
+                "case_id": 14,
+                "max_1000_goal_met": true,
+                "max_us": 385.408,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 239.23050000000003
+              },
+              {
+                "case_id": 15,
+                "max_1000_goal_met": true,
+                "max_us": 314.429,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 227.23031000000006
+              },
+              {
+                "case_id": 16,
+                "max_1000_goal_met": true,
+                "max_us": 342.799,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 238.34071000000003
+              },
+              {
+                "case_id": 17,
+                "max_1000_goal_met": true,
+                "max_us": 318.189,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 236.73060000000004
+              },
+              {
+                "case_id": 18,
+                "max_1000_goal_met": true,
+                "max_us": 351.499,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 227.43040000000002
+              },
+              {
+                "case_id": 19,
+                "max_1000_goal_met": true,
+                "max_us": 422.649,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 263.7010900000001
+              },
+              {
+                "case_id": 20,
+                "max_1000_goal_met": true,
+                "max_us": 269.969,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 226.83191000000008
+              },
+              {
+                "case_id": 21,
+                "max_1000_goal_met": true,
+                "max_us": 415.328,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 250.75221000000008
+              },
+              {
+                "case_id": 22,
+                "max_1000_goal_met": true,
+                "max_us": 957.005,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 240.91000000000025
+              },
+              {
+                "case_id": 23,
+                "max_1000_goal_met": true,
+                "max_us": 344.289,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 237.24069000000003
+              },
+              {
+                "case_id": 24,
+                "max_1000_goal_met": true,
+                "max_us": 302.829,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 232.56989000000002
+              },
+              {
+                "case_id": 25,
+                "max_1000_goal_met": true,
+                "max_us": 301.689,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 224.28851000000003
+              },
+              {
+                "case_id": 26,
+                "max_1000_goal_met": true,
+                "max_us": 303.689,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 224.28100000000003
+              },
+              {
+                "case_id": 27,
+                "max_1000_goal_met": true,
+                "max_us": 317.228,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 222.59941000000003
+              },
+              {
+                "case_id": 28,
+                "max_1000_goal_met": true,
+                "max_us": 302.729,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 227.92961000000003
+              },
+              {
+                "case_id": 29,
+                "max_1000_goal_met": true,
+                "max_us": 357.868,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 253.53179000000003
+              },
+              {
+                "case_id": 30,
+                "max_1000_goal_met": true,
+                "max_us": 408.339,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 297.1919900000001
+              },
+              {
+                "case_id": 31,
+                "max_1000_goal_met": true,
+                "max_us": 422.199,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 234.4635000000001
+              },
+              {
+                "case_id": 32,
+                "max_1000_goal_met": true,
+                "max_us": 310.058,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 226.2792
+              },
+              {
+                "case_id": 33,
+                "max_1000_goal_met": true,
+                "max_us": 394.488,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 253.13020000000003
+              },
+              {
+                "case_id": 34,
+                "max_1000_goal_met": true,
+                "max_us": 409.978,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 256.4004000000005
+              },
+              {
+                "case_id": 35,
+                "max_1000_goal_met": true,
+                "max_us": 331.099,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 233.54111000000003
+              },
+              {
+                "case_id": 36,
+                "max_1000_goal_met": true,
+                "max_us": 298.179,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 225.76251000000008
+              },
+              {
+                "case_id": 37,
+                "max_1000_goal_met": true,
+                "max_us": 382.609,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 231.84010000000004
+              }
+            ],
+            "status": "PASS"
+          }
+        },
+        "status": "PASS"
+      },
+      "torque": {
+        "effective_selection": {
+          "architecture": "torque",
+          "family": "R1",
+          "id": "R1"
+        },
+        "review": {
+          "costs": {
+            "rows": [
+              {
+                "case_id": 0,
+                "condition_key": "('torque', 0, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":null,\"kind\":\"reference\",\"phase\":\"none\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 1,
+                "condition_key": "('torque', 1, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":null,\"kind\":\"reference\",\"phase\":\"none\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 10,
+                "condition_key": "('torque', 10, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[1.430654903115028,[0.0,26.164708618708296,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 11,
+                "condition_key": "('torque', 11, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[1.430654903115028,[0.0,-26.164708618708296,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 12,
+                "condition_key": "('torque', 12, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[2.592477872084576,[0.0,12.88969127034594,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 13,
+                "condition_key": "('torque', 13, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[2.592477872084576,[0.0,-12.88969127034594,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 14,
+                "condition_key": "('torque', 14, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[3.8326526394106257,[0.0,28.59224232961693,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 15,
+                "condition_key": "('torque', 15, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[3.8326526394106257,[0.0,-28.59224232961693,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 16,
+                "condition_key": "('torque', 16, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[1.5007615890132482,[0.0,0.0,13.42390836586533]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 17,
+                "condition_key": "('torque', 17, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[1.5007615890132482,[0.0,0.0,-13.42390836586533]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 18,
+                "condition_key": "('torque', 18, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[2.511086178608744,[0.0,0.0,9.372087568534958]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 19,
+                "condition_key": "('torque', 19, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[2.511086178608744,[0.0,0.0,-9.372087568534958]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 2,
+                "condition_key": "('torque', 2, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":null,\"kind\":\"reference\",\"phase\":\"none\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 20,
+                "condition_key": "('torque', 20, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[3.8267177034478115,[0.0,0.0,42.24491672386504]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 21,
+                "condition_key": "('torque', 21, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[3.8267177034478115,[0.0,0.0,-42.24491672386504]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 22,
+                "condition_key": "('torque', 22, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[1.39196668978437,[9.084435164345907,9.084435164345907,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 23,
+                "condition_key": "('torque', 23, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":[1.39196668978437,[-9.084435164345907,-9.084435164345907,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 24,
+                "condition_key": "('torque', 24, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[3.0529894914777076,[29.648730689063413,29.648730689063413,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 25,
+                "condition_key": "('torque', 25, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[3.0529894914777076,[-29.648730689063413,-29.648730689063413,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 26,
+                "condition_key": "('torque', 26, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[3.8659442386931886,[20.34850447597832,20.34850447597832,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 27,
+                "condition_key": "('torque', 27, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[3.8659442386931886,[-20.34850447597832,-20.34850447597832,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 28,
+                "condition_key": "('torque', 28, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[1.4123887206884724,[14.32479491999456,14.32479491999456,14.32479491999456]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 29,
+                "condition_key": "('torque', 29, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[1.4123887206884724,[-14.32479491999456,-14.32479491999456,-14.32479491999456]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 3,
+                "condition_key": "('torque', 3, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":null,\"kind\":\"reference\",\"phase\":\"none\",\"pick_offset\":null}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 30,
+                "condition_key": "('torque', 30, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[2.5789362739478046,[6.300458470977984,6.300458470977984,6.300458470977984]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 31,
+                "condition_key": "('torque', 31, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[2.5789362739478046,[-6.300458470977984,-6.300458470977984,-6.300458470977984]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 32,
+                "condition_key": "('torque', 32, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[3.944185075929559,[11.741404432635445,11.741404432635445,11.741404432635445]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 33,
+                "condition_key": "('torque', 33, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[3.944185075929559,[-11.741404432635445,-11.741404432635445,-11.741404432635445]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 34,
+                "condition_key": "('torque', 34, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":null,\"kind\":\"offset\",\"phase\":\"pick\",\"pick_offset\":[0.018,0.0,0.012]}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 35,
+                "condition_key": "('torque', 35, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":null,\"kind\":\"offset\",\"phase\":\"pick\",\"pick_offset\":[-0.018,0.0,0.012]}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 36,
+                "condition_key": "('torque', 36, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":null,\"kind\":\"offset\",\"phase\":\"pick\",\"pick_offset\":[0.011,-0.014,0.008]}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 37,
+                "condition_key": "('torque', 37, 7.64, (-0.012431895402095973, -0.009192686217366942, 0.043045842626387554), '{\"collision\":null,\"kind\":\"offset\",\"phase\":\"pick\",\"pick_offset\":[-0.012,0.013,-0.009]}')",
+                "mass": 7.64,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 4,
+                "condition_key": "('torque', 4, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[1.4260663599394683,[31.658593879931246,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 5,
+                "condition_key": "('torque', 5, 0.8299, (-0.005182378096269286, -0.014982530050477725, 0.01024741646383455), '{\"collision\":[1.4260663599394683,[-31.658593879931246,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"pick\",\"pick_offset\":null}')",
+                "mass": 0.8299,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 6,
+                "condition_key": "('torque', 6, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[2.31633359982312,[20.061402423589023,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 7,
+                "condition_key": "('torque', 7, 3.8798, (0.0049207212157695475, 0.014924965490183403, 0.013887132397573807), '{\"collision\":[2.31633359982312,[-20.061402423589023,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"transport\",\"pick_offset\":null}')",
+                "mass": 3.8798,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 8,
+                "condition_key": "('torque', 8, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[3.8613538782610455,[20.57324386829383,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              },
+              {
+                "case_id": 9,
+                "condition_key": "('torque', 9, 6.0885, (-0.003580286823528473, 0.01891222029650672, 0.04267048214826916), '{\"collision\":[3.8613538782610455,[-20.57324386829383,0.0,0.0]],\"kind\":\"collision\",\"phase\":\"place\",\"pick_offset\":null}')",
+                "mass": 6.0885,
+                "metrics": {
+                  "max_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "rms_mm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "table_force_place_max_n": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_pick_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  },
+                  "torque_step_place_nm": {
+                    "pass_le_1_05": true,
+                    "ratio": 1.0
+                  }
+                },
+                "pass": true
+              }
+            ],
+            "status": "PASS",
+            "worst_ratio": 1.0
+          },
+          "detection": {
+            "rows": [
+              {
+                "case_id": 0,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 1,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 10,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 11,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 12,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 13,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 14,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 15,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 16,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 17,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 18,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 19,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 2,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 20,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 21,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 22,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 23,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 24,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 25,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 26,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 27,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 28,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 29,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 3,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 30,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 31,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 32,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 33,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 34,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 35,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 36,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 37,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 4,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 5,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 6,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 7,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 8,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              },
+              {
+                "case_id": 9,
+                "extra_false_alarm": false,
+                "lost_R1_detection": false,
+                "pass": true,
+                "reference_false_alarm": false,
+                "tool_contact_loss": false
+              }
+            ],
+            "status": "PASS"
+          },
+          "no_tuning_permitted": true,
+          "safety": {
+            "rows": [
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 0,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 1,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 10,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 11,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 12,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 13,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 14,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 15,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 16,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 17,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 18,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 19,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 2,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 20,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 21,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 22,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 23,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 24,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 25,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 26,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 27,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 28,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 29,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 3,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 30,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 31,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 32,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 33,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 34,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 35,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 36,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 37,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 4,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 5,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 6,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 7,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 8,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              },
+              {
+                "baseline_saturation_pct": 0.0,
+                "candidate_saturation_pct": 0.0,
+                "case_id": 9,
+                "diverged": false,
+                "pass": true,
+                "saturation_regression": false,
+                "zero_saturation_required": false
+              }
+            ],
+            "status": "PASS"
+          },
+          "status": "PASS",
+          "timing": {
+            "max_goal_is_record_only": true,
+            "rows": [
+              {
+                "case_id": 0,
+                "max_1000_goal_met": true,
+                "max_us": 378.289,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 233.96149000000005
+              },
+              {
+                "case_id": 1,
+                "max_1000_goal_met": true,
+                "max_us": 375.728,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 238.11909
+              },
+              {
+                "case_id": 2,
+                "max_1000_goal_met": true,
+                "max_us": 300.108,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 231.73941000000002
+              },
+              {
+                "case_id": 3,
+                "max_1000_goal_met": true,
+                "max_us": 374.908,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 241.83509000000035
+              },
+              {
+                "case_id": 4,
+                "max_1000_goal_met": true,
+                "max_us": 361.999,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 243.9704
+              },
+              {
+                "case_id": 5,
+                "max_1000_goal_met": true,
+                "max_us": 426.517,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 246.08991000000003
+              },
+              {
+                "case_id": 6,
+                "max_1000_goal_met": true,
+                "max_us": 309.328,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 231.53010000000003
+              },
+              {
+                "case_id": 7,
+                "max_1000_goal_met": true,
+                "max_us": 272.699,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 229.5591
+              },
+              {
+                "case_id": 8,
+                "max_1000_goal_met": true,
+                "max_us": 302.049,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 232.61812
+              },
+              {
+                "case_id": 9,
+                "max_1000_goal_met": true,
+                "max_us": 357.348,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 238.02980000000002
+              },
+              {
+                "case_id": 10,
+                "max_1000_goal_met": true,
+                "max_us": 400.597,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 278.21260000000007
+              },
+              {
+                "case_id": 11,
+                "max_1000_goal_met": true,
+                "max_us": 382.468,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 237.99030000000002
+              },
+              {
+                "case_id": 12,
+                "max_1000_goal_met": true,
+                "max_us": 312.299,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 236.43901
+              },
+              {
+                "case_id": 13,
+                "max_1000_goal_met": true,
+                "max_us": 386.178,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 232.96050000000002
+              },
+              {
+                "case_id": 14,
+                "max_1000_goal_met": true,
+                "max_us": 302.069,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 232.77969000000002
+              },
+              {
+                "case_id": 15,
+                "max_1000_goal_met": true,
+                "max_us": 394.289,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 237.20802
+              },
+              {
+                "case_id": 16,
+                "max_1000_goal_met": true,
+                "max_us": 405.868,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 292.20850000000024
+              },
+              {
+                "case_id": 17,
+                "max_1000_goal_met": true,
+                "max_us": 383.428,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 239.709
+              },
+              {
+                "case_id": 18,
+                "max_1000_goal_met": false,
+                "max_us": 4956.777,
+                "outliers": [
+                  {
+                    "combined": {
+                      "cpu_ns": 4954041,
+                      "involuntary_context_switches": 0,
+                      "voluntary_context_switches": 0,
+                      "wall_ns": 4956777
+                    },
+                    "controller": {
+                      "cpu_ns": 38570,
+                      "involuntary_context_switches": 0,
+                      "voluntary_context_switches": 0,
+                      "wall_ns": 39449
+                    },
+                    "cycle": 695,
+                    "detector": {
+                      "cpu_ns": 4915471,
+                      "involuntary_context_switches": 0,
+                      "voluntary_context_switches": 0,
+                      "wall_ns": 4917328
+                    },
+                    "simulated_t_s": 0.6950000000000001
+                  }
+                ],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 244.03949
+              },
+              {
+                "case_id": 19,
+                "max_1000_goal_met": true,
+                "max_us": 281.649,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 230.37030000000001
+              },
+              {
+                "case_id": 20,
+                "max_1000_goal_met": true,
+                "max_us": 312.659,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 254.20020000000005
+              },
+              {
+                "case_id": 21,
+                "max_1000_goal_met": true,
+                "max_us": 405.998,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 285.71960000000047
+              },
+              {
+                "case_id": 22,
+                "max_1000_goal_met": true,
+                "max_us": 447.888,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 287.723790000001
+              },
+              {
+                "case_id": 23,
+                "max_1000_goal_met": true,
+                "max_us": 299.109,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 229.86040000000003
+              },
+              {
+                "case_id": 24,
+                "max_1000_goal_met": true,
+                "max_us": 389.848,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 267.54020000000025
+              },
+              {
+                "case_id": 25,
+                "max_1000_goal_met": true,
+                "max_us": 400.719,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 261.1099
+              },
+              {
+                "case_id": 26,
+                "max_1000_goal_met": true,
+                "max_us": 367.909,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 230.12891000000002
+              },
+              {
+                "case_id": 27,
+                "max_1000_goal_met": true,
+                "max_us": 348.378,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 246.58960000000002
+              },
+              {
+                "case_id": 28,
+                "max_1000_goal_met": true,
+                "max_us": 378.798,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 246.7329900000003
+              },
+              {
+                "case_id": 29,
+                "max_1000_goal_met": true,
+                "max_us": 412.148,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 314.2675100000002
+              },
+              {
+                "case_id": 30,
+                "max_1000_goal_met": true,
+                "max_us": 398.548,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 235.00240000000008
+              },
+              {
+                "case_id": 31,
+                "max_1000_goal_met": true,
+                "max_us": 271.889,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 231.72079000000002
+              },
+              {
+                "case_id": 32,
+                "max_1000_goal_met": true,
+                "max_us": 346.478,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 232.89950000000002
+              },
+              {
+                "case_id": 33,
+                "max_1000_goal_met": true,
+                "max_us": 371.368,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 241.96330000000032
+              },
+              {
+                "case_id": 34,
+                "max_1000_goal_met": true,
+                "max_us": 363.268,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 288.8208000000001
+              },
+              {
+                "case_id": 35,
+                "max_1000_goal_met": true,
+                "max_us": 413.838,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 236.74010000000004
+              },
+              {
+                "case_id": 36,
+                "max_1000_goal_met": true,
+                "max_us": 340.318,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 233.89911
+              },
+              {
+                "case_id": 37,
+                "max_1000_goal_met": true,
+                "max_us": 313.068,
+                "outliers": [],
+                "p99_pass_strict_lt_800": true,
+                "p99_us": 237.23031000000006
+              }
+            ],
+            "status": "PASS"
+          }
+        },
+        "status": "PASS"
+      }
+    },
+    "freeze_sha256": "d65123d06a9907f6915b7b308f26401c21d70d281f6198e6b08a80ebf7c94c65",
+    "holdout_sha256": "0243ddb15d0ed115852ea823955a1e647d36a2275c5b139f3daf8e0cf5bccdf8",
+    "no_runner_up_or_diagnostic_revival": true,
+    "no_tuning_permitted": true,
+    "opened_marker_sha256": "fec58e67fbab91c0797cf3ebf4163bb265c73f4991006c4861bd6f92436364eb",
+    "protocol_sha256": "dcb76b495d8c2e73a5047f253a7a43a9fc46b642653e4054c5d947109f8f6c39",
+    "recorded_utc": "2026-11-04T14:39:14.644349+00:00",
+    "schema": "R3_HOLDOUT_REVIEW.v1"
+  },
+  "marker_sha256": "4281a4154bb776c556f6b7b6522a3119e76fd987fffb9a6cd93ee63eb6148e5e",
+  "marker": {
+    "schema": "R3_OFFICIAL_OPENED.v1",
+    "opened_utc": "2026-11-04T14:42:47.189894+00:00",
+    "freeze_sha256": "d65123d06a9907f6915b7b308f26401c21d70d281f6198e6b08a80ebf7c94c65",
+    "holdout_sha256": "0243ddb15d0ed115852ea823955a1e647d36a2275c5b139f3daf8e0cf5bccdf8",
+    "protocol_sha256": "dcb76b495d8c2e73a5047f253a7a43a9fc46b642653e4054c5d947109f8f6c39",
+    "holdout_opened_marker_sha256": "fec58e67fbab91c0797cf3ebf4163bb265c73f4991006c4861bd6f92436364eb",
+    "local_commit": "8b57c79693d76d7a33e820adcd9fd7af9ec19bb8",
+    "chosen_specs": [
+      {
+        "architecture": "servo",
+        "family": "R1",
+        "id": "R1"
+      },
+      {
+        "architecture": "torque",
+        "family": "R1",
+        "id": "R1"
+      }
+    ],
+    "evaluated_specs": [
+      {
+        "architecture": "servo",
+        "family": "R1",
+        "id": "R1"
+      },
+      {
+        "architecture": "torque",
+        "family": "R1",
+        "id": "R1"
+      }
+    ],
+    "effective_specs": [
+      {
+        "architecture": "servo",
+        "family": "R1",
+        "id": "R1"
+      },
+      {
+        "architecture": "torque",
+        "family": "R1",
+        "id": "R1"
+      }
+    ],
+    "holdout_review_sha256": "75ef2664bfab88f48d2a48b1198feaa07e27ddc4b4f39d14fb96a7ad7f65b899",
+    "selected_source_sha256": {
+      "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "detector_sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+    "batch_attempt": 1,
+    "expected_episodes": 58,
+    "tuning_or_repair_after_exposure": false
+  },
+  "guard": {
+    "returncode": 0,
+    "host_before": {
+      "mem_available_gib": 21.294349670410156,
+      "load_average": [
+        2.1015625,
+        2.25146484375,
+        2.263671875
+      ],
+      "foreign_heavy_python_count": 0,
+      "owned_simulation_workers": 1,
+      "gpu_jobs": 0,
+      "foreign_processes_signalled": 0
+    },
+    "samples": 458,
+    "owned_group_pause_count": 1,
+    "min_available_RAM_GiB": 11.714115142822266,
+    "maximum_foreign_heavy_python_count": 1,
+    "foreign_processes_signalled": 0,
+    "cpu_affinity": [
+      0
+    ],
+    "gpu_jobs": 0
+  },
+  "tuning_after_exposure": false,
+  "repair_after_exposure": false,
+  "alternative_promotion_after_failure": false,
+  "failure_action": "affected mode uses frozen R1; shared failure uses both R1; no repair/promotion/retest",
+  "publication_note": "Raw process IDs omitted. Every case, numeric metric, eigenvalue, load/RAM summary and timing outlier is retained. Evidence hashes elsewhere may name the original work record; published-byte hashes are in artifacts/SHA256SUMS.",
+  "private_raw_sha256": "cdab156443ad415fd5e316c3adc05d17cb691e04c3acb1efa756b412fc8daa90"
+}
