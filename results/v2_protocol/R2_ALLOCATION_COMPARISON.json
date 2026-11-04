@@ -1,0 +1,40 @@
+{
+  "official": false,
+  "purpose": "allocation/algorithmic comparison only, no candidate selection or extra episodes",
+  "source_sha256": "64d4b59c4b2711225a07c8c80a37829fb93a2faa73350613a1167ba1ccc1f04b",
+  "rows": [
+    {
+      "method": "full_C_basis_transpose",
+      "traced_thread_mean_us": 3137.99644,
+      "allocation_peak_bytes": 11000,
+      "thread_median_us": 825.0264999999999,
+      "thread_p99_us": 1522.2905999999998,
+      "answer": [
+        -2.220446049250313e-16,
+        7.656039245010865,
+        -9.402949491548089,
+        0.004089050593690101,
+        -4.511905878980227,
+        -1.610671939331207e-06
+      ]
+    },
+    {
+      "method": "reverse_VJP",
+      "traced_thread_mean_us": 721.989545,
+      "allocation_peak_bytes": 10736,
+      "thread_median_us": 178.10399999999998,
+      "thread_p99_us": 206.36921,
+      "answer": [
+        4.302887541609143e-19,
+        7.656039245010869,
+        -9.402949491548085,
+        0.004089050593690952,
+        -4.511905878980228,
+        -1.610671939906798e-06
+      ]
+    }
+  ],
+  "global_GC_settings_changed": false,
+  "plant_episodes": 0,
+  "warning": "Pure helper microbenchmark under shared host load, not combined controller/detector timing or a real-time guarantee"
+}

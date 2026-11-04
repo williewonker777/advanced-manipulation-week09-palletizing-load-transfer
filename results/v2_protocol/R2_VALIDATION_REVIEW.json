@@ -1,0 +1,2366 @@
+{
+  "protocol_sha256": "4350e03d668ecb5748d7237c025c867ebcf3283cb9fd5b0caf6070244c83a27c",
+  "official_used_for_selection": false,
+  "holdout_opened": false,
+  "redesigns_used": 0,
+  "results": [
+    {
+      "id": "C1_F0.5_fb0",
+      "family": "C1",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 1,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.565342692244869,
+        "max_mm": 2.977853254569538,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 3.5276101562078055,
+        "table_force_place_max_n": 4.645720195900546
+      },
+      "mean_ratio": {
+        "rms_mm": 1.3591479496302137,
+        "max_mm": 2.3254415958491212,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 2.8012330805103693,
+        "table_force_place_max_n": 4.166693720217897
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 312.22129000000007,
+      "combined_max_us": 561.578,
+      "local_stability": {
+        "candidate": "C1-servo-f0.5-k0",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 6,
+        "worst_spectral_radius": 0.9994220385005971
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,G4"
+    },
+    {
+      "id": "C1_F0.5_fb0",
+      "family": "C1",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 2,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.4079639091420402,
+        "max_mm": 2.282371245190548,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 4.05304222931689,
+        "table_force_place_max_n": 6.313892880674025
+      },
+      "mean_ratio": {
+        "rms_mm": 1.2661156406078558,
+        "max_mm": 1.7945565351433104,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 3.154017678690836,
+        "table_force_place_max_n": 6.0012532475765
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 315.7404,
+      "combined_max_us": 498.249,
+      "local_stability": {
+        "candidate": "C1-torque-f0.5-k0",
+        "cases": 6,
+        "protocol_pass_cases": 4,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.010420738210519
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius,G4"
+    },
+    {
+      "id": "C1_F0.5_fb0.25",
+      "family": "C1",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 2,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.811834690824211,
+        "max_mm": 3.422145817472635,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 4.217993218560757,
+        "table_force_place_max_n": 5.802285155662848
+      },
+      "mean_ratio": {
+        "rms_mm": 1.5417036085153364,
+        "max_mm": 2.69665494810064,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 3.3261272054466944,
+        "table_force_place_max_n": 5.200681484009543
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 326.9201,
+      "combined_max_us": 596.618,
+      "local_stability": {
+        "candidate": "C1-servo-f0.5-k0.25",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 6,
+        "worst_spectral_radius": 0.9994518141335389
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,G4"
+    },
+    {
+      "id": "C1_F0.5_fb0.25",
+      "family": "C1",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 3,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.7593531015963617,
+        "max_mm": 2.690689435052988,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 4.801246605512179,
+        "table_force_place_max_n": 9.182806701478333
+      },
+      "mean_ratio": {
+        "rms_mm": 1.584742892700806,
+        "max_mm": 2.1804912139580557,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 3.5434585987218217,
+        "table_force_place_max_n": 7.589713227181308
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 303.4924900000001,
+      "combined_max_us": 501.168,
+      "local_stability": {
+        "candidate": "C1-torque-f0.5-k0.25",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.0011726546962387
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius,G4"
+    },
+    {
+      "id": "C1_F0.85_fb0",
+      "family": "C1",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 4,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.8963089545808929,
+        "max_mm": 4.001748684119333,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 7.340322188729611,
+        "table_force_place_max_n": 6.780949462325926
+      },
+      "mean_ratio": {
+        "rms_mm": 1.584928457108452,
+        "max_mm": 3.0604794093464815,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 5.271425184268933,
+        "table_force_place_max_n": 6.029608958155993
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 330.10311000000013,
+      "combined_max_us": 579.418,
+      "local_stability": {
+        "candidate": "C1-servo-f0.85-k0",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 6,
+        "worst_spectral_radius": 0.9994229195345659
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,G4"
+    },
+    {
+      "id": "C1_F0.85_fb0",
+      "family": "C1",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 4,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.5097388246439498,
+        "max_mm": 3.0742451340531427,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 7.774923199292917,
+        "table_force_place_max_n": 9.904551212087936
+      },
+      "mean_ratio": {
+        "rms_mm": 1.3935262550927985,
+        "max_mm": 2.3986599928922288,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 5.826427256414241,
+        "table_force_place_max_n": 8.704355912914252
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 299.45130000000006,
+      "combined_max_us": 461.239,
+      "local_stability": {
+        "candidate": "C1-torque-f0.85-k0",
+        "cases": 6,
+        "protocol_pass_cases": 4,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.0011726546962387
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius,G4"
+    },
+    {
+      "id": "C1_F0.85_fb0.25",
+      "family": "C1",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 5,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 2.112462305952329,
+        "max_mm": 4.543791356045099,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 8.174812292005395,
+        "table_force_place_max_n": 8.01001524143966
+      },
+      "mean_ratio": {
+        "rms_mm": 1.7700523800863006,
+        "max_mm": 3.4981973209988526,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 5.883704986470404,
+        "table_force_place_max_n": 7.142223142512944
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 302.82121000000006,
+      "combined_max_us": 4291.646,
+      "local_stability": {
+        "candidate": "C1-servo-f0.85-k0.25",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 6,
+        "worst_spectral_radius": 0.9994232973427256
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,G4"
+    },
+    {
+      "id": "C1_F0.85_fb0.25",
+      "family": "C1",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 4,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.9026333491855367,
+        "max_mm": 3.5577636343298384,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 8.821395290155197,
+        "table_force_place_max_n": 12.663718529028591
+      },
+      "mean_ratio": {
+        "rms_mm": 1.7592905696757284,
+        "max_mm": 2.7726512402184786,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 6.557262224160871,
+        "table_force_place_max_n": 10.39738268325565
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 296.8792,
+      "combined_max_us": 553.788,
+      "local_stability": {
+        "candidate": "C1-torque-f0.85-k0.25",
+        "cases": 6,
+        "protocol_pass_cases": 4,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.0011726546962387
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius,G4"
+    },
+    {
+      "id": "C2_euclidean_small",
+      "family": "C2",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0690599698506122,
+        "max_mm": 1.2997919001690597,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 3.5223874868466707,
+        "table_force_place_max_n": 2.049810468879251
+      },
+      "mean_ratio": {
+        "rms_mm": 1.0599753093779318,
+        "max_mm": 1.2282060783289017,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 2.78896442116476,
+        "table_force_place_max_n": 1.4113848716489377
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 268.78110000000004,
+      "combined_max_us": 433.688,
+      "local_stability": {
+        "candidate": "C2-servo-euclidean-small",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.0000000000001328
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_saturation,cost,G4"
+    },
+    {
+      "id": "C2_euclidean_small",
+      "family": "C2",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 10,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.199019044135065,
+        "max_mm": 1.244913896905279,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 17.536465794591106,
+        "table_force_place_max_n": 1.6089609063558221
+      },
+      "mean_ratio": {
+        "rms_mm": 1.0541005855693426,
+        "max_mm": 1.0444380868011895,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 13.041842099412747,
+        "table_force_place_max_n": 1.335134908822837
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 304.5645100000003,
+      "combined_max_us": 421.159,
+      "local_stability": {
+        "candidate": "C2-torque-euclidean-small",
+        "cases": 6,
+        "protocol_pass_cases": 1,
+        "strict_cases": 1,
+        "worst_spectral_radius": 1.0482468076241467
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C2_euclidean_stroke",
+      "family": "C2",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.209897835214452,
+        "max_mm": 1.5999605299535806,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 35.109956221393915,
+        "table_force_place_max_n": 3.1832599412044003
+      },
+      "mean_ratio": {
+        "rms_mm": 1.1745991397194988,
+        "max_mm": 1.5832926256080087,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 18.490818693711528,
+        "table_force_place_max_n": 2.372514035802295
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 293.11179000000004,
+      "combined_max_us": 521.088,
+      "local_stability": {
+        "candidate": "C2-servo-euclidean-stroke",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 3,
+        "worst_spectral_radius": 1.0972101119561304
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C2_euclidean_stroke",
+      "family": "C2",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 2,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.195822949054327,
+        "max_mm": 1.114652349256057,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 6.852549554985265,
+        "table_force_place_max_n": 1.808248137124448
+      },
+      "mean_ratio": {
+        "rms_mm": 1.063878472746734,
+        "max_mm": 1.0571696542677258,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 4.574747542775126,
+        "table_force_place_max_n": 1.355837684345586
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 313.70980000000003,
+      "combined_max_us": 450.968,
+      "local_stability": {
+        "candidate": "C2-torque-euclidean-stroke",
+        "cases": 6,
+        "protocol_pass_cases": 3,
+        "strict_cases": 3,
+        "worst_spectral_radius": 1.0246715507485804
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C2_se3_small",
+      "family": "C2",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0690599698506167,
+        "max_mm": 1.299791900169127,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 3.52238748684785,
+        "table_force_place_max_n": 2.0498104688774097
+      },
+      "mean_ratio": {
+        "rms_mm": 1.059975309377112,
+        "max_mm": 1.2282060783287982,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 2.7889644211643985,
+        "table_force_place_max_n": 1.4113848716478237
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 471.60320000000013,
+      "combined_max_us": 686.368,
+      "local_stability": {
+        "candidate": "C2-servo-se3-small",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.0000000000001328
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_saturation,cost,G4"
+    },
+    {
+      "id": "C2_se3_small",
+      "family": "C2",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 11,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.1802105332703323,
+        "max_mm": 1.188156215860475,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 17.530024489308655,
+        "table_force_place_max_n": 1.522655743019769
+      },
+      "mean_ratio": {
+        "rms_mm": 1.066895043875188,
+        "max_mm": 1.0302253795299494,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 13.05800338453189,
+        "table_force_place_max_n": 1.299787678561394
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 427.0559000000002,
+      "combined_max_us": 707.018,
+      "local_stability": {
+        "candidate": "C2-torque-se3-small",
+        "cases": 6,
+        "protocol_pass_cases": 1,
+        "strict_cases": 1,
+        "worst_spectral_radius": 1.0482510478460678
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C2_se3_stroke",
+      "family": "C2",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.2098978352145122,
+        "max_mm": 1.599960529953551,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 35.10995622139391,
+        "table_force_place_max_n": 3.1832599412053915
+      },
+      "mean_ratio": {
+        "rms_mm": 1.1745991397195625,
+        "max_mm": 1.5832926256079825,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 18.490818693711503,
+        "table_force_place_max_n": 2.3725140358034498
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 457.63189000000006,
+      "combined_max_us": 695.077,
+      "local_stability": {
+        "candidate": "C2-servo-se3-stroke",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 3,
+        "worst_spectral_radius": 1.097210112079756
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C2_se3_stroke",
+      "family": "C2",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 3,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.2654426463977482,
+        "max_mm": 1.219859130128655,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 6.670142857020402,
+        "table_force_place_max_n": 1.8170718599330538
+      },
+      "mean_ratio": {
+        "rms_mm": 1.0916547615164225,
+        "max_mm": 1.0978400575882166,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 4.288378484639415,
+        "table_force_place_max_n": 1.4095558719292127
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 409.08920000000006,
+      "combined_max_us": 622.727,
+      "local_stability": {
+        "candidate": "C2-torque-se3-stroke",
+        "cases": 6,
+        "protocol_pass_cases": 3,
+        "strict_cases": 3,
+        "worst_spectral_radius": 1.024635423229042
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C3_NRIC_g1",
+      "family": "C3",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 13,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.2216364015797843,
+        "max_mm": 1.0628819061541157,
+        "torque_step_pick_nm": 15.708234741406029,
+        "torque_step_place_nm": 1.1095364134548444,
+        "table_force_place_max_n": 1.1746608978151427
+      },
+      "mean_ratio": {
+        "rms_mm": 1.175030247924475,
+        "max_mm": 1.0378191510798236,
+        "torque_step_pick_nm": 15.37750877445414,
+        "torque_step_place_nm": 0.9782582149444532,
+        "table_force_place_max_n": 1.0545427249465376
+      },
+      "residual_joint_RMS_ratio": 4.469309149583341,
+      "combined_p99_us": 744.0793000000008,
+      "combined_max_us": 1048.376,
+      "local_stability": {
+        "candidate": "C3-servo-NRIC-g1",
+        "cases": 6,
+        "protocol_pass_cases": 4,
+        "strict_cases": 4,
+        "worst_spectral_radius": 3.370136151993469
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius"
+    },
+    {
+      "id": "C3_NRIC_g1",
+      "family": "C3",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 10,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.9866824612157834,
+        "max_mm": 2.0263713075577137,
+        "torque_step_pick_nm": 15.862658306717464,
+        "torque_step_place_nm": 1.2116883561193244,
+        "table_force_place_max_n": 1.5182419141119758
+      },
+      "mean_ratio": {
+        "rms_mm": 1.751965290797643,
+        "max_mm": 1.6733687197697293,
+        "torque_step_pick_nm": 15.510505847255882,
+        "torque_step_place_nm": 1.0851460199890175,
+        "table_force_place_max_n": 1.200175549477463
+      },
+      "residual_joint_RMS_ratio": 4.908596227488697,
+      "combined_p99_us": 721.40069,
+      "combined_max_us": 1128.636,
+      "local_stability": {
+        "candidate": "C3-torque-NRIC-g1",
+        "cases": 6,
+        "protocol_pass_cases": 0,
+        "strict_cases": 0,
+        "worst_spectral_radius": 1.0813722422815113
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius"
+    },
+    {
+      "id": "C3_NRIC_g2",
+      "family": "C3",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 10,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.1927558125624935,
+        "max_mm": 1.033255747867818,
+        "torque_step_pick_nm": 14.685350052513808,
+        "torque_step_place_nm": 1.003759962531724,
+        "table_force_place_max_n": 1.0006006895013535
+      },
+      "mean_ratio": {
+        "rms_mm": 1.1486997383222848,
+        "max_mm": 1.02227046221262,
+        "torque_step_pick_nm": 14.496928653882893,
+        "torque_step_place_nm": 0.9608200771895057,
+        "table_force_place_max_n": 0.9970371192810265
+      },
+      "residual_joint_RMS_ratio": 4.518630115131231,
+      "combined_p99_us": 755.3282,
+      "combined_max_us": 1046.916,
+      "local_stability": {
+        "candidate": "C3-servo-NRIC-g2",
+        "cases": 6,
+        "protocol_pass_cases": 4,
+        "strict_cases": 4,
+        "worst_spectral_radius": 3.1333846258314626
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius"
+    },
+    {
+      "id": "C3_NRIC_g2",
+      "family": "C3",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 10,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.9766226905237907,
+        "max_mm": 2.5962254653531436,
+        "torque_step_pick_nm": 12.723219507972898,
+        "torque_step_place_nm": 1.116018349351679,
+        "table_force_place_max_n": 1.7610013756662426
+      },
+      "mean_ratio": {
+        "rms_mm": 1.758987016055917,
+        "max_mm": 1.7961219768369046,
+        "torque_step_pick_nm": 11.644173898775804,
+        "torque_step_place_nm": 1.0729532182295973,
+        "table_force_place_max_n": 1.532924831267638
+      },
+      "residual_joint_RMS_ratio": 4.794867954478167,
+      "combined_p99_us": 802.1569000000006,
+      "combined_max_us": 5149.171,
+      "local_stability": {
+        "candidate": "C3-torque-NRIC-g2",
+        "cases": 6,
+        "protocol_pass_cases": 0,
+        "strict_cases": 0,
+        "worst_spectral_radius": 1.0789745831799198
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": false,
+        "local_radius": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,timing_p99,local_radius"
+    },
+    {
+      "id": "C3_NRIC_g4",
+      "family": "C3",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 10,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.2691706210006675,
+        "max_mm": 1.1606335121379991,
+        "torque_step_pick_nm": 13.592660430498666,
+        "torque_step_place_nm": 1.0144155161847483,
+        "table_force_place_max_n": 1.1957923002107969
+      },
+      "mean_ratio": {
+        "rms_mm": 1.1916109245601552,
+        "max_mm": 1.0593333239288194,
+        "torque_step_pick_nm": 13.195199753225031,
+        "torque_step_place_nm": 0.9763144344800191,
+        "table_force_place_max_n": 1.0491328762892447
+      },
+      "residual_joint_RMS_ratio": 4.469186281654434,
+      "combined_p99_us": 691.0079100000002,
+      "combined_max_us": 1845.293,
+      "local_stability": {
+        "candidate": "C3-servo-NRIC-g4",
+        "cases": 6,
+        "protocol_pass_cases": 4,
+        "strict_cases": 4,
+        "worst_spectral_radius": 3.023057571781915
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius"
+    },
+    {
+      "id": "C3_NRIC_g4",
+      "family": "C3",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 9,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 2.4792959448624416,
+        "max_mm": 3.400563324100413,
+        "torque_step_pick_nm": 13.919803824079839,
+        "torque_step_place_nm": 1.3739318867770027,
+        "table_force_place_max_n": 2.84755965075021
+      },
+      "mean_ratio": {
+        "rms_mm": 2.028691753124091,
+        "max_mm": 2.2279145638799913,
+        "torque_step_pick_nm": 12.023541570529497,
+        "torque_step_place_nm": 1.1887554050054931,
+        "table_force_place_max_n": 1.7539943709072976
+      },
+      "residual_joint_RMS_ratio": 4.878193853331682,
+      "combined_p99_us": 771.8748900000012,
+      "combined_max_us": 1201.896,
+      "local_stability": {
+        "candidate": "C3-torque-NRIC-g4",
+        "cases": 6,
+        "protocol_pass_cases": 0,
+        "strict_cases": 0,
+        "worst_spectral_radius": 1.0751545363129225
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius"
+    },
+    {
+      "id": "C3_DOB_w4.5",
+      "family": "C3",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 0.9567300644498482,
+        "max_mm": 0.8293837997605307,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0542309669107008,
+        "table_force_place_max_n": 1.000257073905756
+      },
+      "mean_ratio": {
+        "rms_mm": 0.9489473571703984,
+        "max_mm": 0.8187330599649477,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 0.994088383527238,
+        "table_force_place_max_n": 0.8965588508507627
+      },
+      "residual_joint_RMS_ratio": 1.0033325277764205,
+      "combined_p99_us": 350.81550000000016,
+      "combined_max_us": 475.058,
+      "local_stability": {
+        "candidate": "C3-servo-DOB-w4.5",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 0,
+        "worst_spectral_radius": 1.0000000000001328
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost"
+    },
+    {
+      "id": "C3_DOB_w4.5",
+      "family": "C3",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 2.5784194876532616,
+        "max_mm": 2.561589852314615,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.1330712857197933,
+        "table_force_place_max_n": 5.978996757764838
+      },
+      "mean_ratio": {
+        "rms_mm": 2.4167536602846944,
+        "max_mm": 2.1171480751554177,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.045761091139241,
+        "table_force_place_max_n": 3.3492148749756323
+      },
+      "residual_joint_RMS_ratio": 1.0035839974943124,
+      "combined_p99_us": 254.3503,
+      "combined_max_us": 400.699,
+      "local_stability": {
+        "candidate": "C3-torque-DOB-w4.5",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.0012039849379073
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,local_radius"
+    },
+    {
+      "id": "C3_DOB_w9",
+      "family": "C3",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 0.964308964525613,
+        "max_mm": 0.8251418423278516,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0854001756809466,
+        "table_force_place_max_n": 1.0004573486720585
+      },
+      "mean_ratio": {
+        "rms_mm": 0.9539677086460862,
+        "max_mm": 0.8145860968673144,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0160436798257337,
+        "table_force_place_max_n": 0.8966570825434343
+      },
+      "residual_joint_RMS_ratio": 1.0049477687598167,
+      "combined_p99_us": 379.78840000000025,
+      "combined_max_us": 517.818,
+      "local_stability": {
+        "candidate": "C3-servo-DOB-w9",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 0,
+        "worst_spectral_radius": 1.0000000000001328
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost"
+    },
+    {
+      "id": "C3_DOB_w9",
+      "family": "C3",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 2.6335039909691442,
+        "max_mm": 2.5815641207972204,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.1305296539663374,
+        "table_force_place_max_n": 6.106862601654905
+      },
+      "mean_ratio": {
+        "rms_mm": 2.4706825491459248,
+        "max_mm": 2.1360683248097545,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0630335056367575,
+        "table_force_place_max_n": 3.4091633418649474
+      },
+      "residual_joint_RMS_ratio": 1.0075196926494088,
+      "combined_p99_us": 374.4110100000001,
+      "combined_max_us": 547.507,
+      "local_stability": {
+        "candidate": "C3-torque-DOB-w9",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.0012202956213223
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,local_radius"
+    },
+    {
+      "id": "C3_DOB_w18",
+      "family": "C3",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 0.9644701958415788,
+        "max_mm": 0.8225784742395802,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0677176903366925,
+        "table_force_place_max_n": 1.0005043267628027
+      },
+      "mean_ratio": {
+        "rms_mm": 0.9531403726788581,
+        "max_mm": 0.811756947871666,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.015333299490541,
+        "table_force_place_max_n": 0.8966147323756177
+      },
+      "residual_joint_RMS_ratio": 1.0059052366907535,
+      "combined_p99_us": 303.949,
+      "combined_max_us": 463.799,
+      "local_stability": {
+        "candidate": "C3-servo-DOB-w18",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 0,
+        "worst_spectral_radius": 1.0000000000001328
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost"
+    },
+    {
+      "id": "C3_DOB_w18",
+      "family": "C3",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 2.6544283517554237,
+        "max_mm": 2.5955468698003714,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.1290055093318752,
+        "table_force_place_max_n": 6.177213659055354
+      },
+      "mean_ratio": {
+        "rms_mm": 2.49462197484182,
+        "max_mm": 2.149073058842592,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0598891980735683,
+        "table_force_place_max_n": 3.4517169699901644
+      },
+      "residual_joint_RMS_ratio": 1.0085892611740475,
+      "combined_p99_us": 306.97450000000094,
+      "combined_max_us": 486.899,
+      "local_stability": {
+        "candidate": "C3-torque-DOB-w18",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.0011658556425427
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,local_radius"
+    },
+    {
+      "id": "C4_P-APD_w4.5_d0.5",
+      "family": "C4",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0613554264173217,
+        "max_mm": 1.0337695027259723,
+        "torque_step_pick_nm": 0.8911549716987116,
+        "torque_step_place_nm": 1.0740620855259504,
+        "table_force_place_max_n": 1.0116175196383008
+      },
+      "mean_ratio": {
+        "rms_mm": 1.052258908725524,
+        "max_mm": 1.0109139440306731,
+        "torque_step_pick_nm": 0.8911549716987116,
+        "torque_step_place_nm": 1.0082756370029033,
+        "table_force_place_max_n": 0.9059132018939398
+      },
+      "residual_joint_RMS_ratio": 1.023928227690023,
+      "combined_p99_us": 813.2871000000005,
+      "combined_max_us": 1102.865,
+      "local_stability": {
+        "candidate": "C4-servo-P-APD-r4.5-d0.5",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 6,
+        "worst_spectral_radius": 0.998378569092233
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": false,
+        "local_radius": true,
+        "tracking_gain": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,timing_p99,tracking_gain"
+    },
+    {
+      "id": "C4_P-APD_w4.5_d0.5",
+      "family": "C4",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.1122391159461316,
+        "max_mm": 1.2438669997037226,
+        "torque_step_pick_nm": 0.8660105479665263,
+        "torque_step_place_nm": 1.5264913389328356,
+        "table_force_place_max_n": 1.7674266263981617
+      },
+      "mean_ratio": {
+        "rms_mm": 0.9519978579960358,
+        "max_mm": 0.972158025210864,
+        "torque_step_pick_nm": 0.8490994482094011,
+        "torque_step_place_nm": 1.3420245804276902,
+        "table_force_place_max_n": 1.2081459450394325
+      },
+      "residual_joint_RMS_ratio": 0.9824191451680523,
+      "combined_p99_us": 829.4775000000005,
+      "combined_max_us": 1037.046,
+      "local_stability": {
+        "candidate": "C4-torque-P-APD-r4.5-d0.5",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.0003280033109663
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": false,
+        "local_radius": false,
+        "tracking_gain": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,timing_p99,local_radius,tracking_gain"
+    },
+    {
+      "id": "C4_P-APD_w4.5_d1",
+      "family": "C4",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0897103274545716,
+        "max_mm": 1.0284685575260546,
+        "torque_step_pick_nm": 1.006961778668771,
+        "torque_step_place_nm": 1.4547173804411522,
+        "table_force_place_max_n": 1.0131502586566612
+      },
+      "mean_ratio": {
+        "rms_mm": 1.0811849329275058,
+        "max_mm": 0.999845815776032,
+        "torque_step_pick_nm": 0.9497806431668342,
+        "torque_step_place_nm": 1.1743728491328946,
+        "table_force_place_max_n": 0.9095653760414917
+      },
+      "residual_joint_RMS_ratio": 1.0650596155397556,
+      "combined_p99_us": 723.6159900000001,
+      "combined_max_us": 1113.075,
+      "local_stability": {
+        "candidate": "C4-servo-P-APD-r4.5-d1",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 6,
+        "worst_spectral_radius": 0.9983741687886565
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "tracking_gain": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,tracking_gain"
+    },
+    {
+      "id": "C4_P-APD_w4.5_d1",
+      "family": "C4",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0878273966737853,
+        "max_mm": 1.2003876630968768,
+        "torque_step_pick_nm": 0.9840506187337146,
+        "torque_step_place_nm": 1.7159244746938265,
+        "table_force_place_max_n": 1.4267023565059063
+      },
+      "mean_ratio": {
+        "rms_mm": 0.9223540630984179,
+        "max_mm": 0.9341594647003945,
+        "torque_step_pick_nm": 0.9064119702962803,
+        "torque_step_place_nm": 1.2845911661550475,
+        "table_force_place_max_n": 1.1025546400304214
+      },
+      "residual_joint_RMS_ratio": 0.9737321384075057,
+      "combined_p99_us": 810.1199000000003,
+      "combined_max_us": 5197.16,
+      "local_stability": {
+        "candidate": "C4-torque-P-APD-r4.5-d1",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.000918390548667
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": false,
+        "local_radius": false,
+        "tracking_gain": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,timing_p99,local_radius,tracking_gain"
+    },
+    {
+      "id": "C4_P-APD_w9_d0.5",
+      "family": "C4",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.114567029131247,
+        "max_mm": 1.0211096324895406,
+        "torque_step_pick_nm": 1.188953044362731,
+        "torque_step_place_nm": 1.681060378114984,
+        "table_force_place_max_n": 1.0176323710983226
+      },
+      "mean_ratio": {
+        "rms_mm": 1.1078443984812767,
+        "max_mm": 0.9904695536783475,
+        "torque_step_pick_nm": 1.124592123470507,
+        "torque_step_place_nm": 1.3271642188020698,
+        "table_force_place_max_n": 0.9154104455092144
+      },
+      "residual_joint_RMS_ratio": 1.0260604718474944,
+      "combined_p99_us": 687.1776,
+      "combined_max_us": 1093.685,
+      "local_stability": {
+        "candidate": "C4-servo-P-APD-r9-d0.5",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 6,
+        "worst_spectral_radius": 0.998366510771881
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "tracking_gain": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,tracking_gain"
+    },
+    {
+      "id": "C4_P-APD_w9_d0.5",
+      "family": "C4",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 0.9941826256669596,
+        "max_mm": 1.0886532988888287,
+        "torque_step_pick_nm": 1.3562522279556024,
+        "torque_step_place_nm": 2.047873771444708,
+        "table_force_place_max_n": 0.998989207791567
+      },
+      "mean_ratio": {
+        "rms_mm": 0.8353012580643084,
+        "max_mm": 0.843512486637896,
+        "torque_step_pick_nm": 1.2068004807789017,
+        "torque_step_place_nm": 1.5208192948231694,
+        "table_force_place_max_n": 0.9864587428522761
+      },
+      "residual_joint_RMS_ratio": 0.978781473165888,
+      "combined_p99_us": 751.050400000002,
+      "combined_max_us": 1027.556,
+      "local_stability": {
+        "candidate": "C4-torque-P-APD-r9-d0.5",
+        "cases": 6,
+        "protocol_pass_cases": 4,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.001929668864911
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "tracking_gain": true
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,local_radius"
+    },
+    {
+      "id": "C4_P-APD_w9_d1",
+      "family": "C4",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.165476966324784,
+        "max_mm": 1.000802271682662,
+        "torque_step_pick_nm": 1.6001793401300115,
+        "torque_step_place_nm": 2.369764983458267,
+        "table_force_place_max_n": 1.0195375712877928
+      },
+      "mean_ratio": {
+        "rms_mm": 1.1594844999849707,
+        "max_mm": 0.9718883327861672,
+        "torque_step_pick_nm": 1.455934584645457,
+        "torque_step_place_nm": 1.8326177750579822,
+        "table_force_place_max_n": 0.9314793246844505
+      },
+      "residual_joint_RMS_ratio": 0.9560798657580026,
+      "combined_p99_us": 592.2672200000001,
+      "combined_max_us": 985.146,
+      "local_stability": {
+        "candidate": "C4-servo-P-APD-r9-d1",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 6,
+        "worst_spectral_radius": 0.9983590175477427
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "tracking_gain": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,tracking_gain"
+    },
+    {
+      "id": "C4_P-APD_w9_d1",
+      "family": "C4",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 10,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 0.9227250581404574,
+        "max_mm": 0.9910761863383949,
+        "torque_step_pick_nm": 1.5798626039488852,
+        "torque_step_place_nm": 3.2360705455070033,
+        "table_force_place_max_n": 0.9994572593036672
+      },
+      "mean_ratio": {
+        "rms_mm": 0.7731447329740856,
+        "max_mm": 0.7722866287717569,
+        "torque_step_pick_nm": 1.4442402346109486,
+        "torque_step_place_nm": 2.3447059780505812,
+        "table_force_place_max_n": 0.9872580946515778
+      },
+      "residual_joint_RMS_ratio": 1.4530485487847913,
+      "combined_p99_us": 716.74969,
+      "combined_max_us": 4859.009,
+      "local_stability": {
+        "candidate": "C4-torque-P-APD-r9-d1",
+        "cases": 6,
+        "protocol_pass_cases": 0,
+        "strict_cases": 0,
+        "worst_spectral_radius": 1.0054255455169054
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "tracking_gain": true
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius"
+    },
+    {
+      "id": "C4_P-IDC_w4.5_d0.5",
+      "family": "C4",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.055283326763546,
+        "max_mm": 1.0504285446395147,
+        "torque_step_pick_nm": 0.7617737359047879,
+        "torque_step_place_nm": 1.0727462310546498,
+        "table_force_place_max_n": 1.0113586800287653
+      },
+      "mean_ratio": {
+        "rms_mm": 1.046891122703368,
+        "max_mm": 1.0282752574343816,
+        "torque_step_pick_nm": 0.7617737359047879,
+        "torque_step_place_nm": 1.0202164311593116,
+        "table_force_place_max_n": 0.9041966297464599
+      },
+      "residual_joint_RMS_ratio": 1.0272655655363714,
+      "combined_p99_us": 762.4256000000006,
+      "combined_max_us": 1037.335,
+      "local_stability": {
+        "candidate": "C4-servo-P-IDC-r4.5-d0.5",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.0000000000000018
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "tracking_gain": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,tracking_gain"
+    },
+    {
+      "id": "C4_P-IDC_w4.5_d0.5",
+      "family": "C4",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 0.9441630247618417,
+        "max_mm": 1.1086076890897447,
+        "torque_step_pick_nm": 0.8736522973792186,
+        "torque_step_place_nm": 1.5643076602802444,
+        "table_force_place_max_n": 1.3494672593735262
+      },
+      "mean_ratio": {
+        "rms_mm": 0.7953643258630595,
+        "max_mm": 0.8514947873098486,
+        "torque_step_pick_nm": 0.8736522973792186,
+        "torque_step_place_nm": 1.3477033663826443,
+        "table_force_place_max_n": 1.0831396882290267
+      },
+      "residual_joint_RMS_ratio": 0.9806238325583018,
+      "combined_p99_us": 787.2852900000006,
+      "combined_max_us": 1047.046,
+      "local_stability": {
+        "candidate": "C4-torque-P-IDC-r4.5-d0.5",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.0019764020953346
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "tracking_gain": true
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,local_radius"
+    },
+    {
+      "id": "C4_P-IDC_w4.5_d1",
+      "family": "C4",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0991212474199916,
+        "max_mm": 1.0514260466732195,
+        "torque_step_pick_nm": 0.8211578730729523,
+        "torque_step_place_nm": 1.408356942387988,
+        "table_force_place_max_n": 1.0127611295585492
+      },
+      "mean_ratio": {
+        "rms_mm": 1.091464079250858,
+        "max_mm": 1.0228013917031866,
+        "torque_step_pick_nm": 0.8032874917166094,
+        "torque_step_place_nm": 1.1944823500593773,
+        "table_force_place_max_n": 0.9079917996347497
+      },
+      "residual_joint_RMS_ratio": 1.0211842337081074,
+      "combined_p99_us": 800.2191100000014,
+      "combined_max_us": 1157.895,
+      "local_stability": {
+        "candidate": "C4-servo-P-IDC-r4.5-d1",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.0000000000000029
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": false,
+        "local_radius": true,
+        "tracking_gain": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,timing_p99,tracking_gain"
+    },
+    {
+      "id": "C4_P-IDC_w4.5_d1",
+      "family": "C4",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 0.9476596539168997,
+        "max_mm": 1.0965403063269894,
+        "torque_step_pick_nm": 0.9695491951774142,
+        "torque_step_place_nm": 1.5887427241846142,
+        "table_force_place_max_n": 0.998895572407111
+      },
+      "mean_ratio": {
+        "rms_mm": 0.7916786043152136,
+        "max_mm": 0.8485296066391175,
+        "torque_step_pick_nm": 0.89036962456957,
+        "torque_step_place_nm": 1.2813987145772208,
+        "table_force_place_max_n": 0.9881558545278286
+      },
+      "residual_joint_RMS_ratio": 0.9856059984137594,
+      "combined_p99_us": 718.3894,
+      "combined_max_us": 1070.206,
+      "local_stability": {
+        "candidate": "C4-torque-P-IDC-r4.5-d1",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 6,
+        "worst_spectral_radius": 0.999873306465331
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "tracking_gain": true
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost"
+    },
+    {
+      "id": "C4_P-IDC_w9_d0.5",
+      "family": "C4",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.139828712923047,
+        "max_mm": 1.0541359796232972,
+        "torque_step_pick_nm": 0.9472002718844521,
+        "torque_step_place_nm": 1.3044238098977128,
+        "table_force_place_max_n": 1.0163185447779943
+      },
+      "mean_ratio": {
+        "rms_mm": 1.1316816832420509,
+        "max_mm": 1.0271275616887183,
+        "torque_step_pick_nm": 0.9472002718844521,
+        "torque_step_place_nm": 1.1380889795405529,
+        "table_force_place_max_n": 0.9160500988546794
+      },
+      "residual_joint_RMS_ratio": 0.9978973917876608,
+      "combined_p99_us": 711.5888000000004,
+      "combined_max_us": 4746.88,
+      "local_stability": {
+        "candidate": "C4-servo-P-IDC-r9-d0.5",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.000000000000001
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": true,
+        "tracking_gain": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,tracking_gain"
+    },
+    {
+      "id": "C4_P-IDC_w9_d0.5",
+      "family": "C4",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 0.7873600063427499,
+        "max_mm": 0.9454586724561821,
+        "torque_step_pick_nm": 1.0945246277252594,
+        "torque_step_place_nm": 1.749358209952019,
+        "table_force_place_max_n": 0.9997083585831514
+      },
+      "mean_ratio": {
+        "rms_mm": 0.6529007450322621,
+        "max_mm": 0.7446627703796381,
+        "torque_step_pick_nm": 1.0280784425561427,
+        "torque_step_place_nm": 1.461855926316952,
+        "table_force_place_max_n": 0.9877318636135481
+      },
+      "residual_joint_RMS_ratio": 0.9492384541455225,
+      "combined_p99_us": 838.59901,
+      "combined_max_us": 1071.745,
+      "local_stability": {
+        "candidate": "C4-torque-P-IDC-r9-d0.5",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.0000388284197086
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": false,
+        "local_radius": false,
+        "tracking_gain": true
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,timing_p99,local_radius"
+    },
+    {
+      "id": "C4_P-IDC_w9_d1",
+      "family": "C4",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.2305056749100018,
+        "max_mm": 1.0009636112417455,
+        "torque_step_pick_nm": 1.575275443742544,
+        "torque_step_place_nm": 2.4308791749521097,
+        "table_force_place_max_n": 1.0217121040030017
+      },
+      "mean_ratio": {
+        "rms_mm": 1.2155511819192193,
+        "max_mm": 0.9827869620265108,
+        "torque_step_pick_nm": 1.3217437847870275,
+        "torque_step_place_nm": 1.909059593136915,
+        "table_force_place_max_n": 0.9450011195133315
+      },
+      "residual_joint_RMS_ratio": 0.9467646119283107,
+      "combined_p99_us": 815.8219000000001,
+      "combined_max_us": 1094.835,
+      "local_stability": {
+        "candidate": "C4-servo-P-IDC-r9-d1",
+        "cases": 6,
+        "protocol_pass_cases": 6,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.0000000000000009
+      },
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": false,
+        "local_radius": true,
+        "tracking_gain": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: cost,timing_p99,tracking_gain"
+    },
+    {
+      "id": "C4_P-IDC_w9_d1",
+      "family": "C4",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 7,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 0.7761669498452792,
+        "max_mm": 0.895956586925105,
+        "torque_step_pick_nm": 1.525886661450731,
+        "torque_step_place_nm": 2.927425429225687,
+        "table_force_place_max_n": 1.008634839456367
+      },
+      "mean_ratio": {
+        "rms_mm": 0.64171872905677,
+        "max_mm": 0.6997780623383085,
+        "torque_step_pick_nm": 1.3694521740403454,
+        "torque_step_place_nm": 2.313451899254953,
+        "table_force_place_max_n": 0.994430706727356
+      },
+      "residual_joint_RMS_ratio": 1.5510194549295033,
+      "combined_p99_us": 757.5319900000005,
+      "combined_max_us": 1076.945,
+      "local_stability": {
+        "candidate": "C4-torque-P-IDC-r9-d1",
+        "cases": 6,
+        "protocol_pass_cases": 1,
+        "strict_cases": 1,
+        "worst_spectral_radius": 1.005441062932401
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "tracking_gain": true
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,cost,local_radius"
+    },
+    {
+      "id": "C5_prne_only",
+      "family": "C5",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "mean_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "residual_joint_RMS_ratio": 0.9999985026355214,
+      "combined_p99_us": 575.82919,
+      "combined_max_us": 878.836,
+      "local_stability": null,
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": true,
+        "timing_p99": true,
+        "local_radius": true
+      },
+      "normal_validation_eligible": true,
+      "remaining": "development/perturbation and sweep/holdout/official gates; no adoption yet"
+    },
+    {
+      "id": "C5_prne_only",
+      "family": "C5",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "mean_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "residual_joint_RMS_ratio": 1.000025631782912,
+      "combined_p99_us": 646.0981,
+      "combined_max_us": 1032.757,
+      "local_stability": null,
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": true,
+        "timing_p99": true,
+        "local_radius": true
+      },
+      "normal_validation_eligible": true,
+      "remaining": "development/perturbation and sweep/holdout/official gates; no adoption yet"
+    },
+    {
+      "id": "C5_prne_plus_ridge",
+      "family": "C5",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "mean_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "residual_joint_RMS_ratio": 0.9999985026355214,
+      "combined_p99_us": 694.1793000000001,
+      "combined_max_us": 1144.245,
+      "local_stability": null,
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": true,
+        "timing_p99": true,
+        "local_radius": true
+      },
+      "normal_validation_eligible": true,
+      "remaining": "development/perturbation and sweep/holdout/official gates; no adoption yet"
+    },
+    {
+      "id": "C5_prne_plus_ridge",
+      "family": "C5",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "mean_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "residual_joint_RMS_ratio": 1.000025631782912,
+      "combined_p99_us": 605.6516000000003,
+      "combined_max_us": 1060.185,
+      "local_stability": null,
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": true,
+        "timing_p99": true,
+        "local_radius": true
+      },
+      "normal_validation_eligible": true,
+      "remaining": "development/perturbation and sweep/holdout/official gates; no adoption yet"
+    },
+    {
+      "id": "C5_ridge_only_matched",
+      "family": "C5",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "mean_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 247.6003,
+      "combined_max_us": 815.748,
+      "local_stability": null,
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": true,
+        "timing_p99": true,
+        "local_radius": true,
+        "not_an_adoptable_method": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: not_an_adoptable_method"
+    },
+    {
+      "id": "C5_ridge_only_matched",
+      "family": "C5",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 0,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "mean_ratio": {
+        "rms_mm": 1.0,
+        "max_mm": 1.0,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 288.4668000000004,
+      "combined_max_us": 418.228,
+      "local_stability": null,
+      "gates": {
+        "no_false_alarm": true,
+        "no_saturation": true,
+        "no_divergence": true,
+        "cost": true,
+        "timing_p99": true,
+        "local_radius": true,
+        "not_an_adoptable_method": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: not_an_adoptable_method"
+    },
+    {
+      "id": "C6_seventh_joint",
+      "family": "C6",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 10,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 5.352232653084076,
+        "max_mm": 12.878662225504376,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.8846013912232151,
+        "table_force_place_max_n": 5.483246362980822
+      },
+      "mean_ratio": {
+        "rms_mm": 5.241193298227978,
+        "max_mm": 12.743186464856489,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.5714857719883863,
+        "table_force_place_max_n": 5.075346647368777
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 293.7673100000002,
+      "combined_max_us": 462.457,
+      "local_stability": {
+        "candidate": "C6-servo-seventh_joint",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.0029603297800584
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C6_seventh_joint",
+      "family": "C6",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 11,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 2.9410647634197815,
+        "max_mm": 11.702902227942602,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.9055581405611448,
+        "table_force_place_max_n": 4.115435550553834
+      },
+      "mean_ratio": {
+        "rms_mm": 2.635055138317523,
+        "max_mm": 9.106695864792709,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.633715186872919,
+        "table_force_place_max_n": 3.468363321447469
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 317.2918,
+      "combined_max_us": 591.637,
+      "local_stability": {
+        "candidate": "C6-torque-seventh_joint",
+        "cases": 6,
+        "protocol_pass_cases": 4,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.0013560826220298
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C6_S_curve_joint",
+      "family": "C6",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 6,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 5.101693896749825,
+        "max_mm": 12.289406538256234,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.5665460357282,
+        "table_force_place_max_n": 4.32831932749989
+      },
+      "mean_ratio": {
+        "rms_mm": 5.0379452437804,
+        "max_mm": 12.09497620619652,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.3556686776593625,
+        "table_force_place_max_n": 3.77128962907255
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 347.52961000000005,
+      "combined_max_us": 539.798,
+      "local_stability": {
+        "candidate": "C6-servo-S_curve_joint",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.002939537183946
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C6_S_curve_joint",
+      "family": "C6",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 9,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 2.8754303042411364,
+        "max_mm": 11.240273863789076,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.5780112634277372,
+        "table_force_place_max_n": 3.27657194472984
+      },
+      "mean_ratio": {
+        "rms_mm": 2.5386308097417216,
+        "max_mm": 8.71276206949205,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.4305610050455657,
+        "table_force_place_max_n": 2.8126128778974278
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 328.8337000000001,
+      "combined_max_us": 450.267,
+      "local_stability": {
+        "candidate": "C6-torque-S_curve_joint",
+        "cases": 6,
+        "protocol_pass_cases": 4,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.001356083160003
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C6_SO3_R3_seventh",
+      "family": "C6",
+      "architecture": "servo",
+      "episodes": 4,
+      "false_rises": 10,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 5.342117593444077,
+        "max_mm": 12.904779466047529,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.8806398748087274,
+        "table_force_place_max_n": 5.601829199770664
+      },
+      "mean_ratio": {
+        "rms_mm": 5.243692241336241,
+        "max_mm": 12.770835623207475,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.5632342379920643,
+        "table_force_place_max_n": 5.14296375467614
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 368.4109,
+      "combined_max_us": 759.707,
+      "local_stability": {
+        "candidate": "C6-servo-SO3_R3_seventh",
+        "cases": 6,
+        "protocol_pass_cases": 5,
+        "strict_cases": 5,
+        "worst_spectral_radius": 1.002973962777772
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,no_saturation,cost,local_radius,G4"
+    },
+    {
+      "id": "C6_SO3_R3_seventh",
+      "family": "C6",
+      "architecture": "torque",
+      "episodes": 4,
+      "false_rises": 11,
+      "G4_pass_cases": 0,
+      "worst_ratio": {
+        "rms_mm": 2.946196867610686,
+        "max_mm": 11.738283701232888,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.9025935360962105,
+        "table_force_place_max_n": 4.139854498541979
+      },
+      "mean_ratio": {
+        "rms_mm": 2.6363678041930574,
+        "max_mm": 9.138394058494008,
+        "torque_step_pick_nm": 1.0,
+        "torque_step_place_nm": 1.6282617062373932,
+        "table_force_place_max_n": 3.5493155183135023
+      },
+      "residual_joint_RMS_ratio": 1.0,
+      "combined_p99_us": 374.68891,
+      "combined_max_us": 547.847,
+      "local_stability": {
+        "candidate": "C6-torque-SO3_R3_seventh",
+        "cases": 6,
+        "protocol_pass_cases": 4,
+        "strict_cases": 4,
+        "worst_spectral_radius": 1.0013560818311167
+      },
+      "gates": {
+        "no_false_alarm": false,
+        "no_saturation": false,
+        "no_divergence": true,
+        "cost": false,
+        "timing_p99": true,
+        "local_radius": false,
+        "G4": false
+      },
+      "normal_validation_eligible": false,
+      "remaining": "reject: no_false_alarm,no_saturation,cost,local_radius,G4"
+    }
+  ],
+  "G4_unchanged": true,
+  "stability_scope": "forced frozen-R1 physical points, fixed contact mode and unquantized local perturbations; baseline B already fails at 7.7kg/2.5s; finite checks are not guarantees"
+}

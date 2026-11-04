@@ -1,58 +1,58 @@
-# ICPBL v2 결과
+# 팔레타이징 하중 이양 · 제어/리그룹 2차 실험
 
-## 결론
+**최종 구현은 R1을 유지한다.** 새 제어25설정과 pRNE 관측기를 실제 구현·측정했지만 사전 채택 기준을 통과하지 못했다. 수학 검증 성공을 성능 개선이나 탄성 플랜트의 안정성 보장으로 바꾸어 쓰지 않는다. 공개 staging용 로컬 결과이며 원격에 게시하지 않았다.
 
-v2는 **v1 제어기 + 정상-only ridge 잔차/대칭 EMA 감지 채널**이며, 기존 v1 경보와 OR한다. 제한된 연구용 채택이며 실기 배치를 권고하는 결과가 아니다. 제어기는 바꾸지 않았다. 새 L3 검증이 등록 규칙을 통과해 정확한 기하 높이 gate 복구를 채택했다. L3의 가중치, 임계값, EMA와 지속시간은 바꾸지 않았다. 공식 세트는 디버깅에 사용되어 독립 효능 증거가 아니며 G1/G2는 공식 호환성 결과로만 공개한다. 최종 선택 근거는 새 비공식 L3 연구와 봉인 holdout에 한정한다.
+## 같은 조건의 비교
 
-| 구조 | 버전 | TCP RMS/max mm | torque step pick/place N m | table N | FA pick/place/other | 8 kg transport 15 N delay ms | 10 N delay ms | minimum |
-|---|---|---:|---:|---:|---:|---|---|---|
-| A | baseline | 6.14/14.00 | 57.5/73.8 | 101 | 5/2/0 | 68 | 놓침 | 15 N |
-| A | v1 | 1.17/3.91 | 9.7/14.6 | 79 | 0/0/0 | 83 | 놓침 | 15 N |
-| A | v2 | 1.17/3.91 | 9.7/14.6 | 79 | 0/0/0 | 45 | 62 | 10 N |
-| B | baseline | 7.04/13.18 | 57.2/74.8 | 295 | 5/4/0 | 68 | 97 | 10 N |
-| B | v1 | 3.23/8.44 | 9.0/13.1 | 80 | 0/0/0 | 83 | 놓침 | 15 N |
-| B | v2 | 3.23/8.44 | 9.0/13.1 | 80 | 0/0/0 | 43 | 56 | 10 N |
+A/B는 위치 서보/모터 토크 방식이다. R2는 R1과 같은 소스의 alias이며, 같은 수치를 독립 신규 재현이라고 세지 않는다.
 
-- G1/G2/G3/G5: `True` / `True` / `False` / `False`. D4 B의 추가 오감지 1→3 때문에 G3는 미달이며 검출 수 증가만으로 성공이라 하지 않는다.
-- G4: C 후보는 각 구조 0/4로 탈락했다. v2 제어 개선 주장은 없으며 검출기 변경으로 인한 추적 회귀도 없다.
-- G6: `False`. 제어 악화조건은 그대로이며 분석 섭동 무충돌 FA는 A 4→6, B 7→9로 별도 보고한다. detector-only 변경을 제어 개선으로 주장하지 않는다.
-- G7: 같은 순간 수직 wrench의 지지/충돌 모호성은 해결하지 못했다.
+| 항목 | 기준 | v1 | R1 | 최종 R2 |
+|---|---:|---:|---:|---:|
+| T1: 8kg 마지막20ms 평균 지지율 [%mg, A/B] | 0.000 / 0.056 | 0.210 / 11.151 | 0.210 / 11.151 | 0.210 / 11.151 |
+| T2: 8kg 놓기 최대1ms 토크 변화 [Nm, A/B] | 73.8 / 74.8 | 14.6 / 13.1 | 14.6 / 13.1 | 14.6 / 13.1 |
+| T3: 분석섭동28무충돌 조건 최대TCP [mm, A/B] | 17.43 / 15.13 | 5.28 / 17.26 | 5.28 / 17.26 | 5.28 / 17.26 |
+| T3: 40N 외력6개 포함 전체34조건 최대TCP [mm, A/B] | 22.73 / 17.17 | 14.78 / 45.65 | 14.78 / 45.65 | 14.78 / 45.65 |
+| T3: 같은28무충돌 조건 오감지 [A/B] | 177 / 248 | 4 / 7 | 6 / 9 | 6 / 9 |
+| T4: 질량·COM 격자 포화 조건 [189조건/방식, A/B] | 0 / 0 | 2 / 0 | 2 / 0 | 2 / 0 |
+| T4: 격자 최대 놓기 힘 [mg, A/B] | 2.036 / 9.882 | 1.610 / 1.036 | 1.610 / 1.036 | 1.610 / 1.036 |
+| T5: 8kg TCP RMS/최대 [mm, A] | 6.14 / 14.00 | 1.17 / 3.91 | 1.17 / 3.91 | 1.17 / 3.91 |
+| T5: 8kg TCP RMS/최대 [mm, B] | 7.04 / 13.18 | 3.23 / 8.44 | 3.23 / 8.44 | 3.23 / 8.44 |
+| T6: 180충돌 중 검출 [A/B] | 88 / 78 | 94 / 91 | 111 / 111 | 111 / 111 |
 
-## 영상과 재현
+- T1/T2/T5는 동일8kg·COM·무충돌 조건의 보존된 분석 trace와 공식 회귀를 구분해 보고한다. 평균 지지율 자체는 공식 evaluator가 출력하는 항목이 아니다.
+- T3는 잡음/마찰/강성 **분석섭동**이며 공식 수치가 아니다. T4/T6는 동일385조건/방식이다. 기준770회는 새 실행, v1/R1 격자는 exact-source 과거 기록이다.
+- 기준의 T6에는 기존경보/구분불가가 A49/B60건 더 있다. 이를 빼고 기준의 놓침43/42건만 비교하면 안 된다. R1/R2는 각각69/180회를 놓친다.
 
-기존 `01`--`04` 영상은 v1이다. 새 `05`/`06`은 3.7 kg 운반 중 15 N의 baseline/v1/v2 3-way 비교이며 `v2_manifest`로 대응 관계를 공개한다. 내부 trace는 그래프 전용 분석값이며 학습에 사용하지 않았다.
+## 무엇을 시도했고 왜 유지했나
 
-## 실행과 제출 파일명 overlay
+- **P0:** 접촉은 놓기50–57ms 전이지만 반발·접촉 손실 때문에 지지가 이어지지 않았다. 측정 기반 ±0.689/±2.679mm probe를 포함한40회 모두 G4 미달이다. 지속 지지에 필요한 실현 가능한 변위·속도는 식별하지 못했다. 경계값은 관측/보수적 설계값이지 실측 최적값이 아니다.
+- **C1 렌치 계획·C2 SE(3) 방향별 순응:** force schedule, wrench dual, 탄성 모터 lift를 구현했다. G4와 TCP/오감지 비용 관문을 넘지 못했다. A의 순수 법선 병진에서는 Euclidean/SE(3)가 수치적으로 같고 계산만 늘었다.
+- **C3 NRIC·DOB:** 독립 명목 입력 queue와 탄성 nominal 적분, 미분 없는 motor DOB를 구현했다. NRIC의 국소 불안정성/오감지, DOB의 추적·토크 계단 회귀로 탈락했다.
+- **C4 P-APD·P-IDC:** 실제속도/설계속도를 분리한 pRNE로 링크 법칙을 만들고 탄성 모터 기준에 올렸다. B의 무거운 하중 추적은 개선됐지만 경량 최대오차/놓기 토크 변화 비용 때문에 탈락했다.
+- **C5 pRNE:** 직접 유도한 metric-compatible C의 Mdot=C+Cᵀ 오차는 최대3.89e-10이다. 그러나 정상 잔차는 거의 그대로다. 균형 development에서 R1·pRNE+새 ridge·matched ridge는 A/B 각각15/24 검출, pRNE 단독은11/24다. 단독은 ridge도 끄므로 손실 원인을 pRNE만으로 돌리지 않는다.
+- **C6 보간:** 7차/S-curve/SO(3)+R³의 조기 도착·dwell을 구현했지만 원래 궤적 대비 TCP 비용과 다른 관문을 넘지 못했다.
 
-아래 명령은 키트 작업 사본의 `.venv`를 사용하고 외부 `PYTHONPATH`를 제거한다. 제출 파일은 `my_servo.py`, `my_torque.py`, `my_detector.py`이며 검증기는 이를 기본 이름 `servo_controller.py`, `torque_controller.py`, `collision_detector.py`로 복사한 격리 overlay에서 실행한다.
+300개의 탄성 관절·1ms ZOH·명령/JTS 지연 국소 분석을 보존했다. protocol-radius 통과222/300과 strict 안정190/300을 구분한다. 이는 공통 R1 물리점의 고정모드 분석이며 전역/하이브리드 안정성·수동성 증명이 아니다.
 
-```bash
-env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -c "import numpy, mujoco; print(numpy.__version__, mujoco.__version__)"
-env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python tools/validate_submission.py --prefix my --out results/v2_submission_check
-env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python tools/evaluate_checked.py --ctrl my_servo --detector my_detector --out results/evaluation_v2_A.txt
-env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python tools/evaluate_checked.py --ctrl my_torque --detector my_detector --out results/evaluation_v2_B.txt
-```
+## 결과·설명
 
-깨끗한 data collection은 MuJoCo가 있는 공식 `.venv`에서 수행하고, fitting만 NumPy 전용 `.venv-train`에서 offline으로 수행한다. 공식/holdout을 다시 학습에 넣지 않는다. 같은 saved data/manifest, script와 seed로 byte-identical model JSON 재학습을 검증했다. 새 collection부터의 end-to-end byte 비교는 미실행이며 수치 동일성을 보장하지 않는다. 새 manifest의 host telemetry와 `data_sha256`도 전체 model JSON hash를 바꿀 수 있다. 아래는 별도 재현 환경의 준비 예시이며 이번 작업에서 공식 `.venv`의 패키지를 추가하지 않았다.
+- [최종 R2 보고서](docs/R2_RESULTS.md) · [발표 PDF](results/presentation.pdf)
+- [요구사항 판정](docs/REQUIREMENTS_AUDIT.md)
+- [방법 자체 유도·적용 경계](docs/R2_METHODS.md) · [NRIC/DOB/APD/IDC 탄성 변형](docs/R2_ROBUST_DERIVATION.md)
+- [직접 확인한 문헌과 사실/추론](docs/LITERATURE.md)
+- [사전 protocol](results/v2_protocol/PROTOCOL_R2.json) · [동결](results/v2_protocol/R2_FREEZE.json) · [채택 판정](results/v2_protocol/R2_ADOPTION.json)
+- [새 holdout](results/v2_protocol/R2_HOLDOUT.json) · [마지막 공식 회귀](results/v2_protocol/R2_OFFICIAL_REGRESSION.json)
+- [서보 4열 비교 영상](artifacts/media/07_r2_servo_comparison.mp4) · [토크 비교 영상](artifacts/media/08_r2_torque_comparison.mp4)
+- [재실행/환경](report/REPRODUCE.md) · [전체 파일 SHA256](artifacts/SHA256SUMS)
 
-```bash
-env -u PYTHONPATH python3.12 -m venv --without-pip .venv-train
-env -u PYTHONPATH pip3 --python .venv-train/bin/python install numpy==2.5.4
-: "${V2_EVIDENCE:?set an external private evidence directory}"
-env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python tools/v2_collect.py --out "$V2_EVIDENCE/learning-data"
-env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv-train/bin/python tools/v2_train.py --data-dir "$V2_EVIDENCE/learning-data" --out "$V2_EVIDENCE/model-reproduced.json" --seed 369401
-```
+영상은 기준/v1/R1/R2 네 열의 두 비공식 시나리오이며 방향은 A +y, B -x다. R2=R1일 때 같은 소스라는 표시를 한다. 선정이나 새로운 비밀 평가로 사용하지 않는다. 원자료/교재 문장·그림·가이드·키트 코드는 배포하지 않는다.
 
-최종 보고서 생성은 최종 JSON과 여섯 private NPZ trace가 모두 있을 때만 수행한다.
+## 제출과 한계
 
-```bash
-env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python tools/v2_report.py --trace-dir "${V2_EVIDENCE:?set private evidence root}/traces"
-```
+제출 진입점은 self-contained `my_servo.py`, `my_torque.py`, `my_detector.py`다. 런타임은 NumPy/MuJoCo와 제공된 공개 nominal/trajectory/config만 사용하며, 새 실험 모델 파일을 읽지 않는다. 학습은 별도 CPU 환경의 정상 관측 타깃으로 했고 공식 환경에 패키지를 추가하지 않았다. 원본 키트는 외부에 별도로 필요하다.
 
-## 연구 범위와 산출물
+G4는 마지막20ms 평균≥0.5mg·최소≥0.25mg·R1 대비 평균증가≥0.25mg·놓기 peak≤1.1mg이며 완화하지 않았다. 현재 미달이다. 무충돌 격자 포화, 분석섭동 오감지, 약한 힘 놓침, 1ms 최대 계산 목표도 해결하지 못했다. outlier와 실패 사례를 버리지 않았다. 실기 안전성이나 hard real-time을 보장하지 않는다.
 
-- [방법과 수식](docs/V2_METHODS.md), [결과와 누락 없는 집계](docs/V2_RESULTS.md), [음성 결과·시간 진단 자체 검토](docs/V2_REVIEW.md)
-- [요구사항 감사](docs/REQUIREMENTS_AUDIT.md), [문헌과 채택 범위](docs/LITERATURE.md)
-- [발표 구성](report/PRESENTATION_V2.md), [16쪽 PDF](results/presentation.pdf)
-- [최종 기계판독 판정](results/v2_protocol/FINAL_ASSESSMENT.json), [자체 작성 그림](results/figures/)
-- 실제 하드웨어, hard real-time, 확률적 일반화, safety stop을 주장하지 않는다. 내부 trace는 학습 입력이 아니다.
+공식 무충돌 오감지0은 모든 충돌행의 추가 오감지가0이라는 뜻이 아니다. B의8kg 운반 충돌행은 R1과 같은 추가 오감지 최대1회를 유지한다.
+
+이전 v2 표기는 R1 기록이다. [R1 README 원문 스냅샷](docs/R1_README.md)과 [R1 PDF](results/presentation_R1.pdf)를 보존한다. README 스냅샷의 상대 링크는 원래 저장소 루트 기준이다. 새 holdout은 새 조건 배치이지만 최종 구현은 과거 R1과 같다. 0.75kg 한 질량은 C5 학습과 겹치므로 전부 미학습 질량이라고 주장하지 않는다.

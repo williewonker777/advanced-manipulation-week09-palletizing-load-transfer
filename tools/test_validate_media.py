@@ -111,6 +111,58 @@ def fixture_v2(root):
     (media/'v2_manifest.json').write_text(json.dumps(data));return data
 
 
+def fixture_r2(root):
+    media=root/'artifacts/media';media.mkdir(parents=True,exist_ok=True)
+    source_names={
+        'servo_controller.py','torque_controller.py','collision_detector.py',
+        'v1_servo.py','v1_torque.py','v1_detector.py',
+        'r1_servo.py','r1_torque.py','r1_detector.py',
+        'my_servo.py','my_torque.py','my_detector.py','sim/runner.py',
+        'tools/render_r2_comparison.py',
+    }
+    hashes={}
+    for name in source_names:
+        path=root/name;path.parent.mkdir(parents=True,exist_ok=True)
+        alias=name.replace('my_','r1_') if name.startswith('my_') else name
+        content=alias.encode();path.write_bytes(content);hashes[name]=hashlib.sha256(content).hexdigest()
+    backend=dict(vendor='Mesa/X.org',renderer='llvmpipe (LLVM 20.1)',version='4.5 Mesa')
+    aliases={name:name.replace('my_','r1_') for name in ('my_servo.py','my_torque.py','my_detector.py')}
+    records=[]
+    for mode,prefix,force in (('servo','07',[0.,15.,0.]),('torque','08',[-15.,0.,0.])):
+        name=f'{prefix}_r2_{mode}_comparison';variants=V._r2_combinations(mode)
+        summaries={};checks={};references={}
+        for index,label in enumerate(V.R2_VARIANTS):
+            controller,detector=variants[label];delay=60. if label in ('r1','r2') else 80.-10.*index
+            summaries[label]=dict(false_alarm_rises_in_this_episode=0,
+                                  detect_delay_ms_raw=round(delay),alarm_before_collision=False)
+            checks[label]=dict(collision_outcome='detected',detect_delay_ms=delay,
+                               alarm_before_collision=False,false_alarms=0)
+            references[label]=dict(controller=controller,detector=detector,box_mass_kg=3.7,
+                box_com_m=[.02,-.01,.03],resource_guard_before_reference={'mem_available_gib':10},
+                resource_guard_before_collision={'mem_available_gib':10})
+        items=[]
+        for suffix,frames,fps in [('mp4',180,15.),('gif',96,8.)]:
+            path=media/f'{name}.{suffix}';path.write_bytes(f'{name}.{suffix}'.encode())
+            items.append(dict(file=path.relative_to(root).as_posix(),bytes=path.stat().st_size,
+                sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+                width=1280 if suffix=='mp4' else 640,height=720 if suffix=='mp4' else 360,
+                frame_count=frames,fps=fps,duration_s=12.))
+        records.append(dict(name=name,condition=dict(mode=mode,box_mass_kg=3.7,
+            box_com_m=[.02,-.01,.03],collision=dict(time_s=3.,force_n=force)),
+            variants={label:dict(controller=value[0],detector=value[1]) for label,value in variants.items()},
+            display_labels={'baseline':'기준','v1':'v1','r1':'R1','r2':'R2=R1 (동일 바이트)'},
+            plot_signals={'g4_support_normalized':'recorded f_table / (box_mass_kg * 9.81)'},
+            timewarp=[dict(simulation_start_s=0.,simulation_end_s=6.,playback_speed=.5)],
+            source_simulation_frames={label:6000 for label in V.R2_VARIANTS},rendered_frame_count=180,
+            software_gl=backend,episode_summary=summaries,evaluate_classification=checks,
+            reference_no_collision=references,artifacts=items))
+    data=dict(schema_version=3,
+        generation_command='env -u PYTHONPATH .venv/bin/python tools/render_r2_comparison.py --output-dir artifacts/media --raw-dir "$RAW_DIR" --ffmpeg ffmpeg',
+        software_gl=backend,source_hashes=hashes,identical_source_aliases=aliases,
+        scenarios=records,total_media_bytes=sum(x['bytes'] for row in records for x in row['artifacts']))
+    (media/'r2_manifest.json').write_text(json.dumps(data));return data
+
+
 class MediaValidationTests(unittest.TestCase):
     def test_valid_fixture_and_detects_changed_content(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -205,6 +257,37 @@ class MediaValidationTests(unittest.TestCase):
             result=V.validate_v2(root,'probe',fake_probe)
             self.assertTrue(any('physical condition mismatch' in x for x in result['errors']))
             self.assertTrue(any('module combination mismatch' in x for x in result['errors']))
+
+    def test_valid_r2_fixture_and_alias_tamper(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);data=fixture_r2(root)
+            self.assertEqual(V.validate_r2(root,'probe',fake_probe)['status'],'pass')
+            data['identical_source_aliases'].pop('my_detector.py')
+            (root/'artifacts/media/r2_manifest.json').write_text(json.dumps(data))
+            result=V.validate_r2(root,'probe',fake_probe)
+            self.assertTrue(any('alias declarations mismatch' in x for x in result['errors']))
+
+    def test_r2_rejects_wrong_direction_and_missing_g4_trace(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);data=fixture_r2(root)
+            data['scenarios'][1]['condition']['collision']['force_n']=[0.,15.,0.]
+            data['scenarios'][0]['plot_signals']={}
+            (root/'artifacts/media/r2_manifest.json').write_text(json.dumps(data))
+            result=V.validate_r2(root,'probe',fake_probe)
+            self.assertTrue(any('physical condition mismatch' in x for x in result['errors']))
+            self.assertTrue(any('G4/support-normalized' in x for x in result['errors']))
+
+    def test_validate_all_requires_r2_only_after_r2_protocol_or_manifest(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);media=root/'artifacts/media';media.mkdir(parents=True)
+            (media/'media_manifest.json').write_text('{}');(media/'v2_manifest.json').write_text('{}')
+            passed={'status':'pass','errors':[]}
+            with patch.object(V,'validate',return_value=passed),patch.object(V,'validate_v2',return_value=passed):
+                self.assertEqual(V.validate_all(root,'probe')['status'],'pass')
+                protocol=root/'results/v2_protocol/PROTOCOL_R2.json'
+                protocol.parent.mkdir(parents=True);protocol.write_text('{}')
+                result=V.validate_all(root,'probe')
+            self.assertTrue(any('r2_manifest.json is missing' in x for x in result['errors']))
 
 if __name__=='__main__': unittest.main()
 

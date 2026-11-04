@@ -152,3 +152,57 @@ sha256sum -c artifacts/SHA256SUMS
 Supplying --kit to the audit additionally checks for large verbatim Python
 blocks against a read-only original. The package excludes the kit, guide,
 contacts, machine paths, private workflow material, environments and raw logs.
+
+## R2: 제어·리그룹 2차 실험 재현 범위
+
+최종 R2 진입점은 보존한 R1과 byte-identical이다. 새25제어설정·pRNE의 음성 결과는 실험 파일로 남기고, 실패한 설정을 최종 진입점에 넣지 않았다. 기준/v1/R1/R2의 같은 수치는 독립 신규 구현 반복으로 세지 않는다. 최종 공개 검증 결과는 R2 보고서와 해당 JSON을 우선한다.
+
+### 환경과 입력
+
+- 공식 환경의 기존21패키지와 원본29파일, 작업 사본의 보호20파일을 유지했다. 공식 환경에는 패키지를 추가하지 않았다.
+- 모든 Python은 PYTHONPATH를 제거하고 bytecode 생성을 막는다. 작은 ridge 학습은 별도 CPU 환경에서만 한다.
+- 런타임은 문서화된 encoder/차분 속도/JTS/grip/reference/알려진 mass·COM/public nominal만 쓴다. 실제 table/tool 힘·링크각·센서 전 토크·잡음 seed/offset/drift를 제어 입력이나 학습 타깃으로 넣지 않는다.
+- 학습 파일은 t/x/y/active만 담는다. 사후 물리 로그는 별도 외부 디렉터리에 보관한다.
+- 실제 episode worker는1개, 전체 시뮬레이션≤4, MemAvailable≥6GiB, GPU 작업0이다. 다른 세션 프로세스를 조작하지 않는다.
+
+### 비공식 방법 재현
+
+원본 키트는 배포하지 않으므로, 별도의 로컬 작업 사본에 제공된 키트가 있어야 한다. 아래 PRIVATE_DIR는 공개 저장소 밖의 Git-ignored 위치다. 원본 자료나 sim/model 소스는 수정하지 않는다.
+
+```bash
+export R2_PRIVATE_EVIDENCE_ROOT="$PRIVATE_DIR"
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  .venv/bin/python tools/r2_p0.py --raw-dir "$PRIVATE_DIR/p0" --public-out "$PRIVATE_DIR/p0_summary.json"
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 \
+  .venv/bin/python tools/r2_p0.py --raw-dir "$PRIVATE_DIR/p0" --snapshots-only
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 \
+  .venv/bin/python tools/r2_stability.py --private-dir "$PRIVATE_DIR/p0" --output "$PRIVATE_DIR/stability.json"
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 \
+  .venv/bin/python -m unittest tools.test_r2_prne tools.test_r2_contact tools.test_r2_robust
+```
+
+후보별 사전 설정은 PROTOCOL_R2.json, 실행 factory는 tools/r2_study.py에 있다. pRNE+ridge는 새 정상 모델·protocol·source SHA가 없으면 실행을 거부한다. matched ridge는 동일 정상 관측을 R1 관측기에 재생한 기여 분리용이며 새 채택 fallback이 아니다. 분석섭동은 private instance harness에 의존한다. 공개 코드만으로 그 private harness를 재구성했다고 주장하지 않으며, 원본 runner 대비8쌍의 nominal parity와 전체272개 결과를 함께 보존한다.
+
+### 동결·holdout·공식 순서
+
+사전 protocol 커밋 → 무충돌 검증/정상 보정 → 균형 development → source/weights 동결 → 새 holdout1회 → 원본 공식 평가의 순서다. source 동결은53파일이며, opening marker는 source와 로컬 Git object를 확인한 다음 RNG보다 먼저 배타적으로 만든다.
+
+원래 실험의 holdout은 이미 열었다. 같은 seed를 다시 실행해도 독립 holdout이 되지 않는다. 새로운 선정 연구라면 별도 protocol·새 seed·새 동결을 먼저 만들어야 한다. 보존된 FREEZE의 source commit은 작업 저장소 이력의 기록이므로 공개 staging의 Git object와 같다고 가정하지 않는다. 실파일 SHA와 출처를 확인하고 자기 실험의 로컬 동결을 따로 만든다. 공식 결과를 본 뒤 같은 후보를 고쳐 재승격하지 않는다.
+
+이번 마지막 공식 회귀는 기본 제출 파일명으로 바꾼 임시 키트에서 A/B 한 번씩 총58 episode를 실행했다. 원본 evaluate.py의 모든 비시간 셀이 R1과 일치했다. 공식 최대 계산시간이나 실기 안전성까지 검증했다는 뜻은 아니다. 이번 배치 뒤에는 추가 공식 평가를 실행하지 않았다.
+
+### 영상·공개 검사
+
+영상은 학습/선정/holdout과 별개인 비공식 예시다. 이미 있는 ffmpeg·ffprobe 실행파일을 지정한다. Mesa software GL이 실제 vendor/renderer 문자열로 확인되지 않으면 렌더링을 거부한다.
+
+```bash
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 \
+  MUJOCO_GL=glfw LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe __GLX_VENDOR_LIBRARY_NAME=mesa \
+  .venv/bin/python tools/render_r2_comparison.py --raw-dir "$PRIVATE_DIR/media" --ffmpeg "$FFMPEG"
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 \
+  .venv/bin/python tools/validate_media.py --root publish/repo --ffprobe "$FFPROBE"
+env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 \
+  .venv/bin/python tools/audit_public.py publish/repo --require-media --ffprobe "$FFPROBE"
+```
+
+공개 검사는 source/자료/연락처/경로·매체 메타데이터·SHA·8개 MP4/GIF 쌍을 확인한다. Python 행렬곱 @는 토큰으로 구분하지만 문자열·주석의 실제 연락처는 계속 거부한다. 최종 push는 별도 승인 전까지 실행하지 않는다.

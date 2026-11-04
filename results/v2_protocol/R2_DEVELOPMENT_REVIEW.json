@@ -1,0 +1,128 @@
+{
+  "schema": "R2_DEVELOPMENT_REVIEW.v1",
+  "protocol_sha256": "4350e03d668ecb5748d7237c025c867ebcf3283cb9fd5b0caf6070244c83a27c",
+  "official_used_for_selection": false,
+  "holdout_opened": false,
+  "control_eligible": [],
+  "observer_results": [
+    {
+      "id": "C5_prne_only",
+      "development": [
+        {
+          "architecture": "servo",
+          "collisions": 24,
+          "R1_detected": 15,
+          "detected": 11,
+          "missed": 13,
+          "lost_R1": 4,
+          "false_rises_R1": 0,
+          "false_rises": 0,
+          "matched_ridge_detected": 15,
+          "p99_us": 692.6342000000001
+        },
+        {
+          "architecture": "torque",
+          "collisions": 24,
+          "R1_detected": 15,
+          "detected": 11,
+          "missed": 13,
+          "lost_R1": 4,
+          "false_rises_R1": 0,
+          "false_rises": 0,
+          "matched_ridge_detected": 15,
+          "p99_us": 704.0208000000003
+        }
+      ],
+      "detected_gain": -8,
+      "normal_RMS_worst_ratio": 1.000025631782912,
+      "gates": {
+        "normal": true,
+        "no_lost_or_extra_false": false,
+        "benefit": false,
+        "p99": true,
+        "not_diagnostic": true
+      },
+      "eligible": false
+    },
+    {
+      "id": "C5_prne_plus_ridge",
+      "development": [
+        {
+          "architecture": "servo",
+          "collisions": 24,
+          "R1_detected": 15,
+          "detected": 15,
+          "missed": 9,
+          "lost_R1": 0,
+          "false_rises_R1": 0,
+          "false_rises": 0,
+          "matched_ridge_detected": 15,
+          "p99_us": 687.4856000000009
+        },
+        {
+          "architecture": "torque",
+          "collisions": 24,
+          "R1_detected": 15,
+          "detected": 15,
+          "missed": 9,
+          "lost_R1": 0,
+          "false_rises_R1": 0,
+          "false_rises": 0,
+          "matched_ridge_detected": 15,
+          "p99_us": 701.2501000000007
+        }
+      ],
+      "detected_gain": 0,
+      "normal_RMS_worst_ratio": 1.000025631782912,
+      "gates": {
+        "normal": true,
+        "no_lost_or_extra_false": true,
+        "benefit": false,
+        "p99": true,
+        "not_diagnostic": true
+      },
+      "eligible": false
+    },
+    {
+      "id": "C5_ridge_only_matched",
+      "development": [
+        {
+          "architecture": "servo",
+          "collisions": 24,
+          "R1_detected": 15,
+          "detected": 15,
+          "missed": 9,
+          "lost_R1": 0,
+          "false_rises_R1": 0,
+          "false_rises": 0,
+          "matched_ridge_detected": 15,
+          "p99_us": 279.1450000000004
+        },
+        {
+          "architecture": "torque",
+          "collisions": 24,
+          "R1_detected": 15,
+          "detected": 15,
+          "missed": 9,
+          "lost_R1": 0,
+          "false_rises_R1": 0,
+          "false_rises": 0,
+          "matched_ridge_detected": 15,
+          "p99_us": 298.75020000000006
+        }
+      ],
+      "detected_gain": 0,
+      "normal_RMS_worst_ratio": 1.0,
+      "gates": {
+        "normal": false,
+        "no_lost_or_extra_false": true,
+        "benefit": false,
+        "p99": true,
+        "not_diagnostic": false
+      },
+      "eligible": false
+    }
+  ],
+  "no_threshold_or_gain_tuning_after_collision": true,
+  "matched_ablation_note": "Matched new ridge is attribution-only, not an additional promotable fallback"
+}

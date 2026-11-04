@@ -1,0 +1,202 @@
+{
+  "schema": "R2_REPORT_CURATION.v1",
+  "conclusion": "이 유한 시뮬레이션에서 사전 등록한 새 제어 25개 구성과 C5 관측기 변형은 모두 엄격 게이트를 통과하지 못했다. 방법 계열 자체가 불가능하다는 뜻은 아니다. 최종 R2는 R1 제어기와 감지기의 exact-source alias이며, 새 후보를 억지로 채택하지 않았다.",
+  "p0_findings": [
+    "후보 실행 전 baseline 8회와 probe 32회를 순차 측정했다.",
+    "40회 모두 지속 G4를 통과하지 못해 순간 force crossing을 하중 이양으로 세지 않았다.",
+    "관측 경계는 normal 0.689439/2.678555 mm, 속도 20.3744 mm/s, 가속도 0.254511 m/s^2이며 측정 최적값으로 주장하지 않는다.",
+    "최대 첫 접촉-힘 손실 34 ms와 보수적 시작 3.809 s를 protocol에 고정했다."
+  ],
+  "holdout_findings": [
+    "동결 뒤 marker batch_attempt=1로 152행을 한 번만 열었고 이후 튜닝하지 않았다.",
+    "최종 R1 alias는 A/B 각각 20 detected, 10 missed였다. false rise는 A 0, B offset 1이었다.",
+    "이미 탈락한 C5 pRNE+ridge도 A/B 각각 20/10으로 감지 이득이 없었고 false rise는 A 4(충돌 2, offset 2), B 2(offset 2)였다.",
+    "holdout의 0.75 kg은 C5 학습 질량 하나와 겹친다. COM·시각·힘·방향과 seed는 새 조건이지만 네 질량 모두 unseen이라고 주장하지 않는다."
+  ],
+  "official_findings": [
+    "holdout 뒤 unchanged evaluate.py를 default 이름 overlay에서 A/B 각각 한 번 실행했다.",
+    "0/4/8 kg 무충돌 control은 추가 오감지 0, 포화 0 %, 발산 없음으로 R1과 같은 셀을 유지했다. B의 8 kg 운반 collision 행 false max 1회도 R1과 같다.",
+    "8 kg 운반은 A/B에서 15 N 45/43 ms, 10 N 62/56 ms를 유지했다.",
+    "집기 10/15 N과 놓기 10 N의 기존 미감지는 남았고, 공식 노출 뒤 수정하거나 재승격하지 않았다."
+  ],
+  "lie_group_usage": [
+    {
+      "method": "C1 wrench planning / power-dual mapping",
+      "section": "Lie Group Robotics §2.2; 접촉점·탄성 lift는 자체 유도",
+      "formula": "J_b=Q J_w, W_b=Q W_w, J_b^T W_b=J_w^T W_w; theta_d=q_d+K_e^-1 tau_d",
+      "plant_adaptation": "접촉점 Jacobian에 원점 이동을 한 번만 포함하고 알려진 COM 작용선·COP 제한을 썼다. A/B 탄성 모터 lift와 기존 tracker, 1 ms ZOH·한 주기 지연을 분석했다. elastic joint + 1 ms ZOH + one-cycle delay의 유한 국소 검사이지 전역 보장은 아니다.",
+      "euclidean_comparison": "비리그룹 R1 대비 4설정 모두 A/B G4 0/4, TCP·오감지·토크 비용 관문 실패. 좌표변환만 바꾼 별도 ablation은 없어 효과를 Lie 기하에만 귀속하지 않는다.",
+      "decision": "reject",
+      "source_keys": [
+        "validation_review",
+        "stability_compact",
+        "adoption"
+      ]
+    },
+    {
+      "method": "C2 SE(3) normal coordinate",
+      "section": "Lie Group Robotics §§2.2, 6.1; Lie Group Robot Control §10.1.3",
+      "formula": "E=T_des^-1 T, xi=log(E), e=-n^T xi, normal covector=J_r(xi)^-T n",
+      "plant_adaptation": "elastic joint의 motor reference로 올리고 1 ms exact ZOH, one-cycle delay, measured displacement/speed/acceleration projection을 포함했다.",
+      "euclidean_comparison": "A: Euclidean/SE(3) max RMS 차이 4.1e-12/2.3e-13 mm, FA 0/0이지만 p99 269/293→472/458 us. B: RMS 차이 최대 0.222/0.219 mm, FA 10→11 및 2→3, 비용·국소 안정성 gate 실패.",
+      "decision": "reject",
+      "source_keys": [
+        "lie_comparison",
+        "validation_review",
+        "stability_compact"
+      ]
+    },
+    {
+      "method": "C3 NRIC / motor DOB",
+      "section": "Lie Group Robot Control §10.4(NRIC); DOB 모터식·정규화 보상은 자체 유도",
+      "formula": "Delta tau=r tanh((1+gamma^-2)s); d_hat=z+L B v_m",
+      "plant_adaptation": "명목 탄성 플랜트에 독립 무보상 queue와 implicit midpoint를 쓰고 motor DOB를 샘플 정확 적분했다. 실제 Drive 내부값 대신 허용 신호·자체 queue로 재생하며 1 ms ZOH·명령/JTS 지연을 포함했다. elastic joint + 1 ms ZOH + one-cycle delay의 유한 국소 검사이지 전역 보장은 아니다.",
+      "euclidean_comparison": "R1 대비 NRIC는 오감지·국소 불안정성, A DOB는 최대 TCP 약17–18% 감소에도 놓기 torque-step 최악+5.42–8.54%로 탈락. SE(3) 오차를 쓰지 않으므로 독립 Lie-group 이득으로 해석하지 않는다.",
+      "decision": "reject",
+      "source_keys": [
+        "validation_review",
+        "stability_compact",
+        "adoption"
+      ]
+    },
+    {
+      "method": "C4 P-APD / P-IDC with pRNE action",
+      "section": "Lie Group Robot Control §§10.1.3,10.1.6; Lie Group Robotics 목차 §8.3",
+      "formula": "tau_d=M qdd_r+C(q,v_actual) qd_r+g+K_r(qd_r-v); theta_d=q_d+K_e^-1 tau_d",
+      "plant_adaptation": "설계속도와 실제속도를 분리한 자체 pRNE action, mass-scaled gain·load blend·clip·anti-windup·탄성 motor lift를 썼다. P-APD는 자체 변형 이름이며 강체 수동성 정리를 전용하지 않고 1 ms·지연 국소 분석을 수행했다. elastic joint + 1 ms ZOH + one-cycle delay의 유한 국소 검사이지 전역 보장은 아니다.",
+      "euclidean_comparison": "B P-IDC(rate4.5,damping1)는 7.55kg RMS3.140→1.975mm, 최대8.060→4.382mm지만 경량 최대+9.65%, 놓기 step 최악+58.9%로 탈락. 제어 법칙 전체 비교이며 pRNE/기하 단독 효과는 분리하지 않았다.",
+      "decision": "reject",
+      "source_keys": [
+        "validation_review",
+        "stability_compact",
+        "adoption"
+      ]
+    },
+    {
+      "method": "C5 metric-compatible pRNE",
+      "section": "Lie Group Robotics §8.3; 자체 유도는 R2_METHODS의 C5 절",
+      "formula": "Mdot(q,v)=C(q,v)+C(q,v)^T; C(q,v)^T u는 reverse VJP recursion으로 계산",
+      "plant_adaptation": "elastic plant-controller는 R1 그대로이고 1 ms ZOH와 one-cycle delay 물리 폐루프 변경이 없어 C5-specific pole analysis는 N/A다. math·normal·collision·timing·156개 physical parity를 각각 검사했으며 강체 수동성 보장을 옮기지 않았다.",
+      "euclidean_comparison": "matched new ridge와 pRNE+ridge는 개발 A/B 모두 15/24로 isolated gain 0. pRNE-only 11/24는 ridge 제거가 함께 있어 pRNE 단독 효과로 귀속하지 않는다. reverse VJP helper는 같은 수학 출력에서 median 825→178 us였지만 R1 observer 대비 속도 향상은 아니다.",
+      "decision": "reject",
+      "source_keys": [
+        "prne_math",
+        "allocation_comparison",
+        "development",
+        "development_review"
+      ]
+    },
+    {
+      "method": "C6 SO(3)+R3 separated interpolation",
+      "section": "Lie Group Robot Control §§9.1,9.3; Lie Group Robotics §6.1 및 SO(3)+R3 자체 유도",
+      "formula": "R(s)=R0 exp(s log(R0^T R1)); p(s)=p0+s(p1-p0), s는 7차 또는 S-curve",
+      "plant_adaptation": "elastic joint reference와 기존 clipping을 유지하고 1 ms ZOH 및 one-cycle delay가 든 폐루프 국소 고유값을 다시 계산했다.",
+      "euclidean_comparison": "고차 보간과 SO(3)+R3 후보는 무충돌 false rise, 포화, TCP 비용, 국소 radius 또는 G4 gate를 통과하지 못했다.",
+      "decision": "reject",
+      "source_keys": [
+        "validation_review",
+        "stability_compact",
+        "adoption"
+      ]
+    }
+  ],
+  "misses_and_outliers": {
+    "summary": [
+      "T1~T6은 R1보다 개선되지 않아 모두 미달로 기록했다.",
+      "D4 baseline의 masked를 버리지 않고 A 88/43/49, B 78/42/60 detected/missed/masked로 분리했다.",
+      "R1과 최종 R2 alias의 D4는 A/B 모두 111 detected, 69 missed이며 독립 R2 재실행으로 세지 않는다.",
+      "C5 pRNE+ridge holdout은 감지 이득 0에 추가 false rise가 있어 음성 결과로 유지했다."
+    ],
+    "unmet": [
+      "T1: 마지막 20 ms 평균 지지율 50 % 목표 미달(A 0.2098 %, B 11.1507 %).",
+      "T2: 놓기 토크 계단은 R1과 동일해 추가 개선 없음.",
+      "T3: 분석 섭동 악화와 false rise가 줄지 않음.",
+      "T4: A 포화 2/189 및 peak 1.6098 mg가 남아 있음.",
+      "T5: TCP RMS/최대는 R1과 동일하며 B 3.232/8.444 mm가 남아 있음.",
+      "T6: D4 A/B 각각 69회 놓침과 공식 집기·놓기 미감지가 남아 있음."
+    ],
+    "outliers_retained": [
+      "후보 안정성 300건 중 protocol-radius 통과 222건, strict 190건만 통과했다.",
+      "R1 비교 12건 중 B 7.7 kg, 2.5 s의 spectral radius 1.00117265 실패를 유지했다.",
+      "최종 alias timing 1,224,000 paired cycles에서 A/B 1/5회의 1 ms 초과를 모두 유지했다. 최대 wall/same-cycle CPU는 A 5576.324/5573.779 us, B 6016.548/6014.207 us다.",
+      "baseline D4 collision의 masked 109건과 모든 false rise를 missed와 분리해 보존했다.",
+      "공개본 full stability JSON은 공백만 제거해 11,964,321→6,540,838 bytes로 줄였으며 300건의 모든 case·pole·outlier를 유지했다. 작업 사본 원본은 바꾸지 않았다."
+    ]
+  },
+  "verification": {
+    "executed": [
+      "작업 사본 unittest 238개와 pure function 18개(P0 stability 7, matched-ridge 3, detector 8) 통과. 이 함수 검사에서 episode는 실행하지 않았다.",
+      "Python 138파일 syntax 검사와 production AST 3파일 통과.",
+      "freeze 53파일 불변 검증 통과.",
+      "pristine-kit+공개 overlay unittest 219개, pure function 18개, 보호 파일 20개 검증 통과. overlay에서 공식 평가는 재실행하지 않았다.",
+      "pRNE 9개 유한 표본의 Mdot=C+C^T, VJP, bias 항등식 protocol gate 통과.",
+      "탄성 관절+1 ms ZOH+one-cycle delay 국소 분석 300건과 R1 비교 12건을 전부 보존.",
+      "동결 뒤 holdout 152행을 한 batch로 실행하고 마지막 공식 A/B 58 episode를 완료.",
+      "최종 R1/R2 alias 204행의 1,224,000 paired cycles를 검토하고 1 ms 초과 6회를 모두 보존.",
+      "원본 tree 29파일, 보호 파일 20개, 공식 환경 package 21개가 불변임을 확인.",
+      "공개 staging 399파일의 audit_public(kit·guide·ffprobe·require-media·SHA), published-byte report hash 재결합/검사를 통과했다. 최종 파일별 byte SHA는 artifacts/SHA256SUMS에 기록한다.",
+      "validate_media legacy/v2/R2 통과, media 16개 7,641,724 bytes 통과, 복사된 public report --check 통과."
+    ],
+    "not_executed": [
+      "실제 로봇, 안전 반응, hidden 조건, Windows 환경은 검증하지 않았다.",
+      "유한 국소 분석은 비선형·하이브리드 전역 안정성 또는 확률 보장이 아니다."
+    ],
+    "resources": [
+      "Python은 PYTHONPATH를 제거한 환경에서 실행했다.",
+      "작은 모델과 분석은 CPU로 수행했고 GPU 작업은 0개였다.",
+      "소유 simulation worker는 1개였고 다른 세션 프로세스에 신호를 보내지 않았다.",
+      "공식 실행 중 최소 가용 RAM은 21.509 GiB였다.",
+      "원격 작업은 0회이며 결과는 로컬 staging only, 미게시 상태다.",
+      "R2 four-way 영상은 2쌍·16 illustrative episode이며 Mesa llvmpipe를 사용했다.",
+      "공개 상태는 로컬 staging only이고 push 승인은 없으며 게시하지 않았다."
+    ]
+  },
+  "changed_paths": [
+    "experiments/r2_*.py",
+    "tools/r2_*.py",
+    "models/r2_*.json",
+    "results/v2_protocol/R2_*.json",
+    "docs/R2_METHODS.md",
+    "docs/R2_ROBUST_DERIVATION.md",
+    "docs/R2_RESULTS.md",
+    "report/PRESENTATION_R2.md",
+    "results/presentation.pdf"
+  ],
+  "limitations": [
+    "P0는 PARTIAL이다. 40회에서 지속 G4를 만드는 feasible displacement/speed를 식별하지 못했고 경계는 관측·보수 선택이지 측정 최적값이 아니다.",
+    "holdout 0.75 kg은 C5 학습 질량 하나와 겹친다. 새 joint condition과 seed만으로 모든 질량 unseen 일반화를 주장하지 않는다.",
+    "pRNE-only의 4회/architecture 감지 손실은 ridge 제거가 함께 있어 pRNE에만 귀속할 수 없다. matched ridge와 pRNE+ridge의 15/24 대 15/24가 isolated zero effect다.",
+    "안정성은 강제 R1 물리점·고정 접촉 모드의 유한 국소 선형화이며 수동성·전역·hybrid 보장이 아니다.",
+    "all 25 configurations rejected는 이 유한 실험의 결론이며 NRIC, DOB, P-APD, P-IDC 또는 Lie-group 방법 계열이 일반적으로 불가능하다는 증명이 아니다.",
+    "pRNE timing 비용은 shared core를 중복 계산한 이 독립 observer 구현의 비용이다. 알고리즘에 본질적으로 피할 수 없는 비용이라고 주장하지 않는다.",
+    "최악 timing cycle의 CPU와 wall이 거의 같아 interpreter/allocation/GC 작업과 양립하지만 원인을 유일하게 확정하지 않는다. 과거 R1 GC 상관은 fresh R2 원인 증명이 아니다.",
+    "R2 final은 R1 exact-source alias다. common reference와 v1/R1 D4 행을 fresh R2 독립 재실행으로 주장하지 않는다."
+  ],
+  "literature_updates": [
+    {
+      "title": "Nonlinear robust internal loop compensator for robust control of robotic manipulators",
+      "url": "https://pure.kaist.ac.kr/en/publications/nonlinear-robust-internal-loop-compensator-for-robust-control-of-/",
+      "verified": true
+    },
+    {
+      "title": "Bringing nonlinear H-infinity optimality to robot controllers",
+      "url": "https://pure.kaist.ac.kr/en/publications/bringing-nonlinear-h-optimality-to-robot-controllers/",
+      "verified": true
+    },
+    {
+      "title": "Contact-responsive high-gain robot motion controllers using a constrained disturbance observer",
+      "url": "https://link.springer.com/article/10.1007/s11370-026-00744-z",
+      "verified": true
+    },
+    {
+      "title": "Linear Model Predictive Control of 6-DOF ROV Using NRIC",
+      "url": "https://jkros.org/xml/39598/39598.pdf",
+      "verified": true
+    },
+    {
+      "title": "Sliding Mode Momentum Observers for Estimation of External Torques and Joint Acceleration",
+      "url": "https://elib.dlr.de/127719/1/root.pdf",
+      "verified": true
+    }
+  ]
+}

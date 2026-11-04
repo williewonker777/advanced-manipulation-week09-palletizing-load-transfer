@@ -12,7 +12,9 @@ import json
 from pathlib import Path, PurePosixPath
 import re
 import shutil
+import io
 import subprocess
+import tokenize
 
 DENIED_PARTS = {"sim", "model", ".venv", "__pycache__", "evidence", ".git"}
 DENIED_NAMES = {"run.py", "evaluate.py", "install.py", "servo_controller.py",
@@ -23,9 +25,11 @@ MEDIA_ROOT = PurePosixPath("artifacts/media")
 MEDIA_TOTAL_LIMIT = 30_000_000
 MEDIA_MANIFESTS = {"artifacts/media/media_manifest.json",
                    "artifacts/media/v2_manifest.json"}
+R2_MEDIA_MANIFEST = "artifacts/media/r2_manifest.json"
 MEDIA_STEMS = ("01_servo_no_collision", "02_torque_no_collision",
                "03_servo_place_collision", "04_servo_transport_collision",
                "05_v2_servo_transport_collision", "06_v2_torque_transport_collision")
+R2_MEDIA_STEMS = ("07_r2_servo_comparison", "08_r2_torque_comparison")
 ALLOWED_MEDIA_TAGS = {"encoder", "language", "handler_name", "vendor_id", "major_brand",
                       "minor_version", "compatible_brands"}
 # The course interface signature is an API contract, not prose redistribution.
@@ -61,6 +65,38 @@ def text_errors(text):
                 "private key": "-----BEGIN " + r"(?:RSA |OPENSSH |EC )?PRIVATE KEY-----",
                 "API credential": r"sk-" + r"(?:proj-)?[A-Za-z0-9_-]{24,}"}
     return [label for label, pattern in patterns.items() if re.search(pattern, text)]
+
+
+def python_text_errors(text):
+    """Scan Python while excluding only tokenized matrix-multiply operators.
+
+    E-mail-like text in strings and comments remains untouched and detectable.
+    If tokenization cannot prove operator locations, fail closed by scanning the
+    original text.
+    """
+    try:
+        tokens = list(tokenize.generate_tokens(io.StringIO(text).readline))
+    except (tokenize.TokenError, IndentationError, SyntaxError):
+        return text_errors(text)
+    if any(token.type == tokenize.ERRORTOKEN and not token.string.isspace()
+           for token in tokens):
+        return text_errors(text)
+    lines = text.splitlines(keepends=True)
+    offsets, total = [], 0
+    for line in lines:
+        offsets.append(total)
+        total += len(line)
+    if not lines or (text and not text.endswith(("\n", "\r"))):
+        offsets.append(total)
+    masked = list(text)
+    for token in tokens:
+        if token.type == tokenize.OP and token.string == "@":
+            row, column = token.start
+            if 1 <= row <= len(offsets):
+                index = offsets[row - 1] + column
+                if 0 <= index < len(masked) and masked[index] == "@":
+                    masked[index] = " "
+    return text_errors("".join(masked))
 
 
 def binary_errors(data, include_email=True, compressed_payload=False):
@@ -268,7 +304,8 @@ def audit(root, kit=None, guide=None, ffprobe=None, require_checksums=True, requ
             except UnicodeError:
                 errors.append(f"invalid UTF-8 text: {name}")
             else:
-                errors.extend(f"{name}: {error}" for error in text_errors(text))
+                scanner = python_text_errors if path.suffix == ".py" else text_errors
+                errors.extend(f"{name}: {error}" for error in scanner(text))
         else:
             raw = path.read_bytes()
             is_media = path.suffix.lower() in MEDIA_SUFFIXES
@@ -291,18 +328,25 @@ def audit(root, kit=None, guide=None, ffprobe=None, require_checksums=True, requ
             if not tag_errors:
                 media_metadata_checked_count += 1
             errors.extend(f"{name}: {error}" for error in tag_errors)
-        elif PurePosixPath(name).is_relative_to(MEDIA_ROOT) and name not in MEDIA_MANIFESTS:
+        elif (PurePosixPath(name).is_relative_to(MEDIA_ROOT) and
+              name not in MEDIA_MANIFESTS | {R2_MEDIA_MANIFEST}):
             errors.append(f"unexpected file in media directory: {name}")
     media_bytes = sum(p.stat().st_size for p in media)
     if media_bytes > MEDIA_TOTAL_LIMIT:
         errors.append("media total exceeds 30,000,000 bytes")
     if require_media:
         names = {p.relative_to(root).as_posix() for p in media}
+        r2_required = ((root / "results/v2_protocol/PROTOCOL_R2.json").is_file() or
+                       (root / R2_MEDIA_MANIFEST).is_file())
+        stems = MEDIA_STEMS + (R2_MEDIA_STEMS if r2_required else ())
         expected_media = {f"artifacts/media/{stem}.{suffix}"
-                          for stem in MEDIA_STEMS for suffix in ("mp4", "gif")}
-        manifests_present = {name for name in MEDIA_MANIFESTS if (root/name).is_file()}
-        if names != expected_media or manifests_present != MEDIA_MANIFESTS:
-            errors.append("required six MP4/GIF pairs or media manifests missing/unexpected")
+                          for stem in stems for suffix in ("mp4", "gif")}
+        expected_manifests = MEDIA_MANIFESTS | ({R2_MEDIA_MANIFEST} if r2_required else set())
+        manifests_present = {name for name in expected_manifests if (root/name).is_file()}
+        if names != expected_media or manifests_present != expected_manifests:
+            errors.append(("required eight MP4/GIF pairs or media manifests missing/unexpected"
+                           if r2_required else
+                           "required six MP4/GIF pairs or media manifests missing/unexpected"))
     kit_valid = kit is None or (Path(kit).is_dir() and not Path(kit).is_symlink())
     guide_valid = guide is None or (Path(guide).is_file() and not Path(guide).is_symlink())
     if not kit_valid:

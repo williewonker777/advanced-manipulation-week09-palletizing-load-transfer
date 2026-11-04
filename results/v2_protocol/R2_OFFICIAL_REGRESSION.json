@@ -1,0 +1,282 @@
+{
+  "schema": "R2_OFFICIAL_REGRESSION.v1",
+  "official": true,
+  "source": "unchanged evaluate.py in temporary unchanged-kit overlay under default entry names",
+  "results": {
+    "servo": {
+      "kit_integrity": {
+        "status": "ok",
+        "files": 20,
+        "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+      },
+      "source_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "self_contained_default_names": true,
+      "control_and_collisions": {
+        "control": {
+          "0.0": [
+            "1.18",
+            "3.94",
+            "0.0",
+            "9.7",
+            "5.1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "4.0": [
+            "1.15",
+            "3.79",
+            "0.0",
+            "9.7",
+            "7.6",
+            "40",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "8.0": [
+            "1.17",
+            "3.91",
+            "0.0",
+            "9.7",
+            "14.6",
+            "79",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ]
+        },
+        "collisions": [
+          {
+            "mass": 0.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "23",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.0,
+            "cells": [
+              "62",
+              "43",
+              "25",
+              "19",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "78",
+              "31",
+              "19",
+              "0회",
+              "15 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "24",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.0,
+            "cells": [
+              "62",
+              "45",
+              "27",
+              "18",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "69",
+              "33",
+              "21",
+              "0회",
+              "15 N"
+            ]
+          }
+        ]
+      }
+    },
+    "torque": {
+      "kit_integrity": {
+        "status": "ok",
+        "files": 20,
+        "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+      },
+      "source_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "self_contained_default_names": true,
+      "control_and_collisions": {
+        "control": {
+          "0.0": [
+            "2.09",
+            "4.05",
+            "0.0",
+            "9.0",
+            "4.8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "4.0": [
+            "2.32",
+            "4.42",
+            "0.0",
+            "9.0",
+            "6.8",
+            "39",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "8.0": [
+            "3.23",
+            "8.44",
+            "0.0",
+            "9.0",
+            "13.1",
+            "80",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ]
+        },
+        "collisions": [
+          {
+            "mass": 0.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "37",
+              "22",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.0,
+            "cells": [
+              "57",
+              "42",
+              "27",
+              "19",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "78",
+              "30",
+              "19",
+              "0회",
+              "15 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "24",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.0,
+            "cells": [
+              "56",
+              "43",
+              "26",
+              "18",
+              "1회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "91",
+              "42",
+              "22",
+              "0회",
+              "15 N"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "regression_errors": [],
+  "R1_compatibility_pass": true,
+  "source_sha256": {
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+  },
+  "guard": {
+    "host_before": {
+      "mem_available_gib": 22.019412994384766,
+      "load_average": [
+        1.2470703125,
+        1.751953125,
+        2.216796875
+      ],
+      "foreign_heavy_python_count": 0,
+      "owned_simulation_workers": 1
+    },
+    "samples": 331,
+    "owned_group_pause_count": 0,
+    "min_available_RAM_GiB": 21.50872802734375,
+    "maximum_heavy_python_count": 1,
+    "foreign_processes_signalled": 0
+  },
+  "holdout_sha256": "d0804684dbd1b80539b3c6866417b8ee58c9e01d124d2fad147f77d6fdcb24d7",
+  "tuning_after_exposure": false,
+  "failure_action": "reject new method; retain immutable R1 only, never repair/re-promote",
+  "publication_note": "Raw process IDs omitted. Every case, numeric metric, eigenvalue, load/RAM summary and timing outlier is retained. Evidence hashes elsewhere may name the original work record; published-byte hashes are in artifacts/SHA256SUMS.",
+  "private_raw_sha256": "299b419f6b9b6f11abfbbc8aa7e03396137d83ecf813ac1029bae8c0d3ef483a"
+}

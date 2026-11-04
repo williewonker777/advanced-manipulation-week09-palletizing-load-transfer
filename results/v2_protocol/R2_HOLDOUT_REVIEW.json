@@ -1,0 +1,67 @@
+{
+  "one_batch": true,
+  "marker_batch_attempt": 1,
+  "source_unchanged": true,
+  "selection_unchanged": true,
+  "final_R2_alias": "R1",
+  "research_challenger_remains_rejected": true,
+  "no_tuning_after_holdout": true,
+  "groups": [
+    {
+      "variant": "R1",
+      "architecture": "servo",
+      "cases": 38,
+      "outcomes": {
+        "detected": 20,
+        "missed": 10
+      },
+      "reference_false_rises": 0,
+      "collision_extra_false_rises": 0,
+      "offset_false_rises": 0,
+      "reference_saturated_episodes": 0,
+      "reference_diverged": 0
+    },
+    {
+      "variant": "R1",
+      "architecture": "torque",
+      "cases": 38,
+      "outcomes": {
+        "detected": 20,
+        "missed": 10
+      },
+      "reference_false_rises": 0,
+      "collision_extra_false_rises": 0,
+      "offset_false_rises": 1,
+      "reference_saturated_episodes": 0,
+      "reference_diverged": 0
+    },
+    {
+      "variant": "C5_prne_plus_ridge",
+      "architecture": "servo",
+      "cases": 38,
+      "outcomes": {
+        "detected": 20,
+        "missed": 10
+      },
+      "reference_false_rises": 0,
+      "collision_extra_false_rises": 2,
+      "offset_false_rises": 2,
+      "reference_saturated_episodes": 0,
+      "reference_diverged": 0
+    },
+    {
+      "variant": "C5_prne_plus_ridge",
+      "architecture": "torque",
+      "cases": 38,
+      "outcomes": {
+        "detected": 20,
+        "missed": 10
+      },
+      "reference_false_rises": 0,
+      "collision_extra_false_rises": 0,
+      "offset_false_rises": 2,
+      "reference_saturated_episodes": 0,
+      "reference_diverged": 0
+    }
+  ]
+}

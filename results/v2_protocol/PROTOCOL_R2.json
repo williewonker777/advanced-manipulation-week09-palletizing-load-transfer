@@ -1,0 +1,464 @@
+{
+  "schema": "R2_PROTOCOL.v1",
+  "registered_utc": "2026-11-04T08:20:23.849642+00:00",
+  "stage": "P0 completed; no C1-C6 implementation or evaluation yet",
+  "base_work_commit": "334fb1a4da5b1bca730eb8c2a7f4a8594e097246",
+  "r1_freeze_commit": "1e77459",
+  "public_start_commit": "42942227876b4c508764607cd94f06a73912b2a0",
+  "p0_files_sha256": {
+    "results/v2_protocol/R2_P0_BASELINE.json": "d626707147f6068a7d9dba0dd96ea87c656ea5c71263555a49e4571791651ac5",
+    "results/v2_protocol/R2_P0_PROBE_DESIGN.json": "2d4cf72f8dabccbb215efcc6626671045f32085998c547eddd7552659c32a688",
+    "results/v2_protocol/R2_P0_down_small.json": "8ff4abc5f2d2ef738698a26324c6f856792e8e1dbddea494466033d49445e5f5",
+    "results/v2_protocol/R2_P0_down_stroke.json": "0fc232c72b5695a941ee020e4fafbc8dc95edfa5b0a3d13e2781d0bfe03f2850",
+    "results/v2_protocol/R2_P0_up_small.json": "17d6a5ce0f6831ca21b37b42c4a9f92ebeafd19aa670dcf480065df69650c9f1",
+    "results/v2_protocol/R2_P0_up_stroke.json": "313f3bedd4071edc4171e8776a6cc0f1f4e748ebafecef7fab99a6f34a26eec3"
+  },
+  "G4": {
+    "window_s_before_release": 0.02,
+    "mean_support_over_mg_at_least": 0.5,
+    "minimum_support_over_mg_at_least": 0.25,
+    "mean_increase_over_v1_at_least": 0.25,
+    "peak_place_support_over_mg_at_most": 1.1,
+    "applies_to": "positive masses, specifically final 8kg A/B; failure remains failure"
+  },
+  "seeds": {
+    "training": 369601,
+    "validation": 369602,
+    "redesign_validation": 369612,
+    "development": 369603,
+    "holdout": 369703,
+    "analysis_noise": [
+      9101,
+      9102,
+      9103
+    ]
+  },
+  "train": [
+    {
+      "mass": 0.75,
+      "com": [
+        0.012850825349318109,
+        -0.004396585553526849,
+        0.014465993984935551
+      ]
+    },
+    {
+      "mass": 1.85,
+      "com": [
+        0.012767954655399646,
+        0.016325188921091395,
+        0.031464781823161384
+      ]
+    },
+    {
+      "mass": 2.95,
+      "com": [
+        0.00296736541418869,
+        0.007505924107883567,
+        0.023102237779559727
+      ]
+    },
+    {
+      "mass": 5.05,
+      "com": [
+        -0.019523286307804928,
+        0.00314361783809107,
+        0.034141190755807814
+      ]
+    },
+    {
+      "mass": 6.55,
+      "com": [
+        -0.01740172465541104,
+        0.008387411915602432,
+        0.03898322279833297
+      ]
+    },
+    {
+      "mass": 7.45,
+      "com": [
+        0.0031841968181006673,
+        0.012016391104097596,
+        -0.002552967045888869
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "mass": 1.05,
+      "com": [
+        -0.012517337623852947,
+        0.0018676478937204935,
+        0.0013713845904671142
+      ]
+    },
+    {
+      "mass": 3.15,
+      "com": [
+        0.01062966387499897,
+        -0.01599168205615972,
+        0.044504226384714
+      ]
+    },
+    {
+      "mass": 5.65,
+      "com": [
+        0.007938484244601248,
+        -0.015420393939040364,
+        0.005329930436901642
+      ]
+    },
+    {
+      "mass": 7.55,
+      "com": [
+        0.0012158721532806727,
+        0.009949278222978121,
+        0.025450306694260315
+      ]
+    }
+  ],
+  "redesign_validation": {
+    "masses": [
+      1.25,
+      3.65,
+      5.85,
+      7.85
+    ],
+    "com": "generate once from redesign_validation seed uniform same ranges; no official conditions"
+  },
+  "architectures": [
+    "servo",
+    "torque"
+  ],
+  "p0_derived": {
+    "normal_probe_small_m": 0.0006894392593624343,
+    "normal_displacement_limit_m": 0.0026785554844834247,
+    "normal_shift_speed_limit_m_s": 0.020374407843433782,
+    "normal_shift_acceleration_limit_m_s2": 0.25451077437156416,
+    "approach_start_s": 3.6,
+    "contact_median_s": 3.8465,
+    "early_arrival_s": 3.809,
+    "early_arrival_derivation": "release minus maximum measured contact-to-release interval minus maximum measured first contact-to-force-loss interval",
+    "contact_first_loss_max_s": 0.03399999999999981,
+    "force_displacement_fit": "rejected negative stiffness/confounded dynamic fit; no spring parameter selected",
+    "sustained_support_warning": "probe first crossing not sustained G4; all 40 measured P0 episodes failed G4",
+    "robust_bandwidth_rad_s": [
+      4.5,
+      9.0,
+      18.0
+    ],
+    "bandwidth_derivation": "quarter/half/full existing R1 18 rad/s below lowest measured nominal elastic sqrt(K/B)=173.205 rad/s; preregistered conservative design grid, not measured optimum",
+    "torque_correction_limit": "componentwise 0.25*max(0,nom.tau_max - max P0 absolute torque in that architecture) cached constants; fraction is conservative design reserve, not fitted collision threshold"
+  },
+  "methods": {
+    "C1": {
+      "hypothesis": "planned support wrench reduces elastic motor reference and prerelease torque step",
+      "targets": [
+        "T1",
+        "T2",
+        "T4"
+      ],
+      "support_fractions": [
+        0.5,
+        0.85
+      ],
+      "feedback_gains": [
+        0.0,
+        0.25
+      ],
+      "feedback_signal": "raw permitted-input observer bottom normal wrench, never actual/table-projected self-confirming wrench",
+      "normal_force_clip_over_mg": [
+        0.0,
+        1.0
+      ],
+      "schedule_s": [
+        3.6,
+        3.8465
+      ],
+      "frame": "full bottom world wrench including known COM gravity moment; body coadjoint / virtual-power equivalent J_world.T W_world; full inertia while held minus support, elastic lift theta=q+Kinv tau",
+      "selection": "G4 >=3/4 each selected architecture, min/mean/increase and peak individually checked; no peak relaxation for light cases; all safety/detector/cost gates"
+    },
+    "C2": {
+      "hypothesis": "normal-only impedance B/admittance A reduces contact bounce; compare identical-gain Euclidean/log-dexp variants",
+      "targets": [
+        "T1",
+        "T4"
+      ],
+      "geometry": [
+        "euclidean",
+        "se3"
+      ],
+      "support_fraction": 0.5,
+      "normal_error_scales_m": [
+        0.0006894392593624343,
+        0.0026785554844834247
+      ],
+      "normal_stiffness": "0.5*m*g/error_scale; damping=2*sqrt(effective nominal normal inertia*stiffness)",
+      "admittance": "exact 1ms ZOH second order, bounded displacement/rate derived above, freeze on alarm; return following release",
+      "elastic_adaptation": "desired link wrench-to-torque then same elastic motor target/inner servo, not a rigid passivity claim",
+      "selection": "same C1 gates; Lie variant needs >=1% improvement in G4 or TCP or p99 versus identical-gain Euclidean, otherwise geometry not adopted"
+    },
+    "C3": {
+      "hypothesis": "NRIC nominal-state matching or motor DOB improves mismatch tracking without hiding collision",
+      "targets": [
+        "T3",
+        "T5"
+      ],
+      "laws": [
+        "NRIC",
+        "DOB"
+      ],
+      "gamma": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "dob_bandwidth_rad_s": [
+        4.5,
+        9.0,
+        18.0
+      ],
+      "nominal_integrator": "exact-ZOH or implicit midpoint elastic model, never forward Euler oscillator",
+      "normalization": "error scales from P0 encoder-reference normal RMS, torque scales from P0 headroom; gamma dimensionless relative feedback, no unscaled 1/gamma^2 torque added",
+      "contact_gating": "freeze/limit compensation around taught pickup/place/contact suspicion and on detector alarm",
+      "selection": ">=10% RMS or max improvement in analysis-perturbation matched development, no >5% nominal TCP/torque step regression, no lost R1 dev collision detection, no extra FA; all safety/detector/stability/timing gates"
+    },
+    "C4": {
+      "hypothesis": "APD/P-IDC link-reference error feedback plus elastic lift improves tracking",
+      "targets": [
+        "T3",
+        "T5"
+      ],
+      "laws": [
+        "P-APD",
+        "P-IDC"
+      ],
+      "reference_rate_rad_s": [
+        4.5,
+        9.0
+      ],
+      "damping_scale": [
+        0.5,
+        1.0
+      ],
+      "C_action": "genuine pRNE C(q,v_actual)u_ref, not bias(q,u_ref)",
+      "integral": "bounded and frozen at contact/alarm/clip/model switch; P-APD no integral",
+      "elastic_adaptation": "link law generates tau_link; theta_d=q_ref+Kinv tau_link, actual R1 motor feedback and torque sensor preserved; no rigid stability guarantee",
+      "selection": ">=10% RMS or max improvement vs R1 and no >5% peak/step/nominal regression; all safety/detector/stability/timing gates"
+    },
+    "C5": {
+      "hypothesis": "metric-compatible pRNE C.Tv removes finite-difference Mdot noise in observer",
+      "targets": [
+        "T6"
+      ],
+      "ablations": [
+        "v1_observer_no_ridge",
+        "R1_ridge_only",
+        "pRNE_only",
+        "pRNE_plus_ridge"
+      ],
+      "preserve_controller_load_core": true,
+      "observer_gain": 50.0,
+      "model_switch": "retain integral exactly as R1",
+      "math_gates": {
+        "fd_h": [
+          0.0001,
+          1e-05,
+          1e-06,
+          1e-07
+        ],
+        "Mdot_identity_normalized_inf_max": 0.0001,
+        "selected_h_error_vs_best_max_factor": 3.0,
+        "bias_atol": 1e-06,
+        "bias_rtol": 1e-05,
+        "vjp_atol": 1e-09,
+        "vjp_rtol": 1e-07
+      },
+      "selection": ">=10% normal residual RMS/p99 reduction OR >=4 total extra balanced dev detections, no lost R1 detections/no extra FA; unchanged controller or separately qualified physical effects; timing gate"
+    },
+    "C6": {
+      "hypothesis": "earlier sustained contact/dwell avoids short bounce window observed P0",
+      "conditional_trigger": "P0 measured sustained support <20ms and all simple force-displacement probes fail: triggered before protocol",
+      "targets": [
+        "T1",
+        "T2"
+      ],
+      "variants": [
+        "seventh_joint",
+        "S_curve_joint",
+        "SO3_R3_seventh"
+      ],
+      "approach_start_s": 3.6,
+      "arrival_s": 3.809,
+      "hold_until_s": 3.9,
+      "grip_times_fixed": true,
+      "consistent_derivatives": true,
+      "selection": "same C1 gates plus report original reference TCP cost; reject if >5% max/RMS cost even if support improves"
+    }
+  },
+  "safety_gates": {
+    "saturation_pct_max": 0.0,
+    "divergence": false,
+    "nominal_false_alarm_rises": 0,
+    "reference_sweep_false_alarm_rises": 0,
+    "tool_contact_regression": false
+  },
+  "cost_gates": {
+    "max_RMS_ratio_vs_R1": 1.05,
+    "max_TCP_ratio_vs_R1": 1.05,
+    "max_torque_step_ratio_vs_R1": 1.05,
+    "max_place_peak_ratio_vs_R1": 1.05,
+    "G4_peak_over_mg_max": 1.1
+  },
+  "timing": {
+    "selection_combined_p99_us_max": 800.0,
+    "strict_goal_max_us": 1000.0,
+    "record_all_outliers": true,
+    "metric": "paired controller+detector wall/thread CPU including allocation; guard outside measured methods",
+    "global_gc_changes": false
+  },
+  "stability": {
+    "plant": "elastic joints + nominal rigid rotor armature + native viscosity/smooth Coulomb + actual local contact/weld where applicable; exact1ms ZOH;1cycle command delay; Drive PI current measured encoder and old command; JTS300Hz/1cycle; sampled encoder difference explicit",
+    "poses_s": [
+      2.5,
+      3.75,
+      3.89
+    ],
+    "masses_kg": [
+      0.85,
+      7.7
+    ],
+    "controller_states": "all output-affecting filters/integrators/previous samples, freeze phase/reference/discrete switches",
+    "noise": "unquantized derivative, noise/quantization disturbances not poles",
+    "FD": "central h/h2 convergence, branch qualification",
+    "margins": "structured scalar and worst-axis feedback gain scaling, not universal MIMO margin; pure FF margin N/A",
+    "control_adoption": "all tested active-mode pole radii<1+1e-6 and convergent FD; if R1 moving-point itself fails report it, do not transfer book guarantees"
+  },
+  "normal_detector_policy": "Every changed control checked first on independent normal validation with frozen R1 detector. Extra FA -> reject OR one registered normal-only recalibration with new seed before any collision. No threshold tuning from collisions. C5 changed observer uses new normal targets/features ridge .02 and threshold max(3,1.2*max normal validation+.5), freeze before dev. Runtime numpy only; no official conditions in fit.",
+  "development": {
+    "conditions": [
+      {
+        "mass": 1.35,
+        "com": [
+          0.021,
+          -0.013,
+          0.023
+        ]
+      },
+      {
+        "mass": 7.25,
+        "com": [
+          -0.019,
+          0.015,
+          0.039
+        ]
+      }
+    ],
+    "times_s": [
+      1.467,
+      2.473,
+      3.813
+    ],
+    "forces_N": [
+      9.0,
+      23.0
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy"
+    ],
+    "design": "24 stratified collisions per architecture per validation-eligible family winner, balanced signs and phases; matched no-collision references and nonofficial perturbations; failed validation candidates get no efficacy claim"
+  },
+  "redesign": {
+    "max_per_family": 1,
+    "condition": "physical failure explanation recorded first, never from holdout/official, must use new validation seed; registered sweeps do not count as redesign",
+    "post_official_allowed": false
+  },
+  "freeze": {
+    "required": "source/config/weights/protocol SHA256 + local commit before opening new holdout",
+    "selected_plan": "one combined eligible winner; default immutable R1 fallback; no forced adoption; choose research challenger only from validation/development for transparent negative-result reporting if none eligible"
+  },
+  "holdout": {
+    "opened": false,
+    "seed": 369703,
+    "masses_kg": [
+      0.75,
+      3.35,
+      6.05,
+      7.95
+    ],
+    "com": "seeded uniform x[-.028,.028],y[-.018,.018],z[-.012,.048], generate only after freeze",
+    "times": "seeded pick[1.375,1.515],transport[2.05,3.35],place[3.775,3.945]",
+    "forces_N": [
+      7.0,
+      12.0,
+      19.0,
+      37.0,
+      65.0
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy",
+      "+xyz",
+      "-xyz"
+    ],
+    "collisions_per_architecture": 30,
+    "offsets_m": [
+      [
+        0.014,
+        0,
+        0.012
+      ],
+      [
+        -0.014,
+        0,
+        0.012
+      ],
+      [
+        0,
+        0.018,
+        -0.006
+      ],
+      [
+        0,
+        -0.018,
+        0.018
+      ]
+    ],
+    "batch": "one batch includes R1 comparator, frozen provisional R2 plus any explicitly frozen negative-result challenger; no changes after open. Identical source comparators may share one physical run with exact-hash provenance, not independently replicated evidence"
+  },
+  "official": {
+    "order": "LAST after freeze and new holdout, original unchanged evaluate.py",
+    "repair_after_exposure": false,
+    "on_regression": "reject new candidate and restore byte-identical R1 ONLY; do not promote any other new method, no retest repair",
+    "regression_gates": "0/4/8kg no-collision FA0 each, saturation0, no divergence; maintain R1 8kg transport15N45/43ms,10N62/56ms or disclose and reject conservative; no taught official cases for threshold selection"
+  },
+  "robustness": {
+    "d4": "same385/architecture grid and offsets as R1; compare baseline/v1/R1/R2; R1 historical exact-source reuse explicitly labeled possible",
+    "perturbations": "same R1 physical variations plus new analysis noise seeds; not training/runtime signals",
+    "unchanged_source_reuse": "only exact-hash code+conditions+deterministic physical/observable parity; never claim newly run"
+  },
+  "resources": {
+    "owned_simulation_workers": 1,
+    "total_simulations_max": 4,
+    "min_RAM_GiB": 6,
+    "GPU_jobs": 0,
+    "render": "Mesa llvmpipe",
+    "python": "env -u PYTHONPATH",
+    "official_venv_packages_added": 0
+  },
+  "remote_operations_allowed": 0,
+  "stop": "public local staging commit; before push"
+}

@@ -1,7 +1,7 @@
 import hashlib
 import json
 import unittest
-from tools.build_public import portable_json_bytes
+from tools.build_public import portable_json_bytes, rebind_public_report_manifest
 
 
 class PortableStudyTests(unittest.TestCase):
@@ -21,6 +21,39 @@ class PortableStudyTests(unittest.TestCase):
     def test_freeze_and_model_bytes_are_not_reformatted(self):
         raw=b'{"source_files":{"my_detector.py":"abc"},"value": 3.25}\n'
         self.assertEqual(portable_json_bytes(raw),raw)
+
+    def test_large_json_compacts_without_losing_poles_or_outliers(self):
+        value = {'cases': [{'poles': [[0.99, -0.001], [1.001173, 0.0]],
+                            'outliers': [{'wall_ns': 6016548}]}]}
+        raw = json.dumps(value, indent=2).encode() + b' ' * (4*1024**2)
+        published = portable_json_bytes(raw)
+        result = json.loads(published)
+        self.assertEqual(result['cases'], value['cases'])
+        self.assertLess(len(published), len(raw))
+        self.assertEqual(result['private_raw_sha256'], hashlib.sha256(raw).hexdigest())
+        self.assertNotIn('Raw process IDs omitted', result['publication_note'])
+
+    def test_small_array_document_preserves_original_bytes(self):
+        raw = b'[ {"case": 1}, {"case": 2} ]\n'
+        self.assertEqual(portable_json_bytes(raw), raw)
+
+    def test_report_manifest_rebinds_public_bytes_and_keeps_work_hash(self):
+        raw=json.dumps({'results':[{'score':3.2,'host_before':{'foreign_heavy_python_pids':[121]},
+                                  'timing':{'outliers':[{'wall_ns':1200000}]}}]}).encode()
+        published=portable_json_bytes(raw)
+        old=hashlib.sha256(raw).hexdigest()
+        manifest=json.dumps({'artifacts':{'study':{'path':'results/study.json',
+                                                  'sha256':old,'provenance':'fresh'}}}).encode()
+        public=json.loads(rebind_public_report_manifest(manifest,{'results/study.json':published}))
+        entry=public['artifacts']['study']
+        self.assertEqual(entry['sha256'],hashlib.sha256(published).hexdigest())
+        self.assertEqual(entry['prepublication_work_sha256'],old)
+        self.assertEqual(json.loads(published)['results'][0]['timing'],json.loads(raw)['results'][0]['timing'])
+
+    def test_report_manifest_refuses_missing_artifact(self):
+        manifest=b'{"artifacts":{"study":{"path":"missing.json","sha256":"old"}}}'
+        with self.assertRaises(ValueError):
+            rebind_public_report_manifest(manifest,{})
 
 
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,75 @@
+{
+  "displacement_small_m": 0.0006894392593624343,
+  "displacement_stroke_m": 0.0026785554844834247,
+  "start_s": 3.6,
+  "end_s": 3.8465,
+  "source": "small=max measured first transient 0.5mg tcp displacement, stroke=max pre-release actual box penetration, duration taught approach start to median first contact; not G4 solution or contact stiffness",
+  "least_squares_fits": [
+    {
+      "file": "servo_0.85kg_baseline.npz",
+      "n": 28,
+      "fit_K_N_m": 196.64829492672226,
+      "fit_D_Ns_m": 49.43068798073233,
+      "intercept_N": 2.4547787543773203,
+      "r_squared": 0.42207232128392147
+    },
+    {
+      "file": "servo_2.6kg_baseline.npz",
+      "n": 25,
+      "fit_K_N_m": -2958.3688545220944,
+      "fit_D_Ns_m": 79.53685106809927,
+      "intercept_N": 8.171905998018211,
+      "r_squared": 0.6298881077651826
+    },
+    {
+      "file": "servo_5.4kg_baseline.npz",
+      "n": 23,
+      "fit_K_N_m": 10354.974035050014,
+      "fit_D_Ns_m": 390.5248614330897,
+      "intercept_N": -41.234269969945274,
+      "r_squared": 0.766863918205358
+    },
+    {
+      "file": "servo_7.7kg_baseline.npz",
+      "n": 30,
+      "fit_K_N_m": -11235.555392512097,
+      "fit_D_Ns_m": 109.76658137181398,
+      "intercept_N": 24.38594095716699,
+      "r_squared": 0.80122858970303
+    },
+    {
+      "file": "torque_0.85kg_baseline.npz",
+      "n": 50,
+      "fit_K_N_m": -221.5472006256978,
+      "fit_D_Ns_m": 25.721930197449556,
+      "intercept_N": 2.834025413702164,
+      "r_squared": 0.26755715177608996
+    },
+    {
+      "file": "torque_2.6kg_baseline.npz",
+      "n": 47,
+      "fit_K_N_m": -4097.619789290579,
+      "fit_D_Ns_m": 31.38835010075283,
+      "intercept_N": 13.352958913341379,
+      "r_squared": 0.5057099533316542
+    },
+    {
+      "file": "torque_5.4kg_baseline.npz",
+      "n": 52,
+      "fit_K_N_m": -13444.339959984987,
+      "fit_D_Ns_m": -20.261788947230304,
+      "intercept_N": 37.29016603497678,
+      "r_squared": 0.5819561139873342
+    },
+    {
+      "file": "torque_7.7kg_baseline.npz",
+      "n": 52,
+      "fit_K_N_m": -25733.542706301523,
+      "fit_D_Ns_m": -84.48171097399766,
+      "intercept_N": 68.3203950685875,
+      "r_squared": 0.7324109518250357
+    }
+  ],
+  "fit_rejected": "negative fitted K / confounded dynamics and unilateral bounce; no use as a contact stiffness",
+  "candidate_parameters_selected": false
+}

@@ -1,0 +1,3863 @@
+{
+  "metadata": {
+    "stage": "validation",
+    "created_utc": "2026-11-04T08:44:59.245605+00:00",
+    "protocol_sha256": "4350e03d668ecb5748d7237c025c867ebcf3283cb9fd5b0caf6070244c83a27c",
+    "protocol_commit": "00c3a6675919cc5b8f97e1e5d5890d9e32aef291",
+    "source_sha256": {
+      "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "r1_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+      "experiments/r2_contact.py": "34ac1eeae0bad467c613159ec3ba3ebc45c8124e8ce3ee046f16afec28b462c1",
+      "experiments/r2_prne.py": "64d4b59c4b2711225a07c8c80a37829fb93a2faa73350613a1167ba1ccc1f04b",
+      "experiments/r2_robust.py": "84e8622110c248e090d1fc1cfa1e5431d7a388fa8c71cda43629f4c0460b2864",
+      "tools/r2_study.py": "3ea3e4d74f1d0bcb5efcc62fe8ba732c83f1e6cc3f5484a7096ea6894dec04a5",
+      "tools/v2_study.py": "229890028044bdee29bcb938e87f84e2a10c8cc2e6e4b20ed843cef9f4e6c40f",
+      "tools/v2_resources.py": "39de5f1984fa3eb137fc729de2a6ce640f14c6a280a9896e766c24447655f583",
+      "servo_controller.py": "50b5d2b05a45d540615a4af4373780d86872c60c8049c8af75dd6a4c4836e416",
+      "torque_controller.py": "a9d13fcddf89d9ab9bb92346bafe6d2d18b76cd5d605710cbdf3d9dddb8619d9",
+      "collision_detector.py": "fe4b1101ba41ffa46e04500f7153a0c569125b20083d8cd3a9fe6d8d69bda884",
+      "v1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "v1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "v1_detector.py": "fbb3cef5c81fd34a076bca69ae7ea3eac4ed2221a9cef39a37e40d6142f8f8dd"
+    },
+    "official": false,
+    "remote_operations": 0,
+    "owned_simulation_workers": 1
+  },
+  "results": [
+    {
+      "variant": "C3_NRIC_g4",
+      "specification": {
+        "id": "C3_NRIC_g4",
+        "family": "C3",
+        "law": "NRIC",
+        "gamma": 4.0
+      },
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 0,
+      "mass": 1.05,
+      "com": [
+        -0.012517337623852947,
+        0.0018676478937204935,
+        0.0013713845904671142
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "kind": "reference",
+      "official": false,
+      "stage": "validation",
+      "rms_mm": 1.4737872070564242,
+      "max_mm": 4.481629433881846,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 125.74445100681305,
+      "torque_step_place_nm": 4.843714134990947,
+      "table_force_place_max_n": 21.473821309667784,
+      "false_alarms_pick": 3,
+      "false_alarms_place": 0,
+      "false_alarms_other": 1,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.014654823693443486,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0014227293523075078,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 21.473821309667784,
+        "place_peak_over_mg": 2.084735819588154
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 315.8885,
+            "p99_us": 526.8104000000005,
+            "max_us": 831.807,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              34,
+              5720,
+              164,
+              80,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 314.669,
+            "p99_us": 525.4284000000005,
+            "max_us": 827.837,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              81,
+              5679,
+              162,
+              76,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 92.38,
+            "p99_us": 232.74390000000034,
+            "max_us": 384.078,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              3245,
+              192,
+              48,
+              1963,
+              424,
+              87,
+              29,
+              12,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 90.8095,
+            "p99_us": 228.4899000000002,
+            "max_us": 368.289,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              2,
+              3274,
+              167,
+              45,
+              2000,
+              394,
+              79,
+              28,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 418.508,
+            "p99_us": 691.0079100000002,
+            "max_us": 1008.057,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1882,
+              3322,
+              759,
+              33,
+              4,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 415.7285,
+            "p99_us": 682.3246000000004,
+            "max_us": 1002.457,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2179,
+              3077,
+              709,
+              33,
+              2,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [
+          {
+            "cycle": 1462,
+            "simulated_t_s": 1.462,
+            "controller": {
+              "wall_ns": 692827,
+              "cpu_ns": 691147,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 312819,
+              "cpu_ns": 310979,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1005646,
+              "cpu_ns": 1002126,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 1463,
+            "simulated_t_s": 1.463,
+            "controller": {
+              "wall_ns": 669287,
+              "cpu_ns": 667697,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 334049,
+              "cpu_ns": 332069,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1003336,
+              "cpu_ns": 999766,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 1468,
+            "simulated_t_s": 1.468,
+            "controller": {
+              "wall_ns": 672118,
+              "cpu_ns": 670517,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 328718,
+              "cpu_ns": 326999,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1000836,
+              "cpu_ns": 997516,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 2750,
+            "simulated_t_s": 2.75,
+            "controller": {
+              "wall_ns": 831807,
+              "cpu_ns": 827837,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 176250,
+              "cpu_ns": 174620,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1008057,
+              "cpu_ns": 1002457,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          }
+        ],
+        "capacity_guard_count": 24,
+        "capacity_guard_max_foreign_heavy_count": 0,
+        "capacity_guard_peak_load_average_1min": 2.87548828125,
+        "capacity_guard_min_mem_available_gib": 12.710094451904297
+      },
+      "false_alarms": 4,
+      "false_alarm_times": [
+        1.522,
+        1.54,
+        1.573,
+        1.728
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "tool_contact_delay_ms": null,
+      "tool_contact_peak_n": 0.0,
+      "r_peak_nm": [
+        39.88290191376661,
+        14.526378610130841,
+        5.586570435276187,
+        3.330523333163294,
+        1.1914020280768352,
+        0.45654317260896166
+      ],
+      "host_before": {
+        "mem_available_gib": 19.703685760498047,
+        "load_average": [
+          2.87548828125,
+          2.35986328125,
+          1.94140625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 12.745590209960938,
+        "load_average": [
+          2.87548828125,
+          2.35986328125,
+          1.94140625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "normal_residual": {
+        "joint_RMS_Nm": 5.746228981595323,
+        "joint_norm_p99_Nm": 29.91576633391217,
+        "horizontal_wrench_available": true,
+        "horizontal_wrench_RMS_N": 12.710323411217825,
+        "horizontal_wrench_norm_p99_N": 37.48239602867871
+      },
+      "private_raw_sha256": "a91fdb2e530cf99f83ccec07612760e23845b83a194d2ff49a46fe0e4ab72248",
+      "private_raw_basename": "validation_C3_NRIC_g4_servo_0000.npz"
+    },
+    {
+      "variant": "C3_NRIC_g4",
+      "specification": {
+        "id": "C3_NRIC_g4",
+        "family": "C3",
+        "law": "NRIC",
+        "gamma": 4.0
+      },
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 1,
+      "mass": 3.15,
+      "com": [
+        0.01062966387499897,
+        -0.01599168205615972,
+        0.044504226384714
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "kind": "reference",
+      "official": false,
+      "stage": "validation",
+      "rms_mm": 1.2851819629547114,
+      "max_mm": 3.8983117865671297,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 128.3226177657996,
+      "torque_step_place_nm": 5.895248964525138,
+      "table_force_place_max_n": 31.311196582585943,
+      "false_alarms_pick": 2,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.0,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 31.311196582585943,
+        "place_peak_over_mg": 1.013258145481156
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 316.509,
+            "p99_us": 458.2221000000001,
+            "max_us": 1740.463,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              98,
+              5768,
+              96,
+              36,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 315.309,
+            "p99_us": 454.5018000000005,
+            "max_us": 807.597,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              145,
+              5729,
+              90,
+              35,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 92.66499999999999,
+            "p99_us": 200.21019,
+            "max_us": 291.469,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              3231,
+              226,
+              36,
+              1995,
+              450,
+              54,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 91.1045,
+            "p99_us": 198.55931,
+            "max_us": 289.419,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              22,
+              3245,
+              196,
+              34,
+              2030,
+              417,
+              48,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 418.6585,
+            "p99_us": 628.2242000000001,
+            "max_us": 1845.293,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1706,
+              3589,
+              697,
+              7,
+              1,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 415.844,
+            "p99_us": 624.36139,
+            "max_us": 986.216,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2052,
+              3315,
+              627,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [
+          {
+            "cycle": 50,
+            "simulated_t_s": 0.05,
+            "controller": {
+              "wall_ns": 1740463,
+              "cpu_ns": 439988,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "detector": {
+              "wall_ns": 104830,
+              "cpu_ns": 103260,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1845293,
+              "cpu_ns": 543248,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          }
+        ],
+        "capacity_guard_count": 24,
+        "capacity_guard_max_foreign_heavy_count": 0,
+        "capacity_guard_peak_load_average_1min": 2.9658203125,
+        "capacity_guard_min_mem_available_gib": 12.003398895263672
+      },
+      "false_alarms": 2,
+      "false_alarm_times": [
+        1.5230000000000001,
+        1.562
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "tool_contact_delay_ms": null,
+      "tool_contact_peak_n": 0.0,
+      "r_peak_nm": [
+        44.61463835712974,
+        14.704616233302037,
+        9.606282062225349,
+        4.768004083773309,
+        2.0417162534639157,
+        0.6160012910075534
+      ],
+      "host_before": {
+        "mem_available_gib": 12.776382446289062,
+        "load_average": [
+          2.87548828125,
+          2.35986328125,
+          1.94140625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.130748748779297,
+        "load_average": [
+          2.9658203125,
+          2.38720703125,
+          1.95263671875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "normal_residual": {
+        "joint_RMS_Nm": 6.254100757107863,
+        "joint_norm_p99_Nm": 32.42478511438533,
+        "horizontal_wrench_available": true,
+        "horizontal_wrench_RMS_N": 13.733021421263638,
+        "horizontal_wrench_norm_p99_N": 39.89199752646532
+      },
+      "private_raw_sha256": "f9ec237aa048cccd4c0ac572e0fd2a5db9496dd788569d320317e229780c73af",
+      "private_raw_basename": "validation_C3_NRIC_g4_servo_0001.npz"
+    },
+    {
+      "variant": "C3_NRIC_g4",
+      "specification": {
+        "id": "C3_NRIC_g4",
+        "family": "C3",
+        "law": "NRIC",
+        "gamma": 4.0
+      },
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 2,
+      "mass": 5.65,
+      "com": [
+        0.007938484244601248,
+        -0.015420393939040364,
+        0.005329930436901642
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "kind": "reference",
+      "official": false,
+      "stage": "validation",
+      "rms_mm": 1.3837972022964211,
+      "max_mm": 4.031171010985351,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 124.36387798633127,
+      "torque_step_place_nm": 10.81261324392105,
+      "table_force_place_max_n": 55.71807268762904,
+      "false_alarms_pick": 2,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.0,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 55.71807268762904,
+        "place_peak_over_mg": 1.005260528585226
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 314.519,
+            "p99_us": 434.2123100000003,
+            "max_us": 752.927,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              95,
+              5808,
+              70,
+              26,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 313.32349999999997,
+            "p99_us": 432.35421000000014,
+            "max_us": 749.607,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              167,
+              5742,
+              65,
+              26,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 92.09,
+            "p99_us": 203.54439000000008,
+            "max_us": 300.359,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              3285,
+              200,
+              12,
+              2059,
+              369,
+              63,
+              11,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 90.5245,
+            "p99_us": 201.91111000000004,
+            "max_us": 298.539,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              7,
+              3311,
+              168,
+              17,
+              2091,
+              342,
+              55,
+              9,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 416.564,
+            "p99_us": 579.4702100000001,
+            "max_us": 952.236,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2018,
+              3409,
+              552,
+              21,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 413.7885,
+            "p99_us": 576.3900900000001,
+            "max_us": 947.436,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2270,
+              3209,
+              500,
+              21,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_max_foreign_heavy_count": 0,
+        "capacity_guard_peak_load_average_1min": 2.9658203125,
+        "capacity_guard_min_mem_available_gib": 18.984256744384766
+      },
+      "false_alarms": 2,
+      "false_alarm_times": [
+        1.5250000000000001,
+        1.562
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "tool_contact_delay_ms": null,
+      "tool_contact_peak_n": 0.0,
+      "r_peak_nm": [
+        49.166921164044375,
+        19.11659511646249,
+        17.12644560778671,
+        6.197668033251958,
+        3.187029502550838,
+        0.7569730792099086
+      ],
+      "host_before": {
+        "mem_available_gib": 19.19698715209961,
+        "load_average": [
+          2.9658203125,
+          2.38720703125,
+          1.95263671875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 18.98153305053711,
+        "load_average": [
+          2.88818359375,
+          2.38037109375,
+          1.953125
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "normal_residual": {
+        "joint_RMS_Nm": 6.999069803298604,
+        "joint_norm_p99_Nm": 35.1873146884135,
+        "horizontal_wrench_available": true,
+        "horizontal_wrench_RMS_N": 15.257932035029976,
+        "horizontal_wrench_norm_p99_N": 43.93832425606138
+      },
+      "private_raw_sha256": "2af9fc91ca8b41b5b65bbd131408c41b5af5c504ad0c38a1bcf59f8559235551",
+      "private_raw_basename": "validation_C3_NRIC_g4_servo_0002.npz"
+    },
+    {
+      "variant": "C3_NRIC_g4",
+      "specification": {
+        "id": "C3_NRIC_g4",
+        "family": "C3",
+        "law": "NRIC",
+        "gamma": 4.0
+      },
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 3,
+      "mass": 7.55,
+      "com": [
+        0.0012158721532806727,
+        0.009949278222978121,
+        0.025450306694260315
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "kind": "reference",
+      "official": false,
+      "stage": "validation",
+      "rms_mm": 1.4019266392271683,
+      "max_mm": 3.8602423810681983,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 131.26123214222915,
+      "torque_step_place_nm": 15.063313243041705,
+      "table_force_place_max_n": 74.37408318989641,
+      "false_alarms_pick": 2,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.08275113586344854,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0011172696581194827,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 74.37408318989641,
+        "place_peak_over_mg": 1.0041663553192297
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 314.774,
+            "p99_us": 382.32220000000007,
+            "max_us": 523.038,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              150,
+              5827,
+              20,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 313.5685,
+            "p99_us": 381.06090000000006,
+            "max_us": 521.328,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              215,
+              5763,
+              19,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 90.965,
+            "p99_us": 191.82981000000004,
+            "max_us": 236.369,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              1,
+              3346,
+              144,
+              9,
+              2117,
+              356,
+              27,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 89.41499999999999,
+            "p99_us": 190.1591,
+            "max_us": 233.91,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              37,
+              3349,
+              108,
+              27,
+              2139,
+              321,
+              19,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 415.584,
+            "p99_us": 540.1228900000002,
+            "max_us": 740.187,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1975,
+              3558,
+              467,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 412.869,
+            "p99_us": 537.224,
+            "max_us": 737.038,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2235,
+              3369,
+              396,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_max_foreign_heavy_count": 0,
+        "capacity_guard_peak_load_average_1min": 2.88818359375,
+        "capacity_guard_min_mem_available_gib": 18.96442413330078
+      },
+      "false_alarms": 2,
+      "false_alarm_times": [
+        1.5250000000000001,
+        1.565
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "tool_contact_delay_ms": null,
+      "tool_contact_peak_n": 0.0,
+      "r_peak_nm": [
+        54.15777500791186,
+        24.26165904718464,
+        19.78902166476299,
+        8.38271536262204,
+        4.16436039718659,
+        0.7892742718314718
+      ],
+      "host_before": {
+        "mem_available_gib": 19.018726348876953,
+        "load_average": [
+          2.88818359375,
+          2.38037109375,
+          1.953125
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 21.157989501953125,
+        "load_average": [
+          2.81689453125,
+          2.3740234375,
+          1.95361328125
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "normal_residual": {
+        "joint_RMS_Nm": 7.6279861061455065,
+        "joint_norm_p99_Nm": 44.04415435198179,
+        "horizontal_wrench_available": true,
+        "horizontal_wrench_RMS_N": 16.329161834807593,
+        "horizontal_wrench_norm_p99_N": 51.61404031663417
+      },
+      "private_raw_sha256": "2bb6a91de31f24d1bc559c63f3c4385a4a5421517bea9b3e2384f6d90c4cc01d",
+      "private_raw_basename": "validation_C3_NRIC_g4_servo_0003.npz"
+    },
+    {
+      "variant": "C3_NRIC_g4",
+      "specification": {
+        "id": "C3_NRIC_g4",
+        "family": "C3",
+        "law": "NRIC",
+        "gamma": 4.0
+      },
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 0,
+      "mass": 1.05,
+      "com": [
+        -0.012517337623852947,
+        0.0018676478937204935,
+        0.0013713845904671142
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "kind": "reference",
+      "official": false,
+      "stage": "validation",
+      "rms_mm": 4.203463851844718,
+      "max_mm": 8.658468558467488,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 99.92321648082404,
+      "torque_step_place_nm": 5.093163007048176,
+      "table_force_place_max_n": 13.896678546177977,
+      "false_alarms_pick": 2,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.7205557550741364,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.06995347362498289,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 13.896678546177977,
+        "place_peak_over_mg": 1.3491266002794016
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 346.048,
+            "p99_us": 502.59340000000014,
+            "max_us": 911.176,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5727,
+              210,
+              55,
+              8,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 344.849,
+            "p99_us": 501.4720000000001,
+            "max_us": 909.496,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5729,
+              209,
+              54,
+              8,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 88.905,
+            "p99_us": 215.06629000000015,
+            "max_us": 312.748,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              1,
+              3402,
+              70,
+              14,
+              2077,
+              317,
+              92,
+              23,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 87.3995,
+            "p99_us": 213.4395,
+            "max_us": 311.059,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              49,
+              3365,
+              59,
+              50,
+              2094,
+              269,
+              90,
+              22,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 440.8935,
+            "p99_us": 703.4380100000001,
+            "max_us": 1136.896,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3897,
+              2065,
+              27,
+              11,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 438.26800000000003,
+            "p99_us": 699.0631000000002,
+            "max_us": 1133.396,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4115,
+              1848,
+              26,
+              11,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [
+          {
+            "cycle": 3573,
+            "simulated_t_s": 3.573,
+            "controller": {
+              "wall_ns": 776817,
+              "cpu_ns": 775187,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 312748,
+              "cpu_ns": 311059,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1089565,
+              "cpu_ns": 1086246,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 3574,
+            "simulated_t_s": 3.5740000000000003,
+            "controller": {
+              "wall_ns": 749438,
+              "cpu_ns": 747867,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 294059,
+              "cpu_ns": 292359,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1043497,
+              "cpu_ns": 1040226,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 3575,
+            "simulated_t_s": 3.575,
+            "controller": {
+              "wall_ns": 743747,
+              "cpu_ns": 742228,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 301229,
+              "cpu_ns": 299539,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1044976,
+              "cpu_ns": 1041767,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 3576,
+            "simulated_t_s": 3.576,
+            "controller": {
+              "wall_ns": 749787,
+              "cpu_ns": 748168,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 299549,
+              "cpu_ns": 297779,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1049336,
+              "cpu_ns": 1045947,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 3577,
+            "simulated_t_s": 3.577,
+            "controller": {
+              "wall_ns": 727617,
+              "cpu_ns": 726037,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 283569,
+              "cpu_ns": 281919,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1011186,
+              "cpu_ns": 1007956,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 3578,
+            "simulated_t_s": 3.5780000000000003,
+            "controller": {
+              "wall_ns": 838077,
+              "cpu_ns": 836387,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 298819,
+              "cpu_ns": 297009,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1136896,
+              "cpu_ns": 1133396,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 3579,
+            "simulated_t_s": 3.579,
+            "controller": {
+              "wall_ns": 735577,
+              "cpu_ns": 733947,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 294669,
+              "cpu_ns": 292969,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1030246,
+              "cpu_ns": 1026916,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 3580,
+            "simulated_t_s": 3.58,
+            "controller": {
+              "wall_ns": 744867,
+              "cpu_ns": 743207,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 274538,
+              "cpu_ns": 272899,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1019405,
+              "cpu_ns": 1016106,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 3581,
+            "simulated_t_s": 3.581,
+            "controller": {
+              "wall_ns": 740058,
+              "cpu_ns": 738537,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 302129,
+              "cpu_ns": 300679,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1042187,
+              "cpu_ns": 1039216,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 4770,
+            "simulated_t_s": 4.7700000000000005,
+            "controller": {
+              "wall_ns": 868826,
+              "cpu_ns": 867347,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 155020,
+              "cpu_ns": 153109,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1023846,
+              "cpu_ns": 1020456,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 4916,
+            "simulated_t_s": 4.916,
+            "controller": {
+              "wall_ns": 911176,
+              "cpu_ns": 909496,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 151569,
+              "cpu_ns": 149690,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1062745,
+              "cpu_ns": 1059186,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          }
+        ],
+        "capacity_guard_count": 24,
+        "capacity_guard_max_foreign_heavy_count": 0,
+        "capacity_guard_peak_load_average_1min": 2.81689453125,
+        "capacity_guard_min_mem_available_gib": 21.12427520751953
+      },
+      "false_alarms": 2,
+      "false_alarm_times": [
+        1.522,
+        1.578
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "tool_contact_delay_ms": null,
+      "tool_contact_peak_n": 0.0,
+      "r_peak_nm": [
+        50.348910660587556,
+        13.07440575251233,
+        6.243069818655628,
+        3.515197944030546,
+        1.3228478508790968,
+        0.4213940248692453
+      ],
+      "host_before": {
+        "mem_available_gib": 21.176612854003906,
+        "load_average": [
+          2.81689453125,
+          2.3740234375,
+          1.95361328125
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 21.19687271118164,
+        "load_average": [
+          2.67138671875,
+          2.35107421875,
+          1.9482421875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "normal_residual": {
+        "joint_RMS_Nm": 6.905948634609915,
+        "joint_norm_p99_Nm": 42.74958828712634,
+        "horizontal_wrench_available": true,
+        "horizontal_wrench_RMS_N": 15.253842360166809,
+        "horizontal_wrench_norm_p99_N": 51.22877479996347
+      },
+      "private_raw_sha256": "9b2fa81cffc0990cf50744f98a1b0c7e6f07145f0066965475b1fb56190628ce",
+      "private_raw_basename": "validation_C3_NRIC_g4_torque_0000.npz"
+    },
+    {
+      "variant": "C3_NRIC_g4",
+      "specification": {
+        "id": "C3_NRIC_g4",
+        "family": "C3",
+        "law": "NRIC",
+        "gamma": 4.0
+      },
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 1,
+      "mass": 3.15,
+      "com": [
+        0.01062966387499897,
+        -0.01599168205615972,
+        0.044504226384714
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "kind": "reference",
+      "official": false,
+      "stage": "validation",
+      "rms_mm": 5.466043364082163,
+      "max_mm": 13.80076597884344,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 109.18796438691933,
+      "torque_step_place_nm": 6.893741397120351,
+      "table_force_place_max_n": 47.427317856684525,
+      "false_alarms_pick": 2,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 2.6325985429522647,
+        "table_min_n": 0.2862333692406242,
+        "table_mean_over_mg": 0.08519322825598319,
+        "table_min_over_mg": 0.009262766184186016,
+        "place_peak_n": 47.427317856684525,
+        "place_peak_over_mg": 1.5347901511798625
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 347.2885,
+            "p99_us": 549.7321000000003,
+            "max_us": 776.197,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5572,
+              319,
+              106,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 346.0985,
+            "p99_us": 548.3410000000002,
+            "max_us": 774.547,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5581,
+              311,
+              105,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 93.275,
+            "p99_us": 199.41060000000002,
+            "max_us": 316.119,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              8,
+              3183,
+              203,
+              83,
+              2198,
+              266,
+              48,
+              8,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 91.80000000000001,
+            "p99_us": 197.66120000000004,
+            "max_us": 307.159,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              102,
+              3120,
+              181,
+              98,
+              2197,
+              250,
+              41,
+              8,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 461.543,
+            "p99_us": 687.2074900000002,
+            "max_us": 1002.767,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              3535,
+              2430,
+              33,
+              1,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 458.5635,
+            "p99_us": 683.6911000000003,
+            "max_us": 999.216,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              13,
+              3748,
+              2205,
+              34,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [
+          {
+            "cycle": 3814,
+            "simulated_t_s": 3.814,
+            "controller": {
+              "wall_ns": 724418,
+              "cpu_ns": 722717,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 278349,
+              "cpu_ns": 276499,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1002767,
+              "cpu_ns": 999216,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          }
+        ],
+        "capacity_guard_count": 24,
+        "capacity_guard_max_foreign_heavy_count": 0,
+        "capacity_guard_peak_load_average_1min": 2.69775390625,
+        "capacity_guard_min_mem_available_gib": 21.181941986083984
+      },
+      "false_alarms": 2,
+      "false_alarm_times": [
+        1.5250000000000001,
+        1.564
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "tool_contact_delay_ms": null,
+      "tool_contact_peak_n": 0.0,
+      "r_peak_nm": [
+        53.1409256874225,
+        17.735815748670603,
+        9.258279884470594,
+        5.4622968153194895,
+        2.34603812403103,
+        0.6092969079801435
+      ],
+      "host_before": {
+        "mem_available_gib": 21.258228302001953,
+        "load_average": [
+          2.67138671875,
+          2.35107421875,
+          1.9482421875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 21.207866668701172,
+        "load_average": [
+          2.69775390625,
+          2.3623046875,
+          1.9541015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "normal_residual": {
+        "joint_RMS_Nm": 7.744984311291025,
+        "joint_norm_p99_Nm": 46.94523271049955,
+        "horizontal_wrench_available": true,
+        "horizontal_wrench_RMS_N": 17.061420203685834,
+        "horizontal_wrench_norm_p99_N": 56.92227061445612
+      },
+      "private_raw_sha256": "bda1efdb27e5c64379211a73d5399e75c9d491ef07180b3d73b8d3cbe1a12da9",
+      "private_raw_basename": "validation_C3_NRIC_g4_torque_0001.npz"
+    },
+    {
+      "variant": "C3_NRIC_g4",
+      "specification": {
+        "id": "C3_NRIC_g4",
+        "family": "C3",
+        "law": "NRIC",
+        "gamma": 4.0
+      },
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 2,
+      "mass": 5.65,
+      "com": [
+        0.007938484244601248,
+        -0.015420393939040364,
+        0.005329930436901642
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "kind": "reference",
+      "official": false,
+      "stage": "validation",
+      "rms_mm": 4.099465482921787,
+      "max_mm": 9.55926691568151,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 125.01020338961058,
+      "torque_step_place_nm": 10.109314421365838,
+      "table_force_place_max_n": 75.55414147335011,
+      "false_alarms_pick": 3,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 3.57248427426,
+        "table_min_n": 0.2158091858144926,
+        "table_mean_over_mg": 0.06445444461151253,
+        "table_min_over_mg": 0.003893610201158157,
+        "place_peak_n": 75.55414147335011,
+        "place_peak_over_mg": 1.3631411233498436
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 345.9385,
+            "p99_us": 585.311,
+            "max_us": 878.897,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5618,
+              234,
+              140,
+              8,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 344.729,
+            "p99_us": 583.7301100000001,
+            "max_us": 876.976,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5629,
+              226,
+              138,
+              7,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 91.269,
+            "p99_us": 203.98060000000004,
+            "max_us": 362.009,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              1,
+              3276,
+              131,
+              77,
+              2089,
+              357,
+              41,
+              20,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 89.7995,
+            "p99_us": 201.9738900000001,
+            "max_us": 352.749,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              36,
+              3267,
+              111,
+              106,
+              2084,
+              332,
+              39,
+              17,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 450.828,
+            "p99_us": 731.22139,
+            "max_us": 1201.896,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3799,
+              2150,
+              41,
+              10,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 447.908,
+            "p99_us": 727.1829000000001,
+            "max_us": 1197.385,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8,
+              4028,
+              1913,
+              42,
+              9,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [
+          {
+            "cycle": 2596,
+            "simulated_t_s": 2.596,
+            "controller": {
+              "wall_ns": 878897,
+              "cpu_ns": 876976,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 159079,
+              "cpu_ns": 157490,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1037976,
+              "cpu_ns": 1034466,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 2719,
+            "simulated_t_s": 2.719,
+            "controller": {
+              "wall_ns": 768107,
+              "cpu_ns": 765977,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 294738,
+              "cpu_ns": 292679,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1062845,
+              "cpu_ns": 1058656,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 2720,
+            "simulated_t_s": 2.72,
+            "controller": {
+              "wall_ns": 744247,
+              "cpu_ns": 742217,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 308848,
+              "cpu_ns": 306629,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1053095,
+              "cpu_ns": 1048846,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 2721,
+            "simulated_t_s": 2.721,
+            "controller": {
+              "wall_ns": 660358,
+              "cpu_ns": 651347,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "detector": {
+              "wall_ns": 342318,
+              "cpu_ns": 331039,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 1002676,
+              "cpu_ns": 982386,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 2
+            }
+          },
+          {
+            "cycle": 2796,
+            "simulated_t_s": 2.7960000000000003,
+            "controller": {
+              "wall_ns": 821247,
+              "cpu_ns": 819217,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 199989,
+              "cpu_ns": 197930,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1021236,
+              "cpu_ns": 1017147,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 2797,
+            "simulated_t_s": 2.797,
+            "controller": {
+              "wall_ns": 807497,
+              "cpu_ns": 805277,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 320588,
+              "cpu_ns": 318428,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1128085,
+              "cpu_ns": 1123705,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 2847,
+            "simulated_t_s": 2.847,
+            "controller": {
+              "wall_ns": 785837,
+              "cpu_ns": 783817,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 308009,
+              "cpu_ns": 306018,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1093846,
+              "cpu_ns": 1089835,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 2947,
+            "simulated_t_s": 2.947,
+            "controller": {
+              "wall_ns": 720997,
+              "cpu_ns": 719388,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 287698,
+              "cpu_ns": 285619,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1008695,
+              "cpu_ns": 1005007,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 3443,
+            "simulated_t_s": 3.443,
+            "controller": {
+              "wall_ns": 766597,
+              "cpu_ns": 764607,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 261919,
+              "cpu_ns": 260219,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1028516,
+              "cpu_ns": 1024826,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 3444,
+            "simulated_t_s": 3.444,
+            "controller": {
+              "wall_ns": 869367,
+              "cpu_ns": 867117,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 332529,
+              "cpu_ns": 330268,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1201896,
+              "cpu_ns": 1197385,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          }
+        ],
+        "capacity_guard_count": 24,
+        "capacity_guard_max_foreign_heavy_count": 0,
+        "capacity_guard_peak_load_average_1min": 2.69775390625,
+        "capacity_guard_min_mem_available_gib": 21.21570587158203
+      },
+      "false_alarms": 3,
+      "false_alarm_times": [
+        1.524,
+        1.559,
+        1.588
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "tool_contact_delay_ms": null,
+      "tool_contact_peak_n": 0.0,
+      "r_peak_nm": [
+        62.1349803477647,
+        18.404310278753822,
+        15.905970509682673,
+        7.516808208731129,
+        2.749163781221911,
+        0.7157161731332925
+      ],
+      "host_before": {
+        "mem_available_gib": 21.274486541748047,
+        "load_average": [
+          2.69775390625,
+          2.3623046875,
+          1.9541015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 21.226898193359375,
+        "load_average": [
+          2.5615234375,
+          2.33935546875,
+          1.94873046875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "normal_residual": {
+        "joint_RMS_Nm": 7.832627525678582,
+        "joint_norm_p99_Nm": 41.14774527474927,
+        "horizontal_wrench_available": true,
+        "horizontal_wrench_RMS_N": 17.300978827644634,
+        "horizontal_wrench_norm_p99_N": 54.23428574633244
+      },
+      "private_raw_sha256": "ad0340c384806be9084d4d8899747978000ef72cf10c7b366de59a2a3c9c1af0",
+      "private_raw_basename": "validation_C3_NRIC_g4_torque_0002.npz"
+    },
+    {
+      "variant": "C3_NRIC_g4",
+      "specification": {
+        "id": "C3_NRIC_g4",
+        "family": "C3",
+        "law": "NRIC",
+        "gamma": 4.0
+      },
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 3,
+      "mass": 7.55,
+      "com": [
+        0.0012158721532806727,
+        0.009949278222978121,
+        0.025450306694260315
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "kind": "reference",
+      "official": false,
+      "stage": "validation",
+      "rms_mm": 6.477004924785572,
+      "max_mm": 15.03188884066041,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 97.80004112801842,
+      "torque_step_place_nm": 17.430260583232922,
+      "table_force_place_max_n": 213.21386441999726,
+      "false_alarms_pick": 2,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.0,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 213.21386441999726,
+        "place_peak_over_mg": 2.878720381554128
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 346.524,
+            "p99_us": 582.8187100000007,
+            "max_us": 919.286,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5609,
+              259,
+              121,
+              11,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 345.329,
+            "p99_us": 577.5235000000008,
+            "max_us": 878.026,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5612,
+              258,
+              119,
+              11,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 90.8545,
+            "p99_us": 231.11130000000006,
+            "max_us": 293.339,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              3290,
+              140,
+              54,
+              2098,
+              311,
+              69,
+              38,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 89.36449999999999,
+            "p99_us": 229.5192,
+            "max_us": 291.799,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              11,
+              3302,
+              124,
+              63,
+              2110,
+              290,
+              63,
+              37,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 448.783,
+            "p99_us": 771.8748900000012,
+            "max_us": 1070.216,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3732,
+              2199,
+              67,
+              2,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 446.1035,
+            "p99_us": 763.9347000000009,
+            "max_us": 1027.156,
+            "histogram_edges_us": [
+              0.0,
+              25.0,
+              50.0,
+              75.0,
+              100.0,
+              125.0,
+              150.0,
+              175.0,
+              200.0,
+              250.0,
+              300.0,
+              400.0,
+              500.0,
+              750.0,
+              1000.0,
+              2000.0,
+              5000.0,
+              10000.0,
+              1000000.0
+            ],
+            "histogram_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              3962,
+              1970,
+              65,
+              2,
+              0,
+              0,
+              0
+            ],
+            "histogram_underflow": 0,
+            "histogram_overflow": 0
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [
+          {
+            "cycle": 2508,
+            "simulated_t_s": 2.508,
+            "controller": {
+              "wall_ns": 743137,
+              "cpu_ns": 741427,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 272709,
+              "cpu_ns": 270549,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1015846,
+              "cpu_ns": 1011976,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "cycle": 5564,
+            "simulated_t_s": 5.564,
+            "controller": {
+              "wall_ns": 919286,
+              "cpu_ns": 878026,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "detector": {
+              "wall_ns": 150930,
+              "cpu_ns": 149130,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1070216,
+              "cpu_ns": 1027156,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          }
+        ],
+        "capacity_guard_count": 24,
+        "capacity_guard_max_foreign_heavy_count": 0,
+        "capacity_guard_peak_load_average_1min": 2.5615234375,
+        "capacity_guard_min_mem_available_gib": 21.113933563232422
+      },
+      "false_alarms": 2,
+      "false_alarm_times": [
+        1.532,
+        1.574
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "tool_contact_delay_ms": null,
+      "tool_contact_peak_n": 0.0,
+      "r_peak_nm": [
+        55.3360612646368,
+        24.31704476845938,
+        19.003967022245565,
+        8.998898252741936,
+        3.220791040148563,
+        0.8058366494105225
+      ],
+      "host_before": {
+        "mem_available_gib": 21.25969696044922,
+        "load_average": [
+          2.5615234375,
+          2.33935546875,
+          1.94873046875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 21.150184631347656,
+        "load_average": [
+          2.5615234375,
+          2.33935546875,
+          1.94873046875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "normal_residual": {
+        "joint_RMS_Nm": 8.322264889293312,
+        "joint_norm_p99_Nm": 43.133777817353355,
+        "horizontal_wrench_available": true,
+        "horizontal_wrench_RMS_N": 18.239058841719125,
+        "horizontal_wrench_norm_p99_N": 55.01956525077388
+      },
+      "private_raw_sha256": "662a1052d973c54fb36acd37e8f016deeb6a6f939e075b4c26aa1a0acf16c3ae",
+      "private_raw_basename": "validation_C3_NRIC_g4_torque_0003.npz"
+    }
+  ],
+  "publication_note": "Raw process IDs omitted. Every case, numeric metric, eigenvalue, load/RAM summary and timing outlier is retained. Evidence hashes elsewhere may name the original work record; published-byte hashes are in artifacts/SHA256SUMS.",
+  "private_raw_sha256": "5fc18c1677cddd432df4ae9d8462c22c4886f87af706cf39395598834d2f52b1"
+}

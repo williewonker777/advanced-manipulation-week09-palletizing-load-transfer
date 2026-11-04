@@ -1,0 +1,728 @@
+{
+  "schema_version": 3,
+  "generation_command": "env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 MUJOCO_GL=glfw LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe __GLX_VENDOR_LIBRARY_NAME=mesa .venv/bin/python tools/render_r2_comparison.py --output-dir artifacts/media --raw-dir \"$RAW_DIR\" --ffmpeg ffmpeg",
+  "simulation_source": "sixteen fresh sequential public run_episode episodes: matched no-collision and collision for four displayed variants in two nonofficial 3.7 kg examples",
+  "scope_note": "Illustrative multidirectional transport examples only; not official evaluation, holdout evidence, or a model-selection input.",
+  "rendering_note": "qpos replay in separate MjData with an identical camera/time cursor for four columns",
+  "software_gl": {
+    "vendor": "Mesa",
+    "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+    "version": "4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2"
+  },
+  "ffmpeg": "ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers",
+  "source_hashes": {
+    "collision_detector.py": "fe4b1101ba41ffa46e04500f7153a0c569125b20083d8cd3a9fe6d8d69bda884",
+    "my_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "r1_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "servo_controller.py": "50b5d2b05a45d540615a4af4373780d86872c60c8049c8af75dd6a4c4836e416",
+    "sim/runner.py": "3cf99c21b93f431cc57a0929e4d05b083fb8f35f06dc52bc2d2ddcde3e55ed1f",
+    "tools/render_r2_comparison.py": "de73a767a95cfc8e33979bba2b1ae4458fefdaac576fa2d222bc35011e414d42",
+    "torque_controller.py": "a9d13fcddf89d9ab9bb92346bafe6d2d18b76cd5d605710cbdf3d9dddb8619d9",
+    "v1_detector.py": "fbb3cef5c81fd34a076bca69ae7ea3eac4ed2221a9cef39a37e40d6142f8f8dd",
+    "v1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "v1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+  },
+  "identical_source_aliases": {
+    "my_servo.py": "r1_servo.py",
+    "my_torque.py": "r1_torque.py",
+    "my_detector.py": "r1_detector.py"
+  },
+  "integrity_before": {
+    "status": "ok",
+    "files": 20,
+    "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "integrity_after": {
+    "status": "ok",
+    "files": 20,
+    "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "total_media_bytes": 2334022,
+  "scenarios": [
+    {
+      "name": "07_r2_servo_comparison",
+      "condition": {
+        "mode": "servo",
+        "box_mass_kg": 3.7,
+        "box_com_m": [
+          0.02,
+          -0.01,
+          0.03
+        ],
+        "collision": {
+          "time_s": 3.0,
+          "force_n": [
+            0.0,
+            15.0,
+            0.0
+          ]
+        }
+      },
+      "variants": {
+        "baseline": {
+          "controller": "servo_controller",
+          "detector": "collision_detector"
+        },
+        "v1": {
+          "controller": "v1_servo",
+          "detector": "v1_detector"
+        },
+        "r1": {
+          "controller": "r1_servo",
+          "detector": "r1_detector"
+        },
+        "r2": {
+          "controller": "my_servo",
+          "detector": "my_detector"
+        }
+      },
+      "display_labels": {
+        "baseline": "기준",
+        "v1": "v1",
+        "r1": "R1",
+        "r2": "R2=R1 (동일 바이트)"
+      },
+      "plot_signals": {
+        "g4_support_normalized": "recorded f_table / (box_mass_kg * 9.81)",
+        "offline_wrench": "nominal Jacobian true-q display only"
+      },
+      "timewarp": [
+        {
+          "simulation_start_s": 0.0,
+          "simulation_end_s": 1.25,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 1.25,
+          "simulation_end_s": 1.7,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 1.7,
+          "simulation_end_s": 2.85,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 2.85,
+          "simulation_end_s": 3.3,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 3.3,
+          "simulation_end_s": 3.65,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 3.65,
+          "simulation_end_s": 4.2,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 4.2,
+          "simulation_end_s": 6.0,
+          "playback_speed": 1.3
+        }
+      ],
+      "source_simulation_frames": {
+        "baseline": 6000,
+        "v1": 6000,
+        "r1": 6000,
+        "r2": 6000
+      },
+      "rendered_frame_count": 115,
+      "software_gl": {
+        "vendor": "Mesa",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "version": "4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2"
+      },
+      "episode_summary": {
+        "baseline": {
+          "tcp_rms_mm": 5.34,
+          "tcp_max_mm": 12.37,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.148,
+          "false_alarm_rises_in_this_episode": 7,
+          "false_alarm_times_s": [
+            1.404,
+            1.413,
+            1.429,
+            3.867,
+            3.893,
+            3.896,
+            3.913
+          ],
+          "detect_delay_ms_raw": 97,
+          "alarm_before_collision": false,
+          "diverged": false
+        },
+        "v1": {
+          "tcp_rms_mm": 1.31,
+          "tcp_max_mm": 3.84,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.144,
+          "false_alarm_rises_in_this_episode": 0,
+          "false_alarm_times_s": [],
+          "detect_delay_ms_raw": 77,
+          "alarm_before_collision": false,
+          "diverged": false
+        },
+        "r1": {
+          "tcp_rms_mm": 1.31,
+          "tcp_max_mm": 3.84,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.144,
+          "false_alarm_rises_in_this_episode": 0,
+          "false_alarm_times_s": [],
+          "detect_delay_ms_raw": 43,
+          "alarm_before_collision": false,
+          "diverged": false
+        },
+        "r2": {
+          "tcp_rms_mm": 1.31,
+          "tcp_max_mm": 3.84,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.144,
+          "false_alarm_rises_in_this_episode": 0,
+          "false_alarm_times_s": [],
+          "detect_delay_ms_raw": 43,
+          "alarm_before_collision": false,
+          "diverged": false
+        }
+      },
+      "evaluate_classification": {
+        "baseline": {
+          "collision_outcome": "detected",
+          "collision_label": "97 ms",
+          "detect_delay_ms": 96.99999999999997,
+          "alarm_before_collision": false,
+          "false_alarms": 7,
+          "tool_contact_delay_ms": null
+        },
+        "v1": {
+          "collision_outcome": "detected",
+          "collision_label": "77 ms",
+          "detect_delay_ms": 76.99999999999996,
+          "alarm_before_collision": false,
+          "false_alarms": 0,
+          "tool_contact_delay_ms": null
+        },
+        "r1": {
+          "collision_outcome": "detected",
+          "collision_label": "43 ms",
+          "detect_delay_ms": 43.00000000000015,
+          "alarm_before_collision": false,
+          "false_alarms": 0,
+          "tool_contact_delay_ms": null
+        },
+        "r2": {
+          "collision_outcome": "detected",
+          "collision_label": "43 ms",
+          "detect_delay_ms": 43.00000000000015,
+          "alarm_before_collision": false,
+          "false_alarms": 0,
+          "tool_contact_delay_ms": null
+        }
+      },
+      "classification_method": "tools.sweep.classify_collision with matched no-collision reference",
+      "reference_no_collision": {
+        "baseline": {
+          "controller": "servo_controller",
+          "detector": "collision_detector",
+          "box_mass_kg": 3.7,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 6,
+          "resource_guard_before_reference": {
+            "mem_available_gib": 21.988048553466797,
+            "load_average": [
+              1.04736328125,
+              1.435546875,
+              1.984375
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          },
+          "resource_guard_before_collision": {
+            "mem_available_gib": 21.75208282470703,
+            "load_average": [
+              1.04736328125,
+              1.435546875,
+              1.984375
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        },
+        "v1": {
+          "controller": "v1_servo",
+          "detector": "v1_detector",
+          "box_mass_kg": 3.7,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 0,
+          "resource_guard_before_reference": {
+            "mem_available_gib": 21.685569763183594,
+            "load_average": [
+              1.04736328125,
+              1.435546875,
+              1.984375
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          },
+          "resource_guard_before_collision": {
+            "mem_available_gib": 21.60228729248047,
+            "load_average": [
+              1.1240234375,
+              1.4453125,
+              1.98486328125
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        },
+        "r1": {
+          "controller": "r1_servo",
+          "detector": "r1_detector",
+          "box_mass_kg": 3.7,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 0,
+          "resource_guard_before_reference": {
+            "mem_available_gib": 21.58383560180664,
+            "load_average": [
+              1.1240234375,
+              1.4453125,
+              1.98486328125
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          },
+          "resource_guard_before_collision": {
+            "mem_available_gib": 21.55217742919922,
+            "load_average": [
+              1.1240234375,
+              1.4453125,
+              1.98486328125
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        },
+        "r2": {
+          "controller": "my_servo",
+          "detector": "my_detector",
+          "box_mass_kg": 3.7,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 0,
+          "resource_guard_before_reference": {
+            "mem_available_gib": 21.519512176513672,
+            "load_average": [
+              1.2744140625,
+              1.47119140625,
+              1.99072265625
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          },
+          "resource_guard_before_collision": {
+            "mem_available_gib": 21.47921371459961,
+            "load_average": [
+              1.2744140625,
+              1.47119140625,
+              1.99072265625
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        }
+      },
+      "artifacts": [
+        {
+          "file": "artifacts/media/07_r2_servo_comparison.mp4",
+          "bytes": 341754,
+          "sha256": "b3ce26a60dbc38f2883c78b5ee90a66063772331f22449d03b4ab335d1fbd3de",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "15/1",
+          "r_frame_rate": "15/1",
+          "fps": 14.999999347826115,
+          "frame_count": 115,
+          "duration_s": 7.666667
+        },
+        {
+          "file": "artifacts/media/07_r2_servo_comparison.gif",
+          "bytes": 827046,
+          "sha256": "e66b0d47d6ef1fbc028ea6c78a3ac3bef3b1f364a1d807aaa2563a14abba223b",
+          "width": 640,
+          "height": 360,
+          "avg_frame_rate": "25/3",
+          "r_frame_rate": "8/1",
+          "fps": 7.99475753604194,
+          "frame_count": 61,
+          "duration_s": 7.63
+        }
+      ]
+    },
+    {
+      "name": "08_r2_torque_comparison",
+      "condition": {
+        "mode": "torque",
+        "box_mass_kg": 3.7,
+        "box_com_m": [
+          0.02,
+          -0.01,
+          0.03
+        ],
+        "collision": {
+          "time_s": 3.0,
+          "force_n": [
+            -15.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "variants": {
+        "baseline": {
+          "controller": "torque_controller",
+          "detector": "collision_detector"
+        },
+        "v1": {
+          "controller": "v1_torque",
+          "detector": "v1_detector"
+        },
+        "r1": {
+          "controller": "r1_torque",
+          "detector": "r1_detector"
+        },
+        "r2": {
+          "controller": "my_torque",
+          "detector": "my_detector"
+        }
+      },
+      "display_labels": {
+        "baseline": "기준",
+        "v1": "v1",
+        "r1": "R1",
+        "r2": "R2=R1 (동일 바이트)"
+      },
+      "plot_signals": {
+        "g4_support_normalized": "recorded f_table / (box_mass_kg * 9.81)",
+        "offline_wrench": "nominal Jacobian true-q display only"
+      },
+      "timewarp": [
+        {
+          "simulation_start_s": 0.0,
+          "simulation_end_s": 1.25,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 1.25,
+          "simulation_end_s": 1.7,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 1.7,
+          "simulation_end_s": 2.85,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 2.85,
+          "simulation_end_s": 3.3,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 3.3,
+          "simulation_end_s": 3.65,
+          "playback_speed": 1.3
+        },
+        {
+          "simulation_start_s": 3.65,
+          "simulation_end_s": 4.2,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 4.2,
+          "simulation_end_s": 6.0,
+          "playback_speed": 1.3
+        }
+      ],
+      "source_simulation_frames": {
+        "baseline": 6000,
+        "v1": 6000,
+        "r1": 6000,
+        "r2": 6000
+      },
+      "rendered_frame_count": 115,
+      "software_gl": {
+        "vendor": "Mesa",
+        "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "version": "4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2"
+      },
+      "episode_summary": {
+        "baseline": {
+          "tcp_rms_mm": 6.55,
+          "tcp_max_mm": 13.12,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.328,
+          "false_alarm_rises_in_this_episode": 10,
+          "false_alarm_times_s": [
+            1.405,
+            1.407,
+            1.409,
+            1.418,
+            1.428,
+            1.435,
+            3.828,
+            3.894,
+            3.896,
+            3.91
+          ],
+          "detect_delay_ms_raw": 97,
+          "alarm_before_collision": false,
+          "diverged": false
+        },
+        "v1": {
+          "tcp_rms_mm": 2.92,
+          "tcp_max_mm": 8.83,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.077,
+          "false_alarm_rises_in_this_episode": 0,
+          "false_alarm_times_s": [],
+          "detect_delay_ms_raw": null,
+          "alarm_before_collision": false,
+          "diverged": false
+        },
+        "r1": {
+          "tcp_rms_mm": 2.92,
+          "tcp_max_mm": 8.83,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.077,
+          "false_alarm_rises_in_this_episode": 0,
+          "false_alarm_times_s": [],
+          "detect_delay_ms_raw": 43,
+          "alarm_before_collision": false,
+          "diverged": false
+        },
+        "r2": {
+          "tcp_rms_mm": 2.92,
+          "tcp_max_mm": 8.83,
+          "saturation_pct": 0.0,
+          "torque_jitter": 0.077,
+          "false_alarm_rises_in_this_episode": 0,
+          "false_alarm_times_s": [],
+          "detect_delay_ms_raw": 43,
+          "alarm_before_collision": false,
+          "diverged": false
+        }
+      },
+      "evaluate_classification": {
+        "baseline": {
+          "collision_outcome": "detected",
+          "collision_label": "97 ms",
+          "detect_delay_ms": 96.99999999999997,
+          "alarm_before_collision": false,
+          "false_alarms": 10,
+          "tool_contact_delay_ms": null
+        },
+        "v1": {
+          "collision_outcome": "missed",
+          "collision_label": "놓침",
+          "detect_delay_ms": null,
+          "alarm_before_collision": false,
+          "false_alarms": 0,
+          "tool_contact_delay_ms": null
+        },
+        "r1": {
+          "collision_outcome": "detected",
+          "collision_label": "43 ms",
+          "detect_delay_ms": 43.00000000000015,
+          "alarm_before_collision": false,
+          "false_alarms": 0,
+          "tool_contact_delay_ms": null
+        },
+        "r2": {
+          "collision_outcome": "detected",
+          "collision_label": "43 ms",
+          "detect_delay_ms": 43.00000000000015,
+          "alarm_before_collision": false,
+          "false_alarms": 0,
+          "tool_contact_delay_ms": null
+        }
+      },
+      "classification_method": "tools.sweep.classify_collision with matched no-collision reference",
+      "reference_no_collision": {
+        "baseline": {
+          "controller": "torque_controller",
+          "detector": "collision_detector",
+          "box_mass_kg": 3.7,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 10,
+          "resource_guard_before_reference": {
+            "mem_available_gib": 21.49779510498047,
+            "load_average": [
+              1.2744140625,
+              1.47119140625,
+              1.99072265625
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          },
+          "resource_guard_before_collision": {
+            "mem_available_gib": 21.473621368408203,
+            "load_average": [
+              1.2744140625,
+              1.47119140625,
+              1.99072265625
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        },
+        "v1": {
+          "controller": "v1_torque",
+          "detector": "v1_detector",
+          "box_mass_kg": 3.7,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 0,
+          "resource_guard_before_reference": {
+            "mem_available_gib": 21.4156494140625,
+            "load_average": [
+              1.251953125,
+              1.462890625,
+              1.9853515625
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          },
+          "resource_guard_before_collision": {
+            "mem_available_gib": 21.392250061035156,
+            "load_average": [
+              1.251953125,
+              1.462890625,
+              1.9853515625
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        },
+        "r1": {
+          "controller": "r1_torque",
+          "detector": "r1_detector",
+          "box_mass_kg": 3.7,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 0,
+          "resource_guard_before_reference": {
+            "mem_available_gib": 21.359996795654297,
+            "load_average": [
+              1.251953125,
+              1.462890625,
+              1.9853515625
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          },
+          "resource_guard_before_collision": {
+            "mem_available_gib": 21.299846649169922,
+            "load_average": [
+              1.2314453125,
+              1.455078125,
+              1.97998046875
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        },
+        "r2": {
+          "controller": "my_torque",
+          "detector": "my_detector",
+          "box_mass_kg": 3.7,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "false_alarm_rises": 0,
+          "resource_guard_before_reference": {
+            "mem_available_gib": 21.318561553955078,
+            "load_average": [
+              1.2314453125,
+              1.455078125,
+              1.97998046875
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          },
+          "resource_guard_before_collision": {
+            "mem_available_gib": 21.309967041015625,
+            "load_average": [
+              1.2314453125,
+              1.455078125,
+              1.97998046875
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        }
+      },
+      "artifacts": [
+        {
+          "file": "artifacts/media/08_r2_torque_comparison.mp4",
+          "bytes": 338669,
+          "sha256": "feec7efcad168790e3dfd73f159bd1e1bae45473882290f85ab0c11c99189a9f",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "15/1",
+          "r_frame_rate": "15/1",
+          "fps": 14.999999347826115,
+          "frame_count": 115,
+          "duration_s": 7.666667
+        },
+        {
+          "file": "artifacts/media/08_r2_torque_comparison.gif",
+          "bytes": 826553,
+          "sha256": "38819193c5901aa3fc36fabdf19d865bc2ef27a8c3e7011f410a4d160d3f11a4",
+          "width": 640,
+          "height": 360,
+          "avg_frame_rate": "25/3",
+          "r_frame_rate": "8/1",
+          "fps": 7.99475753604194,
+          "frame_count": 61,
+          "duration_s": 7.63
+        }
+      ]
+    }
+  ],
+  "publication_note": "Raw process IDs omitted. Every case, numeric metric, eigenvalue, load/RAM summary and timing outlier is retained. Evidence hashes elsewhere may name the original work record; published-byte hashes are in artifacts/SHA256SUMS.",
+  "private_raw_sha256": "aa7d85c7559bca1b5fe4483b0243499ac304b116ce3773038b998b2b313b4747"
+}

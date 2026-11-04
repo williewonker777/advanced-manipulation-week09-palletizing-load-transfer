@@ -1,0 +1,349 @@
+{
+  "schema": "R2_TIMING_REVIEW.v1",
+  "official": false,
+  "source_sha256": {
+    "R2_VALIDATION_R1.json": "3dda136c0948ba5a4744ace72c71ba5ecdce604e285d566dc9da6086e8a954ed",
+    "R2_DEVELOPMENT_R1.json": "d649333ba8d57e927c378091dbd6248eca4fd3221a6a478d5875764730740b36",
+    "R2_PERTURBATIONS.json": "14ddd80c3f5ede1c1d726791ec88ff98bd77afa77c7ce8d8cd42a9172980fbd5",
+    "R2_HOLDOUT.json": "d0804684dbd1b80539b3c6866417b8ee58c9e01d124d2fad147f77d6fdcb24d7"
+  },
+  "scope": "fresh final-R1-source measurements; finalR2 aliasesR1, not independently run new implementation",
+  "strict_goal_max_us": 1000,
+  "strict_goal_met": false,
+  "global_GC_settings_changed": false,
+  "observations": "Wall/threadCPU/context counts retained; long CPU without switches is compatible with interpreter/allocation/GC work but does not uniquely establish the original event cause. Earlier R1 passive replay GC correlations are historical supporting evidence only.",
+  "results": [
+    {
+      "architecture": "servo",
+      "rows": 102,
+      "cycles": 612000,
+      "largest_row_p99_us": 334.7628000000001,
+      "maximum_wall_us": 5576.324,
+      "same_cycle_thread_CPU_us": 5573.779,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "overrun_cycles": 1,
+      "worst": {
+        "source": "R2_PERTURBATIONS.json",
+        "case_id": 2,
+        "stage": "perturb",
+        "mass": 8.0,
+        "event": {
+          "cycle": 3475,
+          "simulated_t_s": 3.475,
+          "controller": {
+            "wall_ns": 35340,
+            "cpu_ns": 34410,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5540984,
+            "cpu_ns": 5539369,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 5576324,
+            "cpu_ns": 5573779,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        "host_before": {
+          "mem_available_gib": 19.33708953857422,
+          "load_average": [
+            2.7919921875,
+            2.74658203125,
+            2.6572265625
+          ],
+          "foreign_heavy_python_count": 0,
+          "owned_simulation_workers": 1
+        }
+      },
+      "all_overruns": [
+        {
+          "source": "R2_PERTURBATIONS.json",
+          "case_id": 2,
+          "stage": "perturb",
+          "mass": 8.0,
+          "event": {
+            "cycle": 3475,
+            "simulated_t_s": 3.475,
+            "controller": {
+              "wall_ns": 35340,
+              "cpu_ns": 34410,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 5540984,
+              "cpu_ns": 5539369,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 5576324,
+              "cpu_ns": 5573779,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          "host_before": {
+            "mem_available_gib": 19.33708953857422,
+            "load_average": [
+              2.7919921875,
+              2.74658203125,
+              2.6572265625
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        }
+      ]
+    },
+    {
+      "architecture": "torque",
+      "rows": 102,
+      "cycles": 612000,
+      "largest_row_p99_us": 363.10929999999996,
+      "maximum_wall_us": 6016.548,
+      "same_cycle_thread_CPU_us": 6014.207,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "overrun_cycles": 5,
+      "worst": {
+        "source": "R2_HOLDOUT.json",
+        "case_id": 24,
+        "stage": "holdout",
+        "mass": 0.75,
+        "event": {
+          "cycle": 703,
+          "simulated_t_s": 0.7030000000000001,
+          "controller": {
+            "wall_ns": 38069,
+            "cpu_ns": 37130,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5978479,
+            "cpu_ns": 5977077,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 6016548,
+            "cpu_ns": 6014207,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        "host_before": {
+          "mem_available_gib": 19.775413513183594,
+          "load_average": [
+            2.64501953125,
+            2.66845703125,
+            2.67333984375
+          ],
+          "foreign_heavy_python_count": 0,
+          "owned_simulation_workers": 1
+        }
+      },
+      "all_overruns": [
+        {
+          "source": "R2_DEVELOPMENT_R1.json",
+          "case_id": 3,
+          "stage": "development",
+          "mass": 1.35,
+          "event": {
+            "cycle": 359,
+            "simulated_t_s": 0.359,
+            "controller": {
+              "wall_ns": 39580,
+              "cpu_ns": 38630,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 4973661,
+              "cpu_ns": 4960481,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 2
+            },
+            "combined": {
+              "wall_ns": 5013241,
+              "cpu_ns": 4999111,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 2
+            }
+          },
+          "host_before": {
+            "mem_available_gib": 18.60690689086914,
+            "load_average": [
+              3.21044921875,
+              2.6240234375,
+              2.3544921875
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        },
+        {
+          "source": "R2_DEVELOPMENT_R1.json",
+          "case_id": 7,
+          "stage": "development",
+          "mass": 7.25,
+          "event": {
+            "cycle": 358,
+            "simulated_t_s": 0.358,
+            "controller": {
+              "wall_ns": 39720,
+              "cpu_ns": 38820,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 5551278,
+              "cpu_ns": 5543969,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 5590998,
+              "cpu_ns": 5582789,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          },
+          "host_before": {
+            "mem_available_gib": 18.657611846923828,
+            "load_average": [
+              3.56591796875,
+              2.71923828125,
+              2.388671875
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        },
+        {
+          "source": "R2_DEVELOPMENT_R1.json",
+          "case_id": 11,
+          "stage": "development",
+          "mass": 7.25,
+          "event": {
+            "cycle": 358,
+            "simulated_t_s": 0.358,
+            "controller": {
+              "wall_ns": 39309,
+              "cpu_ns": 38389,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 5524319,
+              "cpu_ns": 5522639,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 5563628,
+              "cpu_ns": 5561028,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          "host_before": {
+            "mem_available_gib": 18.619220733642578,
+            "load_average": [
+              3.54638671875,
+              2.74462890625,
+              2.400390625
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        },
+        {
+          "source": "R2_DEVELOPMENT_R1.json",
+          "case_id": 15,
+          "stage": "development",
+          "mass": 1.35,
+          "event": {
+            "cycle": 358,
+            "simulated_t_s": 0.358,
+            "controller": {
+              "wall_ns": 39280,
+              "cpu_ns": 38390,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 5688488,
+              "cpu_ns": 5686748,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 5727768,
+              "cpu_ns": 5725138,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          "host_before": {
+            "mem_available_gib": 18.592849731445312,
+            "load_average": [
+              3.8505859375,
+              2.8359375,
+              2.43408203125
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        },
+        {
+          "source": "R2_HOLDOUT.json",
+          "case_id": 24,
+          "stage": "holdout",
+          "mass": 0.75,
+          "event": {
+            "cycle": 703,
+            "simulated_t_s": 0.7030000000000001,
+            "controller": {
+              "wall_ns": 38069,
+              "cpu_ns": 37130,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 5978479,
+              "cpu_ns": 5977077,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 6016548,
+              "cpu_ns": 6014207,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          "host_before": {
+            "mem_available_gib": 19.775413513183594,
+            "load_average": [
+              2.64501953125,
+              2.66845703125,
+              2.67333984375
+            ],
+            "foreign_heavy_python_count": 0,
+            "owned_simulation_workers": 1
+          }
+        }
+      ]
+    }
+  ],
+  "publication_note": "Raw process IDs omitted. Every case, numeric metric, eigenvalue, load/RAM summary and timing outlier is retained. Evidence hashes elsewhere may name the original work record; published-byte hashes are in artifacts/SHA256SUMS.",
+  "private_raw_sha256": "8b0f0bdf44a85004b4aafd59fbf73e30abd05bfd0c4d5ae24e7f384c0ff5f0b1"
+}

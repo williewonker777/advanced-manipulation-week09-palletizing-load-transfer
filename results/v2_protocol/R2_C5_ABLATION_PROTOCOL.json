@@ -1,0 +1,14 @@
+{
+  "registered_utc": "2026-11-04T08:56:56.613814+00:00",
+  "parent_protocol": "PROTOCOL_R2.json",
+  "reason": "Isolate pRNE from a changed normal training set; no collision/holdout/official results used",
+  "extra_diagnostic_ablation": "original R1 observer plus new ridge fitted from exactly same normal observations as pRNE+ridge",
+  "targets": "permitted-input observer last_wrench only; observed encoder/JTS replay, no Plant/log/oracle targets",
+  "method_unchanged": "normal_features77,ridge.02,thresholdmax(3,1.2maxnormalvalidation+.5),EMA.1/persistence4",
+  "seed": 369601,
+  "official_used": false,
+  "holdout_opened": false,
+  "development_started": false,
+  "new_method_or_redesign": false,
+  "adoption": "diagnostic only; not a new fallback or candidate promoted from test results"
+}

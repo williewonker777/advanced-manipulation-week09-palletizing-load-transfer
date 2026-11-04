@@ -6,7 +6,7 @@ import tempfile
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
-from tools.audit_public import audit, binary_errors, copied_blocks, guide_overlaps, media_metadata_bytes, media_tag_errors, text_errors
+from tools.audit_public import audit, binary_errors, copied_blocks, guide_overlaps, media_metadata_bytes, media_tag_errors, python_text_errors, text_errors
 
 
 def manifest(root):
@@ -18,6 +18,26 @@ def manifest(root):
 
 
 class PublicAuditTests(unittest.TestCase):
+    def test_python_matrix_multiply_is_not_mistaken_for_contact_email(self):
+        at = chr(64)
+        source = (f"force = Rref.T{at}np.array([1, 2, 3])\n"
+                  f"delta = self.R0{at}self.rotation_delta\n")
+        self.assertNotIn('contact/email', python_text_errors(source))
+
+    def test_python_email_in_string_and_comment_remains_rejected(self):
+        at = chr(64)
+        address = 'person' + at + 'example.com'
+        quoted = 'CONTACT = ' + repr(address) + '\n'
+        commented = '# owner: ' + address + '\nvalue = 1\n'
+        self.assertIn('contact/email', python_text_errors(quoted))
+        self.assertIn('contact/email', python_text_errors(commented))
+
+    def test_python_tokenize_failure_falls_back_to_full_scan(self):
+        at = chr(64)
+        address = 'person' + at + 'example.com'
+        malformed = 'value = "unterminated\n# ' + address
+        self.assertIn('contact/email', python_text_errors(malformed))
+
     def test_sensitive_content_and_binary_encoding(self):
         self.assertTrue(text_errors('/' + 'home/user/work'))
         self.assertTrue(text_errors('TASK-' + '363'))
@@ -145,6 +165,30 @@ class PublicAuditTests(unittest.TestCase):
             (media/'unexpected.txt').write_text('extra')
             result=audit(root,require_checksums=False)
             self.assertTrue(any('unexpected file in media directory' in error for error in result['errors']))
+
+    def test_r2_media_is_required_only_when_protocol_or_manifest_exists(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);media=root/'artifacts/media';media.mkdir(parents=True)
+            for stem in ('01_servo_no_collision','02_torque_no_collision',
+                         '03_servo_place_collision','04_servo_transport_collision',
+                         '05_v2_servo_transport_collision','06_v2_torque_transport_collision'):
+                for suffix in ('mp4','gif'):
+                    (media/f'{stem}.{suffix}').write_bytes(b'media')
+            for name in ('media_manifest.json','v2_manifest.json'):
+                (media/name).write_text('{}')
+            protocol=root/'results/v2_protocol/PROTOCOL_R2.json'
+            protocol.parent.mkdir(parents=True);protocol.write_text('{}')
+            with patch('tools.audit_public.media_tag_errors',return_value=[]), \
+                    patch('tools.audit_public.media_metadata_bytes',return_value=b''), \
+                    patch('tools.audit_public.binary_errors',return_value=[]):
+                missing=audit(root,ffprobe='ffprobe',require_checksums=False,require_media=True)
+                self.assertTrue(any('required eight' in error for error in missing['errors']))
+                for stem in ('07_r2_servo_comparison','08_r2_torque_comparison'):
+                    for suffix in ('mp4','gif'):
+                        (media/f'{stem}.{suffix}').write_bytes(b'media')
+                (media/'r2_manifest.json').write_text('{}')
+                complete=audit(root,ffprobe='ffprobe',require_checksums=False,require_media=True)
+            self.assertEqual(complete['status'],'pass',complete['errors'])
 
     def test_invalid_utf8_is_fail_not_traceback(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -40,7 +40,29 @@ NN이 NumPy로 불가능해서가 아니라, 구현·감사·학습 재현 비�
 
 ## 기하학 참고 (위 논문 수에 포함하지 않음)
 
-- J.Park,Y.Choi,W.K.Chung, *Lie Group Robotics: Mathematical and Computational Approach to Robot Kinematics, Dynamics, and Control*, 원고(2024-03-02), §§2.2,6.1,7.2.
-- Y.Choi, *Lie Group Robot Control*, 2024-2학기 강의자료, §§11.1,11.4,11.5.
+- J.Park,Y.Choi,W.K.Chung, *Lie Group Robotics: Mathematical and Computational Approach to Robot Kinematics, Dynamics, and Control*, 원고(2024-03-02), §§2.2,6.1. 계산 동역학 pRNE는 이 원고의 목차§8.3으로, 본문 열람을 주장하지 않는다. 이전의7.2 표기는 판본이 다른 번호였다.
+- Y.Choi, *Lie Group Robot Control*, 2024-2학기 강의자료, §§10.1.3,10.1.6,10.4,11.4,11.5. 2차 확인에서 APD/P-IDC/NRIC의 실제 절 번호를 다시 확인했다.
 
 프레임·작용점이 다른 렌치를 직접 빼지 않으며 힘-속도의 power duality를 단위검사한다. 법선 병진만의 작은 보정은 일반 SE(3)제어 전체와 다르다. 공개 모델의 taught endpoint Jacobian으로 접선/회전을 유지하는 방향을 만들고, 그 고정 방향에 스칼라 변위·속도·가속도를 일관되게 더하는 **국소 근사**를 비교한다. 강체 연속시간 안정성 결과를 탄성·JTS지연·1ms이산제어의 보장으로 사용하지 않는다. 원자료·노트·그림·문장은 배포하지 않는다.
+
+## 2차 실험의 추가 확인 (2026-11-04)
+
+아래도 일반 웹에서 링크를 직접 열었다. 원문과 초록/서지의 확인 범위를
+나눴다. 코드는 가져오지 않았으며 구현은 자체 유도·탄성/이산 변형이다.
+
+| 문헌·직접 확인 링크 | 확인 사실 | 이번 적용과 추론/한계 |
+|---|---|---|
+| M.J.Kim,S.Park,W.K.Chung, *Nonlinear robust internal loop compensator for robust control of robotic manipulators*, IROS2012,DOI10.1109/IROS.2012.6386207. [저자기관 초록](https://pure.kaist.ac.kr/en/publications/nonlinear-robust-internal-loop-compensator-for-robust-control-of-/) | 명목 출력과 실제 출력 편차의 보상 구조를 제안 | C3의 독립 명목 입력 queue·편차 피드백. 정규화/포화·탄성 midpoint·지연 때문에 원 안정성 정리는 전용하지 않음 |
+| M.J.Kim,Y.Choi,W.K.Chung, *Bringing nonlinear H∞ optimality to robot controllers*, T-RO31(3),2015,682–698,DOI10.1109/TRO.2015.2419871. [저자기관 초록](https://pure.kaist.ac.kr/en/publications/bringing-nonlinear-h-optimality-to-robot-controllers/) | PID형 보조 입력과 단일 파라미터 튜닝을 설명 | C3 gamma sweep의 동기. 자체 tanh/토크 여유 제한은 최적 H∞ 해를 재현한다는 뜻이 아님 |
+| J.W.Han,M.J.Kim, *Contact-responsive high-gain robot motion controllers using a constrained disturbance observer*, Intelligent Service Robotics19,89,2026,DOI10.1007/s11370-026-00744-z. [출판사 원문 HTML](https://link.springer.com/article/10.1007/s11370-026-00744-z) | 고이득 외란 억제와 접촉 순응의 상충, 명목 동작 최적화를 결합한 C-NRIC | 접촉/충돌 중 DOB 동결과 감지기 재확인을 동기화. 논문의 최적화·실기 검증·보장을 본 후보의 것으로 쓰지 않음 |
+| J.Kim,Y.Choi,D.Lee,Y.Choi, *Linear Model Predictive Control of 6-DOF Remotely Operated Underwater Vehicle Using Nonlinear Robust Internal-loop Compensator*, J.Korea Robot.Soc.19(1),2024,8–15,DOI10.7746/jkros.2024.19.1.008. [저널 원문 PDF](https://jkros.org/xml/39598/39598.pdf) | 명목 모델 주위 NRIC와 MPC 결합을 설명 | 비선형 명목 모델을 실제 신호와 분리하는 구조 참고일 뿐 수중 로봇 MPC를 이식하지 않음 |
+| G.Garofalo,N.Mansfeld,J.Jankowski,C.Ott, *Sliding Mode Momentum Observers for Estimation of External Torques and Joint Acceleration*, ICRA2019. [저자기관 PDF](https://elib.dlr.de/127719/1/root.pdf), [서지](https://elib.dlr.de/127719/) | 서로 다른 운동량 관측기 구조와 외력 추정을 논의 | C5의 bias 계산 대체와 관측기 전체 설계가 별개임을 구분. sliding-mode 관측기를 구현했다고 주장하지 않음 |
+
+추가 서지만 확인: J.Kim,Y.Choi,J.Park,W.K.Chung,
+*A Passive Recursive Newton Euler Algorithm and Its Application to Inverse
+Dynamics under Passivity-based Controller*, SIMPAR2025,
+DOI10.1109/SIMPAR62925.2025.10979029.
+[학회 배포 목차](https://www.proceedings.com/content/080/080101webtoc.pdf)에서
+제목·저자를 확인했지만 DOI 원문 열람은 실패했다. 따라서 원문 열람 편수에
+세지 않고 이 논문의 정확한 식/실험을 재현했다고 주장하지 않는다.
+우리 pRNE는 [자체 유도·FD 검사](R2_METHODS.md)의 증거로만 판정한다.

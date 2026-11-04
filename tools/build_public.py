@@ -9,7 +9,7 @@ DEST=ROOT/'publish/repo'
 
 
 def portable_json_bytes(data):
-    """Omit raw process identities, never cases, scores, or outlier records."""
+    """Omit process identities and compact large JSON without losing values."""
     def walk(value):
         if isinstance(value, dict):
             result = {}
@@ -24,16 +24,49 @@ def portable_json_bytes(data):
         return value
     original = json.loads(data)
     portable = walk(original)
-    if portable == original:
+    identifiers_changed = portable != original
+    compact = (isinstance(portable, dict) and
+               portable.get("metadata", {}).get("stage") == "d4") or len(data) > 4*1024**2
+    if not identifiers_changed and not compact:
         return data
-    portable["publication_note"] = ("Raw process IDs omitted; every case, numeric metric, "
-                                     "load/RAM summary and timing outlier is retained. "
-                                     "Evidence hashes elsewhere may name the private raw record; "
-                                     "published-byte hashes are in artifacts/SHA256SUMS.")
-    portable["private_raw_sha256"] = hashlib.sha256(data).hexdigest()
-    compact = portable.get("metadata", {}).get("stage") == "d4" or len(data) > 4*1024**2
+    if isinstance(portable, dict):
+        portable["publication_note"] = (
+            ("Raw process IDs omitted. " if identifiers_changed else "") +
+            ("Large JSON whitespace compacted losslessly. " if compact else "") +
+            "Every case, numeric metric, eigenvalue, load/RAM summary and timing outlier is retained. "
+            "Evidence hashes elsewhere may name the original work record; "
+            "published-byte hashes are in artifacts/SHA256SUMS.")
+        portable["private_raw_sha256"] = hashlib.sha256(data).hexdigest()
     return (json.dumps(portable, ensure_ascii=False, indent=None if compact else 2,
                        separators=(",", ":") if compact else None, allow_nan=False)+"\n").encode()
+
+
+def rebind_public_report_manifest(data, selected):
+    """Bind report entries after PID removal or lossless JSON compaction.
+
+    Work/raw artifact hashes remain explicit provenance. No score, case,
+    outlier, model, or source code is removed or numerically changed here.
+    """
+    manifest = json.loads(data)
+    changed = False
+    for group in manifest.get('artifacts', {}).values():
+        for item in group if isinstance(group, list) else [group]:
+            name = item['path']
+            if name not in selected:
+                raise ValueError('Report artifact missing from curated output: '+name)
+            digest = hashlib.sha256(selected[name]).hexdigest()
+            if item['sha256'] != digest:
+                item['prepublication_work_sha256'] = item['sha256']
+                item['sha256'] = digest
+                changed = True
+    if not changed:
+        return data
+    manifest['prepublication_work_manifest_sha256'] = manifest.get(
+        'private_raw_sha256', hashlib.sha256(data).hexdigest())
+    manifest['publication_byte_binding'] = ('Artifact SHA256 entries name published bytes after '
+        'process-identifier sanitization or lossless whitespace compaction; prepublication work '
+        'hashes are retained separately. Every case, score, eigenvalue and timing outlier is preserved.')
+    return (json.dumps(manifest, ensure_ascii=False, indent=2, allow_nan=False)+'\n').encode()
 
 
 def main():
@@ -57,6 +90,8 @@ def main():
     for name in ('v1_servo.py','v1_torque.py','v1_detector.py',
                  'v2_detector_candidate.py','v2_detector_guarded.py','v2_detector_geometry.py'):
         copy(name)
+    for name in ('r1_servo.py','r1_torque.py','r1_detector.py'):
+        copy(name)
     v2_tools = ('build_public','validate_submission','v2_resources','v2_learned_core','v2_collect',
                 'v2_train','v2_build_candidate','v2_geometry_audit','v2_study',
                 'v2_select','v2_select_final','v2_domain_study','v2_official','v2_trace','v2_report',
@@ -66,12 +101,25 @@ def main():
                 'test_v2_domain','test_v2_gate_fix','test_v2_report','test_build_public_v2')
     for name in v2_tools:
         copy('tools/'+name+'.py')
+    r2_tools = ('r2_p0','r2_linear','r2_plant_fd','r2_stability','r2_study',
+                'r2_extended_study','r2_select','r2_decide','r2_matched_ridge','r2_report',
+                'r2_report_manifest',
+                'r2_official_regression','test_r2_official_regression',
+                'render_r2_comparison','test_r2_p0','test_r2_linear',
+                'test_r2_plant_fd','test_r2_stability','test_r2_study',
+                'test_r2_extended_study','test_r2_contact','test_r2_prne',
+                'test_r2_robust','test_r2_matched_ridge','test_r2_report',
+                'test_render_r2_comparison')
+    for name in r2_tools:
+        copy('tools/'+name+'.py')
     for path in (ROOT/'models').glob('*.json'):
         copy(path.relative_to(ROOT).as_posix())
     for path in (ROOT/'results/v2_protocol').rglob('*'):
         if path.is_file() and path.suffix in {'.json','.txt'}:
             copy(path.relative_to(ROOT).as_posix())
     copy('report/PRESENTATION_V2.md')
+    copy('report/PRESENTATION_R2.md')
+    copy('results/presentation_R1.pdf')
     copy('tools/kit_manifest.sha256')
     copy('tools/SWEEP.md')
     for path in (ROOT/'experiments').glob('*.py'):
@@ -115,6 +163,12 @@ def main():
         for suffix in ('mp4','gif'):
             copy(f'artifacts/media/{stem}.{suffix}')
     copy('artifacts/media/v2_manifest.json')
+    for stem in ('07_r2_servo_comparison','08_r2_torque_comparison'):
+        for suffix in ('mp4','gif'):
+            copy(f'artifacts/media/{stem}.{suffix}')
+    copy('artifacts/media/r2_manifest.json')
+    report_manifest = 'results/v2_protocol/R2_REPORT_MANIFEST.json'
+    selected[report_manifest] = rebind_public_report_manifest(selected[report_manifest], selected)
     # Validate the destination BEFORE writing, including on reruns.
     existing={p.relative_to(DEST).as_posix() for p in DEST.rglob('*')
               if p.is_file() and '.git' not in p.relative_to(DEST).parts}
