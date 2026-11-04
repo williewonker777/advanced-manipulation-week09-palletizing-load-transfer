@@ -1,5 +1,7 @@
 # Primary references
 
+> Historical **v1** document. Final v2 methods, results and limitations: [V2_RESULTS](V2_RESULTS.md), [V2_REVIEW](V2_REVIEW.md).
+
 1. A. De Luca and R. Mattone, *Sensorless Robot Collision Detection and Hybrid
    Force/Motion Control*, ICRA 2005.
    https://www.diag.uniroma1.it/~labrob/pub/papers/ICRA05_CollDetect.pdf

@@ -1,5 +1,7 @@
 # 발표 노트 — 하중 전달을 고려한 탄성 관절 제어와 충돌 감지
 
+> Historical **v1** document. Final v2 methods, results and limitations: [V2_RESULTS](V2_RESULTS.md), [V2_REVIEW](V2_REVIEW.md).
+
 발표 자료: `results/presentation.pdf` (16장). 공식 평가는 같은 PC·변경하지 않은
 시뮬레이터에서 수행했고, 강건성·파라미터 섭동 결과는 공식 표와 구분했다.
 

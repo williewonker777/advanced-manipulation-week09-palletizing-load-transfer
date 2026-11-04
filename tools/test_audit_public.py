@@ -124,7 +124,27 @@ class PublicAuditTests(unittest.TestCase):
                 result=audit(root,ffprobe='missing',require_checksums=False,require_media=True)
             self.assertFalse(result['media_metadata_checked'])
             self.assertEqual(result['media_metadata_checked_count'],0)
-            self.assertTrue(any('required four' in e for e in result['errors']))
+            self.assertTrue(any('required six' in e for e in result['errors']))
+
+    def test_required_media_accepts_exact_legacy_and_v2_union(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);media=root/'artifacts/media';media.mkdir(parents=True)
+            stems=('01_servo_no_collision','02_torque_no_collision',
+                   '03_servo_place_collision','04_servo_transport_collision',
+                   '05_v2_servo_transport_collision','06_v2_torque_transport_collision')
+            for stem in stems:
+                for suffix in ('mp4','gif'):
+                    (media/f'{stem}.{suffix}').write_bytes(b'media')
+            for name in ('media_manifest.json','v2_manifest.json'):
+                (media/name).write_text('{}')
+            with patch('tools.audit_public.media_tag_errors',return_value=[]), \
+                    patch('tools.audit_public.media_metadata_bytes',return_value=b''), \
+                    patch('tools.audit_public.binary_errors',return_value=[]):
+                result=audit(root,ffprobe='ffprobe',require_checksums=False,require_media=True)
+            self.assertEqual(result['status'],'pass',result['errors'])
+            (media/'unexpected.txt').write_text('extra')
+            result=audit(root,require_checksums=False)
+            self.assertTrue(any('unexpected file in media directory' in error for error in result['errors']))
 
     def test_invalid_utf8_is_fail_not_traceback(self):
         with tempfile.TemporaryDirectory() as directory:

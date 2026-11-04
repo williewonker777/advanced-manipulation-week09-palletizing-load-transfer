@@ -1,0 +1,123 @@
+{
+  "registered_utc": "2026-11-04T05:14:07.628712+00:00",
+  "classification": "L3 minimal source-to-original-protocol repair, not a new numerical detector rule",
+  "original_contract": "PROTOCOL.json gate: grip and outside table-height band",
+  "defect": "L1 used not last_table_allowed; v1 support eligibility also requires positive mass, so empty-payload at table height was incorrectly enabled. This is a definite semantic mismatch, diagnosed after disclosed official regression.",
+  "repair": "For EVERY mass, compute estimated bottom height from packet.q_prev (JTS/encoder estimate) and public nominal _point_jacobian; active iff grip and min(abs(table_heights-z))>unchanged height_band. No mass special case, no original model/threshold/EMA/persistence/height-band changes. v1 OR retained.",
+  "data_exposure": "Official set consumed for debugging, not independent efficacy evidence. L2 axis-aligned-envelope candidate retained as exploratory but not preferred. No heldout physical results generated/read.",
+  "weight_sha256": "bf4f0700a57e0155ec8bf51777bdf13759e6586b024aed0f6f4646f49db15e6c",
+  "protocol_sha256": "720a3cdaabb2ea09adb4b641adf2f9f4c657b69ae06b07d130148dd51d3603a5",
+  "validation": [
+    {
+      "mass": 0.25,
+      "com": [
+        0.008,
+        0.006,
+        0.012
+      ]
+    },
+    {
+      "mass": 0.45,
+      "com": [
+        -0.017,
+        0.01,
+        0.026
+      ]
+    },
+    {
+      "mass": 1.25,
+      "com": [
+        0.019,
+        -0.006,
+        0.018
+      ]
+    },
+    {
+      "mass": 3.55,
+      "com": [
+        -0.015,
+        0.014,
+        0.029
+      ]
+    },
+    {
+      "mass": 6.95,
+      "com": [
+        0.015,
+        -0.014,
+        0.045
+      ]
+    },
+    {
+      "mass": 7.75,
+      "com": [
+        -0.018,
+        -0.009,
+        0.01
+      ]
+    },
+    {
+      "mass": 7.95,
+      "com": [
+        0.013,
+        0.017,
+        0.035
+      ]
+    },
+    {
+      "mass": 2.25,
+      "com": [
+        0.032,
+        -0.005,
+        0.037
+      ]
+    }
+  ],
+  "development": {
+    "conditions": [
+      {
+        "mass": 1.25,
+        "com": [
+          0.019,
+          -0.006,
+          0.018
+        ]
+      },
+      {
+        "mass": 6.95,
+        "com": [
+          0.015,
+          -0.014,
+          0.045
+        ]
+      }
+    ],
+    "times": [
+      2.19,
+      3.791
+    ],
+    "forces": [
+      8.0,
+      21.0
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy"
+    ],
+    "design": "full Cartesian64collisions/architecture, both masses each sign/direction"
+  },
+  "seeds": {
+    "validation": 369422,
+    "development": 369423,
+    "holdout": 369503
+  },
+  "adoption": "fresh validation false0/no increase; fresh balanced development >=4 extra/no lost/no added false rises; paired p99<800us; then disclosed official compatibility regression",
+  "stop_rule": "If this exact protocol repair fails validation/gain gate or mandatory official regression, reject learner and retain frozen v1; no further official-driven cycles. No post-holdout modification without new holdout.",
+  "holdout": "original unchanged and unopened until final L3-or-v1 source freeze"
+}

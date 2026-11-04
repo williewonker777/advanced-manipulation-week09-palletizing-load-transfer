@@ -1,0 +1,36 @@
+{
+  "official": false,
+  "derived_from": "public nominal model and own algebra; no plant truth",
+  "power_duality_max_error": 2.1094237467877974e-15,
+  "shifted_origin_joint_torque_max_error": 7.105427357601002e-15,
+  "virtual_power_max_error": 1.0658141036401503e-14,
+  "local_normal_linearization": [
+    {
+      "delta_m": -0.0015,
+      "tangent_error_m": 1.4423524432408177e-06,
+      "normal_linearization_error_m": 2.88635424726489e-07,
+      "rotation_error_rad": 5.575503985246929e-08
+    },
+    {
+      "delta_m": -0.0005,
+      "tangent_error_m": 1.6028340806090943e-07,
+      "normal_linearization_error_m": 3.1996259863397575e-08,
+      "rotation_error_rad": 5.575503985246929e-08
+    },
+    {
+      "delta_m": 0.0005,
+      "tangent_error_m": 1.6030537992635068e-07,
+      "normal_linearization_error_m": 3.192189840283202e-08,
+      "rotation_error_rad": 5.575503985246929e-08
+    },
+    {
+      "delta_m": 0.0015,
+      "tangent_error_m": 1.442945677026943e-06,
+      "normal_linearization_error_m": 2.866276683235157e-07,
+      "rotation_error_rad": 5.575503985246929e-08
+    }
+  ],
+  "identical_normal_wrench_counterexample": true,
+  "scope": "instantaneous source non-identifiability; not a claim of all dynamic histories",
+  "references": "Park/Choi/Chung manuscript2024 sections2.2,6.1,7.2; Choi lecture2024 section11.5"
+}

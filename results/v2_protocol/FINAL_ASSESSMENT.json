@@ -1,0 +1,3303 @@
+{
+  "status": "final evidence assessed; no placeholder claims",
+  "provenance": {
+    "official": "unchanged evaluate.py; consumed during debugging and not independent efficacy evidence",
+    "final_claim_basis": "fresh non-official L3 studies and sealed holdout",
+    "traces": "analysis-only internal values; never training inputs"
+  },
+  "official": {
+    "per_architecture": {
+      "servo": {
+        "combination": "servo_v2_v2",
+        "G1_8kg_15N_le_68ms": true,
+        "delay_15N_ms": 45.0,
+        "G2_8kg_10N_detected": true,
+        "delay_10N_ms": 62.0
+      },
+      "torque": {
+        "combination": "torque_v2_v2",
+        "G1_8kg_15N_le_68ms": true,
+        "delay_15N_ms": 43.0,
+        "G2_8kg_10N_detected": true,
+        "delay_10N_ms": 56.0
+      }
+    },
+    "G1": true,
+    "G2": true
+  },
+  "final_variant": "L3",
+  "supplemental_counts": {
+    "fresh_validation": {
+      "L3/servo": {
+        "detected": 0,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 0,
+        "references": 8,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "L3/torque": {
+        "detected": 0,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 0,
+        "references": 8,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "v1/servo": {
+        "detected": 0,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 0,
+        "references": 8,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "v1/torque": {
+        "detected": 0,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 0,
+        "references": 8,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      }
+    },
+    "fresh_development": {
+      "L3/servo": {
+        "detected": 28,
+        "missed": 36,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 36,
+        "masked": 0,
+        "collisions": 64,
+        "references": 2,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "L3/torque": {
+        "detected": 38,
+        "missed": 26,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 26,
+        "masked": 0,
+        "collisions": 64,
+        "references": 2,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "v1/servo": {
+        "detected": 28,
+        "missed": 36,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 36,
+        "masked": 0,
+        "collisions": 64,
+        "references": 2,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "v1/torque": {
+        "detected": 27,
+        "missed": 37,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 37,
+        "masked": 0,
+        "collisions": 64,
+        "references": 2,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      }
+    },
+    "d4": {
+      "v1/servo": {
+        "detected": 94,
+        "missed": 86,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 2,
+        "misses": 86,
+        "masked": 0,
+        "collisions": 180,
+        "references": 189,
+        "offset_episodes": 16,
+        "offset_false_alarm_rises": 8,
+        "offset_tool_contacts": 6,
+        "offset_tool_contact_misses": 0
+      },
+      "v1/torque": {
+        "detected": 91,
+        "missed": 89,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 1,
+        "misses": 89,
+        "masked": 0,
+        "collisions": 180,
+        "references": 189,
+        "offset_episodes": 16,
+        "offset_false_alarm_rises": 6,
+        "offset_tool_contacts": 6,
+        "offset_tool_contact_misses": 0
+      },
+      "v2/servo": {
+        "detected": 111,
+        "missed": 69,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 2,
+        "misses": 69,
+        "masked": 0,
+        "collisions": 180,
+        "references": 189,
+        "offset_episodes": 16,
+        "offset_false_alarm_rises": 8,
+        "offset_tool_contacts": 6,
+        "offset_tool_contact_misses": 0
+      },
+      "v2/torque": {
+        "detected": 111,
+        "missed": 69,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 3,
+        "misses": 69,
+        "masked": 0,
+        "collisions": 180,
+        "references": 189,
+        "offset_episodes": 16,
+        "offset_false_alarm_rises": 6,
+        "offset_tool_contacts": 6,
+        "offset_tool_contact_misses": 0
+      }
+    },
+    "sealed_holdout": {
+      "v1/servo": {
+        "detected": 15,
+        "missed": 15,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 15,
+        "masked": 0,
+        "collisions": 30,
+        "references": 4,
+        "offset_episodes": 4,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 3,
+        "offset_tool_contact_misses": 0
+      },
+      "v1/torque": {
+        "detected": 14,
+        "missed": 16,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 16,
+        "masked": 0,
+        "collisions": 30,
+        "references": 4,
+        "offset_episodes": 4,
+        "offset_false_alarm_rises": 1,
+        "offset_tool_contacts": 3,
+        "offset_tool_contact_misses": 0
+      },
+      "v2/servo": {
+        "detected": 19,
+        "missed": 11,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 11,
+        "masked": 0,
+        "collisions": 30,
+        "references": 4,
+        "offset_episodes": 4,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 3,
+        "offset_tool_contact_misses": 0
+      },
+      "v2/torque": {
+        "detected": 18,
+        "missed": 12,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 0,
+        "collision_extra_false_alarms": 0,
+        "misses": 12,
+        "masked": 0,
+        "collisions": 30,
+        "references": 4,
+        "offset_episodes": 4,
+        "offset_false_alarm_rises": 1,
+        "offset_tool_contacts": 3,
+        "offset_tool_contact_misses": 0
+      }
+    },
+    "perturbations": {
+      "v1/servo": {
+        "detected": 6,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 4,
+        "collision_extra_false_alarms": 0,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 6,
+        "references": 28,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "v1/torque": {
+        "detected": 6,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 7,
+        "collision_extra_false_alarms": 1,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 6,
+        "references": 28,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "v2/servo": {
+        "detected": 6,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 6,
+        "collision_extra_false_alarms": 0,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 6,
+        "references": 28,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "v2/torque": {
+        "detected": 6,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 9,
+        "collision_extra_false_alarms": 1,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 6,
+        "references": 28,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      }
+    }
+  },
+  "goals": {
+    "G1": true,
+    "G2": true,
+    "G3": false,
+    "G4": false,
+    "G5": false,
+    "G6": false,
+    "G7": "not solved; identical instantaneous vertical wrench remains ambiguous"
+  },
+  "d4": {
+    "per_architecture": {
+      "servo": {
+        "v1_detected": 94,
+        "v2_detected": 111,
+        "v1_collision_extra_false_alarms": 2,
+        "v2_collision_extra_false_alarms": 2,
+        "v1_no_collision_false_alarms": 0,
+        "v2_no_collision_false_alarms": 0,
+        "pass": true
+      },
+      "torque": {
+        "v1_detected": 91,
+        "v2_detected": 111,
+        "v1_collision_extra_false_alarms": 1,
+        "v2_collision_extra_false_alarms": 3,
+        "v1_no_collision_false_alarms": 0,
+        "v2_no_collision_false_alarms": 0,
+        "pass": false
+      }
+    },
+    "G3": false
+  },
+  "g4": {
+    "per_architecture": {
+      "servo": {
+        "v1": {
+          "available": true,
+          "window_start_s": 3.88,
+          "window_end_s": 3.9,
+          "table_mean_n": 0.16466358593069233,
+          "table_min_n": 0.0,
+          "table_mean_over_mg": 0.0020981598615021956,
+          "table_min_over_mg": 0.0,
+          "place_peak_n": 78.83054363512923,
+          "place_peak_over_mg": 1.004466662017447
+        },
+        "v2": {
+          "available": true,
+          "window_start_s": 3.88,
+          "window_end_s": 3.9,
+          "table_mean_n": 0.16466358593069233,
+          "table_min_n": 0.0,
+          "table_mean_over_mg": 0.0020981598615021956,
+          "table_min_over_mg": 0.0,
+          "place_peak_n": 78.83054363512923,
+          "place_peak_over_mg": 1.004466662017447
+        },
+        "mean_increase_over_mg": 0.0,
+        "checks": {
+          "last20_mean_ge_0p5mg": false,
+          "last20_min_ge_0p25mg": false,
+          "mean_increase_ge_0p25mg": false,
+          "place_peak_le_1p1mg": true
+        },
+        "pass": false
+      },
+      "torque": {
+        "v1": {
+          "available": true,
+          "window_start_s": 3.88,
+          "window_end_s": 3.9,
+          "table_mean_n": 8.751052669863634,
+          "table_min_n": 0.29841811000727403,
+          "table_mean_over_mg": 0.11150678733261511,
+          "table_min_over_mg": 0.003802473369103899,
+          "place_peak_n": 79.57817271343407,
+          "place_peak_over_mg": 1.013993026419904
+        },
+        "v2": {
+          "available": true,
+          "window_start_s": 3.88,
+          "window_end_s": 3.9,
+          "table_mean_n": 8.751052669863634,
+          "table_min_n": 0.29841811000727403,
+          "table_mean_over_mg": 0.11150678733261511,
+          "table_min_over_mg": 0.003802473369103899,
+          "place_peak_n": 79.57817271343407,
+          "place_peak_over_mg": 1.013993026419904
+        },
+        "mean_increase_over_mg": 0.0,
+        "checks": {
+          "last20_mean_ge_0p5mg": false,
+          "last20_min_ge_0p25mg": false,
+          "mean_increase_ge_0p25mg": false,
+          "place_peak_le_1p1mg": true
+        },
+        "pass": false
+      }
+    },
+    "G4": false
+  },
+  "perturbation_summary": {
+    "counts": {
+      "v1/servo": {
+        "detected": 6,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 4,
+        "collision_extra_false_alarms": 0,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 6,
+        "references": 28,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "v1/torque": {
+        "detected": 6,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 7,
+        "collision_extra_false_alarms": 1,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 6,
+        "references": 28,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "v2/servo": {
+        "detected": 6,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 6,
+        "collision_extra_false_alarms": 0,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 6,
+        "references": 28,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      },
+      "v2/torque": {
+        "detected": 6,
+        "missed": 0,
+        "alarm_before_collision": 0,
+        "indistinguishable": 0,
+        "no_collision_false_alarms": 9,
+        "collision_extra_false_alarms": 1,
+        "misses": 0,
+        "masked": 0,
+        "collisions": 6,
+        "references": 28,
+        "offset_episodes": 0,
+        "offset_false_alarm_rises": 0,
+        "offset_tool_contacts": 0,
+        "offset_tool_contact_misses": 0
+      }
+    },
+    "nominal_parity_checked_in_private_harness": true,
+    "nominal_parity_values_published": false,
+    "nominal_parity_boolean_results_published": true,
+    "reference_false_rises_comparison": {
+      "servo": {
+        "v1": 4,
+        "v2": 6,
+        "increase": 2
+      },
+      "torque": {
+        "v1": 7,
+        "v2": 9,
+        "increase": 2
+      }
+    },
+    "reference_false_alarm_regression": true,
+    "G6_reason": "No demonstrated reduction of inherited control failures; all analysis perturbation false rises retained."
+  },
+  "physical_parity": {
+    "d4_references": {
+      "matched_pairs": 378,
+      "changed_pairs": 0,
+      "unchanged": true,
+      "max_abs_delta": {
+        "rms_mm": 0.0,
+        "max_mm": 0.0,
+        "saturation_pct": 0.0,
+        "torque_step_pick_nm": 0.0,
+        "torque_step_place_nm": 0.0,
+        "table_force_place_max_n": 0.0,
+        "tool_contact_peak_n": 0.0,
+        "tool_contact_first_s": 0.0
+      }
+    },
+    "perturbations": {
+      "matched_pairs": 68,
+      "changed_pairs": 0,
+      "unchanged": true,
+      "max_abs_delta": {
+        "rms_mm": 0.0,
+        "max_mm": 0.0,
+        "saturation_pct": 0.0,
+        "torque_step_pick_nm": 0.0,
+        "torque_step_place_nm": 0.0,
+        "table_force_place_max_n": 0.0,
+        "tool_contact_peak_n": 0.0,
+        "tool_contact_first_s": 0.0
+      }
+    },
+    "unchanged": true
+  },
+  "timing": {
+    "all_versions_global_comparison": {
+      "observed_wall_max_us": 160578.126,
+      "cpu_at_worst_wall": {
+        "value_us": 39373.253,
+        "semantics": "thread CPU at the exact worst-wall cycle",
+        "voluntary_context_switches": 2919,
+        "involuntary_context_switches": 0
+      },
+      "strict_below_1ms": false,
+      "retained_outlier_records": 41,
+      "outlier_events": [
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 2,
+            "mass": 0.0,
+            "kind": "reference"
+          },
+          "cycle": 5199,
+          "simulated_t_s": 5.199,
+          "controller": {
+            "wall_ns": 32820,
+            "cpu_ns": 31940,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5484379,
+            "cpu_ns": 5483019,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 5517199,
+            "cpu_ns": 5514959,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 71,
+            "mass": 2.0,
+            "kind": "reference"
+          },
+          "cycle": 1053,
+          "simulated_t_s": 1.053,
+          "controller": {
+            "wall_ns": 32909,
+            "cpu_ns": 32030,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5619494,
+            "cpu_ns": 5618058,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 5652403,
+            "cpu_ns": 5650088,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 127,
+            "mass": 4.0,
+            "kind": "reference"
+          },
+          "cycle": 1309,
+          "simulated_t_s": 1.309,
+          "controller": {
+            "wall_ns": 33910,
+            "cpu_ns": 32970,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1851245,
+            "cpu_ns": 167519,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 1885155,
+            "cpu_ns": 200489,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 143,
+            "mass": 6.25,
+            "kind": "reference"
+          },
+          "cycle": 4162,
+          "simulated_t_s": 4.162,
+          "controller": {
+            "wall_ns": 33220,
+            "cpu_ns": 32320,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 6351022,
+            "cpu_ns": 6349406,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 6384242,
+            "cpu_ns": 6381726,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 157,
+            "mass": 6.25,
+            "kind": "reference"
+          },
+          "cycle": 216,
+          "simulated_t_s": 0.216,
+          "controller": {
+            "wall_ns": 46070,
+            "cpu_ns": 44970,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 2146804,
+            "cpu_ns": 98280,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 2192874,
+            "cpu_ns": 143250,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 219,
+            "mass": 2.0,
+            "kind": "collision"
+          },
+          "cycle": 1742,
+          "simulated_t_s": 1.742,
+          "controller": {
+            "wall_ns": 31579,
+            "cpu_ns": 30700,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 7055672,
+            "cpu_ns": 7051233,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 7087251,
+            "cpu_ns": 7081933,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 369,
+            "mass": 2.0,
+            "kind": "offset"
+          },
+          "cycle": 4789,
+          "simulated_t_s": 4.789,
+          "controller": {
+            "wall_ns": 1784259,
+            "cpu_ns": 52580,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "detector": {
+            "wall_ns": 113369,
+            "cpu_ns": 111630,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 1897628,
+            "cpu_ns": 164210,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 382,
+            "mass": 8.0,
+            "kind": "offset"
+          },
+          "cycle": 1399,
+          "simulated_t_s": 1.399,
+          "controller": {
+            "wall_ns": 33750,
+            "cpu_ns": 32840,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 8487399,
+            "cpu_ns": 8485797,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 8521149,
+            "cpu_ns": 8518637,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 81,
+            "mass": 3.7,
+            "kind": "reference"
+          },
+          "cycle": 3470,
+          "simulated_t_s": 3.47,
+          "controller": {
+            "wall_ns": 36829,
+            "cpu_ns": 35939,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 8599150,
+            "cpu_ns": 8491419,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 8635979,
+            "cpu_ns": 8527358,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 174,
+            "mass": 8.0,
+            "kind": "reference"
+          },
+          "cycle": 3470,
+          "simulated_t_s": 3.47,
+          "controller": {
+            "wall_ns": 48440,
+            "cpu_ns": 47410,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 10851919,
+            "cpu_ns": 10850399,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 10900359,
+            "cpu_ns": 10897809,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 186,
+            "mass": 8.0,
+            "kind": "reference"
+          },
+          "cycle": 3242,
+          "simulated_t_s": 3.242,
+          "controller": {
+            "wall_ns": 55409,
+            "cpu_ns": 54230,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 3159872,
+            "cpu_ns": 226029,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 3215281,
+            "cpu_ns": 280259,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 204,
+            "mass": 1.3,
+            "kind": "collision"
+          },
+          "cycle": 2240,
+          "simulated_t_s": 2.24,
+          "controller": {
+            "wall_ns": 37850,
+            "cpu_ns": 36910,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1185044,
+            "cpu_ns": 158200,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 1222894,
+            "cpu_ns": 195110,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 374,
+            "mass": 2.0,
+            "kind": "offset"
+          },
+          "cycle": 2778,
+          "simulated_t_s": 2.778,
+          "controller": {
+            "wall_ns": 36620,
+            "cpu_ns": 35660,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 9226740,
+            "cpu_ns": 9225175,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 9263360,
+            "cpu_ns": 9260835,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 26,
+            "mass": 0.0,
+            "kind": "reference"
+          },
+          "cycle": 3292,
+          "simulated_t_s": 3.2920000000000003,
+          "controller": {
+            "wall_ns": 35010,
+            "cpu_ns": 34040,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 2799165,
+            "cpu_ns": 271969,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 2834175,
+            "cpu_ns": 306009,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 91,
+            "mass": 3.7,
+            "kind": "reference"
+          },
+          "cycle": 2433,
+          "simulated_t_s": 2.433,
+          "controller": {
+            "wall_ns": 34980,
+            "cpu_ns": 33980,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 12116705,
+            "cpu_ns": 12114964,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 12151685,
+            "cpu_ns": 12148944,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 204,
+            "mass": 1.3,
+            "kind": "collision"
+          },
+          "cycle": 3811,
+          "simulated_t_s": 3.811,
+          "controller": {
+            "wall_ns": 44240,
+            "cpu_ns": 43290,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 10974151,
+            "cpu_ns": 10972528,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 11018391,
+            "cpu_ns": 11015818,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 323,
+            "mass": 1.3,
+            "kind": "collision"
+          },
+          "cycle": 3120,
+          "simulated_t_s": 3.12,
+          "controller": {
+            "wall_ns": 40769,
+            "cpu_ns": 39820,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 11384409,
+            "cpu_ns": 11382677,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 11425178,
+            "cpu_ns": 11422497,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 59,
+            "mass": 2.0,
+            "kind": "reference"
+          },
+          "cycle": 708,
+          "simulated_t_s": 0.708,
+          "controller": {
+            "wall_ns": 37210,
+            "cpu_ns": 36310,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 12167410,
+            "cpu_ns": 12165944,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 12204620,
+            "cpu_ns": 12202254,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 87,
+            "mass": 3.7,
+            "kind": "reference"
+          },
+          "cycle": 413,
+          "simulated_t_s": 0.41300000000000003,
+          "controller": {
+            "wall_ns": 34769,
+            "cpu_ns": 33920,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1074363,
+            "cpu_ns": 116560,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 1109132,
+            "cpu_ns": 150480,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 190,
+            "mass": 1.3,
+            "kind": "collision"
+          },
+          "cycle": 4158,
+          "simulated_t_s": 4.158,
+          "controller": {
+            "wall_ns": 38390,
+            "cpu_ns": 37490,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 15180976,
+            "cpu_ns": 15179463,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 15219366,
+            "cpu_ns": 15216953,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 219,
+            "mass": 2.0,
+            "kind": "collision"
+          },
+          "cycle": 1053,
+          "simulated_t_s": 1.053,
+          "controller": {
+            "wall_ns": 55250,
+            "cpu_ns": 54200,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1330272,
+            "cpu_ns": 283169,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 1385522,
+            "cpu_ns": 337369,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 219,
+            "mass": 2.0,
+            "kind": "collision"
+          },
+          "cycle": 1400,
+          "simulated_t_s": 1.4000000000000001,
+          "controller": {
+            "wall_ns": 37490,
+            "cpu_ns": 36600,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 2549804,
+            "cpu_ns": 375068,
+            "voluntary_context_switches": 2,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 2587294,
+            "cpu_ns": 411668,
+            "voluntary_context_switches": 2,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 221,
+            "mass": 4.0,
+            "kind": "collision"
+          },
+          "cycle": 3184,
+          "simulated_t_s": 3.184,
+          "controller": {
+            "wall_ns": 46060,
+            "cpu_ns": 44919,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1257692,
+            "cpu_ns": 250020,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 1303752,
+            "cpu_ns": 294939,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 222,
+            "mass": 6.25,
+            "kind": "collision"
+          },
+          "cycle": 1407,
+          "simulated_t_s": 1.407,
+          "controller": {
+            "wall_ns": 48400,
+            "cpu_ns": 47260,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 2938582,
+            "cpu_ns": 278639,
+            "voluntary_context_switches": 3,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 2986982,
+            "cpu_ns": 325899,
+            "voluntary_context_switches": 3,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 223,
+            "mass": 8.0,
+            "kind": "collision"
+          },
+          "cycle": 1422,
+          "simulated_t_s": 1.422,
+          "controller": {
+            "wall_ns": 51410,
+            "cpu_ns": 50270,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1228023,
+            "cpu_ns": 231429,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 1279433,
+            "cpu_ns": 281699,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 223,
+            "mass": 8.0,
+            "kind": "collision"
+          },
+          "cycle": 1426,
+          "simulated_t_s": 1.426,
+          "controller": {
+            "wall_ns": 46940,
+            "cpu_ns": 45800,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1372722,
+            "cpu_ns": 343749,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 1419662,
+            "cpu_ns": 389549,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 232,
+            "mass": 1.3,
+            "kind": "collision"
+          },
+          "cycle": 1400,
+          "simulated_t_s": 1.4000000000000001,
+          "controller": {
+            "wall_ns": 46179,
+            "cpu_ns": 45149,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 6422001,
+            "cpu_ns": 327330,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 6468180,
+            "cpu_ns": 372479,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 239,
+            "mass": 1.3,
+            "kind": "collision"
+          },
+          "cycle": 1400,
+          "simulated_t_s": 1.4000000000000001,
+          "controller": {
+            "wall_ns": 35979,
+            "cpu_ns": 35120,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1857619,
+            "cpu_ns": 275439,
+            "voluntary_context_switches": 3,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 1893598,
+            "cpu_ns": 310559,
+            "voluntary_context_switches": 3,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 244,
+            "mass": 8.0,
+            "kind": "collision"
+          },
+          "cycle": 1402,
+          "simulated_t_s": 1.4020000000000001,
+          "controller": {
+            "wall_ns": 38399,
+            "cpu_ns": 37490,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1368122,
+            "cpu_ns": 216410,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 1406521,
+            "cpu_ns": 253900,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 254,
+            "mass": 2.0,
+            "kind": "collision"
+          },
+          "cycle": 2046,
+          "simulated_t_s": 2.0460000000000003,
+          "controller": {
+            "wall_ns": 60979,
+            "cpu_ns": 59600,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1425762,
+            "cpu_ns": 282689,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 1486741,
+            "cpu_ns": 342289,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 256,
+            "mass": 4.0,
+            "kind": "collision"
+          },
+          "cycle": 0,
+          "simulated_t_s": 0.0,
+          "controller": {
+            "wall_ns": 60099,
+            "cpu_ns": 58669,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 3564069,
+            "cpu_ns": 245178,
+            "voluntary_context_switches": 2,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 3624168,
+            "cpu_ns": 303847,
+            "voluntary_context_switches": 2,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 259,
+            "mass": 0.0,
+            "kind": "collision"
+          },
+          "cycle": 1566,
+          "simulated_t_s": 1.566,
+          "controller": {
+            "wall_ns": 60999,
+            "cpu_ns": 59619,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 3316480,
+            "cpu_ns": 205230,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 3377479,
+            "cpu_ns": 264849,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 295,
+            "mass": 1.3,
+            "kind": "collision"
+          },
+          "cycle": 1407,
+          "simulated_t_s": 1.407,
+          "controller": {
+            "wall_ns": 38060,
+            "cpu_ns": 37150,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1420742,
+            "cpu_ns": 216150,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 1458802,
+            "cpu_ns": 253300,
+            "voluntary_context_switches": 1,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "d4",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 328,
+            "mass": 8.0,
+            "kind": "collision"
+          },
+          "cycle": 1052,
+          "simulated_t_s": 1.052,
+          "controller": {
+            "wall_ns": 42119,
+            "cpu_ns": 41230,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 160536007,
+            "cpu_ns": 39332023,
+            "voluntary_context_switches": 2919,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 160578126,
+            "cpu_ns": 39373253,
+            "voluntary_context_switches": 2919,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "holdout",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 2,
+            "mass": 5.95,
+            "kind": "reference"
+          },
+          "cycle": 4162,
+          "simulated_t_s": 4.162,
+          "controller": {
+            "wall_ns": 33370,
+            "cpu_ns": 32479,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 3996986,
+            "cpu_ns": 3995465,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 4030356,
+            "cpu_ns": 4027944,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "holdout",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 31,
+            "mass": 3.45,
+            "kind": "collision"
+          },
+          "cycle": 4506,
+          "simulated_t_s": 4.506,
+          "controller": {
+            "wall_ns": 38450,
+            "cpu_ns": 37570,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 4780212,
+            "cpu_ns": 4757332,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 4818662,
+            "cpu_ns": 4794902,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        },
+        {
+          "dataset": "holdout",
+          "context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 24,
+            "mass": 7.85,
+            "kind": "collision"
+          },
+          "cycle": 3469,
+          "simulated_t_s": 3.469,
+          "controller": {
+            "wall_ns": 37670,
+            "cpu_ns": 36770,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5394329,
+            "cpu_ns": 5392640,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 5431999,
+            "cpu_ns": 5429410,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "timing",
+          "context": {
+            "variant": "v1",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 2,
+            "mass": 8.0,
+            "kind": "reference"
+          },
+          "cycle": 4402,
+          "simulated_t_s": 4.402,
+          "controller": {
+            "wall_ns": 33589,
+            "cpu_ns": 32690,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5195960,
+            "cpu_ns": 5194380,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 5229549,
+            "cpu_ns": 5227070,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "perturbations",
+          "context": {
+            "variant": null,
+            "version": "v1",
+            "architecture": "servo",
+            "case_id": 2,
+            "mass": 8.0,
+            "kind": null
+          },
+          "cycle": 4513,
+          "simulated_t_s": 4.513,
+          "controller": {
+            "wall_ns": 39819,
+            "cpu_ns": 35260,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 5471909,
+            "cpu_ns": 5469339,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 5511728,
+            "cpu_ns": 5504599,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "perturbations",
+          "context": {
+            "variant": null,
+            "version": "v2",
+            "architecture": "servo",
+            "case_id": 1,
+            "mass": 4.3,
+            "kind": null
+          },
+          "cycle": 4855,
+          "simulated_t_s": 4.855,
+          "controller": {
+            "wall_ns": 36240,
+            "cpu_ns": 35310,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 6305504,
+            "cpu_ns": 6303816,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "combined": {
+            "wall_ns": 6341744,
+            "cpu_ns": 6339126,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          }
+        },
+        {
+          "dataset": "perturbations",
+          "context": {
+            "variant": null,
+            "version": "v2",
+            "architecture": "servo",
+            "case_id": 15,
+            "mass": 4.3,
+            "kind": null
+          },
+          "cycle": 351,
+          "simulated_t_s": 0.35100000000000003,
+          "controller": {
+            "wall_ns": 47320,
+            "cpu_ns": 46170,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "detector": {
+            "wall_ns": 1303453,
+            "cpu_ns": 89629,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          },
+          "combined": {
+            "wall_ns": 1350773,
+            "cpu_ns": 135799,
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 1
+          }
+        }
+      ],
+      "worst_dataset": "d4",
+      "worst_context": {
+        "variant": "v2",
+        "version": null,
+        "architecture": "torque",
+        "case_id": 328,
+        "mass": 8.0,
+        "kind": "collision"
+      }
+    },
+    "by_version_architecture": {
+      "v1/servo": {
+        "version": "v1",
+        "architecture": "servo",
+        "measured_rows": 460,
+        "largest_row_wall_median_us": 127.98400000000001,
+        "largest_row_wall_p99_us": 323.5518100000001,
+        "observed_wall_max_us": 8521.149,
+        "cpu_at_worst_wall": {
+          "value_us": 8518.637,
+          "semantics": "thread CPU at the exact worst-wall cycle",
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "retained_outlier_records": 11,
+        "outlier_events": [
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 2,
+              "mass": 0.0,
+              "kind": "reference"
+            },
+            "cycle": 5199,
+            "simulated_t_s": 5.199,
+            "controller": {
+              "wall_ns": 32820,
+              "cpu_ns": 31940,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 5484379,
+              "cpu_ns": 5483019,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 5517199,
+              "cpu_ns": 5514959,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 71,
+              "mass": 2.0,
+              "kind": "reference"
+            },
+            "cycle": 1053,
+            "simulated_t_s": 1.053,
+            "controller": {
+              "wall_ns": 32909,
+              "cpu_ns": 32030,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 5619494,
+              "cpu_ns": 5618058,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 5652403,
+              "cpu_ns": 5650088,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 127,
+              "mass": 4.0,
+              "kind": "reference"
+            },
+            "cycle": 1309,
+            "simulated_t_s": 1.309,
+            "controller": {
+              "wall_ns": 33910,
+              "cpu_ns": 32970,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1851245,
+              "cpu_ns": 167519,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 1885155,
+              "cpu_ns": 200489,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 143,
+              "mass": 6.25,
+              "kind": "reference"
+            },
+            "cycle": 4162,
+            "simulated_t_s": 4.162,
+            "controller": {
+              "wall_ns": 33220,
+              "cpu_ns": 32320,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 6351022,
+              "cpu_ns": 6349406,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 6384242,
+              "cpu_ns": 6381726,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 157,
+              "mass": 6.25,
+              "kind": "reference"
+            },
+            "cycle": 216,
+            "simulated_t_s": 0.216,
+            "controller": {
+              "wall_ns": 46070,
+              "cpu_ns": 44970,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 2146804,
+              "cpu_ns": 98280,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 2192874,
+              "cpu_ns": 143250,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 219,
+              "mass": 2.0,
+              "kind": "collision"
+            },
+            "cycle": 1742,
+            "simulated_t_s": 1.742,
+            "controller": {
+              "wall_ns": 31579,
+              "cpu_ns": 30700,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 7055672,
+              "cpu_ns": 7051233,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 7087251,
+              "cpu_ns": 7081933,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 369,
+              "mass": 2.0,
+              "kind": "offset"
+            },
+            "cycle": 4789,
+            "simulated_t_s": 4.789,
+            "controller": {
+              "wall_ns": 1784259,
+              "cpu_ns": 52580,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "detector": {
+              "wall_ns": 113369,
+              "cpu_ns": 111630,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1897628,
+              "cpu_ns": 164210,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 382,
+              "mass": 8.0,
+              "kind": "offset"
+            },
+            "cycle": 1399,
+            "simulated_t_s": 1.399,
+            "controller": {
+              "wall_ns": 33750,
+              "cpu_ns": 32840,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 8487399,
+              "cpu_ns": 8485797,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 8521149,
+              "cpu_ns": 8518637,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "holdout",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 2,
+              "mass": 5.95,
+              "kind": "reference"
+            },
+            "cycle": 4162,
+            "simulated_t_s": 4.162,
+            "controller": {
+              "wall_ns": 33370,
+              "cpu_ns": 32479,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 3996986,
+              "cpu_ns": 3995465,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 4030356,
+              "cpu_ns": 4027944,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "timing",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 2,
+              "mass": 8.0,
+              "kind": "reference"
+            },
+            "cycle": 4402,
+            "simulated_t_s": 4.402,
+            "controller": {
+              "wall_ns": 33589,
+              "cpu_ns": 32690,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 5195960,
+              "cpu_ns": 5194380,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 5229549,
+              "cpu_ns": 5227070,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "perturbations",
+            "context": {
+              "variant": null,
+              "version": "v1",
+              "architecture": "servo",
+              "case_id": 2,
+              "mass": 8.0,
+              "kind": null
+            },
+            "cycle": 4513,
+            "simulated_t_s": 4.513,
+            "controller": {
+              "wall_ns": 39819,
+              "cpu_ns": 35260,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 5471909,
+              "cpu_ns": 5469339,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 5511728,
+              "cpu_ns": 5504599,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          }
+        ],
+        "worst_dataset": "d4",
+        "worst_context": {
+          "variant": "v1",
+          "version": null,
+          "architecture": "servo",
+          "case_id": 382,
+          "mass": 8.0,
+          "kind": "offset"
+        }
+      },
+      "v1/torque": {
+        "version": "v1",
+        "architecture": "torque",
+        "measured_rows": 460,
+        "largest_row_wall_median_us": 127.6195,
+        "largest_row_wall_p99_us": 292.5817000000005,
+        "observed_wall_max_us": 10900.359,
+        "cpu_at_worst_wall": {
+          "value_us": 10897.809,
+          "semantics": "thread CPU at the exact worst-wall cycle",
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "retained_outlier_records": 6,
+        "outlier_events": [
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 81,
+              "mass": 3.7,
+              "kind": "reference"
+            },
+            "cycle": 3470,
+            "simulated_t_s": 3.47,
+            "controller": {
+              "wall_ns": 36829,
+              "cpu_ns": 35939,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 8599150,
+              "cpu_ns": 8491419,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 8635979,
+              "cpu_ns": 8527358,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 174,
+              "mass": 8.0,
+              "kind": "reference"
+            },
+            "cycle": 3470,
+            "simulated_t_s": 3.47,
+            "controller": {
+              "wall_ns": 48440,
+              "cpu_ns": 47410,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 10851919,
+              "cpu_ns": 10850399,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 10900359,
+              "cpu_ns": 10897809,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 186,
+              "mass": 8.0,
+              "kind": "reference"
+            },
+            "cycle": 3242,
+            "simulated_t_s": 3.242,
+            "controller": {
+              "wall_ns": 55409,
+              "cpu_ns": 54230,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 3159872,
+              "cpu_ns": 226029,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 3215281,
+              "cpu_ns": 280259,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 204,
+              "mass": 1.3,
+              "kind": "collision"
+            },
+            "cycle": 2240,
+            "simulated_t_s": 2.24,
+            "controller": {
+              "wall_ns": 37850,
+              "cpu_ns": 36910,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1185044,
+              "cpu_ns": 158200,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 1222894,
+              "cpu_ns": 195110,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 374,
+              "mass": 2.0,
+              "kind": "offset"
+            },
+            "cycle": 2778,
+            "simulated_t_s": 2.778,
+            "controller": {
+              "wall_ns": 36620,
+              "cpu_ns": 35660,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 9226740,
+              "cpu_ns": 9225175,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 9263360,
+              "cpu_ns": 9260835,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "holdout",
+            "context": {
+              "variant": "v1",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 31,
+              "mass": 3.45,
+              "kind": "collision"
+            },
+            "cycle": 4506,
+            "simulated_t_s": 4.506,
+            "controller": {
+              "wall_ns": 38450,
+              "cpu_ns": 37570,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 4780212,
+              "cpu_ns": 4757332,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 4818662,
+              "cpu_ns": 4794902,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          }
+        ],
+        "worst_dataset": "d4",
+        "worst_context": {
+          "variant": "v1",
+          "version": null,
+          "architecture": "torque",
+          "case_id": 174,
+          "mass": 8.0,
+          "kind": "reference"
+        }
+      },
+      "v2/servo": {
+        "version": "v2",
+        "architecture": "servo",
+        "measured_rows": 460,
+        "largest_row_wall_median_us": 134.314,
+        "largest_row_wall_p99_us": 346.7623000000001,
+        "observed_wall_max_us": 12151.685,
+        "cpu_at_worst_wall": {
+          "value_us": 12148.944,
+          "semantics": "thread CPU at the exact worst-wall cycle",
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "retained_outlier_records": 6,
+        "outlier_events": [
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 26,
+              "mass": 0.0,
+              "kind": "reference"
+            },
+            "cycle": 3292,
+            "simulated_t_s": 3.2920000000000003,
+            "controller": {
+              "wall_ns": 35010,
+              "cpu_ns": 34040,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 2799165,
+              "cpu_ns": 271969,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 2834175,
+              "cpu_ns": 306009,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 91,
+              "mass": 3.7,
+              "kind": "reference"
+            },
+            "cycle": 2433,
+            "simulated_t_s": 2.433,
+            "controller": {
+              "wall_ns": 34980,
+              "cpu_ns": 33980,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 12116705,
+              "cpu_ns": 12114964,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 12151685,
+              "cpu_ns": 12148944,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 204,
+              "mass": 1.3,
+              "kind": "collision"
+            },
+            "cycle": 3811,
+            "simulated_t_s": 3.811,
+            "controller": {
+              "wall_ns": 44240,
+              "cpu_ns": 43290,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 10974151,
+              "cpu_ns": 10972528,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 11018391,
+              "cpu_ns": 11015818,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "servo",
+              "case_id": 323,
+              "mass": 1.3,
+              "kind": "collision"
+            },
+            "cycle": 3120,
+            "simulated_t_s": 3.12,
+            "controller": {
+              "wall_ns": 40769,
+              "cpu_ns": 39820,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 11384409,
+              "cpu_ns": 11382677,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 11425178,
+              "cpu_ns": 11422497,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "perturbations",
+            "context": {
+              "variant": null,
+              "version": "v2",
+              "architecture": "servo",
+              "case_id": 1,
+              "mass": 4.3,
+              "kind": null
+            },
+            "cycle": 4855,
+            "simulated_t_s": 4.855,
+            "controller": {
+              "wall_ns": 36240,
+              "cpu_ns": 35310,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 6305504,
+              "cpu_ns": 6303816,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 6341744,
+              "cpu_ns": 6339126,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "perturbations",
+            "context": {
+              "variant": null,
+              "version": "v2",
+              "architecture": "servo",
+              "case_id": 15,
+              "mass": 4.3,
+              "kind": null
+            },
+            "cycle": 351,
+            "simulated_t_s": 0.35100000000000003,
+            "controller": {
+              "wall_ns": 47320,
+              "cpu_ns": 46170,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1303453,
+              "cpu_ns": 89629,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 1350773,
+              "cpu_ns": 135799,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          }
+        ],
+        "worst_dataset": "d4",
+        "worst_context": {
+          "variant": "v2",
+          "version": null,
+          "architecture": "servo",
+          "case_id": 91,
+          "mass": 3.7,
+          "kind": "reference"
+        }
+      },
+      "v2/torque": {
+        "version": "v2",
+        "architecture": "torque",
+        "measured_rows": 460,
+        "largest_row_wall_median_us": 173.4545,
+        "largest_row_wall_p99_us": 350.53110000000027,
+        "observed_wall_max_us": 160578.126,
+        "cpu_at_worst_wall": {
+          "value_us": 39373.253,
+          "semantics": "thread CPU at the exact worst-wall cycle",
+          "voluntary_context_switches": 2919,
+          "involuntary_context_switches": 0
+        },
+        "retained_outlier_records": 18,
+        "outlier_events": [
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 59,
+              "mass": 2.0,
+              "kind": "reference"
+            },
+            "cycle": 708,
+            "simulated_t_s": 0.708,
+            "controller": {
+              "wall_ns": 37210,
+              "cpu_ns": 36310,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 12167410,
+              "cpu_ns": 12165944,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 12204620,
+              "cpu_ns": 12202254,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 87,
+              "mass": 3.7,
+              "kind": "reference"
+            },
+            "cycle": 413,
+            "simulated_t_s": 0.41300000000000003,
+            "controller": {
+              "wall_ns": 34769,
+              "cpu_ns": 33920,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1074363,
+              "cpu_ns": 116560,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 1109132,
+              "cpu_ns": 150480,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 190,
+              "mass": 1.3,
+              "kind": "collision"
+            },
+            "cycle": 4158,
+            "simulated_t_s": 4.158,
+            "controller": {
+              "wall_ns": 38390,
+              "cpu_ns": 37490,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 15180976,
+              "cpu_ns": 15179463,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 15219366,
+              "cpu_ns": 15216953,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 219,
+              "mass": 2.0,
+              "kind": "collision"
+            },
+            "cycle": 1053,
+            "simulated_t_s": 1.053,
+            "controller": {
+              "wall_ns": 55250,
+              "cpu_ns": 54200,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1330272,
+              "cpu_ns": 283169,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1385522,
+              "cpu_ns": 337369,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 219,
+              "mass": 2.0,
+              "kind": "collision"
+            },
+            "cycle": 1400,
+            "simulated_t_s": 1.4000000000000001,
+            "controller": {
+              "wall_ns": 37490,
+              "cpu_ns": 36600,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 2549804,
+              "cpu_ns": 375068,
+              "voluntary_context_switches": 2,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 2587294,
+              "cpu_ns": 411668,
+              "voluntary_context_switches": 2,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 221,
+              "mass": 4.0,
+              "kind": "collision"
+            },
+            "cycle": 3184,
+            "simulated_t_s": 3.184,
+            "controller": {
+              "wall_ns": 46060,
+              "cpu_ns": 44919,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1257692,
+              "cpu_ns": 250020,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 1303752,
+              "cpu_ns": 294939,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 222,
+              "mass": 6.25,
+              "kind": "collision"
+            },
+            "cycle": 1407,
+            "simulated_t_s": 1.407,
+            "controller": {
+              "wall_ns": 48400,
+              "cpu_ns": 47260,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 2938582,
+              "cpu_ns": 278639,
+              "voluntary_context_switches": 3,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 2986982,
+              "cpu_ns": 325899,
+              "voluntary_context_switches": 3,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 223,
+              "mass": 8.0,
+              "kind": "collision"
+            },
+            "cycle": 1422,
+            "simulated_t_s": 1.422,
+            "controller": {
+              "wall_ns": 51410,
+              "cpu_ns": 50270,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1228023,
+              "cpu_ns": 231429,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1279433,
+              "cpu_ns": 281699,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 223,
+              "mass": 8.0,
+              "kind": "collision"
+            },
+            "cycle": 1426,
+            "simulated_t_s": 1.426,
+            "controller": {
+              "wall_ns": 46940,
+              "cpu_ns": 45800,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1372722,
+              "cpu_ns": 343749,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 1
+            },
+            "combined": {
+              "wall_ns": 1419662,
+              "cpu_ns": 389549,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 1
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 232,
+              "mass": 1.3,
+              "kind": "collision"
+            },
+            "cycle": 1400,
+            "simulated_t_s": 1.4000000000000001,
+            "controller": {
+              "wall_ns": 46179,
+              "cpu_ns": 45149,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 6422001,
+              "cpu_ns": 327330,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 6468180,
+              "cpu_ns": 372479,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 239,
+              "mass": 1.3,
+              "kind": "collision"
+            },
+            "cycle": 1400,
+            "simulated_t_s": 1.4000000000000001,
+            "controller": {
+              "wall_ns": 35979,
+              "cpu_ns": 35120,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1857619,
+              "cpu_ns": 275439,
+              "voluntary_context_switches": 3,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1893598,
+              "cpu_ns": 310559,
+              "voluntary_context_switches": 3,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 244,
+              "mass": 8.0,
+              "kind": "collision"
+            },
+            "cycle": 1402,
+            "simulated_t_s": 1.4020000000000001,
+            "controller": {
+              "wall_ns": 38399,
+              "cpu_ns": 37490,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1368122,
+              "cpu_ns": 216410,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1406521,
+              "cpu_ns": 253900,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 254,
+              "mass": 2.0,
+              "kind": "collision"
+            },
+            "cycle": 2046,
+            "simulated_t_s": 2.0460000000000003,
+            "controller": {
+              "wall_ns": 60979,
+              "cpu_ns": 59600,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1425762,
+              "cpu_ns": 282689,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1486741,
+              "cpu_ns": 342289,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 256,
+              "mass": 4.0,
+              "kind": "collision"
+            },
+            "cycle": 0,
+            "simulated_t_s": 0.0,
+            "controller": {
+              "wall_ns": 60099,
+              "cpu_ns": 58669,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 3564069,
+              "cpu_ns": 245178,
+              "voluntary_context_switches": 2,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 3624168,
+              "cpu_ns": 303847,
+              "voluntary_context_switches": 2,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 259,
+              "mass": 0.0,
+              "kind": "collision"
+            },
+            "cycle": 1566,
+            "simulated_t_s": 1.566,
+            "controller": {
+              "wall_ns": 60999,
+              "cpu_ns": 59619,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 3316480,
+              "cpu_ns": 205230,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 3377479,
+              "cpu_ns": 264849,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 295,
+              "mass": 1.3,
+              "kind": "collision"
+            },
+            "cycle": 1407,
+            "simulated_t_s": 1.407,
+            "controller": {
+              "wall_ns": 38060,
+              "cpu_ns": 37150,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 1420742,
+              "cpu_ns": 216150,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 1458802,
+              "cpu_ns": 253300,
+              "voluntary_context_switches": 1,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "d4",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 328,
+              "mass": 8.0,
+              "kind": "collision"
+            },
+            "cycle": 1052,
+            "simulated_t_s": 1.052,
+            "controller": {
+              "wall_ns": 42119,
+              "cpu_ns": 41230,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 160536007,
+              "cpu_ns": 39332023,
+              "voluntary_context_switches": 2919,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 160578126,
+              "cpu_ns": 39373253,
+              "voluntary_context_switches": 2919,
+              "involuntary_context_switches": 0
+            }
+          },
+          {
+            "dataset": "holdout",
+            "context": {
+              "variant": "v2",
+              "version": null,
+              "architecture": "torque",
+              "case_id": 24,
+              "mass": 7.85,
+              "kind": "collision"
+            },
+            "cycle": 3469,
+            "simulated_t_s": 3.469,
+            "controller": {
+              "wall_ns": 37670,
+              "cpu_ns": 36770,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 5394329,
+              "cpu_ns": 5392640,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 5431999,
+              "cpu_ns": 5429410,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          }
+        ],
+        "worst_dataset": "d4",
+        "worst_context": {
+          "variant": "v2",
+          "version": null,
+          "architecture": "torque",
+          "case_id": 328,
+          "mass": 8.0,
+          "kind": "collision"
+        }
+      }
+    },
+    "final_v2_goal": {
+      "per_architecture": {
+        "servo": {
+          "group": "v2/servo",
+          "observed_wall_max_us": 12151.685,
+          "strict_below_1ms": false,
+          "cpu_at_worst_wall": {
+            "value_us": 12148.944,
+            "semantics": "thread CPU at the exact worst-wall cycle",
+            "voluntary_context_switches": 0,
+            "involuntary_context_switches": 0
+          },
+          "worst_dataset": "d4",
+          "worst_context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "servo",
+            "case_id": 91,
+            "mass": 3.7,
+            "kind": "reference"
+          }
+        },
+        "torque": {
+          "group": "v2/torque",
+          "observed_wall_max_us": 160578.126,
+          "strict_below_1ms": false,
+          "cpu_at_worst_wall": {
+            "value_us": 39373.253,
+            "semantics": "thread CPU at the exact worst-wall cycle",
+            "voluntary_context_switches": 2919,
+            "involuntary_context_switches": 0
+          },
+          "worst_dataset": "d4",
+          "worst_context": {
+            "variant": "v2",
+            "version": null,
+            "architecture": "torque",
+            "case_id": 328,
+            "mass": 8.0,
+            "kind": "collision"
+          }
+        }
+      },
+      "G5": false
+    }
+  },
+  "candidate_disposition": {
+    "C": "rejected: G4 0/4 for each architecture; fixed 0.10 s return with 1.5 mm and 0.01 m/s bounds cannot cover the entire registered state box (not a claim that every tested trajectory violated a bound)",
+    "L1": "rejected after tentative development gain because disclosed official false alarms regressed",
+    "L2": "preserved as exploratory train-envelope evidence; not preferred",
+    "L3": "adopted exact original geometry-height gate repair; weights and thresholds unchanged"
+  }
+}

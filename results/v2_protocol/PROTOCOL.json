@@ -1,0 +1,269 @@
+{
+  "registered_utc": "2026-11-04T04:48:13.978784+00:00",
+  "stage": "pre-implementation; no v2 fit or holdout run yet",
+  "base_work_commit": "31b1359",
+  "public_start_commit": "05091fced32f54dce2cb8c6460bcd5242df725fc",
+  "seeds": {
+    "training": 369401,
+    "validation": 369402,
+    "development": 369403,
+    "holdout": 369503,
+    "analysis_noise": [
+      9001,
+      9002,
+      9003
+    ]
+  },
+  "train": [
+    {
+      "mass": 0.65,
+      "com": [
+        -0.018,
+        0.012,
+        0.021
+      ]
+    },
+    {
+      "mass": 1.7,
+      "com": [
+        0.011,
+        -0.016,
+        -0.006
+      ]
+    },
+    {
+      "mass": 2.85,
+      "com": [
+        -0.022,
+        -0.007,
+        0.042
+      ]
+    },
+    {
+      "mass": 5.15,
+      "com": [
+        0.026,
+        0.013,
+        0.008
+      ]
+    },
+    {
+      "mass": 6.4,
+      "com": [
+        -0.008,
+        0.019,
+        0.036
+      ]
+    },
+    {
+      "mass": 7.35,
+      "com": [
+        0.014,
+        -0.015,
+        0.024
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "mass": 1.15,
+      "com": [
+        0.017,
+        0.009,
+        0.017
+      ]
+    },
+    {
+      "mass": 3.25,
+      "com": [
+        -0.013,
+        0.016,
+        0.032
+      ]
+    },
+    {
+      "mass": 5.75,
+      "com": [
+        0.024,
+        -0.017,
+        -0.003
+      ]
+    },
+    {
+      "mass": 7.65,
+      "com": [
+        -0.024,
+        -0.013,
+        0.046
+      ]
+    }
+  ],
+  "architectures": [
+    "servo",
+    "torque"
+  ],
+  "training_simulation": "unchanged kit; default sensor realization; no config seed/offset/drift read by runtime",
+  "official_conditions_excluded_from_fit_and_calibration": true,
+  "train_targets": "only v1 estimator last_wrench[:2], computed from allowed measured inputs; no plant/log/oracle data",
+  "methods": {
+    "C_normal": {
+      "hypothesis": "bounded normal-only outer admittance improves sustained pre-release support",
+      "targets": [
+        "U4",
+        "U7"
+      ],
+      "references": [
+        "Hogan1985",
+        "Albu-Schaeffer2007",
+        "vanSteen2024",
+        "Lie Group Robotics manuscript2024 sections2.2,6.1,7.2",
+        "Lie Group Robot Control lecture2024 sections11.1,11.4,11.5"
+      ],
+      "start_before_release_s": 0.12,
+      "normal_displacement_limit_m": 0.0015,
+      "normal_velocity_limit_m_s": 0.01,
+      "normal_acceleration_limit_m_s2": 0.5,
+      "desired_support_fraction": 0.85,
+      "normal_damping_Ns_m": 12000.0,
+      "velocity_filter_s": 0.01,
+      "release_return_s": 0.1,
+      "geometry": "constant taught-endpoint full 6D world bottom-centre Jacobian; translation z only, first-order tangent/rotation unchanged; joint displacement/velocity/acceleration mutually consistent",
+      "antiwindup": "clip scalar displacement and velocity; freeze further downward integration on alarm; return boundedly after release",
+      "selection": "per architecture on four nonofficial no-collision validation episodes: >=3/4 G4 pass, support improvement >=.25mg, peak<=1.1mg all, TCPmax<=1.05*v1, steps<=1.05*v1, saturation0/divergence0/false0; otherwise reject without retuning"
+    },
+    "L_residual": {
+      "hypothesis": "learn normal wrench baseline and use symmetric horizontal EMA to improve weak-force detection",
+      "targets": [
+        "U1",
+        "U2",
+        "U3",
+        "U6"
+      ],
+      "features": "77 numeric basis: 1,sin(qref),cos(qref),qdref,qddref,qdref*abs(qdref),mass/8,COM/.05,mass*qdref,mass*qddref,mass*sin(qref),COM outer sin(qref),reference jerk; no case/time index or lookup",
+      "normalization": "per-architecture train-only mean/std; floor1e-6; standardized runtime clip[-8,8]",
+      "ridge": 0.02,
+      "target_dimension": 2,
+      "score": "EMA alpha.1 of Euclidean norm of horizontal prediction error; 4-cycle persistence,8-cycle release",
+      "gate": "only recognized shared-estimator controller, grip and outside table-height band; v1 channels always retained OR",
+      "threshold": "max(3 N,1.20*maximum score across disjoint no-collision validation+0.5 N); one freeze before any development collision, never refit after collisions",
+      "selection": "validation no extra false alarm; balanced-development total >=4 extra detected across A/B without increased false rises, no lost v1 detections and p99 combined<800us; otherwise reject; no threshold/gain changes after development"
+    },
+    "geometry_audit": {
+      "hypothesis": "frame/power audit prevents coordinate artifacts but does not create source observability",
+      "tests": "coadjoint power invariance, force/moment origin shift, Jacobian virtual power, equal vertical wrench counterexample; nonlinear-vs-linear normal shift finite-error check",
+      "other_candidates": "NRIC/DOB/P-APD/P-IDC excluded high-gain elasticity risk and observer collision-rejection confound; mass/COM RLS unnecessary because supplied exact, load/contact confounded; pRNE actual chapter8.3 absent in scan; full SE3 log/dexp and seventh-order entire-cycle replacement excluded as larger change than mm-scale target, not claimed impossible"
+    }
+  },
+  "G4": {
+    "window_s_before_release": 0.02,
+    "mean_support_over_mg_at_least": 0.5,
+    "minimum_support_over_mg_at_least": 0.25,
+    "mean_increase_over_v1_at_least": 0.25,
+    "peak_place_support_over_mg_at_most": 1.1,
+    "applies_to": "positive masses, specifically final 8kg A/B; failure remains failure"
+  },
+  "development": {
+    "masses": [
+      1.15,
+      7.65
+    ],
+    "coms": [
+      [
+        0.017,
+        0.009,
+        0.017
+      ],
+      [
+        -0.024,
+        -0.013,
+        0.046
+      ]
+    ],
+    "collision_times_s": [
+      2.42,
+      3.817
+    ],
+    "forces_N": [
+      9.0,
+      22.0
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy"
+    ],
+    "design": "32 collision episodes per architecture stratified cyclic over masses; matched no-collision references; no collision training/thresholding"
+  },
+  "holdout": {
+    "opened": false,
+    "masses": [
+      0.95,
+      3.45,
+      5.95,
+      7.85
+    ],
+    "com": "seeded uniform x[-.028,.028],y[-.018,.018],z[-.012,.048]",
+    "times": "seeded uniform in pick[1.375,1.515],transport[2.05,3.35],place[3.775,3.945]",
+    "forces_N": [
+      7.0,
+      12.0,
+      19.0,
+      37.0,
+      65.0
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy",
+      "+xyz",
+      "-xyz"
+    ],
+    "collision_cases_per_architecture": 30,
+    "offset_m": [
+      [
+        0.014,
+        0,
+        0.012
+      ],
+      [
+        -0.014,
+        0,
+        0.012
+      ],
+      [
+        0,
+        0.018,
+        -0.006
+      ],
+      [
+        0,
+        -0.018,
+        0.018
+      ]
+    ],
+    "design": "four no-collision references,30 stratified force/time/direction collisions plus4 offsets per architecture/version; do not generate/run/read results before source+weights freeze; no post-holdout tuning"
+  },
+  "robustness": "exact d4_robustness.build_cases 385/architecture for fresh v1 and final v2; analysis-only legacy perturbation matrix 25/architecture/version plus new noise seeds; no sim module monkeypatch",
+  "ablation": "baseline/v1/C-only/L-only/C+L; final baseline/new controller x baseline/new detector 8 official combinations; rejected methods kept only as experiments",
+  "runtime": "numpy+mujoco+public sim only,self-contained final entries; embedded weights; no torch,pickle,ONNX; separate train venv only",
+  "timing": "paired compute+update wall and thread CPU,median,p99,max,all >=1ms outliers plus process-load/rusage; G5 strict max<1ms separate from p99 selection gate; never claim hard real-time",
+  "resources": {
+    "max_owned_simulations": 1,
+    "max_total_simulations": 4,
+    "min_available_RAM_GiB": 6,
+    "GPU_jobs": 0,
+    "render": "Mesa llvmpipe"
+  },
+  "no_retuning_after_holdout": true,
+  "remote_operations_allowed": 0
+}

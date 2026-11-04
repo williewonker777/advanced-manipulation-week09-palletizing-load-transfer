@@ -1,0 +1,136 @@
+{
+  "registered_utc": "2026-11-04T05:09:00.821967+00:00",
+  "reason": "L1 rejected at mandatory official regression: empty-payload false alarms. Official observations are disclosed; no weights, EMA or numerical detection thresholds are changed. New generic fallback uses training support only, not a special zero-mass rule. All out-of-support masses/COM including 8kg fall back to v1. No heldout results seen.",
+  "method": "L2 selective normal-residual model with closed training-mass/COM bounding box; inactive/reset learning outside; v1 always OR",
+  "domain_source": "componentwise min/max of original six training conditions ONLY",
+  "domain": {
+    "mass_min": 0.65,
+    "mass_max": 7.35,
+    "com_min": [
+      -0.022,
+      -0.016,
+      -0.006
+    ],
+    "com_max": [
+      0.026,
+      0.019,
+      0.042
+    ]
+  },
+  "frozen_model_sha256": "bf4f0700a57e0155ec8bf51777bdf13759e6586b024aed0f6f4646f49db15e6c",
+  "base_protocol_sha256": "720a3cdaabb2ea09adb4b641adf2f9f4c657b69ae06b07d130148dd51d3603a5",
+  "new_data_used_for_fitting_or_thresholds": false,
+  "validation": [
+    {
+      "mass": 0.15,
+      "com": [
+        0.016,
+        -0.008,
+        0.019
+      ]
+    },
+    {
+      "mass": 0.35,
+      "com": [
+        -0.019,
+        0.008,
+        0.038
+      ]
+    },
+    {
+      "mass": 1.05,
+      "com": [
+        0.016,
+        -0.008,
+        0.019
+      ]
+    },
+    {
+      "mass": 6.85,
+      "com": [
+        -0.019,
+        0.008,
+        0.038
+      ]
+    },
+    {
+      "mass": 7.8,
+      "com": [
+        0.016,
+        -0.008,
+        0.019
+      ]
+    },
+    {
+      "mass": 7.95,
+      "com": [
+        -0.019,
+        0.008,
+        0.038
+      ]
+    },
+    {
+      "mass": 2.45,
+      "com": [
+        0.034,
+        0.001,
+        0.03
+      ]
+    },
+    {
+      "mass": 4.65,
+      "com": [
+        0.003,
+        -0.027,
+        0.016
+      ]
+    }
+  ],
+  "development": {
+    "conditions": [
+      {
+        "mass": 1.05,
+        "com": [
+          0.016,
+          -0.008,
+          0.019
+        ]
+      },
+      {
+        "mass": 6.85,
+        "com": [
+          -0.019,
+          0.008,
+          0.038
+        ]
+      }
+    ],
+    "times": [
+      2.27,
+      3.804
+    ],
+    "forces": [
+      8.5,
+      18.5
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy"
+    ],
+    "design": "full Cartesian over both conditions x times x forces x directions,64collisions/architecture; avoids mass-direction confound of original cyclic development"
+  },
+  "seeds": {
+    "validation": 369412,
+    "development": 369413,
+    "holdout": 369503
+  },
+  "adoption": "same numerical method-selection gates as original: fresh validation false0/no increase; fresh balanced development >=4 extra/no losses/no added false rises; largest paired p99<800us; then mandatory official regression. No post-holdout tuning.",
+  "holdout": "original untouched design; no result generation/opening before new final source+supplement freeze",
+  "limits": "official performance no longer a clean selection-independent estimate; independent unseen holdout remains the generalization check. No G1/G2 gain expected at out-of-domain8kg."
+}

@@ -1,5 +1,7 @@
 # Final results: load-transfer-aware palletizing
 
+> Historical **v1** results, not the final v2 detector. See [V2_RESULTS](../docs/V2_RESULTS.md) and [V2_REVIEW](../docs/V2_REVIEW.md).
+
 **Control targets pass at nominal 8 kg; full acceptance is not achieved.**
 
 Official figures below come only from the unchanged evaluator through the integrity gate.

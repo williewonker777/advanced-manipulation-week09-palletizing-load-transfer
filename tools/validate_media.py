@@ -18,6 +18,12 @@ sys.path.insert(0, str(ROOT))
 from tools.compare_baseline import official_cells
 STEMS = ('01_servo_no_collision', '02_torque_no_collision',
          '03_servo_place_collision', '04_servo_transport_collision')
+V2_STEMS = ('05_v2_servo_transport_collision',
+            '06_v2_torque_transport_collision')
+V2_VARIANTS = ('baseline', 'v1', 'v2')
+V2_EXTERNAL_KIT_SOURCES = {
+    'servo_controller.py', 'torque_controller.py', 'collision_detector.py', 'sim/runner.py',
+}
 
 
 def probe(path, executable):
@@ -51,9 +57,27 @@ def read_official(root, ctrl):
     return rows
 
 
+def legacy_alias_errors(root, data):
+    aliases = data.get('frozen_source_aliases')
+    if aliases is None:
+        return []
+    names = {'my_servo.py','my_torque.py','my_detector.py'}
+    if set(aliases) != names:
+        return ['legacy v1 source alias coverage mismatch']
+    errors = []
+    for name, item in aliases.items():
+        expected = 'v1_'+name[3:]
+        path = Path(root)/expected
+        if (item.get('file') != expected or path.is_symlink() or not path.is_file()
+                or hashlib.sha256(path.read_bytes()).hexdigest() != item.get('sha256')):
+            errors.append(f'{name}: frozen v1 alias/hash mismatch')
+    return errors
+
+
 def validate(root, ffprobe):
     root=Path(root).resolve();folder=root/'artifacts/media';path=folder/'media_manifest.json'
     data=json.loads(path.read_text(encoding='utf-8'));records=data['scenarios'];errors=[]
+    errors.extend(legacy_alias_errors(root, data))
     names=[r.get('name') for r in records]
     if sorted(names)!=sorted(STEMS): errors.append('expected exactly four uniquely named scenarios')
     seen=set();total=0;report=[]
@@ -162,12 +186,178 @@ def validate(root, ffprobe):
                 scope='manifest, ffprobe, codec, timewarp and official summary; independent visual/run.py verification also required')
 
 
+def _v2_combinations(mode):
+    return {
+        'baseline': (f'{mode}_controller', 'collision_detector'),
+        'v1': (f'v1_{mode}', 'v1_detector'),
+        'v2': (f'my_{mode}', 'my_detector'),
+    }
+
+
+def validate_v2(root, ffprobe, probe_fn=probe):
+    """Validate the distinct baseline/v1/v2 media set without simulation."""
+    root=Path(root).resolve();folder=root/'artifacts/media';path=folder/'v2_manifest.json'
+    data=json.loads(path.read_text(encoding='utf-8'));records=data.get('scenarios',[]);errors=[]
+    names=[row.get('name') for row in records]
+    if sorted(names)!=sorted(V2_STEMS) or len(set(names))!=len(V2_STEMS):
+        errors.append('expected exactly two uniquely named v2 scenarios')
+    command=data.get('generation_command','')
+    forbidden=('/'+'home/','TASK-','Notion','materials')
+    if ('tools/render_v2_comparison.py' not in command or
+            '--output-dir artifacts/media' not in command or '--raw-dir "$RAW_DIR"' not in command or
+            '--ffmpeg ffmpeg' not in command or any(x in command for x in forbidden)):
+        errors.append('v2 generation command is not portable')
+    backend=data.get('software_gl',{})
+    identity=(backend.get('vendor','')+' '+backend.get('renderer','')).lower()
+    if 'mesa' not in identity or not ('llvmpipe' in identity or 'softpipe' in identity):
+        errors.append('v2 manifest does not prove actual Mesa software GL')
+    hashes=data.get('source_hashes',{})
+    required_sources={
+        'servo_controller.py','torque_controller.py','collision_detector.py',
+        'v1_servo.py','v1_torque.py','v1_detector.py',
+        'my_servo.py','my_torque.py','my_detector.py','sim/runner.py',
+        'tools/render_v2_comparison.py',
+    }
+    if set(hashes)!=required_sources:
+        errors.append('v2 source hash coverage mismatch')
+    external_not_local=[]
+    for relative,digest in hashes.items():
+        source=root/relative
+        safe_digest=isinstance(digest,str) and len(digest)==64 and all(c in '0123456789abcdef' for c in digest)
+        if Path(relative).is_absolute() or '..' in Path(relative).parts or not safe_digest:
+            errors.append(f'{relative}: source SHA mismatch')
+        elif source.is_symlink() or (source.exists() and not source.is_file()):
+            errors.append(f'{relative}: source SHA mismatch')
+        elif relative in V2_EXTERNAL_KIT_SOURCES and not source.exists():
+            external_not_local.append(relative)
+        elif not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest()!=digest:
+            errors.append(f'{relative}: source SHA mismatch')
+    if (hashes.get('v1_servo.py')!=hashes.get('my_servo.py') or
+            hashes.get('v1_torque.py')!=hashes.get('my_torque.py')):
+        errors.append('v1/v2 controller sources must remain identical')
+    if hashes.get('v1_detector.py')==hashes.get('my_detector.py'):
+        errors.append('v2 detector source is not distinct from v1')
+
+    seen=set();total=0;report=[]
+    for row in records:
+        name=row.get('name','');condition=row.get('condition',{});mode=condition.get('mode')
+        collision=condition.get('collision');expected_variants=_v2_combinations(mode) if mode in ('servo','torque') else {}
+        expected_name=(f"{'05' if mode=='servo' else '06'}_v2_{mode}_transport_collision"
+                       if mode in ('servo','torque') else None)
+        if name!=expected_name:
+            errors.append(f'{name}: mode/stem mismatch')
+        if (condition.get('box_mass_kg')!=3.7 or tuple(condition.get('box_com_m',()))!=(.02,-.01,.03) or
+                not isinstance(collision,dict) or collision.get('time_s')!=3.0 or
+                collision.get('force_n')!=[0.,15.,0.]):
+            errors.append(f'{name}: v2 physical condition mismatch')
+        variants=row.get('variants',{})
+        if set(variants)!=set(V2_VARIANTS):
+            errors.append(f'{name}: expected baseline/v1/v2 variants')
+        for label,(controller,detector) in expected_variants.items():
+            if variants.get(label)!={'controller':controller,'detector':detector}:
+                errors.append(f'{name}: {label} module combination mismatch')
+        row_backend=row.get('software_gl',{})
+        if row_backend!=backend:
+            errors.append(f'{name}: software GL identity differs from manifest')
+        pieces=row.get('timewarp',[])
+        if (not pieces or abs(pieces[0].get('simulation_start_s',-1))>1e-9 or
+                abs(pieces[-1].get('simulation_end_s',-1)-6.0)>1e-9 or
+                any(p.get('simulation_end_s',0)<=p.get('simulation_start_s',0) or
+                    p.get('playback_speed',0)<=0 for p in pieces) or
+                any(abs(a['simulation_end_s']-b['simulation_start_s'])>1e-9
+                    for a,b in zip(pieces,pieces[1:])) or
+                not any(p['simulation_start_s']<=3.0<p['simulation_end_s'] and
+                        p['playback_speed']<1 for p in pieces)):
+            errors.append(f'{name}: invalid v2 timewarp schedule')
+        summaries=row.get('episode_summary',{});checks=row.get('evaluate_classification',{})
+        references=row.get('reference_no_collision',{});source_frames=row.get('source_simulation_frames',{})
+        if any(set(group)!=set(V2_VARIANTS) for group in (summaries,checks,references,source_frames)):
+            errors.append(f'{name}: incomplete three-way episode evidence')
+        for label,(controller,detector) in expected_variants.items():
+            summary=summaries.get(label,{});check=checks.get(label,{});reference=references.get(label,{})
+            if (reference.get('controller')!=controller or reference.get('detector')!=detector or
+                    reference.get('box_mass_kg')!=3.7 or
+                    tuple(reference.get('box_com_m',()))!=(.02,-.01,.03) or
+                    not isinstance(reference.get('resource_guard_before_reference'),dict) or
+                    not isinstance(reference.get('resource_guard_before_collision'),dict)):
+                errors.append(f'{name}: {label} reference/resource guard mismatch')
+            outcome=check.get('collision_outcome');delay=check.get('detect_delay_ms')
+            if outcome not in ('detected','missed','alarm_before_collision','indistinguishable'):
+                errors.append(f'{name}: {label} invalid official classification')
+            summary_delay=summary.get('detect_delay_ms_raw')
+            delay_matches=(delay is None and summary_delay is None) or (
+                delay is not None and summary_delay is not None and abs(delay-summary_delay)<=.51)
+            if (check.get('false_alarms')!=summary.get('false_alarm_rises_in_this_episode') or
+                    bool(check.get('alarm_before_collision'))!=bool(summary.get('alarm_before_collision')) or
+                    not delay_matches):
+                errors.append(f'{name}: {label} classification/episode mismatch')
+            if not isinstance(source_frames.get(label),int) or source_frames.get(label)<=0:
+                errors.append(f'{name}: {label} invalid source frame count')
+        files=row.get('artifacts',[])
+        if len(files)!=2:
+            errors.append(f'{name}: expected v2 MP4 and GIF')
+        expected_duration=sum((p['simulation_end_s']-p['simulation_start_s'])/p['playback_speed']
+                              for p in pieces) if pieces else 0
+        for item in files:
+            relative=item.get('file','');media=root/relative
+            expected={f'artifacts/media/{name}.mp4',f'artifacts/media/{name}.gif'}
+            if relative not in expected or relative in seen:
+                errors.append(f'{name}: invalid or duplicate v2 media path');continue
+            seen.add(relative)
+            if not media.is_file() or media.is_symlink():
+                errors.append(f'{relative}: missing or unsafe');continue
+            raw=media.read_bytes();total+=len(raw)
+            if item.get('bytes')!=len(raw) or item.get('sha256')!=hashlib.sha256(raw).hexdigest():
+                errors.append(f'{relative}: bytes/SHA mismatch')
+            try: actual=probe_fn(media,ffprobe)
+            except (OSError,ValueError,KeyError,subprocess.TimeoutExpired,json.JSONDecodeError):
+                errors.append(f'{relative}: probe failed');continue
+            for field in ('width','height','frame_count'):
+                if item.get(field)!=actual[field]: errors.append(f'{relative}: {field} mismatch')
+            if abs(item.get('fps',0)-actual['fps'])>.01 or abs(item.get('duration_s',0)-actual['duration_s'])>.03:
+                errors.append(f'{relative}: fps/duration mismatch')
+            if relative.endswith('.mp4'):
+                if actual['codec']!='h264' or (actual['width'],actual['height'])!=(1280,720) or abs(actual['fps']-15)>0.05:
+                    errors.append(f'{relative}: expected H.264 1280x720 at 15 fps')
+                if item.get('frame_count')!=row.get('rendered_frame_count'):
+                    errors.append(f'{relative}: rendered frame count mismatch')
+                if expected_duration and abs(actual['duration_s']-expected_duration)>(len(pieces)+2)/actual['fps']:
+                    errors.append(f'{relative}: duration inconsistent with timewarp schedule')
+            elif actual['codec']!='gif' or (actual['width'],actual['height'])!=(640,360) or abs(actual['fps']-8)>.15:
+                errors.append(f'{relative}: expected 640x360 GIF at 8 fps')
+            report.append(dict(file=relative,bytes=len(raw),sha256=item.get('sha256'),**actual))
+    if len(seen)!=4 or total!=data.get('total_media_bytes') or total>30_000_000:
+        errors.append('v2 media total/file coverage mismatch')
+    return dict(status='pass' if not errors else 'FAIL',errors=errors,files=report,
+                total_media_bytes=total,scenarios=len(records),
+                external_kit_sources_not_locally_verified=sorted(external_not_local),
+                scope='v2 manifest, sources, software GL, three variants, classification, ffprobe and hashes')
+
+
+def validate_all(root, ffprobe):
+    """Validate every media manifest present; never silently skip v2."""
+    root=Path(root).resolve();media=root/'artifacts/media';sets={};errors=[]
+    legacy=media/'media_manifest.json';v2=media/'v2_manifest.json'
+    if legacy.exists():
+        sets['legacy']=validate(root,ffprobe)
+    else:
+        errors.append('legacy media_manifest.json is missing')
+    if v2.exists():
+        sets['v2']=validate_v2(root,ffprobe)
+    else:
+        errors.append('v2 v2_manifest.json is missing')
+    for label,result in sets.items():
+        errors.extend(f'{label}: {error}' for error in result['errors'])
+    return dict(status='pass' if not errors else 'FAIL',errors=errors,sets=sets,
+                validated_manifests=sorted(sets))
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root',type=Path,default=ROOT)
-    parser.add_argument('--ffprobe',required=True)
+    parser.add_argument('--ffprobe',default='ffprobe')
     parser.add_argument('--out',type=Path)
-    args=parser.parse_args(); result=validate(args.root,args.ffprobe)
+    args=parser.parse_args(); result=validate_all(args.root,args.ffprobe)
     text=json.dumps(result,indent=2,ensure_ascii=False)+'\n'
     if args.out: args.out.write_text(text,encoding='utf-8')
     print(text,end='')

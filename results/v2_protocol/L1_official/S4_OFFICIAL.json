@@ -1,0 +1,1064 @@
+{
+  "official": true,
+  "source": "unchanged evaluate.py",
+  "combinations": {
+    "servo_base_base": {
+      "controller": "servo_controller",
+      "detector": "collision_detector",
+      "official": true,
+      "control": {
+        "0.0": {
+          "rms_mm": 4.69,
+          "max_mm": 10.49,
+          "saturation_pct": 0.0,
+          "pick_nm": 3.7,
+          "place_nm": 3.3,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 5.37,
+          "max_mm": 12.4,
+          "saturation_pct": 0.0,
+          "pick_nm": 28.6,
+          "place_nm": 38.4,
+          "table_n": 54.0,
+          "false_alarms": [
+            2,
+            4,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 6.14,
+          "max_mm": 14.0,
+          "saturation_pct": 0.0,
+          "pick_nm": 57.5,
+          "place_nm": 73.8,
+          "table_n": 101.0,
+          "false_alarms": [
+            5,
+            2,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "28",
+          "force100": "19",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "97",
+          "force40": "28",
+          "force100": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "force10": "50",
+          "force15": "50",
+          "force40": "31",
+          "force100": "20",
+          "false_max": "0회",
+          "minimum": "10 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "force10": "구분 불가",
+          "force15": "구분 불가",
+          "force40": "구분 불가",
+          "force100": "구분 불가",
+          "false_max": "4회",
+          "minimum": "—"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "68",
+          "force40": "26",
+          "force100": "17",
+          "false_max": "8회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "force10": "경보 중",
+          "force15": "경보 중",
+          "force40": "경보 중",
+          "force100": "경보 중",
+          "false_max": "6회",
+          "minimum": "—"
+        }
+      ],
+      "host_before": {
+        "mem_available_gib": 22.231525421142578,
+        "load_average": [
+          1.5048828125,
+          2.51171875,
+          2.154296875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 22.06305694580078,
+        "load_average": [
+          1.69091796875,
+          2.470703125,
+          2.14990234375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "evaluation_sha256": "ebb8448efd84f063b0881a31e5ec88c3a5219a70c078df4f4e60c5190619dd0f"
+    },
+    "servo_base_v2": {
+      "controller": "servo_controller",
+      "detector": "my_detector",
+      "official": true,
+      "control": {
+        "0.0": {
+          "rms_mm": 4.69,
+          "max_mm": 10.49,
+          "saturation_pct": 0.0,
+          "pick_nm": 3.7,
+          "place_nm": 3.3,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 5.37,
+          "max_mm": 12.4,
+          "saturation_pct": 0.0,
+          "pick_nm": 28.6,
+          "place_nm": 38.4,
+          "table_n": 54.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 6.14,
+          "max_mm": 14.0,
+          "saturation_pct": 0.0,
+          "pick_nm": 57.5,
+          "place_nm": 73.8,
+          "table_n": 101.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "36",
+          "force100": "23",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "74",
+          "force40": "27",
+          "force100": "18",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "force10": "놓침",
+          "force15": "78",
+          "force40": "28",
+          "force100": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "34",
+          "force100": "22",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "77",
+          "force40": "24",
+          "force100": "18",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "force10": "놓침",
+          "force15": "64",
+          "force40": "42",
+          "force100": "27",
+          "false_max": "0회",
+          "minimum": "15 N"
+        }
+      ],
+      "host_before": {
+        "mem_available_gib": 22.064449310302734,
+        "load_average": [
+          1.69091796875,
+          2.470703125,
+          2.14990234375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 21.677833557128906,
+        "load_average": [
+          1.97314453125,
+          2.45068359375,
+          2.1552734375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "evaluation_sha256": "4d86b9703c65c6da7e4e7c423c465607f1b4a0915955963d117d63014394f20d"
+    },
+    "servo_v2_base": {
+      "controller": "my_servo",
+      "detector": "collision_detector",
+      "official": true,
+      "control": {
+        "0.0": {
+          "rms_mm": 1.18,
+          "max_mm": 3.94,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 5.1,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 1.15,
+          "max_mm": 3.79,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 7.6,
+          "table_n": 40.0,
+          "false_alarms": [
+            4,
+            1,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 1.17,
+          "max_mm": 3.91,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 14.6,
+          "table_n": 79.0,
+          "false_alarms": [
+            3,
+            7,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "27",
+          "force100": "19",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "28",
+          "force100": "17",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "force10": "놓침",
+          "force15": "43",
+          "force40": "29",
+          "force100": "20",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "force10": "경보 중",
+          "force15": "경보 중",
+          "force40": "경보 중",
+          "force100": "경보 중",
+          "false_max": "9회",
+          "minimum": "—"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "26",
+          "force100": "17",
+          "false_max": "13회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "force10": "경보 중",
+          "force15": "경보 중",
+          "force40": "경보 중",
+          "force100": "경보 중",
+          "false_max": "4회",
+          "minimum": "—"
+        }
+      ],
+      "host_before": {
+        "mem_available_gib": 21.67804718017578,
+        "load_average": [
+          1.97314453125,
+          2.45068359375,
+          2.1552734375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 21.450153350830078,
+        "load_average": [
+          2.0234375,
+          2.38916015625,
+          2.1474609375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "evaluation_sha256": "30e1b8befe9de4cd19f32de43942f1fc834eed84c5d8c92503f51f937a1195ab"
+    },
+    "servo_v2_v2": {
+      "controller": "my_servo",
+      "detector": "my_detector",
+      "official": true,
+      "control": {
+        "0.0": {
+          "rms_mm": 1.18,
+          "max_mm": 3.94,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 5.1,
+          "table_n": 0.0,
+          "false_alarms": [
+            1,
+            1,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 1.15,
+          "max_mm": 3.79,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 7.6,
+          "table_n": 40.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 1.17,
+          "max_mm": 3.91,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.7,
+          "place_nm": 14.6,
+          "table_n": 79.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "force10": "구분 불가",
+          "force15": "구분 불가",
+          "force40": "구분 불가",
+          "force100": "구분 불가",
+          "false_max": "1회",
+          "minimum": "—"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "force10": "62",
+          "force15": "43",
+          "force40": "25",
+          "force100": "19",
+          "false_max": "2회",
+          "minimum": "10 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "force10": "경보 중",
+          "force15": "경보 중",
+          "force40": "경보 중",
+          "force100": "경보 중",
+          "false_max": "2회",
+          "minimum": "—"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "36",
+          "force100": "24",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "force10": "62",
+          "force15": "45",
+          "force40": "27",
+          "force100": "18",
+          "false_max": "0회",
+          "minimum": "10 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "force10": "놓침",
+          "force15": "69",
+          "force40": "33",
+          "force100": "21",
+          "false_max": "0회",
+          "minimum": "15 N"
+        }
+      ],
+      "host_before": {
+        "mem_available_gib": 21.450550079345703,
+        "load_average": [
+          2.0234375,
+          2.38916015625,
+          2.1474609375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 22.1748046875,
+        "load_average": [
+          1.7021484375,
+          2.25341796875,
+          2.11181640625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "evaluation_sha256": "ce72073b4f858c4e4b3a8c31ab4d6e64fbb068d6133314fa06b04477ecd0551b"
+    },
+    "torque_base_base": {
+      "controller": "torque_controller",
+      "detector": "collision_detector",
+      "official": true,
+      "control": {
+        "0.0": {
+          "rms_mm": 6.27,
+          "max_mm": 13.1,
+          "saturation_pct": 0.0,
+          "pick_nm": 4.7,
+          "place_nm": 5.3,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 6.58,
+          "max_mm": 13.1,
+          "saturation_pct": 0.0,
+          "pick_nm": 28.2,
+          "place_nm": 38.8,
+          "table_n": 199.0,
+          "false_alarms": [
+            3,
+            3,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 7.04,
+          "max_mm": 13.18,
+          "saturation_pct": 0.0,
+          "pick_nm": 57.2,
+          "place_nm": 74.8,
+          "table_n": 295.0,
+          "false_alarms": [
+            5,
+            4,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "27",
+          "force100": "19",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "27",
+          "force100": "17",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "force10": "놓침",
+          "force15": "70",
+          "force40": "29",
+          "force100": "20",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "force10": "경보 중",
+          "force15": "경보 중",
+          "force40": "경보 중",
+          "force100": "경보 중",
+          "false_max": "8회",
+          "minimum": "—"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "force10": "97",
+          "force15": "68",
+          "force40": "27",
+          "force100": "17",
+          "false_max": "12회",
+          "minimum": "10 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "force10": "경보 중",
+          "force15": "경보 중",
+          "force40": "경보 중",
+          "force100": "경보 중",
+          "false_max": "7회",
+          "minimum": "—"
+        }
+      ],
+      "host_before": {
+        "mem_available_gib": 22.174877166748047,
+        "load_average": [
+          1.7021484375,
+          2.25341796875,
+          2.11181640625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 22.217605590820312,
+        "load_average": [
+          1.51904296875,
+          2.1669921875,
+          2.08544921875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "evaluation_sha256": "af760a274a4c27b9591fc5f863108a6ba2ea82a46fa8067c942a767fb9d16b79"
+    },
+    "torque_base_v2": {
+      "controller": "torque_controller",
+      "detector": "my_detector",
+      "official": true,
+      "control": {
+        "0.0": {
+          "rms_mm": 6.27,
+          "max_mm": 13.1,
+          "saturation_pct": 0.0,
+          "pick_nm": 4.7,
+          "place_nm": 5.3,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 6.58,
+          "max_mm": 13.1,
+          "saturation_pct": 0.0,
+          "pick_nm": 28.2,
+          "place_nm": 38.8,
+          "table_n": 199.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 7.04,
+          "max_mm": 13.18,
+          "saturation_pct": 0.0,
+          "pick_nm": 57.2,
+          "place_nm": 74.8,
+          "table_n": 295.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "36",
+          "force100": "24",
+          "false_max": "1회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "68",
+          "force40": "27",
+          "force100": "18",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "force10": "놓침",
+          "force15": "88",
+          "force40": "28",
+          "force100": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "42",
+          "force100": "24",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "85",
+          "force40": "29",
+          "force100": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "force10": "놓침",
+          "force15": "61",
+          "force40": "40",
+          "force100": "25",
+          "false_max": "0회",
+          "minimum": "15 N"
+        }
+      ],
+      "host_before": {
+        "mem_available_gib": 22.217628479003906,
+        "load_average": [
+          1.51904296875,
+          2.1669921875,
+          2.08544921875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.68274688720703,
+        "load_average": [
+          1.826171875,
+          2.16455078125,
+          2.08837890625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "evaluation_sha256": "9a84c792b86fb05fb8e9f544548daca86e12972fdc76372f568a796c4114a5c5"
+    },
+    "torque_v2_base": {
+      "controller": "my_torque",
+      "detector": "collision_detector",
+      "official": true,
+      "control": {
+        "0.0": {
+          "rms_mm": 2.09,
+          "max_mm": 4.05,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 4.8,
+          "table_n": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 2.32,
+          "max_mm": 4.42,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 6.8,
+          "table_n": 39.0,
+          "false_alarms": [
+            3,
+            3,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 3.23,
+          "max_mm": 8.44,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 13.1,
+          "table_n": 80.0,
+          "false_alarms": [
+            5,
+            9,
+            3
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "28",
+          "force100": "19",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "97",
+          "force40": "28",
+          "force100": "17",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "force10": "놓침",
+          "force15": "43",
+          "force40": "31",
+          "force100": "19",
+          "false_max": "0회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "force10": "경보 중",
+          "force15": "경보 중",
+          "force40": "경보 중",
+          "force100": "경보 중",
+          "false_max": "16회",
+          "minimum": "—"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "force10": "놓침",
+          "force15": "68",
+          "force40": "26",
+          "force100": "17",
+          "false_max": "19회",
+          "minimum": "15 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "force10": "구분 불가",
+          "force15": "구분 불가",
+          "force40": "구분 불가",
+          "force100": "구분 불가",
+          "false_max": "9회",
+          "minimum": "—"
+        }
+      ],
+      "host_before": {
+        "mem_available_gib": 19.68276596069336,
+        "load_average": [
+          1.826171875,
+          2.16455078125,
+          2.08837890625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.247146606445312,
+        "load_average": [
+          2.08056640625,
+          2.1982421875,
+          2.10205078125
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "evaluation_sha256": "d037dc2e5d1ec00cd0e4f5419f6a9dd184c9620b4704e96d14dbe896a06aabdc"
+    },
+    "torque_v2_v2": {
+      "controller": "my_torque",
+      "detector": "my_detector",
+      "official": true,
+      "control": {
+        "0.0": {
+          "rms_mm": 2.09,
+          "max_mm": 4.05,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 4.8,
+          "table_n": 0.0,
+          "false_alarms": [
+            1,
+            1,
+            0
+          ],
+          "status": "정상"
+        },
+        "4.0": {
+          "rms_mm": 2.32,
+          "max_mm": 4.42,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 6.8,
+          "table_n": 39.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        },
+        "8.0": {
+          "rms_mm": 3.23,
+          "max_mm": 8.44,
+          "saturation_pct": 0.0,
+          "pick_nm": 9.0,
+          "place_nm": 13.1,
+          "table_n": 80.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "status": "정상"
+        }
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "force10": "경보 중",
+          "force15": "경보 중",
+          "force40": "경보 중",
+          "force100": "경보 중",
+          "false_max": "2회",
+          "minimum": "—"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "force10": "57",
+          "force15": "42",
+          "force40": "27",
+          "force100": "19",
+          "false_max": "2회",
+          "minimum": "10 N"
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "force10": "경보 중",
+          "force15": "경보 중",
+          "force40": "경보 중",
+          "force100": "경보 중",
+          "false_max": "2회",
+          "minimum": "—"
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "force10": "놓침",
+          "force15": "놓침",
+          "force40": "36",
+          "force100": "24",
+          "false_max": "0회",
+          "minimum": "40 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "force10": "56",
+          "force15": "43",
+          "force40": "26",
+          "force100": "18",
+          "false_max": "1회",
+          "minimum": "10 N"
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "force10": "놓침",
+          "force15": "91",
+          "force40": "42",
+          "force100": "22",
+          "false_max": "0회",
+          "minimum": "15 N"
+        }
+      ],
+      "host_before": {
+        "mem_available_gib": 19.246864318847656,
+        "load_average": [
+          2.08056640625,
+          2.1982421875,
+          2.10205078125
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 21.99826431274414,
+        "load_average": [
+          2.25439453125,
+          2.23095703125,
+          2.11572265625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "evaluation_sha256": "2ef9f511aa7272ac30c9a56ada9e55804c3045fe31e1aed7b0bc573633ba3b1b"
+    }
+  },
+  "publication_note": "Raw process IDs omitted; every case, numeric metric, load/RAM summary and timing outlier is retained. Evidence hashes elsewhere may name the private raw record; published-byte hashes are in artifacts/SHA256SUMS.",
+  "private_raw_sha256": "18b523f1809ee6559d2cc4238bc745c9f5d60c5c98f5b0939bfa3d127d7f7b86"
+}

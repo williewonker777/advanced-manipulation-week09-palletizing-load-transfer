@@ -1,5 +1,7 @@
 # Load-transfer-aware elastic-joint control and wrench classification
 
+> Historical **v1** document. Final v2 methods, results and limitations: [V2_RESULTS](V2_RESULTS.md), [V2_REVIEW](V2_REVIEW.md).
+
 ## 1. Problem and information boundary
 
 A binary suction command does not measure the payload fraction carried by the

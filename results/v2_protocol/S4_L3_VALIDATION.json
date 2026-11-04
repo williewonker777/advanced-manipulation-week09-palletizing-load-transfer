@@ -1,0 +1,4106 @@
+{
+  "metadata": {
+    "official": false,
+    "protocol_sha256": "364d93c5ca33833817a0bbe93c071f0a20c9376024f1f39e230911acb85890a7",
+    "source_sha256": {
+      "v1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "v1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "v1_detector.py": "fbb3cef5c81fd34a076bca69ae7ea3eac4ed2221a9cef39a37e40d6142f8f8dd",
+      "v2_detector_geometry.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+      "models/v2_residual.json": "bf4f0700a57e0155ec8bf51777bdf13759e6586b024aed0f6f4646f49db15e6c"
+    },
+    "stage": "validation",
+    "elapsed_s": 68.00498715300091
+  },
+  "results": [
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 0,
+      "controller": "v1_servo",
+      "detector": "v1_detector",
+      "mass": 0.25,
+      "com": [
+        0.008,
+        0.006,
+        0.012
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.171184125666111,
+      "max_mm": 3.9191250052488202,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 5.259635434476834,
+      "table_force_place_max_n": 8.228058236678075,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.00983112968250779,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.004008615568810516,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 8.228058236678075,
+        "place_peak_over_mg": 3.3549676806026807
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 27.42,
+            "p99_us": 51.360200000000006,
+            "max_us": 74.93
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 26.63,
+            "p99_us": 50.13070000000002,
+            "max_us": 73.9
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 86.28,
+            "p99_us": 168.03049000000001,
+            "max_us": 300.739
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 84.8695,
+            "p99_us": 166.51001000000002,
+            "max_us": 299.059
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 115.789,
+            "p99_us": 208.02951000000002,
+            "max_us": 333.469
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 113.529,
+            "p99_us": 205.39030000000002,
+            "max_us": 330.909
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.749652862548828
+      },
+      "runner_ctrl_median_us": 30.240000342018902,
+      "torque_jitter_nm": 0.13462627265209506,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        5.491624828655911,
+        11.812717376663429,
+        3.6464089025118662,
+        0.7234903398546668,
+        0.5948544363413508,
+        0.2074632181026897
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.94965362548828,
+        "load_average": [
+          2.04736328125,
+          2.17724609375,
+          2.076171875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.76372528076172,
+        "load_average": [
+          2.04736328125,
+          2.17724609375,
+          2.076171875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 1,
+      "controller": "v1_servo",
+      "detector": "v1_detector",
+      "mass": 0.45,
+      "com": [
+        -0.017,
+        0.01,
+        0.026
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.167771590131166,
+      "max_mm": 3.898605893596093,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 4.668543037620211,
+      "table_force_place_max_n": 11.564039623761163,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.011701438026103,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.002650682529415109,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 11.564039623761163,
+        "place_peak_over_mg": 2.6195581886422388
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 27.57,
+            "p99_us": 43.93090000000002,
+            "max_us": 77.89
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 26.79,
+            "p99_us": 42.77061000000003,
+            "max_us": 76.13
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 84.72,
+            "p99_us": 166.87180000000004,
+            "max_us": 248.009
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 83.345,
+            "p99_us": 165.36980000000003,
+            "max_us": 246.159
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 114.0645,
+            "p99_us": 202.7905,
+            "max_us": 317.359
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 111.8445,
+            "p99_us": 199.93170000000006,
+            "max_us": 314.119
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.758007049560547
+      },
+      "runner_ctrl_median_us": 30.379499548871536,
+      "torque_jitter_nm": 0.13432726389444452,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        5.76829216251209,
+        13.640037993322682,
+        4.1289855215958955,
+        0.7966920127472389,
+        0.6872454946136,
+        0.2074632181026897
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.76372528076172,
+        "load_average": [
+          2.04736328125,
+          2.17724609375,
+          2.076171875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.77861785888672,
+        "load_average": [
+          2.3642578125,
+          2.24072265625,
+          2.09765625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 2,
+      "controller": "v1_servo",
+      "detector": "v1_detector",
+      "mass": 1.25,
+      "com": [
+        0.019,
+        -0.006,
+        0.018
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.157964466764839,
+      "max_mm": 3.8478925299406184,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 4.811060164495103,
+      "table_force_place_max_n": 19.470497502863306,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.011725344873047997,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0009561953005543728,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 19.470497502863306,
+        "place_peak_over_mg": 1.5878081551774357
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 27.62,
+            "p99_us": 42.81020000000001,
+            "max_us": 73.15
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 26.83,
+            "p99_us": 41.60040000000001,
+            "max_us": 70.27
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 84.5695,
+            "p99_us": 167.559,
+            "max_us": 4025.286
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 83.1395,
+            "p99_us": 165.87009,
+            "max_us": 4023.545
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 114.2995,
+            "p99_us": 203.23960000000002,
+            "max_us": 4058.636
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 111.9945,
+            "p99_us": 200.4703,
+            "max_us": 4056.025
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [
+          {
+            "cycle": 4851,
+            "simulated_t_s": 4.851,
+            "controller": {
+              "wall_ns": 33350,
+              "cpu_ns": 32480,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "detector": {
+              "wall_ns": 4025286,
+              "cpu_ns": 4023545,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            },
+            "combined": {
+              "wall_ns": 4058636,
+              "cpu_ns": 4056025,
+              "voluntary_context_switches": 0,
+              "involuntary_context_switches": 0
+            }
+          }
+        ],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.70575714111328
+      },
+      "runner_ctrl_median_us": 30.420000257436186,
+      "torque_jitter_nm": 0.13593245744455806,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        5.359835026997373,
+        14.159633720968623,
+        4.617193006152154,
+        0.7261382610879996,
+        0.7595971539922558,
+        0.2074632181026897
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.778675079345703,
+        "load_average": [
+          2.3642578125,
+          2.24072265625,
+          2.09765625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.71863555908203,
+        "load_average": [
+          2.3642578125,
+          2.24072265625,
+          2.09765625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 3,
+      "controller": "v1_servo",
+      "detector": "v1_detector",
+      "mass": 3.55,
+      "com": [
+        -0.015,
+        0.014,
+        0.029
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.1552316177042006,
+      "max_mm": 3.755851464382325,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 6.944659981822795,
+      "table_force_place_max_n": 35.25160166160464,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.0,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 35.25160166160464,
+        "place_peak_over_mg": 1.0122353350735709
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 28.11,
+            "p99_us": 46.35070000000002,
+            "max_us": 96.729
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 27.32,
+            "p99_us": 45.091100000000026,
+            "max_us": 94.85
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 88.535,
+            "p99_us": 166.43180000000007,
+            "max_us": 206.009
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 87.1045,
+            "p99_us": 164.73380000000012,
+            "max_us": 204.34
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 118.54400000000001,
+            "p99_us": 203.81991000000002,
+            "max_us": 252.399
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 116.259,
+            "p99_us": 201.22960000000003,
+            "max_us": 248.669
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.74981689453125
+      },
+      "runner_ctrl_median_us": 30.94000021519605,
+      "torque_jitter_nm": 0.14302067341993446,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        7.1592501618212845,
+        15.986443032400377,
+        10.887622121271207,
+        1.2549064609844618,
+        2.0583930247457087,
+        0.21282411367730575
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.717594146728516,
+        "load_average": [
+          2.3642578125,
+          2.24072265625,
+          2.09765625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.757762908935547,
+        "load_average": [
+          2.3642578125,
+          2.24072265625,
+          2.09765625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 4,
+      "controller": "v1_servo",
+      "detector": "v1_detector",
+      "mass": 6.95,
+      "com": [
+        0.015,
+        -0.014,
+        0.045
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.159842589070258,
+      "max_mm": 3.8898876035714824,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 12.64140054139807,
+      "table_force_place_max_n": 68.50806766698356,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.04212347765750377,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0006178320119317943,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 68.50806766698356,
+        "place_peak_over_mg": 1.0048191563004065
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 27.959,
+            "p99_us": 53.84130000000003,
+            "max_us": 95.11
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 27.16,
+            "p99_us": 52.75,
+            "max_us": 92.02
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 89.18,
+            "p99_us": 173.83520000000013,
+            "max_us": 290.839
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 87.715,
+            "p99_us": 171.41319000000007,
+            "max_us": 288.659
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 119.4395,
+            "p99_us": 214.80101000000005,
+            "max_us": 365.368
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 117.259,
+            "p99_us": 211.40520000000015,
+            "max_us": 361.929
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.70384979248047
+      },
+      "runner_ctrl_median_us": 30.82999865000602,
+      "torque_jitter_nm": 0.15102692425083328,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.5363352281980145,
+        22.700861940093535,
+        20.692432888011943,
+        1.7776138673915847,
+        3.9625503321344944,
+        0.41455692870508676
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.826053619384766,
+        "load_average": [
+          2.3642578125,
+          2.24072265625,
+          2.09765625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.69378662109375,
+        "load_average": [
+          2.49560546875,
+          2.27001953125,
+          2.10791015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 5,
+      "controller": "v1_servo",
+      "detector": "v1_detector",
+      "mass": 7.75,
+      "com": [
+        -0.018,
+        -0.009,
+        0.01
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.1925534161030322,
+      "max_mm": 3.8882700312882004,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 15.327276468716775,
+      "table_force_place_max_n": 76.37703571683014,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.060057653780545305,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0007899464506993562,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 76.37703571683014,
+        "place_peak_over_mg": 1.0045974906031387
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 28.3545,
+            "p99_us": 57.009100000000004,
+            "max_us": 113.979
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 27.56,
+            "p99_us": 55.560600000000015,
+            "max_us": 99.829
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 90.36449999999999,
+            "p99_us": 174.45121000000006,
+            "max_us": 228.58
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 88.8495,
+            "p99_us": 172.9696,
+            "max_us": 225.379
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 120.439,
+            "p99_us": 222.39249000000004,
+            "max_us": 287.009
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 118.2045,
+            "p99_us": 216.06751000000017,
+            "max_us": 284.509
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.666244506835938
+      },
+      "runner_ctrl_median_us": 31.24999966530595,
+      "torque_jitter_nm": 0.15380257166223232,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        7.46687011932195,
+        25.63655783932542,
+        21.504469807345224,
+        1.5793912532568246,
+        4.745413524331723,
+        0.32539179387792844
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.754512786865234,
+        "load_average": [
+          2.49560546875,
+          2.27001953125,
+          2.10791015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.666244506835938,
+        "load_average": [
+          2.49560546875,
+          2.27001953125,
+          2.10791015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 6,
+      "controller": "v1_servo",
+      "detector": "v1_detector",
+      "mass": 7.95,
+      "com": [
+        0.013,
+        0.017,
+        0.035
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.1782530617817615,
+      "max_mm": 3.909100387778016,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 15.640614371505592,
+      "table_force_place_max_n": 78.37788906778992,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.15309956253978446,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0019630791650130396,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 78.37788906778992,
+        "place_peak_over_mg": 1.0049800174099066
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 27.72,
+            "p99_us": 45.89270000000006,
+            "max_us": 62.14
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 26.94,
+            "p99_us": 44.58179000000004,
+            "max_us": 60.84
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 85.2295,
+            "p99_us": 167.63039,
+            "max_us": 271.689
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 83.7895,
+            "p99_us": 165.9102,
+            "max_us": 269.989
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 114.5145,
+            "p99_us": 203.10980000000004,
+            "max_us": 322.779
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 112.3595,
+            "p99_us": 200.52070000000003,
+            "max_us": 319.639
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.663375854492188
+      },
+      "runner_ctrl_median_us": 30.5499997921288,
+      "torque_jitter_nm": 0.15439700063027653,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        7.1733123185761745,
+        24.965708741716043,
+        22.33733050712386,
+        1.7625699778209207,
+        3.2575876330113704,
+        0.22154599066413813
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.682449340820312,
+        "load_average": [
+          2.49560546875,
+          2.27001953125,
+          2.10791015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.66299819946289,
+        "load_average": [
+          2.37548828125,
+          2.24853515625,
+          2.1015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 7,
+      "controller": "v1_servo",
+      "detector": "v1_detector",
+      "mass": 2.25,
+      "com": [
+        0.032,
+        -0.005,
+        0.037
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.148949581103607,
+      "max_mm": 3.7975362294903445,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 5.604096626631147,
+      "table_force_place_max_n": 25.274881287315615,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.011816514982117322,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0005353500954634646,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 25.274881287315615,
+        "place_peak_over_mg": 1.1450846658654712
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 27.67,
+            "p99_us": 51.89070000000002,
+            "max_us": 181.959
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 26.88,
+            "p99_us": 49.7189000000002,
+            "max_us": 98.95
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 86.78450000000001,
+            "p99_us": 168.7839000000001,
+            "max_us": 357.179
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 85.445,
+            "p99_us": 166.94960000000003,
+            "max_us": 355.798
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 116.8845,
+            "p99_us": 209.4391,
+            "max_us": 395.179
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 114.63,
+            "p99_us": 206.34221000000008,
+            "max_us": 392.968
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.39112091064453
+      },
+      "runner_ctrl_median_us": 30.489998607663438,
+      "torque_jitter_nm": 0.1388188274116364,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.443675038954588,
+        13.786480052520922,
+        6.999441246553245,
+        1.024919655538524,
+        1.091581772016257,
+        0.263862961224647
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.714374542236328,
+        "load_average": [
+          2.37548828125,
+          2.24853515625,
+          2.1015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.518169403076172,
+        "load_average": [
+          2.37548828125,
+          2.24853515625,
+          2.1015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 0,
+      "controller": "v1_torque",
+      "detector": "v1_detector",
+      "mass": 0.25,
+      "com": [
+        0.008,
+        0.006,
+        0.012
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.0538898609225167,
+      "max_mm": 4.0232868095133565,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 4.857928530594435,
+      "table_force_place_max_n": 5.117294334227812,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 1.2703191082659964,
+        "table_min_n": 0.1652721770535592,
+        "table_mean_over_mg": 0.5179690553582044,
+        "table_min_over_mg": 0.06738926689237888,
+        "place_peak_n": 5.117294334227812,
+        "place_peak_over_mg": 2.086562419664755
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 31.779,
+            "p99_us": 57.763600000000075,
+            "max_us": 88.089
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 30.98,
+            "p99_us": 56.53041000000003,
+            "max_us": 79.93
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 86.285,
+            "p99_us": 165.8691,
+            "max_us": 219.289
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 84.91499999999999,
+            "p99_us": 164.2391,
+            "max_us": 210.92
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 120.239,
+            "p99_us": 210.95009,
+            "max_us": 266.269
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 117.9945,
+            "p99_us": 208.13001,
+            "max_us": 256.73
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.49707794189453
+      },
+      "runner_ctrl_median_us": 34.64000110398047,
+      "torque_jitter_nm": 0.06886155453606592,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        4.9820128624623035,
+        13.527773582266791,
+        3.8269450976953334,
+        0.7259891211345917,
+        0.5275860636395735,
+        0.2089002275526369
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.60784149169922,
+        "load_average": [
+          2.37548828125,
+          2.24853515625,
+          2.1015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.523693084716797,
+        "load_average": [
+          2.37548828125,
+          2.24853515625,
+          2.1015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 1,
+      "controller": "v1_torque",
+      "detector": "v1_detector",
+      "mass": 0.45,
+      "com": [
+        -0.017,
+        0.01,
+        0.026
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.045721196999683,
+      "max_mm": 4.019429986725134,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 4.921691462630278,
+      "table_force_place_max_n": 6.959140441923054,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 1.5460171244045287,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.3502134158805139,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 6.959140441923054,
+        "place_peak_over_mg": 1.5764277816112933
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 31.91,
+            "p99_us": 47.57080000000002,
+            "max_us": 72.57
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 31.12,
+            "p99_us": 46.31109000000003,
+            "max_us": 71.16
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 84.78,
+            "p99_us": 163.3791,
+            "max_us": 205.08
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 83.4,
+            "p99_us": 161.73960000000002,
+            "max_us": 203.399
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 118.6545,
+            "p99_us": 203.84039,
+            "max_us": 241.0
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 116.445,
+            "p99_us": 201.35920000000002,
+            "max_us": 238.479
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.531455993652344
+      },
+      "runner_ctrl_median_us": 34.79999941191636,
+      "torque_jitter_nm": 0.06951460056520051,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        5.489009295055258,
+        13.775377171464731,
+        4.421719649504308,
+        0.7717334730756198,
+        0.5603172864304368,
+        0.2089002275526369
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.523693084716797,
+        "load_average": [
+          2.37548828125,
+          2.24853515625,
+          2.1015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.559860229492188,
+        "load_average": [
+          2.34521484375,
+          2.244140625,
+          2.1005859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 2,
+      "controller": "v1_torque",
+      "detector": "v1_detector",
+      "mass": 1.25,
+      "com": [
+        0.019,
+        -0.006,
+        0.018
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.0395857988531487,
+      "max_mm": 3.999145264870894,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 5.120874386249369,
+      "table_force_place_max_n": 12.565780538877792,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 1.9989942844442985,
+        "table_min_n": 0.03854647322318641,
+        "table_mean_over_mg": 0.16301686315549832,
+        "table_min_over_mg": 0.0031434432801783004,
+        "place_peak_n": 12.565780538877792,
+        "place_peak_over_mg": 1.0247323579105232
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 32.0,
+            "p99_us": 53.32050000000001,
+            "max_us": 77.949
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 31.21,
+            "p99_us": 52.28941000000001,
+            "max_us": 76.549
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 84.97999999999999,
+            "p99_us": 166.5994,
+            "max_us": 285.779
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 83.62450000000001,
+            "p99_us": 164.94991000000005,
+            "max_us": 283.769
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 118.8445,
+            "p99_us": 206.52480000000014,
+            "max_us": 351.969
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 116.62,
+            "p99_us": 204.23079,
+            "max_us": 348.639
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.51905059814453
+      },
+      "runner_ctrl_median_us": 34.9000001733657,
+      "torque_jitter_nm": 0.07118751495493708,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.1969333875248385,
+        14.342224558958883,
+        4.749723774698056,
+        0.8591508595238856,
+        0.7507850895321327,
+        0.2089002275526369
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.565719604492188,
+        "load_average": [
+          2.34521484375,
+          2.244140625,
+          2.1005859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.507328033447266,
+        "load_average": [
+          2.34521484375,
+          2.244140625,
+          2.1005859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 3,
+      "controller": "v1_torque",
+      "detector": "v1_detector",
+      "mass": 3.55,
+      "com": [
+        -0.015,
+        0.014,
+        0.029
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.281434618266442,
+      "max_mm": 4.2361793888031185,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 6.36616194874594,
+      "table_force_place_max_n": 35.06779789594207,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 4.458080400088148,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.1280119567583566,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 35.06779789594207,
+        "place_peak_over_mg": 1.0069574850595706
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 32.05,
+            "p99_us": 50.17030000000001,
+            "max_us": 70.66
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 31.25,
+            "p99_us": 49.041090000000025,
+            "max_us": 69.22
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 87.12899999999999,
+            "p99_us": 169.35901,
+            "max_us": 215.779
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 85.78999999999999,
+            "p99_us": 167.80000000000004,
+            "max_us": 214.259
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 121.8045,
+            "p99_us": 208.40931,
+            "max_us": 265.499
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 119.5495,
+            "p99_us": 205.91970000000003,
+            "max_us": 263.099
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.51358413696289
+      },
+      "runner_ctrl_median_us": 34.940001569339074,
+      "torque_jitter_nm": 0.07708901436730407,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.591714831504314,
+        15.070704525027345,
+        9.925885683434633,
+        1.1399414635116525,
+        1.8926460420879656,
+        0.2111787422828338
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.56226348876953,
+        "load_average": [
+          2.34521484375,
+          2.244140625,
+          2.1005859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.525325775146484,
+        "load_average": [
+          2.3173828125,
+          2.23974609375,
+          2.099609375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 4,
+      "controller": "v1_torque",
+      "detector": "v1_detector",
+      "mass": 6.95,
+      "com": [
+        0.015,
+        -0.014,
+        0.045
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.9526642586267617,
+      "max_mm": 7.3692359245866035,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 11.222600249727634,
+      "table_force_place_max_n": 69.13760054263275,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 7.62808117562557,
+        "table_min_n": 0.24913470016204964,
+        "table_mean_over_mg": 0.1118823279083239,
+        "table_min_over_mg": 0.003654099841771348,
+        "place_peak_n": 69.13760054263275,
+        "place_peak_over_mg": 1.0140526190809958
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 31.764499999999998,
+            "p99_us": 48.170100000000005,
+            "max_us": 68.97
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 30.969,
+            "p99_us": 46.92150000000004,
+            "max_us": 67.41
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 83.7045,
+            "p99_us": 166.77131000000006,
+            "max_us": 247.909
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 82.36,
+            "p99_us": 165.21309000000008,
+            "max_us": 246.179
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 117.33,
+            "p99_us": 206.01049,
+            "max_us": 288.869
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 115.1745,
+            "p99_us": 203.06990000000002,
+            "max_us": 286.289
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.486949920654297
+      },
+      "runner_ctrl_median_us": 34.66000089247245,
+      "torque_jitter_nm": 0.08533182365782378,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.754952307055727,
+        21.115472314434314,
+        17.982687359315978,
+        1.891631230351328,
+        3.4327973686092874,
+        0.3784787200816316
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.53266143798828,
+        "load_average": [
+          2.3173828125,
+          2.23974609375,
+          2.099609375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.4993896484375,
+        "load_average": [
+          2.3173828125,
+          2.23974609375,
+          2.099609375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 5,
+      "controller": "v1_torque",
+      "detector": "v1_detector",
+      "mass": 7.75,
+      "com": [
+        -0.018,
+        -0.009,
+        0.01
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 3.282213183095671,
+      "max_mm": 8.6111756413566,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 13.040568062022288,
+      "table_force_place_max_n": 77.22813097768989,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 9.658671052177358,
+        "table_min_n": 0.5494823146950254,
+        "table_mean_over_mg": 0.12704180792709688,
+        "table_min_over_mg": 0.00722741527335537,
+        "place_peak_n": 77.22813097768989,
+        "place_peak_over_mg": 1.015792061789351
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 31.71,
+            "p99_us": 58.93080000000002,
+            "max_us": 95.04
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 30.91,
+            "p99_us": 57.74940000000001,
+            "max_us": 93.029
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 87.3245,
+            "p99_us": 172.83950000000002,
+            "max_us": 282.079
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 85.94,
+            "p99_us": 171.14950000000002,
+            "max_us": 279.989
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 121.46000000000001,
+            "p99_us": 220.049,
+            "max_us": 350.419
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 119.265,
+            "p99_us": 217.26950000000002,
+            "max_us": 347.048
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.473323822021484
+      },
+      "runner_ctrl_median_us": 34.61999949649908,
+      "torque_jitter_nm": 0.0878269293291824,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        8.704218747154066,
+        23.985599493238194,
+        19.37997682422585,
+        2.000044005559217,
+        3.8581030990441745,
+        0.31552755591897286
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.518836975097656,
+        "load_average": [
+          2.3173828125,
+          2.23974609375,
+          2.099609375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.58554458618164,
+        "load_average": [
+          2.3173828125,
+          2.23974609375,
+          2.099609375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 6,
+      "controller": "v1_torque",
+      "detector": "v1_detector",
+      "mass": 7.95,
+      "com": [
+        0.013,
+        0.017,
+        0.035
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 3.2030200222443224,
+      "max_mm": 8.257660033229467,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 13.43728664054504,
+      "table_force_place_max_n": 78.52554589999221,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 8.127342111039015,
+        "table_min_n": 0.3583290406907116,
+        "table_mean_over_mg": 0.10421072209770564,
+        "table_min_over_mg": 0.004594580561366742,
+        "place_peak_n": 78.52554589999221,
+        "place_peak_over_mg": 1.0068733085863124
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 32.079,
+            "p99_us": 61.92080000000002,
+            "max_us": 113.29
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 31.28,
+            "p99_us": 60.65921,
+            "max_us": 107.54
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 90.8895,
+            "p99_us": 169.80219000000005,
+            "max_us": 310.539
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 89.465,
+            "p99_us": 167.79990000000004,
+            "max_us": 214.529
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 123.3245,
+            "p99_us": 217.8193,
+            "max_us": 353.609
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 121.13499999999999,
+            "p99_us": 214.05450000000013,
+            "max_us": 274.059
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.602558135986328
+      },
+      "runner_ctrl_median_us": 35.009999919566326,
+      "torque_jitter_nm": 0.08838693929254324,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        7.603744254978191,
+        23.35157581441969,
+        18.379083736621894,
+        1.7393003129481555,
+        2.8916283450969185,
+        0.4111857928981313
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.676979064941406,
+        "load_average": [
+          2.3173828125,
+          2.23974609375,
+          2.099609375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.6375732421875,
+        "load_average": [
+          2.21142578125,
+          2.21875,
+          2.09326171875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "v1",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 7,
+      "controller": "v1_torque",
+      "detector": "v1_detector",
+      "mass": 2.25,
+      "com": [
+        0.032,
+        -0.005,
+        0.037
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.0867279593330963,
+      "max_mm": 4.006823421797593,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 5.344210618630896,
+      "table_force_place_max_n": 22.12984313060036,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 2.33801464634655,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.10592432422002716,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 22.12984313060036,
+        "place_peak_over_mg": 1.0025979445282753
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 32.16,
+            "p99_us": 63.94941000000001,
+            "max_us": 104.28
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 31.35,
+            "p99_us": 62.67030000000001,
+            "max_us": 96.21
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 91.52950000000001,
+            "p99_us": 180.3693,
+            "max_us": 295.369
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 90.11,
+            "p99_us": 178.08510000000012,
+            "max_us": 293.639
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 123.99449999999999,
+            "p99_us": 228.46220000000008,
+            "max_us": 342.019
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 121.84,
+            "p99_us": 224.47570000000013,
+            "max_us": 339.399
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.60003662109375
+      },
+      "runner_ctrl_median_us": 35.11000068101566,
+      "torque_jitter_nm": 0.07357211711653412,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.5946059691684376,
+        16.583770426103506,
+        5.992572091455539,
+        1.0566710293890766,
+        1.025787017440477,
+        0.25483985585494295
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.635833740234375,
+        "load_average": [
+          2.21142578125,
+          2.21875,
+          2.09326171875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.63034439086914,
+        "load_average": [
+          2.21142578125,
+          2.21875,
+          2.09326171875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 0,
+      "controller": "v1_servo",
+      "detector": "v2_detector_geometry",
+      "mass": 0.25,
+      "com": [
+        0.008,
+        0.006,
+        0.012
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.171184125666111,
+      "max_mm": 3.9191250052488202,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 5.259635434476834,
+      "table_force_place_max_n": 8.228058236678075,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.00983112968250779,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.004008615568810516,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 8.228058236678075,
+        "place_peak_over_mg": 3.3549676806026807
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 29.45,
+            "p99_us": 56.46970000000002,
+            "max_us": 123.7
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 28.64,
+            "p99_us": 55.08901,
+            "max_us": 121.41
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 92.029,
+            "p99_us": 251.0395,
+            "max_us": 329.219
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 90.5245,
+            "p99_us": 249.1043000000001,
+            "max_us": 327.019
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 123.33,
+            "p99_us": 297.1840900000001,
+            "max_us": 382.479
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 120.965,
+            "p99_us": 294.52811,
+            "max_us": 378.899
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.567890167236328
+      },
+      "runner_ctrl_median_us": 32.47899985581171,
+      "torque_jitter_nm": 0.13462627265209506,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        5.491624828655911,
+        11.812717376663429,
+        3.6464089025118662,
+        0.7234903398546668,
+        0.5948544363413508,
+        0.2074632181026897
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.682628631591797,
+        "load_average": [
+          2.21142578125,
+          2.21875,
+          2.09326171875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.581584930419922,
+        "load_average": [
+          2.1943359375,
+          2.21484375,
+          2.09228515625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 1,
+      "controller": "v1_servo",
+      "detector": "v2_detector_geometry",
+      "mass": 0.45,
+      "com": [
+        -0.017,
+        0.01,
+        0.026
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.167771590131166,
+      "max_mm": 3.898605893596093,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 4.668543037620211,
+      "table_force_place_max_n": 11.564039623761163,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.011701438026103,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.002650682529415109,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 11.564039623761163,
+        "place_peak_over_mg": 2.6195581886422388
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 29.02,
+            "p99_us": 46.84280000000028,
+            "max_us": 127.47
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 28.2,
+            "p99_us": 45.86971000000023,
+            "max_us": 126.04
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 86.399,
+            "p99_us": 202.27149000000006,
+            "max_us": 286.159
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 85.0095,
+            "p99_us": 200.71020000000004,
+            "max_us": 284.599
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 116.1945,
+            "p99_us": 242.73970000000003,
+            "max_us": 340.979
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 113.97,
+            "p99_us": 240.12180000000006,
+            "max_us": 337.639
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.50494384765625
+      },
+      "runner_ctrl_median_us": 32.01999970769975,
+      "torque_jitter_nm": 0.13432726389444452,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        5.76829216251209,
+        13.640037993322682,
+        4.1289855215958955,
+        0.7966920127472389,
+        0.6872454946136,
+        0.2074632181026897
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.589221954345703,
+        "load_average": [
+          2.1943359375,
+          2.21484375,
+          2.09228515625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.51639175415039,
+        "load_average": [
+          2.1943359375,
+          2.21484375,
+          2.09228515625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 2,
+      "controller": "v1_servo",
+      "detector": "v2_detector_geometry",
+      "mass": 1.25,
+      "com": [
+        0.019,
+        -0.006,
+        0.018
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.157964466764839,
+      "max_mm": 3.8478925299406184,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 4.811060164495103,
+      "table_force_place_max_n": 19.470497502863306,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.011725344873047997,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0009561953005543728,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 19.470497502863306,
+        "place_peak_over_mg": 1.5878081551774357
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 29.18,
+            "p99_us": 54.580200000000005,
+            "max_us": 72.569
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 28.3645,
+            "p99_us": 53.30060000000001,
+            "max_us": 71.1
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 88.2745,
+            "p99_us": 232.10080000000002,
+            "max_us": 344.609
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 86.7345,
+            "p99_us": 227.15890000000022,
+            "max_us": 336.519
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 118.78999999999999,
+            "p99_us": 270.9725000000001,
+            "max_us": 395.779
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 116.435,
+            "p99_us": 265.0306100000001,
+            "max_us": 386.469
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.494304656982422
+      },
+      "runner_ctrl_median_us": 32.17999983462505,
+      "torque_jitter_nm": 0.13593245744455806,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        5.359835026997373,
+        14.159633720968623,
+        4.617193006152154,
+        0.7261382610879996,
+        0.7595971539922558,
+        0.2074632181026897
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.569664001464844,
+        "load_average": [
+          2.1943359375,
+          2.21484375,
+          2.09228515625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.512420654296875,
+        "load_average": [
+          2.0986328125,
+          2.1943359375,
+          2.0859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 3,
+      "controller": "v1_servo",
+      "detector": "v2_detector_geometry",
+      "mass": 3.55,
+      "com": [
+        -0.015,
+        0.014,
+        0.029
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.1552316177042006,
+      "max_mm": 3.755851464382325,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 6.944659981822795,
+      "table_force_place_max_n": 35.25160166160464,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.0,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 35.25160166160464,
+        "place_peak_over_mg": 1.0122353350735709
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 29.35,
+            "p99_us": 49.02931000000001,
+            "max_us": 83.659
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 28.5295,
+            "p99_us": 47.8001,
+            "max_us": 79.359
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 89.8145,
+            "p99_us": 197.23430000000033,
+            "max_us": 344.168
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 88.34450000000001,
+            "p99_us": 195.50101000000004,
+            "max_us": 328.979
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 120.2645,
+            "p99_us": 235.06010000000003,
+            "max_us": 386.478
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 117.9995,
+            "p99_us": 232.37080000000003,
+            "max_us": 370.149
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.55447769165039
+      },
+      "runner_ctrl_median_us": 32.32999915780965,
+      "torque_jitter_nm": 0.14302067341993446,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        7.1592501618212845,
+        15.986443032400377,
+        10.887622121271207,
+        1.2549064609844618,
+        2.0583930247457087,
+        0.21282411367730575
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.616214752197266,
+        "load_average": [
+          2.0986328125,
+          2.1943359375,
+          2.0859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.59632110595703,
+        "load_average": [
+          2.0986328125,
+          2.1943359375,
+          2.0859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 4,
+      "controller": "v1_servo",
+      "detector": "v2_detector_geometry",
+      "mass": 6.95,
+      "com": [
+        0.015,
+        -0.014,
+        0.045
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.159842589070258,
+      "max_mm": 3.8898876035714824,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 12.64140054139807,
+      "table_force_place_max_n": 68.50806766698356,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.04212347765750377,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0006178320119317943,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 68.50806766698356,
+        "place_peak_over_mg": 1.0048191563004065
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 29.15,
+            "p99_us": 54.75020000000001,
+            "max_us": 117.509
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 28.3345,
+            "p99_us": 53.419109999999996,
+            "max_us": 102.639
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 87.654,
+            "p99_us": 219.71311000000009,
+            "max_us": 340.819
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 86.1645,
+            "p99_us": 218.2191,
+            "max_us": 338.589
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 117.66399999999999,
+            "p99_us": 258.49939000000023,
+            "max_us": 424.859
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 115.274,
+            "p99_us": 255.2717100000003,
+            "max_us": 421.408
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.584468841552734
+      },
+      "runner_ctrl_median_us": 32.139999348146375,
+      "torque_jitter_nm": 0.15102692425083328,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.5363352281980145,
+        22.700861940093535,
+        20.692432888011943,
+        1.7776138673915847,
+        3.9625503321344944,
+        0.41455692870508676
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.59632110595703,
+        "load_average": [
+          2.0986328125,
+          2.1943359375,
+          2.0859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.59048080444336,
+        "load_average": [
+          2.0986328125,
+          2.1943359375,
+          2.0859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 5,
+      "controller": "v1_servo",
+      "detector": "v2_detector_geometry",
+      "mass": 7.75,
+      "com": [
+        -0.018,
+        -0.009,
+        0.01
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.1925534161030322,
+      "max_mm": 3.8882700312882004,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 15.327276468716775,
+      "table_force_place_max_n": 76.37703571683014,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.060057653780545305,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0007899464506993562,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 76.37703571683014,
+        "place_peak_over_mg": 1.0045974906031387
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 30.08,
+            "p99_us": 60.14060000000001,
+            "max_us": 91.569
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 29.25,
+            "p99_us": 58.76059000000001,
+            "max_us": 89.51
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 97.25999999999999,
+            "p99_us": 272.7129000000001,
+            "max_us": 345.739
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 95.7795,
+            "p99_us": 270.6822,
+            "max_us": 343.439
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 130.85500000000002,
+            "p99_us": 326.2093,
+            "max_us": 424.838
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 128.54000000000002,
+            "p99_us": 322.65100000000007,
+            "max_us": 420.619
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.209686279296875
+      },
+      "runner_ctrl_median_us": 33.149999580928124,
+      "torque_jitter_nm": 0.15380257166223232,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        7.46687011932195,
+        25.63655783932542,
+        21.504469807345224,
+        1.5793912532568246,
+        4.745413524331723,
+        0.32539179387792844
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.69045639038086,
+        "load_average": [
+          2.0986328125,
+          2.1943359375,
+          2.0859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.258384704589844,
+        "load_average": [
+          2.1708984375,
+          2.2080078125,
+          2.09130859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 6,
+      "controller": "v1_servo",
+      "detector": "v2_detector_geometry",
+      "mass": 7.95,
+      "com": [
+        0.013,
+        0.017,
+        0.035
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.1782530617817615,
+      "max_mm": 3.909100387778016,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 15.640614371505592,
+      "table_force_place_max_n": 78.37788906778992,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.15309956253978446,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0019630791650130396,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 78.37788906778992,
+        "place_peak_over_mg": 1.0049800174099066
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 28.65,
+            "p99_us": 42.4046000000001,
+            "max_us": 138.08
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 27.83,
+            "p99_us": 41.30160000000003,
+            "max_us": 137.26
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 84.1645,
+            "p99_us": 196.66199000000003,
+            "max_us": 291.799
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 82.649,
+            "p99_us": 194.6297,
+            "max_us": 290.189
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 114.2595,
+            "p99_us": 236.21011000000001,
+            "max_us": 331.449
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 112.11,
+            "p99_us": 233.16950000000003,
+            "max_us": 328.409
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 18.96434783935547
+      },
+      "runner_ctrl_median_us": 31.679000130679924,
+      "torque_jitter_nm": 0.15439700063027653,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        7.1733123185761745,
+        24.965708741716043,
+        22.33733050712386,
+        1.7625699778209207,
+        3.2575876330113704,
+        0.22154599066413813
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.299545288085938,
+        "load_average": [
+          2.1708984375,
+          2.2080078125,
+          2.09130859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.364425659179688,
+        "load_average": [
+          2.1708984375,
+          2.2080078125,
+          2.09130859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "servo",
+      "architecture_label": "A",
+      "case_id": 7,
+      "controller": "v1_servo",
+      "detector": "v2_detector_geometry",
+      "mass": 2.25,
+      "com": [
+        0.032,
+        -0.005,
+        0.037
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 1.148949581103607,
+      "max_mm": 3.7975362294903445,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 9.656772698279909,
+      "torque_step_place_nm": 5.604096626631147,
+      "table_force_place_max_n": 25.274881287315615,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 0.011816514982117322,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.0005353500954634646,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 25.274881287315615,
+        "place_peak_over_mg": 1.1450846658654712
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 29.6695,
+            "p99_us": 57.251700000000035,
+            "max_us": 150.42
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 28.84,
+            "p99_us": 55.910500000000006,
+            "max_us": 148.19
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 90.37,
+            "p99_us": 226.44640000000015,
+            "max_us": 356.668
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 88.9795,
+            "p99_us": 224.9739000000001,
+            "max_us": 348.179
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 122.09,
+            "p99_us": 270.38970000000046,
+            "max_us": 405.158
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 119.749,
+            "p99_us": 267.45850000000047,
+            "max_us": 401.549
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 18.406051635742188
+      },
+      "runner_ctrl_median_us": 32.66449948569061,
+      "torque_jitter_nm": 0.1388188274116364,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.443675038954588,
+        13.786480052520922,
+        6.999441246553245,
+        1.024919655538524,
+        1.091581772016257,
+        0.263862961224647
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.378074645996094,
+        "load_average": [
+          2.1708984375,
+          2.2080078125,
+          2.09130859375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.212081909179688,
+        "load_average": [
+          2.3173828125,
+          2.23779296875,
+          2.1015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 0,
+      "controller": "v1_torque",
+      "detector": "v2_detector_geometry",
+      "mass": 0.25,
+      "com": [
+        0.008,
+        0.006,
+        0.012
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.0538898609225167,
+      "max_mm": 4.0232868095133565,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 4.857928530594435,
+      "table_force_place_max_n": 5.117294334227812,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 1.2703191082659964,
+        "table_min_n": 0.1652721770535592,
+        "table_mean_over_mg": 0.5179690553582044,
+        "table_min_over_mg": 0.06738926689237888,
+        "place_peak_n": 5.117294334227812,
+        "place_peak_over_mg": 2.086562419664755
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 33.11,
+            "p99_us": 48.33049000000001,
+            "max_us": 202.37
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 32.3,
+            "p99_us": 47.400700000000015,
+            "max_us": 201.45
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 85.295,
+            "p99_us": 199.40329000000028,
+            "max_us": 346.268
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 83.845,
+            "p99_us": 197.65361000000033,
+            "max_us": 344.588
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 119.42949999999999,
+            "p99_us": 246.35260000000008,
+            "max_us": 393.058
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 117.2495,
+            "p99_us": 244.05990000000003,
+            "max_us": 390.528
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.21479034423828
+      },
+      "runner_ctrl_median_us": 36.09999930631602,
+      "torque_jitter_nm": 0.06886155453606592,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        4.9820128624623035,
+        13.527773582266791,
+        3.8269450976953334,
+        0.7259891211345917,
+        0.5275860636395735,
+        0.2089002275526369
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.19933319091797,
+        "load_average": [
+          2.3173828125,
+          2.23779296875,
+          2.1015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.229625701904297,
+        "load_average": [
+          2.3173828125,
+          2.23779296875,
+          2.1015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 1,
+      "controller": "v1_torque",
+      "detector": "v2_detector_geometry",
+      "mass": 0.45,
+      "com": [
+        -0.017,
+        0.01,
+        0.026
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.045721196999683,
+      "max_mm": 4.019429986725134,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 4.921691462630278,
+      "table_force_place_max_n": 6.959140441923054,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 1.5460171244045287,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.3502134158805139,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 6.959140441923054,
+        "place_peak_over_mg": 1.5764277816112933
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 33.1645,
+            "p99_us": 63.040400000000005,
+            "max_us": 123.169
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 32.35,
+            "p99_us": 61.709210000000006,
+            "max_us": 108.59
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 85.7795,
+            "p99_us": 232.70430000000033,
+            "max_us": 351.879
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 84.4145,
+            "p99_us": 229.7471000000002,
+            "max_us": 349.739
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 119.64500000000001,
+            "p99_us": 286.8368900000004,
+            "max_us": 430.698
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 117.43950000000001,
+            "p99_us": 282.09570000000036,
+            "max_us": 426.959
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.22954559326172
+      },
+      "runner_ctrl_median_us": 36.129998989054,
+      "torque_jitter_nm": 0.06951460056520051,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        5.489009295055258,
+        13.775377171464731,
+        4.421719649504308,
+        0.7717334730756198,
+        0.5603172864304368,
+        0.2089002275526369
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.229331970214844,
+        "load_average": [
+          2.3173828125,
+          2.23779296875,
+          2.1015625
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.296642303466797,
+        "load_average": [
+          2.21142578125,
+          2.216796875,
+          2.09521484375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 2,
+      "controller": "v1_torque",
+      "detector": "v2_detector_geometry",
+      "mass": 1.25,
+      "com": [
+        0.019,
+        -0.006,
+        0.018
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.0395857988531487,
+      "max_mm": 3.999145264870894,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 5.120874386249369,
+      "table_force_place_max_n": 12.565780538877792,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 1.9989942844442985,
+        "table_min_n": 0.03854647322318641,
+        "table_mean_over_mg": 0.16301686315549832,
+        "table_min_over_mg": 0.0031434432801783004,
+        "place_peak_n": 12.565780538877792,
+        "place_peak_over_mg": 1.0247323579105232
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 32.88,
+            "p99_us": 45.34070000000002,
+            "max_us": 116.459
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 32.0595,
+            "p99_us": 44.43009,
+            "max_us": 115.59
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 83.95,
+            "p99_us": 183.6004,
+            "max_us": 282.029
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 82.5745,
+            "p99_us": 181.82991000000004,
+            "max_us": 271.429
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 117.7945,
+            "p99_us": 223.4934000000001,
+            "max_us": 315.019
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 115.6345,
+            "p99_us": 220.82960000000003,
+            "max_us": 312.349
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.264461517333984
+      },
+      "runner_ctrl_median_us": 35.8594998033368,
+      "torque_jitter_nm": 0.07118751495493708,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.1969333875248385,
+        14.342224558958883,
+        4.749723774698056,
+        0.8591508595238856,
+        0.7507850895321327,
+        0.2089002275526369
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.296642303466797,
+        "load_average": [
+          2.21142578125,
+          2.216796875,
+          2.09521484375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.327106475830078,
+        "load_average": [
+          2.21142578125,
+          2.216796875,
+          2.09521484375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 3,
+      "controller": "v1_torque",
+      "detector": "v2_detector_geometry",
+      "mass": 3.55,
+      "com": [
+        -0.015,
+        0.014,
+        0.029
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.281434618266442,
+      "max_mm": 4.2361793888031185,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 6.36616194874594,
+      "table_force_place_max_n": 35.06779789594207,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 4.458080400088148,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.1280119567583566,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 35.06779789594207,
+        "place_peak_over_mg": 1.0069574850595706
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 33.2545,
+            "p99_us": 67.38040000000001,
+            "max_us": 135.56
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 32.45,
+            "p99_us": 65.73051000000004,
+            "max_us": 134.62
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 86.84450000000001,
+            "p99_us": 244.4096,
+            "max_us": 387.518
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 85.45,
+            "p99_us": 242.82010000000002,
+            "max_us": 385.998
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 120.9745,
+            "p99_us": 299.4941000000005,
+            "max_us": 456.158
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 118.72,
+            "p99_us": 296.22001000000046,
+            "max_us": 453.458
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 19.401046752929688
+      },
+      "runner_ctrl_median_us": 36.240000554244034,
+      "torque_jitter_nm": 0.07708901436730407,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.591714831504314,
+        15.070704525027345,
+        9.925885683434633,
+        1.1399414635116525,
+        1.8926460420879656,
+        0.2111787422828338
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.437149047851562,
+        "load_average": [
+          2.21142578125,
+          2.216796875,
+          2.09521484375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.43060302734375,
+        "load_average": [
+          2.21142578125,
+          2.216796875,
+          2.09521484375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 4,
+      "controller": "v1_torque",
+      "detector": "v2_detector_geometry",
+      "mass": 6.95,
+      "com": [
+        0.015,
+        -0.014,
+        0.045
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.9526642586267617,
+      "max_mm": 7.3692359245866035,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 11.222600249727634,
+      "table_force_place_max_n": 69.13760054263275,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 7.62808117562557,
+        "table_min_n": 0.24913470016204964,
+        "table_mean_over_mg": 0.1118823279083239,
+        "table_min_over_mg": 0.003654099841771348,
+        "place_peak_n": 69.13760054263275,
+        "place_peak_over_mg": 1.0140526190809958
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 34.499,
+            "p99_us": 71.23020000000001,
+            "max_us": 149.339
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 33.6495,
+            "p99_us": 69.59941,
+            "max_us": 146.739
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 99.11449999999999,
+            "p99_us": 292.55980000000005,
+            "max_us": 601.558
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 97.689,
+            "p99_us": 289.56890000000027,
+            "max_us": 598.807
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 140.3845,
+            "p99_us": 358.66670000000016,
+            "max_us": 739.987
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 137.994,
+            "p99_us": 352.52471000000014,
+            "max_us": 734.187
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 18.998180389404297
+      },
+      "runner_ctrl_median_us": 37.60999970836565,
+      "torque_jitter_nm": 0.08533182365782378,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.754952307055727,
+        21.115472314434314,
+        17.982687359315978,
+        1.891631230351328,
+        3.4327973686092874,
+        0.3784787200816316
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.453514099121094,
+        "load_average": [
+          2.21142578125,
+          2.216796875,
+          2.09521484375
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 19.26172637939453,
+        "load_average": [
+          2.1943359375,
+          2.212890625,
+          2.09423828125
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 5,
+      "controller": "v1_torque",
+      "detector": "v2_detector_geometry",
+      "mass": 7.75,
+      "com": [
+        -0.018,
+        -0.009,
+        0.01
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 3.282213183095671,
+      "max_mm": 8.6111756413566,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 13.040568062022288,
+      "table_force_place_max_n": 77.22813097768989,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 9.658671052177358,
+        "table_min_n": 0.5494823146950254,
+        "table_mean_over_mg": 0.12704180792709688,
+        "table_min_over_mg": 0.00722741527335537,
+        "place_peak_n": 77.22813097768989,
+        "place_peak_over_mg": 1.015792061789351
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 33.969,
+            "p99_us": 62.939610000000016,
+            "max_us": 436.539
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 33.1445,
+            "p99_us": 61.760500000000036,
+            "max_us": 118.469
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 93.79,
+            "p99_us": 209.56210000000007,
+            "max_us": 332.759
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 92.35,
+            "p99_us": 207.92110000000005,
+            "max_us": 327.809
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 129.92950000000002,
+            "p99_us": 255.55160000000006,
+            "max_us": 627.878
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 127.4445,
+            "p99_us": 253.0093,
+            "max_us": 388.798
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 18.4228515625
+      },
+      "runner_ctrl_median_us": 37.01000059663784,
+      "torque_jitter_nm": 0.0878269293291824,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        8.704218747154066,
+        23.985599493238194,
+        19.37997682422585,
+        2.000044005559217,
+        3.8581030990441745,
+        0.31552755591897286
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 19.354400634765625,
+        "load_average": [
+          2.1943359375,
+          2.212890625,
+          2.09423828125
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 18.41278839111328,
+        "load_average": [
+          2.1943359375,
+          2.212890625,
+          2.09423828125
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 6,
+      "controller": "v1_torque",
+      "detector": "v2_detector_geometry",
+      "mass": 7.95,
+      "com": [
+        0.013,
+        0.017,
+        0.035
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 3.2030200222443224,
+      "max_mm": 8.257660033229467,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 13.43728664054504,
+      "table_force_place_max_n": 78.52554589999221,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 8.127342111039015,
+        "table_min_n": 0.3583290406907116,
+        "table_mean_over_mg": 0.10421072209770564,
+        "table_min_over_mg": 0.004594580561366742,
+        "place_peak_n": 78.52554589999221,
+        "place_peak_over_mg": 1.0068733085863124
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 34.24,
+            "p99_us": 66.79191000000006,
+            "max_us": 156.589
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 33.39,
+            "p99_us": 65.36059000000002,
+            "max_us": 153.909
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 95.6745,
+            "p99_us": 270.7900900000002,
+            "max_us": 421.209
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 94.129,
+            "p99_us": 268.85760000000016,
+            "max_us": 419.469
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 131.6945,
+            "p99_us": 329.7030900000003,
+            "max_us": 471.498
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 129.3795,
+            "p99_us": 326.48949999999996,
+            "max_us": 468.788
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 17.000587463378906
+      },
+      "runner_ctrl_median_us": 37.33899939106777,
+      "torque_jitter_nm": 0.08838693929254324,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        7.603744254978191,
+        23.35157581441969,
+        18.379083736621894,
+        1.7393003129481555,
+        2.8916283450969185,
+        0.4111857928981313
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 18.51449966430664,
+        "load_average": [
+          2.1943359375,
+          2.212890625,
+          2.09423828125
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 17.000587463378906,
+        "load_average": [
+          2.33935546875,
+          2.24267578125,
+          2.1044921875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    },
+    {
+      "stage": "domain_validation",
+      "variant": "L3",
+      "architecture": "torque",
+      "architecture_label": "B",
+      "case_id": 7,
+      "controller": "v1_torque",
+      "detector": "v2_detector_geometry",
+      "mass": 2.25,
+      "com": [
+        0.032,
+        -0.005,
+        0.037
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "official": false,
+      "kind": "reference",
+      "phase": "validation",
+      "direction": "none",
+      "force_n": 0.0,
+      "rms_mm": 2.0867279593330963,
+      "max_mm": 4.006823421797593,
+      "saturation_pct": 0.0,
+      "diverged": false,
+      "torque_step_pick_nm": 8.98074462611001,
+      "torque_step_place_nm": 5.344210618630896,
+      "table_force_place_max_n": 22.12984313060036,
+      "false_alarms_pick": 0,
+      "false_alarms_place": 0,
+      "false_alarms_other": 0,
+      "g4": {
+        "available": true,
+        "window_start_s": 3.88,
+        "window_end_s": 3.9,
+        "table_mean_n": 2.33801464634655,
+        "table_min_n": 0.0,
+        "table_mean_over_mg": 0.10592432422002716,
+        "table_min_over_mg": 0.0,
+        "place_peak_n": 22.12984313060036,
+        "place_peak_over_mg": 1.0025979445282753
+      },
+      "timing": {
+        "controller": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 33.6145,
+            "p99_us": 63.401290000000024,
+            "max_us": 99.219
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 32.79,
+            "p99_us": 62.10039000000001,
+            "max_us": 97.33
+          }
+        },
+        "detector": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 90.285,
+            "p99_us": 221.74039000000022,
+            "max_us": 341.389
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 88.8895,
+            "p99_us": 219.2541000000001,
+            "max_us": 325.519
+          }
+        },
+        "combined": {
+          "wall": {
+            "samples": 6000,
+            "median_us": 125.59,
+            "p99_us": 268.3445000000001,
+            "max_us": 389.849
+          },
+          "thread_cpu": {
+            "samples": 6000,
+            "median_us": 123.2895,
+            "p99_us": 264.8141000000001,
+            "max_us": 380.469
+          }
+        },
+        "outlier_threshold_us": 1000.0,
+        "outliers": [],
+        "capacity_guard_count": 24,
+        "capacity_guard_min_mem_available_gib": 18.067752838134766
+      },
+      "runner_ctrl_median_us": 36.59449976112228,
+      "torque_jitter_nm": 0.07357211711653412,
+      "tool_contact_peak_n": 0.0,
+      "tool_contact_first_s": null,
+      "r_peak_nm": [
+        6.5946059691684376,
+        16.583770426103506,
+        5.992572091455539,
+        1.0566710293890766,
+        1.025787017440477,
+        0.25483985585494295
+      ],
+      "detect_delay_ms": null,
+      "alarm_before_collision": false,
+      "false_alarms": 0,
+      "tool_contact_delay_ms": null,
+      "host_before": {
+        "mem_available_gib": 17.000587463378906,
+        "load_average": [
+          2.33935546875,
+          2.24267578125,
+          2.1044921875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      },
+      "host_after": {
+        "mem_available_gib": 18.130538940429688,
+        "load_average": [
+          2.33935546875,
+          2.24267578125,
+          2.1044921875
+        ],
+        "foreign_heavy_python_count": 0,
+        "owned_simulation_workers": 1
+      }
+    }
+  ],
+  "publication_note": "Raw process IDs omitted; every case, numeric metric, load/RAM summary and timing outlier is retained. Evidence hashes elsewhere may name the private raw record; published-byte hashes are in artifacts/SHA256SUMS.",
+  "private_raw_sha256": "d24a361df4a893b99bf0fe43d8be399202727c01f2f4d3fc9f4e6f14c67424c4"
+}

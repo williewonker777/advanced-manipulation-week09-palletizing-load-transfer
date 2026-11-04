@@ -1,0 +1,150 @@
+{
+  "control": {
+    "adopt": false,
+    "rows": [
+      {
+        "architecture": "servo",
+        "conditions": [
+          {
+            "mass": 1.15,
+            "com": [
+              0.017,
+              0.009,
+              0.017
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": -0.00032103833686291457,
+            "tcp_ratio": 1.0004092819114445,
+            "place_step_ratio": 1.0490943215374366
+          },
+          {
+            "mass": 3.25,
+            "com": [
+              -0.013,
+              0.016,
+              0.032
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 6.223597621947547e-05,
+            "tcp_ratio": 1.0009508818885842,
+            "place_step_ratio": 0.8330033431527926
+          },
+          {
+            "mass": 5.75,
+            "com": [
+              0.024,
+              -0.017,
+              -0.003
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 0.00023631828825035814,
+            "tcp_ratio": 1.001863050576913,
+            "place_step_ratio": 0.9170236826428132
+          },
+          {
+            "mass": 7.65,
+            "com": [
+              -0.024,
+              -0.013,
+              0.046
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 0.0028607836340767395,
+            "tcp_ratio": 1.0022227932739765,
+            "place_step_ratio": 0.8656903019342302
+          }
+        ],
+        "g4_passes": 0,
+        "adopt": false
+      },
+      {
+        "architecture": "torque",
+        "conditions": [
+          {
+            "mass": 1.15,
+            "com": [
+              0.017,
+              0.009,
+              0.017
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": -0.0009134784800527707,
+            "tcp_ratio": 1.0001230537861012,
+            "place_step_ratio": 0.8482363336994553
+          },
+          {
+            "mass": 3.25,
+            "com": [
+              -0.013,
+              0.016,
+              0.032
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 0.009488311761794849,
+            "tcp_ratio": 1.00299206769784,
+            "place_step_ratio": 0.915256377002487
+          },
+          {
+            "mass": 5.75,
+            "com": [
+              0.024,
+              -0.017,
+              -0.003
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 0.01396733553145145,
+            "tcp_ratio": 1.0,
+            "place_step_ratio": 0.9396202689412032
+          },
+          {
+            "mass": 7.65,
+            "com": [
+              -0.024,
+              -0.013,
+              0.046
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 0.01631763414233564,
+            "tcp_ratio": 1.0,
+            "place_step_ratio": 0.9357605680740108
+          }
+        ],
+        "g4_passes": 0,
+        "adopt": false
+      }
+    ],
+    "reason": "G4 validation failed; fixed .10s return incompatible with all registered bounds over the full state box; no retuning"
+  },
+  "learning": {
+    "adopt": true,
+    "validation_false_v1": 0,
+    "validation_false_learned": 0,
+    "development_gain": 12,
+    "development": [
+      {
+        "architecture": "servo",
+        "v1_detected": 13,
+        "learned_detected": 19,
+        "lost_v1_detections": 0,
+        "v1_false_rises": 0,
+        "learned_false_rises": 0
+      },
+      {
+        "architecture": "torque",
+        "v1_detected": 12,
+        "learned_detected": 18,
+        "lost_v1_detections": 0,
+        "v1_false_rises": 0,
+        "learned_false_rises": 0
+      }
+    ],
+    "largest_combined_p99_us": 293.3085000000002,
+    "rule": ">=4 extra, no losses or false-rise increases, validation false0, p99<800us"
+  },
+  "holdout_opened": false,
+  "thresholds_changed_after_development": false,
+  "evidence_sha256": {
+    "S4_CONTROL.json": "1974c14e9905a61a65a76c2c6a695c606bcbbc5dc4cc6b2c3c4d2c669d96d755",
+    "S4_DEVELOPMENT.json": "5beec0b1b14fc7541b4b90ee90d2ceb78920c1efa0d6750eef7cb9bb4a0650cd"
+  }
+}

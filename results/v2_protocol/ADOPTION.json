@@ -1,0 +1,154 @@
+{
+  "control": {
+    "adopt": false,
+    "rows": [
+      {
+        "architecture": "servo",
+        "conditions": [
+          {
+            "mass": 1.15,
+            "com": [
+              0.017,
+              0.009,
+              0.017
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": -0.00032103833686291457,
+            "tcp_ratio": 1.0004092819114445,
+            "place_step_ratio": 1.0490943215374366
+          },
+          {
+            "mass": 3.25,
+            "com": [
+              -0.013,
+              0.016,
+              0.032
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 6.223597621947547e-05,
+            "tcp_ratio": 1.0009508818885842,
+            "place_step_ratio": 0.8330033431527926
+          },
+          {
+            "mass": 5.75,
+            "com": [
+              0.024,
+              -0.017,
+              -0.003
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 0.00023631828825035814,
+            "tcp_ratio": 1.001863050576913,
+            "place_step_ratio": 0.9170236826428132
+          },
+          {
+            "mass": 7.65,
+            "com": [
+              -0.024,
+              -0.013,
+              0.046
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 0.0028607836340767395,
+            "tcp_ratio": 1.0022227932739765,
+            "place_step_ratio": 0.8656903019342302
+          }
+        ],
+        "g4_passes": 0,
+        "adopt": false
+      },
+      {
+        "architecture": "torque",
+        "conditions": [
+          {
+            "mass": 1.15,
+            "com": [
+              0.017,
+              0.009,
+              0.017
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": -0.0009134784800527707,
+            "tcp_ratio": 1.0001230537861012,
+            "place_step_ratio": 0.8482363336994553
+          },
+          {
+            "mass": 3.25,
+            "com": [
+              -0.013,
+              0.016,
+              0.032
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 0.009488311761794849,
+            "tcp_ratio": 1.00299206769784,
+            "place_step_ratio": 0.915256377002487
+          },
+          {
+            "mass": 5.75,
+            "com": [
+              0.024,
+              -0.017,
+              -0.003
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 0.01396733553145145,
+            "tcp_ratio": 1.0,
+            "place_step_ratio": 0.9396202689412032
+          },
+          {
+            "mass": 7.65,
+            "com": [
+              -0.024,
+              -0.013,
+              0.046
+            ],
+            "g4_pass": false,
+            "mean_increase_over_mg": 0.01631763414233564,
+            "tcp_ratio": 1.0,
+            "place_step_ratio": 0.9357605680740108
+          }
+        ],
+        "g4_passes": 0,
+        "adopt": false
+      }
+    ],
+    "reason": "G4 validation failed; fixed .10s return incompatible with all registered bounds over the full state box; no retuning"
+  },
+  "learning": {
+    "adopt": true,
+    "candidate": "L3 geometry-only protocol repair",
+    "validation_false_v1": 0,
+    "validation_false_learned": 0,
+    "development_gain": 11,
+    "development": [
+      {
+        "architecture": "servo",
+        "v1_detected": 28,
+        "learned_detected": 28,
+        "v1_false_rises": 0,
+        "learned_false_rises": 0,
+        "lost_v1_detections": 0
+      },
+      {
+        "architecture": "torque",
+        "v1_detected": 27,
+        "learned_detected": 38,
+        "v1_false_rises": 0,
+        "learned_false_rises": 0,
+        "lost_v1_detections": 0
+      }
+    ],
+    "largest_combined_p99_us": 330.7983,
+    "controller_metrics_bit_exact": true,
+    "weights_and_thresholds_unchanged": true,
+    "official_compatibility_pending": false,
+    "official_compatibility_pass": true,
+    "official_is_independent_efficacy_evidence": false
+  },
+  "L1": "rejected: official empty-payload false alarms exposed wrong gate semantics",
+  "L2": "exploratory axis-aligned training envelope; not final preferred method",
+  "official_exposure": "official set consumed for debugging; not independent efficacy evidence",
+  "holdout_opened": false,
+  "post_development_numeric_tuning": false
+}

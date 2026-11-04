@@ -21,6 +21,11 @@ TEXT_SUFFIXES = {".py", ".md", ".txt", ".json", ".csv", ".sha256", ".html", ".ym
 MEDIA_SUFFIXES = {".mp4", ".gif"}
 MEDIA_ROOT = PurePosixPath("artifacts/media")
 MEDIA_TOTAL_LIMIT = 30_000_000
+MEDIA_MANIFESTS = {"artifacts/media/media_manifest.json",
+                   "artifacts/media/v2_manifest.json"}
+MEDIA_STEMS = ("01_servo_no_collision", "02_torque_no_collision",
+               "03_servo_place_collision", "04_servo_transport_collision",
+               "05_v2_servo_transport_collision", "06_v2_torque_transport_collision")
 ALLOWED_MEDIA_TAGS = {"encoder", "language", "handler_name", "vendor_id", "major_brand",
                       "minor_version", "compatible_brands"}
 # The course interface signature is an API contract, not prose redistribution.
@@ -286,18 +291,18 @@ def audit(root, kit=None, guide=None, ffprobe=None, require_checksums=True, requ
             if not tag_errors:
                 media_metadata_checked_count += 1
             errors.extend(f"{name}: {error}" for error in tag_errors)
-        elif PurePosixPath(name).is_relative_to(MEDIA_ROOT) and name != "artifacts/media/media_manifest.json":
+        elif PurePosixPath(name).is_relative_to(MEDIA_ROOT) and name not in MEDIA_MANIFESTS:
             errors.append(f"unexpected file in media directory: {name}")
     media_bytes = sum(p.stat().st_size for p in media)
     if media_bytes > MEDIA_TOTAL_LIMIT:
         errors.append("media total exceeds 30,000,000 bytes")
     if require_media:
         names = {p.relative_to(root).as_posix() for p in media}
-        stems = ("01_servo_no_collision", "02_torque_no_collision",
-                 "03_servo_place_collision", "04_servo_transport_collision")
-        expected_media = {f"artifacts/media/{stem}.{suffix}" for stem in stems for suffix in ("mp4", "gif")}
-        if names != expected_media or not (root/"artifacts/media/media_manifest.json").is_file():
-            errors.append("required four MP4/GIF pairs or media manifest missing/unexpected")
+        expected_media = {f"artifacts/media/{stem}.{suffix}"
+                          for stem in MEDIA_STEMS for suffix in ("mp4", "gif")}
+        manifests_present = {name for name in MEDIA_MANIFESTS if (root/name).is_file()}
+        if names != expected_media or manifests_present != MEDIA_MANIFESTS:
+            errors.append("required six MP4/GIF pairs or media manifests missing/unexpected")
     kit_valid = kit is None or (Path(kit).is_dir() and not Path(kit).is_symlink())
     guide_valid = guide is None or (Path(guide).is_file() and not Path(guide).is_symlink())
     if not kit_valid:

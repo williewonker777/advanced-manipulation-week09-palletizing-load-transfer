@@ -1,5 +1,7 @@
 # Limits and rejected approaches
 
+> Historical **v1** document. Final v2 methods, results and limitations: [V2_RESULTS](V2_RESULTS.md), [V2_REVIEW](V2_REVIEW.md).
+
 - A vertical collision along the table normal through a feasible contact COP
   can produce the same wrench as table support. These inputs cannot identify
   its source. An additional contact model, vacuum/force sensing or a different

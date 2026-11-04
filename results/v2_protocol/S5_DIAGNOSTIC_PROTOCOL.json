@@ -1,0 +1,106 @@
+{
+  "registered_utc": "2026-11-04T06:39:47.721900+00:00",
+  "design": "post-D4 exploratory cause investigation, preregistered before these diagnostic replays",
+  "official": false,
+  "original_data_raw_sha256": "c1d3446c7b14661cebbc1360083eb54e4b5a0bc4089ffd1b30d51cb269d93281",
+  "cases": [
+    {
+      "architecture": "servo",
+      "case_id": 91,
+      "kind": "reference",
+      "mass": 3.7,
+      "com": [
+        0.0,
+        -0.02,
+        0.015
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "original_worst_event": {
+        "cycle": 2433,
+        "simulated_t_s": 2.433,
+        "controller": {
+          "wall_ns": 34980,
+          "cpu_ns": 33980,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "detector": {
+          "wall_ns": 12116705,
+          "cpu_ns": 12114964,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "combined": {
+          "wall_ns": 12151685,
+          "cpu_ns": 12148944,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        }
+      }
+    },
+    {
+      "architecture": "torque",
+      "case_id": 328,
+      "kind": "collision",
+      "mass": 8.0,
+      "com": [
+        0.0,
+        0.02,
+        0.05
+      ],
+      "collision": [
+        3.92,
+        [
+          -5.773502691896258,
+          -5.773502691896258,
+          -5.773502691896258
+        ]
+      ],
+      "pick_offset": null,
+      "original_worst_event": {
+        "cycle": 1052,
+        "simulated_t_s": 1.052,
+        "controller": {
+          "wall_ns": 42119,
+          "cpu_ns": 41230,
+          "voluntary_context_switches": 0,
+          "involuntary_context_switches": 0
+        },
+        "detector": {
+          "wall_ns": 160536007,
+          "cpu_ns": 39332023,
+          "voluntary_context_switches": 2919,
+          "involuntary_context_switches": 0
+        },
+        "combined": {
+          "wall_ns": 160578126,
+          "cpu_ns": 39373253,
+          "voluntary_context_switches": 2919,
+          "involuntary_context_switches": 0
+        }
+      }
+    }
+  ],
+  "versions": [
+    "v1",
+    "v2"
+  ],
+  "repeats": 3,
+  "episodes": 12,
+  "observations": [
+    "paired wall/thread CPU",
+    "minor/major page-fault deltas",
+    "voluntary/involuntary context-switch deltas",
+    "natural GC generations and time spans including outside-call events",
+    "load and RAM guards"
+  ],
+  "prohibitions": [
+    "no GC disable/force/threshold changes",
+    "no algorithm/source/model/threshold/conditions tuning",
+    "no sim/model module mutation",
+    "no removal or replacement of original outliers",
+    "not training, efficacy selection, or a fresh holdout"
+  ],
+  "interpretation": "GC overlap and fault/context counters are observational evidence; no proof of unique causal mechanism. Instrument overhead and selected-condition limits reported. Frozen S5 G5 remains independently reported; diagnostic timing is supplemental."
+}

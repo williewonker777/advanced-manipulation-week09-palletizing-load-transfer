@@ -1,0 +1,325 @@
+{
+  "requirements": 33,
+  "verdict_counts": {
+    "충족": 24,
+    "부분": 4,
+    "판정 불가": 5
+  },
+  "mandatory_rule_ids": [
+    "R21",
+    "R22",
+    "R24",
+    "R25",
+    "R26",
+    "R27",
+    "R28",
+    "R33"
+  ],
+  "all_mandatory_rules_met_in_tested_scope": true,
+  "unknown_optional_not_selected": [
+    "R08",
+    "R09",
+    "R11",
+    "R32"
+  ],
+  "hidden_assessment": "R23 remains unavailable; finite holdout is not a guarantee",
+  "rows": [
+    {
+      "id": "R01",
+      "summary": "하중 전환의 제어 문제에 아이디어와 효과를 함께 제시",
+      "source": "Part 2 목표1",
+      "kind": "제출물",
+      "evidence": "v1 제어 원리 유지·정상-only ridge/EMA 채널 추가; C/학습/교차조합 실실행",
+      "verdict": "충족",
+      "action": "v2 제어 신규이득 없음 명시"
+    },
+    {
+      "id": "R02",
+      "summary": "토크 변화·착지 충격·원래 경로 오차를 줄임",
+      "source": "Part 2 목표1, Part 4 기준",
+      "kind": "평가 항목",
+      "evidence": "8kg A step9.7/14.6N·m·table79N·TCPmax3.91mm; B9.0/13.1·80N·8.44mm, v1동일",
+      "verdict": "충족",
+      "action": "명목 기준 개선은 v1 상속; stress 한계 별도"
+    },
+    {
+      "id": "R03",
+      "summary": "포화·진동·발산을 확인",
+      "source": "Part 2 목표1",
+      "kind": "평가 항목",
+      "evidence": "공식0/4/8kg 포화0·정상; D4 A COM2조건0.15/0.0333%포화·발산0; 진동부재 보장안함",
+      "verdict": "부분",
+      "action": "격자 포화와 진동 검증 한계 유지"
+    },
+    {
+      "id": "R04",
+      "summary": "감지 아이디어와 시뮬레이션 근거 제시",
+      "source": "Part 2 목표2",
+      "kind": "제출물",
+      "evidence": "정상-only77basis ridge+대칭EMA+기존OR; S4 ablation·D4·sealed holdout",
+      "verdict": "충족",
+      "action": "정상 학습과 L3 gate수정 기여 구분"
+    },
+    {
+      "id": "R05",
+      "summary": "무충돌 집기·놓기 때 경보 없음",
+      "source": "Part 2 목표2",
+      "kind": "평가 항목",
+      "evidence": "공식0/4/8kg와D4각189ref·holdout각4ref는FA0; 분석섭동FA A4→6/B7→9",
+      "verdict": "부분",
+      "action": "명목 충족과 섭동 실패를 구분"
+    },
+    {
+      "id": "R06",
+      "summary": "더 약한 충돌을 더 빨리 판정",
+      "source": "Part 2 목표2, Part 4 기준",
+      "kind": "평가 항목",
+      "evidence": "8kg운반15N45/43ms·10N62/56ms; D4검출111/111회이나B추가FA1→3,miss69/69회",
+      "verdict": "부분",
+      "action": "G1/G2 호환성 통과와 G3 미달 함께 보고"
+    },
+    {
+      "id": "R07",
+      "summary": "하나의 추정 공유 시 각 목표 기여를 분리",
+      "source": "Part 2 두 목표, Part 4 예시",
+      "kind": "제출물(공유 선택 시)",
+      "evidence": "공식ctrl/detector8교차조합, v1/v2 D4·holdout·섭동914physical쌍 동일",
+      "verdict": "충족",
+      "action": "제어변경0·감지만기여;공유cache검사"
+    },
+    {
+      "id": "R08",
+      "summary": "정지·후퇴 반응은 선택 사항",
+      "source": "Part 2 두 목표",
+      "kind": "권고",
+      "evidence": "반응 미구현, 시뮬레이터 기본 유지",
+      "verdict": "판정 불가",
+      "action": "선택하지 않음; 필수요구 아님"
+    },
+    {
+      "id": "R09",
+      "summary": "접촉모델 사용 시 파라미터 변화·수렴 한계 보고",
+      "source": "Part 2 방법A",
+      "kind": "권고",
+      "evidence": "일방향/COP 집합은 강성 접촉모델A와 다름;A 미선택",
+      "verdict": "판정 불가",
+      "action": "강성 섭동 별도 보고"
+    },
+    {
+      "id": "R10",
+      "summary": "강인 기법의 불확실성–감도 대가 제시",
+      "source": "Part 2 방법B",
+      "kind": "권고",
+      "evidence": "15N지연·10N개선과 D4 B추가FA+2,분석섭동FA각+2를함께기록",
+      "verdict": "충족",
+      "action": "전범위 우월·실기배치 권고 안함"
+    },
+    {
+      "id": "R11",
+      "summary": "감지 무효구간을 쓰면 위험·시간 대가 필요",
+      "source": "Part 2 방법C",
+      "kind": "권고(방법C 선택 시 조건부)",
+      "evidence": "전체감지off구간없음; learned만기하height gate, v1채널상시OR; 방법C전체mask 미선택",
+      "verdict": "판정 불가",
+      "action": "추가 gate 근처 감도 한계 공개"
+    },
+    {
+      "id": "R12",
+      "summary": "논문·학습·추가 센서 등 선택 가능, 미검증은 계획으로 구분",
+      "source": "Part 2 방법D",
+      "kind": "권고",
+      "evidence": "직접연20문헌(PDF12편), C·학습 구현평가, geometry/power검사·수직반례",
+      "verdict": "충족",
+      "action": "원리참고와자체변형/미해결을명시"
+    },
+    {
+      "id": "R13",
+      "summary": "궤적 변경 시 원래 기준 TCP·주기시간 대가 보고",
+      "source": "Part 2 방법D 말미",
+      "kind": "제출물",
+      "evidence": "v1의5ms endpoint advance 상속; C국소보정은G4실패로미채택;원래경로오차평가",
+      "verdict": "충족",
+      "action": "최종 reference/grip 변경0"
+    },
+    {
+      "id": "R14",
+      "summary": "공식 evaluator 결과를 기준과 나란히 제시",
+      "source": "Part 2 시뮬레이션, 부록A/B",
+      "kind": "제출물",
+      "evidence": "변경없는evaluate.py로기준/v1재현4+최종공식8조합,기본이름A/B도동일66셀",
+      "verdict": "충족",
+      "action": "공식 표는독립효능아닌호환성"
+    },
+    {
+      "id": "R15",
+      "summary": "하중 전환 토크·TCP·작업대 힘·잔차 그래프",
+      "source": "Part 2 시뮬레이션",
+      "kind": "제출물",
+      "evidence": "기준/v1/v2 torque·TCP·table·residual자체그림7개,16쪽PDF,새3way05/06영상",
+      "verdict": "충족",
+      "action": "01–04는역사적v1로구분"
+    },
+    {
+      "id": "R16",
+      "summary": "질량·COM·충돌 시각·크기·방향 다양화",
+      "source": "Part 2 시뮬레이션",
+      "kind": "제출물",
+      "evidence": "D4 1540행,사전봉인holdout152행,분석섭동136행;질량/COM/시각/힘/±축/사선/offset",
+      "verdict": "충족",
+      "action": "모든실패/오감지분리집계;확률보장아님"
+    },
+    {
+      "id": "R17",
+      "summary": "실패하는 조건을 숨기지 않음",
+      "source": "Part 2 시뮬레이션",
+      "kind": "제출물",
+      "evidence": "D4 miss69/69·B추가FA·offsetFA8/6,섭동FA6/9·포화·모든timing outlier보존",
+      "verdict": "충족",
+      "action": "실패원인과미확정원인도기록"
+    },
+    {
+      "id": "R18",
+      "summary": "1 ms 제어주기 내 계산 가능한지 측정",
+      "source": "Part 2 시뮬레이션, Part 3",
+      "kind": "평가 항목",
+      "evidence": "최종worst-row p99 A346.762/B350.531µs; 관측max12.152/160.578ms;passiveGC/CPU/context진단",
+      "verdict": "부분",
+      "action": "strict1ms 미달; 원래160.578ms 단일원인미확정"
+    },
+    {
+      "id": "R19",
+      "summary": "원리·범위·대가·현장 적용성을 설명",
+      "source": "Part 2 효용성",
+      "kind": "제출물",
+      "evidence": "V2_REVIEW의원리/범위/대가/현장적용,미달G3/G4/G5/G6·U9미해결",
+      "verdict": "충족",
+      "action": "실기/안전/hardRT 보장 미주장"
+    },
+    {
+      "id": "R20",
+      "summary": "문제→아이디어→검증→효용성 발표",
+      "source": "Part 2 발표 구성",
+      "kind": "권고",
+      "evidence": "최신16쪽PDF 문제→방법→공식/독립검증→효용·한계;전체쪽시각확인",
+      "verdict": "충족",
+      "action": "논문·교재그림 재사용0"
+    },
+    {
+      "id": "R21",
+      "summary": "실제 내부 상태·작업대 힘·진짜 토크를 런타임에 안 씀",
+      "source": "Part 2 규칙, Part 3, 부록B/C",
+      "kind": "필수 규칙",
+      "evidence": "production+learnedcore AST통과; 허용observer자기지도target; plant/log는사후분석전용",
+      "verdict": "충족",
+      "action": "AST는임의Python정보흐름의증명아님"
+    },
+    {
+      "id": "R22",
+      "summary": "원래 sim/model, 구동부 구조 보존",
+      "source": "Part 2 규칙, 부록A",
+      "kind": "필수 규칙",
+      "evidence": "보호20파일SHA일치·원본29inventory/SHA일치;모듈monkeypatch0",
+      "verdict": "충족",
+      "action": "final publication전후 재검사"
+    },
+    {
+      "id": "R23",
+      "summary": "미공개 질량·COM·외력에 일반화 필요",
+      "source": "Part 2 규칙, evaluate.py 머리말",
+      "kind": "평가 항목",
+      "evidence": "비정수·미학습COM/시각/방향의seed369503봉인holdout완료,비공개15주차조건접근불가",
+      "verdict": "판정 불가",
+      "action": "holdout은유한대리검사이며비공개통과아님"
+    },
+    {
+      "id": "R24",
+      "summary": "controller 입력은 t/encoder/JTS/grip/reference 및 공개모델",
+      "source": "Part 3 측정·모델, 부록C",
+      "kind": "필수 규칙",
+      "evidence": "controller시그니처·공개nominal,learner현재/과거reference+known mass/COM,추정JTSwrench만",
+      "verdict": "충족",
+      "action": "가중치내장·numpy추론·외부파일I/O0"
+    },
+    {
+      "id": "R25",
+      "summary": "motor torque는 detector 전용 입력",
+      "source": "Part 3 측정",
+      "kind": "필수 규칙",
+      "evidence": "controller 입력에 tau_m 없음, detector는 허용",
+      "verdict": "충족",
+      "action": "계약 테스트"
+    },
+    {
+      "id": "R26",
+      "summary": "trajectory/config는 읽기만",
+      "source": "Part 3 모델",
+      "kind": "필수 규칙",
+      "evidence": "AST public-module쓰기금지·hash보존;실제offset/drift/seed 런타임미사용",
+      "verdict": "충족",
+      "action": "분석전용섭동과runtime엄격분리"
+    },
+    {
+      "id": "R27",
+      "summary": "선택한 방식의 출력 준수: A는 지령4개·gain만, B는 토크6개",
+      "source": "Part 3 변경 가능, 부록C",
+      "kind": "필수 규칙",
+      "evidence": "A4×6지령·gain/B6토크 shape·finite·reset검사;최종기본이름A/B전체공식평가동일66셀",
+      "verdict": "충족",
+      "action": "self-contained3파일·공식venv추가패키지0"
+    },
+    {
+      "id": "R28",
+      "summary": "detector→controller 호출 순서 불변, self.ctrl은 공유 선택 시",
+      "source": "Part 3 변경 가능",
+      "kind": "필수 규칙",
+      "evidence": "원runner update→compute 유지,공유cache timestamp/리셋/외부controllerfallback검사통과",
+      "verdict": "충족",
+      "action": "S5계측은별도인스턴스subclass만"
+    },
+    {
+      "id": "R29",
+      "summary": "충돌평가 판정과 무충돌 경보를 혼동하지 않음",
+      "source": "Part 4, 부록B, evaluate.py",
+      "kind": "평가 항목",
+      "evidence": "공식우선순위·±20ms참조 그대로; ref/offset/extraFA/miss/masked를별도집계",
+      "verdict": "충족",
+      "action": "실패·outlier삭제0"
+    },
+    {
+      "id": "R30",
+      "summary": "모델·센서·흡착의 가정과 실기 차이 고지",
+      "source": "부록D",
+      "kind": "제출물",
+      "evidence": "허용신호·rigid교재vselastic/1ms변형·동일법선wrench반례·실기미검증명시",
+      "verdict": "충족",
+      "action": "동역학전체history비식별의증명아님"
+    },
+    {
+      "id": "R31",
+      "summary": "실행환경·모델 사용권 고지",
+      "source": "부록A/C/E, requirements/model license",
+      "kind": "권고",
+      "evidence": "Python3.12.3/numpy2.5.4/MuJoCo3.17.0·package목록S0동일,외부모델별도·저자코드0",
+      "verdict": "충족",
+      "action": "학습별도venv·키트/가이드/수업스캔미배포"
+    },
+    {
+      "id": "R32",
+      "summary": "GPU 시뮬레이터는 선택일 뿐",
+      "source": "부록E",
+      "kind": "권고",
+      "evidence": "CPU학습·CPU시뮬레이션·Mesa llvmpipe영상; GPU/Isaac미선택",
+      "verdict": "판정 불가",
+      "action": "선택사항이며GPU학습0"
+    },
+    {
+      "id": "R33",
+      "summary": "detector API는 update(t,th,thd,tau_m,tau_s,grip)→잔차6개·bool",
+      "source": "Part 3, 부록C",
+      "kind": "필수 규칙",
+      "evidence": "최종Detector.update 6잔차·bool,reset/단독/공유/외부이름import 및defaultname전체평가",
+      "verdict": "충족",
+      "action": "가중치·threshold·EMA·persistence 동결유지"
+    }
+  ]
+}
