@@ -151,6 +151,29 @@ class R4ReportTests(unittest.TestCase):
             self.assertIn("효과는 모른다", rendered)
             self.assertIn("공식 8 kg 미검출 3조건에 W40을 실행하지 않았다", rendered)
 
+    def test_readme_audit_summary_uses_distinct_signal_windows(self):
+        rendered = R.render_readme(context())
+        summary = rendered.split("## 평가기 점검과 미검출 원인\n", 1)[1].split(
+            "## 계산 시간과 미달\n", 1)[0]
+        for text in ("### 평가기 점검", "### 공식 8 kg 미검출 원인 측정",
+                     "펄스 중 점수", "평가창 점수", "0.80/0.74 (0.80/0.71)",
+                     "1.09/1.06", "0.99/0.96 (0.55/0.51)",
+                     "1.45/1.55 (1.86/1.70)", "120 ms", "320 ms",
+                     "공개본만으로 재현할 수 없다", "독립 검증으로 쓸 수 없다"):
+            self.assertIn(text, summary)
+
+    def test_audit_links_are_readme_only_and_preserve_official_precision(self):
+        value = context()
+        readme = R.render_readme(value)
+        self.assertIn("[평가기 점검](#평가기-점검과-미검출-원인)",
+                      readme.split("## 용어", 1)[0])
+        self.assertIn("[측정 내용](#공식-8-kg-미검출-원인-측정)", readme)
+        self.assertIn("미검출([원인 측정](#공식-8-kg-미검출-원인-측정))", readme)
+        self.assertIn("1.17/3.91", readme)
+        self.assertNotIn("1.170", readme)
+        for other in (R.render_results(value), R.render_notes(value)):
+            self.assertNotIn("## 평가기 점검과 미검출 원인", other)
+
     def test_glossary_is_at_the_start_of_readme_and_pdf(self):
         readme = R.render_readme(context())
         first_slide = " ".join(R.slides(context())[0]["bullets"])
