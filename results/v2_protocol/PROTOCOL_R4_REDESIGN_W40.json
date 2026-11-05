@@ -1,0 +1,874 @@
+{
+  "schema": "R4_REDESIGN_W40.v1",
+  "registered_utc": "2026-11-05T03:13:43.645965+00:00",
+  "original_protocol_sha256": "f4f5c0cca4617901aa0be71ce513941c8cded35a308bfd7403ac49a52fb45182",
+  "validation_review_sha256": "42072540ec7d13fed570f636e63790403f926e42b14064ee2a91ad9df2ad181d",
+  "original_redesign_decision_sha256": "d2611356b0842ef2bfa0bb151d4c259c6d3e31349c5657a654e62acca68e232c",
+  "holdout_reseal_sha256": "f71aad5f642cbe1c4118923be79e8b4f71b2b9b36cf426ef14465bb4ae30eb27",
+  "family": "W40",
+  "variant": "W40_ACTIVE",
+  "redesign_number": 1,
+  "architecture": [
+    "servo",
+    "torque"
+  ],
+  "reason": "R4 re-called the geometry helper after its R1 parent. It deterministically rewrote nominal qpos/kinematic scratch to the same values, preserving observed end states, but violated the literal shared-state no-store clause. W40 gains4/3 with no extra validation FA make a single causal implementation repair justified. Remove only the redundant scratch stores by reading the current nominal workspace already computed by the parent; do not retune any statistic, threshold, phase or parameter.",
+  "original_candidates_literal_store_free": false,
+  "other_families": "CUSUM_ACTIVE and CUSUM_PHASE keep their original diagnostic implementations and are permanently adoption-ineligible for the literal store violation; PHASE also failed normal/outside-event FA, ACTIVE_K05 torque also failed gain/FA. Concentrate the one bounded repair on the simpler W40 which qualified both modes.",
+  "normal_calibration": "All original128 normal episodes and frozen thresholds remain unchanged; before new collisions replay normal audit with unchanged statistic and prove read-only gate identical. Original data/source hashes remain historical, never rewritten.",
+  "source_preservation": "Archive all four original generated sources exactly before replacing only W40_ACTIVE.py. Keep R4_CALIBRATION,R4_BUILT,original R4_EQUIVALENCE,original validation and automatic redesign decision immutable; use new revision/build/audit/equivalence/revalidation records.",
+  "revalidation": {
+    "seed": 371212,
+    "conditions": [
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ]
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ]
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ]
+      },
+      {
+        "mass": 7.2303,
+        "com": [
+          0.0009,
+          0.00529,
+          0.03417
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 0
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 1
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 2
+      },
+      {
+        "mass": 7.2303,
+        "com": [
+          0.0009,
+          0.00529,
+          0.03417
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 3
+      },
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4066,
+          [
+            4.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+x",
+        "force_n": 4.5,
+        "case_id": 4
+      },
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4066,
+          [
+            -4.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-x",
+        "force_n": 4.5,
+        "case_id": 5
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4617,
+          [
+            0.0,
+            7.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+y",
+        "force_n": 7.5,
+        "case_id": 6
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4617,
+          [
+            0.0,
+            -7.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-y",
+        "force_n": 7.5,
+        "case_id": 7
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4647,
+          [
+            0.0,
+            0.0,
+            12.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+z",
+        "force_n": 12.5,
+        "case_id": 8
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4647,
+          [
+            0.0,
+            0.0,
+            -12.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-z",
+        "force_n": 12.5,
+        "case_id": 9
+      },
+      {
+        "mass": 7.2303,
+        "com": [
+          0.0009,
+          0.00529,
+          0.03417
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4798,
+          [
+            13.081475451951128,
+            13.081475451951128,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+xy",
+        "force_n": 18.5,
+        "case_id": 10
+      },
+      {
+        "mass": 7.2303,
+        "com": [
+          0.0009,
+          0.00529,
+          0.03417
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4798,
+          [
+            -13.081475451951128,
+            -13.081475451951128,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-xy",
+        "force_n": 18.5,
+        "case_id": 11
+      },
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ],
+        "kind": "collision",
+        "collision": [
+          1.3955,
+          [
+            16.454482671904334,
+            16.454482671904334,
+            16.454482671904334
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+xyz",
+        "force_n": 28.5,
+        "case_id": 12
+      },
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ],
+        "kind": "collision",
+        "collision": [
+          1.3955,
+          [
+            -16.454482671904334,
+            -16.454482671904334,
+            -16.454482671904334
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-xyz",
+        "force_n": 28.5,
+        "case_id": 13
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ],
+        "kind": "collision",
+        "collision": [
+          2.383,
+          [
+            7.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+x",
+        "force_n": 7.5,
+        "case_id": 14
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ],
+        "kind": "collision",
+        "collision": [
+          2.383,
+          [
+            -7.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-x",
+        "force_n": 7.5,
+        "case_id": 15
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ],
+        "kind": "collision",
+        "collision": [
+          2.4649,
+          [
+            0.0,
+            12.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+y",
+        "force_n": 12.5,
+        "case_id": 16
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ],
+        "kind": "collision",
+        "collision": [
+          2.4649,
+          [
+            0.0,
+            -12.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-y",
+        "force_n": 12.5,
+        "case_id": 17
+      },
+      {
+        "mass": 7.2303,
+        "com": [
+          0.0009,
+          0.00529,
+          0.03417
+        ],
+        "kind": "collision",
+        "collision": [
+          2.8716,
+          [
+            0.0,
+            0.0,
+            18.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+z",
+        "force_n": 18.5,
+        "case_id": 18
+      },
+      {
+        "mass": 7.2303,
+        "com": [
+          0.0009,
+          0.00529,
+          0.03417
+        ],
+        "kind": "collision",
+        "collision": [
+          2.8716,
+          [
+            0.0,
+            0.0,
+            -18.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-z",
+        "force_n": 18.5,
+        "case_id": 19
+      },
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ],
+        "kind": "collision",
+        "collision": [
+          2.3379,
+          [
+            20.152543263816604,
+            20.152543263816604,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+xy",
+        "force_n": 28.5,
+        "case_id": 20
+      },
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ],
+        "kind": "collision",
+        "collision": [
+          2.3379,
+          [
+            -20.152543263816604,
+            -20.152543263816604,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-xy",
+        "force_n": 28.5,
+        "case_id": 21
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ],
+        "kind": "collision",
+        "collision": [
+          3.0478,
+          [
+            2.598076211353316,
+            2.598076211353316,
+            2.598076211353316
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+xyz",
+        "force_n": 4.5,
+        "case_id": 22
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ],
+        "kind": "collision",
+        "collision": [
+          3.0478,
+          [
+            -2.598076211353316,
+            -2.598076211353316,
+            -2.598076211353316
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-xyz",
+        "force_n": 4.5,
+        "case_id": 23
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9357,
+          [
+            12.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+x",
+        "force_n": 12.5,
+        "case_id": 24
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9357,
+          [
+            -12.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-x",
+        "force_n": 12.5,
+        "case_id": 25
+      },
+      {
+        "mass": 7.2303,
+        "com": [
+          0.0009,
+          0.00529,
+          0.03417
+        ],
+        "kind": "collision",
+        "collision": [
+          3.814,
+          [
+            0.0,
+            18.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+y",
+        "force_n": 18.5,
+        "case_id": 26
+      },
+      {
+        "mass": 7.2303,
+        "com": [
+          0.0009,
+          0.00529,
+          0.03417
+        ],
+        "kind": "collision",
+        "collision": [
+          3.814,
+          [
+            0.0,
+            -18.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-y",
+        "force_n": 18.5,
+        "case_id": 27
+      },
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ],
+        "kind": "collision",
+        "collision": [
+          3.7963,
+          [
+            0.0,
+            0.0,
+            28.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+z",
+        "force_n": 28.5,
+        "case_id": 28
+      },
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ],
+        "kind": "collision",
+        "collision": [
+          3.7963,
+          [
+            0.0,
+            0.0,
+            -28.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-z",
+        "force_n": 28.5,
+        "case_id": 29
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9345,
+          [
+            3.181980515339464,
+            3.181980515339464,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+xy",
+        "force_n": 4.5,
+        "case_id": 30
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9345,
+          [
+            -3.181980515339464,
+            -3.181980515339464,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-xy",
+        "force_n": 4.5,
+        "case_id": 31
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8723,
+          [
+            4.330127018922194,
+            4.330127018922194,
+            4.330127018922194
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+xyz",
+        "force_n": 7.5,
+        "case_id": 32
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8723,
+          [
+            -4.330127018922194,
+            -4.330127018922194,
+            -4.330127018922194
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-xyz",
+        "force_n": 7.5,
+        "case_id": 33
+      },
+      {
+        "mass": 1.5173,
+        "com": [
+          0.00487,
+          -0.00469,
+          0.03978
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          0.018,
+          0,
+          0.012
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 34
+      },
+      {
+        "mass": 3.8051,
+        "com": [
+          0.00304,
+          0.0214,
+          0.02821
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          -0.018,
+          0,
+          0.012
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 35
+      },
+      {
+        "mass": 6.0473,
+        "com": [
+          0.01844,
+          0.0253,
+          0.01335
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          0.011,
+          -0.014,
+          0.008
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 36
+      },
+      {
+        "mass": 7.2303,
+        "com": [
+          0.0009,
+          0.00529,
+          0.03417
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          -0.012,
+          0.013,
+          -0.009
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 37
+      }
+    ],
+    "rows_per_mode": 38,
+    "full_loop": true,
+    "all_numeric_gates_unchanged": true,
+    "additional_detected_min": 2
+  },
+  "science_gate": "Revised W40 must pass literal store-free audit, new full-loop physical/decision parity, all original numerical gates and fresh validation. Old configurations never revive.",
+  "new_holdout_exclusion_masses": [
+    1.5173,
+    3.8051,
+    6.0473,
+    7.2303
+  ],
+  "redesigns_used": {
+    "W40": 1,
+    "CUSUM_ACTIVE": 0,
+    "CUSUM_PHASE": 0
+  },
+  "first_holdout_generated": false,
+  "official_runs": 0,
+  "prior_decision_correction": "The automatic no-redesign decision omitted the newly identified scratch-store finding; retain it as an incomplete initial record and supersede it with this contemporaneous pre-development revision. Do not invent a no-failure reason."
+}

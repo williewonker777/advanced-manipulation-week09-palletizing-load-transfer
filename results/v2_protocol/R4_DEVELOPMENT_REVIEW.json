@@ -1,0 +1,403 @@
+{
+  "schema": "R4_STAGE_REVIEW.v1",
+  "stage": "development",
+  "protocol_sha256": "f4f5c0cca4617901aa0be71ce513941c8cded35a308bfd7403ac49a52fb45182",
+  "results": [
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "family": "W40",
+      "review": {
+        "passed": true,
+        "additional_detected": 2,
+        "lost_R1": 0,
+        "R1_detected": 12,
+        "candidate_detected": 14,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 0,
+        "outside_event_FA_R1": 0,
+        "outside_event_FA_candidate": 0,
+        "phases": {
+          "pick": {
+            "cases": 10,
+            "R1_detected": 4,
+            "candidate_detected": 4
+          },
+          "transport": {
+            "cases": 10,
+            "R1_detected": 5,
+            "candidate_detected": 7
+          },
+          "place": {
+            "cases": 10,
+            "R1_detected": 3,
+            "candidate_detected": 3
+          }
+        },
+        "failures": [],
+        "every_case_retained": 38
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 342.1330000000001,
+      "timing_max_us": 5141.191,
+      "timing_pass": true,
+      "literal_store_free": true,
+      "adoption_eligible": true,
+      "earlier_disqualification": false,
+      "permanently_disqualified": false
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "family": "CUSUM_ACTIVE",
+      "review": {
+        "passed": true,
+        "additional_detected": 2,
+        "lost_R1": 0,
+        "R1_detected": 12,
+        "candidate_detected": 14,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 0,
+        "outside_event_FA_R1": 0,
+        "outside_event_FA_candidate": 0,
+        "phases": {
+          "pick": {
+            "cases": 10,
+            "R1_detected": 4,
+            "candidate_detected": 4
+          },
+          "transport": {
+            "cases": 10,
+            "R1_detected": 5,
+            "candidate_detected": 7
+          },
+          "place": {
+            "cases": 10,
+            "R1_detected": 3,
+            "candidate_detected": 3
+          }
+        },
+        "failures": [],
+        "every_case_retained": 38
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 324.0030000000003,
+      "timing_max_us": 6416.361,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "family": "CUSUM_ACTIVE",
+      "review": {
+        "passed": true,
+        "additional_detected": 2,
+        "lost_R1": 0,
+        "R1_detected": 12,
+        "candidate_detected": 14,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 0,
+        "outside_event_FA_R1": 0,
+        "outside_event_FA_candidate": 0,
+        "phases": {
+          "pick": {
+            "cases": 10,
+            "R1_detected": 4,
+            "candidate_detected": 4
+          },
+          "transport": {
+            "cases": 10,
+            "R1_detected": 5,
+            "candidate_detected": 7
+          },
+          "place": {
+            "cases": 10,
+            "R1_detected": 3,
+            "candidate_detected": 3
+          }
+        },
+        "failures": [],
+        "every_case_retained": 38
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 335.06841000000003,
+      "timing_max_us": 6283.941,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "family": "CUSUM_PHASE",
+      "review": {
+        "passed": true,
+        "additional_detected": 5,
+        "lost_R1": 0,
+        "R1_detected": 12,
+        "candidate_detected": 17,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 0,
+        "outside_event_FA_R1": 0,
+        "outside_event_FA_candidate": 0,
+        "phases": {
+          "pick": {
+            "cases": 10,
+            "R1_detected": 4,
+            "candidate_detected": 7
+          },
+          "transport": {
+            "cases": 10,
+            "R1_detected": 5,
+            "candidate_detected": 7
+          },
+          "place": {
+            "cases": 10,
+            "R1_detected": 3,
+            "candidate_detected": 3
+          }
+        },
+        "failures": [],
+        "every_case_retained": 38
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 355.2422900000003,
+      "timing_max_us": 613.296,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "family": "W40",
+      "review": {
+        "passed": true,
+        "additional_detected": 2,
+        "lost_R1": 0,
+        "R1_detected": 12,
+        "candidate_detected": 14,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 0,
+        "outside_event_FA_R1": 1,
+        "outside_event_FA_candidate": 1,
+        "phases": {
+          "pick": {
+            "cases": 10,
+            "R1_detected": 4,
+            "candidate_detected": 4
+          },
+          "transport": {
+            "cases": 10,
+            "R1_detected": 5,
+            "candidate_detected": 7
+          },
+          "place": {
+            "cases": 10,
+            "R1_detected": 3,
+            "candidate_detected": 3
+          }
+        },
+        "failures": [],
+        "every_case_retained": 38
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 275.26059,
+      "timing_max_us": 465.879,
+      "timing_pass": true,
+      "literal_store_free": true,
+      "adoption_eligible": true,
+      "earlier_disqualification": false,
+      "permanently_disqualified": false
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "family": "CUSUM_ACTIVE",
+      "review": {
+        "passed": true,
+        "additional_detected": 2,
+        "lost_R1": 0,
+        "R1_detected": 12,
+        "candidate_detected": 14,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 0,
+        "outside_event_FA_R1": 1,
+        "outside_event_FA_candidate": 1,
+        "phases": {
+          "pick": {
+            "cases": 10,
+            "R1_detected": 4,
+            "candidate_detected": 4
+          },
+          "transport": {
+            "cases": 10,
+            "R1_detected": 5,
+            "candidate_detected": 7
+          },
+          "place": {
+            "cases": 10,
+            "R1_detected": 3,
+            "candidate_detected": 3
+          }
+        },
+        "failures": [],
+        "every_case_retained": 38
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 301.99210000000033,
+      "timing_max_us": 6329.75,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "family": "CUSUM_ACTIVE",
+      "review": {
+        "passed": false,
+        "additional_detected": 4,
+        "lost_R1": 0,
+        "R1_detected": 12,
+        "candidate_detected": 16,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 0,
+        "outside_event_FA_R1": 1,
+        "outside_event_FA_candidate": 2,
+        "phases": {
+          "pick": {
+            "cases": 10,
+            "R1_detected": 4,
+            "candidate_detected": 4
+          },
+          "transport": {
+            "cases": 10,
+            "R1_detected": 5,
+            "candidate_detected": 9
+          },
+          "place": {
+            "cases": 10,
+            "R1_detected": 3,
+            "candidate_detected": 3
+          }
+        },
+        "failures": [
+          {
+            "case_id": 17,
+            "mass": 5.6932,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          }
+        ],
+        "every_case_retained": 38
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 329.25599000000085,
+      "timing_max_us": 5475.875,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "family": "CUSUM_PHASE",
+      "review": {
+        "passed": false,
+        "additional_detected": 6,
+        "lost_R1": 0,
+        "R1_detected": 12,
+        "candidate_detected": 18,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 0,
+        "outside_event_FA_R1": 1,
+        "outside_event_FA_candidate": 3,
+        "phases": {
+          "pick": {
+            "cases": 10,
+            "R1_detected": 4,
+            "candidate_detected": 6
+          },
+          "transport": {
+            "cases": 10,
+            "R1_detected": 5,
+            "candidate_detected": 9
+          },
+          "place": {
+            "cases": 10,
+            "R1_detected": 3,
+            "candidate_detected": 3
+          }
+        },
+        "failures": [
+          {
+            "case_id": 10,
+            "mass": 7.4895,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 11,
+            "mass": 7.4895,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          }
+        ],
+        "every_case_retained": 38
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 312.90459000000016,
+      "timing_max_us": 6592.088,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    }
+  ],
+  "diagnostics_cannot_revive": true,
+  "independent_efficacy": true,
+  "source_files": {
+    "R4_DEVELOPMENT_CUSUM_PHASE_K05_servo.json": "3a3ba98cb1e2997194a6356da3a81e63e7edfff10f7e2b2911860c8bac328a25",
+    "R4_DEVELOPMENT_CUSUM_PHASE_K05_torque.json": "b2b6fef2e2fe0bd8c3c2f7741d20292b70a082f52292b4300a8ba8998a0388b4",
+    "R4_DEVELOPMENT_CUSUM_ACTIVE_K05_servo.json": "add73c222531becfe697c2f2ded1e133eb5040acf9caa3e34d0c05dd24fa6948",
+    "R4_DEVELOPMENT_CUSUM_ACTIVE_K10_torque.json": "a48c89e9b2f1f0f3db8bcf367203fe83470e87dd624f3902d86bf43a1dc3189e",
+    "R4_DEVELOPMENT_W40_ACTIVE_servo.json": "14bef55420a7073f148f35d3a56da0dac1dba802af1e2f15bb156486155e55c4",
+    "R4_DEVELOPMENT_W40_ACTIVE_torque.json": "efc3e78ab4fcd529f75d3943747e6deff77ee489b6f4e8c17b075a89abe4c0ff",
+    "R4_DEVELOPMENT_CUSUM_ACTIVE_K10_servo.json": "b4262770b6eba689ba876433d964d46a90744e787fce3d151ea29add6c42a29e",
+    "R4_DEVELOPMENT_CUSUM_ACTIVE_K05_torque.json": "3f196ac3d752b09d23083ad775c64025a08767844bac40e06f5a9f6e23f34fda"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "R4_HOLDOUT_RESEAL.v1",
+  "registered_utc": "2026-11-05T02:48:38.041785+00:00",
+  "original_protocol_sha256": "f4f5c0cca4617901aa0be71ce513941c8cded35a308bfd7403ac49a52fb45182",
+  "invalidated_seed": 371501,
+  "replacement_seed": 371599,
+  "reason": "A simulation-free unit test mistakenly constructed the real registered holdout design in memory before freeze. It did not execute holdout episodes or persist/print the generated conditions, but pre-generation violated the sealing rule. Invalidate that seed; use the new unused seed only after the committed freeze and durable exclusive marker.",
+  "actual_holdout_episodes_before_reseal": 0,
+  "candidate_collision_episodes_before_reseal": 0,
+  "official_episodes_before_reseal": 0,
+  "replacement_conditions_generated_before_freeze": false,
+  "all_other_protocol_gates_and_design_ranges_unchanged": true,
+  "test_rule": "Holdout builder tests must use a wholly synthetic protocol and dummy seed; never instantiate either real holdout seed in tests.",
+  "effective_rule": "Original protocol bytes remain immutable. Sealed execution overrides only holdout.seed with replacement_seed and binds both original protocol and this addendum hash in freeze/markers/results. No reuse of invalidated design or later promotion."
+}

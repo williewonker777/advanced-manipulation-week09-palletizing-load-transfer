@@ -1,0 +1,104 @@
+{
+  "schema": "R4_REDESIGN_BUILD.v1",
+  "passed": true,
+  "redesign_protocol_sha256": "648f890dceb8de5e5d90aa837fd3525253eca0236b6a413293aef4697ece2b61",
+  "registration_commit": "069f855680aa5747e63efc9b9254db7bbf2ccb1c",
+  "original_generated_sha256": {
+    "W40_ACTIVE.py": "388136f488e25b1baa5663dc7b02233296893a8b335577491ab64518a31de06f",
+    "CUSUM_ACTIVE_K05.py": "218ff8b8e9e592fa42a92b7dc1a4df0e6f2f9d9d6b10dbc1648bcea010d0a514",
+    "CUSUM_ACTIVE_K10.py": "4f146000f65d94842cad4ffae71461692b2d17fda6d8d72a64ada74fca1a710b",
+    "CUSUM_PHASE_K05.py": "eb00d9739fbb9362b908d41ff39e14ea62ce27bed1c0560ee718460f58df3c19"
+  },
+  "archived_sha256": {
+    "experiments/r4_original/W40_ACTIVE.py": "388136f488e25b1baa5663dc7b02233296893a8b335577491ab64518a31de06f",
+    "experiments/r4_original/CUSUM_ACTIVE_K05.py": "218ff8b8e9e592fa42a92b7dc1a4df0e6f2f9d9d6b10dbc1648bcea010d0a514",
+    "experiments/r4_original/CUSUM_ACTIVE_K10.py": "4f146000f65d94842cad4ffae71461692b2d17fda6d8d72a64ada74fca1a710b",
+    "experiments/r4_original/CUSUM_PHASE_K05.py": "eb00d9739fbb9362b908d41ff39e14ea62ce27bed1c0560ee718460f58df3c19"
+  },
+  "revised_path": "experiments/r4_generated/W40_ACTIVE.py",
+  "revised_sha256": "5c52c80449f30443171a83606d65a5ffd3db6af08bd4ab11efde9de70fae1997",
+  "original_w40_sha256": "388136f488e25b1baa5663dc7b02233296893a8b335577491ab64518a31de06f",
+  "calibration_sha256": "7d04d1a9777b19db8f4d5cb4d45d64389ba3f77e20e62d85e3162c14e46f4bb1",
+  "parameters": {
+    "servo": {
+      "spec": {
+        "id": "W40_ACTIVE",
+        "family": "W40",
+        "statistic": "causal active mean",
+        "window_samples": 40,
+        "drift": 0.0,
+        "phase_conditioning": false
+      },
+      "calibration": {
+        "location": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "threshold": [
+          5.184381323181365
+        ]
+      }
+    },
+    "torque": {
+      "spec": {
+        "id": "W40_ACTIVE",
+        "family": "W40",
+        "statistic": "causal active mean",
+        "window_samples": 40,
+        "drift": 0.0,
+        "phase_conditioning": false
+      },
+      "calibration": {
+        "location": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "threshold": [
+          4.948929857413643
+        ]
+      }
+    }
+  },
+  "thresholds_unchanged": true,
+  "exact_replacement_count": 1,
+  "production_audit": {
+    "file": "experiments/r4_generated/W40_ACTIVE.py",
+    "status": "pass",
+    "errors": [],
+    "config_accesses": [
+      {
+        "line": 49,
+        "config_field": "DT"
+      },
+      {
+        "line": 94,
+        "config_field": "BOX_SIZE"
+      },
+      {
+        "line": 95,
+        "config_field": "BOX_SIZE"
+      },
+      {
+        "line": 92,
+        "config_field": "BOX_POS"
+      },
+      {
+        "line": 92,
+        "config_field": "BOX_SIZE"
+      }
+    ],
+    "sha256": "5c52c80449f30443171a83606d65a5ffd3db6af08bd4ab11efde9de70fae1997",
+    "scope": "AST input/import checks; runtime tests and manual review also required"
+  },
+  "literal_store_audit": {
+    "passed": true,
+    "super_update_calls": 1,
+    "forbidden_mutator_calls": [],
+    "nonowned_self_stores": [],
+    "gate": "current nominal xpos/xmat read only"
+  }
+}

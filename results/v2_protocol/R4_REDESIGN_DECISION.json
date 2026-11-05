@@ -1,0 +1,25 @@
+{
+  "schema": "R4_REDESIGN_DECISION.v1",
+  "validation_sha256": "42072540ec7d13fed570f636e63790403f926e42b14064ee2a91ad9df2ad181d",
+  "redesigns_used": 0,
+  "decisions": [
+    {
+      "family": "W40",
+      "used": false,
+      "reason": "Validation has eligible configuration(s); retain the preregistered design without a blind second grid.",
+      "eligible_configurations": 2
+    },
+    {
+      "family": "CUSUM_ACTIVE",
+      "used": false,
+      "reason": "Validation has eligible configuration(s); retain the preregistered design without a blind second grid.",
+      "eligible_configurations": 3
+    },
+    {
+      "family": "CUSUM_PHASE",
+      "used": false,
+      "reason": "Validation/normal audit does not qualify this family. No implementation failure or causal structural correction has been identified; collision-driven threshold retuning is forbidden. Retain negative configurations for diagnostic later stages only.",
+      "eligible_configurations": 0
+    }
+  ]
+}

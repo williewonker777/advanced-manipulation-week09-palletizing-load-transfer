@@ -1,0 +1,2755 @@
+{
+  "schema": "R4_PROTOCOL.v1",
+  "registered_utc": "2026-11-05T02:31:11.676596+00:00",
+  "work_baseline": "7cfc3806937b1a72dcaf19406e637072275e2b47",
+  "public_baseline": "1531409ad06e43bee40c79065e523bc8bb084101",
+  "baseline_commit": "574108b",
+  "literature_commit": "8be879a",
+  "cause_commit": "12660a2",
+  "cause_sha256": "26da5843e75d55514ade42a0222eef65c2f614726f25af184af13481536b8cd7",
+  "candidate_source_edits_before_registration": 0,
+  "candidate_episodes_before_registration": 0,
+  "priority_decision": "Detector-only: same-cache diagnostic mean40 headroom is non-flat; offline feedforward deferred. No new control candidates.",
+  "prior_exposure": "Prior official scalar tables and D4 cause cache are exposed; no old official/holdout trace analysis. D4 is a finite exposed development benchmark, not independent efficacy.",
+  "references": [
+    "Sundvall and Jensfelt, ICRA 2006 (reset CUSUM)",
+    "Page, Biometrika 1954 (bibliography only)",
+    "Gibbs and Candes, NeurIPS 2021; Zaffran et al., ICML 2022 (calibration motivation, no conformal guarantee)"
+  ],
+  "candidate_grid": [
+    {
+      "id": "W40_ACTIVE",
+      "family": "W40",
+      "statistic": "causal active mean",
+      "window_samples": 40,
+      "drift": 0.0,
+      "phase_conditioning": false
+    },
+    {
+      "id": "CUSUM_ACTIVE_K05",
+      "family": "CUSUM_ACTIVE",
+      "statistic": "one-sided standardized reset CUSUM",
+      "window_samples": 0,
+      "drift": 0.5,
+      "phase_conditioning": false
+    },
+    {
+      "id": "CUSUM_ACTIVE_K10",
+      "family": "CUSUM_ACTIVE",
+      "statistic": "one-sided standardized reset CUSUM",
+      "window_samples": 0,
+      "drift": 1.0,
+      "phase_conditioning": false
+    },
+    {
+      "id": "CUSUM_PHASE_K05",
+      "family": "CUSUM_PHASE",
+      "statistic": "one-sided phase-standardized reset CUSUM",
+      "window_samples": 0,
+      "drift": 0.5,
+      "phase_conditioning": true
+    }
+  ],
+  "monitor": {
+    "sample_s": 0.001,
+    "onset_consecutive": 4,
+    "clear_consecutive": 8,
+    "score": "isotropic norm of XY wrench minus fixed R1 numpy predictor",
+    "predictor": "R1 weights, mean, scale remain byte-identical; recompute current residual if original gated branch is inactive because last_error is stale there",
+    "phase_boundaries_s": [
+      0,
+      1.4,
+      1.7,
+      3.6,
+      3.9,
+      6.0
+    ],
+    "phase_source": "coarse public trajectory waypoints; not per-ms/mass/COM/direction lookup",
+    "active_policy": "active families require outside_table_height_band, reset when false. PHASE family ungated, reset at each coarse phase boundary.",
+    "cusum": "S=max(0,S+(score-location)/scale-drift), sample units; no online parameter adaptation",
+    "OR": "call unchanged R1 Detector.update exactly once, preserve residual and all shared/controller state; return old flag OR owned monitor. Never write shared/ctrl state; no I/O or RNG at runtime.",
+    "stability": "No feedback path is modified. All old poles are identical if physical/shared-state parity holds; finite noninterference proof, not global stability or real safety guarantee."
+  },
+  "calibration": {
+    "normal": {
+      "fit": {
+        "seed": 371101,
+        "conditions": [
+          {
+            "mass": 1.1691,
+            "com": [
+              0.02547,
+              0.00531,
+              0.02551
+            ]
+          },
+          {
+            "mass": 1.1691,
+            "com": [
+              -0.02547,
+              0.00531,
+              0.02551
+            ]
+          },
+          {
+            "mass": 1.1691,
+            "com": [
+              0.02547,
+              -0.00531,
+              0.02551
+            ]
+          },
+          {
+            "mass": 1.1691,
+            "com": [
+              -0.02547,
+              -0.00531,
+              0.02551
+            ]
+          },
+          {
+            "mass": 2.3476,
+            "com": [
+              0.00519,
+              0.00982,
+              0.02475
+            ]
+          },
+          {
+            "mass": 2.3476,
+            "com": [
+              -0.00519,
+              0.00982,
+              0.02475
+            ]
+          },
+          {
+            "mass": 2.3476,
+            "com": [
+              0.00519,
+              -0.00982,
+              0.02475
+            ]
+          },
+          {
+            "mass": 2.3476,
+            "com": [
+              -0.00519,
+              -0.00982,
+              0.02475
+            ]
+          },
+          {
+            "mass": 3.3482,
+            "com": [
+              0.0218,
+              0.01727,
+              0.01386
+            ]
+          },
+          {
+            "mass": 3.3482,
+            "com": [
+              -0.0218,
+              0.01727,
+              0.01386
+            ]
+          },
+          {
+            "mass": 3.3482,
+            "com": [
+              0.0218,
+              -0.01727,
+              0.01386
+            ]
+          },
+          {
+            "mass": 3.3482,
+            "com": [
+              -0.0218,
+              -0.01727,
+              0.01386
+            ]
+          },
+          {
+            "mass": 4.2204,
+            "com": [
+              0.01249,
+              0.01749,
+              0.0424
+            ]
+          },
+          {
+            "mass": 4.2204,
+            "com": [
+              -0.01249,
+              0.01749,
+              0.0424
+            ]
+          },
+          {
+            "mass": 4.2204,
+            "com": [
+              0.01249,
+              -0.01749,
+              0.0424
+            ]
+          },
+          {
+            "mass": 4.2204,
+            "com": [
+              -0.01249,
+              -0.01749,
+              0.0424
+            ]
+          },
+          {
+            "mass": 5.2563,
+            "com": [
+              0.0226,
+              0.00583,
+              0.03074
+            ]
+          },
+          {
+            "mass": 5.2563,
+            "com": [
+              -0.0226,
+              0.00583,
+              0.03074
+            ]
+          },
+          {
+            "mass": 5.2563,
+            "com": [
+              0.0226,
+              -0.00583,
+              0.03074
+            ]
+          },
+          {
+            "mass": 5.2563,
+            "com": [
+              -0.0226,
+              -0.00583,
+              0.03074
+            ]
+          },
+          {
+            "mass": 7.5801,
+            "com": [
+              0.01516,
+              0.0185,
+              0.03117
+            ]
+          },
+          {
+            "mass": 7.5801,
+            "com": [
+              -0.01516,
+              0.0185,
+              0.03117
+            ]
+          },
+          {
+            "mass": 7.5801,
+            "com": [
+              0.01516,
+              -0.0185,
+              0.03117
+            ]
+          },
+          {
+            "mass": 7.5801,
+            "com": [
+              -0.01516,
+              -0.0185,
+              0.03117
+            ]
+          }
+        ]
+      },
+      "calibration": {
+        "seed": 371102,
+        "conditions": [
+          {
+            "mass": 1.4015,
+            "com": [
+              0.00591,
+              0.0102,
+              0.00847
+            ]
+          },
+          {
+            "mass": 1.4015,
+            "com": [
+              -0.00591,
+              0.0102,
+              0.00847
+            ]
+          },
+          {
+            "mass": 1.4015,
+            "com": [
+              0.00591,
+              -0.0102,
+              0.00847
+            ]
+          },
+          {
+            "mass": 1.4015,
+            "com": [
+              -0.00591,
+              -0.0102,
+              0.00847
+            ]
+          },
+          {
+            "mass": 2.467,
+            "com": [
+              0.01642,
+              0.02108,
+              0.01617
+            ]
+          },
+          {
+            "mass": 2.467,
+            "com": [
+              -0.01642,
+              0.02108,
+              0.01617
+            ]
+          },
+          {
+            "mass": 2.467,
+            "com": [
+              0.01642,
+              -0.02108,
+              0.01617
+            ]
+          },
+          {
+            "mass": 2.467,
+            "com": [
+              -0.01642,
+              -0.02108,
+              0.01617
+            ]
+          },
+          {
+            "mass": 3.5778,
+            "com": [
+              0.02113,
+              0.01391,
+              0.03906
+            ]
+          },
+          {
+            "mass": 3.5778,
+            "com": [
+              -0.02113,
+              0.01391,
+              0.03906
+            ]
+          },
+          {
+            "mass": 3.5778,
+            "com": [
+              0.02113,
+              -0.01391,
+              0.03906
+            ]
+          },
+          {
+            "mass": 3.5778,
+            "com": [
+              -0.02113,
+              -0.01391,
+              0.03906
+            ]
+          },
+          {
+            "mass": 4.4824,
+            "com": [
+              0.02011,
+              0.01514,
+              0.00867
+            ]
+          },
+          {
+            "mass": 4.4824,
+            "com": [
+              -0.02011,
+              0.01514,
+              0.00867
+            ]
+          },
+          {
+            "mass": 4.4824,
+            "com": [
+              0.02011,
+              -0.01514,
+              0.00867
+            ]
+          },
+          {
+            "mass": 4.4824,
+            "com": [
+              -0.02011,
+              -0.01514,
+              0.00867
+            ]
+          },
+          {
+            "mass": 5.6644,
+            "com": [
+              0.01795,
+              0.01013,
+              0.01836
+            ]
+          },
+          {
+            "mass": 5.6644,
+            "com": [
+              -0.01795,
+              0.01013,
+              0.01836
+            ]
+          },
+          {
+            "mass": 5.6644,
+            "com": [
+              0.01795,
+              -0.01013,
+              0.01836
+            ]
+          },
+          {
+            "mass": 5.6644,
+            "com": [
+              -0.01795,
+              -0.01013,
+              0.01836
+            ]
+          },
+          {
+            "mass": 7.3607,
+            "com": [
+              0.01684,
+              0.01123,
+              0.01803
+            ]
+          },
+          {
+            "mass": 7.3607,
+            "com": [
+              -0.01684,
+              0.01123,
+              0.01803
+            ]
+          },
+          {
+            "mass": 7.3607,
+            "com": [
+              0.01684,
+              -0.01123,
+              0.01803
+            ]
+          },
+          {
+            "mass": 7.3607,
+            "com": [
+              -0.01684,
+              -0.01123,
+              0.01803
+            ]
+          }
+        ]
+      },
+      "audit": {
+        "seed": 371103,
+        "conditions": [
+          {
+            "mass": 0.8957,
+            "com": [
+              0.02497,
+              0.01122,
+              0.0326
+            ]
+          },
+          {
+            "mass": 0.8957,
+            "com": [
+              -0.02497,
+              0.01122,
+              0.0326
+            ]
+          },
+          {
+            "mass": 0.8957,
+            "com": [
+              0.02497,
+              -0.01122,
+              0.0326
+            ]
+          },
+          {
+            "mass": 0.8957,
+            "com": [
+              -0.02497,
+              -0.01122,
+              0.0326
+            ]
+          },
+          {
+            "mass": 2.4333,
+            "com": [
+              0.01645,
+              0.00511,
+              0.03367
+            ]
+          },
+          {
+            "mass": 2.4333,
+            "com": [
+              -0.01645,
+              0.00511,
+              0.03367
+            ]
+          },
+          {
+            "mass": 2.4333,
+            "com": [
+              0.01645,
+              -0.00511,
+              0.03367
+            ]
+          },
+          {
+            "mass": 2.4333,
+            "com": [
+              -0.01645,
+              -0.00511,
+              0.03367
+            ]
+          },
+          {
+            "mass": 3.7781,
+            "com": [
+              0.00929,
+              0.01846,
+              0.03734
+            ]
+          },
+          {
+            "mass": 3.7781,
+            "com": [
+              -0.00929,
+              0.01846,
+              0.03734
+            ]
+          },
+          {
+            "mass": 3.7781,
+            "com": [
+              0.00929,
+              -0.01846,
+              0.03734
+            ]
+          },
+          {
+            "mass": 3.7781,
+            "com": [
+              -0.00929,
+              -0.01846,
+              0.03734
+            ]
+          },
+          {
+            "mass": 4.6772,
+            "com": [
+              0.01405,
+              0.02287,
+              0.02029
+            ]
+          },
+          {
+            "mass": 4.6772,
+            "com": [
+              -0.01405,
+              0.02287,
+              0.02029
+            ]
+          },
+          {
+            "mass": 4.6772,
+            "com": [
+              0.01405,
+              -0.02287,
+              0.02029
+            ]
+          },
+          {
+            "mass": 4.6772,
+            "com": [
+              -0.01405,
+              -0.02287,
+              0.02029
+            ]
+          }
+        ]
+      }
+    },
+    "fit_rule": "median location; max(1.4826*median absolute deviation,0.25N) scale, global active or fixed five phases; W40 uses no fit statistics",
+    "threshold_rule": "1.05 * maximum unthresholded episode statistic over NEW calibration normals + 1e-9; strict greater-than. For phase family one threshold per coarse phase. Never copy diagnostic D4 thresholds.",
+    "freeze_before_collisions": true,
+    "audit_rule": "Preserve unchanged R1 flags; examine candidate_extra (not total OR): no extra candidate true sample or rise on any normal audit. One registered new-normal recalibration only before ANY collision or otherwise reject.",
+    "no_collision_calibration": true,
+    "no_official_fit": true,
+    "runtime": "fixed NumPy only",
+    "pre_collision_commit": "Commit calibration artifact, exact generated candidate sources and parameters, normal audit and tests BEFORE the first collision/validation episode."
+  },
+  "validation": {
+    "seed": 371201,
+    "conditions": [
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ]
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ]
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ]
+      },
+      {
+        "mass": 7.8402,
+        "com": [
+          0.02497,
+          -0.00416,
+          0.01366
+        ]
+      }
+    ],
+    "collisions": 30,
+    "reference": 4,
+    "offset": 4,
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy",
+      "+xyz",
+      "-xyz"
+    ],
+    "phase_ranges_s": {
+      "pick": [
+        1.375,
+        1.515
+      ],
+      "transport": [
+        2.05,
+        3.35
+      ],
+      "place": [
+        3.775,
+        3.945
+      ]
+    },
+    "force_N": [
+      4.5,
+      7.5,
+      12.5,
+      18.5,
+      28.5
+    ],
+    "offsets_m": [
+      [
+        0.018,
+        0,
+        0.012
+      ],
+      [
+        -0.018,
+        0,
+        0.012
+      ],
+      [
+        0.011,
+        -0.014,
+        0.008
+      ],
+      [
+        -0.012,
+        0.013,
+        -0.009
+      ]
+    ],
+    "cases": [
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 0
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 1
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 2
+      },
+      {
+        "mass": 7.8402,
+        "com": [
+          0.02497,
+          -0.00416,
+          0.01366
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 3
+      },
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4244,
+          [
+            4.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+x",
+        "force_n": 4.5,
+        "case_id": 4
+      },
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4244,
+          [
+            -4.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-x",
+        "force_n": 4.5,
+        "case_id": 5
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4613,
+          [
+            0.0,
+            7.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+y",
+        "force_n": 7.5,
+        "case_id": 6
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4613,
+          [
+            0.0,
+            -7.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-y",
+        "force_n": 7.5,
+        "case_id": 7
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          1.434,
+          [
+            0.0,
+            0.0,
+            12.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+z",
+        "force_n": 12.5,
+        "case_id": 8
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          1.434,
+          [
+            0.0,
+            0.0,
+            -12.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-z",
+        "force_n": 12.5,
+        "case_id": 9
+      },
+      {
+        "mass": 7.8402,
+        "com": [
+          0.02497,
+          -0.00416,
+          0.01366
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4763,
+          [
+            13.081475451951128,
+            13.081475451951128,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+xy",
+        "force_n": 18.5,
+        "case_id": 10
+      },
+      {
+        "mass": 7.8402,
+        "com": [
+          0.02497,
+          -0.00416,
+          0.01366
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4763,
+          [
+            -13.081475451951128,
+            -13.081475451951128,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-xy",
+        "force_n": 18.5,
+        "case_id": 11
+      },
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4823,
+          [
+            16.454482671904334,
+            16.454482671904334,
+            16.454482671904334
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+xyz",
+        "force_n": 28.5,
+        "case_id": 12
+      },
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4823,
+          [
+            -16.454482671904334,
+            -16.454482671904334,
+            -16.454482671904334
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-xyz",
+        "force_n": 28.5,
+        "case_id": 13
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          3.1181,
+          [
+            7.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+x",
+        "force_n": 7.5,
+        "case_id": 14
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          3.1181,
+          [
+            -7.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-x",
+        "force_n": 7.5,
+        "case_id": 15
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          2.7396,
+          [
+            0.0,
+            12.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+y",
+        "force_n": 12.5,
+        "case_id": 16
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          2.7396,
+          [
+            0.0,
+            -12.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-y",
+        "force_n": 12.5,
+        "case_id": 17
+      },
+      {
+        "mass": 7.8402,
+        "com": [
+          0.02497,
+          -0.00416,
+          0.01366
+        ],
+        "kind": "collision",
+        "collision": [
+          3.0691,
+          [
+            0.0,
+            0.0,
+            18.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+z",
+        "force_n": 18.5,
+        "case_id": 18
+      },
+      {
+        "mass": 7.8402,
+        "com": [
+          0.02497,
+          -0.00416,
+          0.01366
+        ],
+        "kind": "collision",
+        "collision": [
+          3.0691,
+          [
+            0.0,
+            0.0,
+            -18.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-z",
+        "force_n": 18.5,
+        "case_id": 19
+      },
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ],
+        "kind": "collision",
+        "collision": [
+          2.7797,
+          [
+            20.152543263816604,
+            20.152543263816604,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+xy",
+        "force_n": 28.5,
+        "case_id": 20
+      },
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ],
+        "kind": "collision",
+        "collision": [
+          2.7797,
+          [
+            -20.152543263816604,
+            -20.152543263816604,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-xy",
+        "force_n": 28.5,
+        "case_id": 21
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          2.3045,
+          [
+            2.598076211353316,
+            2.598076211353316,
+            2.598076211353316
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+xyz",
+        "force_n": 4.5,
+        "case_id": 22
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          2.3045,
+          [
+            -2.598076211353316,
+            -2.598076211353316,
+            -2.598076211353316
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-xyz",
+        "force_n": 4.5,
+        "case_id": 23
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          3.7972,
+          [
+            12.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+x",
+        "force_n": 12.5,
+        "case_id": 24
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          3.7972,
+          [
+            -12.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-x",
+        "force_n": 12.5,
+        "case_id": 25
+      },
+      {
+        "mass": 7.8402,
+        "com": [
+          0.02497,
+          -0.00416,
+          0.01366
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9082,
+          [
+            0.0,
+            18.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+y",
+        "force_n": 18.5,
+        "case_id": 26
+      },
+      {
+        "mass": 7.8402,
+        "com": [
+          0.02497,
+          -0.00416,
+          0.01366
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9082,
+          [
+            0.0,
+            -18.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-y",
+        "force_n": 18.5,
+        "case_id": 27
+      },
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9337,
+          [
+            0.0,
+            0.0,
+            28.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+z",
+        "force_n": 28.5,
+        "case_id": 28
+      },
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9337,
+          [
+            0.0,
+            0.0,
+            -28.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-z",
+        "force_n": 28.5,
+        "case_id": 29
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9416,
+          [
+            3.181980515339464,
+            3.181980515339464,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+xy",
+        "force_n": 4.5,
+        "case_id": 30
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9416,
+          [
+            -3.181980515339464,
+            -3.181980515339464,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-xy",
+        "force_n": 4.5,
+        "case_id": 31
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8464,
+          [
+            4.330127018922194,
+            4.330127018922194,
+            4.330127018922194
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+xyz",
+        "force_n": 7.5,
+        "case_id": 32
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8464,
+          [
+            -4.330127018922194,
+            -4.330127018922194,
+            -4.330127018922194
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-xyz",
+        "force_n": 7.5,
+        "case_id": 33
+      },
+      {
+        "mass": 1.1585,
+        "com": [
+          0.00607,
+          -0.00408,
+          0.03476
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          0.018,
+          0,
+          0.012
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 34
+      },
+      {
+        "mass": 4.3498,
+        "com": [
+          0.01672,
+          0.00158,
+          0.037
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          -0.018,
+          0,
+          0.012
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 35
+      },
+      {
+        "mass": 5.9858,
+        "com": [
+          -0.01582,
+          -0.0192,
+          0.037
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          0.011,
+          -0.014,
+          0.008
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 36
+      },
+      {
+        "mass": 7.8402,
+        "com": [
+          0.02497,
+          -0.00416,
+          0.01366
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          -0.012,
+          0.013,
+          -0.009
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 37
+      }
+    ]
+  },
+  "development": {
+    "seed": 371301,
+    "conditions": [
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ]
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ]
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ]
+      },
+      {
+        "mass": 7.4895,
+        "com": [
+          -0.00354,
+          -0.00329,
+          0.04478
+        ]
+      }
+    ],
+    "collisions": 30,
+    "reference": 4,
+    "offset": 4,
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy",
+      "+xyz",
+      "-xyz"
+    ],
+    "phase_ranges_s": {
+      "pick": [
+        1.375,
+        1.515
+      ],
+      "transport": [
+        2.05,
+        3.35
+      ],
+      "place": [
+        3.775,
+        3.945
+      ]
+    },
+    "force_N": [
+      4.5,
+      7.5,
+      12.5,
+      18.5,
+      28.5
+    ],
+    "offsets_m": [
+      [
+        0.018,
+        0,
+        0.012
+      ],
+      [
+        -0.018,
+        0,
+        0.012
+      ],
+      [
+        0.011,
+        -0.014,
+        0.008
+      ],
+      [
+        -0.012,
+        0.013,
+        -0.009
+      ]
+    ],
+    "cases": [
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 0
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 1
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 2
+      },
+      {
+        "mass": 7.4895,
+        "com": [
+          -0.00354,
+          -0.00329,
+          0.04478
+        ],
+        "kind": "reference",
+        "collision": null,
+        "pick_offset": null,
+        "phase": "none",
+        "direction": "none",
+        "force_n": 0.0,
+        "case_id": 3
+      },
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4345,
+          [
+            4.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+x",
+        "force_n": 4.5,
+        "case_id": 4
+      },
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4345,
+          [
+            -4.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-x",
+        "force_n": 4.5,
+        "case_id": 5
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4235,
+          [
+            0.0,
+            7.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+y",
+        "force_n": 7.5,
+        "case_id": 6
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4235,
+          [
+            0.0,
+            -7.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-y",
+        "force_n": 7.5,
+        "case_id": 7
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ],
+        "kind": "collision",
+        "collision": [
+          1.3878,
+          [
+            0.0,
+            0.0,
+            12.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+z",
+        "force_n": 12.5,
+        "case_id": 8
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ],
+        "kind": "collision",
+        "collision": [
+          1.3878,
+          [
+            0.0,
+            0.0,
+            -12.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-z",
+        "force_n": 12.5,
+        "case_id": 9
+      },
+      {
+        "mass": 7.4895,
+        "com": [
+          -0.00354,
+          -0.00329,
+          0.04478
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4635,
+          [
+            13.081475451951128,
+            13.081475451951128,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+xy",
+        "force_n": 18.5,
+        "case_id": 10
+      },
+      {
+        "mass": 7.4895,
+        "com": [
+          -0.00354,
+          -0.00329,
+          0.04478
+        ],
+        "kind": "collision",
+        "collision": [
+          1.4635,
+          [
+            -13.081475451951128,
+            -13.081475451951128,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-xy",
+        "force_n": 18.5,
+        "case_id": 11
+      },
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ],
+        "kind": "collision",
+        "collision": [
+          1.5036,
+          [
+            16.454482671904334,
+            16.454482671904334,
+            16.454482671904334
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "+xyz",
+        "force_n": 28.5,
+        "case_id": 12
+      },
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ],
+        "kind": "collision",
+        "collision": [
+          1.5036,
+          [
+            -16.454482671904334,
+            -16.454482671904334,
+            -16.454482671904334
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "pick",
+        "direction": "-xyz",
+        "force_n": 28.5,
+        "case_id": 13
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ],
+        "kind": "collision",
+        "collision": [
+          3.3471,
+          [
+            7.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+x",
+        "force_n": 7.5,
+        "case_id": 14
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ],
+        "kind": "collision",
+        "collision": [
+          3.3471,
+          [
+            -7.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-x",
+        "force_n": 7.5,
+        "case_id": 15
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ],
+        "kind": "collision",
+        "collision": [
+          2.2959,
+          [
+            0.0,
+            12.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+y",
+        "force_n": 12.5,
+        "case_id": 16
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ],
+        "kind": "collision",
+        "collision": [
+          2.2959,
+          [
+            0.0,
+            -12.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-y",
+        "force_n": 12.5,
+        "case_id": 17
+      },
+      {
+        "mass": 7.4895,
+        "com": [
+          -0.00354,
+          -0.00329,
+          0.04478
+        ],
+        "kind": "collision",
+        "collision": [
+          2.6249,
+          [
+            0.0,
+            0.0,
+            18.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+z",
+        "force_n": 18.5,
+        "case_id": 18
+      },
+      {
+        "mass": 7.4895,
+        "com": [
+          -0.00354,
+          -0.00329,
+          0.04478
+        ],
+        "kind": "collision",
+        "collision": [
+          2.6249,
+          [
+            0.0,
+            0.0,
+            -18.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-z",
+        "force_n": 18.5,
+        "case_id": 19
+      },
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ],
+        "kind": "collision",
+        "collision": [
+          2.508,
+          [
+            20.152543263816604,
+            20.152543263816604,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+xy",
+        "force_n": 28.5,
+        "case_id": 20
+      },
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ],
+        "kind": "collision",
+        "collision": [
+          2.508,
+          [
+            -20.152543263816604,
+            -20.152543263816604,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-xy",
+        "force_n": 28.5,
+        "case_id": 21
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ],
+        "kind": "collision",
+        "collision": [
+          2.2594,
+          [
+            2.598076211353316,
+            2.598076211353316,
+            2.598076211353316
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "+xyz",
+        "force_n": 4.5,
+        "case_id": 22
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ],
+        "kind": "collision",
+        "collision": [
+          2.2594,
+          [
+            -2.598076211353316,
+            -2.598076211353316,
+            -2.598076211353316
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "transport",
+        "direction": "-xyz",
+        "force_n": 4.5,
+        "case_id": 23
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8404,
+          [
+            12.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+x",
+        "force_n": 12.5,
+        "case_id": 24
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8404,
+          [
+            -12.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-x",
+        "force_n": 12.5,
+        "case_id": 25
+      },
+      {
+        "mass": 7.4895,
+        "com": [
+          -0.00354,
+          -0.00329,
+          0.04478
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9204,
+          [
+            0.0,
+            18.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+y",
+        "force_n": 18.5,
+        "case_id": 26
+      },
+      {
+        "mass": 7.4895,
+        "com": [
+          -0.00354,
+          -0.00329,
+          0.04478
+        ],
+        "kind": "collision",
+        "collision": [
+          3.9204,
+          [
+            0.0,
+            -18.5,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-y",
+        "force_n": 18.5,
+        "case_id": 27
+      },
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8675,
+          [
+            0.0,
+            0.0,
+            28.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+z",
+        "force_n": 28.5,
+        "case_id": 28
+      },
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8675,
+          [
+            0.0,
+            0.0,
+            -28.5
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-z",
+        "force_n": 28.5,
+        "case_id": 29
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8484,
+          [
+            3.181980515339464,
+            3.181980515339464,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+xy",
+        "force_n": 4.5,
+        "case_id": 30
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8484,
+          [
+            -3.181980515339464,
+            -3.181980515339464,
+            0.0
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-xy",
+        "force_n": 4.5,
+        "case_id": 31
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8492,
+          [
+            4.330127018922194,
+            4.330127018922194,
+            4.330127018922194
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "+xyz",
+        "force_n": 7.5,
+        "case_id": 32
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ],
+        "kind": "collision",
+        "collision": [
+          3.8492,
+          [
+            -4.330127018922194,
+            -4.330127018922194,
+            -4.330127018922194
+          ]
+        ],
+        "pick_offset": null,
+        "phase": "place",
+        "direction": "-xyz",
+        "force_n": 7.5,
+        "case_id": 33
+      },
+      {
+        "mass": 1.2522,
+        "com": [
+          -0.00797,
+          -0.02125,
+          0.03138
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          0.018,
+          0,
+          0.012
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 34
+      },
+      {
+        "mass": 4.578,
+        "com": [
+          0.02588,
+          -0.01616,
+          0.02436
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          -0.018,
+          0,
+          0.012
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 35
+      },
+      {
+        "mass": 5.6932,
+        "com": [
+          -0.01763,
+          -0.00601,
+          0.03964
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          0.011,
+          -0.014,
+          0.008
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 36
+      },
+      {
+        "mass": 7.4895,
+        "com": [
+          -0.00354,
+          -0.00329,
+          0.04478
+        ],
+        "kind": "offset",
+        "collision": null,
+        "pick_offset": [
+          -0.012,
+          0.013,
+          -0.009
+        ],
+        "phase": "pick",
+        "direction": "offset",
+        "force_n": 0.0,
+        "case_id": 37
+      }
+    ]
+  },
+  "redesign": {
+    "max_per_family": 1,
+    "used": 0,
+    "decision_before_development": true,
+    "allowed": "One normal-only recalibration before any collision using seed371202 and 371203; or one detector structural redesign after validation ONLY if causal implementation evidence identifies a bug/mechanism, with new protocol addendum and fresh validation seed371212. No blind tuning/grid expansion.",
+    "record_nonuse_reason_contemporaneously": true,
+    "after_holdout_or_official": false
+  },
+  "detector_gates": {
+    "no_physical_bit_difference": true,
+    "physical_arrays": [
+      "q",
+      "q_d",
+      "tau",
+      "e_mm",
+      "f_table",
+      "f_tool",
+      "qpos",
+      "r"
+    ],
+    "no_lost_R1_detected_collision_per_case": true,
+    "no_tool_contact_loss": true,
+    "no_increased_normal_FA_per_case": true,
+    "no_increased_outside_event_FA_per_case": true,
+    "validation_min_additional_detected": 2,
+    "development_min_additional_detected": 2,
+    "D4_min_additional_detected": 6,
+    "holdout_min_additional_detected": 2,
+    "D4_reference_FA": 0,
+    "perturb_reference_FA_vs_matched_R1": "no increase per case and total; physical subset and fresh noise subset reported separately",
+    "perturb_old_28_reference_FA_baseline": {
+      "servo": 6,
+      "torque": 9
+    },
+    "selection": "Architecture independent; every preceding gate required. Choose among eligible per mode by development additional detected, then D4 additional detected, then lower maximum per-case measured p99, then protocol order. No runner-up promotion after holdout.",
+    "diagnostic_advancement": "ALL four configurations receive fresh validation/development and D4/perturb replay even if permanently disqualified at a prior stage. Immediately record permanent non-adoption; diagnostic improvements cannot revive them or enter selection ranking.",
+    "normal_audit_extra_samples_max": 0,
+    "control_scope": "No control candidates; inherited control/stability/saturation gates are equality/noninterference checks, not a new control-gain claim."
+  },
+  "control_gates_inherited": {
+    "G4": {
+      "window_s_before_release": 0.02,
+      "mean_support_over_mg_at_least": 0.5,
+      "minimum_support_over_mg_at_least": 0.25,
+      "mean_increase_over_v1_at_least": 0.25,
+      "peak_place_support_over_mg_at_most": 1.1,
+      "applies_to": "positive masses, specifically final 8kg A/B; failure remains failure"
+    },
+    "cost_gates": {
+      "max_RMS_ratio_vs_R1": 1.05,
+      "max_TCP_ratio_vs_R1": 1.05,
+      "max_torque_step_ratio_vs_R1": 1.05,
+      "max_place_peak_ratio_vs_R1": 1.05,
+      "G4_peak_over_mg_max": 1.1
+    },
+    "safety_gates": {
+      "saturation_pct_max": 0.0,
+      "divergence": false,
+      "nominal_false_alarm_rises": 0,
+      "reference_sweep_false_alarm_rises": 0,
+      "tool_contact_regression": false
+    },
+    "timing": {
+      "selection_combined_p99_us_max": 800.0,
+      "strict_goal_max_us": 1000.0,
+      "record_all_outliers": true,
+      "metric": "paired controller+detector wall/thread CPU including allocation; guard outside measured methods",
+      "global_gc_changes": false
+    }
+  },
+  "relative_R1_interpretation": {
+    "source": "R1 also failed some R3 forced local and D4 saturation gates, so predeclare relative interpretation without changing numeric thresholds.",
+    "R1_passing_points": "candidate must pass original numeric gate",
+    "R1_failing_points": "must not be worse than paired R1",
+    "radius_tolerance": 0.0,
+    "physical_metric_tolerance": 0.0,
+    "saturation_count_increase": 0,
+    "saturation_pct_increase": 0.0,
+    "FD": "identical unchanged closed loop; no altered control candidate. Existing finite R3 results retained, not a new guarantee",
+    "D4_original_A_saturation_episode_limit": 2,
+    "D4_original_A_max_saturation_pct": 0.15,
+    "R1_entire_D4_saturation_episodes": 4,
+    "R1_entire_D4_max_pct": 0.16666666666666666
+  },
+  "timing": {
+    "selection_combined_p99_us_max": 800.0,
+    "strict_goal_max_us": 1000.0,
+    "record_all_outliers": true,
+    "metric": "paired controller+detector wall/thread CPU including allocation; guard outside measured methods",
+    "global_gc_changes": false
+  },
+  "cache_reuse": {
+    "D4": "R3 R1 385 rows/mode with exact source/condition/raw SHA, current allowed observations only; recompute each candidate monitor and evaluator, prove fresh full-loop online/offline parity and physical bit identity first. Label cached replay, never fresh independent efficacy.",
+    "physical_perturb": "Same frozen private matrix first25 rows/mode may replay after raw/source SHA and nominal parity. Old9 noise episodes not reused; generate new seeds371401/402/403.",
+    "new_validation_development": "fresh R1 plant streams per architecture; detector-only offline monitor replay only after fresh online/noninterference equivalence. Timing full-loop fresh validation for ALL configs, serial.",
+    "fit_signals": "estimated_wrench, time, known mass/COM, public reference, gate only; no truth labels/forces/qpos targets"
+  },
+  "D4": {
+    "conditions_per_architecture": {
+      "reference": 189,
+      "collision": 180,
+      "offset": 16
+    },
+    "exposed": true
+  },
+  "perturbations": {
+    "noise_seeds": [
+      371401,
+      371402,
+      371403
+    ],
+    "new_noise_masses_kg": [
+      0.0,
+      4.3,
+      8.0
+    ],
+    "physical_rows": 25,
+    "noise_rows": 9,
+    "total": 34,
+    "official": false
+  },
+  "holdout": {
+    "seed": 371501,
+    "open_only_after_committed_freeze": true,
+    "batches": 1,
+    "conditions_not_generated_before_freeze": true,
+    "mass_ranges_kg": [
+      [
+        0.7,
+        2.1
+      ],
+      [
+        3.4,
+        4.7
+      ],
+      [
+        5.2,
+        6.7
+      ],
+      [
+        7.0,
+        7.9
+      ]
+    ],
+    "mass_round_digits": 4,
+    "exclude_masses_kg": [
+      0.0,
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.65,
+      0.75,
+      0.8299,
+      0.85,
+      0.8957,
+      0.95,
+      1.05,
+      1.15,
+      1.1585,
+      1.1691,
+      1.25,
+      1.2522,
+      1.27,
+      1.35,
+      1.4015,
+      1.47,
+      1.57,
+      1.7,
+      1.85,
+      2.25,
+      2.3476,
+      2.4333,
+      2.45,
+      2.467,
+      2.85,
+      2.95,
+      3.15,
+      3.25,
+      3.3482,
+      3.35,
+      3.45,
+      3.55,
+      3.5778,
+      3.65,
+      3.67,
+      3.7781,
+      3.87,
+      3.8798,
+      4.0,
+      4.2204,
+      4.3498,
+      4.4,
+      4.4824,
+      4.578,
+      4.65,
+      4.6772,
+      5.05,
+      5.15,
+      5.2563,
+      5.37,
+      5.47,
+      5.65,
+      5.6644,
+      5.6932,
+      5.75,
+      5.85,
+      5.95,
+      5.9858,
+      6.05,
+      6.0885,
+      6.4,
+      6.55,
+      6.85,
+      6.87,
+      6.95,
+      7.07,
+      7.17,
+      7.25,
+      7.35,
+      7.3607,
+      7.45,
+      7.4895,
+      7.55,
+      7.5801,
+      7.64,
+      7.65,
+      7.7,
+      7.75,
+      7.8,
+      7.8402,
+      7.85,
+      7.95,
+      8.0
+    ],
+    "com_ranges_m": [
+      [
+        -0.027,
+        -0.027,
+        0.006
+      ],
+      [
+        0.027,
+        0.027,
+        0.046
+      ]
+    ],
+    "phase_time_ranges_s": {
+      "pick": [
+        1.375,
+        1.515
+      ],
+      "transport": [
+        2.05,
+        3.35
+      ],
+      "place": [
+        3.775,
+        3.945
+      ]
+    },
+    "force_range_N": [
+      5.0,
+      35.0
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy",
+      "+xyz",
+      "-xyz"
+    ],
+    "rows_per_source_architecture": {
+      "references": 4,
+      "collisions": 30,
+      "offsets": 4
+    },
+    "pick_offsets_m": [
+      [
+        0.018,
+        0,
+        0.012
+      ],
+      [
+        -0.018,
+        0,
+        0.012
+      ],
+      [
+        0.011,
+        -0.014,
+        0.008
+      ],
+      [
+        -0.012,
+        0.013,
+        -0.009
+      ]
+    ],
+    "marker": "exclusive fsynced marker before real RNG, after freeze + Git-object verification",
+    "comparison": "Chosen candidate and paired frozen R1 in ONE sealed batch; if effective candidate already R1 deduplicate. Report no new detector efficacy test in a fallback-only holdout.",
+    "failure": "affected mode becomes frozen R1; no tuning, source edits, threshold edits, replacement, runner-up or second holdout"
+  },
+  "freeze": {
+    "candidate_and_R1_hashed": true,
+    "source_params_weights_calibration_selection_data_tools_all_committed": true,
+    "no_science_edits_after_open": true,
+    "mutable_alias_exception": "Only on adoption assemble my_detector.py from frozen standalone mode-specific candidates BEFORE freeze. Old R3 my_detector bytes remain in r1_detector and baseline Git object; all other100 R3 paths stay exact. If no adoption all101 remain exact. R3 freeze itself never edited.",
+    "fallback": "Post-failure only output assembly of already-frozen R1 bytes is allowed; no scientific source/threshold/model changes or alternative promotion."
+  },
+  "official": {
+    "stage": "LAST after new R4 holdout; one A+B default-name unchanged-kit batch; regression only",
+    "prior_exposure": "regression only, never independent efficacy or fit",
+    "max_additional_delay_ms": 5.0,
+    "eight_kg_transport_delay_caps_ms": {
+      "servo": {
+        "15N": 50.0,
+        "10N": 67.0
+      },
+      "torque": {
+        "15N": 48.0,
+        "10N": 61.0
+      }
+    },
+    "all_previously_detected_must_remain_detected": true,
+    "reference_FA_0_4_8_kg": 0,
+    "saturation_pct": 0.0,
+    "divergence": false,
+    "control_cost_ratio_vs_R1_max": 1.05,
+    "no_extra_collision_FA_vs_R1": true,
+    "after_failure": "immutable R1 fallback only; no repair, retune, alternate promotion or retest"
+  },
+  "resources": {
+    "total_simulations_max": 4,
+    "owned_episode_workers": 1,
+    "min_available_ram_gib": 6.0,
+    "gpu_jobs": 0,
+    "timing_serial": true,
+    "foreign_process_signals": 0,
+    "official_venv_package_additions": 0,
+    "python": "env -u PYTHONPATH; bytecode off; BLAS/OMP1",
+    "weekly_remaining_stop_below_percent": 10
+  },
+  "documents": {
+    "preserve_R1_R2_R3": true,
+    "new_comparison_video_pairs": 2,
+    "video_only_if_adopted": true,
+    "software_GL": "Mesa llvmpipe",
+    "publication_state_claims": false
+  },
+  "remote_operations_allowed": 0,
+  "stop": "new local public commit above public baseline; before push"
+}

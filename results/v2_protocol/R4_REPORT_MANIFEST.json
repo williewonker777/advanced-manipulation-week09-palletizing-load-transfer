@@ -1,0 +1,903 @@
+{
+  "schema": "R4_REPORT_MANIFEST.v1",
+  "status": "frozen",
+  "artifacts": {
+    "protocol": {
+      "path": "results/v2_protocol/PROTOCOL_R4.json",
+      "sha256": "f4f5c0cca4617901aa0be71ce513941c8cded35a308bfd7403ac49a52fb45182",
+      "provenance": "fresh"
+    },
+    "holdout_reseal": {
+      "path": "results/v2_protocol/PROTOCOL_R4_HOLDOUT_RESEAL.json",
+      "sha256": "f71aad5f642cbe1c4118923be79e8b4f71b2b9b36cf426ef14465bb4ae30eb27",
+      "provenance": "fresh"
+    },
+    "literature": {
+      "path": "docs/R4_LITERATURE.md",
+      "sha256": "9974e4edc85af9f13897ddca41bebe9a20db10a0f579b2b224599be69fe173e4",
+      "provenance": "fresh"
+    },
+    "cause_analysis": {
+      "path": "results/v2_protocol/R4_CAUSE_ANALYSIS.json",
+      "sha256": "26da5843e75d55514ade42a0222eef65c2f614726f25af184af13481536b8cd7",
+      "provenance": "fresh"
+    },
+    "methods": {
+      "path": "docs/R4_METHODS.md",
+      "sha256": "f32535c0910be1dc206ea896bb03a390d9f63f7d12dde8c83138c19a3bb08b87",
+      "provenance": "fresh"
+    },
+    "calibration": {
+      "path": "results/v2_protocol/R4_CALIBRATION.json",
+      "sha256": "7d04d1a9777b19db8f4d5cb4d45d64389ba3f77e20e62d85e3162c14e46f4bb1",
+      "provenance": "fresh"
+    },
+    "equivalence": {
+      "path": "results/v2_protocol/R4_EQUIVALENCE.json",
+      "sha256": "b5e8d3eb77cb961fbc2f02bc8f8b0ff5663ddc78d5dee5b03af920203e335278",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "6e83cd3488cc64d34be542555b916156ed9ec61439579500bf6e6093684f01e0"
+    },
+    "validation_review": {
+      "path": "results/v2_protocol/R4_VALIDATION_REVIEW.json",
+      "sha256": "42072540ec7d13fed570f636e63790403f926e42b14064ee2a91ad9df2ad181d",
+      "provenance": "fresh"
+    },
+    "development_review": {
+      "path": "results/v2_protocol/R4_DEVELOPMENT_REVIEW.json",
+      "sha256": "c3b24e9dc534823b12817dfe2d394a42647d6fe0fbdf0ce48b443b517f0a9aad",
+      "provenance": "fresh"
+    },
+    "d4_review": {
+      "path": "results/v2_protocol/R4_D4_REVIEW.json",
+      "sha256": "7ca8979845ea77488adde121c99c4253ac31d305b403cd6c19f27e79c84df59f",
+      "provenance": "fresh"
+    },
+    "perturb_review": {
+      "path": "results/v2_protocol/R4_PERTURB_REVIEW.json",
+      "sha256": "b0a24f73e3a5af221adbd630dde1cbe3658d7834cef7c0d65eb63bbefc9d2710",
+      "provenance": "fresh"
+    },
+    "redesign": {
+      "path": "results/v2_protocol/R4_REDESIGN_DECISION.json",
+      "sha256": "d2611356b0842ef2bfa0bb151d4c259c6d3e31349c5657a654e62acca68e232c",
+      "provenance": "fresh"
+    },
+    "selection": {
+      "path": "results/v2_protocol/R4_PREFREEZE_DECISION.json",
+      "sha256": "2c192fdae1dd0d646a7eb7c38cd54edc0daa5e7858b24114a53d635edf970f06",
+      "provenance": "fresh"
+    },
+    "freeze": {
+      "path": "results/v2_protocol/R4_FREEZE.json",
+      "sha256": "897a224a9bb66751bfb8f5cb86b9ceebbfbb48f3ba17bc7e3d10f55bb0920de3",
+      "provenance": "fresh"
+    },
+    "holdout": {
+      "path": "results/v2_protocol/R4_HOLDOUT.json",
+      "sha256": "ffceac943f8d166cc34f361af76e16bdc15624021bcc2f3d5ba737f0db51f7e4",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "a72c6eb79c7b98bf523296ea81e83b9edb32185ff4f8fe89d6c5dba747bfd57b"
+    },
+    "holdout_review": {
+      "path": "results/v2_protocol/R4_HOLDOUT_REVIEW.json",
+      "sha256": "3377d2865d13b7a65ac66787ada10cb455e31265c395666c26b9c60a095f7a70",
+      "provenance": "fresh"
+    },
+    "official": {
+      "path": "results/v2_protocol/R4_OFFICIAL_REGRESSION.json",
+      "sha256": "feaa9d268d58330e8d0627ec55340f1f680ddc19efd9982fda0c4d759e3d88b2",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "3d7e41f9756885e807486358a956473cb6f283f2853d6cd3e53519d71c963121"
+    },
+    "integrity": {
+      "path": "results/v2_protocol/R4_REPORT_INTEGRITY.json",
+      "sha256": "d63e5443623ebb6b7c7f2a89781bd329e21efa1bfca92614de084cdd83a7f327",
+      "provenance": "fresh"
+    },
+    "r3_metrics": {
+      "path": "results/v2_protocol/R3_REPORT_CURATION.json",
+      "sha256": "e04c03c005645ed571ac5b9daf874b80c306c5ad4397b07fb033a22b62cb8575",
+      "provenance": "literal_copy"
+    },
+    "r3_readme": {
+      "path": "docs/R3_README.md",
+      "sha256": "4582dc77a126a3dfd71521763f520f6509b73be825bfdfec9226fe4c0f4e4c1e",
+      "provenance": "link_path_only"
+    },
+    "r3_presentation": {
+      "path": "results/presentation_R3.pdf",
+      "sha256": "40e3485e21583467e477c28f732e38241b29ec56f0a331c02e28ca920180e6ca",
+      "provenance": "reused_exact_source"
+    },
+    "document_link_repairs": {
+      "path": "results/v2_protocol/R4_REPORT_LINK_REPAIRS.json",
+      "sha256": "d2aa4482cc8575745a61eb7fbc8ff4b644e716d18a7843a8e09d8fc479111f90",
+      "provenance": "fresh"
+    },
+    "requirements": {
+      "path": "docs/REQUIREMENTS_AUDIT.md",
+      "sha256": "3fedf5f84d492aaaa7b5c8ae1f34d9ef5f71eaa5411819cb959030b3f974d48f",
+      "provenance": "fresh"
+    },
+    "perturb_w40_servo": {
+      "path": "results/v2_protocol/R4_PERTURB_W40_ACTIVE_servo.json",
+      "sha256": "a0f72b9cdd23a54499c797efb0bae8794e71ece2951c4a2e3f1497c4b9ff2451",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "7794f66ecd5e1bbf424b420ac394c6f9d60efd5a253e35ba8ec7910a3f4cc757"
+    },
+    "perturb_r1_servo": {
+      "path": "results/v2_protocol/R4_BASE_perturb_servo.json",
+      "sha256": "1cc9d52c7cf8a580942cf472300f247a54fa3aa1028375165a6be7aaa9518bc7",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "9f59d5d725097277ea8304aba265bf9ccae452dc9e58808e43a35a231393df26"
+    },
+    "timing_w40_servo": {
+      "path": "results/v2_protocol/R4_REVALIDATION_W40_ACTIVE_servo.json",
+      "sha256": "d942ac8e448926c5a7dcc7e4b3c8c26d841c3c1a0d03de90eae0d483fd2026c3",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "d3dc3a9c329cd2f777906f22a25eac9f84738a6b8937fa5a80f6540f9a5d21da"
+    },
+    "timing_r1_servo": {
+      "path": "results/v2_protocol/R4_BASE_revalidation_servo.json",
+      "sha256": "150ffd9e058bb877783295de969774e558216a1a31480ee98a0de46b99eb6cf8",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "4395a6a271bf72c386f7484ef093766762a6ec2369d2ed90bf1dc18f6664ab45"
+    },
+    "perturb_w40_torque": {
+      "path": "results/v2_protocol/R4_PERTURB_W40_ACTIVE_torque.json",
+      "sha256": "862a9f713cec308f688de0b0aa941c915fa333980258813fe1033c82ada8e8f5",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "b9eccfe8a54ae6691c57603b3b59a5a57e87daaad2e6d49d23d29e29542f130d"
+    },
+    "perturb_r1_torque": {
+      "path": "results/v2_protocol/R4_BASE_perturb_torque.json",
+      "sha256": "5a1269db34d4aa6cd45362c0d0ee521784ef8dff60627e4af667728432d9767c",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "b03f32eb166711596c314b6d57464db133f25761c468a73aac4238924ec755aa"
+    },
+    "timing_w40_torque": {
+      "path": "results/v2_protocol/R4_REVALIDATION_W40_ACTIVE_torque.json",
+      "sha256": "c732d57d0098561830b09a3552a1d92f52b0f9a13fe90bd32e8c33bdbb335901",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "359d47d9808c1f8cc325566f52e819859860db6409f2344b79c3c57a037489a6"
+    },
+    "timing_r1_torque": {
+      "path": "results/v2_protocol/R4_BASE_revalidation_torque.json",
+      "sha256": "b77881a98633e68fe59a39503ed117b6da7865fa6ce82e6fbaa86a6ef05a3d2c",
+      "provenance": "fresh",
+      "prepublication_work_sha256": "b93257a14adf430d6d945a7910eae8c4ac387a9db01b986d3b8de4bdd4f5f100"
+    },
+    "registered_revision": [
+      {
+        "path": "results/v2_protocol/PROTOCOL_R4_REDESIGN_W40.json",
+        "sha256": "648f890dceb8de5e5d90aa837fd3525253eca0236b6a413293aef4697ece2b61",
+        "provenance": "fresh"
+      },
+      {
+        "path": "results/v2_protocol/R4_REDESIGN_DECISION_V2.json",
+        "sha256": "30c710b13fee6ef405fd02fe48177fe4e6959b612fbfeac071d08b0172d2a15e",
+        "provenance": "fresh"
+      },
+      {
+        "path": "results/v2_protocol/R4_REDESIGN_BUILD.json",
+        "sha256": "28ca9e9ed8585ded27a6aa62cd7803af1cc5814f5d2b1042677aa9e86ba3c81a",
+        "provenance": "fresh"
+      },
+      {
+        "path": "results/v2_protocol/R4_REDESIGN_NORMAL_AUDIT.json",
+        "sha256": "5cce123a03dfe4c3a98cae620babfe87678296bd9214af8d0f583caecfe5c65c",
+        "provenance": "fresh"
+      },
+      {
+        "path": "results/v2_protocol/R4_REDESIGN_EQUIVALENCE.json",
+        "sha256": "6757d1452369918968df8b5242d7d77b41a15dbd7034bd82e2879685c1df10c5",
+        "provenance": "fresh",
+        "prepublication_work_sha256": "30c7ebcc4f883c801f46c71ee44cd52270df3b2695638f5972355a78b6aa0aaf"
+      },
+      {
+        "path": "results/v2_protocol/R4_REVALIDATION_REVIEW.json",
+        "sha256": "2b5d0e435183e59d1e4b977ef5381050ff937b622baae8fe9425433db70f57e7",
+        "provenance": "fresh"
+      }
+    ]
+  },
+  "curation": {
+    "schema": "R4_REPORT_CURATION.v1",
+    "final": {
+      "servo": "R1",
+      "torque": "R1"
+    },
+    "conclusion": "새 채택 0개, 최종 3파일은 R1과 바이트가 같다. 수정 W40은 D4에서 A +13, B +10 검출했지만 무충돌 섭동 FA가 A 6→9, B 9→17로 늘어 탈락했다. 모든 후보는 동결 전에 탈락했고 새 holdout은 R1 보존만 확인했다.",
+    "candidates": [
+      {
+        "방식": "A 서보",
+        "후보": "W40_ACTIVE",
+        "정상 추가 FA": "표본 0, 상승 0",
+        "validation": "+4, 손실 0",
+        "development": "+2, 손실 0",
+        "D4": "+13, 손실 0",
+        "섭동 무충돌 FA [28조건]": "6→9",
+        "p99/최대 [µs]": "342.133/5141.191",
+        "판정": "탈락",
+        "실패 관문": "분석 섭동: 오감지 증가"
+      },
+      {
+        "방식": "A 서보",
+        "후보": "CUSUM_ACTIVE_K05",
+        "정상 추가 FA": "표본 0, 상승 0",
+        "validation": "+4, 손실 0",
+        "development": "+2, 손실 0",
+        "D4": "+14, 손실 0",
+        "섭동 무충돌 FA [28조건]": "6→24",
+        "p99/최대 [µs]": "324.003/6416.361",
+        "판정": "탈락",
+        "실패 관문": "공유 상태 저장 금지 위반; D4: 오감지 증가"
+      },
+      {
+        "방식": "A 서보",
+        "후보": "CUSUM_ACTIVE_K10",
+        "정상 추가 FA": "표본 0, 상승 0",
+        "validation": "+2, 손실 0",
+        "development": "+2, 손실 0",
+        "D4": "+13, 손실 0",
+        "섭동 무충돌 FA [28조건]": "6→17",
+        "p99/최대 [µs]": "335.068/6283.941",
+        "판정": "탈락",
+        "실패 관문": "공유 상태 저장 금지 위반; D4: 오감지 증가"
+      },
+      {
+        "방식": "A 서보",
+        "후보": "CUSUM_PHASE_K05",
+        "정상 추가 FA": "표본 0, 상승 0",
+        "validation": "+5, 손실 0",
+        "development": "+5, 손실 0",
+        "D4": "+27, 손실 0",
+        "섭동 무충돌 FA [28조건]": "6→38",
+        "p99/최대 [µs]": "355.242/613.296",
+        "판정": "탈락",
+        "실패 관문": "공유 상태 저장 금지 위반; 사전 검증: 오감지 증가"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "W40_ACTIVE",
+        "정상 추가 FA": "표본 0, 상승 0",
+        "validation": "+4, 손실 0",
+        "development": "+2, 손실 0",
+        "D4": "+10, 손실 0",
+        "섭동 무충돌 FA [28조건]": "9→17",
+        "p99/최대 [µs]": "275.261/465.879",
+        "판정": "탈락",
+        "실패 관문": "분석 섭동: 오감지 증가"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "CUSUM_ACTIVE_K05",
+        "정상 추가 FA": "표본 0, 상승 0",
+        "validation": "+1, 손실 0",
+        "development": "+2, 손실 0",
+        "D4": "+10, 손실 0",
+        "섭동 무충돌 FA [28조건]": "9→24",
+        "p99/최대 [µs]": "301.992/6329.750",
+        "판정": "탈락",
+        "실패 관문": "공유 상태 저장 금지 위반; 사전 검증: 오감지 증가, 추가 검출 기준 미달"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "CUSUM_ACTIVE_K10",
+        "정상 추가 FA": "표본 0, 상승 0",
+        "validation": "+3, 손실 0",
+        "development": "+4, 손실 0",
+        "D4": "+11, 손실 0",
+        "섭동 무충돌 FA [28조건]": "9→25",
+        "p99/최대 [µs]": "329.256/5475.875",
+        "판정": "탈락",
+        "실패 관문": "공유 상태 저장 금지 위반; 개발 검증: 오감지 증가"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "CUSUM_PHASE_K05",
+        "정상 추가 FA": "표본 0, 상승 0",
+        "validation": "+6, 손실 0",
+        "development": "+6, 손실 0",
+        "D4": "+20, 손실 1",
+        "섭동 무충돌 FA [28조건]": "9→62",
+        "p99/최대 [µs]": "312.905/6592.088",
+        "판정": "탈락",
+        "실패 관문": "공유 상태 저장 금지 위반; 사전 검증: 오감지 증가"
+      }
+    ],
+    "perturb_whole": [
+      {
+        "방식": "A 서보",
+        "후보": "W40_ACTIVE",
+        "전체 34조건 충돌 외 FA": "6→9"
+      },
+      {
+        "방식": "A 서보",
+        "후보": "CUSUM_ACTIVE_K05",
+        "전체 34조건 충돌 외 FA": "6→42"
+      },
+      {
+        "방식": "A 서보",
+        "후보": "CUSUM_ACTIVE_K10",
+        "전체 34조건 충돌 외 FA": "6→17"
+      },
+      {
+        "방식": "A 서보",
+        "후보": "CUSUM_PHASE_K05",
+        "전체 34조건 충돌 외 FA": "6→44"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "W40_ACTIVE",
+        "전체 34조건 충돌 외 FA": "10→18"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "CUSUM_ACTIVE_K05",
+        "전체 34조건 충돌 외 FA": "10→26"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "CUSUM_ACTIVE_K10",
+        "전체 34조건 충돌 외 FA": "10→32"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "CUSUM_PHASE_K05",
+        "전체 34조건 충돌 외 FA": "10→94"
+      }
+    ],
+    "phases": [
+      {
+        "방식": "A 서보",
+        "후보": "W40_ACTIVE",
+        "development R1→후보": "집기 4→4/10; 운반 5→7/10; 놓기 3→3/10",
+        "D4 R1→후보": "집기 35→42/60; 운반 43→49/60; 놓기 33→33/60"
+      },
+      {
+        "방식": "A 서보",
+        "후보": "CUSUM_ACTIVE_K05",
+        "development R1→후보": "집기 4→4/10; 운반 5→7/10; 놓기 3→3/10",
+        "D4 R1→후보": "집기 35→39/60; 운반 43→53/60; 놓기 33→33/60"
+      },
+      {
+        "방식": "A 서보",
+        "후보": "CUSUM_ACTIVE_K10",
+        "development R1→후보": "집기 4→4/10; 운반 5→7/10; 놓기 3→3/10",
+        "D4 R1→후보": "집기 35→38/60; 운반 43→53/60; 놓기 33→33/60"
+      },
+      {
+        "방식": "A 서보",
+        "후보": "CUSUM_PHASE_K05",
+        "development R1→후보": "집기 4→7/10; 운반 5→7/10; 놓기 3→3/10",
+        "D4 R1→후보": "집기 35→51/60; 운반 43→53/60; 놓기 33→34/60"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "W40_ACTIVE",
+        "development R1→후보": "집기 4→4/10; 운반 5→7/10; 놓기 3→3/10",
+        "D4 R1→후보": "집기 35→39/60; 운반 45→51/60; 놓기 31→31/60"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "CUSUM_ACTIVE_K05",
+        "development R1→후보": "집기 4→4/10; 운반 5→7/10; 놓기 3→3/10",
+        "D4 R1→후보": "집기 35→37/60; 운반 45→53/60; 놓기 31→31/60"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "CUSUM_ACTIVE_K10",
+        "development R1→후보": "집기 4→4/10; 운반 5→9/10; 놓기 3→3/10",
+        "D4 R1→후보": "집기 35→38/60; 운반 45→53/60; 놓기 31→31/60"
+      },
+      {
+        "방식": "B 토크",
+        "후보": "CUSUM_PHASE_K05",
+        "development R1→후보": "집기 4→6/10; 운반 5→9/10; 놓기 3→3/10",
+        "D4 R1→후보": "집기 35→44/60; 운반 45→51/60; 놓기 31→35/60"
+      }
+    ],
+    "metrics": [
+      {
+        "id": "T1",
+        "name": "놓기 전 마지막 20 ms 평균 지지율",
+        "condition": "8 kg, 같은 COM, 놓기 직전 20 ms; 보존값이며 R4는 최종 소스·물리 비간섭 동일성",
+        "unit": "%mg (A/B)",
+        "baseline": "A 0.0000 / B 0.0557",
+        "v1": "A 0.2098 / B 11.1507",
+        "r1": "A 0.2098 / B 11.1507",
+        "status": "not_met",
+        "r4": "A 0.2098 / B 11.1507"
+      },
+      {
+        "id": "T2",
+        "name": "놓기 토크 계단",
+        "condition": "8 kg, 같은 COM, 놓기 토크 계단; 보존값이며 R4는 최종 소스·물리 비간섭 동일성",
+        "unit": "N·m (A/B)",
+        "baseline": "A 73.842 / B 74.797",
+        "v1": "A 14.626 / B 13.126",
+        "r1": "A 14.626 / B 13.126",
+        "status": "not_met",
+        "r4": "A 14.626 / B 13.126"
+      },
+      {
+        "id": "T3",
+        "name": "분석 섭동 최악 TCP/놓기힘/오감지",
+        "condition": "R2와 같은 전체 34조건 보존값(충돌 외 FA 포함); R4 새 섭동은 별도 표",
+        "unit": "mm / N / 상승 횟수",
+        "baseline": "A 22.731 mm / 208.997 N / FA 221; B 17.171 mm / 352.140 N / FA 309",
+        "v1": "A 14.777 mm / 212.734 N / FA 4; B 45.652 mm / 362.600 N / FA 8",
+        "r1": "A 14.777 mm / 212.734 N / FA 6; B 45.652 mm / 362.600 N / FA 10",
+        "status": "not_met",
+        "r4": "A 14.777 mm / 212.734 N / FA 6; B 45.652 mm / 362.600 N / FA 10"
+      },
+      {
+        "id": "T4",
+        "name": "질량·COM 격자 포화/놓기 peak",
+        "condition": "방식별 무충돌 질량·COM 189조건; 보존값이며 R4는 최종 소스·물리 비간섭 동일성",
+        "unit": "포화 조건 수 / mg",
+        "baseline": "A sat 0/189, peak 2.0359 mg; B sat 0/189, peak 9.8822 mg",
+        "v1": "A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg",
+        "r1": "A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg",
+        "status": "not_met",
+        "r4": "A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg"
+      },
+      {
+        "id": "T5",
+        "name": "TCP 추적 RMS/최대",
+        "condition": "8 kg, 같은 COM, 무충돌; 보존값이며 R4는 최종 소스·물리 비간섭 동일성",
+        "unit": "mm (A/B)",
+        "baseline": "A 6.144/14.000; B 7.042/13.183",
+        "v1": "A 1.174/3.914; B 3.232/8.444",
+        "r1": "A 1.174/3.914; B 3.232/8.444",
+        "status": "not_met",
+        "r4": "A 1.174/3.914; B 3.232/8.444"
+      },
+      {
+        "id": "T6",
+        "name": "D4 감지/놓침/masked",
+        "condition": "방식별 충돌 180조건; 선행 경보를 별도 집계",
+        "unit": "검출/놓침/선행 경보 조건 수",
+        "baseline": "A 88/43/49; B 78/42/60",
+        "v1": "A 94/86/0; B 91/89/0",
+        "r1": "A 111/69/0; B 111/69/0",
+        "status": "not_met",
+        "r4": "A 111/69/0; B 111/69/0"
+      }
+    ],
+    "holdout_summary": [
+      {
+        "방식": "A 서보",
+        "충돌 검출": "20/30",
+        "정상 4조건 FA": 0,
+        "전체 충돌 외 FA": 0,
+        "용도": "R1 보존 확인; W40 미실행"
+      },
+      {
+        "방식": "B 토크",
+        "충돌 검출": "22/30",
+        "정상 4조건 FA": 0,
+        "전체 충돌 외 FA": 1,
+        "용도": "R1 보존 확인; W40 미실행"
+      }
+    ],
+    "redesign": [
+      {
+        "family": "초기 자동 기록",
+        "사용": "불완전",
+        "당시 사유": "처음 자동 판정은 중복 저장 문제를 발견하지 못해 재설계 0회로 기록했다. 그 기록은 그대로 두고, 문제를 찾은 시점의 새 결정 기록으로 바로잡았다."
+      },
+      {
+        "family": "W40",
+        "사용": "예",
+        "당시 사유": "기존 모델의 임시값을 같은 값으로 다시 저장하는 위치를 찾았다. 두 방식에서 추가 검출과 정상 오감지 보존을 보인 W40만 한 번 고쳐 중복 저장을 없앴다. 가중치·통계량·임계값은 바꾸지 않았다."
+      },
+      {
+        "family": "CUSUM_ACTIVE",
+        "사용": "아니오",
+        "당시 사유": "같은 저장 문제를 고치지 않아 채택 대상에서 제외했다. 토크의 0.5 설정은 오감지·추가 검출 관문도 실패했다. 두 방식 모두 사전 수치 관문을 넘긴 더 단순한 W40에 수정을 집중했다."
+      },
+      {
+        "family": "CUSUM_PHASE",
+        "사용": "아니오",
+        "당시 사유": "같은 저장 문제를 고치지 않았고 정상·충돌 외 오감지 관문도 실패했다. 더 단순한 W40만 고쳤으며, 이 설정의 후속 수치로 탈락을 취소하지 않았다."
+      }
+    ],
+    "official": {
+      "control": {
+        "servo": {
+          "0.0": [
+            "1.18",
+            "3.94",
+            "0.0",
+            "9.7",
+            "5.1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "4.0": [
+            "1.15",
+            "3.79",
+            "0.0",
+            "9.7",
+            "7.6",
+            "40",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "8.0": [
+            "1.17",
+            "3.91",
+            "0.0",
+            "9.7",
+            "14.6",
+            "79",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ]
+        },
+        "torque": {
+          "0.0": [
+            "2.09",
+            "4.05",
+            "0.0",
+            "9.0",
+            "4.8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "4.0": [
+            "2.32",
+            "4.42",
+            "0.0",
+            "9.0",
+            "6.8",
+            "39",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "8.0": [
+            "3.23",
+            "8.44",
+            "0.0",
+            "9.0",
+            "13.1",
+            "80",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ]
+        }
+      },
+      "collisions": {
+        "servo": [
+          {
+            "mass": 0.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "23",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.0,
+            "cells": [
+              "62",
+              "43",
+              "25",
+              "19",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "78",
+              "31",
+              "19",
+              "0회",
+              "15 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "24",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.0,
+            "cells": [
+              "62",
+              "45",
+              "27",
+              "18",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "69",
+              "33",
+              "21",
+              "0회",
+              "15 N"
+            ]
+          }
+        ],
+        "torque": [
+          {
+            "mass": 0.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "37",
+              "22",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.0,
+            "cells": [
+              "57",
+              "42",
+              "27",
+              "19",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "78",
+              "30",
+              "19",
+              "0회",
+              "15 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "24",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.0,
+            "cells": [
+              "56",
+              "43",
+              "26",
+              "18",
+              "1회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "91",
+              "42",
+              "22",
+              "0회",
+              "15 N"
+            ]
+          }
+        ]
+      },
+      "eight_kg": [
+        {
+          "방식": "A 서보",
+          "시각 [s]": "1.42",
+          "10/15/40/100 N·FA·최소": "놓침 / 놓침 / 36 / 24 / 0회 / 40 N"
+        },
+        {
+          "방식": "A 서보",
+          "시각 [s]": "3.0",
+          "10/15/40/100 N·FA·최소": "62 / 45 / 27 / 18 / 0회 / 10 N"
+        },
+        {
+          "방식": "A 서보",
+          "시각 [s]": "3.86",
+          "10/15/40/100 N·FA·최소": "놓침 / 69 / 33 / 21 / 0회 / 15 N"
+        },
+        {
+          "방식": "B 토크",
+          "시각 [s]": "1.42",
+          "10/15/40/100 N·FA·최소": "놓침 / 놓침 / 36 / 24 / 0회 / 40 N"
+        },
+        {
+          "방식": "B 토크",
+          "시각 [s]": "3.0",
+          "10/15/40/100 N·FA·최소": "56 / 43 / 26 / 18 / 1회 / 10 N"
+        },
+        {
+          "방식": "B 토크",
+          "시각 [s]": "3.86",
+          "10/15/40/100 N·FA·최소": "놓침 / 91 / 42 / 22 / 0회 / 15 N"
+        }
+      ]
+    },
+    "perturb_findings": [
+      {
+        "방식": "A 서보",
+        "증가 행": 3,
+        "강성 단독": 2,
+        "강성·마찰 조합": 1,
+        "새 잡음 증가/조건": "0/9"
+      },
+      {
+        "방식": "B 토크",
+        "증가 행": 6,
+        "강성 단독": 4,
+        "강성·마찰 조합": 2,
+        "새 잡음 증가/조건": "0/9"
+      }
+    ],
+    "timing": [
+      {
+        "방식·소스": "A 서보/R1",
+        "최악 행 p99 [µs]": "260.611",
+        "관측 최대 [ms]": "0.501",
+        "1 ms 초과 주기": 0
+      },
+      {
+        "방식·소스": "A 서보/W40",
+        "최악 행 p99 [µs]": "342.133",
+        "관측 최대 [ms]": "5.141",
+        "1 ms 초과 주기": 1
+      },
+      {
+        "방식·소스": "B 토크/R1",
+        "최악 행 p99 [µs]": "307.692",
+        "관측 최대 [ms]": "5.257",
+        "1 ms 초과 주기": 3
+      },
+      {
+        "방식·소스": "B 토크/W40",
+        "최악 행 p99 [µs]": "275.261",
+        "관측 최대 [ms]": "0.466",
+        "1 ms 초과 주기": 0
+      }
+    ],
+    "r3_r1_timing": {
+      "servo": {
+        "p99_us": "327.670",
+        "max_ms": "11.703",
+        "outlier_count": "8"
+      },
+      "torque": {
+        "p99_us": "350.440",
+        "max_ms": "14.163",
+        "outlier_count": "4"
+      }
+    },
+    "requirements": {
+      "충족": 24,
+      "부분": 4,
+      "판정 불가": 5
+    },
+    "causal_repair": {
+      "applied": true,
+      "original_w40_gains": {
+        "servo": 4,
+        "torque": 3
+      },
+      "revalidation_w40_gains": {
+        "servo": 4,
+        "torque": 4
+      },
+      "revalidation_w40_max_us": {
+        "servo": 5141.191,
+        "torque": 465.879
+      },
+      "original_literal_store_free": false,
+      "repaired_family": "W40",
+      "other_families_adoption_eligible": false,
+      "parameters_changed": false,
+      "redesign_build_bound": true,
+      "redesign_normal_audit_bound": true,
+      "original_online_rows": 304,
+      "repair_online_rows": 76
+    },
+    "normal_audit": {
+      "rows": 128,
+      "extra_samples": 0,
+      "extra_rises": 0
+    },
+    "equivalence": {
+      "passed": true,
+      "rows": 16,
+      "fresh_full_loop_simulations": null,
+      "fresh_w40_rows": 76,
+      "fresh_representative_rows": 4,
+      "reused_rows": 12
+    },
+    "reseal": {
+      "invalidated_seed": 371501,
+      "replacement_seed": 371599,
+      "pre_generated_designs": 2,
+      "actual_episodes_before_reseal": 0,
+      "revalidation_exclusion_masses": [
+        1.5173,
+        3.8051,
+        6.0473,
+        7.2303
+      ]
+    },
+    "literature": {
+      "opened": 10,
+      "full_text": 7,
+      "abstract_bibliography": 2,
+      "publisher_metadata": 1
+    },
+    "cause": {
+      "gate_hidden_servo": 43,
+      "mean40_any_servo": 17,
+      "mean40_four_servo": 13,
+      "all_scores_below_servo": 52,
+      "gate_hidden_torque": 46,
+      "mean40_any_torque": 15,
+      "mean40_four_torque": 14,
+      "all_scores_below_torque": 53
+    },
+    "limitations": [
+      "D4는 이미 후보 설계에 사용한 기존 관측 자료의 재생이며 독립 효능 자료가 아니다.",
+      "새 잡음 9조건을 포함한 섭동은 유한 분석이며 실기 안전이나 확률 보장이 아니다.",
+      "p99 800 µs는 선택 관문이고 최대 1 ms는 관측 목표다. 모든 초과 표본을 보존했다.",
+      "서로 독립이 아닌 정상 표본의 최대값으로 보정했으므로 정해진 확률로 오감지를 막는다고 보장하지 않는다.",
+      "감지기 비간섭 검사는 유한 조건이며 전역 안정성 보장이 아니다."
+    ]
+  },
+  "prepublication_work_manifest_sha256": "83b743906bcb39b3e60ce5abfae87de3dd23ad0fd29abbd41e7934f9dc427c88",
+  "publication_byte_binding": "Artifact SHA256 entries name published bytes after process-identifier sanitization or lossless whitespace compaction; prepublication work hashes are retained separately. Every case, score, eigenvalue and timing outlier is preserved."
+}

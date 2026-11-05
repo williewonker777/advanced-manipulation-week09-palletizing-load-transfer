@@ -1,0 +1,346 @@
+{
+  "source_sha256": {
+    "results/v2_protocol/PROTOCOL_R4.json": "f4f5c0cca4617901aa0be71ce513941c8cded35a308bfd7403ac49a52fb45182",
+    "r1_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "tools/r4_study.py": "39793afc8aef0bb34b99d30dc899ab50352c48dbee3368a7f845e54de3be0ac4",
+    "tools/r4_build.py": "35e6a2d8105d1752f03d95735cc06ee038175d22dc988146ed7846a061edab04",
+    "experiments/r4_sequential.py": "0908668457b0e6b72060cb757d5cc79ea1a24efe17eb1a5e63e80c8c9e02cd42"
+  },
+  "generated": [
+    {
+      "path": "experiments/r4_generated/W40_ACTIVE.py",
+      "sha256": "388136f488e25b1baa5663dc7b02233296893a8b335577491ab64518a31de06f",
+      "parameters": {
+        "servo": {
+          "spec": {
+            "id": "W40_ACTIVE",
+            "family": "W40",
+            "statistic": "causal active mean",
+            "window_samples": 40,
+            "drift": 0.0,
+            "phase_conditioning": false
+          },
+          "calibration": {
+            "location": [
+              0.0
+            ],
+            "scale": [
+              1.0
+            ],
+            "threshold": [
+              5.184381323181365
+            ]
+          }
+        },
+        "torque": {
+          "spec": {
+            "id": "W40_ACTIVE",
+            "family": "W40",
+            "statistic": "causal active mean",
+            "window_samples": 40,
+            "drift": 0.0,
+            "phase_conditioning": false
+          },
+          "calibration": {
+            "location": [
+              0.0
+            ],
+            "scale": [
+              1.0
+            ],
+            "threshold": [
+              4.948929857413643
+            ]
+          }
+        }
+      },
+      "audit": {
+        "file": "experiments/r4_generated/W40_ACTIVE.py",
+        "status": "pass",
+        "errors": [],
+        "config_accesses": [
+          {
+            "line": 49,
+            "config_field": "DT"
+          },
+          {
+            "line": 94,
+            "config_field": "BOX_SIZE"
+          },
+          {
+            "line": 95,
+            "config_field": "BOX_SIZE"
+          },
+          {
+            "line": 92,
+            "config_field": "BOX_POS"
+          },
+          {
+            "line": 92,
+            "config_field": "BOX_SIZE"
+          }
+        ],
+        "sha256": "388136f488e25b1baa5663dc7b02233296893a8b335577491ab64518a31de06f",
+        "scope": "AST input/import checks; runtime tests and manual review also required"
+      }
+    },
+    {
+      "path": "experiments/r4_generated/CUSUM_ACTIVE_K05.py",
+      "sha256": "218ff8b8e9e592fa42a92b7dc1a4df0e6f2f9d9d6b10dbc1648bcea010d0a514",
+      "parameters": {
+        "servo": {
+          "spec": {
+            "id": "CUSUM_ACTIVE_K05",
+            "family": "CUSUM_ACTIVE",
+            "statistic": "one-sided standardized reset CUSUM",
+            "window_samples": 0,
+            "drift": 0.5,
+            "phase_conditioning": false
+          },
+          "calibration": {
+            "location": [
+              1.830440964777459
+            ],
+            "scale": [
+              1.066668448339221
+            ],
+            "threshold": [
+              155.45421144894684
+            ]
+          }
+        },
+        "torque": {
+          "spec": {
+            "id": "CUSUM_ACTIVE_K05",
+            "family": "CUSUM_ACTIVE",
+            "statistic": "one-sided standardized reset CUSUM",
+            "window_samples": 0,
+            "drift": 0.5,
+            "phase_conditioning": false
+          },
+          "calibration": {
+            "location": [
+              1.828223159930285
+            ],
+            "scale": [
+              1.0781257926507979
+            ],
+            "threshold": [
+              140.85814430816265
+            ]
+          }
+        }
+      },
+      "audit": {
+        "file": "experiments/r4_generated/CUSUM_ACTIVE_K05.py",
+        "status": "pass",
+        "errors": [],
+        "config_accesses": [
+          {
+            "line": 49,
+            "config_field": "DT"
+          },
+          {
+            "line": 94,
+            "config_field": "BOX_SIZE"
+          },
+          {
+            "line": 95,
+            "config_field": "BOX_SIZE"
+          },
+          {
+            "line": 92,
+            "config_field": "BOX_POS"
+          },
+          {
+            "line": 92,
+            "config_field": "BOX_SIZE"
+          }
+        ],
+        "sha256": "218ff8b8e9e592fa42a92b7dc1a4df0e6f2f9d9d6b10dbc1648bcea010d0a514",
+        "scope": "AST input/import checks; runtime tests and manual review also required"
+      }
+    },
+    {
+      "path": "experiments/r4_generated/CUSUM_ACTIVE_K10.py",
+      "sha256": "4f146000f65d94842cad4ffae71461692b2d17fda6d8d72a64ada74fca1a710b",
+      "parameters": {
+        "servo": {
+          "spec": {
+            "id": "CUSUM_ACTIVE_K10",
+            "family": "CUSUM_ACTIVE",
+            "statistic": "one-sided standardized reset CUSUM",
+            "window_samples": 0,
+            "drift": 1.0,
+            "phase_conditioning": false
+          },
+          "calibration": {
+            "location": [
+              1.830440964777459
+            ],
+            "scale": [
+              1.066668448339221
+            ],
+            "threshold": [
+              99.90687410946931
+            ]
+          }
+        },
+        "torque": {
+          "spec": {
+            "id": "CUSUM_ACTIVE_K10",
+            "family": "CUSUM_ACTIVE",
+            "statistic": "one-sided standardized reset CUSUM",
+            "window_samples": 0,
+            "drift": 1.0,
+            "phase_conditioning": false
+          },
+          "calibration": {
+            "location": [
+              1.828223159930285
+            ],
+            "scale": [
+              1.0781257926507979
+            ],
+            "threshold": [
+              59.837471986031744
+            ]
+          }
+        }
+      },
+      "audit": {
+        "file": "experiments/r4_generated/CUSUM_ACTIVE_K10.py",
+        "status": "pass",
+        "errors": [],
+        "config_accesses": [
+          {
+            "line": 49,
+            "config_field": "DT"
+          },
+          {
+            "line": 94,
+            "config_field": "BOX_SIZE"
+          },
+          {
+            "line": 95,
+            "config_field": "BOX_SIZE"
+          },
+          {
+            "line": 92,
+            "config_field": "BOX_POS"
+          },
+          {
+            "line": 92,
+            "config_field": "BOX_SIZE"
+          }
+        ],
+        "sha256": "4f146000f65d94842cad4ffae71461692b2d17fda6d8d72a64ada74fca1a710b",
+        "scope": "AST input/import checks; runtime tests and manual review also required"
+      }
+    },
+    {
+      "path": "experiments/r4_generated/CUSUM_PHASE_K05.py",
+      "sha256": "eb00d9739fbb9362b908d41ff39e14ea62ce27bed1c0560ee718460f58df3c19",
+      "parameters": {
+        "servo": {
+          "spec": {
+            "id": "CUSUM_PHASE_K05",
+            "family": "CUSUM_PHASE",
+            "statistic": "one-sided phase-standardized reset CUSUM",
+            "window_samples": 0,
+            "drift": 0.5,
+            "phase_conditioning": true
+          },
+          "calibration": {
+            "location": [
+              131.87024474833643,
+              3.133536852116656,
+              1.8237920409358361,
+              3.0441800025685852,
+              73.7130326909075
+            ],
+            "scale": [
+              37.55157555918579,
+              2.996312935690672,
+              1.0648962851269033,
+              2.6310069747731637,
+              64.17621829369928
+            ],
+            "threshold": [
+              169.07429316775108,
+              213.8100380894845,
+              156.94622687473748,
+              766.6931273006562,
+              355.4627824079163
+            ]
+          }
+        },
+        "torque": {
+          "spec": {
+            "id": "CUSUM_PHASE_K05",
+            "family": "CUSUM_PHASE",
+            "statistic": "one-sided phase-standardized reset CUSUM",
+            "window_samples": 0,
+            "drift": 0.5,
+            "phase_conditioning": true
+          },
+          "calibration": {
+            "location": [
+              126.96629924755347,
+              4.322520695965833,
+              1.798478715562429,
+              3.493969275242862,
+              74.23772350880526
+            ],
+            "scale": [
+              36.220978119827095,
+              4.947164742383184,
+              1.0580066890514124,
+              2.9909198053857433,
+              64.51572101525949
+            ],
+            "threshold": [
+              176.97522574610497,
+              305.1598973931702,
+              108.09706377021223,
+              581.4209036601679,
+              330.53325481694196
+            ]
+          }
+        }
+      },
+      "audit": {
+        "file": "experiments/r4_generated/CUSUM_PHASE_K05.py",
+        "status": "pass",
+        "errors": [],
+        "config_accesses": [
+          {
+            "line": 49,
+            "config_field": "DT"
+          },
+          {
+            "line": 94,
+            "config_field": "BOX_SIZE"
+          },
+          {
+            "line": 95,
+            "config_field": "BOX_SIZE"
+          },
+          {
+            "line": 92,
+            "config_field": "BOX_POS"
+          },
+          {
+            "line": 92,
+            "config_field": "BOX_SIZE"
+          }
+        ],
+        "sha256": "eb00d9739fbb9362b908d41ff39e14ea62ce27bed1c0560ee718460f58df3c19",
+        "scope": "AST input/import checks; runtime tests and manual review also required"
+      }
+    }
+  ],
+  "calibration_sha256": "7d04d1a9777b19db8f4d5cb4d45d64389ba3f77e20e62d85e3162c14e46f4bb1"
+}

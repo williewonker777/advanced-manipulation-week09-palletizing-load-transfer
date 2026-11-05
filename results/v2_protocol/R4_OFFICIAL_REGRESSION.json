@@ -1,0 +1,1051 @@
+{
+  "schema": "R4_OFFICIAL_REGRESSION.v1",
+  "official": true,
+  "status": "PASS",
+  "architectures": {
+    "servo": {
+      "status": "PASS",
+      "frozen_selection": {
+        "id": "R1",
+        "family": "R1",
+        "architecture": "servo"
+      },
+      "effective_selection": "R1",
+      "fallback_to_R1": false,
+      "control": [
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 0.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 4.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "collisions": [
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 36.0,
+              "R3_delay_ms": 36.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 23.0,
+              "R3_delay_ms": 23.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 62.0,
+              "R3_delay_ms": 62.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 43.0,
+              "R3_delay_ms": 43.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 25.0,
+              "R3_delay_ms": 25.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 78.0,
+              "R3_delay_ms": 78.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 31.0,
+              "R3_delay_ms": 31.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 36.0,
+              "R3_delay_ms": 36.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 24.0,
+              "R3_delay_ms": 24.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 62.0,
+              "R3_delay_ms": 62.0,
+              "fixed_cap_ms": 67.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 45.0,
+              "R3_delay_ms": 45.0,
+              "fixed_cap_ms": 50.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 27.0,
+              "R3_delay_ms": 27.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 18.0,
+              "R3_delay_ms": 18.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 69.0,
+              "R3_delay_ms": 69.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 33.0,
+              "R3_delay_ms": 33.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 21.0,
+              "R3_delay_ms": 21.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "errors": [],
+      "no_runner_up_promotion": true,
+      "retest_permitted": false
+    },
+    "torque": {
+      "status": "PASS",
+      "frozen_selection": {
+        "id": "R1",
+        "family": "R1",
+        "architecture": "torque"
+      },
+      "effective_selection": "R1",
+      "fallback_to_R1": false,
+      "control": [
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 0.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 4.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "collisions": [
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 37.0,
+              "R3_delay_ms": 37.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 22.0,
+              "R3_delay_ms": 22.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 57.0,
+              "R3_delay_ms": 57.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 42.0,
+              "R3_delay_ms": 42.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 27.0,
+              "R3_delay_ms": 27.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 78.0,
+              "R3_delay_ms": 78.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 30.0,
+              "R3_delay_ms": 30.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 36.0,
+              "R3_delay_ms": 36.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 24.0,
+              "R3_delay_ms": 24.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 56.0,
+              "R3_delay_ms": 56.0,
+              "fixed_cap_ms": 61.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 43.0,
+              "R3_delay_ms": 43.0,
+              "fixed_cap_ms": 48.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 26.0,
+              "R3_delay_ms": 26.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 18.0,
+              "R3_delay_ms": 18.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 1,
+          "R3_false_alarms": 1,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 91.0,
+              "R3_delay_ms": 91.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 42.0,
+              "R3_delay_ms": 42.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 22.0,
+              "R3_delay_ms": 22.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "errors": [],
+      "no_runner_up_promotion": true,
+      "retest_permitted": false
+    }
+  },
+  "results": {
+    "servo": {
+      "kit_integrity": {
+        "status": "ok",
+        "files": 20,
+        "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+      },
+      "source_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "self_contained_default_names": true,
+      "control_and_collisions": {
+        "control": {
+          "0.0": [
+            "1.18",
+            "3.94",
+            "0.0",
+            "9.7",
+            "5.1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "4.0": [
+            "1.15",
+            "3.79",
+            "0.0",
+            "9.7",
+            "7.6",
+            "40",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "8.0": [
+            "1.17",
+            "3.91",
+            "0.0",
+            "9.7",
+            "14.6",
+            "79",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ]
+        },
+        "collisions": [
+          {
+            "mass": 0.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "23",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.0,
+            "cells": [
+              "62",
+              "43",
+              "25",
+              "19",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "78",
+              "31",
+              "19",
+              "0회",
+              "15 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "24",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.0,
+            "cells": [
+              "62",
+              "45",
+              "27",
+              "18",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "69",
+              "33",
+              "21",
+              "0회",
+              "15 N"
+            ]
+          }
+        ]
+      }
+    },
+    "torque": {
+      "kit_integrity": {
+        "status": "ok",
+        "files": 20,
+        "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+      },
+      "source_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "self_contained_default_names": true,
+      "control_and_collisions": {
+        "control": {
+          "0.0": [
+            "2.09",
+            "4.05",
+            "0.0",
+            "9.0",
+            "4.8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "4.0": [
+            "2.32",
+            "4.42",
+            "0.0",
+            "9.0",
+            "6.8",
+            "39",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "8.0": [
+            "3.23",
+            "8.44",
+            "0.0",
+            "9.0",
+            "13.1",
+            "80",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ]
+        },
+        "collisions": [
+          {
+            "mass": 0.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "37",
+              "22",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.0,
+            "cells": [
+              "57",
+              "42",
+              "27",
+              "19",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "78",
+              "30",
+              "19",
+              "0회",
+              "15 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "24",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.0,
+            "cells": [
+              "56",
+              "43",
+              "26",
+              "18",
+              "1회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "91",
+              "42",
+              "22",
+              "0회",
+              "15 N"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "source": "unchanged evaluate.py; pristine default-name overlays; one A+B batch",
+  "expected_episodes": 58,
+  "freeze_sha256": "897a224a9bb66751bfb8f5cb86b9ceebbfbb48f3ba17bc7e3d10f55bb0920de3",
+  "holdout_sha256": "a72c6eb79c7b98bf523296ea81e83b9edb32185ff4f8fe89d6c5dba747bfd57b",
+  "holdout_review_sha256": "3377d2865d13b7a65ac66787ada10cb455e31265c395666c26b9c60a095f7a70",
+  "protocol_sha256": "f4f5c0cca4617901aa0be71ce513941c8cded35a308bfd7403ac49a52fb45182",
+  "marker": {
+    "schema": "R4_OFFICIAL_OPENED.v1",
+    "opened_utc": "2026-11-05T04:00:26.058203+00:00",
+    "batch_attempt": 1,
+    "expected_episodes": 58,
+    "freeze_sha256": "897a224a9bb66751bfb8f5cb86b9ceebbfbb48f3ba17bc7e3d10f55bb0920de3",
+    "holdout_sha256": "a72c6eb79c7b98bf523296ea81e83b9edb32185ff4f8fe89d6c5dba747bfd57b",
+    "holdout_review_sha256": "3377d2865d13b7a65ac66787ada10cb455e31265c395666c26b9c60a095f7a70",
+    "protocol_sha256": "f4f5c0cca4617901aa0be71ce513941c8cded35a308bfd7403ac49a52fb45182",
+    "frozen_selection": {
+      "servo": "R1",
+      "torque": "R1"
+    },
+    "holdout_reseal_sha256": "f71aad5f642cbe1c4118923be79e8b4f71b2b9b36cf426ef14465bb4ae30eb27",
+    "redesign_protocol_sha256": "648f890dceb8de5e5d90aa837fd3525253eca0236b6a413293aef4697ece2b61",
+    "effective_selection": {
+      "servo": "R1",
+      "torque": "R1"
+    },
+    "staged_effective_sources": {
+      "effective_selection": {
+        "servo": "R1",
+        "torque": "R1"
+      },
+      "servo_controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "torque_controller_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "detector_sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+    },
+    "tuning_or_repair_after_exposure": false
+  },
+  "holdout_reseal_sha256": "f71aad5f642cbe1c4118923be79e8b4f71b2b9b36cf426ef14465bb4ae30eb27",
+  "redesign_protocol_sha256": "648f890dceb8de5e5d90aa837fd3525253eca0236b6a413293aef4697ece2b61",
+  "marker_sha256": "6a562aa74faf28a8ddb01820da5a6f2363bab38c7c3709b11be8f7ed055efae8",
+  "guard": {
+    "returncode": 0,
+    "host_before": {
+      "mem_available_gib": 18.513351440429688,
+      "load_average": [
+        1.28662109375,
+        1.66357421875,
+        1.86083984375
+      ],
+      "foreign_heavy_python_count": 1,
+      "owned_simulation_workers": 1,
+      "gpu_jobs": 0,
+      "foreign_processes_signalled": 0
+    },
+    "samples": 345,
+    "owned_group_pause_count": 0,
+    "min_available_RAM_GiB": 18.0084228515625,
+    "maximum_foreign_heavy_python_count": 1,
+    "foreign_processes_signalled": 0,
+    "cpu_affinity": [
+      0
+    ],
+    "gpu_jobs": 0
+  },
+  "staged_effective_sources": {
+    "effective_selection": {
+      "servo": "R1",
+      "torque": "R1"
+    },
+    "servo_controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "torque_controller_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "detector_sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+  },
+  "tuning_after_exposure": false,
+  "repair_after_exposure": false,
+  "alternative_promotion_after_failure": false,
+  "second_official_permitted": false,
+  "publication_note": "Raw process IDs omitted. Every case, numeric metric, eigenvalue, load/RAM summary and timing outlier is retained. Evidence hashes elsewhere may name the original work record; published-byte hashes are in artifacts/SHA256SUMS.",
+  "private_raw_sha256": "3d7e41f9756885e807486358a956473cb6f283f2853d6cd3e53519d71c963121"
+}

@@ -1,0 +1,2868 @@
+{
+  "schema": "R4_STAGE_REVIEW.v1",
+  "stage": "d4",
+  "protocol_sha256": "f4f5c0cca4617901aa0be71ce513941c8cded35a308bfd7403ac49a52fb45182",
+  "results": [
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "family": "W40",
+      "review": {
+        "passed": true,
+        "additional_detected": 13,
+        "lost_R1": 0,
+        "R1_detected": 111,
+        "candidate_detected": 124,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 0,
+        "outside_event_FA_R1": 10,
+        "outside_event_FA_candidate": 10,
+        "phases": {
+          "pick": {
+            "cases": 60,
+            "R1_detected": 35,
+            "candidate_detected": 42
+          },
+          "transport": {
+            "cases": 60,
+            "R1_detected": 43,
+            "candidate_detected": 49
+          },
+          "place": {
+            "cases": 60,
+            "R1_detected": 33,
+            "candidate_detected": 33
+          }
+        },
+        "failures": [],
+        "every_case_retained": 385
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 342.1330000000001,
+      "timing_max_us": 5141.191,
+      "timing_pass": true,
+      "literal_store_free": true,
+      "adoption_eligible": true,
+      "earlier_disqualification": false,
+      "permanently_disqualified": false
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "family": "CUSUM_ACTIVE",
+      "review": {
+        "passed": false,
+        "additional_detected": 14,
+        "lost_R1": 0,
+        "R1_detected": 111,
+        "candidate_detected": 125,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 39,
+        "outside_event_FA_R1": 10,
+        "outside_event_FA_candidate": 78,
+        "phases": {
+          "pick": {
+            "cases": 60,
+            "R1_detected": 35,
+            "candidate_detected": 39
+          },
+          "transport": {
+            "cases": 60,
+            "R1_detected": 43,
+            "candidate_detected": 53
+          },
+          "place": {
+            "cases": 60,
+            "R1_detected": 33,
+            "candidate_detected": 33
+          }
+        },
+        "failures": [
+          {
+            "case_id": 162,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 163,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 164,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 165,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 167,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 168,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 169,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 170,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 7
+          },
+          {
+            "case_id": 172,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 173,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 174,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 176,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 177,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 178,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 179,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 181,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 182,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 183,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 186,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 187,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 209,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 216,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 230,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 244,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 250,
+            "mass": 6.25,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 293,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 307,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 314,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 321,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 328,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 349,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 356,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 363,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 379,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 380,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 2,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 382,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 384,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          }
+        ],
+        "every_case_retained": 385
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 324.0030000000003,
+      "timing_max_us": 6416.361,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "family": "CUSUM_ACTIVE",
+      "review": {
+        "passed": false,
+        "additional_detected": 13,
+        "lost_R1": 0,
+        "R1_detected": 111,
+        "candidate_detected": 124,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 1,
+        "outside_event_FA_R1": 10,
+        "outside_event_FA_candidate": 13,
+        "phases": {
+          "pick": {
+            "cases": 60,
+            "R1_detected": 35,
+            "candidate_detected": 38
+          },
+          "transport": {
+            "cases": 60,
+            "R1_detected": 43,
+            "candidate_detected": 53
+          },
+          "place": {
+            "cases": 60,
+            "R1_detected": 33,
+            "candidate_detected": 33
+          }
+        },
+        "failures": [
+          {
+            "case_id": 187,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 230,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 314,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          }
+        ],
+        "every_case_retained": 385
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 335.06841000000003,
+      "timing_max_us": 6283.941,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "family": "CUSUM_PHASE",
+      "review": {
+        "passed": false,
+        "additional_detected": 27,
+        "lost_R1": 0,
+        "R1_detected": 111,
+        "candidate_detected": 138,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 50,
+        "outside_event_FA_R1": 10,
+        "outside_event_FA_candidate": 115,
+        "phases": {
+          "pick": {
+            "cases": 60,
+            "R1_detected": 35,
+            "candidate_detected": 51
+          },
+          "transport": {
+            "cases": 60,
+            "R1_detected": 43,
+            "candidate_detected": 53
+          },
+          "place": {
+            "cases": 60,
+            "R1_detected": 33,
+            "candidate_detected": 34
+          }
+        },
+        "failures": [
+          {
+            "case_id": 0,
+            "mass": 0.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 3,
+            "mass": 0.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 6,
+            "mass": 0.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 27,
+            "mass": 1.3,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 30,
+            "mass": 1.3,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 162,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 163,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 164,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 165,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 166,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 167,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 168,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 169,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 170,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 171,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 172,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 173,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 174,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 175,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 176,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 177,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 178,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 179,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 180,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 181,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 182,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 183,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 184,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 185,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 186,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 187,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 188,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 195,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 202,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 209,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 216,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 223,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 230,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 237,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 244,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 250,
+            "mass": 6.25,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 251,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 258,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 265,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 272,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 273,
+            "mass": 0.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 279,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 286,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 293,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 300,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 307,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 314,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 321,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 328,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 335,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 342,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 349,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 351,
+            "mass": 1.3,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 356,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 363,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 377,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 378,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 2,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 379,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 380,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 2,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 381,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 382,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 383,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 384,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          }
+        ],
+        "every_case_retained": 385
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 355.2422900000003,
+      "timing_max_us": 613.296,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "family": "W40",
+      "review": {
+        "passed": true,
+        "additional_detected": 10,
+        "lost_R1": 0,
+        "R1_detected": 111,
+        "candidate_detected": 121,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 0,
+        "outside_event_FA_R1": 9,
+        "outside_event_FA_candidate": 9,
+        "phases": {
+          "pick": {
+            "cases": 60,
+            "R1_detected": 35,
+            "candidate_detected": 39
+          },
+          "transport": {
+            "cases": 60,
+            "R1_detected": 45,
+            "candidate_detected": 51
+          },
+          "place": {
+            "cases": 60,
+            "R1_detected": 31,
+            "candidate_detected": 31
+          }
+        },
+        "failures": [],
+        "every_case_retained": 385
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 275.26059,
+      "timing_max_us": 465.879,
+      "timing_pass": true,
+      "literal_store_free": true,
+      "adoption_eligible": true,
+      "earlier_disqualification": false,
+      "permanently_disqualified": false
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "family": "CUSUM_ACTIVE",
+      "review": {
+        "passed": false,
+        "additional_detected": 10,
+        "lost_R1": 0,
+        "R1_detected": 111,
+        "candidate_detected": 121,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 31,
+        "outside_event_FA_R1": 9,
+        "outside_event_FA_candidate": 66,
+        "phases": {
+          "pick": {
+            "cases": 60,
+            "R1_detected": 35,
+            "candidate_detected": 37
+          },
+          "transport": {
+            "cases": 60,
+            "R1_detected": 45,
+            "candidate_detected": 53
+          },
+          "place": {
+            "cases": 60,
+            "R1_detected": 31,
+            "candidate_detected": 31
+          }
+        },
+        "failures": [
+          {
+            "case_id": 162,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 163,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 164,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 165,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 166,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 167,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 168,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 169,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 170,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 171,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 172,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 173,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 174,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 175,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 176,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 177,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 178,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 179,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 180,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 181,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 182,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 183,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 184,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 186,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 187,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 188,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 195,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 202,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 209,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 216,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 223,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 244,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 250,
+            "mass": 6.25,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 314,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 321,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 328,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 335,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 342,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 349,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 356,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 363,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 377,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 379,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 380,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 382,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 2,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 383,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 384,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          }
+        ],
+        "every_case_retained": 385
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 301.99210000000033,
+      "timing_max_us": 6329.75,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "family": "CUSUM_ACTIVE",
+      "review": {
+        "passed": false,
+        "additional_detected": 11,
+        "lost_R1": 0,
+        "R1_detected": 111,
+        "candidate_detected": 122,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 21,
+        "outside_event_FA_R1": 9,
+        "outside_event_FA_candidate": 50,
+        "phases": {
+          "pick": {
+            "cases": 60,
+            "R1_detected": 35,
+            "candidate_detected": 38
+          },
+          "transport": {
+            "cases": 60,
+            "R1_detected": 45,
+            "candidate_detected": 53
+          },
+          "place": {
+            "cases": 60,
+            "R1_detected": 31,
+            "candidate_detected": 31
+          }
+        },
+        "failures": [
+          {
+            "case_id": 162,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 163,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 165,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 166,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 167,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 168,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 171,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 172,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 173,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 174,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 176,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 178,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 179,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 181,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 186,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 187,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 188,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 209,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 251,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 258,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 265,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 286,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 293,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 300,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 314,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 328,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 342,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 349,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 356,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 363,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 377,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 381,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 384,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 3
+          }
+        ],
+        "every_case_retained": 385
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 329.25599000000085,
+      "timing_max_us": 5475.875,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "family": "CUSUM_PHASE",
+      "review": {
+        "passed": false,
+        "additional_detected": 20,
+        "lost_R1": 1,
+        "R1_detected": 111,
+        "candidate_detected": 130,
+        "reference_FA_R1": 0,
+        "reference_FA_candidate": 103,
+        "outside_event_FA_R1": 9,
+        "outside_event_FA_candidate": 234,
+        "phases": {
+          "pick": {
+            "cases": 60,
+            "R1_detected": 35,
+            "candidate_detected": 44
+          },
+          "transport": {
+            "cases": 60,
+            "R1_detected": 45,
+            "candidate_detected": 51
+          },
+          "place": {
+            "cases": 60,
+            "R1_detected": 31,
+            "candidate_detected": 35
+          }
+        },
+        "failures": [
+          {
+            "case_id": 162,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 163,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 164,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 165,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 166,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 167,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 168,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 169,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 170,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 171,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 172,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 173,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 174,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 175,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 176,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 6
+          },
+          {
+            "case_id": 177,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 178,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 179,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 6
+          },
+          {
+            "case_id": 180,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 181,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 182,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 183,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 184,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 185,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 6
+          },
+          {
+            "case_id": 186,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 187,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 6
+          },
+          {
+            "case_id": 188,
+            "mass": 8.0,
+            "kind": "reference",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 195,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 202,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 209,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 216,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 223,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 230,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 237,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 244,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 251,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 258,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 265,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 272,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 279,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 286,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 293,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm",
+              "R1_detection_lost_or_masked"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 6
+          },
+          {
+            "case_id": 298,
+            "mass": 4.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 300,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 1
+          },
+          {
+            "case_id": 307,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 2
+          },
+          {
+            "case_id": 314,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 6
+          },
+          {
+            "case_id": 321,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 328,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 6
+          },
+          {
+            "case_id": 335,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 342,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 349,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 356,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 363,
+            "mass": 8.0,
+            "kind": "collision",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 3
+          },
+          {
+            "case_id": 377,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 378,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 5
+          },
+          {
+            "case_id": 379,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 8
+          },
+          {
+            "case_id": 380,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 381,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 0,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 382,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 2,
+            "candidate_FA": 7
+          },
+          {
+            "case_id": 383,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 4
+          },
+          {
+            "case_id": 384,
+            "mass": 8.0,
+            "kind": "offset",
+            "reasons": [
+              "extra_outside_event_false_alarm"
+            ],
+            "R1_FA": 1,
+            "candidate_FA": 7
+          }
+        ],
+        "every_case_retained": 385
+      },
+      "normal_audit_pass": true,
+      "full_loop_parity_pass": true,
+      "timing_p99_us": 312.90459000000016,
+      "timing_max_us": 6592.088,
+      "timing_pass": true,
+      "literal_store_free": false,
+      "adoption_eligible": false,
+      "earlier_disqualification": true,
+      "permanently_disqualified": true
+    }
+  ],
+  "diagnostics_cannot_revive": true,
+  "independent_efficacy": false,
+  "source_files": {
+    "R4_D4_CUSUM_PHASE_K05_servo.json": "8a6837aef6403094ae17fb7921e9d5f1b3caab7f2519e41083a5c84879e1d338",
+    "R4_D4_CUSUM_ACTIVE_K10_servo.json": "d007832f77094b223855a96fca9e7ec3f0386edfc82c5ef3ca5d0fb9a9298086",
+    "R4_D4_CUSUM_ACTIVE_K05_torque.json": "4100b04d29208664b83f7f439d54d6bd3a98bc0d64e4cc317e787163f958783f",
+    "R4_D4_CUSUM_PHASE_K05_torque.json": "658369ce3cbd11d494c29f4bb560105edf5e5a30952821fac4ff98ee0870a704",
+    "R4_D4_CUSUM_ACTIVE_K10_torque.json": "f9adeed54b1cf797843b9c31c8b9d9e81991526a9ae80ba619875abffb1eaa4c",
+    "R4_D4_W40_ACTIVE_torque.json": "141c03a33276f2c33e01281af523da909ae7317a10a78e64036b03aab443f2ae",
+    "R4_D4_W40_ACTIVE_servo.json": "f04c34047f4576dd3f71673162e049a2615d9f5cbebd3fea876e1ba2a6a894d5",
+    "R4_D4_CUSUM_ACTIVE_K05_servo.json": "ba63a39203a83ea851a9108f9e046b0303d3d6a94bb8d9a2cc17e93043c44cc5"
+  }
+}

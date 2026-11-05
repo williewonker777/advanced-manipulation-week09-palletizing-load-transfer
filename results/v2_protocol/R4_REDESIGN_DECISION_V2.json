@@ -1,0 +1,28 @@
+{
+  "schema": "R4_REDESIGN_DECISION.v2",
+  "supersedes_without_edit": "R4_REDESIGN_DECISION.json",
+  "original_record_sha256": "d2611356b0842ef2bfa0bb151d4c259c6d3e31349c5657a654e62acca68e232c",
+  "validation_sha256": "42072540ec7d13fed570f636e63790403f926e42b14064ee2a91ad9df2ad181d",
+  "redesigns_used": 1,
+  "decisions": [
+    {
+      "family": "W40",
+      "used": true,
+      "redesign_number": 1,
+      "reason": "R4 re-called the geometry helper after its R1 parent. It deterministically rewrote nominal qpos/kinematic scratch to the same values, preserving observed end states, but violated the literal shared-state no-store clause. W40 gains4/3 with no extra validation FA make a single causal implementation repair justified. Remove only the redundant scratch stores by reading the current nominal workspace already computed by the parent; do not retune any statistic, threshold, phase or parameter.",
+      "eligible_configurations": 2
+    },
+    {
+      "family": "CUSUM_ACTIVE",
+      "used": false,
+      "reason": "CUSUM_ACTIVE and CUSUM_PHASE keep their original diagnostic implementations and are permanently adoption-ineligible for the literal store violation; PHASE also failed normal/outside-event FA, ACTIVE_K05 torque also failed gain/FA. Concentrate the one bounded repair on the simpler W40 which qualified both modes.",
+      "eligible_configurations": 0
+    },
+    {
+      "family": "CUSUM_PHASE",
+      "used": false,
+      "reason": "CUSUM_ACTIVE and CUSUM_PHASE keep their original diagnostic implementations and are permanently adoption-ineligible for the literal store violation; PHASE also failed normal/outside-event FA, ACTIVE_K05 torque also failed gain/FA. Concentrate the one bounded repair on the simpler W40 which qualified both modes.",
+      "eligible_configurations": 0
+    }
+  ]
+}

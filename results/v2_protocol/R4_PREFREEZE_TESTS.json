@@ -1,0 +1,22 @@
+{
+  "schema": "R4_PREFREEZE_TESTS.v1",
+  "results": [
+    {
+      "scope": "work",
+      "tests": 416,
+      "passed": true,
+      "private_log_sha256": "cf80e5edfa9c0931fc6c769cdc93f3f87f795e5f5b8d0451f71fe021b3d7b543"
+    },
+    {
+      "scope": "public_pristine_overlay",
+      "tests": 397,
+      "passed": true,
+      "private_log_sha256": "00aa232e6fa6b9c19e4521d07c3d974b71b31a71d6e411c693c4962b50f622fa"
+    }
+  ],
+  "python": "env -u PYTHONPATH; bytecode off; BLAS/OMP1; GPU hidden",
+  "command": "python -m unittest discover -s tools -p 'test_*.py'",
+  "no_package_additions": true,
+  "original_kit_in_overlay": true,
+  "remote_operations": 0
+}

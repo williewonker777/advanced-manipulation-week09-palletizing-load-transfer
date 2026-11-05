@@ -1,0 +1,1365 @@
+{
+  "schema": "R4_CALIBRATION.v1",
+  "protocol_sha256": "f4f5c0cca4617901aa0be71ce513941c8cded35a308bfd7403ac49a52fb45182",
+  "source_sha256": {
+    "results/v2_protocol/PROTOCOL_R4.json": "f4f5c0cca4617901aa0be71ce513941c8cded35a308bfd7403ac49a52fb45182",
+    "r1_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "tools/r4_study.py": "39793afc8aef0bb34b99d30dc899ab50352c48dbee3368a7f845e54de3be0ac4",
+    "tools/r4_build.py": "35e6a2d8105d1752f03d95735cc06ee038175d22dc988146ed7846a061edab04",
+    "experiments/r4_sequential.py": "0908668457b0e6b72060cb757d5cc79ea1a24efe17eb1a5e63e80c8c9e02cd42"
+  },
+  "collision_episodes_read": 0,
+  "official_episodes_read": 0,
+  "holdout_episodes_read": 0,
+  "parameters": {
+    "servo:W40_ACTIVE": {
+      "spec": {
+        "id": "W40_ACTIVE",
+        "family": "W40",
+        "statistic": "causal active mean",
+        "window_samples": 40,
+        "drift": 0.0,
+        "phase_conditioning": false
+      },
+      "calibration": {
+        "location": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "threshold": [
+          5.184381323181365
+        ]
+      }
+    },
+    "servo:CUSUM_ACTIVE_K05": {
+      "spec": {
+        "id": "CUSUM_ACTIVE_K05",
+        "family": "CUSUM_ACTIVE",
+        "statistic": "one-sided standardized reset CUSUM",
+        "window_samples": 0,
+        "drift": 0.5,
+        "phase_conditioning": false
+      },
+      "calibration": {
+        "location": [
+          1.830440964777459
+        ],
+        "scale": [
+          1.066668448339221
+        ],
+        "threshold": [
+          155.45421144894684
+        ]
+      }
+    },
+    "servo:CUSUM_ACTIVE_K10": {
+      "spec": {
+        "id": "CUSUM_ACTIVE_K10",
+        "family": "CUSUM_ACTIVE",
+        "statistic": "one-sided standardized reset CUSUM",
+        "window_samples": 0,
+        "drift": 1.0,
+        "phase_conditioning": false
+      },
+      "calibration": {
+        "location": [
+          1.830440964777459
+        ],
+        "scale": [
+          1.066668448339221
+        ],
+        "threshold": [
+          99.90687410946931
+        ]
+      }
+    },
+    "servo:CUSUM_PHASE_K05": {
+      "spec": {
+        "id": "CUSUM_PHASE_K05",
+        "family": "CUSUM_PHASE",
+        "statistic": "one-sided phase-standardized reset CUSUM",
+        "window_samples": 0,
+        "drift": 0.5,
+        "phase_conditioning": true
+      },
+      "calibration": {
+        "location": [
+          131.87024474833643,
+          3.133536852116656,
+          1.8237920409358361,
+          3.0441800025685852,
+          73.7130326909075
+        ],
+        "scale": [
+          37.55157555918579,
+          2.996312935690672,
+          1.0648962851269033,
+          2.6310069747731637,
+          64.17621829369928
+        ],
+        "threshold": [
+          169.07429316775108,
+          213.8100380894845,
+          156.94622687473748,
+          766.6931273006562,
+          355.4627824079163
+        ]
+      }
+    },
+    "torque:W40_ACTIVE": {
+      "spec": {
+        "id": "W40_ACTIVE",
+        "family": "W40",
+        "statistic": "causal active mean",
+        "window_samples": 40,
+        "drift": 0.0,
+        "phase_conditioning": false
+      },
+      "calibration": {
+        "location": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "threshold": [
+          4.948929857413643
+        ]
+      }
+    },
+    "torque:CUSUM_ACTIVE_K05": {
+      "spec": {
+        "id": "CUSUM_ACTIVE_K05",
+        "family": "CUSUM_ACTIVE",
+        "statistic": "one-sided standardized reset CUSUM",
+        "window_samples": 0,
+        "drift": 0.5,
+        "phase_conditioning": false
+      },
+      "calibration": {
+        "location": [
+          1.828223159930285
+        ],
+        "scale": [
+          1.0781257926507979
+        ],
+        "threshold": [
+          140.85814430816265
+        ]
+      }
+    },
+    "torque:CUSUM_ACTIVE_K10": {
+      "spec": {
+        "id": "CUSUM_ACTIVE_K10",
+        "family": "CUSUM_ACTIVE",
+        "statistic": "one-sided standardized reset CUSUM",
+        "window_samples": 0,
+        "drift": 1.0,
+        "phase_conditioning": false
+      },
+      "calibration": {
+        "location": [
+          1.828223159930285
+        ],
+        "scale": [
+          1.0781257926507979
+        ],
+        "threshold": [
+          59.837471986031744
+        ]
+      }
+    },
+    "torque:CUSUM_PHASE_K05": {
+      "spec": {
+        "id": "CUSUM_PHASE_K05",
+        "family": "CUSUM_PHASE",
+        "statistic": "one-sided phase-standardized reset CUSUM",
+        "window_samples": 0,
+        "drift": 0.5,
+        "phase_conditioning": true
+      },
+      "calibration": {
+        "location": [
+          126.96629924755347,
+          4.322520695965833,
+          1.798478715562429,
+          3.493969275242862,
+          74.23772350880526
+        ],
+        "scale": [
+          36.220978119827095,
+          4.947164742383184,
+          1.0580066890514124,
+          2.9909198053857433,
+          64.51572101525949
+        ],
+        "threshold": [
+          176.97522574610497,
+          305.1598973931702,
+          108.09706377021223,
+          581.4209036601679,
+          330.53325481694196
+        ]
+      }
+    }
+  },
+  "audit": [
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 0,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 1,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 2,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 3,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 4,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 5,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 6,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 7,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 8,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 9,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 10,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 11,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 12,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 13,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 14,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "W40_ACTIVE",
+      "case_id": 15,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 0,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 1,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 2,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 3,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 4,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 5,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 6,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 7,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 8,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 9,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 10,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 11,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 12,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 13,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 14,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 15,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 0,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 1,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 2,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 3,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 4,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 5,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 6,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 7,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 8,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 9,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 10,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 11,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 12,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 13,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 14,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 15,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 0,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 1,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 2,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 3,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 4,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 5,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 6,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 7,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 8,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 9,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 10,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 11,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 12,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 13,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 14,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "servo",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 15,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 0,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 1,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 2,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 3,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 4,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 5,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 6,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 7,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 8,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 9,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 10,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 11,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 12,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 13,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 14,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "W40_ACTIVE",
+      "case_id": 15,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 0,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 1,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 2,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 3,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 4,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 5,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 6,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 7,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 8,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 9,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 10,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 11,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 12,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 13,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 14,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K05",
+      "case_id": 15,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 0,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 1,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 2,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 3,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 4,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 5,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 6,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 7,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 8,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 9,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 10,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 11,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 12,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 13,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 14,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_ACTIVE_K10",
+      "case_id": 15,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 0,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 1,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 2,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 3,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 4,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 5,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 6,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 7,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 8,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 9,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 10,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 11,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 12,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 13,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 14,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    },
+    {
+      "architecture": "torque",
+      "variant": "CUSUM_PHASE_K05",
+      "case_id": 15,
+      "R1_FA": 0,
+      "extra_true_samples": 0,
+      "extra_rises": 0,
+      "passed": true
+    }
+  ],
+  "audit_passed": true
+}

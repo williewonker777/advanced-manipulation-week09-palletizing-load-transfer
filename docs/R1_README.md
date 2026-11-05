@@ -51,8 +51,8 @@ env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREA
 
 ## 연구 범위와 산출물
 
-- [방법과 수식](docs/V2_METHODS.md), [결과와 누락 없는 집계](docs/V2_RESULTS.md), [음성 결과·시간 진단 자체 검토](docs/V2_REVIEW.md)
-- [요구사항 감사](docs/REQUIREMENTS_AUDIT.md), [문헌과 채택 범위](docs/LITERATURE.md)
-- [발표 구성](report/PRESENTATION_V2.md), [16쪽 PDF](results/presentation.pdf)
-- [최종 기계판독 판정](results/v2_protocol/FINAL_ASSESSMENT.json), [자체 작성 그림](results/figures/)
+- [방법과 수식](V2_METHODS.md), [결과와 누락 없는 집계](V2_RESULTS.md), [음성 결과·시간 진단 자체 검토](V2_REVIEW.md)
+- [요구사항 감사](REQUIREMENTS_AUDIT.md), [문헌과 채택 범위](LITERATURE.md)
+- [발표 구성](../report/PRESENTATION_V2.md), [16쪽 PDF](../results/presentation.pdf)
+- [최종 기계판독 판정](../results/v2_protocol/FINAL_ASSESSMENT.json), [자체 작성 그림](../results/figures/)
 - 실제 하드웨어, hard real-time, 확률적 일반화, safety stop을 주장하지 않는다. 내부 trace는 학습 입력이 아니다.
