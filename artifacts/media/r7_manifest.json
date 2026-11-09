@@ -1,0 +1,552 @@
+{
+  "schema": "r7.media-manifest.v1",
+  "scope_note": "Preserved validation illustrations; not a new holdout, official run, or independent efficacy result.",
+  "reuse_contract": "Media bytes and rendered traces are unchanged. R7 reuse is authorized by inherited saved-stream and fresh full-loop bit equality.",
+  "source_manifest_sha256": "38e5e7ac30c5ebc53c12411d524839e13ffe5779cf291300b9cd971ea7bcd2a0",
+  "source_manifest_canonical_sha256": "22365b0c30b5ba0761a392956835bbaca1ce14e7b793ab5d7bd3b31ff5b22110",
+  "source_manifest_utf8": "{\n  \"schema\": \"r5.media-manifest.v1\",\n  \"scope_note\": \"Saved validation replay only; two illustrative validation examples, not independent efficacy evidence.\",\n  \"replay_contract\": \"recorded arrays only; separate MjData; mj_forward/render only; no controller, detector, evaluator, or episode execution\",\n  \"renderer\": {\n    \"file\": \"tools/render_r5_comparison.py\",\n    \"sha256\": \"aa9d159dc8e525942c464c4074c123c5d28c6ca29eeadd022ecb0a0f6b58762c\"\n  },\n  \"adoption\": {\n    \"sha256\": \"4dfd9f8817a455fee36c198e2e47e6853c2b4872b2013f76589180040e4afbc7\"\n  },\n  \"models\": [\n    {\n      \"file\": \"models/r5/servo_SCALE_STATE.json\",\n      \"sha256\": \"d71d4573fa021b60a75a65678234e92e04d732e51c74ce8056fe263b8dfe5195\"\n    },\n    {\n      \"file\": \"models/r5/torque_SCALE_STATE.json\",\n      \"sha256\": \"8924a704f42ed086a56ce2dbc90b8d275306d5252af34400d995c88d8d435a26\"\n    }\n  ],\n  \"software_gl\": {\n    \"vendor\": \"Mesa\",\n    \"renderer\": \"llvmpipe (LLVM 20.1.2, 256 bits)\",\n    \"version\": \"4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2\"\n  },\n  \"ffmpeg\": \"ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers\",\n  \"encoding\": {\n    \"ffmpeg_threads\": 1,\n    \"fps\": 12,\n    \"gif_fps\": 7\n  },\n  \"total_media_bytes\": 1120120,\n  \"cases\": [\n    {\n      \"source_case_id\": \"validation_collision_010\",\n      \"stem\": \"09_r5_servo_positive_comparison\",\n      \"selection_basis\": \"illustrative pair selected from validation; not independent efficacy evidence\",\n      \"condition\": {\n        \"mode\": \"servo\",\n        \"mass_kg\": 4.1014,\n        \"com_m\": [\n          0.01962,\n          0.00524,\n          0.03853\n        ],\n        \"collision_start_s\": 2.713,\n        \"collision_duration_s\": 0.12,\n        \"force_n\": [\n          7.5,\n          0.0,\n          0.0\n        ],\n        \"direction\": \"+x\"\n      },\n      \"threshold\": 3.430453910703297,\n      \"timewarp\": [\n        {\n          \"simulation_start_s\": 0.0,\n          \"simulation_end_s\": 1.2,\n          \"playback_speed\": 2.6\n        },\n        {\n          \"simulation_start_s\": 1.2,\n          \"simulation_end_s\": 2.45,\n          \"playback_speed\": 1.7\n        },\n        {\n          \"simulation_start_s\": 2.45,\n          \"simulation_end_s\": 3.15,\n          \"playback_speed\": 0.35\n        },\n        {\n          \"simulation_start_s\": 3.15,\n          \"simulation_end_s\": 4.25,\n          \"playback_speed\": 1.8\n        },\n        {\n          \"simulation_start_s\": 4.25,\n          \"simulation_end_s\": 5.999,\n          \"playback_speed\": 2.8\n        }\n      ],\n      \"rendered_frame_count\": 54,\n      \"inputs\": [\n        {\n          \"source_id\": \"R1:validation_collision_010:signals\",\n          \"sha256\": \"fbbe6bdfd98bee3a3fd01cf9f22f88b7230ba99ed938aeeac59ec329a3e4cef1\"\n        },\n        {\n          \"source_id\": \"R1:validation_collision_010:physical\",\n          \"sha256\": \"d9aa38c60a48afc3f348daea01889478cc2637ccd63bb818798b190ae621ab0a\"\n        },\n        {\n          \"source_id\": \"R1:validation_collision_010:monitor\",\n          \"sha256\": \"3061f30f58b35afa059bd64ada20481c534057f5b15390723acbc4b1b01fb90f\"\n        },\n        {\n          \"source_id\": \"R1:validation_collision_010:row-sidecar\",\n          \"sha256\": \"64752d65fa878b6061962a16d50b728744e1ed132264aa319433e8ad0fae4a74\",\n          \"public_file\": \"results/v2_protocol/R5_BASE_validation_R1_servo.json\"\n        },\n        {\n          \"source_id\": \"SCALE_STATE:validation_collision_010:signals\",\n          \"sha256\": \"fbbe6bdfd98bee3a3fd01cf9f22f88b7230ba99ed938aeeac59ec329a3e4cef1\"\n        },\n        {\n          \"source_id\": \"SCALE_STATE:validation_collision_010:physical\",\n          \"sha256\": \"d9aa38c60a48afc3f348daea01889478cc2637ccd63bb818798b190ae621ab0a\"\n        },\n        {\n          \"source_id\": \"SCALE_STATE:validation_collision_010:monitor\",\n          \"sha256\": \"93c46c3ee7764039c6a6b7b2531a057dc41b5984618c97556c28ad5531cac82d\"\n        },\n        {\n          \"source_id\": \"SCALE_STATE:validation_collision_010:row-sidecar\",\n          \"sha256\": \"d93fc4dd13636d120d6fb847e9a78bcbfb830997b8744e7c2e94d3bfdd7fd931\",\n          \"public_file\": \"results/v2_protocol/R5_BASE_validation_SCALE_STATE_servo.json\"\n        }\n      ],\n      \"artifacts\": [\n        {\n          \"file\": \"artifacts/media/09_r5_servo_positive_comparison.mp4\",\n          \"sha256\": \"782ee314d338cb6e28e2dce1d8c8294524e2d3d4bcdfa06999bb17ed2604c3f1\",\n          \"bytes\": 141630,\n          \"width\": 1280,\n          \"height\": 720,\n          \"frame_count\": 54,\n          \"duration_s\": 4.5\n        },\n        {\n          \"file\": \"artifacts/media/09_r5_servo_positive_comparison.gif\",\n          \"sha256\": \"ee1bfbaf455d9251249f2e0d4fd3d1b88b58abecc072902a76d17244442d8ec0\",\n          \"bytes\": 413533,\n          \"width\": 640,\n          \"height\": 360,\n          \"frame_count\": 32,\n          \"duration_s\": 4.57\n        }\n      ]\n    },\n    {\n      \"source_case_id\": \"validation_collision_011\",\n      \"stem\": \"10_r5_servo_negative_comparison\",\n      \"selection_basis\": \"illustrative pair selected from validation; not independent efficacy evidence\",\n      \"condition\": {\n        \"mode\": \"servo\",\n        \"mass_kg\": 4.1014,\n        \"com_m\": [\n          0.01962,\n          0.00524,\n          0.03853\n        ],\n        \"collision_start_s\": 2.713,\n        \"collision_duration_s\": 0.12,\n        \"force_n\": [\n          -7.5,\n          0.0,\n          0.0\n        ],\n        \"direction\": \"-x\"\n      },\n      \"threshold\": 3.430453910703297,\n      \"timewarp\": [\n        {\n          \"simulation_start_s\": 0.0,\n          \"simulation_end_s\": 1.2,\n          \"playback_speed\": 2.6\n        },\n        {\n          \"simulation_start_s\": 1.2,\n          \"simulation_end_s\": 2.45,\n          \"playback_speed\": 1.7\n        },\n        {\n          \"simulation_start_s\": 2.45,\n          \"simulation_end_s\": 3.15,\n          \"playback_speed\": 0.35\n        },\n        {\n          \"simulation_start_s\": 3.15,\n          \"simulation_end_s\": 4.25,\n          \"playback_speed\": 1.8\n        },\n        {\n          \"simulation_start_s\": 4.25,\n          \"simulation_end_s\": 5.999,\n          \"playback_speed\": 2.8\n        }\n      ],\n      \"rendered_frame_count\": 54,\n      \"inputs\": [\n        {\n          \"source_id\": \"R1:validation_collision_011:signals\",\n          \"sha256\": \"ac6f0f55e36ca3c79223c1f64058f201d09b0dd8f1bf394ed03a6047d36247a1\"\n        },\n        {\n          \"source_id\": \"R1:validation_collision_011:physical\",\n          \"sha256\": \"5af64581081d58c599f8829d45bb1c4047701d791da5f86eb3dd10b0bcf8bd2a\"\n        },\n        {\n          \"source_id\": \"R1:validation_collision_011:monitor\",\n          \"sha256\": \"3061f30f58b35afa059bd64ada20481c534057f5b15390723acbc4b1b01fb90f\"\n        },\n        {\n          \"source_id\": \"R1:validation_collision_011:row-sidecar\",\n          \"sha256\": \"64752d65fa878b6061962a16d50b728744e1ed132264aa319433e8ad0fae4a74\",\n          \"public_file\": \"results/v2_protocol/R5_BASE_validation_R1_servo.json\"\n        },\n        {\n          \"source_id\": \"SCALE_STATE:validation_collision_011:signals\",\n          \"sha256\": \"ac6f0f55e36ca3c79223c1f64058f201d09b0dd8f1bf394ed03a6047d36247a1\"\n        },\n        {\n          \"source_id\": \"SCALE_STATE:validation_collision_011:physical\",\n          \"sha256\": \"5af64581081d58c599f8829d45bb1c4047701d791da5f86eb3dd10b0bcf8bd2a\"\n        },\n        {\n          \"source_id\": \"SCALE_STATE:validation_collision_011:monitor\",\n          \"sha256\": \"43eabfc17090a9fe73cb688d20c2f250b9b318c17623676d816348d5f58faf0a\"\n        },\n        {\n          \"source_id\": \"SCALE_STATE:validation_collision_011:row-sidecar\",\n          \"sha256\": \"d93fc4dd13636d120d6fb847e9a78bcbfb830997b8744e7c2e94d3bfdd7fd931\",\n          \"public_file\": \"results/v2_protocol/R5_BASE_validation_SCALE_STATE_servo.json\"\n        }\n      ],\n      \"artifacts\": [\n        {\n          \"file\": \"artifacts/media/10_r5_servo_negative_comparison.mp4\",\n          \"sha256\": \"b096a4a483e4a8a8f196d11a60dd85bd6a2c48a722d0ec58bce6a3da0b0447ba\",\n          \"bytes\": 140755,\n          \"width\": 1280,\n          \"height\": 720,\n          \"frame_count\": 54,\n          \"duration_s\": 4.5\n        },\n        {\n          \"file\": \"artifacts/media/10_r5_servo_negative_comparison.gif\",\n          \"sha256\": \"51f3122a342d1e2e43de5e6c59d8ce96a33e58f088f6c45dd464c308b064f10a\",\n          \"bytes\": 424202,\n          \"width\": 640,\n          \"height\": 360,\n          \"frame_count\": 32,\n          \"duration_s\": 4.57\n        }\n      ]\n    }\n  ]\n}\n",
+  "source_manifest": {
+    "schema": "r5.media-manifest.v1",
+    "scope_note": "Saved validation replay only; two illustrative validation examples, not independent efficacy evidence.",
+    "replay_contract": "recorded arrays only; separate MjData; mj_forward/render only; no controller, detector, evaluator, or episode execution",
+    "renderer": {
+      "file": "tools/render_r5_comparison.py",
+      "sha256": "aa9d159dc8e525942c464c4074c123c5d28c6ca29eeadd022ecb0a0f6b58762c"
+    },
+    "adoption": {
+      "sha256": "4dfd9f8817a455fee36c198e2e47e6853c2b4872b2013f76589180040e4afbc7"
+    },
+    "models": [
+      {
+        "file": "models/r5/servo_SCALE_STATE.json",
+        "sha256": "d71d4573fa021b60a75a65678234e92e04d732e51c74ce8056fe263b8dfe5195"
+      },
+      {
+        "file": "models/r5/torque_SCALE_STATE.json",
+        "sha256": "8924a704f42ed086a56ce2dbc90b8d275306d5252af34400d995c88d8d435a26"
+      }
+    ],
+    "software_gl": {
+      "vendor": "Mesa",
+      "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+      "version": "4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2"
+    },
+    "ffmpeg": "ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers",
+    "encoding": {
+      "ffmpeg_threads": 1,
+      "fps": 12,
+      "gif_fps": 7
+    },
+    "total_media_bytes": 1120120,
+    "cases": [
+      {
+        "source_case_id": "validation_collision_010",
+        "stem": "09_r5_servo_positive_comparison",
+        "selection_basis": "illustrative pair selected from validation; not independent efficacy evidence",
+        "condition": {
+          "mode": "servo",
+          "mass_kg": 4.1014,
+          "com_m": [
+            0.01962,
+            0.00524,
+            0.03853
+          ],
+          "collision_start_s": 2.713,
+          "collision_duration_s": 0.12,
+          "force_n": [
+            7.5,
+            0.0,
+            0.0
+          ],
+          "direction": "+x"
+        },
+        "threshold": 3.430453910703297,
+        "timewarp": [
+          {
+            "simulation_start_s": 0.0,
+            "simulation_end_s": 1.2,
+            "playback_speed": 2.6
+          },
+          {
+            "simulation_start_s": 1.2,
+            "simulation_end_s": 2.45,
+            "playback_speed": 1.7
+          },
+          {
+            "simulation_start_s": 2.45,
+            "simulation_end_s": 3.15,
+            "playback_speed": 0.35
+          },
+          {
+            "simulation_start_s": 3.15,
+            "simulation_end_s": 4.25,
+            "playback_speed": 1.8
+          },
+          {
+            "simulation_start_s": 4.25,
+            "simulation_end_s": 5.999,
+            "playback_speed": 2.8
+          }
+        ],
+        "rendered_frame_count": 54,
+        "inputs": [
+          {
+            "source_id": "R1:validation_collision_010:signals",
+            "sha256": "fbbe6bdfd98bee3a3fd01cf9f22f88b7230ba99ed938aeeac59ec329a3e4cef1"
+          },
+          {
+            "source_id": "R1:validation_collision_010:physical",
+            "sha256": "d9aa38c60a48afc3f348daea01889478cc2637ccd63bb818798b190ae621ab0a"
+          },
+          {
+            "source_id": "R1:validation_collision_010:monitor",
+            "sha256": "3061f30f58b35afa059bd64ada20481c534057f5b15390723acbc4b1b01fb90f"
+          },
+          {
+            "source_id": "R1:validation_collision_010:row-sidecar",
+            "sha256": "64752d65fa878b6061962a16d50b728744e1ed132264aa319433e8ad0fae4a74",
+            "public_file": "results/v2_protocol/R5_BASE_validation_R1_servo.json"
+          },
+          {
+            "source_id": "SCALE_STATE:validation_collision_010:signals",
+            "sha256": "fbbe6bdfd98bee3a3fd01cf9f22f88b7230ba99ed938aeeac59ec329a3e4cef1"
+          },
+          {
+            "source_id": "SCALE_STATE:validation_collision_010:physical",
+            "sha256": "d9aa38c60a48afc3f348daea01889478cc2637ccd63bb818798b190ae621ab0a"
+          },
+          {
+            "source_id": "SCALE_STATE:validation_collision_010:monitor",
+            "sha256": "93c46c3ee7764039c6a6b7b2531a057dc41b5984618c97556c28ad5531cac82d"
+          },
+          {
+            "source_id": "SCALE_STATE:validation_collision_010:row-sidecar",
+            "sha256": "d93fc4dd13636d120d6fb847e9a78bcbfb830997b8744e7c2e94d3bfdd7fd931",
+            "public_file": "results/v2_protocol/R5_BASE_validation_SCALE_STATE_servo.json"
+          }
+        ],
+        "artifacts": [
+          {
+            "file": "artifacts/media/09_r5_servo_positive_comparison.mp4",
+            "sha256": "782ee314d338cb6e28e2dce1d8c8294524e2d3d4bcdfa06999bb17ed2604c3f1",
+            "bytes": 141630,
+            "width": 1280,
+            "height": 720,
+            "frame_count": 54,
+            "duration_s": 4.5
+          },
+          {
+            "file": "artifacts/media/09_r5_servo_positive_comparison.gif",
+            "sha256": "ee1bfbaf455d9251249f2e0d4fd3d1b88b58abecc072902a76d17244442d8ec0",
+            "bytes": 413533,
+            "width": 640,
+            "height": 360,
+            "frame_count": 32,
+            "duration_s": 4.57
+          }
+        ]
+      },
+      {
+        "source_case_id": "validation_collision_011",
+        "stem": "10_r5_servo_negative_comparison",
+        "selection_basis": "illustrative pair selected from validation; not independent efficacy evidence",
+        "condition": {
+          "mode": "servo",
+          "mass_kg": 4.1014,
+          "com_m": [
+            0.01962,
+            0.00524,
+            0.03853
+          ],
+          "collision_start_s": 2.713,
+          "collision_duration_s": 0.12,
+          "force_n": [
+            -7.5,
+            0.0,
+            0.0
+          ],
+          "direction": "-x"
+        },
+        "threshold": 3.430453910703297,
+        "timewarp": [
+          {
+            "simulation_start_s": 0.0,
+            "simulation_end_s": 1.2,
+            "playback_speed": 2.6
+          },
+          {
+            "simulation_start_s": 1.2,
+            "simulation_end_s": 2.45,
+            "playback_speed": 1.7
+          },
+          {
+            "simulation_start_s": 2.45,
+            "simulation_end_s": 3.15,
+            "playback_speed": 0.35
+          },
+          {
+            "simulation_start_s": 3.15,
+            "simulation_end_s": 4.25,
+            "playback_speed": 1.8
+          },
+          {
+            "simulation_start_s": 4.25,
+            "simulation_end_s": 5.999,
+            "playback_speed": 2.8
+          }
+        ],
+        "rendered_frame_count": 54,
+        "inputs": [
+          {
+            "source_id": "R1:validation_collision_011:signals",
+            "sha256": "ac6f0f55e36ca3c79223c1f64058f201d09b0dd8f1bf394ed03a6047d36247a1"
+          },
+          {
+            "source_id": "R1:validation_collision_011:physical",
+            "sha256": "5af64581081d58c599f8829d45bb1c4047701d791da5f86eb3dd10b0bcf8bd2a"
+          },
+          {
+            "source_id": "R1:validation_collision_011:monitor",
+            "sha256": "3061f30f58b35afa059bd64ada20481c534057f5b15390723acbc4b1b01fb90f"
+          },
+          {
+            "source_id": "R1:validation_collision_011:row-sidecar",
+            "sha256": "64752d65fa878b6061962a16d50b728744e1ed132264aa319433e8ad0fae4a74",
+            "public_file": "results/v2_protocol/R5_BASE_validation_R1_servo.json"
+          },
+          {
+            "source_id": "SCALE_STATE:validation_collision_011:signals",
+            "sha256": "ac6f0f55e36ca3c79223c1f64058f201d09b0dd8f1bf394ed03a6047d36247a1"
+          },
+          {
+            "source_id": "SCALE_STATE:validation_collision_011:physical",
+            "sha256": "5af64581081d58c599f8829d45bb1c4047701d791da5f86eb3dd10b0bcf8bd2a"
+          },
+          {
+            "source_id": "SCALE_STATE:validation_collision_011:monitor",
+            "sha256": "43eabfc17090a9fe73cb688d20c2f250b9b318c17623676d816348d5f58faf0a"
+          },
+          {
+            "source_id": "SCALE_STATE:validation_collision_011:row-sidecar",
+            "sha256": "d93fc4dd13636d120d6fb847e9a78bcbfb830997b8744e7c2e94d3bfdd7fd931",
+            "public_file": "results/v2_protocol/R5_BASE_validation_SCALE_STATE_servo.json"
+          }
+        ],
+        "artifacts": [
+          {
+            "file": "artifacts/media/10_r5_servo_negative_comparison.mp4",
+            "sha256": "b096a4a483e4a8a8f196d11a60dd85bd6a2c48a722d0ec58bce6a3da0b0447ba",
+            "bytes": 140755,
+            "width": 1280,
+            "height": 720,
+            "frame_count": 54,
+            "duration_s": 4.5
+          },
+          {
+            "file": "artifacts/media/10_r5_servo_negative_comparison.gif",
+            "sha256": "51f3122a342d1e2e43de5e6c59d8ce96a33e58f088f6c45dd464c308b064f10a",
+            "bytes": 424202,
+            "width": 640,
+            "height": 360,
+            "frame_count": 32,
+            "duration_s": 4.57
+          }
+        ]
+      }
+    ]
+  },
+  "public_source_catalogs": [
+    {
+      "file": "results/v2_protocol/R5_BASE_validation_R1_servo.json",
+      "sha256": "64752d65fa878b6061962a16d50b728744e1ed132264aa319433e8ad0fae4a74"
+    },
+    {
+      "file": "results/v2_protocol/R5_BASE_validation_SCALE_STATE_servo.json",
+      "sha256": "d93fc4dd13636d120d6fb847e9a78bcbfb830997b8744e7c2e94d3bfdd7fd931"
+    }
+  ],
+  "adoption": {
+    "file": "results/v2_protocol/R7_ADOPTION.json",
+    "sha256": "bfac1fe20e1f947b40701eb548d5c7bb7352ef7f2195439396b41485e39eb0db",
+    "effective_variants": {
+      "servo": "SCALE_STATE",
+      "torque": "R1"
+    }
+  },
+  "candidate": {
+    "file": "my_detector.py",
+    "sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643"
+  },
+  "saved_equivalence": {
+    "file": "results/v2_protocol/R7_SAVED_EQUIVALENCE.json",
+    "sha256": "392029c0b539beca082dc723b8e58988170f981d853681f642a53aec2eb00485",
+    "streams": 990
+  },
+  "fresh_full_loop_parity": {
+    "file": "results/v2_protocol/R7_PARITY_RESULT.json",
+    "sha256": "f8fd5d2573262a2b57a00ce7405e9bbb2f191d776486b1fc6af6e089d92e3361",
+    "episodes": 8,
+    "pair_count": 4
+  },
+  "software_gl": {
+    "vendor": "Mesa",
+    "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+    "version": "4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2"
+  },
+  "encoding": {
+    "ffmpeg_threads": 1,
+    "fps": 12,
+    "gif_fps": 7
+  },
+  "source_renderer": {
+    "file": "tools/render_r5_comparison.py",
+    "sha256": "aa9d159dc8e525942c464c4074c123c5d28c6ca29eeadd022ecb0a0f6b58762c"
+  },
+  "cases": [
+    {
+      "source_case_id": "validation_collision_010",
+      "stem": "09_r7_servo_positive_comparison",
+      "source_stem": "09_r5_servo_positive_comparison",
+      "selection_basis": "illustrative pair selected from validation; not independent efficacy evidence",
+      "condition": {
+        "mode": "servo",
+        "mass_kg": 4.1014,
+        "com_m": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "collision_start_s": 2.713,
+        "collision_duration_s": 0.12,
+        "force_n": [
+          7.5,
+          0.0,
+          0.0
+        ],
+        "direction": "+x"
+      },
+      "threshold": 3.430453910703297,
+      "timewarp": [
+        {
+          "simulation_start_s": 0.0,
+          "simulation_end_s": 1.2,
+          "playback_speed": 2.6
+        },
+        {
+          "simulation_start_s": 1.2,
+          "simulation_end_s": 2.45,
+          "playback_speed": 1.7
+        },
+        {
+          "simulation_start_s": 2.45,
+          "simulation_end_s": 3.15,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 3.15,
+          "simulation_end_s": 4.25,
+          "playback_speed": 1.8
+        },
+        {
+          "simulation_start_s": 4.25,
+          "simulation_end_s": 5.999,
+          "playback_speed": 2.8
+        }
+      ],
+      "rendered_frame_count": 54,
+      "source_inputs": [
+        {
+          "source_id": "R1:validation_collision_010:signals",
+          "sha256": "fbbe6bdfd98bee3a3fd01cf9f22f88b7230ba99ed938aeeac59ec329a3e4cef1"
+        },
+        {
+          "source_id": "R1:validation_collision_010:physical",
+          "sha256": "d9aa38c60a48afc3f348daea01889478cc2637ccd63bb818798b190ae621ab0a"
+        },
+        {
+          "source_id": "R1:validation_collision_010:monitor",
+          "sha256": "3061f30f58b35afa059bd64ada20481c534057f5b15390723acbc4b1b01fb90f"
+        },
+        {
+          "source_id": "R1:validation_collision_010:row-sidecar",
+          "sha256": "64752d65fa878b6061962a16d50b728744e1ed132264aa319433e8ad0fae4a74",
+          "public_file": "results/v2_protocol/R5_BASE_validation_R1_servo.json"
+        },
+        {
+          "source_id": "SCALE_STATE:validation_collision_010:signals",
+          "sha256": "fbbe6bdfd98bee3a3fd01cf9f22f88b7230ba99ed938aeeac59ec329a3e4cef1"
+        },
+        {
+          "source_id": "SCALE_STATE:validation_collision_010:physical",
+          "sha256": "d9aa38c60a48afc3f348daea01889478cc2637ccd63bb818798b190ae621ab0a"
+        },
+        {
+          "source_id": "SCALE_STATE:validation_collision_010:monitor",
+          "sha256": "93c46c3ee7764039c6a6b7b2531a057dc41b5984618c97556c28ad5531cac82d"
+        },
+        {
+          "source_id": "SCALE_STATE:validation_collision_010:row-sidecar",
+          "sha256": "d93fc4dd13636d120d6fb847e9a78bcbfb830997b8744e7c2e94d3bfdd7fd931",
+          "public_file": "results/v2_protocol/R5_BASE_validation_SCALE_STATE_servo.json"
+        }
+      ],
+      "equivalence_witness": {
+        "stream_id": "validation-servo-018",
+        "stage": "validation",
+        "mode": "servo",
+        "stage_index": 18,
+        "source_type": "study",
+        "source_raw_sha256": "fbbe6bdfd98bee3a3fd01cf9f22f88b7230ba99ed938aeeac59ec329a3e4cef1",
+        "passed": true,
+        "offline_decisions_exact": true,
+        "proof_sha256": "22ecbda452ceb4b1ba84ba88674b13f97925c13ae5df2d9a9c5a85b06b346f92"
+      },
+      "artifacts": [
+        {
+          "file": "artifacts/media/09_r7_servo_positive_comparison.mp4",
+          "sha256": "782ee314d338cb6e28e2dce1d8c8294524e2d3d4bcdfa06999bb17ed2604c3f1",
+          "bytes": 141630,
+          "width": 1280,
+          "height": 720,
+          "frame_count": 54,
+          "duration_s": 4.5,
+          "source_byte_sha256": "782ee314d338cb6e28e2dce1d8c8294524e2d3d4bcdfa06999bb17ed2604c3f1"
+        },
+        {
+          "file": "artifacts/media/09_r7_servo_positive_comparison.gif",
+          "sha256": "ee1bfbaf455d9251249f2e0d4fd3d1b88b58abecc072902a76d17244442d8ec0",
+          "bytes": 413533,
+          "width": 640,
+          "height": 360,
+          "frame_count": 32,
+          "duration_s": 4.57,
+          "source_byte_sha256": "ee1bfbaf455d9251249f2e0d4fd3d1b88b58abecc072902a76d17244442d8ec0"
+        }
+      ]
+    },
+    {
+      "source_case_id": "validation_collision_011",
+      "stem": "10_r7_servo_negative_comparison",
+      "source_stem": "10_r5_servo_negative_comparison",
+      "selection_basis": "illustrative pair selected from validation; not independent efficacy evidence",
+      "condition": {
+        "mode": "servo",
+        "mass_kg": 4.1014,
+        "com_m": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "collision_start_s": 2.713,
+        "collision_duration_s": 0.12,
+        "force_n": [
+          -7.5,
+          0.0,
+          0.0
+        ],
+        "direction": "-x"
+      },
+      "threshold": 3.430453910703297,
+      "timewarp": [
+        {
+          "simulation_start_s": 0.0,
+          "simulation_end_s": 1.2,
+          "playback_speed": 2.6
+        },
+        {
+          "simulation_start_s": 1.2,
+          "simulation_end_s": 2.45,
+          "playback_speed": 1.7
+        },
+        {
+          "simulation_start_s": 2.45,
+          "simulation_end_s": 3.15,
+          "playback_speed": 0.35
+        },
+        {
+          "simulation_start_s": 3.15,
+          "simulation_end_s": 4.25,
+          "playback_speed": 1.8
+        },
+        {
+          "simulation_start_s": 4.25,
+          "simulation_end_s": 5.999,
+          "playback_speed": 2.8
+        }
+      ],
+      "rendered_frame_count": 54,
+      "source_inputs": [
+        {
+          "source_id": "R1:validation_collision_011:signals",
+          "sha256": "ac6f0f55e36ca3c79223c1f64058f201d09b0dd8f1bf394ed03a6047d36247a1"
+        },
+        {
+          "source_id": "R1:validation_collision_011:physical",
+          "sha256": "5af64581081d58c599f8829d45bb1c4047701d791da5f86eb3dd10b0bcf8bd2a"
+        },
+        {
+          "source_id": "R1:validation_collision_011:monitor",
+          "sha256": "3061f30f58b35afa059bd64ada20481c534057f5b15390723acbc4b1b01fb90f"
+        },
+        {
+          "source_id": "R1:validation_collision_011:row-sidecar",
+          "sha256": "64752d65fa878b6061962a16d50b728744e1ed132264aa319433e8ad0fae4a74",
+          "public_file": "results/v2_protocol/R5_BASE_validation_R1_servo.json"
+        },
+        {
+          "source_id": "SCALE_STATE:validation_collision_011:signals",
+          "sha256": "ac6f0f55e36ca3c79223c1f64058f201d09b0dd8f1bf394ed03a6047d36247a1"
+        },
+        {
+          "source_id": "SCALE_STATE:validation_collision_011:physical",
+          "sha256": "5af64581081d58c599f8829d45bb1c4047701d791da5f86eb3dd10b0bcf8bd2a"
+        },
+        {
+          "source_id": "SCALE_STATE:validation_collision_011:monitor",
+          "sha256": "43eabfc17090a9fe73cb688d20c2f250b9b318c17623676d816348d5f58faf0a"
+        },
+        {
+          "source_id": "SCALE_STATE:validation_collision_011:row-sidecar",
+          "sha256": "d93fc4dd13636d120d6fb847e9a78bcbfb830997b8744e7c2e94d3bfdd7fd931",
+          "public_file": "results/v2_protocol/R5_BASE_validation_SCALE_STATE_servo.json"
+        }
+      ],
+      "equivalence_witness": {
+        "stream_id": "validation-servo-019",
+        "stage": "validation",
+        "mode": "servo",
+        "stage_index": 19,
+        "source_type": "study",
+        "source_raw_sha256": "ac6f0f55e36ca3c79223c1f64058f201d09b0dd8f1bf394ed03a6047d36247a1",
+        "passed": true,
+        "offline_decisions_exact": true,
+        "proof_sha256": "a51395f14e449c81e5a072bcbf98559829971358816e92c4ca2ae68255d10558"
+      },
+      "artifacts": [
+        {
+          "file": "artifacts/media/10_r7_servo_negative_comparison.mp4",
+          "sha256": "b096a4a483e4a8a8f196d11a60dd85bd6a2c48a722d0ec58bce6a3da0b0447ba",
+          "bytes": 140755,
+          "width": 1280,
+          "height": 720,
+          "frame_count": 54,
+          "duration_s": 4.5,
+          "source_byte_sha256": "b096a4a483e4a8a8f196d11a60dd85bd6a2c48a722d0ec58bce6a3da0b0447ba"
+        },
+        {
+          "file": "artifacts/media/10_r7_servo_negative_comparison.gif",
+          "sha256": "51f3122a342d1e2e43de5e6c59d8ce96a33e58f088f6c45dd464c308b064f10a",
+          "bytes": 424202,
+          "width": 640,
+          "height": 360,
+          "frame_count": 32,
+          "duration_s": 4.57,
+          "source_byte_sha256": "51f3122a342d1e2e43de5e6c59d8ce96a33e58f088f6c45dd464c308b064f10a"
+        }
+      ]
+    }
+  ],
+  "total_media_bytes": 1120120,
+  "raw_traces_distributed": false,
+  "new_simulation_or_rendering": false
+}

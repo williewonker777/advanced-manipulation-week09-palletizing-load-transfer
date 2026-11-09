@@ -5,14 +5,14 @@
     "torque": "R1"
   },
   "effective_variants": {
-    "servo": "R1",
+    "servo": "SCALE_STATE",
     "torque": "R1"
   },
-  "final_assembly": "R1",
+  "final_assembly": "R7",
   "final_files": {
     "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
     "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
-    "my_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+    "my_detector.py": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643"
   },
   "holdout_review_sha256": "3be699538c8275d48b8ec5f2d048d5fcc7069c67f2f28bf97fccc26d24d61a3e",
   "official_sha256": "bba518caa57ed61b7d08f6871c437e9c80415a4f3b66517a4820b346c99e0ae7",
@@ -21,17 +21,28 @@
   "contract_vetoed_candidate": false,
   "fallback_only_from_prefrozen_assemblies": true,
   "repair_or_retest_after_holdout": false,
-  "publication_vetoed_candidate": true,
-  "post_publication_document_gate_passed": false,
-  "final_reason": "S5_PUBLIC_DOCUMENT_ORPHAN_GATE_FAILED",
-  "late_failure": {
-    "file": "results/v2_protocol/R7_FAILURE.json",
-    "sha256": "cd3636d5605d71b19bb653c17f2ce5f3a7132df11c170fcdd9bee5064b8e8b82"
+  "restoration_decision": {
+    "file": "results/v2_protocol/R7_RESTORATION.json",
+    "sha256": "c8bc540df1186cc1a005151acc2b184e107bc506f0847c654950aa28dff166f4"
   },
-  "supersedes_S4_adoption": {
+  "source_S4_adoption": {
     "file": "results/v2_protocol/R7_S4_ADOPTION.json",
     "sha256": "30bcf47ae7910aa6e1225139753b035e901da170bf7ec7379c63cbb9b06c1623"
   },
-  "authority": "This is the single current final decision; the S4 copy is historical positive trial evidence.",
-  "no_evaluation_or_candidate_repair_after_failure": true
+  "source_veto_adoption": {
+    "file": "results/v2_protocol/R7_VETO_ADOPTION.json",
+    "sha256": "e33e32be57cb4c8418319462d4e3c68a87f573a5e1869f0932c557d59c0cd9b7"
+  },
+  "source_failure": {
+    "file": "results/v2_protocol/R7_FAILURE.json",
+    "sha256": "cd3636d5605d71b19bb653c17f2ce5f3a7132df11c170fcdd9bee5064b8e8b82"
+  },
+  "user_decision": {
+    "quote": "서보 후보 채택 복원"
+  },
+  "historical_publication_veto": true,
+  "restored_by_explicit_user_decision": true,
+  "no_new_physical_evaluation": true,
+  "current_validation_record": "results/v2_protocol/R7_RESTORATION_VALIDATION.json",
+  "authority": "Single current final adoption; S4, veto and failure remain unchanged historical evidence."
 }

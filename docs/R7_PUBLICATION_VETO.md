@@ -33,3 +33,12 @@
 | B 토크 | 8 kg / 1.42 s | 놓침 | 놓침 | 36 | 24 | 0회 | 40 N |
 | B 토크 | 8 kg / 3 s | 56 | 43 | 26 | 18 | 1회 | 10 N |
 | B 토크 | 8 kg / 3.86 s | 놓침 | 91 | 42 | 22 | 0회 | 15 N |
+
+
+## 서보 후보 채택 복원 — 현재 최종 판정
+
+사용자의 “서보 후보 채택 복원” 결정으로 현재 최종 제출은 **A 서보 SCALE_STATE / B 토크 R1**이다. 앞의 R1 판정과 표는 복원 전의 역사적 상태로 보존한다. 문서 검사는 사전 등록 protocol의 되돌림 조건이나 execution order에 없고, 기존 고아 문서는 이미 연결됐다. 후보는 모든 과학·공식·제출 관문을 통과한 동결 바이트 그대로다.
+
+후보·모델·임계·관문·비교 코드와 측정 자료는 바뀌지 않았다. 시뮬레이션·holdout·공식은 다시 돌리지 않고 최종 파일의 전체 테스트·기본 이름 제출 호환성·공개 검사만 다시 확인한다. 09/10은 SHA가 같은 저장 validation 설명 영상이며 새 holdout 영상이 아니다.
+
+[복원 결정](../results/v2_protocol/R7_RESTORATION.json), [현재 판정](../results/v2_protocol/R7_ADOPTION.json), [보존한 veto 판정](../results/v2_protocol/R7_VETO_ADOPTION.json), [현재 결과](R7_RESULTS.md).

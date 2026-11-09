@@ -1,6 +1,10 @@
-# Week 9 Palletizing Load Transfer — R7 기록 수정 재검증
+# Week 9 Palletizing Load Transfer — R7 서보 후보 채택 복원
 
-**최종 제출: S5 공개 문서 연결 검사(고아 문서 10개) 실패로 A 서보와 B 토크 모두 R1을 유지했다. 실패 뒤 후보를 고치거나 다시 실행하지 않았다.**
+**최종 제출: A 서보에는 기록 결함을 고친 검증 경로로 확인한 SCALE_STATE 감지 채널을 채택했고, B 토크는 R1을 유지했다.**
+
+## 판정 복원 경위
+
+S5 문서 연결 검사 뒤 R1으로 되돌린 기록은 보존했다. 이후 명시적 사용자 결정 ‘서보 후보 채택 복원’에 따라 A 서보 후보를 최종 제출에 복원했다. protocol의 되돌림 조건과 실행 순서에는 문서 연결 검사가 포함되지 않는다. 후보·자료·관문 숫자는 바꾸지 않았고 시뮬레이션·holdout·공식 평가는 다시 실행하지 않았다. 복원한 최종 조립으로 작업 사본 688개와 공개형 사본 569개 전체 테스트, 각 기본 제출 계약 8개를 새로 통과했다. 기존 677개 기록은 S4 후보 계약의 보존값이며 이번 테스트 수와 합치지 않는다.
 
 기준=초기 제공본, v1=첫 개선본, R1=고정 비교 제어·감지기, R7=후보 바이트와 판정 규칙은 그대로 두고 결과 기록 경로만 고친 재검증본이다. A=서보, B=토크, FA=오감지다.
 
@@ -8,9 +12,15 @@
 |---|---|---|---|
 | [![R1 A 서보](artifacts/media/05_v2_servo_transport_collision.gif)](artifacts/media/05_v2_servo_transport_collision.mp4) | [![R1 B 토크](artifacts/media/06_v2_torque_transport_collision.gif)](artifacts/media/06_v2_torque_transport_collision.mp4) | [![기준/v1/R1/R2 A](artifacts/media/07_r2_servo_comparison.gif)](artifacts/media/07_r2_servo_comparison.mp4) | [![기준/v1/R1/R2 B](artifacts/media/08_r2_torque_comparison.gif)](artifacts/media/08_r2_torque_comparison.mp4) |
 
+| R7 양성 비교 | R7 음성 비교 |
+|---|---|
+| [![R7 양성 비교](artifacts/media/09_r7_servo_positive_comparison.gif)](artifacts/media/09_r7_servo_positive_comparison.mp4) | [![R7 음성 비교](artifacts/media/10_r7_servo_negative_comparison.gif)](artifacts/media/10_r7_servo_negative_comparison.mp4) |
+
+09/10은 R5 저장 validation 장면을 비트 동등성 근거로 다시 쓴 설명용 비교다. 새 holdout 효능 영상이 아니다.
+
 ## 결론과 근거
 
-S5 공개 문서 연결 검사(고아 문서 10개) 실패로 A 서보와 B 토크 모두 R1을 유지했다. 실패 뒤 후보를 고치거나 다시 실행하지 않았다. NumPy scalar만 기본 JSON형으로 엄격하게 바꾸고 배열·NaN·무한대·비문자 key는 거부했다. 후보·모델 263개 파라미터·임계값·정규화·R1 제어기·관문 숫자는 바꾸지 않았다. 사전 전체 677개와 최종 전체 677개, 기본 이름 8개 검사가 통과했다. 과학·공식·계약 관문은 통과했지만 S5 고아 문서 10개 검사 실패로 최종 R1이다. '저장 자료로 승계한 단계'·'새 holdout'·'새 공식'은 e26 후보 시험 표이며 최종 R1 성능표가 아니다(H의 R1 비교 열은 실제 R1 참조 측정). 새 공식 A 49/37 ms는 후보값이고 최종 R1 보존값은 62/45 ms다. 최종 R1 전체 공식표는 docs/R7_PUBLICATION_VETO.md에 있다. 저장 990스트림은 R6 승계다. 677개/기본 이름 8개는 후보 검사이며 R1 전환 뒤에는 정적 SHA만 확인했다. 상세는 [R7 결과](docs/R7_RESULTS.md), [R7 방법](docs/R7_METHODS.md), [발표 PDF](results/presentation.pdf)에 있다.
+A 서보에는 기록 결함을 고친 검증 경로로 확인한 SCALE_STATE 감지 채널을 채택했고, B 토크는 R1을 유지했다. NumPy scalar만 기본 JSON형으로 엄격하게 바꾸고 배열·NaN·무한대·비문자 key는 거부했다. 후보·모델 263개 파라미터·임계값·정규화·R1 제어기·관문 숫자는 바꾸지 않았다. 사전 전체 677개와 최종 전체 677개, 기본 이름 8개 검사가 통과했다. 저장 자료 990개(방식별 495개)의 실제 감지기 출력과 새 조건 8회의 물리 8배열을 dtype·shape·바이트 단위로 비교해 모두 같았다. 상세는 [R7 결과](docs/R7_RESULTS.md), [R7 방법](docs/R7_METHODS.md), [발표 PDF](results/presentation.pdf)에 있다.
 
 ## 기준/v1/R1/R7 — T1~T6
 
@@ -21,7 +31,7 @@ S5 공개 문서 연결 검사(고아 문서 10개) 실패로 A 서보와 B 토�
 | T3: 분석 섭동 최악 TCP/놓기힘/FA | A 22.731 mm / 208.997 N / FA 221; B 17.171 mm / 352.140 N / FA 309 | A 14.777 mm / 212.734 N / FA 4; B 45.652 mm / 362.600 N / FA 8 | A 14.777 mm / 212.734 N / FA 6; B 45.652 mm / 362.600 N / FA 10 | A 14.777 mm / 212.734 N / FA 6; B 45.652 mm / 362.600 N / FA 10 (과거 전체 34조건 R1 보존·새 실행 아님) |
 | T4: D4 reference 포화/놓기 peak | A sat 0/189, peak 2.0359 mg; B sat 0/189, peak 9.8822 mg | A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg | A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg | A sat 2/189, peak 1.6098 mg; B sat 0/189, peak 1.0358 mg |
 | T5: 8 kg TCP RMS/최대 [mm] | A 6.144/14.000; B 7.042/13.183 | A 1.174/3.914; B 3.232/8.444 | A 1.174/3.914; B 3.232/8.444 | A 1.174/3.914; B 3.232/8.444 |
-| T6: D4 검출/놓침/선행 경보 | A 88/43/49; B 78/42/60 | A 94/86/0; B 91/89/0 | A 111/69/0; B 111/69/0 | A 111/69/0; B 111/69/0 |
+| T6: D4 검출/놓침/선행 경보 | A 88/43/49; B 78/42/60 | A 94/86/0; B 91/89/0 | A 111/69/0; B 111/69/0 | A 119/61/0; B 111/69/0 |
 
 T1/T2/T4/T5 물리값은 감지 채널 변경과 무관해 R1과 같다. T3은 과거 전체 34조건 보존값이다. T6의 저장 평가값은 990개 신호 스트림 동등성으로 승계하며 새 효능 측정으로 세지 않는다.
 
@@ -83,6 +93,24 @@ T1/T2/T4/T5 물리값은 감지 채널 변경과 무관해 R1과 같다. T3은 �
 | B 토크 | 8 kg / 3.86 s | 놓침 | 91 | 42 | 22 | 0회 | 15 N |
 
 B 토크 8 kg, 3.0 s의 충돌 세트 FA 1회를 포함했다. `R5_OFFICIAL_REGRESSION.json`의 `R3_delay_ms`와 `R3_false_alarms`는 이름과 달리 R5 후보 값을 담는다. 과거 JSON은 바꾸지 않았고 R7은 `tested_delay_ms`와 `tested_false_alarms`를 쓴다.
+
+## 공식 R1과 R7 실측 비교
+
+| 방식 | 질량 | R1 TCP RMS/최대 | R7 TCP RMS/최대 | R1 집기/놓기 | R7 집기/놓기 |
+|---|---|---|---|---|---|
+| A 서보 | 0.0 kg | 1.18 / 3.94 mm | 1.18 / 3.94 mm | 9.7 / 5.1 N·m | 9.7 / 5.1 N·m |
+| A 서보 | 4.0 kg | 1.15 / 3.79 mm | 1.15 / 3.79 mm | 9.7 / 7.6 N·m | 9.7 / 7.6 N·m |
+| A 서보 | 8.0 kg | 1.17 / 3.91 mm | 1.17 / 3.91 mm | 9.7 / 14.6 N·m | 9.7 / 14.6 N·m |
+| B 토크 | 0.0 kg | 2.09 / 4.05 mm | 2.09 / 4.05 mm | 9.0 / 4.8 N·m | 9.0 / 4.8 N·m |
+| B 토크 | 4.0 kg | 2.32 / 4.42 mm | 2.32 / 4.42 mm | 9.0 / 6.8 N·m | 9.0 / 6.8 N·m |
+| B 토크 | 8.0 kg | 3.23 / 8.44 mm | 3.23 / 8.44 mm | 9.0 / 13.1 N·m | 9.0 / 13.1 N·m |
+
+8 kg, 3.0 s 운반 충돌의 R1/R7 비교다.
+
+| 방식 | R1 10/15/40/100 N | R7 10/15/40/100 N | R1/R7 충돌 세트 FA |
+|---|---|---|---|
+| A 서보 | 62 / 45 / 27 / 18 | 49 / 37 / 25 / 18 | 0회 / 0회 |
+| B 토크 | 56 / 43 / 26 / 18 | 56 / 43 / 26 / 18 | 1회 / 1회 |
 
 ## 요구사항 점검
 

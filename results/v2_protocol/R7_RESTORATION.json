@@ -1,0 +1,94 @@
+{
+  "schema": "R7_ADOPTION_RESTORATION.v1",
+  "recorded_utc": "2026-11-09T12:53:12.705664+00:00",
+  "final_decision": {
+    "servo": "SCALE_STATE",
+    "torque": "R1",
+    "final_assembly": "R7"
+  },
+  "user_decision": {
+    "quote": "서보 후보 채택 복원"
+  },
+  "basis": {
+    "protocol_fallback_excludes_document_checks": true,
+    "execution_order_excludes_document_checks": true,
+    "no_candidate_data_gate_change": true,
+    "no_simulation_holdout_official_rerun": true
+  },
+  "sources": {
+    "s4_adoption": {
+      "file": "results/v2_protocol/R7_S4_ADOPTION.json",
+      "sha256": "30bcf47ae7910aa6e1225139753b035e901da170bf7ec7379c63cbb9b06c1623"
+    },
+    "veto_adoption": {
+      "file": "results/v2_protocol/R7_VETO_ADOPTION.json",
+      "sha256": "e33e32be57cb4c8418319462d4e3c68a87f573a5e1869f0932c557d59c0cd9b7"
+    },
+    "failure": {
+      "file": "results/v2_protocol/R7_FAILURE.json",
+      "sha256": "cd3636d5605d71b19bb653c17f2ce5f3a7132df11c170fcdd9bee5064b8e8b82"
+    }
+  },
+  "candidate": {
+    "file": "experiments/r7_final/A_STATE.py",
+    "sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643"
+  },
+  "final_files": {
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643"
+  },
+  "scientific_record_sha256": {
+    "results/v2_protocol/R7_BASE_holdout_R1_servo.json": "37ea6a7cdc9dc298a44fe5643639bd60ab50e33ac83c9f687db947382ecd40bd",
+    "results/v2_protocol/R7_BASE_holdout_R1_torque.json": "1bf00d531af02c58896848ce57d66043b9c6f4db2f30c3820c2d81fa3028bc43",
+    "results/v2_protocol/R7_BASE_holdout_R7_servo.json": "75365b10962a16b500058a1a83313138b67ab25154fc6762f2fad2e59d0b27b3",
+    "results/v2_protocol/R7_BASE_holdout_R7_torque.json": "146faa9da1bbb868fb3af694122ce92eb235e2341a9e3f1a89d54e7ca54ccda6",
+    "results/v2_protocol/R7_FINAL_CONTRACT_REVIEW.json": "d1df3422d4e48a88919709bd86cca59777b79ede51841924fd918d5736d19b21",
+    "results/v2_protocol/R7_HOLDOUT_DESIGN.json": "bc3b3d684525f183df40a872ae39d1625ca513c2781451f52b4e763a9faa39c3",
+    "results/v2_protocol/R7_HOLDOUT_FINALIZED.json": "e3f1becc48ddf770713ce11c215ee6de49e1acb5830b87e127ec0f37a3a6652e",
+    "results/v2_protocol/R7_HOLDOUT_OPENED.json": "3075bc5426a41673891ea3534241579aa05d27d7c33f15fcb5b46d45ae3c07c7",
+    "results/v2_protocol/R7_HOLDOUT_PAIRING.json": "0601a487ce9503fa834f9107e77746395f112479d1f30cff44110f6b2790dcbd",
+    "results/v2_protocol/R7_HOLDOUT_REVIEW.json": "3be699538c8275d48b8ec5f2d048d5fcc7069c67f2f28bf97fccc26d24d61a3e",
+    "results/v2_protocol/R7_OFFICIAL_OPENED.json": "4c723b6ee84ec9a97ff250a1f9949d8473b84c106d62d1ac4671b6be546cf3c2",
+    "results/v2_protocol/R7_OFFICIAL_REGRESSION.json": "bba518caa57ed61b7d08f6871c437e9c80415a4f3b66517a4820b346c99e0ae7",
+    "results/v2_protocol/PROTOCOL_R7.json": "ee552c9083f8cb2392f5694ea9ce1582a8da4e3ed9a3a9dbc284ea5456c854e3",
+    "results/v2_protocol/R7_FREEZE.json": "92114cd877b4e6605aeeba58ea1d32224c04a8f41287d1628f8d0ede563aabc8"
+  },
+  "preserved_models": {
+    "models/r5/servo_SCALE_PHASE.json": "d9c7daf0dbc9fe6bb8019ae015df4941168edadb465652408631fe0747d4d2f3",
+    "models/r5/torque_SCALE_PHASE.json": "250cf1b00382f125957aea504c707ad4d6e4735fd512d8a81513ca9b38b9f768",
+    "models/r5/servo_SCALE_STATE.json": "d71d4573fa021b60a75a65678234e92e04d732e51c74ce8056fe263b8dfe5195",
+    "models/r5/torque_SCALE_STATE.json": "8924a704f42ed086a56ce2dbc90b8d275306d5252af34400d995c88d8d435a26",
+    "models/r5/servo_AR20_FULL.json": "0f1178631b2f4086e71abb1dba2c00c1e9014c5d2e75f54f7788369e5c5a88e2",
+    "models/r5/torque_AR20_FULL.json": "661dafd506934259b922a130912b814a8339a193df90bfdd23f01b2f8dd0ca9c",
+    "models/r5/servo_AR50_FULL.json": "3373412a140ba498b83908ce100712b871dd4c1e564b9166403575d4bfdfbccf",
+    "models/r5/torque_AR50_FULL.json": "49e3c141515551aa4e9c33302e89e1a3f5d9273e04f88eae58037134eefe14b7"
+  },
+  "historical_veto_execution_status": {
+    "file": "results/v2_protocol/R7_EXECUTION_STATUS.json",
+    "sha256": "cc3e18211d880a1eb5e6b0fae0409df89b151058615dbc4e0487bff92612b158"
+  },
+  "historical_veto_report_curation": {
+    "file": "results/v2_protocol/R7_REPORT_CURATION.json",
+    "sha256": "8ead4ef84cf5c60cb6435ef1f1b6feb92ccc6de80a5a8386c0259fc86a595a8f"
+  },
+  "historical_media_manifest": {
+    "file": "results/v2_protocol/R7_S4_MEDIA_MANIFEST.json",
+    "sha256": "b043233c49dcdcb32a33ed7213bef74776af7ae47f0dda8a595a97c8154ed101"
+  },
+  "restored_media_original_sha256": {
+    "artifacts/media/09_r7_servo_positive_comparison.gif": "ee1bfbaf455d9251249f2e0d4fd3d1b88b58abecc072902a76d17244442d8ec0",
+    "artifacts/media/09_r7_servo_positive_comparison.mp4": "782ee314d338cb6e28e2dce1d8c8294524e2d3d4bcdfa06999bb17ed2604c3f1",
+    "artifacts/media/10_r7_servo_negative_comparison.gif": "51f3122a342d1e2e43de5e6c59d8ce96a33e58f088f6c45dd464c308b064f10a",
+    "artifacts/media/10_r7_servo_negative_comparison.mp4": "b096a4a483e4a8a8f196d11a60dd85bd6a2c48a722d0ec58bce6a3da0b0447ba"
+  },
+  "current_validation_record": "results/v2_protocol/R7_RESTORATION_VALIDATION.json",
+  "authority": "Current user restoration decision; the retained veto/failure/status/curation are historical records.",
+  "training_runs": 0,
+  "new_physical_simulations": 0,
+  "new_holdout_batches": 0,
+  "new_official_batches": 0,
+  "threshold_updates": 0,
+  "remote_operations": 0,
+  "metadata_projection": "public"
+}

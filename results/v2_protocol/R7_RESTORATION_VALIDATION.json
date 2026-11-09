@@ -1,0 +1,249 @@
+{
+  "schema": "R7_RESTORATION_VALIDATION.v1",
+  "status": "PASS",
+  "completed_utc": "2026-11-09T13:06:26.674552+00:00",
+  "restoration_sha256": "c8bc540df1186cc1a005151acc2b184e107bc506f0847c654950aa28dff166f4",
+  "adoption_sha256": "bfac1fe20e1f947b40701eb548d5c7bb7352ef7f2195439396b41485e39eb0db",
+  "detector_sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+  "new_physical_simulations": 0,
+  "new_holdout_batches": 0,
+  "new_official_batches": 0,
+  "training_runs": 0,
+  "threshold_updates": 0,
+  "remote_operations": 0,
+  "tests_executed_sequentially": true,
+  "external_kit_in_private_public_overlay_only": true,
+  "new_presentation_source_sha256": {
+    "tools/r7_restore_report.py": "01fa9181ba73d76b200e5bf99be170ee88253b0a8b8ced912d4207542a91e859",
+    "tools/test_r7_restore_report.py": "8590ed420bbc3accb6e960ab27a4ab53b51b260b228c97b9542f0b1eb7eaa1f0"
+  },
+  "work": {
+    "status": "PASS",
+    "overlay_source_head": "31d6cd0a6643a9cd93fe0259a65b555449b02d11",
+    "tested_assembly": {
+      "path": "my_detector.py",
+      "sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643"
+    },
+    "full_suite": {
+      "status": "PASS",
+      "command": [
+        "env",
+        "-u",
+        "PYTHONPATH",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "tests_run": 688,
+      "errors": 0,
+      "failures": 0,
+      "elapsed_s": 25.55173567100428,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "075af8093f01a8063306c94b911be766693a010f326e16e189ac16df5aaf2985"
+    },
+    "default_submission_contract": {
+      "status": "PASS",
+      "command": [
+        "env",
+        "-u",
+        "PYTHONPATH",
+        "python",
+        "tools/r7_contract.py",
+        "--root",
+        ".",
+        "--expected-detector",
+        "experiments/r7_final/A_STATE.py",
+        "--out",
+        "private-evidence/restoration/WORK_CONTRACT.default.json"
+      ],
+      "cases": [
+        {
+          "case": "servo",
+          "additional_channel_enabled": true,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "torque",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "None",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "unknown",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "substring",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "missing_MODE",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "controller_None",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "controller_absent",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        }
+      ],
+      "log_sha256": "383458079eb3d4c4776cb4468c129ed463bb1c02228eba484e4990a97abefcc0",
+      "result_sha256": "c5e04f06ddcb499e6eddb016893e2597c882dbdf99e434f8b11fd6cd5f403369",
+      "schema": "R7_SUBMISSION_CONTRACT.v1",
+      "detector_sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+      "default_names_exact": true,
+      "controller_sha256": {
+        "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+        "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+      },
+      "protected": {
+        "status": "ok",
+        "files": 20,
+        "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+      },
+      "scope": "Reset/public API/finite synthetic updates; no Plant or physical simulation."
+    },
+    "execution_record_sha256": "7ad5c8c54a011cb71204cac1ccd8acd0f6c95a18c6d5656cde1085d06abd8416",
+    "tested_new_presentation_source_exact": true
+  },
+  "public": {
+    "status": "PASS",
+    "overlay_source_head": "25b5a09f5846ce75018152902529ad6bba13340f",
+    "tested_assembly": {
+      "path": "my_detector.py",
+      "sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643"
+    },
+    "full_suite": {
+      "status": "PASS",
+      "command": [
+        "env",
+        "-u",
+        "PYTHONPATH",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "tests_run": 569,
+      "errors": 0,
+      "failures": 0,
+      "elapsed_s": 24.219621369964443,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "79a21e40ef5e3a62c3e595b27e379d755fd18057f51e80636d56df92bf0aff5e"
+    },
+    "default_submission_contract": {
+      "status": "PASS",
+      "command": [
+        "env",
+        "-u",
+        "PYTHONPATH",
+        "python",
+        "tools/r7_contract.py",
+        "--root",
+        ".",
+        "--expected-detector",
+        "experiments/r7_final/A_STATE.py",
+        "--out",
+        "private-evidence/restoration/PUBLIC_CONTRACT.default.json"
+      ],
+      "cases": [
+        {
+          "case": "servo",
+          "additional_channel_enabled": true,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "torque",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "None",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "unknown",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "substring",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "missing_MODE",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "controller_None",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        },
+        {
+          "case": "controller_absent",
+          "additional_channel_enabled": false,
+          "finite_updates": 3,
+          "status": "PASS"
+        }
+      ],
+      "log_sha256": "383458079eb3d4c4776cb4468c129ed463bb1c02228eba484e4990a97abefcc0",
+      "result_sha256": "c5e04f06ddcb499e6eddb016893e2597c882dbdf99e434f8b11fd6cd5f403369",
+      "schema": "R7_SUBMISSION_CONTRACT.v1",
+      "detector_sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+      "default_names_exact": true,
+      "controller_sha256": {
+        "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+        "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+      },
+      "protected": {
+        "status": "ok",
+        "files": 20,
+        "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+      },
+      "scope": "Reset/public API/finite synthetic updates; no Plant or physical simulation."
+    },
+    "execution_record_sha256": "fa54c6309f6ff6df09e701313711858db970834527f5c79cd56b70c0c55646fb",
+    "tested_new_presentation_source_exact": true
+  },
+  "metadata_projection": "public"
+}
