@@ -1,0 +1,93 @@
+{
+  "schema": "R5_REDESIGN_DECISION.v1",
+  "decision_utc": "2026-11-09T04:46:15.682201+00:00",
+  "validation_review_sha256": "befeefd9189a4f4b130856b698f571b45b33bb4fbe06d7118b6014c98fbe5259",
+  "runtime_bundle_sha256": "5c90f590dd0356cebaa902ff4216444e71080a30c1a7299c89f3e516379cfea9",
+  "max_per_family": 1,
+  "redesigns_used": 0,
+  "before_development": true,
+  "holdout_or_official_physical_runs": 0,
+  "families": [
+    {
+      "family": "SCALE",
+      "used": 0,
+      "reason": "상태 정규화의 validation 관문 통과 여부와 위상 대조의 실패를 그대로 보존한다. 수식 대조·물리8배열·온라인/오프라인 대응에서 구현 결함은 발견되지 않았다. 통과한 방식은 변경할 이유가 없으며, 실패한 대조를 충돌 임계 조절로 되살리지 않는다."
+    },
+    {
+      "family": "AR",
+      "used": 0,
+      "reason": "S2에서 충돌 외 오감지가 증가해 이미 영구 진단으로 고정됐다. validation에서도 조건별 오감지 증가를 기록했지만 수식/물리 대응 결함은 발견되지 않았다. 식별된 구현 결함 없이 격자나 임계를 조절하는 재설계는 하지 않는다."
+    }
+  ],
+  "validation_status": [
+    {
+      "mode": "servo",
+      "variant": "SCALE_PHASE",
+      "eligible": false,
+      "failures": [
+        "S2_PERMANENT_DIAGNOSTIC",
+        "INSUFFICIENT_ADDITIONAL_DETECTION"
+      ]
+    },
+    {
+      "mode": "torque",
+      "variant": "SCALE_PHASE",
+      "eligible": false,
+      "failures": [
+        "S2_PERMANENT_DIAGNOSTIC",
+        "NORMAL_AUDIT_FAILED"
+      ]
+    },
+    {
+      "mode": "servo",
+      "variant": "SCALE_STATE",
+      "eligible": true,
+      "failures": []
+    },
+    {
+      "mode": "torque",
+      "variant": "SCALE_STATE",
+      "eligible": true,
+      "failures": []
+    },
+    {
+      "mode": "servo",
+      "variant": "AR20_FULL",
+      "eligible": false,
+      "failures": [
+        "S2_PERMANENT_DIAGNOSTIC",
+        "PER_CASE_FA_INCREASE"
+      ]
+    },
+    {
+      "mode": "torque",
+      "variant": "AR20_FULL",
+      "eligible": false,
+      "failures": [
+        "S2_PERMANENT_DIAGNOSTIC",
+        "INSUFFICIENT_ADDITIONAL_DETECTION",
+        "PER_CASE_FA_INCREASE"
+      ]
+    },
+    {
+      "mode": "servo",
+      "variant": "AR50_FULL",
+      "eligible": false,
+      "failures": [
+        "S2_PERMANENT_DIAGNOSTIC",
+        "PER_CASE_FA_INCREASE"
+      ]
+    },
+    {
+      "mode": "torque",
+      "variant": "AR50_FULL",
+      "eligible": false,
+      "failures": [
+        "S2_PERMANENT_DIAGNOSTIC",
+        "PER_CASE_FA_INCREASE"
+      ]
+    }
+  ],
+  "holdout_reservation_reseal_is_not_candidate_redesign": true,
+  "learned_weights_thresholds_or_gate_changes": 0
+}

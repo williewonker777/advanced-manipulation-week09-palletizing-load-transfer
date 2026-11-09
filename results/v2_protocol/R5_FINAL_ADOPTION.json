@@ -1,0 +1,45 @@
+{
+  "schema": "R5_FINAL_ADOPTION.v1",
+  "decision_utc": "2026-11-09T05:43:47.538685+00:00",
+  "supersedes": {
+    "path": "results/v2_protocol/R5_ADOPTION.json",
+    "sha256": "4dfd9f8817a455fee36c198e2e47e6853c2b4872b2013f76589180040e4afbc7"
+  },
+  "contract_review": {
+    "path": "results/v2_protocol/R5_FINAL_CONTRACT_REVIEW.json",
+    "sha256": "b44f85fe751deea55f11fd05b6644f3eeedd99bd5d0a89c708bb7fcdc53733d0"
+  },
+  "freeze_sha256": "2d6fa5e2d22bd01e8f491b9174617047d08347fb854c1f5705c44c02098b795b",
+  "earlier_effective_variants": {
+    "servo": "SCALE_STATE",
+    "torque": "R1"
+  },
+  "effective_variants": {
+    "servo": "R1",
+    "torque": "R1"
+  },
+  "final_assembly": "R1",
+  "final_files": {
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+  },
+  "reasons": {
+    "servo": [
+      "FINAL_SUBMISSION_COMPATIBILITY_FAILED"
+    ],
+    "torque": [
+      "D4_MIN_ADDITIONAL_DETECTION_FAILED",
+      "PERTURBATION_PER_CASE_FA_INCREASE"
+    ]
+  },
+  "positive_sealed_measurements_retained": true,
+  "original_adoption_record_not_edited": true,
+  "fallback_only_from_prefrozen_assemblies": true,
+  "runner_up_promoted": false,
+  "candidate_repair_or_new_configuration_after_seal": false,
+  "scientific_source_changes_except_allowed_submission_fallback": 0,
+  "new_holdout_or_official_batches": 0,
+  "final_official_scope": "The tested A_STATE official result is retained as a rejected-candidate measurement. Final R1 values are the preserved R1 official result, justified by exact final-three-file equality; no official rerun after fallback.",
+  "new_comparison_media_publicly_released": false
+}

@@ -1,0 +1,3516 @@
+{
+  "schema": "R5_PROTOCOL.v1",
+  "registered_utc": "2026-11-09T03:04:28.753568+00:00",
+  "work_baseline": "c70bddf659089cdf537c0d7d3be349a885dce1a9",
+  "public_baseline": "369ff8f34daea9a72fd107d7f922c321972f62fc",
+  "candidate_source_edits_before_registration": 0,
+  "candidate_episodes_before_registration": 0,
+  "S2_analysis": {
+    "plan_sha256": "cbd7b233206d2632b89d7f05b6321133ffafdd89d915643513e3e3658cbffa59",
+    "design_sha256": "72392e5ab849e20e309156cf9cbc19cba6d1b1ffd4c1c6a5c508588f5fb81dc9",
+    "upper_sha256": "08e2416487754db768c89b30326743ba4bed6602e810933d7a1b46ae1461cc28",
+    "cause_sha256": "70847ace48bc5c65e39c83f3736f538117d99571a474892164e50419e7f28584",
+    "completed_R1_episodes": 306,
+    "infrastructure_incomplete_attempts": 1,
+    "completed_row_reexecutes": 0,
+    "incomplete_same_input_retries": 1,
+    "model_threshold_updates_after_audit": 0,
+    "D4_used": false,
+    "formal_upper_bound": false,
+    "implementation_entry_rule": {
+      "analysis_collisions_per_mode": 90,
+      "minimum_additional_detected": 3,
+      "minimum_pick_or_place_additional": 1,
+      "normal_audit_extra_samples": 0,
+      "normal_audit_extra_rises": 0,
+      "R1_collision_losses": 0,
+      "tool_contact_losses": 0,
+      "minimum_R1_tool_positive_cases_per_mode": 1,
+      "no_case_outside_FA_increase": true,
+      "any_one_spec_mode_must_meet_all": true,
+      "all_families_all_modes_fail": "stop before runtime candidates/PROTOCOL_R5 or further evaluation"
+    }
+  },
+  "scope": "Only fixed normal-trained detector OR channels; R1 servo/torque and estimator packet are unchanged.",
+  "candidate_grid": [
+    {
+      "id": "SCALE_PHASE",
+      "family": "SCALE",
+      "normal_spec_id": "scale_active_phase_mad",
+      "models": {
+        "servo": {
+          "path": "models/r5/servo_SCALE_PHASE.json",
+          "sha256": "d9c7daf0dbc9fe6bb8019ae015df4941168edadb465652408631fe0747d4d2f3",
+          "source_S2_json_sha256": "8bf1592a0f1a436d6719f0c5f3a3a096eb1e82af81fc682070c483ac50ade121",
+          "threshold": 7.8028671642358445,
+          "float_parameters": 15
+        },
+        "torque": {
+          "path": "models/r5/torque_SCALE_PHASE.json",
+          "sha256": "250cf1b00382f125957aea504c707ad4d6e4735fd512d8a81513ca9b38b9f768",
+          "source_S2_json_sha256": "810ae9f3a387f97e9f43ae02d2fa0c80d554dbf9ec612f0686b24680f51b80b4",
+          "threshold": 6.002032547392131,
+          "float_parameters": 15
+        }
+      },
+      "S2_eligible_modes": [],
+      "S2_permanently_diagnostic_modes": [
+        "servo",
+        "torque"
+      ]
+    },
+    {
+      "id": "SCALE_STATE",
+      "family": "SCALE",
+      "normal_spec_id": "scale_active_state_log",
+      "models": {
+        "servo": {
+          "path": "models/r5/servo_SCALE_STATE.json",
+          "sha256": "d71d4573fa021b60a75a65678234e92e04d732e51c74ce8056fe263b8dfe5195",
+          "source_S2_json_sha256": "01cdceff80c7633d652a9db0b2c1322185a00d362b720699349cf16eabe7166e",
+          "threshold": 3.430453910703297,
+          "float_parameters": 263
+        },
+        "torque": {
+          "path": "models/r5/torque_SCALE_STATE.json",
+          "sha256": "8924a704f42ed086a56ce2dbc90b8d275306d5252af34400d995c88d8d435a26",
+          "source_S2_json_sha256": "01d627bcff7d40ce34956816cc4f5e21a71eb23718728a23d87bc7cb31d2650b",
+          "threshold": 3.2086891525415253,
+          "float_parameters": 263
+        }
+      },
+      "S2_eligible_modes": [
+        "servo",
+        "torque"
+      ],
+      "S2_permanently_diagnostic_modes": []
+    },
+    {
+      "id": "AR20_FULL",
+      "family": "AR",
+      "normal_spec_id": "ar_full_lag20ms",
+      "models": {
+        "servo": {
+          "path": "models/r5/servo_AR20_FULL.json",
+          "sha256": "0f1178631b2f4086e71abb1dba2c00c1e9014c5d2e75f54f7788369e5c5a88e2",
+          "source_S2_json_sha256": "27b42609f472f34a1baa22b7dcb59dca7f101ac0d166d58c1bb3458e53c8d8e5",
+          "threshold": 7.225805072254827,
+          "float_parameters": 407
+        },
+        "torque": {
+          "path": "models/r5/torque_AR20_FULL.json",
+          "sha256": "661dafd506934259b922a130912b814a8339a193df90bfdd23f01b2f8dd0ca9c",
+          "source_S2_json_sha256": "fcc4da80b18acfa99805a2b50c1eafd11f5c6a6f4b66c7e46b85eea31a98c212",
+          "threshold": 7.622101519725345,
+          "float_parameters": 407
+        }
+      },
+      "S2_eligible_modes": [],
+      "S2_permanently_diagnostic_modes": [
+        "servo",
+        "torque"
+      ]
+    },
+    {
+      "id": "AR50_FULL",
+      "family": "AR",
+      "normal_spec_id": "ar_full_lag50ms",
+      "models": {
+        "servo": {
+          "path": "models/r5/servo_AR50_FULL.json",
+          "sha256": "3373412a140ba498b83908ce100712b871dd4c1e564b9166403575d4bfdfbccf",
+          "source_S2_json_sha256": "cd4c80987332bd408065f84cf0c007956570b6135e6b2c21ce2cbf13fb1158f4",
+          "threshold": 7.850436412866144,
+          "float_parameters": 407
+        },
+        "torque": {
+          "path": "models/r5/torque_AR50_FULL.json",
+          "sha256": "49e3c141515551aa4e9c33302e89e1a3f5d9273e04f88eae58037134eefe14b7",
+          "source_S2_json_sha256": "2adef78e3dac8e81e8b6f640ff86aa729e4911bc09ff6a085251121fd4b3c862",
+          "threshold": 7.512351679050461,
+          "float_parameters": 407
+        }
+      },
+      "S2_eligible_modes": [],
+      "S2_permanently_diagnostic_modes": [
+        "servo",
+        "torque"
+      ]
+    }
+  ],
+  "two_family_interpretation": "SCALE has headroom; AR is an explicit negative diagnostic control, permanently ineligible from S2. Diagnostic evaluation never revives a failed mode/configuration.",
+  "calibration": {
+    "fit_calibration_audit_reused_from_S2": true,
+    "original_weights_and_thresholds_retained": true,
+    "fit_role": "normal fit only",
+    "threshold_role": "normal calibration only",
+    "S2_audit_not_for_refit": true,
+    "new_normal_audit": {
+      "seed": 377200,
+      "conditions": [
+        {
+          "mass": 2.0168,
+          "com": [
+            0.02145,
+            -0.01193,
+            0.0419
+          ]
+        },
+        {
+          "mass": 3.763,
+          "com": [
+            -0.02401,
+            0.01125,
+            0.04429
+          ]
+        },
+        {
+          "mass": 4.8872,
+          "com": [
+            -0.02581,
+            0.01976,
+            0.03695
+          ]
+        },
+        {
+          "mass": 7.4282,
+          "com": [
+            0.0174,
+            0.01414,
+            0.02176
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "mass": 2.0168,
+          "com": [
+            0.02145,
+            -0.01193,
+            0.0419
+          ],
+          "source_case_id": "normal_audit_000",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 0.89,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0,
+          "sensor_seeds": {
+            "servo": 377210,
+            "torque": 377230
+          }
+        },
+        {
+          "mass": 2.0168,
+          "com": [
+            0.02145,
+            -0.01193,
+            0.0419
+          ],
+          "source_case_id": "normal_audit_001",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 0.93,
+          "coulomb_scale": 0.93,
+          "sensor_seeds": {
+            "servo": 377211,
+            "torque": 377231
+          }
+        },
+        {
+          "mass": 2.0168,
+          "com": [
+            0.02145,
+            -0.01193,
+            0.0419
+          ],
+          "source_case_id": "normal_audit_002",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.11,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0,
+          "sensor_seeds": {
+            "servo": 377212,
+            "torque": 377232
+          }
+        },
+        {
+          "mass": 2.0168,
+          "com": [
+            0.02145,
+            -0.01193,
+            0.0419
+          ],
+          "source_case_id": "normal_audit_003",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 1.07,
+          "coulomb_scale": 1.07,
+          "sensor_seeds": {
+            "servo": 377213,
+            "torque": 377233
+          }
+        },
+        {
+          "mass": 3.763,
+          "com": [
+            -0.02401,
+            0.01125,
+            0.04429
+          ],
+          "source_case_id": "normal_audit_004",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 0.89,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0,
+          "sensor_seeds": {
+            "servo": 377214,
+            "torque": 377234
+          }
+        },
+        {
+          "mass": 3.763,
+          "com": [
+            -0.02401,
+            0.01125,
+            0.04429
+          ],
+          "source_case_id": "normal_audit_005",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 0.93,
+          "coulomb_scale": 0.93,
+          "sensor_seeds": {
+            "servo": 377215,
+            "torque": 377235
+          }
+        },
+        {
+          "mass": 3.763,
+          "com": [
+            -0.02401,
+            0.01125,
+            0.04429
+          ],
+          "source_case_id": "normal_audit_006",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.11,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0,
+          "sensor_seeds": {
+            "servo": 377216,
+            "torque": 377236
+          }
+        },
+        {
+          "mass": 3.763,
+          "com": [
+            -0.02401,
+            0.01125,
+            0.04429
+          ],
+          "source_case_id": "normal_audit_007",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 1.07,
+          "coulomb_scale": 1.07,
+          "sensor_seeds": {
+            "servo": 377217,
+            "torque": 377237
+          }
+        },
+        {
+          "mass": 4.8872,
+          "com": [
+            -0.02581,
+            0.01976,
+            0.03695
+          ],
+          "source_case_id": "normal_audit_008",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 0.89,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0,
+          "sensor_seeds": {
+            "servo": 377218,
+            "torque": 377238
+          }
+        },
+        {
+          "mass": 4.8872,
+          "com": [
+            -0.02581,
+            0.01976,
+            0.03695
+          ],
+          "source_case_id": "normal_audit_009",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 0.93,
+          "coulomb_scale": 0.93,
+          "sensor_seeds": {
+            "servo": 377219,
+            "torque": 377239
+          }
+        },
+        {
+          "mass": 4.8872,
+          "com": [
+            -0.02581,
+            0.01976,
+            0.03695
+          ],
+          "source_case_id": "normal_audit_010",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.11,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0,
+          "sensor_seeds": {
+            "servo": 377220,
+            "torque": 377240
+          }
+        },
+        {
+          "mass": 4.8872,
+          "com": [
+            -0.02581,
+            0.01976,
+            0.03695
+          ],
+          "source_case_id": "normal_audit_011",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 1.07,
+          "coulomb_scale": 1.07,
+          "sensor_seeds": {
+            "servo": 377221,
+            "torque": 377241
+          }
+        },
+        {
+          "mass": 7.4282,
+          "com": [
+            0.0174,
+            0.01414,
+            0.02176
+          ],
+          "source_case_id": "normal_audit_012",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 0.89,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0,
+          "sensor_seeds": {
+            "servo": 377222,
+            "torque": 377242
+          }
+        },
+        {
+          "mass": 7.4282,
+          "com": [
+            0.0174,
+            0.01414,
+            0.02176
+          ],
+          "source_case_id": "normal_audit_013",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 0.93,
+          "coulomb_scale": 0.93,
+          "sensor_seeds": {
+            "servo": 377223,
+            "torque": 377243
+          }
+        },
+        {
+          "mass": 7.4282,
+          "com": [
+            0.0174,
+            0.01414,
+            0.02176
+          ],
+          "source_case_id": "normal_audit_014",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.11,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0,
+          "sensor_seeds": {
+            "servo": 377224,
+            "torque": 377244
+          }
+        },
+        {
+          "mass": 7.4282,
+          "com": [
+            0.0174,
+            0.01414,
+            0.02176
+          ],
+          "source_case_id": "normal_audit_015",
+          "kind": "reference",
+          "phase": "full",
+          "collision": null,
+          "pick_offset": null,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 1.07,
+          "coulomb_scale": 1.07,
+          "sensor_seeds": {
+            "servo": 377225,
+            "torque": 377245
+          }
+        }
+      ]
+    },
+    "allowed_signal_keys": [
+      "t",
+      "th",
+      "thd",
+      "tau_m",
+      "tau_s",
+      "grip",
+      "r_joint",
+      "wrench",
+      "active",
+      "r1_detect",
+      "ref_q",
+      "ref_qd",
+      "ref_qdd"
+    ],
+    "allowed_metadata": [
+      "mass",
+      "com",
+      "mode",
+      "role",
+      "normal_only"
+    ],
+    "forbidden_fit": [
+      "truth state/force/torque/contact/table force",
+      "collision labels/time/force",
+      "seed/offset/drift/perturbation settings",
+      "official/holdout signals"
+    ],
+    "new_audit_extra_branch_samples_max": 0,
+    "unobserved_fit_phase": "new branch off; R1 kept",
+    "probability_coverage_or_safety_guarantee": false
+  },
+  "validation": {
+    "seed": 377250,
+    "conditions": [
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ]
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ]
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ]
+      },
+      {
+        "mass": 7.3323,
+        "com": [
+          0.00259,
+          -0.02075,
+          0.01246
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ],
+        "source_case_id": "validation_reference_0",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377251,
+          "torque": 377261
+        }
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "source_case_id": "validation_reference_1",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377252,
+          "torque": 377262
+        }
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ],
+        "source_case_id": "validation_reference_2",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377253,
+          "torque": 377263
+        }
+      },
+      {
+        "mass": 7.3323,
+        "com": [
+          0.00259,
+          -0.02075,
+          0.01246
+        ],
+        "source_case_id": "validation_reference_3",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377254,
+          "torque": 377264
+        }
+      },
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ],
+        "source_case_id": "validation_offset_0",
+        "kind": "offset",
+        "phase": "pick",
+        "collision": null,
+        "pick_offset": [
+          0.018,
+          0,
+          0.012
+        ],
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377271,
+          "torque": 377281
+        }
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "source_case_id": "validation_offset_1",
+        "kind": "offset",
+        "phase": "pick",
+        "collision": null,
+        "pick_offset": [
+          -0.018,
+          0,
+          0.012
+        ],
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377272,
+          "torque": 377282
+        }
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ],
+        "source_case_id": "validation_offset_2",
+        "kind": "offset",
+        "phase": "pick",
+        "collision": null,
+        "pick_offset": [
+          0.011,
+          -0.014,
+          0.008
+        ],
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377273,
+          "torque": 377283
+        }
+      },
+      {
+        "mass": 7.3323,
+        "com": [
+          0.00259,
+          -0.02075,
+          0.01246
+        ],
+        "source_case_id": "validation_offset_3",
+        "kind": "offset",
+        "phase": "pick",
+        "collision": null,
+        "pick_offset": [
+          -0.012,
+          0.013,
+          -0.009
+        ],
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377274,
+          "torque": 377284
+        }
+      },
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ],
+        "source_case_id": "validation_collision_000",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.45,
+          [
+            4.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "+x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377251,
+          "torque": 377261
+        },
+        "reference_source_case_id": "validation_reference_0"
+      },
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ],
+        "source_case_id": "validation_collision_001",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.45,
+          [
+            -4.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "-x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377251,
+          "torque": 377261
+        },
+        "reference_source_case_id": "validation_reference_0"
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "source_case_id": "validation_collision_002",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.378,
+          [
+            0.0,
+            7.5,
+            0.0
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "+y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377252,
+          "torque": 377262
+        },
+        "reference_source_case_id": "validation_reference_1"
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "source_case_id": "validation_collision_003",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.378,
+          [
+            0.0,
+            -7.5,
+            0.0
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "-y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377252,
+          "torque": 377262
+        },
+        "reference_source_case_id": "validation_reference_1"
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ],
+        "source_case_id": "validation_collision_004",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.446,
+          [
+            0.0,
+            0.0,
+            12.5
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "+z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377253,
+          "torque": 377263
+        },
+        "reference_source_case_id": "validation_reference_2"
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ],
+        "source_case_id": "validation_collision_005",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.446,
+          [
+            0.0,
+            0.0,
+            -12.5
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "-z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377253,
+          "torque": 377263
+        },
+        "reference_source_case_id": "validation_reference_2"
+      },
+      {
+        "mass": 7.3323,
+        "com": [
+          0.00259,
+          -0.02075,
+          0.01246
+        ],
+        "source_case_id": "validation_collision_006",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.384,
+          [
+            13.081475451951128,
+            13.081475451951128,
+            0.0
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "+xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377254,
+          "torque": 377264
+        },
+        "reference_source_case_id": "validation_reference_3"
+      },
+      {
+        "mass": 7.3323,
+        "com": [
+          0.00259,
+          -0.02075,
+          0.01246
+        ],
+        "source_case_id": "validation_collision_007",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.384,
+          [
+            -13.081475451951128,
+            -13.081475451951128,
+            0.0
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "-xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377254,
+          "torque": 377264
+        },
+        "reference_source_case_id": "validation_reference_3"
+      },
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ],
+        "source_case_id": "validation_collision_008",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.483,
+          [
+            16.454482671904337,
+            16.454482671904337,
+            16.454482671904337
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "+xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377251,
+          "torque": 377261
+        },
+        "reference_source_case_id": "validation_reference_0"
+      },
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ],
+        "source_case_id": "validation_collision_009",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.483,
+          [
+            -16.454482671904337,
+            -16.454482671904337,
+            -16.454482671904337
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "-xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377251,
+          "torque": 377261
+        },
+        "reference_source_case_id": "validation_reference_0"
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "source_case_id": "validation_collision_010",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.713,
+          [
+            7.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "+x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377252,
+          "torque": 377262
+        },
+        "reference_source_case_id": "validation_reference_1"
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "source_case_id": "validation_collision_011",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.713,
+          [
+            -7.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "-x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377252,
+          "torque": 377262
+        },
+        "reference_source_case_id": "validation_reference_1"
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ],
+        "source_case_id": "validation_collision_012",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.609,
+          [
+            0.0,
+            12.5,
+            0.0
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "+y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377253,
+          "torque": 377263
+        },
+        "reference_source_case_id": "validation_reference_2"
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ],
+        "source_case_id": "validation_collision_013",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.609,
+          [
+            0.0,
+            -12.5,
+            0.0
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "-y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377253,
+          "torque": 377263
+        },
+        "reference_source_case_id": "validation_reference_2"
+      },
+      {
+        "mass": 7.3323,
+        "com": [
+          0.00259,
+          -0.02075,
+          0.01246
+        ],
+        "source_case_id": "validation_collision_014",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.188,
+          [
+            0.0,
+            0.0,
+            18.5
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "+z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377254,
+          "torque": 377264
+        },
+        "reference_source_case_id": "validation_reference_3"
+      },
+      {
+        "mass": 7.3323,
+        "com": [
+          0.00259,
+          -0.02075,
+          0.01246
+        ],
+        "source_case_id": "validation_collision_015",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.188,
+          [
+            0.0,
+            0.0,
+            -18.5
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "-z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377254,
+          "torque": 377264
+        },
+        "reference_source_case_id": "validation_reference_3"
+      },
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ],
+        "source_case_id": "validation_collision_016",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.345,
+          [
+            20.152543263816604,
+            20.152543263816604,
+            0.0
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "+xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377251,
+          "torque": 377261
+        },
+        "reference_source_case_id": "validation_reference_0"
+      },
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ],
+        "source_case_id": "validation_collision_017",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.345,
+          [
+            -20.152543263816604,
+            -20.152543263816604,
+            0.0
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "-xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377251,
+          "torque": 377261
+        },
+        "reference_source_case_id": "validation_reference_0"
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "source_case_id": "validation_collision_018",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.435,
+          [
+            2.5980762113533165,
+            2.5980762113533165,
+            2.5980762113533165
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "+xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377252,
+          "torque": 377262
+        },
+        "reference_source_case_id": "validation_reference_1"
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "source_case_id": "validation_collision_019",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.435,
+          [
+            -2.5980762113533165,
+            -2.5980762113533165,
+            -2.5980762113533165
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "-xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377252,
+          "torque": 377262
+        },
+        "reference_source_case_id": "validation_reference_1"
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ],
+        "source_case_id": "validation_collision_020",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.901,
+          [
+            12.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "+x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377253,
+          "torque": 377263
+        },
+        "reference_source_case_id": "validation_reference_2"
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ],
+        "source_case_id": "validation_collision_021",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.901,
+          [
+            -12.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "-x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377253,
+          "torque": 377263
+        },
+        "reference_source_case_id": "validation_reference_2"
+      },
+      {
+        "mass": 7.3323,
+        "com": [
+          0.00259,
+          -0.02075,
+          0.01246
+        ],
+        "source_case_id": "validation_collision_022",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.775,
+          [
+            0.0,
+            18.5,
+            0.0
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "+y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377254,
+          "torque": 377264
+        },
+        "reference_source_case_id": "validation_reference_3"
+      },
+      {
+        "mass": 7.3323,
+        "com": [
+          0.00259,
+          -0.02075,
+          0.01246
+        ],
+        "source_case_id": "validation_collision_023",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.775,
+          [
+            0.0,
+            -18.5,
+            0.0
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "-y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377254,
+          "torque": 377264
+        },
+        "reference_source_case_id": "validation_reference_3"
+      },
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ],
+        "source_case_id": "validation_collision_024",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.783,
+          [
+            0.0,
+            0.0,
+            28.5
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "+z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377251,
+          "torque": 377261
+        },
+        "reference_source_case_id": "validation_reference_0"
+      },
+      {
+        "mass": 1.8889,
+        "com": [
+          0.02016,
+          0.02361,
+          0.00956
+        ],
+        "source_case_id": "validation_collision_025",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.783,
+          [
+            0.0,
+            0.0,
+            -28.5
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "-z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377251,
+          "torque": 377261
+        },
+        "reference_source_case_id": "validation_reference_0"
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "source_case_id": "validation_collision_026",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.788,
+          [
+            3.181980515339464,
+            3.181980515339464,
+            0.0
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "+xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377252,
+          "torque": 377262
+        },
+        "reference_source_case_id": "validation_reference_1"
+      },
+      {
+        "mass": 4.1014,
+        "com": [
+          0.01962,
+          0.00524,
+          0.03853
+        ],
+        "source_case_id": "validation_collision_027",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.788,
+          [
+            -3.181980515339464,
+            -3.181980515339464,
+            0.0
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "-xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377252,
+          "torque": 377262
+        },
+        "reference_source_case_id": "validation_reference_1"
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ],
+        "source_case_id": "validation_collision_028",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.876,
+          [
+            4.330127018922194,
+            4.330127018922194,
+            4.330127018922194
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "+xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377253,
+          "torque": 377263
+        },
+        "reference_source_case_id": "validation_reference_2"
+      },
+      {
+        "mass": 6.1899,
+        "com": [
+          0.0269,
+          -0.00552,
+          0.03386
+        ],
+        "source_case_id": "validation_collision_029",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.876,
+          [
+            -4.330127018922194,
+            -4.330127018922194,
+            -4.330127018922194
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "-xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377253,
+          "torque": 377263
+        },
+        "reference_source_case_id": "validation_reference_2"
+      }
+    ],
+    "collisions": 30,
+    "reference": 4,
+    "offset": 4,
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy",
+      "+xyz",
+      "-xyz"
+    ],
+    "force_N": [
+      4.5,
+      7.5,
+      12.5,
+      18.5,
+      28.5
+    ],
+    "phase_ranges_s": {
+      "pick": [
+        1.375,
+        1.515
+      ],
+      "transport": [
+        2.05,
+        3.35
+      ],
+      "place": [
+        3.775,
+        3.945
+      ]
+    },
+    "case_design_seed": 377255
+  },
+  "development": {
+    "seed": 377350,
+    "conditions": [
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ]
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ]
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ]
+      },
+      {
+        "mass": 7.2785,
+        "com": [
+          0.01902,
+          0.00461,
+          0.04502
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ],
+        "source_case_id": "development_reference_0",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377351,
+          "torque": 377361
+        }
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ],
+        "source_case_id": "development_reference_1",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377352,
+          "torque": 377362
+        }
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ],
+        "source_case_id": "development_reference_2",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377353,
+          "torque": 377363
+        }
+      },
+      {
+        "mass": 7.2785,
+        "com": [
+          0.01902,
+          0.00461,
+          0.04502
+        ],
+        "source_case_id": "development_reference_3",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377354,
+          "torque": 377364
+        }
+      },
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ],
+        "source_case_id": "development_offset_0",
+        "kind": "offset",
+        "phase": "pick",
+        "collision": null,
+        "pick_offset": [
+          0.018,
+          0,
+          0.012
+        ],
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377371,
+          "torque": 377381
+        }
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ],
+        "source_case_id": "development_offset_1",
+        "kind": "offset",
+        "phase": "pick",
+        "collision": null,
+        "pick_offset": [
+          -0.018,
+          0,
+          0.012
+        ],
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377372,
+          "torque": 377382
+        }
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ],
+        "source_case_id": "development_offset_2",
+        "kind": "offset",
+        "phase": "pick",
+        "collision": null,
+        "pick_offset": [
+          0.011,
+          -0.014,
+          0.008
+        ],
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377373,
+          "torque": 377383
+        }
+      },
+      {
+        "mass": 7.2785,
+        "com": [
+          0.01902,
+          0.00461,
+          0.04502
+        ],
+        "source_case_id": "development_offset_3",
+        "kind": "offset",
+        "phase": "pick",
+        "collision": null,
+        "pick_offset": [
+          -0.012,
+          0.013,
+          -0.009
+        ],
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377374,
+          "torque": 377384
+        }
+      },
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ],
+        "source_case_id": "development_collision_000",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.482,
+          [
+            4.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "+x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377351,
+          "torque": 377361
+        },
+        "reference_source_case_id": "development_reference_0"
+      },
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ],
+        "source_case_id": "development_collision_001",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.482,
+          [
+            -4.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "-x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377351,
+          "torque": 377361
+        },
+        "reference_source_case_id": "development_reference_0"
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ],
+        "source_case_id": "development_collision_002",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.487,
+          [
+            0.0,
+            7.5,
+            0.0
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "+y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377352,
+          "torque": 377362
+        },
+        "reference_source_case_id": "development_reference_1"
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ],
+        "source_case_id": "development_collision_003",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.487,
+          [
+            0.0,
+            -7.5,
+            0.0
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "-y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377352,
+          "torque": 377362
+        },
+        "reference_source_case_id": "development_reference_1"
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ],
+        "source_case_id": "development_collision_004",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.491,
+          [
+            0.0,
+            0.0,
+            12.5
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "+z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377353,
+          "torque": 377363
+        },
+        "reference_source_case_id": "development_reference_2"
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ],
+        "source_case_id": "development_collision_005",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.491,
+          [
+            0.0,
+            0.0,
+            -12.5
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "-z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377353,
+          "torque": 377363
+        },
+        "reference_source_case_id": "development_reference_2"
+      },
+      {
+        "mass": 7.2785,
+        "com": [
+          0.01902,
+          0.00461,
+          0.04502
+        ],
+        "source_case_id": "development_collision_006",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.49,
+          [
+            13.081475451951128,
+            13.081475451951128,
+            0.0
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "+xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377354,
+          "torque": 377364
+        },
+        "reference_source_case_id": "development_reference_3"
+      },
+      {
+        "mass": 7.2785,
+        "com": [
+          0.01902,
+          0.00461,
+          0.04502
+        ],
+        "source_case_id": "development_collision_007",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.49,
+          [
+            -13.081475451951128,
+            -13.081475451951128,
+            0.0
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "-xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377354,
+          "torque": 377364
+        },
+        "reference_source_case_id": "development_reference_3"
+      },
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ],
+        "source_case_id": "development_collision_008",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.382,
+          [
+            16.454482671904337,
+            16.454482671904337,
+            16.454482671904337
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "+xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377351,
+          "torque": 377361
+        },
+        "reference_source_case_id": "development_reference_0"
+      },
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ],
+        "source_case_id": "development_collision_009",
+        "kind": "collision",
+        "phase": "pick",
+        "collision": [
+          1.382,
+          [
+            -16.454482671904337,
+            -16.454482671904337,
+            -16.454482671904337
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "-xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377351,
+          "torque": 377361
+        },
+        "reference_source_case_id": "development_reference_0"
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ],
+        "source_case_id": "development_collision_010",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.585,
+          [
+            7.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "+x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377352,
+          "torque": 377362
+        },
+        "reference_source_case_id": "development_reference_1"
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ],
+        "source_case_id": "development_collision_011",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.585,
+          [
+            -7.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "-x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377352,
+          "torque": 377362
+        },
+        "reference_source_case_id": "development_reference_1"
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ],
+        "source_case_id": "development_collision_012",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.552,
+          [
+            0.0,
+            12.5,
+            0.0
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "+y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377353,
+          "torque": 377363
+        },
+        "reference_source_case_id": "development_reference_2"
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ],
+        "source_case_id": "development_collision_013",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.552,
+          [
+            0.0,
+            -12.5,
+            0.0
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "-y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377353,
+          "torque": 377363
+        },
+        "reference_source_case_id": "development_reference_2"
+      },
+      {
+        "mass": 7.2785,
+        "com": [
+          0.01902,
+          0.00461,
+          0.04502
+        ],
+        "source_case_id": "development_collision_014",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.859,
+          [
+            0.0,
+            0.0,
+            18.5
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "+z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377354,
+          "torque": 377364
+        },
+        "reference_source_case_id": "development_reference_3"
+      },
+      {
+        "mass": 7.2785,
+        "com": [
+          0.01902,
+          0.00461,
+          0.04502
+        ],
+        "source_case_id": "development_collision_015",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.859,
+          [
+            0.0,
+            0.0,
+            -18.5
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "-z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377354,
+          "torque": 377364
+        },
+        "reference_source_case_id": "development_reference_3"
+      },
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ],
+        "source_case_id": "development_collision_016",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.773,
+          [
+            20.152543263816604,
+            20.152543263816604,
+            0.0
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "+xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377351,
+          "torque": 377361
+        },
+        "reference_source_case_id": "development_reference_0"
+      },
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ],
+        "source_case_id": "development_collision_017",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          2.773,
+          [
+            -20.152543263816604,
+            -20.152543263816604,
+            0.0
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "-xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377351,
+          "torque": 377361
+        },
+        "reference_source_case_id": "development_reference_0"
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ],
+        "source_case_id": "development_collision_018",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          3.13,
+          [
+            2.5980762113533165,
+            2.5980762113533165,
+            2.5980762113533165
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "+xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377352,
+          "torque": 377362
+        },
+        "reference_source_case_id": "development_reference_1"
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ],
+        "source_case_id": "development_collision_019",
+        "kind": "collision",
+        "phase": "transport",
+        "collision": [
+          3.13,
+          [
+            -2.5980762113533165,
+            -2.5980762113533165,
+            -2.5980762113533165
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "-xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377352,
+          "torque": 377362
+        },
+        "reference_source_case_id": "development_reference_1"
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ],
+        "source_case_id": "development_collision_020",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.885,
+          [
+            12.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "+x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377353,
+          "torque": 377363
+        },
+        "reference_source_case_id": "development_reference_2"
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ],
+        "source_case_id": "development_collision_021",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.885,
+          [
+            -12.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "force_n": 12.5,
+        "direction": "-x",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377353,
+          "torque": 377363
+        },
+        "reference_source_case_id": "development_reference_2"
+      },
+      {
+        "mass": 7.2785,
+        "com": [
+          0.01902,
+          0.00461,
+          0.04502
+        ],
+        "source_case_id": "development_collision_022",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.775,
+          [
+            0.0,
+            18.5,
+            0.0
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "+y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377354,
+          "torque": 377364
+        },
+        "reference_source_case_id": "development_reference_3"
+      },
+      {
+        "mass": 7.2785,
+        "com": [
+          0.01902,
+          0.00461,
+          0.04502
+        ],
+        "source_case_id": "development_collision_023",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.775,
+          [
+            0.0,
+            -18.5,
+            0.0
+          ]
+        ],
+        "force_n": 18.5,
+        "direction": "-y",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377354,
+          "torque": 377364
+        },
+        "reference_source_case_id": "development_reference_3"
+      },
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ],
+        "source_case_id": "development_collision_024",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.928,
+          [
+            0.0,
+            0.0,
+            28.5
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "+z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377351,
+          "torque": 377361
+        },
+        "reference_source_case_id": "development_reference_0"
+      },
+      {
+        "mass": 1.1137,
+        "com": [
+          0.02155,
+          -0.00263,
+          0.0115
+        ],
+        "source_case_id": "development_collision_025",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.928,
+          [
+            0.0,
+            0.0,
+            -28.5
+          ]
+        ],
+        "force_n": 28.5,
+        "direction": "-z",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377351,
+          "torque": 377361
+        },
+        "reference_source_case_id": "development_reference_0"
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ],
+        "source_case_id": "development_collision_026",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.796,
+          [
+            3.181980515339464,
+            3.181980515339464,
+            0.0
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "+xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377352,
+          "torque": 377362
+        },
+        "reference_source_case_id": "development_reference_1"
+      },
+      {
+        "mass": 2.719,
+        "com": [
+          -0.02345,
+          0.01611,
+          0.03247
+        ],
+        "source_case_id": "development_collision_027",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.796,
+          [
+            -3.181980515339464,
+            -3.181980515339464,
+            0.0
+          ]
+        ],
+        "force_n": 4.5,
+        "direction": "-xy",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377352,
+          "torque": 377362
+        },
+        "reference_source_case_id": "development_reference_1"
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ],
+        "source_case_id": "development_collision_028",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.807,
+          [
+            4.330127018922194,
+            4.330127018922194,
+            4.330127018922194
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "+xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377353,
+          "torque": 377363
+        },
+        "reference_source_case_id": "development_reference_2"
+      },
+      {
+        "mass": 5.6604,
+        "com": [
+          0.00516,
+          0.00858,
+          0.04562
+        ],
+        "source_case_id": "development_collision_029",
+        "kind": "collision",
+        "phase": "place",
+        "collision": [
+          3.807,
+          [
+            -4.330127018922194,
+            -4.330127018922194,
+            -4.330127018922194
+          ]
+        ],
+        "force_n": 7.5,
+        "direction": "-xyz",
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377353,
+          "torque": 377363
+        },
+        "reference_source_case_id": "development_reference_2"
+      }
+    ],
+    "collisions": 30,
+    "reference": 4,
+    "offset": 4,
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy",
+      "+xyz",
+      "-xyz"
+    ],
+    "force_N": [
+      4.5,
+      7.5,
+      12.5,
+      18.5,
+      28.5
+    ],
+    "phase_ranges_s": {
+      "pick": [
+        1.375,
+        1.515
+      ],
+      "transport": [
+        2.05,
+        3.35
+      ],
+      "place": [
+        3.775,
+        3.945
+      ]
+    },
+    "case_design_seed": 377355
+  },
+  "redesign": {
+    "max_per_family": 1,
+    "used": 0,
+    "decision_before_development": true,
+    "allowed": "Only causally identified implementation/mechanism repair after validation, with new committed addendum and fresh validation design377450; no blind tuning or changing any learned weight/threshold after collision results.",
+    "reserved_validation_seed": 377450,
+    "reserved_sensor_seeds": [
+      377451,
+      377452,
+      377453,
+      377454,
+      377461,
+      377462,
+      377463,
+      377464,
+      377471,
+      377472,
+      377473,
+      377474,
+      377481,
+      377482,
+      377483,
+      377484
+    ],
+    "record_nonuse_reason_contemporaneously": true,
+    "after_holdout_or_official": false
+  },
+  "detector_gates": {
+    "no_physical_bit_difference": true,
+    "physical_arrays": [
+      "q",
+      "q_d",
+      "tau",
+      "e_mm",
+      "f_table",
+      "f_tool",
+      "qpos",
+      "r"
+    ],
+    "no_lost_R1_detected_collision_per_case": true,
+    "no_tool_contact_loss": true,
+    "no_increased_normal_FA_per_case": true,
+    "no_increased_outside_event_FA_per_case": true,
+    "validation_min_additional_detected": 2,
+    "development_min_additional_detected": 2,
+    "D4_min_additional_detected": 6,
+    "holdout_min_additional_detected": 2,
+    "D4_reference_FA": 0,
+    "perturb_reference_FA_vs_matched_R1": "no increase per case and total; physical subset and fresh noise subset reported separately",
+    "perturb_old_28_reference_FA_baseline": {
+      "servo": 6,
+      "torque": 9
+    },
+    "selection": "Architecture independent; every preceding gate required. Choose among eligible per mode by development additional detected, then D4 additional detected, then lower maximum per-case measured p99, then protocol order. No runner-up promotion after holdout.",
+    "diagnostic_advancement": "ALL four configurations receive fresh validation/development and D4/perturb replay even if permanently disqualified at a prior stage. Immediately record permanent non-adoption; diagnostic improvements cannot revive them or enter selection ranking.",
+    "normal_audit_extra_samples_max": 0,
+    "control_scope": "No control candidates; inherited control/stability/saturation gates are equality/noninterference checks, not a new control-gain claim."
+  },
+  "timing": {
+    "selection_combined_p99_us_max": 800.0,
+    "strict_goal_max_us": 1000.0,
+    "record_all_outliers": true,
+    "metric": "paired controller+detector wall/thread CPU including allocation; guard outside measured methods",
+    "global_gc_changes": false
+  },
+  "relative_R1_interpretation": {
+    "source": "R1 also failed some R3 forced local and D4 saturation gates, so predeclare relative interpretation without changing numeric thresholds.",
+    "R1_passing_points": "candidate must pass original numeric gate",
+    "R1_failing_points": "must not be worse than paired R1",
+    "radius_tolerance": 0.0,
+    "physical_metric_tolerance": 0.0,
+    "saturation_count_increase": 0,
+    "saturation_pct_increase": 0.0,
+    "FD": "identical unchanged closed loop; no altered control candidate. Existing finite R3 results retained, not a new guarantee",
+    "D4_original_A_saturation_episode_limit": 2,
+    "D4_original_A_max_saturation_pct": 0.15,
+    "R1_entire_D4_saturation_episodes": 4,
+    "R1_entire_D4_max_pct": 0.16666666666666666
+  },
+  "control_gates_inherited": {
+    "G4": {
+      "window_s_before_release": 0.02,
+      "mean_support_over_mg_at_least": 0.5,
+      "minimum_support_over_mg_at_least": 0.25,
+      "mean_increase_over_v1_at_least": 0.25,
+      "peak_place_support_over_mg_at_most": 1.1,
+      "applies_to": "positive masses, specifically final 8kg A/B; failure remains failure"
+    },
+    "cost_gates": {
+      "max_RMS_ratio_vs_R1": 1.05,
+      "max_TCP_ratio_vs_R1": 1.05,
+      "max_torque_step_ratio_vs_R1": 1.05,
+      "max_place_peak_ratio_vs_R1": 1.05,
+      "G4_peak_over_mg_max": 1.1
+    },
+    "safety_gates": {
+      "saturation_pct_max": 0.0,
+      "divergence": false,
+      "nominal_false_alarm_rises": 0,
+      "reference_sweep_false_alarm_rises": 0,
+      "tool_contact_regression": false
+    },
+    "timing": {
+      "selection_combined_p99_us_max": 800.0,
+      "strict_goal_max_us": 1000.0,
+      "record_all_outliers": true,
+      "metric": "paired controller+detector wall/thread CPU including allocation; guard outside measured methods",
+      "global_gc_changes": false
+    }
+  },
+  "implementation_proof": {
+    "no_additional_nominal_calls_or_shared_packet_writes": true,
+    "normal_model_active_capture": "owned NormalResidualModel subclass, no self-capturing closure",
+    "fresh_normal_equivalence": "first new-audit reference per mode, all4 candidates vs paired R1",
+    "validation": "fresh full-loop ALL4 configurations and paired R1; all8 physical arrays bit equal; decisions exactly match offline monitor",
+    "score_numerical_check_atol": 1e-08,
+    "timing": "all fresh validation full-loop cases, detector separately and paired wall/thread CPU; serial",
+    "stability": "No feedback/control/plant changes. New normal scale is clipped[0.25,1000], score EMA0.1 and bounded finite-support causal histories. Noninterference verified; no new closed-loop stability theorem."
+  },
+  "cache_reuse": {
+    "D4": "Frozen R1 385 rows/mode:189 references,180 collisions,16 offsets; exact raw SHA+source+condition IDs; exposed diagnostic replay only after full-loop parity.",
+    "physical_perturb": "Frozen25 rows/mode with source ID and all stiffness/friction/seed values matched; no reclassification as fresh independent evidence.",
+    "new_validation_development": "Fresh R1 streams; validation ALL4 online+timing; development offline ALL4 only after exact online/offline/physical parity.",
+    "fit_signals": "Only role-filtered permitted observations; physical/evaluator data always separate."
+  },
+  "D4": {
+    "conditions_per_architecture": {
+      "reference": 189,
+      "collision": 180,
+      "offset": 16
+    },
+    "exposed": true
+  },
+  "perturbations": {
+    "physical_rows": 25,
+    "noise_rows": 9,
+    "total": 34,
+    "new_noise_conditions": [
+      {
+        "mass": 1.0671,
+        "com": [
+          0.01266,
+          0.02291,
+          0.01467
+        ]
+      },
+      {
+        "mass": 3.2519,
+        "com": [
+          0.00798,
+          0.01066,
+          0.03711
+        ]
+      },
+      {
+        "mass": 7.8452,
+        "com": [
+          0.00075,
+          0.00638,
+          0.03169
+        ]
+      }
+    ],
+    "new_noise_cases": [
+      {
+        "mass": 1.0671,
+        "com": [
+          0.01266,
+          0.02291,
+          0.01467
+        ],
+        "source_case_id": "perturb_noise_000",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377401,
+          "torque": 377411
+        }
+      },
+      {
+        "mass": 1.0671,
+        "com": [
+          0.01266,
+          0.02291,
+          0.01467
+        ],
+        "source_case_id": "perturb_noise_001",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377402,
+          "torque": 377412
+        }
+      },
+      {
+        "mass": 1.0671,
+        "com": [
+          0.01266,
+          0.02291,
+          0.01467
+        ],
+        "source_case_id": "perturb_noise_002",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377403,
+          "torque": 377413
+        }
+      },
+      {
+        "mass": 3.2519,
+        "com": [
+          0.00798,
+          0.01066,
+          0.03711
+        ],
+        "source_case_id": "perturb_noise_003",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377404,
+          "torque": 377414
+        }
+      },
+      {
+        "mass": 3.2519,
+        "com": [
+          0.00798,
+          0.01066,
+          0.03711
+        ],
+        "source_case_id": "perturb_noise_004",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377405,
+          "torque": 377415
+        }
+      },
+      {
+        "mass": 3.2519,
+        "com": [
+          0.00798,
+          0.01066,
+          0.03711
+        ],
+        "source_case_id": "perturb_noise_005",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377406,
+          "torque": 377416
+        }
+      },
+      {
+        "mass": 7.8452,
+        "com": [
+          0.00075,
+          0.00638,
+          0.03169
+        ],
+        "source_case_id": "perturb_noise_006",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377407,
+          "torque": 377417
+        }
+      },
+      {
+        "mass": 7.8452,
+        "com": [
+          0.00075,
+          0.00638,
+          0.03169
+        ],
+        "source_case_id": "perturb_noise_007",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377408,
+          "torque": 377418
+        }
+      },
+      {
+        "mass": 7.8452,
+        "com": [
+          0.00075,
+          0.00638,
+          0.03169
+        ],
+        "source_case_id": "perturb_noise_008",
+        "kind": "reference",
+        "phase": "full",
+        "collision": null,
+        "pick_offset": null,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0,
+        "sensor_seeds": {
+          "servo": 377409,
+          "torque": 377419
+        }
+      }
+    ],
+    "new_noise_design_seed": 377400,
+    "official": false,
+    "old28_reference_baseline": {
+      "servo": 6,
+      "torque": 9
+    },
+    "comparison": "25 exposed physical +9 genuinely new noise conditions; per-row exact matched R1, not the old34 matrix"
+  },
+  "holdout": {
+    "seed": 377650,
+    "open_only_after_committed_freeze": true,
+    "batches": 1,
+    "conditions_not_generated_before_freeze": true,
+    "mass_ranges_kg": [
+      [
+        0.7,
+        2.1
+      ],
+      [
+        3.4,
+        4.7
+      ],
+      [
+        5.2,
+        6.7
+      ],
+      [
+        7.0,
+        7.9
+      ]
+    ],
+    "mass_round_digits": 4,
+    "exclude_masses_kg": [
+      0.0,
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.65,
+      0.7,
+      0.75,
+      0.8035,
+      0.8299,
+      0.85,
+      0.8957,
+      0.9399,
+      0.95,
+      1.0426,
+      1.05,
+      1.0671,
+      1.1137,
+      1.15,
+      1.1585,
+      1.1691,
+      1.25,
+      1.2522,
+      1.27,
+      1.35,
+      1.4015,
+      1.47,
+      1.5173,
+      1.57,
+      1.6017,
+      1.7,
+      1.85,
+      1.8653,
+      1.8889,
+      2.0168,
+      2.1,
+      2.25,
+      2.3476,
+      2.4333,
+      2.45,
+      2.467,
+      2.719,
+      2.85,
+      2.8585,
+      2.95,
+      2.9885,
+      3.149,
+      3.15,
+      3.151,
+      3.25,
+      3.2519,
+      3.3482,
+      3.35,
+      3.4,
+      3.45,
+      3.55,
+      3.5778,
+      3.65,
+      3.67,
+      3.763,
+      3.7781,
+      3.8051,
+      3.87,
+      3.8798,
+      3.9755,
+      4.0,
+      4.1014,
+      4.1046,
+      4.1439,
+      4.2204,
+      4.3,
+      4.3498,
+      4.3511,
+      4.4,
+      4.4824,
+      4.578,
+      4.65,
+      4.6772,
+      4.7,
+      4.7384,
+      4.8492,
+      4.8872,
+      4.8967,
+      5.05,
+      5.15,
+      5.2,
+      5.2563,
+      5.37,
+      5.3994,
+      5.47,
+      5.649,
+      5.65,
+      5.651,
+      5.6604,
+      5.6644,
+      5.6932,
+      5.75,
+      5.85,
+      5.9399,
+      5.95,
+      5.9858,
+      6.0473,
+      6.05,
+      6.0885,
+      6.0996,
+      6.1899,
+      6.4,
+      6.55,
+      6.7,
+      6.85,
+      6.8655,
+      6.87,
+      6.95,
+      7.0,
+      7.07,
+      7.1641,
+      7.17,
+      7.2303,
+      7.25,
+      7.265,
+      7.2785,
+      7.3323,
+      7.35,
+      7.3607,
+      7.4282,
+      7.45,
+      7.4895,
+      7.55,
+      7.5801,
+      7.64,
+      7.65,
+      7.7,
+      7.75,
+      7.8,
+      7.8402,
+      7.8452,
+      7.85,
+      7.8587,
+      7.9,
+      7.95,
+      8.0
+    ],
+    "com_ranges_m": [
+      [
+        -0.027,
+        -0.027,
+        0.006
+      ],
+      [
+        0.027,
+        0.027,
+        0.046
+      ]
+    ],
+    "phase_time_ranges_s": {
+      "pick": [
+        1.375,
+        1.515
+      ],
+      "transport": [
+        2.05,
+        3.35
+      ],
+      "place": [
+        3.775,
+        3.945
+      ]
+    },
+    "force_range_N": [
+      5.0,
+      35.0
+    ],
+    "directions": [
+      "+x",
+      "-x",
+      "+y",
+      "-y",
+      "+z",
+      "-z",
+      "+xy",
+      "-xy",
+      "+xyz",
+      "-xyz"
+    ],
+    "rows_per_source_architecture": {
+      "references": 4,
+      "collisions": 30,
+      "offsets": 4
+    },
+    "pick_offsets_m": [
+      [
+        0.018,
+        0,
+        0.012
+      ],
+      [
+        -0.018,
+        0,
+        0.012
+      ],
+      [
+        0.011,
+        -0.014,
+        0.008
+      ],
+      [
+        -0.012,
+        0.013,
+        -0.009
+      ]
+    ],
+    "marker": "exclusive fsynced marker before real RNG, after freeze + Git-object verification",
+    "comparison": "Chosen candidate and paired frozen R1 in ONE sealed batch; if effective candidate already R1 deduplicate. Report no new detector efficacy test in a fallback-only holdout.",
+    "failure": "affected mode becomes frozen R1; no tuning, source edits, threshold edits, replacement, runner-up or second holdout",
+    "sensor_seeds": {
+      "reference_servo": [
+        377651,
+        377652,
+        377653,
+        377654
+      ],
+      "reference_torque": [
+        377661,
+        377662,
+        377663,
+        377664
+      ],
+      "offset_servo": [
+        377671,
+        377672,
+        377673,
+        377674
+      ],
+      "offset_torque": [
+        377681,
+        377682,
+        377683,
+        377684
+      ]
+    }
+  },
+  "freeze": {
+    "candidate_and_R1_hashed": true,
+    "all_science_tools_weights_data_design_selection_committed": true,
+    "no_science_edits_after_open": true,
+    "if_all_prefreeze_fail": "skip new holdout and official, retain final3 byte-identical to R1",
+    "mutable_alias_exception": "Only permitted current my_detector alias assembly before freeze if eligible; R1 source and all other198 R4 frozen paths remain exact. No adoption means all199 stay exact. Old manifests are never edited.",
+    "fallback": "Only restore already-frozen R1 bytes after failure; no model/source/threshold edits or runner-up promotion."
+  },
+  "official": {
+    "stage": "One original evaluator regression of the unchanged frozen provisional selection after the one holdout; if all prefrozen candidates fail, skip both.",
+    "prior_exposure": "regression only, never independent efficacy or fit",
+    "max_additional_delay_ms": 5.0,
+    "eight_kg_transport_delay_caps_ms": {
+      "servo": {
+        "15N": 50.0,
+        "10N": 67.0
+      },
+      "torque": {
+        "15N": 48.0,
+        "10N": 61.0
+      }
+    },
+    "all_previously_detected_must_remain_detected": true,
+    "reference_FA_0_4_8_kg": 0,
+    "saturation_pct": 0.0,
+    "divergence": false,
+    "control_cost_ratio_vs_R1_max": 1.05,
+    "no_extra_collision_FA_vs_R1": true,
+    "after_failure": "immutable R1 fallback only; no repair, retune, alternate promotion or retest"
+  },
+  "resources": {
+    "total_simulations_max": 4,
+    "owned_episode_workers": 1,
+    "min_available_ram_gib": 6.0,
+    "gpu_jobs": 0,
+    "timing_serial": true,
+    "foreign_process_signals": false,
+    "official_venv_package_additions": false,
+    "python": "env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1; CPU BLAS/OMP1",
+    "per_episode_process_isolation": true,
+    "weekly_remaining_stop_below_percent": 10.0
+  },
+  "documents": {
+    "preserve_R1_R2_R3_R4": true,
+    "archive_current_README": "docs/R4_README.md",
+    "archive_current_pdf": "results/presentation_R4.pdf",
+    "retain_audit_and_miss_summary": true,
+    "new_comparison_video_pairs": 2,
+    "video_only_if_adopted": true,
+    "software_GL": "Mesa llvmpipe",
+    "publication_state_claims": false
+  },
+  "remote_operations_allowed": 0,
+  "stop": "local public commit above public baseline, before push"
+}

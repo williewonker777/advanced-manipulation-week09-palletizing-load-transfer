@@ -1,0 +1,121 @@
+{
+  "schema": "R5_BUILD.v1",
+  "protocol": {
+    "path": "results/v2_protocol/PROTOCOL_R5.json",
+    "sha256": "cfa8d71637c0546df0bd6618d2b13403278c2190df79437ba7a221cea764f6f8"
+  },
+  "core": {
+    "path": "experiments/r5_core.py",
+    "sha256": "536f315e8dc7a8ea850f8df1858f4ca620c6fb05901805e8731879e573656af9"
+  },
+  "builder": {
+    "path": "tools/r5_build.py",
+    "sha256": "2b5d0b3491a10af71f18b6537299a64705665d4f768326b5ee946d46fd2f57ee"
+  },
+  "base_R1": {
+    "path": "r1_detector.py",
+    "sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+  },
+  "models": [
+    {
+      "config": "SCALE_PHASE",
+      "mode": "servo",
+      "path": "models/r5/servo_SCALE_PHASE.json",
+      "sha256": "d9c7daf0dbc9fe6bb8019ae015df4941168edadb465652408631fe0747d4d2f3",
+      "threshold": 7.8028671642358445
+    },
+    {
+      "config": "SCALE_PHASE",
+      "mode": "torque",
+      "path": "models/r5/torque_SCALE_PHASE.json",
+      "sha256": "250cf1b00382f125957aea504c707ad4d6e4735fd512d8a81513ca9b38b9f768",
+      "threshold": 6.002032547392131
+    },
+    {
+      "config": "SCALE_STATE",
+      "mode": "servo",
+      "path": "models/r5/servo_SCALE_STATE.json",
+      "sha256": "d71d4573fa021b60a75a65678234e92e04d732e51c74ce8056fe263b8dfe5195",
+      "threshold": 3.430453910703297
+    },
+    {
+      "config": "SCALE_STATE",
+      "mode": "torque",
+      "path": "models/r5/torque_SCALE_STATE.json",
+      "sha256": "8924a704f42ed086a56ce2dbc90b8d275306d5252af34400d995c88d8d435a26",
+      "threshold": 3.2086891525415253
+    },
+    {
+      "config": "AR20_FULL",
+      "mode": "servo",
+      "path": "models/r5/servo_AR20_FULL.json",
+      "sha256": "0f1178631b2f4086e71abb1dba2c00c1e9014c5d2e75f54f7788369e5c5a88e2",
+      "threshold": 7.225805072254827
+    },
+    {
+      "config": "AR20_FULL",
+      "mode": "torque",
+      "path": "models/r5/torque_AR20_FULL.json",
+      "sha256": "661dafd506934259b922a130912b814a8339a193df90bfdd23f01b2f8dd0ca9c",
+      "threshold": 7.622101519725345
+    },
+    {
+      "config": "AR50_FULL",
+      "mode": "servo",
+      "path": "models/r5/servo_AR50_FULL.json",
+      "sha256": "3373412a140ba498b83908ce100712b871dd4c1e564b9166403575d4bfdfbccf",
+      "threshold": 7.850436412866144
+    },
+    {
+      "config": "AR50_FULL",
+      "mode": "torque",
+      "path": "models/r5/torque_AR50_FULL.json",
+      "sha256": "49e3c141515551aa4e9c33302e89e1a3f5d9273e04f88eae58037134eefe14b7",
+      "threshold": 7.512351679050461
+    }
+  ],
+  "generated": [
+    {
+      "config": "SCALE_PHASE",
+      "path": "experiments/r5_generated/SCALE_PHASE.py",
+      "sha256": "c97522e70561c1de5e22a21b2b464bfab2576914e695854187a4a98e8c5fa99e",
+      "payload_modes": [
+        "servo",
+        "torque"
+      ],
+      "audit": "pass"
+    },
+    {
+      "config": "SCALE_STATE",
+      "path": "experiments/r5_generated/SCALE_STATE.py",
+      "sha256": "9627c8b21d1998e8cc2e22a273b6962c7a446cdbe79f618b3e29868c7fe4db1e",
+      "payload_modes": [
+        "servo",
+        "torque"
+      ],
+      "audit": "pass"
+    },
+    {
+      "config": "AR20_FULL",
+      "path": "experiments/r5_generated/AR20_FULL.py",
+      "sha256": "2ce754abcfe34cacb83f39f3c36da08d63ffe7365918cdd11bb564e14c25b692",
+      "payload_modes": [
+        "servo",
+        "torque"
+      ],
+      "audit": "pass"
+    },
+    {
+      "config": "AR50_FULL",
+      "path": "experiments/r5_generated/AR50_FULL.py",
+      "sha256": "74417cf13fbf2d9e32dd661410769eb5fe2c91a693c6bb07c78e06a4c36e7940",
+      "payload_modes": [
+        "servo",
+        "torque"
+      ],
+      "audit": "pass"
+    }
+  ],
+  "runtime_file_reads": 0,
+  "weights_or_threshold_updates": 0
+}

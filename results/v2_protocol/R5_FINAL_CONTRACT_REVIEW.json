@@ -1,0 +1,41 @@
+{
+  "schema": "R5_FINAL_CONTRACT_REVIEW.v1",
+  "review_utc": "2026-11-09T05:43:47.538210+00:00",
+  "stage": "post-sealed mandatory submission compatibility verification",
+  "status": "FAIL",
+  "freeze_sha256": "2d6fa5e2d22bd01e8f491b9174617047d08347fb854c1f5705c44c02098b795b",
+  "earlier_adoption_sha256": "4dfd9f8817a455fee36c198e2e47e6853c2b4872b2013f76589180040e4afbc7",
+  "tested_assembly": {
+    "id": "A_STATE",
+    "path": "experiments/r5_final/A_STATE.py",
+    "sha256": "4f4b33c08872e8db612e1416468ea14dedc74964f05702f4aa084971f9197b44"
+  },
+  "test_command": "env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tools -p 'test_*.py' -v",
+  "tests_run": 526,
+  "failures": 0,
+  "errors": 8,
+  "error_test_names": [
+    "unittest.case.FunctionTestCase (test_alarm_persistence_and_release_are_stable)",
+    "unittest.case.FunctionTestCase (test_bias_tracking_freezes_for_grip_suspicion_and_alarm)",
+    "unittest.case.FunctionTestCase (test_fast_channel_is_grip_off_only_and_uses_production_persistence)",
+    "unittest.case.FunctionTestCase (test_gate_requires_grip_and_taught_height)",
+    "unittest.case.FunctionTestCase (test_shared_core_is_timestamp_idempotent_and_adapter_reuses_it)",
+    "unittest.case.FunctionTestCase (test_world_unilateral_projection_and_rotated_footprint)",
+    "test_detector_missing_or_unrelated_controller (test_production_contract.ProductionContractTests.test_detector_missing_or_unrelated_controller) (with_controller=False)",
+    "test_detector_missing_or_unrelated_controller (test_production_contract.ProductionContractTests.test_detector_missing_or_unrelated_controller) (with_controller=True)"
+  ],
+  "full_stderr_sha256": "75719afa46ad840440b4011f587640f32555a4692340a16901b33cdf12c0373c",
+  "full_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "frozen_declaration": "_R5_ENABLED_MODES = 'servo'",
+  "frozen_declaration_type": "str",
+  "trigger": "controller or controller.MODE absent; mode is None during reset",
+  "exception": "TypeError: 'in <string>' requires string as left operand, not NoneType",
+  "cause": "한 원소 tuple을 % 포맷 인자로 넘겨 모드 집합 대신 문자열이 생성됐다. 제어기 정보가 없는 reset 호출의 기존 제출 호환성 검사를 통과하지 못했다.",
+  "official_pass_scope": "The official calls supplied a valid controller mode; their recorded PASS and measurements remain unchanged.",
+  "action": "Reject the servo candidate; copy only the already committed and frozen R1 fallback. Do not repair or retest the candidate after holdout/official.",
+  "scientific_source_changes": 0,
+  "model_or_threshold_changes": 0,
+  "protocol_or_gate_changes": 0,
+  "new_holdout_or_official_batches": 0,
+  "numeric_gates_relaxed": false
+}

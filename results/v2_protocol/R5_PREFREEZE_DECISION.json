@@ -1,0 +1,160 @@
+{
+  "schema": "R5_PREFREEZE_DECISION.v1",
+  "selected_variants": {
+    "servo": "SCALE_STATE",
+    "torque": "R1"
+  },
+  "selection_rows": {
+    "servo": [
+      {
+        "variant": "SCALE_PHASE",
+        "mode": "servo",
+        "protocol_order": 0,
+        "eligible": false,
+        "failures": [
+          "S2_PERMANENT_DIAGNOSTIC",
+          "VALIDATION_FAILED",
+          "DEVELOPMENT_FAILED",
+          "D4_FAILED"
+        ],
+        "development_additional_detected": 1,
+        "D4_additional_detected": 2,
+        "validation_worst_p99_us": 436.6371
+      },
+      {
+        "variant": "SCALE_STATE",
+        "mode": "servo",
+        "protocol_order": 1,
+        "eligible": true,
+        "failures": [],
+        "development_additional_detected": 5,
+        "D4_additional_detected": 8,
+        "validation_worst_p99_us": 444.8820100000001
+      },
+      {
+        "variant": "AR20_FULL",
+        "mode": "servo",
+        "protocol_order": 2,
+        "eligible": false,
+        "failures": [
+          "S2_PERMANENT_DIAGNOSTIC",
+          "VALIDATION_FAILED",
+          "DEVELOPMENT_FAILED",
+          "D4_FAILED",
+          "PERTURBATION_FAILED"
+        ],
+        "development_additional_detected": 1,
+        "D4_additional_detected": 7,
+        "validation_worst_p99_us": 487.786
+      },
+      {
+        "variant": "AR50_FULL",
+        "mode": "servo",
+        "protocol_order": 3,
+        "eligible": false,
+        "failures": [
+          "S2_PERMANENT_DIAGNOSTIC",
+          "VALIDATION_FAILED",
+          "DEVELOPMENT_FAILED",
+          "D4_FAILED",
+          "PERTURBATION_FAILED"
+        ],
+        "development_additional_detected": 2,
+        "D4_additional_detected": 16,
+        "validation_worst_p99_us": 492.6403000000001
+      }
+    ],
+    "torque": [
+      {
+        "variant": "SCALE_PHASE",
+        "mode": "torque",
+        "protocol_order": 0,
+        "eligible": false,
+        "failures": [
+          "S2_PERMANENT_DIAGNOSTIC",
+          "VALIDATION_FAILED",
+          "DEVELOPMENT_FAILED",
+          "D4_FAILED",
+          "PERTURBATION_FAILED"
+        ],
+        "development_additional_detected": 4,
+        "D4_additional_detected": 0,
+        "validation_worst_p99_us": 445.3939800000001
+      },
+      {
+        "variant": "SCALE_STATE",
+        "mode": "torque",
+        "protocol_order": 1,
+        "eligible": false,
+        "failures": [
+          "D4_FAILED",
+          "PERTURBATION_FAILED"
+        ],
+        "development_additional_detected": 5,
+        "D4_additional_detected": 5,
+        "validation_worst_p99_us": 451.36771000000005
+      },
+      {
+        "variant": "AR20_FULL",
+        "mode": "torque",
+        "protocol_order": 2,
+        "eligible": false,
+        "failures": [
+          "S2_PERMANENT_DIAGNOSTIC",
+          "VALIDATION_FAILED",
+          "DEVELOPMENT_FAILED",
+          "D4_FAILED",
+          "PERTURBATION_FAILED"
+        ],
+        "development_additional_detected": 1,
+        "D4_additional_detected": 5,
+        "validation_worst_p99_us": 498.6854900000002
+      },
+      {
+        "variant": "AR50_FULL",
+        "mode": "torque",
+        "protocol_order": 3,
+        "eligible": false,
+        "failures": [
+          "S2_PERMANENT_DIAGNOSTIC",
+          "VALIDATION_FAILED",
+          "DEVELOPMENT_FAILED",
+          "D4_FAILED",
+          "PERTURBATION_FAILED"
+        ],
+        "development_additional_detected": 3,
+        "D4_additional_detected": 14,
+        "validation_worst_p99_us": 492.5615100000001
+      }
+    ]
+  },
+  "rank_order": [
+    "development additional detected descending",
+    "D4 additional detected descending",
+    "validation worst p99 ascending",
+    "protocol order ascending"
+  ],
+  "assemblies": {
+    "R1": {
+      "path": "experiments/r5_final/R1.py",
+      "sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+    },
+    "A_STATE": {
+      "path": "experiments/r5_final/A_STATE.py",
+      "sha256": "4f4b33c08872e8db612e1416468ea14dedc74964f05702f4aa084971f9197b44"
+    },
+    "B_STATE": {
+      "path": "experiments/r5_final/B_STATE.py",
+      "sha256": "1c075e49c8bcb684cf1d166064a0edbe7300d50b844d025a3ed4891216d7d2aa"
+    },
+    "AB_STATE": {
+      "path": "experiments/r5_final/AB_STATE.py",
+      "sha256": "9627c8b21d1998e8cc2e22a273b6962c7a446cdbe79f618b3e29868c7fe4db1e"
+    }
+  },
+  "provisional_assembly": "A_STATE",
+  "provisional_detector_sha256": "4f4b33c08872e8db612e1416468ea14dedc74964f05702f4aa084971f9197b44",
+  "runtime_bundle_sha256": "5c90f590dd0356cebaa902ff4216444e71080a30c1a7299c89f3e516379cfea9",
+  "created_utc": "2026-11-09T05:17:23.378374+00:00",
+  "runner_up_promotion_after_seal": false
+}

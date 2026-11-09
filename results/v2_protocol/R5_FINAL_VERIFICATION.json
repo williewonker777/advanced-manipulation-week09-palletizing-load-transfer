@@ -1,0 +1,65 @@
+{
+  "schema": "R5_FINAL_VERIFICATION.v1",
+  "recorded_utc": "2026-11-09T06:05:11.413860+00:00",
+  "scope": "Final R1 source acceptance after an append-only compatibility veto; not a new scientific evaluation.",
+  "full_unittest": {
+    "work": {
+      "tests": 529,
+      "status": "PASS",
+      "stderr_sha256": "9d02fa625940f711ce9c96b3a997c2bbea6a94ad425e711710170fc9dde56f08",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "external_kit_public_overlay": {
+      "tests": 466,
+      "status": "PASS",
+      "stderr_sha256": "87b96f45130ea85504188c6b92d8f1b2ef339f0333a9aa57edd2bffd222acbe1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "command": "env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tools -p 'test_*.py' -v",
+  "tested_production_sha256": {
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+  },
+  "final_three_byte_equal_R1": true,
+  "final_decision": {
+    "path": "results/v2_protocol/R5_FINAL_ADOPTION.json",
+    "sha256": "add703e84acfb90ce2ab07b454ec5c682d765233f44ed8b752e5ee0b11897916"
+  },
+  "failed_candidate_contract": {
+    "path": "results/v2_protocol/R5_FINAL_CONTRACT_REVIEW.json",
+    "sha256": "b44f85fe751deea55f11fd05b6644f3eeedd99bd5d0a89c708bb7fcdc53733d0",
+    "tests": 526,
+    "errors": 8,
+    "status": "FAIL"
+  },
+  "candidate_scientific_repairs_after_sealed_evaluation": 0,
+  "holdout_batches": 1,
+  "holdout_actual_episodes": 114,
+  "official_batches": 1,
+  "official_actual_episodes": 58,
+  "new_official_runs_after_R1_fallback": 0,
+  "old_freezes_unchanged": {
+    "R2": 53,
+    "R3": 101,
+    "R4": 199
+  },
+  "runtime_sources_unchanged": 62,
+  "R5_frozen_source_manifest": {
+    "total": 119,
+    "unchanged": 118,
+    "allowed_submission_alias_fallback": {
+      "file": "my_detector.py",
+      "frozen_assembly": "R1",
+      "sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+    }
+  },
+  "protected_kit_files_unchanged": 20,
+  "original_inventory_files_unchanged": 29,
+  "environment_packages_unchanged": 21,
+  "public_reproduction_boundary": "Acquisition, sealed drivers and raw traces are not distributed. Public subset tests use an external supplied-kit overlay.",
+  "provisional_media_withdrawn": true,
+  "new_public_media_files": 0,
+  "remote_git_gh_api_operations": 0
+}

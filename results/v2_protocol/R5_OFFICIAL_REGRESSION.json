@@ -1,0 +1,3551 @@
+{
+  "schema": "R5_OFFICIAL_REGRESSION.v1",
+  "official": true,
+  "status": "PASS",
+  "architectures": {
+    "servo": {
+      "status": "PASS",
+      "control": [
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 0.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 4.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "collisions": [
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 36.0,
+              "R3_delay_ms": 36.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 23.0,
+              "R3_delay_ms": 23.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 62.0,
+              "R3_delay_ms": 38.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 43.0,
+              "R3_delay_ms": 32.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 25.0,
+              "R3_delay_ms": 23.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 18.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 0.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 78.0,
+              "R3_delay_ms": 78.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 31.0,
+              "R3_delay_ms": 31.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 36.0,
+              "R3_delay_ms": 36.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 24.0,
+              "R3_delay_ms": 24.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 62.0,
+              "R3_delay_ms": 49.0,
+              "fixed_cap_ms": 67.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 45.0,
+              "R3_delay_ms": 37.0,
+              "fixed_cap_ms": 50.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 27.0,
+              "R3_delay_ms": 25.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 18.0,
+              "R3_delay_ms": 18.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "servo",
+          "mass_kg": 8.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 69.0,
+              "R3_delay_ms": 69.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 33.0,
+              "R3_delay_ms": 33.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 21.0,
+              "R3_delay_ms": 21.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "errors": []
+    },
+    "torque": {
+      "status": "PASS",
+      "control": [
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 0.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 4.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "cost_ratios_vs_R1": {
+            "rms_mm": 1.0,
+            "max_mm": 1.0,
+            "pick_nm": 1.0,
+            "place_nm": 1.0,
+            "table_n": 1.0
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": [
+            0,
+            0,
+            0
+          ],
+          "normal_status": true,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "collisions": [
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 37.0,
+              "R3_delay_ms": 37.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 22.0,
+              "R3_delay_ms": 22.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 57.0,
+              "R3_delay_ms": 57.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 42.0,
+              "R3_delay_ms": 42.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 27.0,
+              "R3_delay_ms": 27.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 0.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 78.0,
+              "R3_delay_ms": 78.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 30.0,
+              "R3_delay_ms": 30.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 19.0,
+              "R3_delay_ms": 19.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "time_s": 1.42,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 36.0,
+              "R3_delay_ms": 36.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 24.0,
+              "R3_delay_ms": 24.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "time_s": 3.0,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": 56.0,
+              "R3_delay_ms": 56.0,
+              "fixed_cap_ms": 61.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 43.0,
+              "R3_delay_ms": 43.0,
+              "fixed_cap_ms": 48.0,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 26.0,
+              "R3_delay_ms": 26.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 18.0,
+              "R3_delay_ms": 18.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 1,
+          "R3_false_alarms": 1,
+          "pass": true,
+          "failures": []
+        },
+        {
+          "architecture": "torque",
+          "mass_kg": 8.0,
+          "time_s": 3.86,
+          "forces": [
+            {
+              "force": "10N",
+              "R1_delay_ms": null,
+              "R3_delay_ms": null,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "15N",
+              "R1_delay_ms": 91.0,
+              "R3_delay_ms": 91.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "40N",
+              "R1_delay_ms": 42.0,
+              "R3_delay_ms": 42.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            },
+            {
+              "force": "100N",
+              "R1_delay_ms": 22.0,
+              "R3_delay_ms": 22.0,
+              "fixed_cap_ms": null,
+              "lost_R1_detection": false,
+              "additional_delay_pass": true,
+              "fixed_cap_pass": true
+            }
+          ],
+          "R1_false_alarms": 0,
+          "R3_false_alarms": 0,
+          "pass": true,
+          "failures": []
+        }
+      ],
+      "errors": []
+    }
+  },
+  "marker_sha256": "8e6eb45a137cc014a72401f15215a72c71ce3260102707156de9cd78af462e04",
+  "freeze_sha256": "2d6fa5e2d22bd01e8f491b9174617047d08347fb854c1f5705c44c02098b795b",
+  "protocol_sha256": "cfa8d71637c0546df0bd6618d2b13403278c2190df79437ba7a221cea764f6f8",
+  "holdout_reseal_sha256": "9273b372cc80c6d338fee3fbc3822184d0a0c0cefeeeb153405a8b9afa791ac0",
+  "holdout_review_sha256": "40b3dffeaade81505bd4ce57244289b2a55772b11fbaa184acc7c199a77febd0",
+  "raw_log_sha256": {
+    "servo": "6baf236dc9eac11a1b90e248a4a16bab8a9f743d3c332a158faee2cfc3d6676e",
+    "torque": "a64817a115340b8e4134bb382ea6b0b7bd9768e8b84860ffe3ea1aba7ea81c99"
+  },
+  "retest_permitted": false,
+  "records": {
+    "servo": {
+      "kit_integrity": {
+        "status": "ok",
+        "files": 20,
+        "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+      },
+      "source_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "detector_sha256": "4f4b33c08872e8db612e1416468ea14dedc74964f05702f4aa084971f9197b44",
+      "self_contained_default_names": true,
+      "control_and_collisions": {
+        "control": {
+          "0.0": [
+            "1.18",
+            "3.94",
+            "0.0",
+            "9.7",
+            "5.1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "4.0": [
+            "1.15",
+            "3.79",
+            "0.0",
+            "9.7",
+            "7.6",
+            "40",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "8.0": [
+            "1.17",
+            "3.91",
+            "0.0",
+            "9.7",
+            "14.6",
+            "79",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ]
+        },
+        "collisions": [
+          {
+            "mass": 0.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "23",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.0,
+            "cells": [
+              "38",
+              "32",
+              "23",
+              "18",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "78",
+              "31",
+              "19",
+              "0회",
+              "15 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "24",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.0,
+            "cells": [
+              "49",
+              "37",
+              "25",
+              "18",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "69",
+              "33",
+              "21",
+              "0회",
+              "15 N"
+            ]
+          }
+        ]
+      }
+    },
+    "torque": {
+      "kit_integrity": {
+        "status": "ok",
+        "files": 20,
+        "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+      },
+      "source_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "detector_sha256": "4f4b33c08872e8db612e1416468ea14dedc74964f05702f4aa084971f9197b44",
+      "self_contained_default_names": true,
+      "control_and_collisions": {
+        "control": {
+          "0.0": [
+            "2.09",
+            "4.05",
+            "0.0",
+            "9.0",
+            "4.8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "4.0": [
+            "2.32",
+            "4.42",
+            "0.0",
+            "9.0",
+            "6.8",
+            "39",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ],
+          "8.0": [
+            "3.23",
+            "8.44",
+            "0.0",
+            "9.0",
+            "13.1",
+            "80",
+            "0",
+            "0",
+            "0",
+            "정상"
+          ]
+        },
+        "collisions": [
+          {
+            "mass": 0.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "37",
+              "22",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.0,
+            "cells": [
+              "57",
+              "42",
+              "27",
+              "19",
+              "0회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 0.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "78",
+              "30",
+              "19",
+              "0회",
+              "15 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 1.42,
+            "cells": [
+              "놓침",
+              "놓침",
+              "36",
+              "24",
+              "0회",
+              "40 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.0,
+            "cells": [
+              "56",
+              "43",
+              "26",
+              "18",
+              "1회",
+              "10 N"
+            ]
+          },
+          {
+            "mass": 8.0,
+            "time": 3.86,
+            "cells": [
+              "놓침",
+              "91",
+              "42",
+              "22",
+              "0회",
+              "15 N"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "holdout_review": {
+    "schema": "R5_HOLDOUT_REVIEW.v1",
+    "freeze_sha256": "2d6fa5e2d22bd01e8f491b9174617047d08347fb854c1f5705c44c02098b795b",
+    "protocol_sha256": "cfa8d71637c0546df0bd6618d2b13403278c2190df79437ba7a221cea764f6f8",
+    "holdout_reseal_sha256": "9273b372cc80c6d338fee3fbc3822184d0a0c0cefeeeb153405a8b9afa791ac0",
+    "design_sha256": "135df20e8b51e042954d96be8178e5c24a618beaa95bcfd59f6c950ffcc89f7a",
+    "design_finalized_sha256": "dd4ac0295b6af8b4e05e275bd063b1abcb4adb299929add545b5e101c74fa12c",
+    "entries": [
+      {
+        "mode": "servo",
+        "variant": "SCALE_STATE",
+        "status": "PASS",
+        "metrics": {
+          "rows": 38,
+          "collision_rows": 30,
+          "R1_detected_collisions": 23,
+          "candidate_detected_collisions": 25,
+          "candidate_missed_collision_case_ids": [
+            "holdout_collision_07",
+            "holdout_collision_09",
+            "holdout_collision_14",
+            "holdout_collision_25",
+            "holdout_collision_27"
+          ],
+          "additional_detected": 2,
+          "gain_case_ids": [
+            "holdout_collision_12",
+            "holdout_collision_18"
+          ],
+          "lost_R1_case_ids": [],
+          "tool_loss_case_ids": [],
+          "FA_increase_case_ids": [],
+          "R1_false_alarms_total": 1,
+          "candidate_false_alarms_total": 1,
+          "phases": {
+            "pick": {
+              "rows": 10,
+              "R1_detected": 8,
+              "candidate_detected": 8,
+              "gains": 0,
+              "losses": 0
+            },
+            "transport": {
+              "rows": 10,
+              "R1_detected": 7,
+              "candidate_detected": 9,
+              "gains": 2,
+              "losses": 0
+            },
+            "place": {
+              "rows": 10,
+              "R1_detected": 8,
+              "candidate_detected": 8,
+              "gains": 0,
+              "losses": 0
+            }
+          },
+          "normal_audit_passed": true,
+          "physical_bit_equal": true,
+          "online_offline_equal": true,
+          "control_nondivergent": true,
+          "combined_p99_worst_us": 457.87829999999997,
+          "combined_max_worst_us": 7198.741
+        },
+        "details": [
+          {
+            "source_case_id": "holdout_reference_0",
+            "kind": "reference",
+            "phase": "full",
+            "reference_source_case_id": null,
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_reference_1",
+            "kind": "reference",
+            "phase": "full",
+            "reference_source_case_id": null,
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_reference_2",
+            "kind": "reference",
+            "phase": "full",
+            "reference_source_case_id": null,
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_reference_3",
+            "kind": "reference",
+            "phase": "full",
+            "reference_source_case_id": null,
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_offset_0",
+            "kind": "offset",
+            "phase": "pick",
+            "reference_source_case_id": null,
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 10.999999999999899
+            },
+            "candidate_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 10.999999999999899
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_offset_1",
+            "kind": "offset",
+            "phase": "pick",
+            "reference_source_case_id": null,
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 10.999999999999899
+            },
+            "candidate_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 10.999999999999899
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_offset_2",
+            "kind": "offset",
+            "phase": "pick",
+            "reference_source_case_id": null,
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 9.000000000000119
+            },
+            "candidate_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 9.000000000000119
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_offset_3",
+            "kind": "offset",
+            "phase": "pick",
+            "reference_source_case_id": null,
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 1,
+              "false_alarm_times": [
+                3.843
+              ],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 1,
+              "false_alarm_times": [
+                3.843
+              ],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_00",
+            "kind": "collision",
+            "phase": "pick",
+            "reference_source_case_id": "holdout_reference_0",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 35.59999999999985,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 35.59999999999985,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_01",
+            "kind": "collision",
+            "phase": "pick",
+            "reference_source_case_id": "holdout_reference_1",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 100.00000000000009,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 100.00000000000009,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_02",
+            "kind": "collision",
+            "phase": "pick",
+            "reference_source_case_id": "holdout_reference_2",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 58.10000000000004,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 58.10000000000004,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_03",
+            "kind": "collision",
+            "phase": "pick",
+            "reference_source_case_id": "holdout_reference_3",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 49.2999999999999,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 49.2999999999999,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_04",
+            "kind": "collision",
+            "phase": "pick",
+            "reference_source_case_id": "holdout_reference_0",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 102.99999999999999,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 102.99999999999999,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_05",
+            "kind": "collision",
+            "phase": "pick",
+            "reference_source_case_id": "holdout_reference_1",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 36.5000000000002,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 36.5000000000002,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_06",
+            "kind": "collision",
+            "phase": "pick",
+            "reference_source_case_id": "holdout_reference_2",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 67.90000000000008,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 67.90000000000008,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_07",
+            "kind": "collision",
+            "phase": "pick",
+            "reference_source_case_id": "holdout_reference_3",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_08",
+            "kind": "collision",
+            "phase": "pick",
+            "reference_source_case_id": "holdout_reference_0",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 71.89999999999985,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 63.89999999999985,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_09",
+            "kind": "collision",
+            "phase": "pick",
+            "reference_source_case_id": "holdout_reference_1",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_10",
+            "kind": "collision",
+            "phase": "transport",
+            "reference_source_case_id": "holdout_reference_2",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 26.399999999999757,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 24.399999999999977,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_11",
+            "kind": "collision",
+            "phase": "transport",
+            "reference_source_case_id": "holdout_reference_3",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 31.099999999999905,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 25.100000000000122,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_12",
+            "kind": "collision",
+            "phase": "transport",
+            "reference_source_case_id": "holdout_reference_0",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 52.59999999999998,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": true,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_13",
+            "kind": "collision",
+            "phase": "transport",
+            "reference_source_case_id": "holdout_reference_1",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 35.20000000000012,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 28.200000000000003,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_14",
+            "kind": "collision",
+            "phase": "transport",
+            "reference_source_case_id": "holdout_reference_2",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_15",
+            "kind": "collision",
+            "phase": "transport",
+            "reference_source_case_id": "holdout_reference_3",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 34.600000000000186,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 34.600000000000186,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_16",
+            "kind": "collision",
+            "phase": "transport",
+            "reference_source_case_id": "holdout_reference_0",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 33.59999999999985,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 24.599999999999955,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_17",
+            "kind": "collision",
+            "phase": "transport",
+            "reference_source_case_id": "holdout_reference_1",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 32.099999999999795,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 25.100000000000122,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_18",
+            "kind": "collision",
+            "phase": "transport",
+            "reference_source_case_id": "holdout_reference_2",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 60.99999999999994,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": true,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_19",
+            "kind": "collision",
+            "phase": "transport",
+            "reference_source_case_id": "holdout_reference_3",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 36.79999999999994,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 32.79999999999994,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_20",
+            "kind": "collision",
+            "phase": "place",
+            "reference_source_case_id": "holdout_reference_0",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 69.90000000000008,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 69.90000000000008,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_21",
+            "kind": "collision",
+            "phase": "place",
+            "reference_source_case_id": "holdout_reference_1",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 45.5000000000001,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 45.5000000000001,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_22",
+            "kind": "collision",
+            "phase": "place",
+            "reference_source_case_id": "holdout_reference_2",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 32.100000000000236,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 32.100000000000236,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_23",
+            "kind": "collision",
+            "phase": "place",
+            "reference_source_case_id": "holdout_reference_3",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 31.80000000000005,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 31.80000000000005,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_24",
+            "kind": "collision",
+            "phase": "place",
+            "reference_source_case_id": "holdout_reference_0",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 24.50000000000019,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 24.50000000000019,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_25",
+            "kind": "collision",
+            "phase": "place",
+            "reference_source_case_id": "holdout_reference_1",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_26",
+            "kind": "collision",
+            "phase": "place",
+            "reference_source_case_id": "holdout_reference_2",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 77.79999999999987,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 77.79999999999987,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_27",
+            "kind": "collision",
+            "phase": "place",
+            "reference_source_case_id": "holdout_reference_3",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_28",
+            "kind": "collision",
+            "phase": "place",
+            "reference_source_case_id": "holdout_reference_0",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 33.800000000000274,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 33.800000000000274,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          },
+          {
+            "source_case_id": "holdout_collision_29",
+            "kind": "collision",
+            "phase": "place",
+            "reference_source_case_id": "holdout_reference_1",
+            "pair_key_verified": true,
+            "R1_event": {
+              "outcome": "detected",
+              "delay_ms": 145.19999999999956,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "candidate_event": {
+              "outcome": "detected",
+              "delay_ms": 145.19999999999956,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "gain": false,
+            "loss": false,
+            "tool_loss": false,
+            "FA_increase": false
+          }
+        ],
+        "timing": {
+          "source": "online_validation_rows",
+          "combined_wall_p99_worst_us": 457.87829999999997,
+          "combined_wall_max_worst_us": 7198.741,
+          "detector_wall_p99_worst_us": 401.6292,
+          "detector_wall_max_worst_us": 7162.521,
+          "per_case": [
+            {
+              "source_case_id": "holdout_reference_0",
+              "combined_wall_p99_us": 450.91060000000004,
+              "combined_wall_max_us": 6549.754,
+              "detector_wall_p99_us": 398.5814100000001,
+              "detector_wall_max_us": 6509.455
+            },
+            {
+              "source_case_id": "holdout_reference_1",
+              "combined_wall_p99_us": 437.76480000000015,
+              "combined_wall_max_us": 4968.023,
+              "detector_wall_p99_us": 382.5965000000002,
+              "detector_wall_max_us": 4930.063
+            },
+            {
+              "source_case_id": "holdout_reference_2",
+              "combined_wall_p99_us": 434.9966000000004,
+              "combined_wall_max_us": 4906.143,
+              "detector_wall_p99_us": 379.30380000000014,
+              "detector_wall_max_us": 4865.823
+            },
+            {
+              "source_case_id": "holdout_reference_3",
+              "combined_wall_p99_us": 430.97881,
+              "combined_wall_max_us": 5936.618,
+              "detector_wall_p99_us": 374.2806000000002,
+              "detector_wall_max_us": 5899.938
+            },
+            {
+              "source_case_id": "holdout_offset_0",
+              "combined_wall_p99_us": 434.2341000000001,
+              "combined_wall_max_us": 5477.331,
+              "detector_wall_p99_us": 379.9585000000004,
+              "detector_wall_max_us": 5439.591
+            },
+            {
+              "source_case_id": "holdout_offset_1",
+              "combined_wall_p99_us": 435.6937000000001,
+              "combined_wall_max_us": 5879.348,
+              "detector_wall_p99_us": 381.29340000000013,
+              "detector_wall_max_us": 5820.759
+            },
+            {
+              "source_case_id": "holdout_offset_2",
+              "combined_wall_p99_us": 438.26851000000005,
+              "combined_wall_max_us": 4989.263,
+              "detector_wall_p99_us": 381.1730000000001,
+              "detector_wall_max_us": 4953.284
+            },
+            {
+              "source_case_id": "holdout_offset_3",
+              "combined_wall_p99_us": 433.20529000000016,
+              "combined_wall_max_us": 4994.143,
+              "detector_wall_p99_us": 377.0429000000004,
+              "detector_wall_max_us": 4935.963
+            },
+            {
+              "source_case_id": "holdout_collision_00",
+              "combined_wall_p99_us": 452.37030000000004,
+              "combined_wall_max_us": 6771.254,
+              "detector_wall_p99_us": 393.0287,
+              "detector_wall_max_us": 6733.834
+            },
+            {
+              "source_case_id": "holdout_collision_01",
+              "combined_wall_p99_us": 452.1803000000001,
+              "combined_wall_max_us": 5624.199,
+              "detector_wall_p99_us": 396.4762000000002,
+              "detector_wall_max_us": 5584.08
+            },
+            {
+              "source_case_id": "holdout_collision_02",
+              "combined_wall_p99_us": 457.87829999999997,
+              "combined_wall_max_us": 7198.741,
+              "detector_wall_p99_us": 401.6292,
+              "detector_wall_max_us": 7162.521
+            },
+            {
+              "source_case_id": "holdout_collision_03",
+              "combined_wall_p99_us": 445.3415900000001,
+              "combined_wall_max_us": 4932.753,
+              "detector_wall_p99_us": 389.3531000000001,
+              "detector_wall_max_us": 4895.794
+            },
+            {
+              "source_case_id": "holdout_collision_04",
+              "combined_wall_p99_us": 444.4793,
+              "combined_wall_max_us": 6754.943,
+              "detector_wall_p99_us": 388.9957000000004,
+              "detector_wall_max_us": 6714.214
+            },
+            {
+              "source_case_id": "holdout_collision_05",
+              "combined_wall_p99_us": 449.31821000000025,
+              "combined_wall_max_us": 5026.113,
+              "detector_wall_p99_us": 391.89130000000006,
+              "detector_wall_max_us": 4989.713
+            },
+            {
+              "source_case_id": "holdout_collision_06",
+              "combined_wall_p99_us": 436.75029000000006,
+              "combined_wall_max_us": 6491.145,
+              "detector_wall_p99_us": 381.5935000000001,
+              "detector_wall_max_us": 6453.055
+            },
+            {
+              "source_case_id": "holdout_collision_07",
+              "combined_wall_p99_us": 436.7819000000003,
+              "combined_wall_max_us": 4908.203,
+              "detector_wall_p99_us": 383.37121000000036,
+              "detector_wall_max_us": 4871.423
+            },
+            {
+              "source_case_id": "holdout_collision_08",
+              "combined_wall_p99_us": 448.29991000000007,
+              "combined_wall_max_us": 6200.166,
+              "detector_wall_p99_us": 392.24770000000024,
+              "detector_wall_max_us": 6162.786
+            },
+            {
+              "source_case_id": "holdout_collision_09",
+              "combined_wall_p99_us": 444.52340000000015,
+              "combined_wall_max_us": 5288.561,
+              "detector_wall_p99_us": 390.03120000000007,
+              "detector_wall_max_us": 5251.321
+            },
+            {
+              "source_case_id": "holdout_collision_10",
+              "combined_wall_p99_us": 440.13189000000006,
+              "combined_wall_max_us": 4777.023,
+              "detector_wall_p99_us": 386.95950000000005,
+              "detector_wall_max_us": 4740.274
+            },
+            {
+              "source_case_id": "holdout_collision_11",
+              "combined_wall_p99_us": 435.4585,
+              "combined_wall_max_us": 6721.573,
+              "detector_wall_p99_us": 378.6587,
+              "detector_wall_max_us": 6685.604
+            },
+            {
+              "source_case_id": "holdout_collision_12",
+              "combined_wall_p99_us": 440.6995,
+              "combined_wall_max_us": 5706.819,
+              "detector_wall_p99_us": 386.57731000000024,
+              "detector_wall_max_us": 5661.749
+            },
+            {
+              "source_case_id": "holdout_collision_13",
+              "combined_wall_p99_us": 436.42869000000024,
+              "combined_wall_max_us": 5678.819,
+              "detector_wall_p99_us": 381.3381,
+              "detector_wall_max_us": 5642.28
+            },
+            {
+              "source_case_id": "holdout_collision_14",
+              "combined_wall_p99_us": 421.3804000000003,
+              "combined_wall_max_us": 5240.431,
+              "detector_wall_p99_us": 368.8404000000003,
+              "detector_wall_max_us": 5191.072
+            },
+            {
+              "source_case_id": "holdout_collision_15",
+              "combined_wall_p99_us": 436.12449000000015,
+              "combined_wall_max_us": 5173.702,
+              "detector_wall_p99_us": 380.5749000000001,
+              "detector_wall_max_us": 5134.002
+            },
+            {
+              "source_case_id": "holdout_collision_16",
+              "combined_wall_p99_us": 446.50991000000005,
+              "combined_wall_max_us": 5109.632,
+              "detector_wall_p99_us": 393.53099000000026,
+              "detector_wall_max_us": 5049.913
+            },
+            {
+              "source_case_id": "holdout_collision_17",
+              "combined_wall_p99_us": 434.8001100000001,
+              "combined_wall_max_us": 6886.842,
+              "detector_wall_p99_us": 380.2777000000002,
+              "detector_wall_max_us": 6849.493
+            },
+            {
+              "source_case_id": "holdout_collision_18",
+              "combined_wall_p99_us": 444.8320100000001,
+              "combined_wall_max_us": 4954.623,
+              "detector_wall_p99_us": 392.4009000000001,
+              "detector_wall_max_us": 4890.653
+            },
+            {
+              "source_case_id": "holdout_collision_19",
+              "combined_wall_p99_us": 425.7504900000003,
+              "combined_wall_max_us": 4882.813,
+              "detector_wall_p99_us": 372.0550000000002,
+              "detector_wall_max_us": 4846.133
+            },
+            {
+              "source_case_id": "holdout_collision_20",
+              "combined_wall_p99_us": 429.25420000000014,
+              "combined_wall_max_us": 5358.971,
+              "detector_wall_p99_us": 380.55000000000007,
+              "detector_wall_max_us": 5317.121
+            },
+            {
+              "source_case_id": "holdout_collision_21",
+              "combined_wall_p99_us": 444.86881000000005,
+              "combined_wall_max_us": 5311.82,
+              "detector_wall_p99_us": 390.0413000000001,
+              "detector_wall_max_us": 5275.461
+            },
+            {
+              "source_case_id": "holdout_collision_22",
+              "combined_wall_p99_us": 437.02820000000025,
+              "combined_wall_max_us": 5781.928,
+              "detector_wall_p99_us": 384.08860000000004,
+              "detector_wall_max_us": 5742.788
+            },
+            {
+              "source_case_id": "holdout_collision_23",
+              "combined_wall_p99_us": 434.1436900000001,
+              "combined_wall_max_us": 5563.46,
+              "detector_wall_p99_us": 384.32819,
+              "detector_wall_max_us": 5524.83
+            },
+            {
+              "source_case_id": "holdout_collision_24",
+              "combined_wall_p99_us": 432.1804000000001,
+              "combined_wall_max_us": 5785.478,
+              "detector_wall_p99_us": 377.20660000000015,
+              "detector_wall_max_us": 5744.809
+            },
+            {
+              "source_case_id": "holdout_collision_25",
+              "combined_wall_p99_us": 437.75901000000005,
+              "combined_wall_max_us": 4790.014,
+              "detector_wall_p99_us": 385.1891,
+              "detector_wall_max_us": 4754.124
+            },
+            {
+              "source_case_id": "holdout_collision_26",
+              "combined_wall_p99_us": 436.8793,
+              "combined_wall_max_us": 4953.973,
+              "detector_wall_p99_us": 383.379,
+              "detector_wall_max_us": 4915.843
+            },
+            {
+              "source_case_id": "holdout_collision_27",
+              "combined_wall_p99_us": 425.04620000000017,
+              "combined_wall_max_us": 6835.963,
+              "detector_wall_p99_us": 370.4274000000002,
+              "detector_wall_max_us": 6795.983
+            },
+            {
+              "source_case_id": "holdout_collision_28",
+              "combined_wall_p99_us": 427.3975,
+              "combined_wall_max_us": 5192.222,
+              "detector_wall_p99_us": 375.4557100000002,
+              "detector_wall_max_us": 5130.312
+            },
+            {
+              "source_case_id": "holdout_collision_29",
+              "combined_wall_p99_us": 429.4393,
+              "combined_wall_max_us": 6568.163,
+              "detector_wall_p99_us": 372.1182,
+              "detector_wall_max_us": 6501.724
+            }
+          ],
+          "all_outliers": [
+            {
+              "source_case_id": "holdout_reference_0",
+              "cycle": 2147,
+              "simulated_t_s": 2.1470000000000002,
+              "controller": {
+                "wall_ns": 40299,
+                "cpu_ns": 39309,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 6509455,
+                "cpu_ns": 6507866,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 6549754,
+                "cpu_ns": 6547175,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_reference_1",
+              "cycle": 2144,
+              "simulated_t_s": 2.144,
+              "controller": {
+                "wall_ns": 37960,
+                "cpu_ns": 36960,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4930063,
+                "cpu_ns": 4928451,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 4968023,
+                "cpu_ns": 4965411,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_reference_2",
+              "cycle": 2142,
+              "simulated_t_s": 2.142,
+              "controller": {
+                "wall_ns": 40320,
+                "cpu_ns": 39360,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4865823,
+                "cpu_ns": 4857951,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 4906143,
+                "cpu_ns": 4897311,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "source_case_id": "holdout_reference_3",
+              "cycle": 2141,
+              "simulated_t_s": 2.141,
+              "controller": {
+                "wall_ns": 36680,
+                "cpu_ns": 35760,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5899938,
+                "cpu_ns": 5898148,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5936618,
+                "cpu_ns": 5933908,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_reference_3",
+              "cycle": 2193,
+              "simulated_t_s": 2.193,
+              "controller": {
+                "wall_ns": 47999,
+                "cpu_ns": 46820,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1349523,
+                "cpu_ns": 413248,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1397522,
+                "cpu_ns": 460068,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "source_case_id": "holdout_offset_0",
+              "cycle": 2126,
+              "simulated_t_s": 2.126,
+              "controller": {
+                "wall_ns": 37740,
+                "cpu_ns": 36770,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5439591,
+                "cpu_ns": 5438029,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5477331,
+                "cpu_ns": 5474799,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_offset_1",
+              "cycle": 2127,
+              "simulated_t_s": 2.1270000000000002,
+              "controller": {
+                "wall_ns": 58589,
+                "cpu_ns": 57030,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5820759,
+                "cpu_ns": 5818898,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5879348,
+                "cpu_ns": 5875928,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_offset_2",
+              "cycle": 2132,
+              "simulated_t_s": 2.132,
+              "controller": {
+                "wall_ns": 35979,
+                "cpu_ns": 35029,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4953284,
+                "cpu_ns": 4951401,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 4989263,
+                "cpu_ns": 4986430,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_offset_3",
+              "cycle": 2144,
+              "simulated_t_s": 2.144,
+              "controller": {
+                "wall_ns": 58180,
+                "cpu_ns": 56960,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4935963,
+                "cpu_ns": 4934001,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 4994143,
+                "cpu_ns": 4990961,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_00",
+              "cycle": 2147,
+              "simulated_t_s": 2.1470000000000002,
+              "controller": {
+                "wall_ns": 37420,
+                "cpu_ns": 36499,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 6733834,
+                "cpu_ns": 6732175,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 6771254,
+                "cpu_ns": 6768674,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_01",
+              "cycle": 2144,
+              "simulated_t_s": 2.144,
+              "controller": {
+                "wall_ns": 40119,
+                "cpu_ns": 39040,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5584080,
+                "cpu_ns": 5582179,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5624199,
+                "cpu_ns": 5621219,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_02",
+              "cycle": 2141,
+              "simulated_t_s": 2.141,
+              "controller": {
+                "wall_ns": 36220,
+                "cpu_ns": 35330,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 7162521,
+                "cpu_ns": 7155622,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 7198741,
+                "cpu_ns": 7190952,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_03",
+              "cycle": 2141,
+              "simulated_t_s": 2.141,
+              "controller": {
+                "wall_ns": 36959,
+                "cpu_ns": 36050,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4895794,
+                "cpu_ns": 4894242,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 4932753,
+                "cpu_ns": 4930292,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_04",
+              "cycle": 2163,
+              "simulated_t_s": 2.1630000000000003,
+              "controller": {
+                "wall_ns": 40729,
+                "cpu_ns": 39750,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 6714214,
+                "cpu_ns": 6712434,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 6754943,
+                "cpu_ns": 6752184,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_05",
+              "cycle": 2118,
+              "simulated_t_s": 2.118,
+              "controller": {
+                "wall_ns": 36400,
+                "cpu_ns": 35450,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4989713,
+                "cpu_ns": 4987931,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5026113,
+                "cpu_ns": 5023381,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_06",
+              "cycle": 2141,
+              "simulated_t_s": 2.141,
+              "controller": {
+                "wall_ns": 38090,
+                "cpu_ns": 37090,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 6453055,
+                "cpu_ns": 6451576,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 6491145,
+                "cpu_ns": 6488666,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_07",
+              "cycle": 2141,
+              "simulated_t_s": 2.141,
+              "controller": {
+                "wall_ns": 36780,
+                "cpu_ns": 35840,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4871423,
+                "cpu_ns": 4869801,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 4908203,
+                "cpu_ns": 4905641,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_08",
+              "cycle": 2148,
+              "simulated_t_s": 2.148,
+              "controller": {
+                "wall_ns": 37380,
+                "cpu_ns": 36450,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 6162786,
+                "cpu_ns": 6161267,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 6200166,
+                "cpu_ns": 6197717,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_09",
+              "cycle": 2142,
+              "simulated_t_s": 2.142,
+              "controller": {
+                "wall_ns": 37240,
+                "cpu_ns": 36210,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5251321,
+                "cpu_ns": 5249540,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5288561,
+                "cpu_ns": 5285750,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_10",
+              "cycle": 2142,
+              "simulated_t_s": 2.142,
+              "controller": {
+                "wall_ns": 36749,
+                "cpu_ns": 35800,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4740274,
+                "cpu_ns": 4738472,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 4777023,
+                "cpu_ns": 4774272,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_11",
+              "cycle": 2141,
+              "simulated_t_s": 2.141,
+              "controller": {
+                "wall_ns": 35969,
+                "cpu_ns": 35030,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 6685604,
+                "cpu_ns": 6683704,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 6721573,
+                "cpu_ns": 6718734,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_12",
+              "cycle": 28,
+              "simulated_t_s": 0.028,
+              "controller": {
+                "wall_ns": 42930,
+                "cpu_ns": 42019,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1948689,
+                "cpu_ns": 239439,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1991619,
+                "cpu_ns": 281458,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_12",
+              "cycle": 1199,
+              "simulated_t_s": 1.199,
+              "controller": {
+                "wall_ns": 62250,
+                "cpu_ns": 60960,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 2219758,
+                "cpu_ns": 213349,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 2282008,
+                "cpu_ns": 274309,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_12",
+              "cycle": 2147,
+              "simulated_t_s": 2.1470000000000002,
+              "controller": {
+                "wall_ns": 45070,
+                "cpu_ns": 43720,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5661749,
+                "cpu_ns": 5660048,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5706819,
+                "cpu_ns": 5703768,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_13",
+              "cycle": 2144,
+              "simulated_t_s": 2.144,
+              "controller": {
+                "wall_ns": 36539,
+                "cpu_ns": 35560,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5642280,
+                "cpu_ns": 5640409,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5678819,
+                "cpu_ns": 5675969,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_14",
+              "cycle": 2142,
+              "simulated_t_s": 2.142,
+              "controller": {
+                "wall_ns": 49359,
+                "cpu_ns": 48070,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5191072,
+                "cpu_ns": 5189320,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5240431,
+                "cpu_ns": 5237390,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_15",
+              "cycle": 2141,
+              "simulated_t_s": 2.141,
+              "controller": {
+                "wall_ns": 39700,
+                "cpu_ns": 38730,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5134002,
+                "cpu_ns": 5132340,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5173702,
+                "cpu_ns": 5171070,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_16",
+              "cycle": 2147,
+              "simulated_t_s": 2.1470000000000002,
+              "controller": {
+                "wall_ns": 59719,
+                "cpu_ns": 58060,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5049913,
+                "cpu_ns": 5048131,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5109632,
+                "cpu_ns": 5106191,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_17",
+              "cycle": 2144,
+              "simulated_t_s": 2.144,
+              "controller": {
+                "wall_ns": 37349,
+                "cpu_ns": 36350,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 6849493,
+                "cpu_ns": 6846994,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 6886842,
+                "cpu_ns": 6883344,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_18",
+              "cycle": 2142,
+              "simulated_t_s": 2.142,
+              "controller": {
+                "wall_ns": 63970,
+                "cpu_ns": 62480,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4890653,
+                "cpu_ns": 4888691,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 4954623,
+                "cpu_ns": 4951171,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_19",
+              "cycle": 2141,
+              "simulated_t_s": 2.141,
+              "controller": {
+                "wall_ns": 36680,
+                "cpu_ns": 35700,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4846133,
+                "cpu_ns": 4844392,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 4882813,
+                "cpu_ns": 4880092,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_20",
+              "cycle": 1430,
+              "simulated_t_s": 1.43,
+              "controller": {
+                "wall_ns": 57560,
+                "cpu_ns": 56359,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1166014,
+                "cpu_ns": 408569,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1223574,
+                "cpu_ns": 464928,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_20",
+              "cycle": 2147,
+              "simulated_t_s": 2.1470000000000002,
+              "controller": {
+                "wall_ns": 41850,
+                "cpu_ns": 40819,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5317121,
+                "cpu_ns": 5315690,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5358971,
+                "cpu_ns": 5356509,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_21",
+              "cycle": 2144,
+              "simulated_t_s": 2.144,
+              "controller": {
+                "wall_ns": 36359,
+                "cpu_ns": 35400,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5275461,
+                "cpu_ns": 5273540,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5311820,
+                "cpu_ns": 5308940,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_22",
+              "cycle": 2142,
+              "simulated_t_s": 2.142,
+              "controller": {
+                "wall_ns": 39140,
+                "cpu_ns": 38130,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5742788,
+                "cpu_ns": 5741218,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5781928,
+                "cpu_ns": 5779348,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_23",
+              "cycle": 2141,
+              "simulated_t_s": 2.141,
+              "controller": {
+                "wall_ns": 38630,
+                "cpu_ns": 37679,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5524830,
+                "cpu_ns": 5523149,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5563460,
+                "cpu_ns": 5560828,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_24",
+              "cycle": 2147,
+              "simulated_t_s": 2.1470000000000002,
+              "controller": {
+                "wall_ns": 40669,
+                "cpu_ns": 39660,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5744809,
+                "cpu_ns": 5743188,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 5785478,
+                "cpu_ns": 5782848,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_25",
+              "cycle": 2144,
+              "simulated_t_s": 2.144,
+              "controller": {
+                "wall_ns": 35890,
+                "cpu_ns": 34880,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4754124,
+                "cpu_ns": 4752232,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 4790014,
+                "cpu_ns": 4787112,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_26",
+              "cycle": 2142,
+              "simulated_t_s": 2.142,
+              "controller": {
+                "wall_ns": 38130,
+                "cpu_ns": 37160,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 4915843,
+                "cpu_ns": 4914141,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 4953973,
+                "cpu_ns": 4951301,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_27",
+              "cycle": 2141,
+              "simulated_t_s": 2.141,
+              "controller": {
+                "wall_ns": 39980,
+                "cpu_ns": 38980,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 6795983,
+                "cpu_ns": 6794314,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 6835963,
+                "cpu_ns": 6833294,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_28",
+              "cycle": 2147,
+              "simulated_t_s": 2.1470000000000002,
+              "controller": {
+                "wall_ns": 61910,
+                "cpu_ns": 60550,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 5130312,
+                "cpu_ns": 5124271,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 5192222,
+                "cpu_ns": 5184821,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "source_case_id": "holdout_collision_29",
+              "cycle": 2144,
+              "simulated_t_s": 2.144,
+              "controller": {
+                "wall_ns": 66439,
+                "cpu_ns": 64959,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 6501724,
+                "cpu_ns": 6500055,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "combined": {
+                "wall_ns": 6568163,
+                "cpu_ns": 6565014,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              }
+            }
+          ]
+        },
+        "eligible_for_next_stage": true,
+        "failures": [],
+        "permanently_rejected": false,
+        "max_time_goal_met": false,
+        "max_time_is_goal_not_selection_gate": true
+      },
+      {
+        "mode": "torque",
+        "variant": "R1",
+        "status": "PASS",
+        "fallback_mode_deduplicated": true,
+        "failures": []
+      }
+    ],
+    "one_batch": true,
+    "no_tuning_or_runner_up": true
+  }
+}
