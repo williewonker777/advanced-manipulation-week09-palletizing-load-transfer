@@ -1,0 +1,137 @@
+{
+  "schema": "R7_PARITY_RESULT.v1",
+  "stage": "parity",
+  "design_sha256": "1727f7bb726feb56b481b150b82bb041b129513468d4fd3fa906e7651b24aba1",
+  "rows": [
+    {
+      "case_id": 0,
+      "mode": "servo",
+      "left_variant": "R5_A",
+      "right_variant": "R7",
+      "physical_arrays_bit_equal": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true
+      },
+      "packet_arrays_bit_equal": {
+        "r_joint": true,
+        "wrench": true,
+        "active": true,
+        "r1_detect": true
+      },
+      "final_detection_bit_equal": true,
+      "monitor_bit_equal": {
+        "own": true,
+        "score": true,
+        "ema": true
+      },
+      "comparison_gate": "strict_R5_A_or_R1_equivalence",
+      "passed": true
+    },
+    {
+      "case_id": 1,
+      "mode": "servo",
+      "left_variant": "R5_A",
+      "right_variant": "R7",
+      "physical_arrays_bit_equal": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true
+      },
+      "packet_arrays_bit_equal": {
+        "r_joint": true,
+        "wrench": true,
+        "active": true,
+        "r1_detect": true
+      },
+      "final_detection_bit_equal": true,
+      "monitor_bit_equal": {
+        "own": true,
+        "score": true,
+        "ema": true
+      },
+      "comparison_gate": "strict_R5_A_or_R1_equivalence",
+      "passed": true
+    },
+    {
+      "case_id": 0,
+      "mode": "torque",
+      "left_variant": "R1",
+      "right_variant": "R7",
+      "physical_arrays_bit_equal": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true
+      },
+      "packet_arrays_bit_equal": {
+        "r_joint": true,
+        "wrench": true,
+        "active": true,
+        "r1_detect": true
+      },
+      "final_detection_bit_equal": true,
+      "monitor_bit_equal": {
+        "both_monitor_channels_disabled": true
+      },
+      "comparison_gate": "strict_R5_A_or_R1_equivalence",
+      "passed": true
+    },
+    {
+      "case_id": 1,
+      "mode": "torque",
+      "left_variant": "R1",
+      "right_variant": "R7",
+      "physical_arrays_bit_equal": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true
+      },
+      "packet_arrays_bit_equal": {
+        "r_joint": true,
+        "wrench": true,
+        "active": true,
+        "r1_detect": true
+      },
+      "final_detection_bit_equal": true,
+      "monitor_bit_equal": {
+        "both_monitor_channels_disabled": true
+      },
+      "comparison_gate": "strict_R5_A_or_R1_equivalence",
+      "passed": true
+    }
+  ],
+  "pair_count": 4,
+  "episodes_run": 8,
+  "passed": true,
+  "physical_arrays": [
+    "q",
+    "q_d",
+    "tau",
+    "e_mm",
+    "f_table",
+    "f_tool",
+    "qpos",
+    "r"
+  ],
+  "no_exclusions": true
+}

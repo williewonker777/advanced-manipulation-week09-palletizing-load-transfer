@@ -1,0 +1,2807 @@
+{
+  "schema": "R7_HOLDOUT_REVIEW.v1",
+  "freeze_sha256": "92114cd877b4e6605aeeba58ea1d32224c04a8f41287d1628f8d0ede563aabc8",
+  "protocol_sha256": "ee552c9083f8cb2392f5694ea9ce1582a8da4e3ed9a3a9dbc284ea5456c854e3",
+  "design_sha256": "bc3b3d684525f183df40a872ae39d1625ca513c2781451f52b4e763a9faa39c3",
+  "pairing_sha256": "0601a487ce9503fa834f9107e77746395f112479d1f30cff44110f6b2790dcbd",
+  "entries": [
+    {
+      "mode": "servo",
+      "tested_variant": "SCALE_STATE",
+      "status": "PASS",
+      "criteria": {
+        "minimum_additional_detected": true,
+        "no_R1_detection_loss": true,
+        "no_tool_contact_loss": true,
+        "no_case_FA_increase": true,
+        "reference_FA_zero": true,
+        "physical_8_arrays_bit_equal": true,
+        "combined_p99_below_limit": true,
+        "torque_detector_identity": true
+      },
+      "metrics": {
+        "additional_detected": 3,
+        "lost_R1": 0,
+        "tool_losses": 0,
+        "FA_increased_cases": 0,
+        "reference_FA": 0,
+        "R1_detected_collisions": 18,
+        "tested_detected_collisions": 21,
+        "collision_count": 30,
+        "combined_p99_worst_us": 465.2396,
+        "combined_max_worst_us": 1372.406,
+        "cycles_over_1ms": 1
+      },
+      "timing": {
+        "R1": {
+          "components": {
+            "controller": {
+              "p99_worst_us": 76.60130000000002,
+              "max_worst_us": 327.829,
+              "samples": 228000
+            },
+            "detector": {
+              "p99_worst_us": 310.77991000000003,
+              "max_worst_us": 1493.548,
+              "samples": 228000
+            },
+            "combined": {
+              "p99_worst_us": 374.91650000000016,
+              "max_worst_us": 1528.257,
+              "samples": 228000
+            }
+          },
+          "cycles_over_1ms": 3,
+          "outlier_threshold_us": 1000.0,
+          "outliers": [
+            {
+              "case_id": 5,
+              "source_case_id": "holdout_offset_1",
+              "cycle": 3842,
+              "simulated_t_s": 3.842,
+              "controller": {
+                "wall_ns": 71940,
+                "cpu_ns": 70720,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1172289,
+                "cpu_ns": 315918,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1244229,
+                "cpu_ns": 386638,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "case_id": 21,
+              "source_case_id": "holdout_collision_13",
+              "cycle": 3335,
+              "simulated_t_s": 3.335,
+              "controller": {
+                "wall_ns": 68930,
+                "cpu_ns": 67530,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1112728,
+                "cpu_ns": 232138,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1181658,
+                "cpu_ns": 299668,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "case_id": 25,
+              "source_case_id": "holdout_collision_17",
+              "cycle": 1268,
+              "simulated_t_s": 1.268,
+              "controller": {
+                "wall_ns": 34709,
+                "cpu_ns": 33740,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1493548,
+                "cpu_ns": 145499,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1528257,
+                "cpu_ns": 179239,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            }
+          ],
+          "outlier_count": 3,
+          "all_outliers_retained": true
+        },
+        "tested": {
+          "components": {
+            "controller": {
+              "p99_worst_us": 73.99110000000002,
+              "max_worst_us": 408.729,
+              "samples": 228000
+            },
+            "detector": {
+              "p99_worst_us": 405.5914000000001,
+              "max_worst_us": 1332.436,
+              "samples": 228000
+            },
+            "combined": {
+              "p99_worst_us": 465.2396,
+              "max_worst_us": 1372.406,
+              "samples": 228000
+            }
+          },
+          "cycles_over_1ms": 1,
+          "outlier_threshold_us": 1000.0,
+          "outliers": [
+            {
+              "case_id": 23,
+              "source_case_id": "holdout_collision_15",
+              "cycle": 3272,
+              "simulated_t_s": 3.2720000000000002,
+              "controller": {
+                "wall_ns": 39970,
+                "cpu_ns": 39100,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1332436,
+                "cpu_ns": 360628,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1372406,
+                "cpu_ns": 399728,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            }
+          ],
+          "outlier_count": 1,
+          "all_outliers_retained": true
+        }
+      },
+      "details": [
+        {
+          "case_id": 0,
+          "source_case_id": "holdout_reference_0",
+          "kind": "reference",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 1,
+          "source_case_id": "holdout_reference_1",
+          "kind": "reference",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 2,
+          "source_case_id": "holdout_reference_2",
+          "kind": "reference",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 3,
+          "source_case_id": "holdout_reference_3",
+          "kind": "reference",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 4,
+          "source_case_id": "holdout_offset_0",
+          "kind": "offset",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 10.999999999999899
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 10.999999999999899
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 5,
+          "source_case_id": "holdout_offset_1",
+          "kind": "offset",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 10.999999999999899
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 10.999999999999899
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 6,
+          "source_case_id": "holdout_offset_2",
+          "kind": "offset",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 10.000000000000009
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 10.000000000000009
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 7,
+          "source_case_id": "holdout_offset_3",
+          "kind": "offset",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 8,
+          "source_case_id": "holdout_collision_00",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 42.80000000000017,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 42.80000000000017,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 9,
+          "source_case_id": "holdout_collision_01",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 115.40000000000018,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 103.40000000000016,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 10,
+          "source_case_id": "holdout_collision_02",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 30.100000000000236,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 30.100000000000236,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 11,
+          "source_case_id": "holdout_collision_03",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 12,
+          "source_case_id": "holdout_collision_04",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 105.49999999999993,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 105.49999999999993,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 13,
+          "source_case_id": "holdout_collision_05",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 41.80000000000006,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 41.80000000000006,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 14,
+          "source_case_id": "holdout_collision_06",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 15,
+          "source_case_id": "holdout_collision_07",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 16,
+          "source_case_id": "holdout_collision_08",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 104.60000000000002,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 101.60000000000014,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 17,
+          "source_case_id": "holdout_collision_09",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 18,
+          "source_case_id": "holdout_collision_10",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 19,
+          "source_case_id": "holdout_collision_11",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 33.99999999999981,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 29.999999999999805,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 20,
+          "source_case_id": "holdout_collision_12",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 38.899999999999935,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 30.899999999999928,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 21,
+          "source_case_id": "holdout_collision_13",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 52.799999999999955,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 36.79999999999994,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 22,
+          "source_case_id": "holdout_collision_14",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 82.89999999999998,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 82.89999999999998,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 23,
+          "source_case_id": "holdout_collision_15",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 38.19999999999979,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 38.19999999999979,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 24,
+          "source_case_id": "holdout_collision_16",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 44.39999999999999,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": true,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 25,
+          "source_case_id": "holdout_collision_17",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 35.69999999999985,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 29.70000000000006,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 26,
+          "source_case_id": "holdout_collision_18",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 54.10000000000004,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": true,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 27,
+          "source_case_id": "holdout_collision_19",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 55.299999999999905,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": true,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 28,
+          "source_case_id": "holdout_collision_20",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 58.80000000000018,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 58.80000000000018,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 29,
+          "source_case_id": "holdout_collision_21",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 68.80000000000041,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 68.80000000000041,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 30,
+          "source_case_id": "holdout_collision_22",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 30.400000000000205,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 30.400000000000205,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 31,
+          "source_case_id": "holdout_collision_23",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 32,
+          "source_case_id": "holdout_collision_24",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 38.899999999999935,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 38.899999999999935,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 33,
+          "source_case_id": "holdout_collision_25",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 44.799999999999955,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 44.799999999999955,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 34,
+          "source_case_id": "holdout_collision_26",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 35,
+          "source_case_id": "holdout_collision_27",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 36,
+          "source_case_id": "holdout_collision_28",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 37,
+          "source_case_id": "holdout_collision_29",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 39.09999999999991,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 39.09999999999991,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        }
+      ]
+    },
+    {
+      "mode": "torque",
+      "tested_variant": "R1",
+      "status": "PASS",
+      "criteria": {
+        "minimum_additional_detected": true,
+        "no_R1_detection_loss": true,
+        "no_tool_contact_loss": true,
+        "no_case_FA_increase": true,
+        "reference_FA_zero": true,
+        "physical_8_arrays_bit_equal": true,
+        "combined_p99_below_limit": true,
+        "torque_detector_identity": true
+      },
+      "metrics": {
+        "additional_detected": 0,
+        "lost_R1": 0,
+        "tool_losses": 0,
+        "FA_increased_cases": 0,
+        "reference_FA": 0,
+        "R1_detected_collisions": 21,
+        "tested_detected_collisions": 21,
+        "collision_count": 30,
+        "combined_p99_worst_us": 360.9827900000001,
+        "combined_max_worst_us": 2210.5,
+        "cycles_over_1ms": 3
+      },
+      "timing": {
+        "R1": {
+          "components": {
+            "controller": {
+              "p99_worst_us": 85.49130000000002,
+              "max_worst_us": 241.869,
+              "samples": 228000
+            },
+            "detector": {
+              "p99_worst_us": 324.4432100000001,
+              "max_worst_us": 1711.274,
+              "samples": 228000
+            },
+            "combined": {
+              "p99_worst_us": 397.38960000000003,
+              "max_worst_us": 1764.614,
+              "samples": 228000
+            }
+          },
+          "cycles_over_1ms": 4,
+          "outlier_threshold_us": 1000.0,
+          "outliers": [
+            {
+              "case_id": 3,
+              "source_case_id": "holdout_reference_3",
+              "cycle": 1580,
+              "simulated_t_s": 1.58,
+              "controller": {
+                "wall_ns": 46680,
+                "cpu_ns": 45589,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1363415,
+                "cpu_ns": 299169,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1410095,
+                "cpu_ns": 344758,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "case_id": 13,
+              "source_case_id": "holdout_collision_05",
+              "cycle": 3389,
+              "simulated_t_s": 3.3890000000000002,
+              "controller": {
+                "wall_ns": 53340,
+                "cpu_ns": 52450,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1711274,
+                "cpu_ns": 480788,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 2
+              },
+              "combined": {
+                "wall_ns": 1764614,
+                "cpu_ns": 533238,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 2
+              }
+            },
+            {
+              "case_id": 14,
+              "source_case_id": "holdout_collision_06",
+              "cycle": 2759,
+              "simulated_t_s": 2.759,
+              "controller": {
+                "wall_ns": 65720,
+                "cpu_ns": 64339,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1192576,
+                "cpu_ns": 325540,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1258296,
+                "cpu_ns": 389879,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "case_id": 18,
+              "source_case_id": "holdout_collision_10",
+              "cycle": 5293,
+              "simulated_t_s": 5.293,
+              "controller": {
+                "wall_ns": 69460,
+                "cpu_ns": 68190,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 973846,
+                "cpu_ns": 163040,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1043306,
+                "cpu_ns": 231230,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            }
+          ],
+          "outlier_count": 4,
+          "all_outliers_retained": true
+        },
+        "tested": {
+          "components": {
+            "controller": {
+              "p99_worst_us": 76.41110000000002,
+              "max_worst_us": 406.379,
+              "samples": 228000
+            },
+            "detector": {
+              "p99_worst_us": 296.5825000000001,
+              "max_worst_us": 2151.9,
+              "samples": 228000
+            },
+            "combined": {
+              "p99_worst_us": 360.9827900000001,
+              "max_worst_us": 2210.5,
+              "samples": 228000
+            }
+          },
+          "cycles_over_1ms": 3,
+          "outlier_threshold_us": 1000.0,
+          "outliers": [
+            {
+              "case_id": 19,
+              "source_case_id": "holdout_collision_11",
+              "cycle": 1132,
+              "simulated_t_s": 1.1320000000000001,
+              "controller": {
+                "wall_ns": 68400,
+                "cpu_ns": 66920,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1139415,
+                "cpu_ns": 153038,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 2
+              },
+              "combined": {
+                "wall_ns": 1207815,
+                "cpu_ns": 219958,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 2
+              }
+            },
+            {
+              "case_id": 27,
+              "source_case_id": "holdout_collision_19",
+              "cycle": 4533,
+              "simulated_t_s": 4.533,
+              "controller": {
+                "wall_ns": 58600,
+                "cpu_ns": 57440,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 2151900,
+                "cpu_ns": 177790,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 2210500,
+                "cpu_ns": 235230,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            },
+            {
+              "case_id": 32,
+              "source_case_id": "holdout_collision_24",
+              "cycle": 557,
+              "simulated_t_s": 0.557,
+              "controller": {
+                "wall_ns": 40249,
+                "cpu_ns": 39310,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 0
+              },
+              "detector": {
+                "wall_ns": 1194915,
+                "cpu_ns": 166520,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              },
+              "combined": {
+                "wall_ns": 1235164,
+                "cpu_ns": 205830,
+                "voluntary_context_switches": 0,
+                "involuntary_context_switches": 1
+              }
+            }
+          ],
+          "outlier_count": 3,
+          "all_outliers_retained": true
+        }
+      },
+      "details": [
+        {
+          "case_id": 0,
+          "source_case_id": "holdout_reference_0",
+          "kind": "reference",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 1,
+          "source_case_id": "holdout_reference_1",
+          "kind": "reference",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 2,
+          "source_case_id": "holdout_reference_2",
+          "kind": "reference",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 3,
+          "source_case_id": "holdout_reference_3",
+          "kind": "reference",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 4,
+          "source_case_id": "holdout_offset_0",
+          "kind": "offset",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 10.999999999999899
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 10.999999999999899
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 5,
+          "source_case_id": "holdout_offset_1",
+          "kind": "offset",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 12.00000000000001
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 12.00000000000001
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 6,
+          "source_case_id": "holdout_offset_2",
+          "kind": "offset",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 7,
+          "source_case_id": "holdout_offset_3",
+          "kind": "offset",
+          "R1": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 1,
+            "false_alarm_times": [
+              3.83
+            ],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 1,
+            "false_alarm_times": [
+              3.83
+            ],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 8,
+          "source_case_id": "holdout_collision_00",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 45.80000000000006,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 45.80000000000006,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 9,
+          "source_case_id": "holdout_collision_01",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 10,
+          "source_case_id": "holdout_collision_02",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 33.10000000000013,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 33.10000000000013,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 11,
+          "source_case_id": "holdout_collision_03",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 12,
+          "source_case_id": "holdout_collision_04",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 103.49999999999993,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 103.49999999999993,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 13,
+          "source_case_id": "holdout_collision_05",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 48.799999999999955,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 48.799999999999955,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 14,
+          "source_case_id": "holdout_collision_06",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 58.5,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 58.5,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 15,
+          "source_case_id": "holdout_collision_07",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 16,
+          "source_case_id": "holdout_collision_08",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 106.60000000000002,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 106.60000000000002,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 17,
+          "source_case_id": "holdout_collision_09",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 18,
+          "source_case_id": "holdout_collision_10",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 19,
+          "source_case_id": "holdout_collision_11",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 32.999999999999915,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 32.999999999999915,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 20,
+          "source_case_id": "holdout_collision_12",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 37.90000000000005,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 37.90000000000005,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 21,
+          "source_case_id": "holdout_collision_13",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 51.80000000000007,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 51.80000000000007,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 22,
+          "source_case_id": "holdout_collision_14",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 106.89999999999999,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 106.89999999999999,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 23,
+          "source_case_id": "holdout_collision_15",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 42.19999999999979,
+            "prealarm": false,
+            "false_alarms": 1,
+            "false_alarm_times": [
+              3.795
+            ],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 42.19999999999979,
+            "prealarm": false,
+            "false_alarms": 1,
+            "false_alarm_times": [
+              3.795
+            ],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 24,
+          "source_case_id": "holdout_collision_16",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 74.3999999999998,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 74.3999999999998,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 25,
+          "source_case_id": "holdout_collision_17",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 33.70000000000006,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 33.70000000000006,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 26,
+          "source_case_id": "holdout_collision_18",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 63.09999999999994,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 63.09999999999994,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 27,
+          "source_case_id": "holdout_collision_19",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 77.2999999999997,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 77.2999999999997,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 28,
+          "source_case_id": "holdout_collision_20",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 61.799999999999855,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 61.799999999999855,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 29,
+          "source_case_id": "holdout_collision_21",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 74.8000000000002,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 74.8000000000002,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 30,
+          "source_case_id": "holdout_collision_22",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 31.400000000000095,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 31.400000000000095,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 31,
+          "source_case_id": "holdout_collision_23",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 32,
+          "source_case_id": "holdout_collision_24",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 38.899999999999935,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 38.899999999999935,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 33,
+          "source_case_id": "holdout_collision_25",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 47.80000000000007,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 47.80000000000007,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 34,
+          "source_case_id": "holdout_collision_26",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 35,
+          "source_case_id": "holdout_collision_27",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 36,
+          "source_case_id": "holdout_collision_28",
+          "kind": "collision",
+          "R1": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        },
+        {
+          "case_id": 37,
+          "source_case_id": "holdout_collision_29",
+          "kind": "collision",
+          "R1": {
+            "outcome": "detected",
+            "delay_ms": 67.09999999999994,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "tested": {
+            "outcome": "detected",
+            "delay_ms": 67.09999999999994,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "additional_detected": false,
+          "lost_R1": false,
+          "tool_loss": false,
+          "false_alarm_increase": false
+        }
+      ]
+    }
+  ],
+  "effective_for_official": {
+    "servo": "SCALE_STATE",
+    "torque": "R1"
+  },
+  "one_batch": true,
+  "no_repair_or_retest": true
+}

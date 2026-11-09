@@ -559,6 +559,28 @@ def r6_media_required(root):
             and value.get('effective_variants', {}).get('servo') == 'SCALE_STATE')
 
 
+def validate_r7(root, ffprobe, probe_fn=probe):
+    """Validate conditionally released R7 preserved-validation illustrations."""
+    from tools.r7_media import validate as validate_preserved
+    return validate_preserved(root, ffprobe, probe_fn)
+
+
+def r7_media_required(root):
+    root = Path(root)
+    manifest = root/'artifacts/media/r7_manifest.json'
+    adoption = root/'results/v2_protocol/R7_ADOPTION.json'
+    if manifest.exists():
+        return True
+    if not adoption.is_file() or adoption.is_symlink():
+        return False
+    try:
+        value = json.loads(adoption.read_text(encoding='utf-8'))
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        return True
+    return (value.get('schema') == 'R7_ADOPTION.v1'
+            and value.get('effective_variants', {}).get('servo') == 'SCALE_STATE')
+
+
 def validate_all(root, ffprobe):
     """Validate every media manifest present; never silently skip v2."""
     root=Path(root).resolve();media=root/'artifacts/media';sets={};errors=[]
@@ -581,6 +603,11 @@ def validate_all(root, ffprobe):
         sets['r6']=validate_r6(root,ffprobe)
     elif r6_required:
         errors.append('R6 r6_manifest.json is missing')
+    r7=media/'r7_manifest.json';r7_required=r7_media_required(root)
+    if r7.exists():
+        sets['r7']=validate_r7(root,ffprobe)
+    elif r7_required:
+        errors.append('R7 r7_manifest.json is missing')
     for label,result in sets.items():
         errors.extend(f'{label}: {error}' for error in result['errors'])
     return dict(status='pass' if not errors else 'FAIL',errors=errors,sets=sets,

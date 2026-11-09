@@ -1,0 +1,177 @@
+{
+  "status": "PASS",
+  "production_source_hashes": {
+    "tools/r7_json.py": "1e2bb8b082aef1cb9ff7c38cd18b6429ec34c2f9b3c5e860bae40ffeadbb1cc9",
+    "tools/r7_study.py": "481e19d15bdf459c4a475f0c5c4a23730c5cbd3fcb31be2516518a13323c5a28",
+    "tools/r7_sealed.py": "6b27075474e195e5a43bca6b0cb885386ad03df3fe8febcf443c06c572771fb0",
+    "tools/r7_contract.py": "e78dfe26547dcd20998eb623a6b0655d36aeed5c68a19c69da50c606e869776e",
+    "tools/r7_build.py": "3e16b679081f30e92e587ba0e6d87779e9ccabc97ef86c98449f8bee96ac2e2c",
+    "tools/r7_report.py": "09eaf8c4f0dd59c6cd980186c462d78874e48ac332f621674a3ff2777b89ccea",
+    "experiments/r7_final/A_STATE.py": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+    "experiments/r7_final/R1.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+  },
+  "stage_counts": {
+    "parity_episodes": 8,
+    "holdout_episodes": 152,
+    "official_R1_episodes": 58,
+    "official_total": 58
+  },
+  "actual_380xxx_RNG_calls": 0,
+  "stored_seed_namespace": "990xxx",
+  "candidate_official_runs": 0,
+  "actual_Plant": true,
+  "numpy_version": "2.5.4",
+  "detection_coverage": {
+    "schema": "R7_DRY_DETECTION_COVERAGE.v1",
+    "rows": [
+      {
+        "mode": "servo",
+        "variant": "R5_A",
+        "case_id": 0,
+        "detected": false,
+        "alarm_samples": 0
+      },
+      {
+        "mode": "servo",
+        "variant": "R5_A",
+        "case_id": 1,
+        "detected": true,
+        "alarm_samples": 162
+      },
+      {
+        "mode": "servo",
+        "variant": "R7",
+        "case_id": 0,
+        "detected": false,
+        "alarm_samples": 0
+      },
+      {
+        "mode": "servo",
+        "variant": "R7",
+        "case_id": 1,
+        "detected": true,
+        "alarm_samples": 162
+      },
+      {
+        "mode": "torque",
+        "variant": "R1",
+        "case_id": 0,
+        "detected": false,
+        "alarm_samples": 0
+      },
+      {
+        "mode": "torque",
+        "variant": "R1",
+        "case_id": 1,
+        "detected": true,
+        "alarm_samples": 192
+      },
+      {
+        "mode": "torque",
+        "variant": "R7",
+        "case_id": 0,
+        "detected": false,
+        "alarm_samples": 0
+      },
+      {
+        "mode": "torque",
+        "variant": "R7",
+        "case_id": 1,
+        "detected": true,
+        "alarm_samples": 192
+      }
+    ],
+    "weak_collision_miss_by_mode": {
+      "servo": true,
+      "torque": true
+    },
+    "strong_collision_detect_by_mode": {
+      "servo": true,
+      "torque": true
+    },
+    "normal_no_alarm_by_mode": {
+      "servo": true,
+      "torque": true
+    },
+    "collision_miss_by_mode": {
+      "servo": true,
+      "torque": true
+    },
+    "holdout_outcomes_by_mode": {
+      "servo": {
+        "detected": 32,
+        "missed": 28
+      },
+      "torque": {
+        "detected": 34,
+        "missed": 26
+      }
+    },
+    "all_modes_detect_miss_and_normal": true
+  },
+  "all_JSON_native_finite_schema_checked": true,
+  "JSON_files_checked_before_summary": 550,
+  "report_check": "PASS",
+  "remote_operations": 0,
+  "schema": "R7_S1_DRYRUN.v1",
+  "private_full_summary_sha256": "223b6b32a1dcbc7b21b282ba45b897dc5eb45b80a33c0e9681cb4dd9b7c0c8e3",
+  "source_copy_manifest_sha256": "b3b5975ca7bd33df93aca817472601aa5a149e185c9991db775931b0e17e3212",
+  "source_copy_files": 922,
+  "source_copy_files_current_bytes_exact": true,
+  "classification": "Synthetic writer-pipeline qualification only; not scientific qualification.",
+  "namespace_adapter": "Deep copies for reserved-seed validators only; stored design, RNG, Plant and numerical gates unchanged.",
+  "source_or_runtime_fix_after_this_success": false,
+  "prior_failed_development_attempts": [
+    {
+      "attempt_ordinal": 1,
+      "status": "FAIL",
+      "status_file_sha256": "9c4083e309a9930067ae3a06a69be9c87d9801da159a03cff95899d67c435d29",
+      "parity_episodes_completed": 8,
+      "holdout_episodes_completed": 152,
+      "official_R1_episode_starts": 58,
+      "candidate_official_runs": 0,
+      "artifacts_retained": true,
+      "used_as_scientific_or_qualification_evidence": false
+    },
+    {
+      "attempt_ordinal": 2,
+      "status": "FAIL",
+      "status_file_sha256": "ba5c55b2d05c7b3da16909789bf8e6e76862008854800c96eab8b6469f7dcbb6",
+      "parity_episodes_completed": 8,
+      "holdout_episodes_completed": 0,
+      "official_R1_episode_starts": 0,
+      "candidate_official_runs": 0,
+      "artifacts_retained": true,
+      "used_as_scientific_or_qualification_evidence": false
+    },
+    {
+      "attempt_ordinal": 3,
+      "status": "FAIL",
+      "status_file_sha256": "467a4749f516efc9be42e669b56deabc1044cfe41066eb7d8683b99a27620697",
+      "parity_episodes_completed": 8,
+      "holdout_episodes_completed": 47,
+      "official_R1_episode_starts": 0,
+      "candidate_official_runs": 0,
+      "artifacts_retained": true,
+      "used_as_scientific_or_qualification_evidence": false
+    }
+  ],
+  "prior_passed_but_superseded_source_attempts": [
+    {
+      "attempt_ordinal": 4,
+      "status": "PASS_for_earlier_source",
+      "summary_sha256": "6dbe0b6a2755193ad37a7cd681548869dbd776427d0eb9a3ac0191ea82aa7a83",
+      "qualifies_final_source": false,
+      "reason": "Public presentation labels were clarified after this source snapshot; the entire pipeline was restarted on the final source.",
+      "stage_counts": {
+        "parity_episodes": 8,
+        "holdout_episodes": 152,
+        "official_R1_episodes": 58,
+        "official_total": 58
+      },
+      "artifacts_retained": true
+    }
+  ],
+  "successful_attempt_ordinal": 5,
+  "entire_pipeline_restarted_after_each_development_fix": true
+}

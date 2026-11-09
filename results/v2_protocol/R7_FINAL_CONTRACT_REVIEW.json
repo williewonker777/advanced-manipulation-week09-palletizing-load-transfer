@@ -1,0 +1,62 @@
+{
+  "schema": "R7_FINAL_CONTRACT_REVIEW.v1",
+  "status": "PASS",
+  "source_head": "fbe9f538b29056f48b3ab430eafe872870a38970",
+  "tested_assembly": {
+    "path": "experiments/r7_final/A_STATE.py",
+    "sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643"
+  },
+  "tests_run": 677,
+  "errors": 0,
+  "failures": 0,
+  "full_suite": {
+    "status": "PASS",
+    "command": [
+      "env",
+      "-u",
+      "PYTHONPATH",
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "tests_run": 677,
+    "errors": 0,
+    "failures": 0,
+    "elapsed_s": 23.65388813597383,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "6c0e18530283e729c6c1bbc7c2525c768b48271495d620464b29aa1603368620"
+  },
+  "default_submission_contract": {
+    "status": "PASS",
+    "command": [
+      "env",
+      "-u",
+      "PYTHONPATH",
+      "python",
+      "tools/r7_contract.py",
+      "--root",
+      ".",
+      "--expected-detector",
+      "experiments/r7_final/A_STATE.py",
+      "--out",
+      "private-evidence/S4_POST_OFFICIAL_CONTRACT.default.json"
+    ],
+    "cases": 8,
+    "log_sha256": "383458079eb3d4c4776cb4468c129ed463bb1c02228eba484e4990a97abefcc0",
+    "result_sha256": "c5e04f06ddcb499e6eddb016893e2597c882dbdf99e434f8b11fd6cd5f403369"
+  },
+  "new_physical_simulations": 0,
+  "holdout_conditions_generated": false,
+  "default_names_byte_identical": true,
+  "created_utc": "2026-11-09T11:49:23.468031+00:00",
+  "protocol_sha256": "ee552c9083f8cb2392f5694ea9ce1582a8da4e3ed9a3a9dbc284ea5456c854e3",
+  "freeze_sha256": "92114cd877b4e6605aeeba58ea1d32224c04a8f41287d1628f8d0ede563aabc8",
+  "holdout_review_sha256": "3be699538c8275d48b8ec5f2d048d5fcc7069c67f2f28bf97fccc26d24d61a3e",
+  "official_sha256": "bba518caa57ed61b7d08f6871c437e9c80415a4f3b66517a4820b346c99e0ae7"
+}

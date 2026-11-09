@@ -1,0 +1,98 @@
+{
+  "schema": "R7_PARITY_PLAN.v1",
+  "purpose": "Fresh full-loop identity proof after successful whole writer dryrun; not efficacy selection or threshold tuning.",
+  "cases": [
+    {
+      "stiffness_scale": 1.0,
+      "viscous_scale": 1.0,
+      "coulomb_scale": 1.0,
+      "pick_offset": null,
+      "source_case_id": "parity_reference_low",
+      "kind": "reference",
+      "phase": "full",
+      "mass": 1.3479,
+      "com": [
+        0.01731,
+        -0.01317,
+        0.02819
+      ],
+      "collision": null,
+      "sensor_seeds": {
+        "servo": 380101,
+        "torque": 380111
+      }
+    },
+    {
+      "stiffness_scale": 1.0,
+      "viscous_scale": 1.0,
+      "coulomb_scale": 1.0,
+      "pick_offset": null,
+      "source_case_id": "parity_collision_high",
+      "kind": "collision",
+      "phase": "transport",
+      "mass": 6.4273,
+      "com": [
+        -0.01473,
+        0.02129,
+        0.02641
+      ],
+      "collision": [
+        1.6137,
+        [
+          9.5,
+          0.0,
+          0.0
+        ]
+      ],
+      "sensor_seeds": {
+        "servo": 380102,
+        "torque": 380112
+      },
+      "direction": "+x",
+      "force_n": 9.5
+    }
+  ],
+  "variants_by_mode": {
+    "servo": [
+      "R5_A",
+      "R7"
+    ],
+    "torque": [
+      "R1",
+      "R7"
+    ]
+  },
+  "episodes": 8,
+  "physical_arrays": [
+    "q",
+    "q_d",
+    "tau",
+    "e_mm",
+    "f_table",
+    "f_tool",
+    "qpos",
+    "r"
+  ],
+  "comparison": "dtype/shape/C-order bytes identical; no tolerance. Servo alarm/score/EMA vs frozen R5 A_STATE; torque alarm vs R1.",
+  "source_exclusion_manifest": {
+    "path": "results/v2_protocol/R7_MASS_EXCLUSION.json",
+    "sha256": "c3d011c46c63ba8bdb5ea4ab1feba343f3ecdf613f380c9945fa490b21467735"
+  },
+  "candidate_sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+  "R5_A_sha256": "4f4b33c08872e8db612e1416468ea14dedc74964f05702f4aa084971f9197b44",
+  "R1_sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+  "controller_changes": 0,
+  "models_threshold_gate_changes": 0,
+  "redesigns_allowed": 0,
+  "failure": "Stop candidate evaluation, retain all failing evidence, choose R1 without candidate repair; no holdout or official opened.",
+  "resources": {
+    "min_available_ram_gib": 6,
+    "max_simulations_all_sessions": 4,
+    "own_simulations": 1,
+    "gpu_jobs": 0,
+    "timing_serial": true,
+    "process_per_condition": true
+  },
+  "paired_sensor_seed_reuse": "Within a single condition paired variants deliberately share one seed for exact common random inputs; not repeated efficacy trials.",
+  "sealed_holdout_conditions_generated": 0
+}

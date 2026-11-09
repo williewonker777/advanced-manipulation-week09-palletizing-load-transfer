@@ -1,0 +1,30 @@
+{
+  "schema": "R7_FAILURE.v1",
+  "status": "FAIL",
+  "failed_stage": "S5 공개 문서 연결 검사(고아 문서 10개)",
+  "summary": "과학·공식·계약 관문은 통과했지만 S5 고아 문서 10개 검사 실패로 최종 R1이다. '저장 자료로 승계한 단계'·'새 holdout'·'새 공식'은 e26 후보 시험 표이며 최종 R1 성능표가 아니다(H의 R1 비교 열은 실제 R1 참조 측정). 새 공식 A 49/37 ms는 후보값이고 최종 R1 보존값은 62/45 ms다. 최종 R1 전체 공식표는 docs/R7_PUBLICATION_VETO.md에 있다. 저장 990스트림은 R6 승계다. 677개/기본 이름 8개는 후보 검사이며 R1 전환 뒤에는 정적 SHA만 확인했다.",
+  "detected_utc": "2026-11-09T12:08:29.699108+00:00",
+  "diagnostic_sha256": "5fd19bebcb313eb8e4f40252f8f8189ac654d54decb3604ba28ba3af8a9454f0",
+  "orphan_documents": [
+    "results/D4_PERTURBATIONS.md",
+    "results/ENV.md",
+    "results/FINAL_SUMMARY.md",
+    "results/sweeps/d4-robust-servo/SUMMARY.md",
+    "results/sweeps/d4-robust-torque/SUMMARY.md",
+    "results/sweeps/final-baseline-tool-servo/SUMMARY.md",
+    "results/sweeps/final-baseline-tool-torque/SUMMARY.md",
+    "results/sweeps/final-servo-parity/SUMMARY.md",
+    "results/sweeps/final-torque-parity/SUMMARY.md",
+    "tools/SWEEP.md"
+  ],
+  "source_of_rule": "Any stage failure after actual parity starts selects the prefrozen R1 without candidate repair or evaluation repetition.",
+  "scientific_gates_passed": true,
+  "post_official_contract_passed": true,
+  "model_or_threshold_or_controller_changes": 0,
+  "evaluation_or_training_reruns_after_failure": 0,
+  "positive_S4_adoption": {
+    "file": "results/v2_protocol/R7_S4_ADOPTION.json",
+    "sha256": "30bcf47ae7910aa6e1225139753b035e901da170bf7ec7379c63cbb9b06c1623"
+  },
+  "documentation_completion_cannot_revive_candidate": true
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "R7_BUILD.v1",
+  "immutable_R6_build": {
+    "path": "results/v2_protocol/R6_BUILD.json",
+    "sha256": "7847fea26fa0d28d43a9d88884de68b2789c1c0dc77abe3f3ec2987b2f2d1317"
+  },
+  "immutable_sources": [
+    {
+      "name": "A_STATE",
+      "path": "experiments/r6_final/A_STATE.py",
+      "sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643"
+    },
+    {
+      "name": "R1",
+      "path": "experiments/r6_final/R1.py",
+      "sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+    }
+  ],
+  "models": [
+    {
+      "path": "models/r5/servo_SCALE_PHASE.json",
+      "sha256": "d9c7daf0dbc9fe6bb8019ae015df4941168edadb465652408631fe0747d4d2f3"
+    },
+    {
+      "path": "models/r5/torque_SCALE_PHASE.json",
+      "sha256": "250cf1b00382f125957aea504c707ad4d6e4735fd512d8a81513ca9b38b9f768"
+    },
+    {
+      "path": "models/r5/servo_SCALE_STATE.json",
+      "sha256": "d71d4573fa021b60a75a65678234e92e04d732e51c74ce8056fe263b8dfe5195"
+    },
+    {
+      "path": "models/r5/torque_SCALE_STATE.json",
+      "sha256": "8924a704f42ed086a56ce2dbc90b8d275306d5252af34400d995c88d8d435a26"
+    },
+    {
+      "path": "models/r5/servo_AR20_FULL.json",
+      "sha256": "0f1178631b2f4086e71abb1dba2c00c1e9014c5d2e75f54f7788369e5c5a88e2"
+    },
+    {
+      "path": "models/r5/torque_AR20_FULL.json",
+      "sha256": "661dafd506934259b922a130912b814a8339a193df90bfdd23f01b2f8dd0ca9c"
+    },
+    {
+      "path": "models/r5/servo_AR50_FULL.json",
+      "sha256": "3373412a140ba498b83908ce100712b871dd4c1e564b9166403575d4bfdfbccf"
+    },
+    {
+      "path": "models/r5/torque_AR50_FULL.json",
+      "sha256": "49e3c141515551aa4e9c33302e89e1a3f5d9273e04f88eae58037134eefe14b7"
+    }
+  ],
+  "model_count": 8,
+  "builder": {
+    "path": "tools/r7_build.py",
+    "sha256": "3e16b679081f30e92e587ba0e6d87779e9ccabc97ef86c98449f8bee96ac2e2c"
+  },
+  "regression_test": {
+    "path": "tools/test_r7_build.py",
+    "sha256": "6f7ceff91a4997c08a9a5a30d85637e3cf1f9603c849ae2a195ecd6e5e4e143e"
+  },
+  "generated": [
+    {
+      "name": "A_STATE",
+      "path": "experiments/r7_final/A_STATE.py",
+      "sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+      "byte_equal_to_source": true
+    },
+    {
+      "name": "R1",
+      "path": "experiments/r7_final/R1.py",
+      "sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+      "byte_equal_to_source": true
+    }
+  ],
+  "assembly_logic_changes": 0,
+  "model_weight_or_threshold_updates": 0
+}
