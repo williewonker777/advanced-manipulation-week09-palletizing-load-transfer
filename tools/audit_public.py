@@ -26,10 +26,12 @@ MEDIA_TOTAL_LIMIT = 30_000_000
 MEDIA_MANIFESTS = {"artifacts/media/media_manifest.json",
                    "artifacts/media/v2_manifest.json"}
 R2_MEDIA_MANIFEST = "artifacts/media/r2_manifest.json"
+R6_MEDIA_MANIFEST = "artifacts/media/r6_manifest.json"
 MEDIA_STEMS = ("01_servo_no_collision", "02_torque_no_collision",
                "03_servo_place_collision", "04_servo_transport_collision",
                "05_v2_servo_transport_collision", "06_v2_torque_transport_collision")
 R2_MEDIA_STEMS = ("07_r2_servo_comparison", "08_r2_torque_comparison")
+R6_MEDIA_STEMS = ("09_r6_servo_positive_comparison", "10_r6_servo_negative_comparison")
 ALLOWED_MEDIA_TAGS = {"encoder", "language", "handler_name", "vendor_id", "major_brand",
                       "minor_version", "compatible_brands"}
 # The course interface signature is an API contract, not prose redistribution.
@@ -329,24 +331,39 @@ def audit(root, kit=None, guide=None, ffprobe=None, require_checksums=True, requ
                 media_metadata_checked_count += 1
             errors.extend(f"{name}: {error}" for error in tag_errors)
         elif (PurePosixPath(name).is_relative_to(MEDIA_ROOT) and
-              name not in MEDIA_MANIFESTS | {R2_MEDIA_MANIFEST}):
+              name not in MEDIA_MANIFESTS | {R2_MEDIA_MANIFEST, R6_MEDIA_MANIFEST}):
             errors.append(f"unexpected file in media directory: {name}")
     media_bytes = sum(p.stat().st_size for p in media)
     if media_bytes > MEDIA_TOTAL_LIMIT:
         errors.append("media total exceeds 30,000,000 bytes")
+    adoption_path = root / "results/v2_protocol/R6_ADOPTION.json"
+    r6_present = (root / R6_MEDIA_MANIFEST).is_file()
+    r6_adopted = False
+    if (r6_present or require_media) and adoption_path.is_file() and not adoption_path.is_symlink():
+        try:
+            adoption = json.loads(adoption_path.read_text(encoding="utf-8"))
+            r6_adopted = (adoption.get("schema") == "R6_ADOPTION.v1" and
+                          adoption.get("effective_variants", {}).get("servo") == "SCALE_STATE")
+        except (OSError, UnicodeError, json.JSONDecodeError):
+            errors.append("R6 adoption record is unreadable")
+    if r6_present and not r6_adopted:
+        errors.append("R6 media exists without final servo adoption")
     if require_media:
         names = {p.relative_to(root).as_posix() for p in media}
         r2_required = ((root / "results/v2_protocol/PROTOCOL_R2.json").is_file() or
                        (root / R2_MEDIA_MANIFEST).is_file())
-        stems = MEDIA_STEMS + (R2_MEDIA_STEMS if r2_required else ())
+        r6_required = r6_present or r6_adopted
+        stems = (MEDIA_STEMS + (R2_MEDIA_STEMS if r2_required else ())
+                 + (R6_MEDIA_STEMS if r6_required else ()))
         expected_media = {f"artifacts/media/{stem}.{suffix}"
                           for stem in stems for suffix in ("mp4", "gif")}
-        expected_manifests = MEDIA_MANIFESTS | ({R2_MEDIA_MANIFEST} if r2_required else set())
+        expected_manifests = (MEDIA_MANIFESTS | ({R2_MEDIA_MANIFEST} if r2_required else set())
+                              | ({R6_MEDIA_MANIFEST} if r6_required else set()))
         manifests_present = {name for name in expected_manifests if (root/name).is_file()}
         if names != expected_media or manifests_present != expected_manifests:
-            errors.append(("required eight MP4/GIF pairs or media manifests missing/unexpected"
-                           if r2_required else
-                           "required six MP4/GIF pairs or media manifests missing/unexpected"))
+            count = len(stems)
+            label = {6: "six", 8: "eight", 10: "ten"}.get(count, str(count))
+            errors.append(f"required {label} MP4/GIF pairs or media manifests missing/unexpected")
     kit_valid = kit is None or (Path(kit).is_dir() and not Path(kit).is_symlink())
     guide_valid = guide is None or (Path(guide).is_file() and not Path(guide).is_symlink())
     if not kit_valid:

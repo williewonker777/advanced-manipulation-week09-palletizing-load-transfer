@@ -1,0 +1,134 @@
+{
+  "schema": "R6_FINAL_CONTRACT_REVIEW.v1",
+  "phase": "post_S1_failure_publication",
+  "status": "PASS",
+  "scientific_qualification_status": "FAIL",
+  "scientific_failed_stage": "S1_PARITY_RESULT_SERIALIZATION",
+  "does_not_override_failed_S1_transaction": true,
+  "created_utc": "2026-11-09T08:45:22.321354+00:00",
+  "source_head": "f83a043ac9c84bfb3ca3acc58b545a4d21990903",
+  "tested_assembly": {
+    "path": "experiments/r6_final/R1.py",
+    "sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+  },
+  "errors": 0,
+  "failures": 0,
+  "full_suite": {
+    "status": "PASS",
+    "command": [
+      "env",
+      "-u",
+      "PYTHONPATH",
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "tests_run": 597,
+    "errors": 0,
+    "failures": 0,
+    "elapsed_s": 21.961,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "54f03200e8e39d49dfcdc84c591ae7c242b62fe2aa35d4d92adb47eb046584a6"
+  },
+  "default_submission_contract": {
+    "status": "PASS",
+    "command": [
+      "env",
+      "-u",
+      "PYTHONPATH",
+      "python",
+      "tools/r6_contract.py",
+      "--root",
+      "<isolated-default-name-R1-overlay>",
+      "--expected-detector",
+      "experiments/r6_final/R1.py",
+      "--out",
+      "<private-result>"
+    ],
+    "cases": 8,
+    "log_sha256": "383458079eb3d4c4776cb4468c129ed463bb1c02228eba484e4990a97abefcc0",
+    "result_sha256": "06d77b2311a6ee60c9edb61fbcabea79260541504e3659bc144940affb5838f1"
+  },
+  "final_default_contract": {
+    "schema": "R6_SUBMISSION_CONTRACT.v1",
+    "status": "PASS",
+    "detector_sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4",
+    "default_names_exact": true,
+    "controller_sha256": {
+      "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "cases": [
+      {
+        "case": "servo",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "torque",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "None",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "unknown",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "substring",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "missing_MODE",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "controller_None",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "controller_absent",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      }
+    ],
+    "protected": {
+      "status": "ok",
+      "files": 20,
+      "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+    },
+    "scope": "Reset/public API/finite synthetic updates; no Plant or physical simulation."
+  },
+  "adoption_sha256": "598dc546f8c9095a3f2bcb4a4d6dad1d3f8861e899b014e568ca95d20e098932",
+  "failure_sha256": "6abca4e1e042464e2e66535a08e6ccf341d11d15d2850a6edd568b69bd54ac2e",
+  "stop_snapshot_sha256": "0cfa37efbef3e7f395b1915e7b108a2e02a580847e699f26c66cd2fa7be91904",
+  "new_holdout_batches": 0,
+  "new_official_batches": 0,
+  "is_post_official_review": false,
+  "new_physical_episodes_after_stop": 0,
+  "new_detector_data_replays_after_stop": 0,
+  "scientific_driver_repairs_after_stop": 0,
+  "scope": "Final retained R1 and publication compatibility only; synthetic unit/interface checks are not an experiment rerun or a positive R6 qualification."
+}

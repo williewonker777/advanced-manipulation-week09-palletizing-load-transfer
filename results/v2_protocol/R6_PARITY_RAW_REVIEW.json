@@ -1,0 +1,300 @@
+{
+  "schema": "R6_PARITY_RAW_REVIEW.v1",
+  "status": "DIAGNOSTIC_ONLY",
+  "physical_episodes_completed": 8,
+  "pairs": 4,
+  "all_raw_bits_equal": true,
+  "rows": [
+    {
+      "mode": "servo",
+      "case_id": 0,
+      "left_variant": "R5_A",
+      "right_variant": "R6",
+      "physical_arrays_bit_equal": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true
+      },
+      "packet_arrays_bit_equal": {
+        "r_joint": true,
+        "wrench": true,
+        "active": true,
+        "r1_detect": true
+      },
+      "final_detection_bit_equal": true,
+      "monitor_bit_equal": {
+        "own": true,
+        "score": true,
+        "ema": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "servo",
+      "case_id": 1,
+      "left_variant": "R5_A",
+      "right_variant": "R6",
+      "physical_arrays_bit_equal": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true
+      },
+      "packet_arrays_bit_equal": {
+        "r_joint": true,
+        "wrench": true,
+        "active": true,
+        "r1_detect": true
+      },
+      "final_detection_bit_equal": true,
+      "monitor_bit_equal": {
+        "own": true,
+        "score": true,
+        "ema": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "torque",
+      "case_id": 0,
+      "left_variant": "R1",
+      "right_variant": "R6",
+      "physical_arrays_bit_equal": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true
+      },
+      "packet_arrays_bit_equal": {
+        "r_joint": true,
+        "wrench": true,
+        "active": true,
+        "r1_detect": true
+      },
+      "final_detection_bit_equal": true,
+      "monitor_bit_equal": {
+        "own": true,
+        "score": true,
+        "ema": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "torque",
+      "case_id": 1,
+      "left_variant": "R1",
+      "right_variant": "R6",
+      "physical_arrays_bit_equal": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true
+      },
+      "packet_arrays_bit_equal": {
+        "r_joint": true,
+        "wrench": true,
+        "active": true,
+        "r1_detect": true
+      },
+      "final_detection_bit_equal": true,
+      "monitor_bit_equal": {
+        "own": true,
+        "score": true,
+        "ema": true
+      },
+      "passed": true
+    }
+  ],
+  "timing": [
+    {
+      "mode": "servo",
+      "variant": "R5_A",
+      "episodes": 2,
+      "samples": 12000,
+      "combined_p99_worst_us": 471.7615100000001,
+      "combined_max_worst_us": 997.164,
+      "cycles_over_1ms": 0,
+      "detector_p99_worst_us": 409.00809000000004,
+      "detector_max_worst_us": 939.864,
+      "outlier_count": 0,
+      "outliers": [],
+      "all_outliers_retained": true,
+      "minimum_observed_RAM_GiB": 15.581275939941406,
+      "scope": "S1 parity only, not new holdout or final official timing."
+    },
+    {
+      "mode": "servo",
+      "variant": "R6",
+      "episodes": 2,
+      "samples": 12000,
+      "combined_p99_worst_us": 444.8811000000001,
+      "combined_max_worst_us": 719.126,
+      "cycles_over_1ms": 0,
+      "detector_p99_worst_us": 390.5014000000001,
+      "detector_max_worst_us": 667.106,
+      "outlier_count": 0,
+      "outliers": [],
+      "all_outliers_retained": true,
+      "minimum_observed_RAM_GiB": 16.45378875732422,
+      "scope": "S1 parity only, not new holdout or final official timing."
+    },
+    {
+      "mode": "torque",
+      "variant": "R1",
+      "episodes": 2,
+      "samples": 12000,
+      "combined_p99_worst_us": 340.4594,
+      "combined_max_worst_us": 899.945,
+      "cycles_over_1ms": 0,
+      "detector_p99_worst_us": 284.0838000000001,
+      "detector_max_worst_us": 835.565,
+      "outlier_count": 0,
+      "outliers": [],
+      "all_outliers_retained": true,
+      "minimum_observed_RAM_GiB": 16.433467864990234,
+      "scope": "S1 parity only, not new holdout or final official timing."
+    },
+    {
+      "mode": "torque",
+      "variant": "R6",
+      "episodes": 2,
+      "samples": 12000,
+      "combined_p99_worst_us": 337.8605100000001,
+      "combined_max_worst_us": 711.827,
+      "cycles_over_1ms": 0,
+      "detector_p99_worst_us": 285.50110000000006,
+      "detector_max_worst_us": 666.697,
+      "outlier_count": 0,
+      "outliers": [],
+      "all_outliers_retained": true,
+      "minimum_observed_RAM_GiB": 16.47881317138672,
+      "scope": "S1 parity only, not new holdout or final official timing."
+    }
+  ],
+  "sources": {
+    "results/v2_protocol/R6_BASE_parity_R5_A_servo.json": "939d4b008e4a4eb7f09868e306f99d337275f4edc27053f8962637f25513d547",
+    "results/v2_protocol/R6_BASE_parity_R6_servo.json": "ec699393c969a096ef271e107b3deff3ca528fc3b3693a4bccf877d8676a5270",
+    "results/v2_protocol/R6_BASE_parity_R1_torque.json": "b78a0b9ba950a15081a5d0a0886ebd083a7a1e4ba6da828a00d307c470a1bbbd",
+    "results/v2_protocol/R6_BASE_parity_R6_torque.json": "f2b0713edde8105b8e6354ce955b22fda0dff5184303e1aee5e242665dd5a048"
+  },
+  "episode_sources": [
+    {
+      "mode": "servo",
+      "variant": "R5_A",
+      "case_id": 0,
+      "sidecar_sha256": "7f80a90dcd09d6465f8e0328627fcd8df220a60709979aaec224ddb64b9f3b3c",
+      "raw_sha256": {
+        "signal": "77aafd8d30cd616e016c3378ad30fb9a082ebd56dfc69d0b8ccac2fb5179de2d",
+        "physical": "1a689bd83e1be90f4f0e4d1d0593d5fd0e616de44c6c15e6637a486ba38c2829",
+        "monitor": "de84a78eca221f8a3245ef81db16dfe7c51fbb4af39c03583576df9cec0c000a",
+        "timing": "e3824df31f8d1218cea2e5fac3734f5483303bf83b24c1a279ef9c2bf17e06aa"
+      }
+    },
+    {
+      "mode": "servo",
+      "variant": "R5_A",
+      "case_id": 1,
+      "sidecar_sha256": "13910ccc1fdda412236bdfbe771e5b501532d03f3742fff5b49450ce58832d23",
+      "raw_sha256": {
+        "signal": "e4d898a42d78b682e7bd2fbcfe4938565c61d66f0cd674a3db04f305d3d2f3a5",
+        "physical": "eb0ffd2cffc7b49b7209b529527a1bd9ce5f13f201bf84656436314691bece13",
+        "monitor": "e7ced29c11e2209c227cedb45738aa00255342fa8547634ecab880ea9e576160",
+        "timing": "f2bf5ca8c938c77d3c09a2e29f63f696b12e2f0a6c1dfde7f79e9c3abec085ff"
+      }
+    },
+    {
+      "mode": "servo",
+      "variant": "R6",
+      "case_id": 0,
+      "sidecar_sha256": "f51cc405d58f647e44f24d4db6d3db651f919c53e94d2c1684b93ed52b740c6d",
+      "raw_sha256": {
+        "signal": "77aafd8d30cd616e016c3378ad30fb9a082ebd56dfc69d0b8ccac2fb5179de2d",
+        "physical": "1a689bd83e1be90f4f0e4d1d0593d5fd0e616de44c6c15e6637a486ba38c2829",
+        "monitor": "de84a78eca221f8a3245ef81db16dfe7c51fbb4af39c03583576df9cec0c000a",
+        "timing": "9dee1e0968534df8df966134eaf51a86447d782b0de04809211a2fca7fc196af"
+      }
+    },
+    {
+      "mode": "servo",
+      "variant": "R6",
+      "case_id": 1,
+      "sidecar_sha256": "98f5a0d0be378d50df091dbf8b220f7634c9610f9c67299799484e9ac12af6be",
+      "raw_sha256": {
+        "signal": "e4d898a42d78b682e7bd2fbcfe4938565c61d66f0cd674a3db04f305d3d2f3a5",
+        "physical": "eb0ffd2cffc7b49b7209b529527a1bd9ce5f13f201bf84656436314691bece13",
+        "monitor": "e7ced29c11e2209c227cedb45738aa00255342fa8547634ecab880ea9e576160",
+        "timing": "35751764eec6193506013145bee78eea18ac248d7004ab3889a9fac9d280198c"
+      }
+    },
+    {
+      "mode": "torque",
+      "variant": "R1",
+      "case_id": 0,
+      "sidecar_sha256": "51b8d76c41164dde59cd550562dd47405ad4bd92c7c847d4a54292838ec0f2c4",
+      "raw_sha256": {
+        "signal": "15c65a707e373f03832ed666fe539587a490da36a51707700d9462a923a82a8d",
+        "physical": "a689bbe8ef98200a227b07a92f77b2962856989698175fffc19b6e70706fe163",
+        "monitor": "3061f30f58b35afa059bd64ada20481c534057f5b15390723acbc4b1b01fb90f",
+        "timing": "6187817ab1d0ee0862e708aff765af041f8a268c7d1e49b61eae8791c3b012fe"
+      }
+    },
+    {
+      "mode": "torque",
+      "variant": "R1",
+      "case_id": 1,
+      "sidecar_sha256": "d4fa1d16b231b06e9e74e6519807b7942704d5248953b818ead45a830f9d8c9e",
+      "raw_sha256": {
+        "signal": "6c93c9d46d02f3c0c95efa5528fb659e86232d7a27776b9d5299012c916325f4",
+        "physical": "f30b1086645b3f6e3779f63fa7a592362c33b1ba7c3f199e3ea3fce9672b7590",
+        "monitor": "74345f2be9736127a02a3741f0a843edb860c58b52bf6f25ec95140bc38eb607",
+        "timing": "f4f6d6b5c77cfe57a84bdcb38b16686486553aaab836aa4755a283201574036f"
+      }
+    },
+    {
+      "mode": "torque",
+      "variant": "R6",
+      "case_id": 0,
+      "sidecar_sha256": "6a80becee468d57ea9632010c96c01fb13bbd2dbd5c6d5c05c725b5751105107",
+      "raw_sha256": {
+        "signal": "15c65a707e373f03832ed666fe539587a490da36a51707700d9462a923a82a8d",
+        "physical": "a689bbe8ef98200a227b07a92f77b2962856989698175fffc19b6e70706fe163",
+        "monitor": "3061f30f58b35afa059bd64ada20481c534057f5b15390723acbc4b1b01fb90f",
+        "timing": "1fe884fb5d3234de689eb49feba9f810c33caa3213b6415bba2563637cd37d9b"
+      }
+    },
+    {
+      "mode": "torque",
+      "variant": "R6",
+      "case_id": 1,
+      "sidecar_sha256": "266f2c8eaa2385e7d6fc3c2d47baa32881701160657acb06833fd1d795d296d7",
+      "raw_sha256": {
+        "signal": "6c93c9d46d02f3c0c95efa5528fb659e86232d7a27776b9d5299012c916325f4",
+        "physical": "f30b1086645b3f6e3779f63fa7a592362c33b1ba7c3f199e3ea3fce9672b7590",
+        "monitor": "74345f2be9736127a02a3741f0a843edb860c58b52bf6f25ec95140bc38eb607",
+        "timing": "eeb1dce0af924b48aa1a9015cd3491e65821e9c605197524c1538ce52cc19931"
+      }
+    }
+  ],
+  "raw_arrays_reread_only": true,
+  "new_simulations_or_detector_replays": 0,
+  "replaces_failed_transaction": false,
+  "qualification_transaction_status": "FAIL",
+  "note": "Post-stop comparison of already retained arrays. Does not repair or replace the incomplete transaction and cannot authorize protocol, holdout, official evaluation or adoption."
+}

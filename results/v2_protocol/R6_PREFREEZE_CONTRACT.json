@@ -1,0 +1,149 @@
+{
+  "schema": "R6_PREFREEZE_CONTRACT.v1",
+  "status": "PASS",
+  "stage": "S1 before saved/full-loop equivalence, protocol, freeze, holdout or official",
+  "final_candidate_sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+  "candidate_default_name_identical": true,
+  "full_suite": {
+    "tests_run": 534,
+    "failures": 0,
+    "errors": 0,
+    "exit": 0,
+    "elapsed_s": 20.931,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "4353e98f5cdcdad90e80510fb35d30ef77554c55a8504cf3f42e8eb2955fa9e0"
+  },
+  "interface": {
+    "schema": "R6_SUBMISSION_CONTRACT.v1",
+    "status": "PASS",
+    "detector_sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+    "default_names_exact": true,
+    "controller_sha256": {
+      "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "cases": [
+      {
+        "case": "servo",
+        "additional_channel_enabled": true,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "torque",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "None",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "unknown",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "substring",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "missing_MODE",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "controller_None",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "controller_absent",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      }
+    ],
+    "protected": {
+      "status": "ok",
+      "files": 20,
+      "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+    },
+    "scope": "Reset/public API/finite synthetic updates; no Plant or physical simulation."
+  },
+  "invalid_environment_attempt": {
+    "classification": "INVALID_ENV",
+    "tests_run": 534,
+    "other_tests_passed": 533,
+    "errors": 1,
+    "candidate_behavior_failures": 0,
+    "failure_test": "test_r5_sealed.FreezeTests.test_current_head_blob_hash_matches_unchanged_r1",
+    "cause": "Overlay lacked its own Git metadata; git show resolved unrelated outer repository HEAD. No detector behavior was assessed by the failed test.",
+    "correction": "Isolate local overlay Git metadata at the fixed work baseline via read-only object alternates; no source/test/candidate change, no clone or remote.",
+    "qualification_attempt": "The corrected same command is the first valid pre-freeze full-suite qualification.",
+    "original_stderr_sha256": "9cba68c6cdc8bba79c5161a37fa976256b4b4ccb1af9ff1299addca969cf84a8",
+    "source_count": 866,
+    "freeze_exists": false,
+    "new_holdout_generated": false,
+    "actual_simulations": 0
+  },
+  "valid_environment": {
+    "source_files": 866,
+    "all_source_bytes_unchanged": true,
+    "git_root_is_overlay": true,
+    "baseline_head": "4e1e8181c68d7fe68b6c26fa29874942d94cf061",
+    "committed_R1_exact": true,
+    "candidate_sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+    "remote_operations": 0
+  },
+  "source_files_unchanged_by_environment_correction": true,
+  "known_red_reproduction": {
+    "tests_run": 1,
+    "exit": 1,
+    "expected_error": "TypeError: NoneType membership in singleton string",
+    "stderr_sha256": "9dfad7f755c65e9e1c5cbef59f663e795992a132c684336e1a023ae68fdf90b9",
+    "buggy_builder_sha256": "d7461b20055e6dd9fba4d3325eccf25bc8042bb67b60fdc9b09c341ca7cc655f"
+  },
+  "new_regression_tests": {
+    "tests_run": 5,
+    "errors": 0,
+    "failures": 0,
+    "stderr_sha256": "88c634a51bafa3e8fef84c86f6da486abaafb4c06a251be1b1cd0452e99378cc"
+  },
+  "historical_test_scope": {
+    "schema": "R6_HISTORICAL_TEST_SCOPE.v1",
+    "path": "tools/test_r5_final_contract.py",
+    "original_source_sha256": "9f087f82a13198b629ddc2fdcf572ab78f9a6e14faed25debad1cd8e70ca8d1c",
+    "R6_source_sha256": "48724ff4e668d49c94927d14b62a0e252bfcb1e965dd7cf860f9c673f9b2da3f",
+    "R5_frozen119_contains_this_file": false,
+    "assertion_counts_before": {
+      "test_final_submission_is_the_exact_prefrozen_r1_fallback": 8,
+      "test_historical_positive_decision_is_not_rewritten": 7,
+      "test_existing_full_suite_failure_is_recorded_as_a_veto": 8,
+      "test_rejected_assembly_and_its_defect_remain_frozen_evidence": 5,
+      "test_only_submission_alias_differs_from_the_sealed_science_manifest": 4
+    },
+    "assertion_counts_after": {
+      "test_final_submission_is_the_exact_prefrozen_r1_fallback": 8,
+      "test_historical_positive_decision_is_not_rewritten": 7,
+      "test_existing_full_suite_failure_is_recorded_as_a_veto": 8,
+      "test_rejected_assembly_and_its_defect_remain_frozen_evidence": 5,
+      "test_only_submission_alias_differs_from_the_sealed_science_manifest": 4
+    },
+    "change": "Only historical R5 live-submission path lookups now target the exact immutable R5 final assembly/controllers. All recorded JSON/hash/failure and frozen defective-assembly assertions retained. Current production tests are unchanged.",
+    "candidate_math_weights_threshold_changes": 0,
+    "R5_records_modified": 0
+  },
+  "no_scientific_gate_relaxed": true,
+  "redesigns_used": 0,
+  "physical_simulations": 0,
+  "new_holdout_conditions_generated": 0
+}

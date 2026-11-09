@@ -1,0 +1,110 @@
+{
+  "schema": "R6_PREFREEZE_FINAL_CONTRACT.v1",
+  "status": "PASS",
+  "created_utc": "2026-11-09T08:18:11.723976+00:00",
+  "source_head": "d6ca89fbf568e226004b3fc1e913dc924645acf2",
+  "tested_assembly": {
+    "path": "experiments/r6_final/A_STATE.py",
+    "sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643"
+  },
+  "tests_run": 592,
+  "errors": 0,
+  "failures": 0,
+  "full_suite": {
+    "status": "PASS",
+    "command": [
+      "env",
+      "-u",
+      "PYTHONPATH",
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "command_note": "Portable executable spelling; the unchanged project virtual-environment interpreter was used.",
+    "tests_run": 592,
+    "errors": 0,
+    "failures": 0,
+    "elapsed_s": 22.342,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "764041fccf95fcd540da178bcb37ea6eafa73b77a897c4fa64af5d07bf08ffac"
+  },
+  "default_contract": {
+    "schema": "R6_SUBMISSION_CONTRACT.v1",
+    "status": "PASS",
+    "detector_sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+    "default_names_exact": true,
+    "controller_sha256": {
+      "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "cases": [
+      {
+        "case": "servo",
+        "additional_channel_enabled": true,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "torque",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "None",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "unknown",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "substring",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "missing_MODE",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "controller_None",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      },
+      {
+        "case": "controller_absent",
+        "additional_channel_enabled": false,
+        "finite_updates": 3,
+        "status": "PASS"
+      }
+    ],
+    "protected": {
+      "status": "ok",
+      "files": 20,
+      "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+    },
+    "scope": "Reset/public API/finite synthetic updates; no Plant or physical simulation."
+  },
+  "default_contract_result_sha256": "f8441cc5d9da2b657a6e3747a90e5341b7fdcc418713dd546853c939e360bf02",
+  "default_contract_log_sha256": "383458079eb3d4c4776cb4468c129ed463bb1c02228eba484e4990a97abefcc0",
+  "candidate_default_names_byte_identical": true,
+  "new_physical_simulations": 0,
+  "holdout_conditions_generated": 0,
+  "candidate_model_threshold_gate_changes_since_initial_contract": 0,
+  "notes": "The final committed verification/publication tools are included in this full default-name qualification; no earlier tests were skipped."
+}

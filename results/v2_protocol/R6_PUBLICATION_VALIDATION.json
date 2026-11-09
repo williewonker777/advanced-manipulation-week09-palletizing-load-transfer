@@ -1,0 +1,75 @@
+{
+  "schema": "R6_PUBLICATION_VALIDATION.v1",
+  "status": "PASS",
+  "scope": "Publication/final retained R1 validation only; does not override the failed S1 experiment.",
+  "scientific_qualification_status": "FAIL",
+  "created_utc": "2026-11-09T09:10:31.260144+00:00",
+  "work_full_unit_tests": {
+    "tests_run": 598,
+    "errors": 0,
+    "failures": 0,
+    "stderr_sha256": "0f76c2e0f4ca4b104596f3c72f1abe0afb3044477f5e5a6c495dbea494b351f2"
+  },
+  "public_external_kit_submission_overlay_tests": {
+    "tests_run": 510,
+    "errors": 0,
+    "failures": 0,
+    "stderr_sha256": "fb6b321e6f052f580dc4545794dd5b6e84d644e5cc3f80f720ce42af955c8c30"
+  },
+  "targeted_R6_report_tests": 21,
+  "default_name_R1_interface_cases": 8,
+  "R6_build_check_work_and_public": "PASS",
+  "R6_report_check_work_and_public": "PASS",
+  "audit_public": {
+    "status": "PASS",
+    "original_kit_and_guide_supplied": true,
+    "ffprobe_and_require_media": true,
+    "copied_kit_blocks": 0,
+    "privacy_errors": 0,
+    "media_files": 16,
+    "media_bytes": 7641724
+  },
+  "validate_media": {
+    "status": "PASS",
+    "manifests": [
+      "legacy",
+      "r2",
+      "v2"
+    ]
+  },
+  "relative_links_and_heading_anchors": "PASS",
+  "all_public_text_internal_brand_hits": 0,
+  "current_Markdown_and_PDF_publication_state_phrase_hits": 0,
+  "older_protocol_evidence_and_checker_pattern_literals_preserved": 5,
+  "PDF": {
+    "pages": 20,
+    "visual_reviewed": true,
+    "T3_cell_overflow_fixed_in_presentation_only": true,
+    "S1_timing_scope_not_holdout": true
+  },
+  "invariants": {
+    "S1_stopped_scientific_sources": 73,
+    "R5_runtime": 62,
+    "R5_models": 8,
+    "environment_packages": 21,
+    "original_files": 29,
+    "protected_files": 20,
+    "R2_full_53_unchanged": true,
+    "R3_full_101_unchanged": true,
+    "R4_full_199_unchanged": true,
+    "R5_118_core_unchanged_plus_prefrozen_R1_submission_alias": true
+  },
+  "new_holdout_batches": 0,
+  "new_official_batches": 0,
+  "new_experimental_runs_after_stop": 0,
+  "scientific_driver_repairs_after_stop": 0,
+  "GPU_jobs": 0,
+  "remote_operations": 0,
+  "final_submission_hashes": {
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+  },
+  "stop_snapshot_sha256": "0cfa37efbef3e7f395b1915e7b108a2e02a580847e699f26c66cd2fa7be91904",
+  "checksum_scope": "All release files except the checksum manifest itself; regenerated and verified after publication metadata addition."
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "R6_BUILD.v1",
+  "immutable_inputs": [
+    {
+      "path": "r1_detector.py",
+      "sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+    },
+    {
+      "path": "experiments/r5_generated/SCALE_STATE.py",
+      "sha256": "9627c8b21d1998e8cc2e22a273b6962c7a446cdbe79f618b3e29868c7fe4db1e"
+    },
+    {
+      "path": "experiments/r5_final/A_STATE.py",
+      "sha256": "4f4b33c08872e8db612e1416468ea14dedc74964f05702f4aa084971f9197b44"
+    },
+    {
+      "path": "results/v2_protocol/R5_BUILD.json",
+      "sha256": "97d8dad28ebc892e7dcf7be6d726146e9e2b9571fccabde58ce9f76f4e1441b7"
+    }
+  ],
+  "models": [
+    {
+      "path": "models/r5/servo_SCALE_PHASE.json",
+      "sha256": "d9c7daf0dbc9fe6bb8019ae015df4941168edadb465652408631fe0747d4d2f3"
+    },
+    {
+      "path": "models/r5/torque_SCALE_PHASE.json",
+      "sha256": "250cf1b00382f125957aea504c707ad4d6e4735fd512d8a81513ca9b38b9f768"
+    },
+    {
+      "path": "models/r5/servo_SCALE_STATE.json",
+      "sha256": "d71d4573fa021b60a75a65678234e92e04d732e51c74ce8056fe263b8dfe5195"
+    },
+    {
+      "path": "models/r5/torque_SCALE_STATE.json",
+      "sha256": "8924a704f42ed086a56ce2dbc90b8d275306d5252af34400d995c88d8d435a26"
+    },
+    {
+      "path": "models/r5/servo_AR20_FULL.json",
+      "sha256": "0f1178631b2f4086e71abb1dba2c00c1e9014c5d2e75f54f7788369e5c5a88e2"
+    },
+    {
+      "path": "models/r5/torque_AR20_FULL.json",
+      "sha256": "661dafd506934259b922a130912b814a8339a193df90bfdd23f01b2f8dd0ca9c"
+    },
+    {
+      "path": "models/r5/servo_AR50_FULL.json",
+      "sha256": "3373412a140ba498b83908ce100712b871dd4c1e564b9166403575d4bfdfbccf"
+    },
+    {
+      "path": "models/r5/torque_AR50_FULL.json",
+      "sha256": "49e3c141515551aa4e9c33302e89e1a3f5d9273e04f88eae58037134eefe14b7"
+    }
+  ],
+  "model_count": 8,
+  "prefix_proof": {
+    "base_path": "r1_detector.py",
+    "source_path": "experiments/r5_generated/SCALE_STATE.py",
+    "exact_R1_prefix": true,
+    "prefix_length_bytes": 34074
+  },
+  "builder": {
+    "path": "tools/r6_build.py",
+    "sha256": "2c96425b526e7c1125124de31c043fa853618fcc09e99630b7ca58de63b267b8"
+  },
+  "regression_test": {
+    "path": "tools/test_r6_build.py",
+    "sha256": "9c81a0d7f689b86f4b86546cd2debaec6ab0705438bd6f527b6139017d45410a"
+  },
+  "generated": [
+    {
+      "name": "A_STATE",
+      "path": "experiments/r6_final/A_STATE.py",
+      "sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643"
+    },
+    {
+      "name": "R1",
+      "path": "experiments/r6_final/R1.py",
+      "sha256": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+    }
+  ],
+  "diff_proof": {
+    "frozen_path": "experiments/r5_final/A_STATE.py",
+    "candidate_path": "experiments/r6_final/A_STATE.py",
+    "old_literal": "_R5_ENABLED_MODES = 'servo'",
+    "new_literal": "_R5_ENABLED_MODES = ('servo',)",
+    "old_literal_count": 1,
+    "candidate_is_exact_literal_replacement": true,
+    "all_other_bytes_preserved": true
+  },
+  "runtime_file_reads": 0,
+  "weights_or_threshold_updates": 0
+}

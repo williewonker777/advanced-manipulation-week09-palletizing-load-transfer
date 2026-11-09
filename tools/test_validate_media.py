@@ -305,3 +305,67 @@ class LegacyAliasTests(unittest.TestCase):
             self.assertEqual(legacy_alias_errors(root,{'frozen_source_aliases':aliases}),[])
             aliases['my_detector.py']['file']='my_detector.py'
             self.assertTrue(legacy_alias_errors(root,{'frozen_source_aliases':aliases}))
+
+
+class ArchivedRenderedSourceTests(unittest.TestCase):
+    def test_unchanged_current_source_needs_no_archive(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            data = b'recorded source'
+            (root / 'my_detector.py').write_bytes(data)
+            digest = hashlib.sha256(data).hexdigest()
+            self.assertEqual('my_detector.py',
+                             V.rendered_source_path(root, 'my_detector.py', digest))
+
+    def test_changed_submission_uses_only_exact_preserved_r1_bytes(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            recorded = b'fixed rendered detector'
+            (root / 'my_detector.py').write_bytes(b'new submission detector')
+            (root / 'r1_detector.py').write_bytes(recorded)
+            digest = hashlib.sha256(recorded).hexdigest()
+            self.assertEqual('r1_detector.py',
+                             V.rendered_source_path(root, 'my_detector.py', digest))
+            (root / 'r1_detector.py').write_bytes(b'changed archive')
+            self.assertIsNone(V.rendered_source_path(root, 'my_detector.py', digest))
+            (root / 'r1_detector.py').unlink()
+            self.assertIsNone(V.rendered_source_path(root, 'my_detector.py', digest))
+
+    def test_archive_symlinks_and_non_submission_aliases_fail_closed(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            recorded = b'recorded'
+            digest = hashlib.sha256(recorded).hexdigest()
+            (root / 'my_detector.py').write_bytes(b'new')
+            (root / 'target.py').write_bytes(recorded)
+            (root / 'r1_detector.py').symlink_to(root / 'target.py')
+            self.assertIsNone(V.rendered_source_path(root, 'my_detector.py', digest))
+            (root / 'other.py').write_bytes(b'new')
+            (root / 'r1_other.py').write_bytes(recorded)
+            self.assertIsNone(V.rendered_source_path(root, 'other.py', digest))
+            self.assertIsNone(V.rendered_source_path(root, '../other.py', digest))
+
+    def test_v2_manifest_survives_current_alias_change_without_editing_evidence(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            fixture_v2(root)
+            original = (root / 'artifacts/media/v2_manifest.json').read_bytes()
+            (root / 'r1_detector.py').write_bytes((root / 'my_detector.py').read_bytes())
+            (root / 'my_detector.py').write_bytes(b'new submission')
+            result = V.validate_v2(root, 'ffprobe', fake_probe)
+            self.assertEqual('pass', result['status'], result['errors'])
+            self.assertEqual({'my_detector.py': 'r1_detector.py'},
+                             result['archived_render_source_aliases'])
+            self.assertEqual(original, (root / 'artifacts/media/v2_manifest.json').read_bytes())
+
+    def test_r2_manifest_survives_current_alias_change_without_editing_evidence(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            fixture_r2(root)
+            original = (root / 'artifacts/media/r2_manifest.json').read_bytes()
+            (root / 'my_detector.py').write_bytes(b'new submission')
+            result = V.validate_r2(root, 'ffprobe', fake_probe)
+            self.assertEqual('pass', result['status'], result['errors'])
+            self.assertEqual({'my_detector.py': 'r1_detector.py'},
+                             result['archived_render_source_aliases'])
+            self.assertEqual(original, (root / 'artifacts/media/r2_manifest.json').read_bytes())

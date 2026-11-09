@@ -76,6 +76,35 @@ def legacy_alias_errors(root, data):
     return errors
 
 
+def rendered_source_path(root, relative, digest):
+    """Resolve recorded render bytes, not the latest submission's identity.
+
+    Older comparisons used the mutable submission names. A later submission
+    must not invalidate those immutable clips when the exact recorded bytes
+    remain in their fixed R1 files. No other source or approximate match may
+    use this narrow alias rule; historical manifests are never rewritten.
+    """
+    relative = Path(relative)
+    if relative.is_absolute() or '..' in relative.parts:
+        return None
+    source = Path(root) / relative
+    if source.is_symlink() or not source.is_file():
+        return None
+    if hashlib.sha256(source.read_bytes()).hexdigest() == digest:
+        return relative.as_posix()
+    aliases = {'my_servo.py': 'r1_servo.py',
+               'my_torque.py': 'r1_torque.py',
+               'my_detector.py': 'r1_detector.py'}
+    archived = aliases.get(relative.as_posix())
+    if archived is None:
+        return None
+    preserved = Path(root) / archived
+    if (preserved.is_symlink() or not preserved.is_file()
+            or hashlib.sha256(preserved.read_bytes()).hexdigest() != digest):
+        return None
+    return archived
+
+
 def validate(root, ffprobe):
     root=Path(root).resolve();folder=root/'artifacts/media';path=folder/'media_manifest.json'
     data=json.loads(path.read_text(encoding='utf-8'));records=data['scenarios'];errors=[]
@@ -231,7 +260,7 @@ def validate_v2(root, ffprobe, probe_fn=probe):
     }
     if set(hashes)!=required_sources:
         errors.append('v2 source hash coverage mismatch')
-    external_not_local=[]
+    external_not_local=[];archived_render_sources={}
     for relative,digest in hashes.items():
         source=root/relative
         safe_digest=isinstance(digest,str) and len(digest)==64 and all(c in '0123456789abcdef' for c in digest)
@@ -241,8 +270,12 @@ def validate_v2(root, ffprobe, probe_fn=probe):
             errors.append(f'{relative}: source SHA mismatch')
         elif relative in V2_EXTERNAL_KIT_SOURCES and not source.exists():
             external_not_local.append(relative)
-        elif not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest()!=digest:
-            errors.append(f'{relative}: source SHA mismatch')
+        else:
+            resolved = rendered_source_path(root, relative, digest)
+            if resolved is None:
+                errors.append(f'{relative}: source SHA mismatch')
+            elif resolved != relative:
+                archived_render_sources[relative] = resolved
     if (hashes.get('v1_servo.py')!=hashes.get('my_servo.py') or
             hashes.get('v1_torque.py')!=hashes.get('my_torque.py')):
         errors.append('v1/v2 controller sources must remain identical')
@@ -342,6 +375,7 @@ def validate_v2(root, ffprobe, probe_fn=probe):
     return dict(status='pass' if not errors else 'FAIL',errors=errors,files=report,
                 total_media_bytes=total,scenarios=len(records),
                 external_kit_sources_not_locally_verified=sorted(external_not_local),
+                archived_render_source_aliases=archived_render_sources,
                 scope='v2 manifest, sources, software GL, three variants, classification, ffprobe and hashes')
 
 
@@ -372,7 +406,7 @@ def validate_r2(root, ffprobe, probe_fn=probe):
     }
     if set(hashes)!=required_sources:
         errors.append('R2 source hash coverage mismatch')
-    external_not_local=[]
+    external_not_local=[];archived_render_sources={}
     for relative,digest in hashes.items():
         source=root/relative
         safe_digest=isinstance(digest,str) and len(digest)==64 and all(c in '0123456789abcdef' for c in digest)
@@ -382,8 +416,12 @@ def validate_r2(root, ffprobe, probe_fn=probe):
             errors.append(f'{relative}: source SHA mismatch')
         elif relative in V2_EXTERNAL_KIT_SOURCES and not source.exists():
             external_not_local.append(relative)
-        elif not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest()!=digest:
-            errors.append(f'{relative}: source SHA mismatch')
+        else:
+            resolved = rendered_source_path(root, relative, digest)
+            if resolved is None:
+                errors.append(f'{relative}: source SHA mismatch')
+            elif resolved != relative:
+                archived_render_sources[relative] = resolved
     pairs=(('my_servo.py','r1_servo.py'),('my_torque.py','r1_torque.py'),
            ('my_detector.py','r1_detector.py'))
     expected_aliases={new:old for new,old in pairs if hashes.get(new)==hashes.get(old)}
@@ -495,7 +533,30 @@ def validate_r2(root, ffprobe, probe_fn=probe):
     return dict(status='pass' if not errors else 'FAIL',errors=errors,files=report,
                 total_media_bytes=total,scenarios=len(records),
                 external_kit_sources_not_locally_verified=sorted(external_not_local),
+                archived_render_source_aliases=archived_render_sources,
                 scope='R2 manifest, sources, aliases, software GL, four variants, G4 trace, classification, ffprobe and hashes')
+
+
+def validate_r6(root, ffprobe, probe_fn=probe):
+    """Validate conditionally released R6 preserved-validation illustrations."""
+    from tools.r6_media import validate as validate_preserved
+    return validate_preserved(root, ffprobe, probe_fn)
+
+
+def r6_media_required(root):
+    root = Path(root)
+    manifest = root/'artifacts/media/r6_manifest.json'
+    adoption = root/'results/v2_protocol/R6_ADOPTION.json'
+    if manifest.exists():
+        return True
+    if not adoption.is_file() or adoption.is_symlink():
+        return False
+    try:
+        value = json.loads(adoption.read_text(encoding='utf-8'))
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        return True
+    return (value.get('schema') == 'R6_ADOPTION.v1'
+            and value.get('effective_variants', {}).get('servo') == 'SCALE_STATE')
 
 
 def validate_all(root, ffprobe):
@@ -515,6 +576,11 @@ def validate_all(root, ffprobe):
         sets['r2']=validate_r2(root,ffprobe)
     elif r2_required:
         errors.append('R2 r2_manifest.json is missing')
+    r6=media/'r6_manifest.json';r6_required=r6_media_required(root)
+    if r6.exists():
+        sets['r6']=validate_r6(root,ffprobe)
+    elif r6_required:
+        errors.append('R6 r6_manifest.json is missing')
     for label,result in sets.items():
         errors.extend(f'{label}: {error}' for error in result['errors'])
     return dict(status='pass' if not errors else 'FAIL',errors=errors,sets=sets,

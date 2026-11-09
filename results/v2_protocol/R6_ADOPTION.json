@@ -1,0 +1,33 @@
+{
+  "schema": "R6_ADOPTION.v1",
+  "prefreeze_selected": {
+    "servo": "SCALE_STATE",
+    "torque": "R1"
+  },
+  "effective_variants": {
+    "servo": "R1",
+    "torque": "R1"
+  },
+  "final_assembly": "R1",
+  "final_files": {
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "e55995db6147ff8a543b816354376f968e0027d62d87c9dd1eeb55e0d88abbb4"
+  },
+  "status": "R1_FALLBACK_PRE_HOLDOUT",
+  "stop_reason": "S1_PARITY_RESULT_SERIALIZATION",
+  "stopped_stage": "S1_PARITY_RESULT_SERIALIZATION",
+  "failure_sha256": "6abca4e1e042464e2e66535a08e6ccf341d11d15d2850a6edd568b69bd54ac2e",
+  "execution_status_sha256": "4df94040e52baaa19d28b7a3cc68fed4ec6a78753e0c6113b7a05608af81f823",
+  "sealed_stages_skipped": true,
+  "holdout_batches": 0,
+  "official_batches": 0,
+  "protocol_created": false,
+  "formal_freeze_created": false,
+  "post_official_contract_passed": false,
+  "fallback_only_from_prefrozen_assemblies": true,
+  "repair_or_retest_after_holdout": false,
+  "repairs_or_retests_after_S1_failure": 0,
+  "candidate_still_fixed_but_not_adopted": true,
+  "reason": "S1 transaction did not complete; positive exposed equivalence and diagnostic raw comparisons cannot override the required qualification veto."
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "R6_S1_FAILURE.v1",
+  "status": "FAIL",
+  "failed_stage": "S1_PARITY_RESULT_SERIALIZATION",
+  "detected_utc": "2026-11-09T08:31:11.030768+00:00",
+  "source_head": "7dec449be9c65e7b9ebd112c69664d6b9fc1fb99",
+  "candidate_sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+  "driver": {
+    "path": "tools/r6_study.py",
+    "sha256": "586c88ef58d8a15e90bf30b47fea0feed778ff4710556258d7e5dd46a898dac0"
+  },
+  "error_type": "TypeError",
+  "error_message": "Object of type bool is not JSON serializable",
+  "cause": "Torque both_monitor_channels_disabled contains a NumPy boolean produced by np.count_nonzero(... ) == 0; standard json.dump does not accept it.",
+  "synthetic_scalar_type": {
+    "module": "numpy",
+    "name": "bool",
+    "is_builtin_bool": false
+  },
+  "numpy_version": "2.5.4",
+  "partial_result": {
+    "original_relative_path": "results/v2_protocol/R6_PARITY_RESULT.json",
+    "sha256": "e3faee41c9173f7b18b7df5deb5dca63678d6e55b2191bb25fe5591b592e51c6",
+    "bytes": 2133,
+    "preserved_byte_exact_outside_release": true,
+    "rewritten_as_valid_result": false
+  },
+  "stderr_sha256": "415815ef61e47b9986046d80a1959a0b30fd6fc2f52892f712bebe7b7b8cb49a",
+  "exit_code": 1,
+  "physical_episodes_completed": 8,
+  "valid_base_documents": 4,
+  "partial_physical_episodes": 0,
+  "raw_review": {
+    "path": "results/v2_protocol/R6_PARITY_RAW_REVIEW.json",
+    "sha256": "f3cb86854de1489d28b5eab1aac54861697b5ab99670c7ba1269125d7ad61a93"
+  },
+  "saved_stream_equivalence_passed": 990,
+  "pre_freeze_full_tests_passed": 592,
+  "pre_freeze_default_contract_cases_passed": 8,
+  "coverage_gap": "The synthetic tests exercised comparison assertions but did not serialize the torque comparison result through the production writer.",
+  "candidate_behavior_difference_observed": false,
+  "qualification_not_completed": true,
+  "driver_candidate_model_threshold_repairs_after_failure": 0,
+  "new_simulation_or_replay_after_failure": 0,
+  "new_holdout_conditions_generated": 0,
+  "new_holdout_batches": 0,
+  "new_official_batches": 0,
+  "fallback": "Exact prefrozen R1 for both modes; no runner-up or rerun."
+}

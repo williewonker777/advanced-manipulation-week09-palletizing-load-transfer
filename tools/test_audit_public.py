@@ -190,6 +190,30 @@ class PublicAuditTests(unittest.TestCase):
                 complete=audit(root,ffprobe='ffprobe',require_checksums=False,require_media=True)
             self.assertEqual(complete['status'],'pass',complete['errors'])
 
+    def test_r6_media_requires_final_servo_adoption_and_exact_extra_pair(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);media=root/'artifacts/media';media.mkdir(parents=True)
+            stems=('01_servo_no_collision','02_torque_no_collision',
+                   '03_servo_place_collision','04_servo_transport_collision',
+                   '05_v2_servo_transport_collision','06_v2_torque_transport_collision',
+                   '09_r6_servo_positive_comparison','10_r6_servo_negative_comparison')
+            for stem in stems:
+                for suffix in ('mp4','gif'):(media/f'{stem}.{suffix}').write_bytes(b'media')
+            for name in ('media_manifest.json','v2_manifest.json','r6_manifest.json'):
+                (media/name).write_text('{}')
+            adoption=root/'results/v2_protocol/R6_ADOPTION.json';adoption.parent.mkdir(parents=True)
+            adoption.write_text(json.dumps({'schema':'R6_ADOPTION.v1',
+                'effective_variants':{'servo':'SCALE_STATE','torque':'R1'}}))
+            with patch('tools.audit_public.media_tag_errors',return_value=[]), \
+                    patch('tools.audit_public.media_metadata_bytes',return_value=b''), \
+                    patch('tools.audit_public.binary_errors',return_value=[]):
+                result=audit(root,ffprobe='ffprobe',require_checksums=False,require_media=True)
+                self.assertEqual('pass',result['status'],result['errors'])
+                adoption.write_text(json.dumps({'schema':'R6_ADOPTION.v1',
+                    'effective_variants':{'servo':'R1','torque':'R1'}}))
+                fallback=audit(root,ffprobe='ffprobe',require_checksums=False,require_media=True)
+            self.assertTrue(any('without final servo adoption' in error for error in fallback['errors']))
+
     def test_invalid_utf8_is_fail_not_traceback(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory); (root/'bad.py').write_bytes(b'\xff')

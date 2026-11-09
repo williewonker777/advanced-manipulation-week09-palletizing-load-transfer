@@ -17,6 +17,15 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def r5_submission_snapshot(stem):
+    """R5 history is immutable even when a later round changes live aliases."""
+    if stem == 'detector':
+        final = read('R5_FINAL_ADOPTION.json')
+        freeze = read('R5_FREEZE.json')
+        return ROOT / freeze['assemblies'][final['final_assembly']]['path']
+    return ROOT / ('r1_' + stem + '.py')
+
+
 class FinalContractTests(unittest.TestCase):
     def test_final_submission_is_the_exact_prefrozen_r1_fallback(self):
         final = read('R5_FINAL_ADOPTION.json')
@@ -27,13 +36,13 @@ class FinalContractTests(unittest.TestCase):
         self.assertFalse(final['runner_up_promoted'])
         for stem in ('servo', 'torque', 'detector'):
             name = 'my_' + stem + '.py'
-            self.assertEqual((ROOT / name).read_bytes(),
+            self.assertEqual(r5_submission_snapshot(stem).read_bytes(),
                              (ROOT / ('r1_' + stem + '.py')).read_bytes())
-            self.assertEqual(final['final_files'][name], sha(ROOT / name))
+            self.assertEqual(final['final_files'][name], sha(r5_submission_snapshot(stem)))
         record = freeze['assemblies']['R1']
         self.assertEqual(record['sha256'], sha(ROOT / record['path']))
         self.assertEqual((ROOT / record['path']).read_bytes(),
-                         (ROOT / 'my_detector.py').read_bytes())
+                         r5_submission_snapshot('detector').read_bytes())
 
     def test_historical_positive_decision_is_not_rewritten(self):
         final = read('R5_FINAL_ADOPTION.json')
@@ -85,9 +94,9 @@ class FinalContractTests(unittest.TestCase):
         freeze = read('R5_FREEZE.json')
         self.assertEqual(119, len(freeze['source_files']))
         self.assertNotEqual(freeze['source_files']['my_detector.py'],
-                            sha(ROOT / 'my_detector.py'))
+                            sha(r5_submission_snapshot('detector')))
         self.assertEqual(freeze['assemblies']['R1']['sha256'],
-                         sha(ROOT / 'my_detector.py'))
+                         sha(r5_submission_snapshot('detector')))
         self.assertFalse(read('R5_FINAL_ADOPTION.json')['candidate_repair_or_new_configuration_after_seal'])
 
 

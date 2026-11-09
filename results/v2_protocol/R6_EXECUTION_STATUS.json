@@ -1,0 +1,38 @@
+{
+  "schema": "R6_EXECUTION_STATUS.v1",
+  "status": "STOPPED_R1_FALLBACK",
+  "failed_stage": "S1_PARITY_RESULT_SERIALIZATION",
+  "planned": {
+    "saved_streams": 990,
+    "parity_episodes": 8,
+    "holdout_episodes": 152,
+    "official_episodes": 58,
+    "holdout_batches": 1,
+    "official_batches": 1
+  },
+  "actual": {
+    "saved_streams": 990,
+    "parity_episodes": 8,
+    "valid_parity_base_documents": 4,
+    "holdout_episodes": 0,
+    "official_episodes": 0,
+    "holdout_batches": 0,
+    "official_batches": 0,
+    "holdout_design_RNG_calls": 0,
+    "completed_trial_reexecutions": 0,
+    "GPU_jobs": 0,
+    "remote_operations": 0
+  },
+  "not_created": [
+    "PROTOCOL_R6.json",
+    "R6_FREEZE.json",
+    "R6_PARITY_RESULT.json (valid completed transaction)",
+    "R6_HOLDOUT_OPENED.json",
+    "R6_HOLDOUT_DESIGN.json",
+    "R6_HOLDOUT_REVIEW.json",
+    "R6_OFFICIAL_OPENED.json",
+    "R6_OFFICIAL_REGRESSION.json"
+  ],
+  "reason": "S1 acquisition transaction failed; mandatory fallback without repair/retry.",
+  "post_stop_activity": "Read-only source/raw integrity and existing-array comparison, documentation/publication verification only."
+}
