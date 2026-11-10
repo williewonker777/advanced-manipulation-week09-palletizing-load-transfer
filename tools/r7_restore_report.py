@@ -48,7 +48,18 @@ RESTORATION_REQUIRED = [
     "tools/r7_restore_report.py",
     "tools/test_r7_restore_report.py",
 ]
-REQUIRED = list(dict.fromkeys(R.REQUIRED + SCIENTIFIC_RECORDS + RESTORATION_REQUIRED))
+README_EVIDENCE = [
+    "my_detector.py",
+    "docs/REQUIREMENTS_AUDIT.md",
+    "docs/R2_README.md",
+    "docs/R4_README.md",
+    "docs/R4_RESULTS.md",
+    "docs/R5_RESULTS.md",
+    "docs/R6_RESULTS.md",
+    "docs/R7_PUBLICATION_VETO.md",
+]
+REQUIRED = list(dict.fromkeys(R.REQUIRED + SCIENTIFIC_RECORDS + RESTORATION_REQUIRED
+                              + README_EVIDENCE))
 OPTIONAL = list(dict.fromkeys(R.OPTIONAL + [VALIDATION, RESTORATION_MEDIA,
                                            D + "R7_S4_MEDIA_MANIFEST.json"]))
 OUTPUTS = list(R.OUTPUTS)
@@ -445,6 +456,152 @@ def _insert(text: str, marker: str, value: str) -> str:
     return text.replace(marker, value + "\n\n" + marker, 1)
 
 
+def _problem_rows(c: dict) -> list[dict]:
+    historical = c["historical"]
+    g4 = historical["ref"]["G4_unmet"]
+    limits = g4["criteria"]
+    support = g4["R1"]
+    g4_values = (
+        f"G4 기준은 마지막 20 ms 평균 ≥{limits['support_mean_percent_min']:g} %mg, "
+        f"최소 ≥{limits['support_min_percent_min']:g} %mg, "
+        f"v1 대비 +{limits['improvement_pp_vs_v1_min']:g} %p, "
+        f"놓기 힘 ≤{limits['place_peak_over_mg_max']:g} mg다. 현재 "
+        + "; ".join(
+            f"{label}는 평균 {support[mode]['support_mean_percent']:.4f}, "
+            f"최소 {support[mode]['support_min_percent']:.4f}, "
+            f"증가 {support[mode]['improvement_pp_vs_v1']:g}, "
+            f"peak {support[mode]['place_peak_over_mg']:.4f}"
+            for mode, label in (("servo", "A"), ("torque", "B"))) + "이다.")
+    holdout = {row["mode"]: row for row in c["holdout"]["entries"]}
+    timing_values = "; ".join(
+        f"{R.MODES[mode]} 합산 p99 {holdout[mode]['metrics']['combined_p99_worst_us']:.3f} µs, "
+        f"최대 {holdout[mode]['metrics']['combined_max_worst_us']:.3f} µs "
+        f"(1 ms 초과 {holdout[mode]['metrics']['cycles_over_1ms']}주기)"
+        for mode in R.MODES)
+    past_timing = historical["ref"]["timing_contexts"]["R3_full_observed_set"]
+    past_maxima = ", ".join(
+        f"{label} {past_timing[mode]['maximum_wall_us'] / 1000:.3f} ms"
+        for mode, label in (("servo", "A"), ("torque", "B")))
+    outliers = [item["combined"] for row in holdout.values()
+                for item in row["timing"]["tested"]["outliers"]
+                if item["combined"]["wall_ns"] > 1_000_000]
+    scheduling_observed = bool(outliers) and all(
+        item["wall_ns"] > item["cpu_ns"] and item["involuntary_context_switches"] > 0
+        for item in outliers)
+    timing_cause = (
+        "확인: R7 초과 주기에서 벽시계 시간이 CPU 시간보다 길고 비자발적 문맥 전환이 관측됐다. "
+        "추론: OS 스케줄링 영향으로 보인다. 전체 초과의 단일 원인은 미확정이다."
+        if scheduling_observed else "미확정: 초과 주기의 CPU 시간·문맥 전환을 더 분석해야 한다.")
+    perturb = R._perturb_fa_counts(historical["docs"]["R5_PERTURB_RESULTS"], c["adopted"])
+    reference = historical["ref"]["D4"]["R1"]["servo"]
+    saturated = reference["reference_saturated_rows"]
+    reference_count = len(reference["reference_source_row_indices"])
+    torque = next(row for row in historical["docs"]["R5_D4_RESULTS"]["entries"]
+                  if row["mode"] == "torque" and row["variant"] == "SCALE_STATE")
+    minimum = historical["protocol"]["detector_gates"]["D4_min_additional_detected"]
+    zero_kg_misses = []
+    for mode in R.MODES.values():
+        pick = next(row for row in c["collision_rows"]
+                    if row["방식"] == mode and row["질량/시각"] == "0 kg / 1.42 s")
+        place = next(row for row in c["collision_rows"]
+                     if row["방식"] == mode and row["질량/시각"] == "0 kg / 3.86 s")
+        zero_kg_misses.append(sum(value == "놓침" for value in
+                                  (pick["10 N"], pick["15 N"], place["10 N"])))
+    weak_values = (R._official_miss_text(c) + " 0 kg에서도 같은 세 조건의 미검출은 "
+                   f"A {zero_kg_misses[0]}건, B {zero_kg_misses[1]}건이다.")
+    r1_servo_p99 = holdout["servo"]["timing"]["R1"]["components"]["combined"]["p99_worst_us"]
+    servo_p99 = holdout["servo"]["metrics"]["combined_p99_worst_us"]
+    rows = [
+        ("하중 이양(G4) 미달", g4_values,
+         "확인: P0에서 놓기 50–57 ms 전 접촉 뒤 반발·접촉 손실이 관측됐다. "
+         "40회 변위 탐색 모두 미달. 지속 지지에 필요한 실현 가능한 변위·속도는 미식별이다.",
+         "[P0 물리 측정](docs/R2_README.md#무엇을-시도했고-왜-유지했나), "
+         "[요구사항](docs/REQUIREMENTS_AUDIT.md)"),
+        ("약한 집기·놓기 충돌 놓침", weak_values,
+         "확인(8 kg R1 사후 진단): 집기 충돌 펄스 중 학습·빠른 분기가 꺼지고 주 분기는 연속 "
+         "4표본 조건을 못 채웠다. 이후 켜진 학습 분기도 임계 미달이었다. 놓기 때는 무충돌 "
+         "점수도 높아 단순 임계 완화에 오감지 위험이 있다. "
+         "R7 추가 채널도 그립 중 작업대 높이 ±35 mm 밖이라는 R1 게이트를 계승하며, "
+         "학습한 위상에서만 유효하다. 집기·놓기 전 구간을 다루는 채널은 아니다.",
+         "[신호 측정](docs/R4_README.md#평가기-점검과-미검출-원인), "
+         "[감지기 게이트](my_detector.py), [R7 공식 결과](docs/R7_RESULTS.md)"),
+        ("최대 1 ms 초과", timing_values + f". R1 관측 최대 {past_maxima}. "
+         "모든 1 ms 초과 주기를 보존했다.", timing_cause,
+         "[시간 원자료](results/v2_protocol/R7_HOLDOUT_REVIEW.json), "
+         "[과거 R1](docs/R4_README.md#계산-시간과-미달)"),
+        ("섭동 오감지",
+         f"무충돌 섭동 28 reference FA는 A {perturb['servo']['r1_reference']}→"
+         f"{perturb['servo']['final_reference']}, B {perturb['torque']['r1_reference']}→"
+         f"{perturb['torque']['final_reference']}다. 전체 34조건은 A "
+         f"{perturb['servo']['final_all']}, B {perturb['torque']['final_all']}회다.",
+         "원인은 미확정이다. 다른 후보의 FA 증가가 강성 ±20 % 변경 조건에 모인 기록은 "
+         "있지만, 강성이 유일한 원인이라는 증명은 아니다.",
+         "[섭동 집계](docs/R7_RESULTS.md), "
+         "[다른 후보의 강성별 분포](docs/R4_RESULTS.md#w40-오감지가-늘어난-조건)"),
+        ("서보 포화", f"D4 R1 A 서보 포화는 {saturated}/{reference_count} 조건이다. "
+         "후보 채택 여부와 별개로 이 한계를 공개한다.",
+         "원인은 미확정이다. 해당 조건과 포화 시점의 원인 확인이 남았다.",
+         "[D4 결과](docs/R7_RESULTS.md)"),
+        ("토크 감지 개선 없음",
+         f"R5 토크 SCALE_STATE는 D4 추가 검출 +{torque['additional_detected']} (기준 {minimum}), "
+         f"reference FA {perturb['torque']['r1_reference']}→{perturb['torque']['state_reference']} "
+         f"(전체 34조건 {perturb['torque']['r1_all']}→{perturb['torque']['state_all']})로 탈락. B는 R1이다.",
+         "확인: 추가 검출과 오감지 관문에 미달했다. 개선을 막은 특징·물리 원인은 미확정이다.",
+         "[R5 후보별 판정](docs/R5_RESULTS.md)"),
+        ("숨은 조건 일반화 미검증", "15주차 비공개 질량·COM·외력 조건에는 접근할 수 없다.",
+         "검증 범위의 한계다. 유한 holdout은 대리 시험일 뿐 비공개 조건 통과의 증명이 아니다.",
+         "[일반화 요구사항](docs/REQUIREMENTS_AUDIT.md)"),
+        ("계산 비용 증가", f"서보 holdout 합산 p99: R1 {r1_servo_p99:.3f} → R7 {servo_p99:.3f} µs.",
+         "확인: 학습 채널의 추가 추론 연산이 있다. 실행 환경의 영향도 섞이므로 관측 증가분 "
+         "전체를 순수 알고리즘 비용으로 단정할 수 없다.",
+         "[짝지은 계산 시간](docs/R7_RESULTS.md#holdout)"),
+    ]
+    columns = ("문제", "현재 값", "원인(확인/미확정)", "근거 문서")
+    return [dict(zip(columns, row)) for row in rows]
+
+
+def _problem_section(c: dict) -> str:
+    problems = R.md_table(["문제", "현재 값", "원인(확인/미확정)", "근거 문서"], _problem_rows(c))
+    priorities = [
+        "1. **하중 이양(G4)**: 놓기 전 지속 지지를 높이는 제어가 필요하다. 먼저 필요한 변위·속도를 "
+        "식별한다. [토크 추적 feedforward](docs/R4_README.md#이번에-시도하지-않은-것)는 아직 구현하지 "
+        "않은 시도할 방향이며 효과는 모른다.",
+        "2. **약한 집기·놓기 충돌**: 그립·해제 과도와 충돌을 구분하는 구간별 감지가 시도할 방향이다. "
+        "현재 진단은 잡음 시드 1개와 고정된 일곱 점수에 한정되며 분리 가능성은 미확정이다. "
+        "같은 공식 조건을 다시 독립 검증이라고 부를 수 없다.",
+        "3. **최대 1 ms와 계산 비용**: 실행 우선순위·CPU 격리 같은 실시간 실행 환경과 계산 "
+        "경량화를 함께 검토하고 대상 환경에서 다시 측정해야 한다. 엄격한 시간 상한은 아직 보장하지 못한다.",
+        "4. **섭동 오감지**: 관절 강성 변화와 오감지의 관계를 분석하고 정상 자료 범위를 넓히는 것이 "
+        "시도할 방향이다. 충돌 결과에 맞춘 임계 조정으로 해결을 주장하지 않는다.",
+        "5. **토크 감지 개선**: 토크 방식에 맞는 새 특징을 검토한다. 기존 SCALE_STATE의 실패 "
+        "관문은 그대로 두고 효능·오감지를 다시 검증해야 한다.",
+        "6. **서보 포화 2/189**: 해당 조건과 포화 시점을 식별하고 원인을 확인한 뒤 완화 방향을 정한다.",
+        "7. **숨은 조건 대비**: 질량·COM·외력 방향을 넓힌 별도 holdout을 사전에 정할 필요가 있다. "
+        "비공개 조건 일반화나 안전성을 약속하지 않는다.",
+        "8. **선택 항목**: 가이드의 충돌 뒤 정지·후퇴 반응은 구현하지 않았다. "
+        "[선택 항목과 요구사항](docs/REQUIREMENTS_AUDIT.md)을 구분한다.",
+    ]
+    history = R.md_table(["라운드", "문제", "처리"], [
+        {"라운드": "R5", "문제": "한 원소 모드 모음이 문자열로 조립돼 제어기 정보 없는 reset()에서 예외",
+         "처리": "후보 철회. R6에서 한 줄 수정. [R5](docs/R5_RESULTS.md), [R6](docs/R6_RESULTS.md)"},
+        {"라운드": "R6", "문제": "numpy.bool_를 JSON으로 쓰지 못해 대조 결과 저장 실패",
+         "처리": "검증 규칙대로 R1 유지. R7에서 엄격한 기록기와 전 구간 사전 시험 도입. "
+         "[R6](docs/R6_RESULTS.md), [R7](docs/R7_RESULTS.md)"},
+        {"라운드": "R7", "문제": "기존 문서 10개가 연결되지 않아 문서 검사 실패, R1으로 되돌림",
+         "처리": "문서 연결을 고치고, 문서 검사가 사전 등록 protocol의 되돌림 조건이 아님을 확인한 뒤 "
+         "사용자 결정으로 채택 복원. [경위 보존](docs/R7_PUBLICATION_VETO.md)"},
+    ])
+    return ("## 문제 상황과 해결해야 할 과제\n\n"
+            "기존 측정과 문서에서 확인한 남은 문제다. 새 실험 결과가 아니며, 확인된 관찰과 "
+            "미확정 원인을 구분한다.\n\n### 1. 문제 상황\n\n" + problems
+            + "\n\n### 2. 해결해야 할 과제\n\n"
+            "아래는 우선순위별 시도할 방향이며, 효과를 확인하거나 개선을 약속한 결과가 아니다.\n\n"
+            + "\n".join(priorities) + "\n\n" + R._unmet(c)[-1]
+            + "\n\n### 3. 검증 과정에서 생긴 문제와 처리\n\n" + history
+            + "\n\n교훈: 동결 전 전체 검사와 모든 기록 경로의 사전 시험을 마치고, 되돌림 범위는 "
+            "사전 등록된 과학·검증 관문으로 명확히 정한다. 문서 검사는 별도 통과 요건으로 유지한다.\n\n")
+
+
 def render_readme(c: dict) -> str:
     text = R.render_readme(c).replace("R7 기록 수정 재검증", "R7 서보 후보 채택 복원", 1)
     final = f"**최종 제출: {R._conclusion(c)}**\n\n"
@@ -454,9 +611,13 @@ def render_readme(c: dict) -> str:
     validation = _validation_note(c)
     if validation:
         note += " " + validation
-    text = text.replace(final, final + note + "\n\n", 1)
-    return _insert(text, "## 요구사항 점검",
+    shortcut = "[문제 상황과 해결해야 할 과제](#문제-상황과-해결해야-할-과제)"
+    text = text.replace(final, final + shortcut + "\n\n" + note + "\n\n", 1)
+    text = _insert(text, "## 요구사항 점검",
                    "## 공식 R1과 R7 실측 비교\n\n" + _comparison_block(c))
+    prefix, tail = text.split("## 미달과 범위\n\n", 1)
+    _, suffix = tail.split("## 이전 라운드와 문서\n", 1)
+    return prefix + _problem_section(c) + "## 이전 라운드와 문서\n" + suffix
 
 
 def render_results(c: dict) -> str:

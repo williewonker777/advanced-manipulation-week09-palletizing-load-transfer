@@ -296,6 +296,78 @@ class RestoredR7ReportTests(unittest.TestCase):
         self.assertLess(text.index("**최종 제출:"), text.index("## 판정 복원 경위"))
         self.assertLess(text.index("## 판정 복원 경위"), text.index("| R1 A 서보"))
 
+    def test_readme_problem_summary_has_three_parts_and_eight_priorities(self):
+        with tempfile.TemporaryDirectory() as name:
+            context = self._presentation_context(Path(name))
+            text = R.render_readme(context)
+        for token in (
+            "## 문제 상황과 해결해야 할 과제", "### 1. 문제 상황",
+            "### 2. 해결해야 할 과제", "### 3. 검증 과정에서 생긴 문제와 처리",
+            "하중 이양(G4) 미달", "약한 집기·놓기 충돌 놓침", "최대 1 ms 초과",
+            "섭동 오감지", "서보 포화", "토크 감지 개선 없음",
+            "숨은 조건 일반화 미검증", "계산 비용 증가", "원인(확인/미확정)",
+            "1. **하중 이양(G4)**", "2. **약한 집기·놓기 충돌**",
+            "3. **최대 1 ms와 계산 비용**", "4. **섭동 오감지**",
+            "5. **토크 감지 개선**", "6. **서보 포화 2/189**",
+            "7. **숨은 조건 대비**", "8. **선택 항목**",
+            "토크 추적 feedforward", "변위·속도", "잡음 시드 1개",
+            "분리 가능성은 미확정", "OS 스케줄링 영향으로 보인다",
+            "유일한 원인", "시도할 방향", "충돌 뒤 정지·후퇴",
+            "D4 추가 검출 +5 (기준 6)", "reference FA 9→10",
+            "그립 중 작업대 높이 ±35 mm 밖", "학습한 위상에서만 유효",
+            "0 kg에서도 같은 세 조건", "numpy.bool_", "문서 10개",
+            "문서 검사는 별도 통과 요건으로 유지한다",
+            "docs/R2_README.md#무엇을-시도했고-왜-유지했나",
+            "docs/R4_README.md#평가기-점검과-미검출-원인",
+            "docs/R4_RESULTS.md#w40-오감지가-늘어난-조건",
+            "docs/R5_RESULTS.md", "docs/R6_RESULTS.md", "docs/R7_PUBLICATION_VETO.md",
+        ):
+            self.assertIn(token, text)
+        self.assertNotIn("## 미달과 범위", text)
+        self.assertNotIn("운반에서만 켜진다", text)
+        self.assertEqual(1, text.count("## 문제 상황과 해결해야 할 과제"))
+        shortcut = "[문제 상황과 해결해야 할 과제](#문제-상황과-해결해야-할-과제)"
+        self.assertLess(text.index(shortcut), text.index("## 판정 복원 경위"))
+
+    def test_readme_outside_merged_problem_section_is_unchanged(self):
+        with tempfile.TemporaryDirectory() as name:
+            context = self._presentation_context(Path(name))
+            legacy = Base.render_readme(context).replace(
+                "R7 기록 수정 재검증", "R7 서보 후보 채택 복원", 1)
+            final = f"**최종 제출: {Base._conclusion(context)}**\n\n"
+            note = ("## 판정 복원 경위\n\n" + R._history_note() + " "
+                    + R._validation_note(context))
+            legacy = legacy.replace(final, final + note + "\n\n", 1)
+            legacy = R._insert(legacy, "## 요구사항 점검",
+                               "## 공식 R1과 R7 실측 비교\n\n" + R._comparison_block(context))
+            current = R.render_readme(context)
+        shortcut = "[문제 상황과 해결해야 할 과제](#문제-상황과-해결해야-할-과제)\n\n"
+        current = current.replace(shortcut, "", 1)
+        old_prefix, old_tail = legacy.split("## 미달과 범위\n\n", 1)
+        _, old_suffix = old_tail.split("## 이전 라운드와 문서\n", 1)
+        new_prefix, new_tail = current.split("## 문제 상황과 해결해야 할 과제\n\n", 1)
+        section, new_suffix = new_tail.split("## 이전 라운드와 문서\n", 1)
+        self.assertEqual(old_prefix, new_prefix)
+        self.assertEqual(old_suffix, new_suffix)
+        for token in ("50 %mg", "25 %mg", "+25 %p", "1.1 mg", "0.2098",
+                      "0.0000", "11.1507", "0.3802", "증가 0", "1.0045", "1.0140",
+                      "2210.500 µs", "11.703 ms", "14.163 ms", "총 6건", "2/189",
+                      "A 6→6", "B 9→9", "하드웨어 안전 보장이나 충돌 정지 인증이 아니다"):
+            self.assertIn(token, section)
+
+    def test_problem_summary_uses_measured_numbers_not_fixed_display_values(self):
+        with tempfile.TemporaryDirectory() as name:
+            context = self._presentation_context(Path(name))
+            context["historical"]["ref"]["G4_unmet"]["R1"]["servo"]["support_mean_percent"] = 7.654321
+            context["holdout"]["entries"][0]["metrics"]["combined_p99_worst_us"] = 123.456
+            state = next(row for row in context["historical"]["docs"]["R5_D4_RESULTS"]["entries"]
+                         if row["mode"] == "torque" and row["variant"] == "SCALE_STATE")
+            state["additional_detected"] = 4
+            section = R._problem_section(context)
+        self.assertIn("7.6543", section)
+        self.assertIn("123.456 µs", section)
+        self.assertIn("D4 추가 검출 +4 (기준 6)", section)
+
     def test_pdf_is_deterministic_and_contains_restoration_page(self):
         with tempfile.TemporaryDirectory() as name:
             root = Path(name)
