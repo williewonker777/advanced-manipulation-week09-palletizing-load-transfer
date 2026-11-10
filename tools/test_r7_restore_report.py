@@ -114,8 +114,10 @@ class RestoredR7ReportTests(unittest.TestCase):
                               ("torque", "R1"), ("torque", "R7")):
             key = f"R7_BASE_parity_{variant}_{mode}"
             docs[key] = Base.read(actual / f"results/v2_protocol/{key}.json")
+        for key in ("REQUIREMENTS_STATUS", "R7_HOLDOUT_PAIRING"):
+            docs[key] = Base.read(actual / f"results/v2_protocol/{key}.json")
         source = {
-            "root": root, "adopted": True, "negative": False,
+            "root": root, "docs": docs, "adopted": True, "negative": False,
             "effective": {"servo": "SCALE_STATE", "torque": "R1"},
             "official_fresh": True, "official": official, "holdout": holdout,
             "historical": historical,
@@ -296,13 +298,14 @@ class RestoredR7ReportTests(unittest.TestCase):
         self.assertLess(text.index("**최종 제출:"), text.index("## 판정 복원 경위"))
         self.assertLess(text.index("## 판정 복원 경위"), text.index("| R1 A 서보"))
 
-    def test_readme_problem_summary_has_three_parts_and_eight_priorities(self):
+    def test_readme_problem_summary_has_four_parts_and_eight_priorities(self):
         with tempfile.TemporaryDirectory() as name:
             context = self._presentation_context(Path(name))
             text = R.render_readme(context)
         for token in (
             "## 문제 상황과 해결해야 할 과제", "### 1. 문제 상황",
-            "### 2. 해결해야 할 과제", "### 3. 검증 과정에서 생긴 문제와 처리",
+            "### 2. 문제별 해결한 부분과 미흡한 부분", "### 3. 해결해야 할 과제",
+            "### 4. 검증 과정에서 생긴 문제와 처리",
             "하중 이양(G4) 미달", "약한 집기·놓기 충돌 놓침", "최대 1 ms 초과",
             "섭동 오감지", "서보 포화", "토크 감지 개선 없음",
             "숨은 조건 일반화 미검증", "계산 비용 증가", "원인(확인/미확정)",
@@ -341,7 +344,8 @@ class RestoredR7ReportTests(unittest.TestCase):
             legacy = R._insert(legacy, "## 요구사항 점검",
                                "## 공식 R1과 R7 실측 비교\n\n" + R._comparison_block(context))
             current = R.render_readme(context)
-        shortcut = "[문제 상황과 해결해야 할 과제](#문제-상황과-해결해야-할-과제)\n\n"
+        shortcut = ("[문제 상황과 해결해야 할 과제](#문제-상황과-해결해야-할-과제) · "
+                    "[문제별 해결한 부분과 미흡한 부분](#2-문제별-해결한-부분과-미흡한-부분)\n\n")
         current = current.replace(shortcut, "", 1)
         old_prefix, old_tail = legacy.split("## 미달과 범위\n\n", 1)
         _, old_suffix = old_tail.split("## 이전 라운드와 문서\n", 1)
@@ -367,6 +371,63 @@ class RestoredR7ReportTests(unittest.TestCase):
         self.assertIn("7.6543", section)
         self.assertIn("123.456 µs", section)
         self.assertIn("D4 추가 검출 +4 (기준 6)", section)
+
+    def test_progress_table_covers_ten_problems_without_overstating_resolution(self):
+        with tempfile.TemporaryDirectory() as name:
+            context = self._presentation_context(Path(name))
+            rows = R._progress_rows(context)
+            text = R.render_readme(context)
+        self.assertEqual(10, len(rows))
+        self.assertTrue(all(set(row) == {"문제", "상태", "해결한 부분", "미흡한 부분"}
+                            for row in rows))
+        self.assertTrue(all(row["상태"] in {"해결", "부분", "미해결", "미검증"}
+                            and row["해결한 부분"] and row["미흡한 부분"] for row in rows))
+        states = {row["문제"]: row["상태"] for row in rows}
+        self.assertEqual("미해결", states["약한 집기·놓기 충돌"])
+        self.assertEqual("미해결", states["토크 감지 추가 개선"])
+        self.assertEqual("미검증", states["숨은 조건 일반화"])
+        self.assertEqual("부분", states["놓기 충격·하중 이양(G4)"])
+        self.assertEqual("부분", states["제출 요건"])
+        for token in (
+            "### 2. 문제별 해결한 부분과 미흡한 부분", "### 3. 해결해야 할 과제",
+            "### 4. 검증 과정에서 생긴 문제와 처리",
+            "#2-문제별-해결한-부분과-미흡한-부분",
+            "6.144→1.174", "7.042→3.232", "14.000→3.914", "13.183→8.444",
+            "17.171→45.652", "73.842→14.626", "74.797→13.126",
+            "0.0557→11.1507", "1.0045/1.0140", "88→119", "78→111",
+            "62/45→49/37", "18→21/30", "A 61", "B 69", "56/43 ms",
+            "221→6", "309→10", "A 4→6", "B 8→10", "+90.323 µs",
+            "91→111", "33항목 중 24 충족", "필수 규칙 8항목", "부분 4항목",
+            "판정 불가 5항목", "미선택·조건부 4", "비공개 평가 1",
+        ):
+            self.assertIn(token, text)
+        self.assertLess(text.index("#2-문제별-해결한-부분과-미흡한-부분"),
+                        text.index("## 판정 복원 경위"))
+
+    def test_progress_scope_keeps_masked_totals_and_finite_validation_distinct(self):
+        with tempfile.TemporaryDirectory() as name:
+            context = self._presentation_context(Path(name))
+            text = R._progress_section(context)
+        for token in ("전체 180개 충돌", "기존 경보·구분불가", "A 49→0", "B 60→0",
+                      "34조건 FA 합계", "보존 자료 승계", "R7 봉인 holdout 1 batch",
+                      "R6는 holdout 미실행", "순수 알고리즘 비용", "확정하지 않는다",
+                      "정밀 분석값", "공식 출력", "진동 부재", "분리 가능성 미확정"):
+            self.assertIn(token, text)
+        self.assertNotIn("섭동 최악 FA", text)
+        self.assertNotIn("라운드마다", text)
+        self.assertNotIn("학습 분기가 늘림", text)
+
+    def test_progress_comparisons_are_derived_from_source_values(self):
+        with tempfile.TemporaryDirectory() as name:
+            context = self._presentation_context(Path(name))
+            reference = context["historical"]["ref"]
+            reference["common_8kg_analysis"]["baseline"]["servo"]["rms_mm_exact"] = "9.8765"
+            reference["perturbation"]["baseline"]["torque"]["all34_false_alarm_rises"] = 777
+            context["holdout"]["entries"][0]["metrics"]["tested_detected_collisions"] = 22
+            text = R._progress_section(context)
+        self.assertIn("9.877→1.174", text)
+        self.assertIn("777→10", text)
+        self.assertIn("18→22/30", text)
 
     def test_pdf_is_deterministic_and_contains_restoration_page(self):
         with tempfile.TemporaryDirectory() as name:

@@ -52,11 +52,13 @@ README_EVIDENCE = [
     "my_detector.py",
     "docs/REQUIREMENTS_AUDIT.md",
     "docs/R2_README.md",
+    "docs/R3_RESULTS.md",
     "docs/R4_README.md",
     "docs/R4_RESULTS.md",
     "docs/R5_RESULTS.md",
     "docs/R6_RESULTS.md",
     "docs/R7_PUBLICATION_VETO.md",
+    D + "REQUIREMENTS_STATUS.json",
 ]
 REQUIRED = list(dict.fromkeys(R.REQUIRED + SCIENTIFIC_RECORDS + RESTORATION_REQUIRED
                               + README_EVIDENCE))
@@ -560,6 +562,156 @@ def _problem_rows(c: dict) -> list[dict]:
     return [dict(zip(columns, row)) for row in rows]
 
 
+def _progress_rows(c: dict) -> list[dict]:
+    historical = c["historical"]
+    reference = historical["ref"]
+    common = reference["common_8kg_analysis"]
+    d4 = reference["D4"]
+    perturb = reference["perturbation"]
+    g4 = reference["G4_unmet"]
+    state = next(row for row in historical["docs"]["R5_D4_RESULTS"]["entries"]
+                 if row["mode"] == "servo" and row["variant"] == "SCALE_STATE")
+    detected = {"servo": state["candidate_detected"], "torque": d4["R1"]["torque"]["detected"]}
+    collision_count = state["kind_counts"]["collision"]
+    final_masked = {
+        "servo": sum(item["candidate"]["outcome"] not in {"detected", "missed"}
+                     for item in state["details"] if item["case"]["kind"] == "collision"),
+        "torque": d4["R1"]["torque"]["masked"],
+    }
+    holdout = {row["mode"]: row for row in c["holdout"]["entries"]}
+    counts = R._perturb_fa_counts(historical["docs"]["R5_PERTURB_RESULTS"], c["adopted"])
+    current = {(row["방식"], row["질량/시각"]): row for row in c["collision_rows"]}
+    r1 = {(row["방식"], row["질량/시각"]): row
+          for row in R._collision_rows(R._preserved_r1_official(c["root"]))}
+    a_key, b_key = ("A 서보", "8 kg / 3 s"), ("B 토크", "8 kg / 3 s")
+    past_timing = reference["timing_contexts"]["R3_full_observed_set"]
+    cap = historical["protocol"]["timing"]["selection_combined_p99_us_max"]
+    servo_cost = (holdout["servo"]["metrics"]["combined_p99_worst_us"]
+                  - holdout["servo"]["timing"]["R1"]["components"]["combined"]["p99_worst_us"])
+    requirements = c["docs"]["REQUIREMENTS_STATUS"]
+    verdicts = requirements["verdict_counts"]
+    actual = {verdict: sum(row["verdict"] == verdict for row in requirements["rows"])
+              for verdict in verdicts}
+    mandatory = requirements["mandatory_rule_ids"]
+    if (actual != verdicts or sum(actual.values()) != requirements["requirements"]
+            or len(requirements["rows"]) != requirements["requirements"]
+            or requirements["all_mandatory_rules_met_in_tested_scope"] is not True
+            or len(set(mandatory)) != len(mandatory)
+            or not all(any(row["id"] == item and row["verdict"] == "충족"
+                           for row in requirements["rows"]) for item in mandatory)):
+        raise ValueError("requirements progress summary differs from its source rows")
+    pairing = c["docs"]["R7_HOLDOUT_PAIRING"]
+
+    def analysis_pair(field: str) -> str:
+        return ", ".join(
+            f"{label} {float(common['baseline'][mode][field]):.3f}→"
+            f"{float(common['R1'][mode][field]):.3f}"
+            for mode, label in (("servo", "A"), ("torque", "B")))
+
+    official_normal = all(row["상태"] == "정상" for row in c["control_rows"])
+    official_status = "발산 없음" if official_normal else "이상 상태 존재"
+    saturation = ", ".join(
+        f"{label} {next(row['포화'] for row in c['control_rows'] if row['방식'] == name)}"
+        for name, label in (("A 서보", "A"), ("B 토크", "B")))
+    fa = ", ".join(
+        f"{label} {next(row['오감지'] for row in c['control_rows'] if row['방식'] == name).replace(' ', '')}"
+        for name, label in (("A 서보", "A"), ("B 토크", "B")))
+    rows = [
+        ("TCP 추종·발산", "부분",
+         f"공통 8 kg RMS {analysis_pair('rms_mm_exact')} mm; 최대 {analysis_pair('max_mm_exact')} mm. "
+         f"공식 0/4/8 kg {official_status}.",
+         f"보존 토크 섭동 최악 TCP(기준→R1)는 {perturb['baseline']['torque']['all34_max_tcp_mm']:.3f}→"
+         f"{perturb['R1']['torque']['all34_max_tcp_mm']:.3f} mm로 악화. 진동 부재 증명은 없다."),
+        ("놓기 충격·하중 이양(G4)", "부분",
+         f"놓기 토크 계단 {analysis_pair('place_step_nm_exact')} N·m. 놓기 힘 peak "
+         f"{g4['R1']['servo']['place_peak_over_mg']:.4f}/{g4['R1']['torque']['place_peak_over_mg']:.4f} mg는 "
+         f"≤{g4['criteria']['place_peak_over_mg_max']:g} mg 충족. 토크 평균 지지율 "
+         f"{common['baseline']['torque']['support_mean_percent']:.4f}→"
+         f"{g4['R1']['torque']['support_mean_percent']:.4f} %mg.",
+         f"평균 A {g4['R1']['servo']['support_mean_percent']:.4f}, B {g4['R1']['torque']['support_mean_percent']:.4f} "
+         f"%mg(목표 ≥{g4['criteria']['support_mean_percent_min']:g}); 최소 "
+         f"{g4['R1']['servo']['support_min_percent']:.4f}/{g4['R1']['torque']['support_min_percent']:.4f} "
+         f"%mg(≥{g4['criteria']['support_min_percent_min']:g}). v1 대비 증가 A "
+         f"{g4['R1']['servo']['improvement_pp_vs_v1']:g}, B {g4['R1']['torque']['improvement_pp_vs_v1']:g} %p"
+         f"(목표 +{g4['criteria']['improvement_pp_vs_v1_min']:g}). "
+         "[R2](docs/R2_README.md)·[R3](docs/R3_RESULTS.md) 제어 후보는 최종 미채택."),
+        ("포화", "부분", f"공식 0/4/8 kg 포화 {saturation}. "
+         f"D4 토크 {d4['R1']['torque']['reference_saturated_rows']}/"
+         f"{len(d4['R1']['torque']['reference_source_row_indices'])}.",
+         f"D4 서보 {d4['R1']['servo']['reference_saturated_rows']}/"
+         f"{len(d4['R1']['servo']['reference_source_row_indices'])}"
+         f"(기준 {d4['baseline']['servo']['reference_saturated_rows']}/189, "
+         f"v1 {d4['v1']['servo']['reference_saturated_rows']}/189부터 발생). 원인 미확정."),
+        ("충돌 감지(전체 D4·운반)", "부분",
+         f"D4 검출 A {d4['baseline']['servo']['detected']}→{detected['servo']}, "
+         f"B {d4['baseline']['torque']['detected']}→{detected['torque']}/{collision_count} (보존 자료 승계). "
+         f"공식 8 kg 운반 10/15 N 서보 R1→R7 {r1[a_key]['10 N']}/{r1[a_key]['15 N']}→"
+         f"{current[a_key]['10 N']}/{current[a_key]['15 N']} ms. 봉인 holdout 서보 "
+         f"{holdout['servo']['metrics']['R1_detected_collisions']}→"
+         f"{holdout['servo']['metrics']['tested_detected_collisions']}/"
+         f"{holdout['servo']['metrics']['collision_count']}.",
+         f"봉인 holdout 검출은 A {holdout['servo']['metrics']['tested_detected_collisions']}, "
+         f"B {holdout['torque']['metrics']['tested_detected_collisions']}/30. "
+         f"D4 놓침 A {collision_count - detected['servo'] - final_masked['servo']}, "
+         f"B {d4['R1']['torque']['missed']}. 토크 공식 운반 "
+         f"{current[b_key]['10 N']}/{current[b_key]['15 N']} ms는 R1과 같다."),
+        ("약한 집기·놓기 충돌", "미해결",
+         "8 kg R1 사후 측정에서 분기 게이트, 연속 표본 조건, 무충돌 점수 겹침을 확인했다. "
+         "원인 분석의 진전이지 검출 성능 해결은 아니다.",
+         R._official_miss_text(c) + " 잡음 시드 1개·고정 점수의 분석이며 분리 가능성 미확정."),
+        ("오감지", "부분", f"공식 무충돌 FA {fa}. D4 기존 경보·구분불가로 가려진 조건 "
+         f"A {d4['baseline']['servo']['masked']}→{final_masked['servo']}, "
+         f"B {d4['baseline']['torque']['masked']}→{final_masked['torque']}. "
+         f"보존 34조건 FA 합계(기준→R1) A {perturb['baseline']['servo']['all34_false_alarm_rises']}→"
+         f"{perturb['R1']['servo']['all34_false_alarm_rises']}, "
+         f"B {perturb['baseline']['torque']['all34_false_alarm_rises']}→"
+         f"{perturb['R1']['torque']['all34_false_alarm_rises']}.",
+         f"현재 승계 28 reference FA A {counts['servo']['final_reference']}, B {counts['torque']['final_reference']}. "
+         f"보존 34조건 v1→R1 FA A {perturb['v1']['servo']['all34_false_alarm_rises']}→"
+         f"{perturb['R1']['servo']['all34_false_alarm_rises']}, B {perturb['v1']['torque']['all34_false_alarm_rises']}→"
+         f"{perturb['R1']['torque']['all34_false_alarm_rises']} 증가가 관측됐지만 학습 분기만의 원인으로 "
+         f"확정하지 않는다. 토크 8 kg 3.0 s 충돌 세트 FA {current[b_key]['충돌 세트 FA']}."),
+        ("계산 시간(1 ms)", "부분",
+         f"봉인 holdout 합산 p99 A {holdout['servo']['metrics']['combined_p99_worst_us']:.3f}, "
+         f"B {holdout['torque']['metrics']['combined_p99_worst_us']:.3f} µs로 선택 관문 {cap:g} µs 통과.",
+         f"최대 {holdout['servo']['metrics']['combined_max_worst_us']:.3f}/"
+         f"{holdout['torque']['metrics']['combined_max_worst_us']:.3f} µs; 과거 R1 "
+         f"{past_timing['servo']['maximum_wall_us']/1000:.3f}/{past_timing['torque']['maximum_wall_us']/1000:.3f} ms. "
+         f"서보 p99 관측 차이 {servo_cost:+.3f} µs는 순수 알고리즘 비용으로 확정하지 않는다. "
+         "대상 실시간 환경은 미검증."),
+        ("토크 감지 추가 개선", "미해결",
+         f"이전 v1→R1에서 D4 B 검출 {d4['v1']['torque']['detected']}→{d4['R1']['torque']['detected']}/"
+         f"{collision_count}, 기존 경보·구분불가 {d4['R1']['torque']['masked']}.",
+         "R5 토크 후보는 추가 검출·오감지 관문 실패로 탈락했다. R7에서도 토크는 R1이며 "
+         "추가 개선은 없다."),
+        ("숨은 조건 일반화", "미검증",
+         f"R7 봉인 holdout 1 batch({pairing['episodes_run']}회/{pairing['pair_count']}짝)와 "
+         "공식 0/4/8 kg 회귀를 통과했다. 동결 뒤 새 시드를 썼다.",
+         "15주차 비공개 조건은 미검증. R6는 holdout 미실행이므로 모든 라운드 완료로 일반화하지 않는다."),
+        ("제출 요건", "부분",
+         f"입력·형식·무결성 필수 규칙 {len(mandatory)}항목 통과. "
+         f"가이드 {requirements['requirements']}항목 중 {verdicts['충족']} 충족.",
+         f"부분 {verdicts['부분']}항목(포화·진동, 무충돌 FA, 약한 충돌, 1 ms), "
+         f"판정 불가 {verdicts['판정 불가']}항목(미선택·조건부 "
+         f"{len(requirements['unknown_optional_not_selected'])}, 비공개 평가 "
+         f"{verdicts['판정 불가'] - len(requirements['unknown_optional_not_selected'])}). "
+         "선택 항목의 미검증을 필수 규칙 위반으로 세지 않는다."),
+    ]
+    return [dict(zip(("문제", "상태", "해결한 부분", "미흡한 부분"), row)) for row in rows]
+
+
+def _progress_section(c: dict) -> str:
+    table = R.md_table(["문제", "상태", "해결한 부분", "미흡한 부분"], _progress_rows(c))
+    return ("### 2. 문제별 해결한 부분과 미흡한 부분\n\n"
+            "상태는 문제 전체를 기준으로 쓴다. ‘부분’은 개선과 미달이 함께 있다는 뜻이다. "
+            "기준은 초기 제공본이며, 별도 표기가 없으면 기준→최종이다. 공통 8 kg 정밀 분석값은 "
+            "반올림한 공식 출력과 구분한다. D4는 집기·운반·놓기 전체 180개 충돌 조건이고, "
+            "저장된 분석값은 보존 자료 승계이지 새 독립 효능 시험이 아니다. "
+            "[분석 수치](results/v2_protocol/R5_REFERENCE_METRICS.json), "
+            "[R7 결과](docs/R7_RESULTS.md), [요구사항](docs/REQUIREMENTS_AUDIT.md).\n\n"
+            + table)
+
+
 def _problem_section(c: dict) -> str:
     problems = R.md_table(["문제", "현재 값", "원인(확인/미확정)", "근거 문서"], _problem_rows(c))
     priorities = [
@@ -594,10 +746,10 @@ def _problem_section(c: dict) -> str:
     return ("## 문제 상황과 해결해야 할 과제\n\n"
             "기존 측정과 문서에서 확인한 남은 문제다. 새 실험 결과가 아니며, 확인된 관찰과 "
             "미확정 원인을 구분한다.\n\n### 1. 문제 상황\n\n" + problems
-            + "\n\n### 2. 해결해야 할 과제\n\n"
+            + "\n\n" + _progress_section(c) + "\n\n### 3. 해결해야 할 과제\n\n"
             "아래는 우선순위별 시도할 방향이며, 효과를 확인하거나 개선을 약속한 결과가 아니다.\n\n"
             + "\n".join(priorities) + "\n\n" + R._unmet(c)[-1]
-            + "\n\n### 3. 검증 과정에서 생긴 문제와 처리\n\n" + history
+            + "\n\n### 4. 검증 과정에서 생긴 문제와 처리\n\n" + history
             + "\n\n교훈: 동결 전 전체 검사와 모든 기록 경로의 사전 시험을 마치고, 되돌림 범위는 "
             "사전 등록된 과학·검증 관문으로 명확히 정한다. 문서 검사는 별도 통과 요건으로 유지한다.\n\n")
 
@@ -611,7 +763,8 @@ def render_readme(c: dict) -> str:
     validation = _validation_note(c)
     if validation:
         note += " " + validation
-    shortcut = "[문제 상황과 해결해야 할 과제](#문제-상황과-해결해야-할-과제)"
+    shortcut = ("[문제 상황과 해결해야 할 과제](#문제-상황과-해결해야-할-과제) · "
+                "[문제별 해결한 부분과 미흡한 부분](#2-문제별-해결한-부분과-미흡한-부분)")
     text = text.replace(final, final + shortcut + "\n\n" + note + "\n\n", 1)
     text = _insert(text, "## 요구사항 점검",
                    "## 공식 R1과 R7 실측 비교\n\n" + _comparison_block(c))
