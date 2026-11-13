@@ -1,0 +1,60 @@
+{
+  "schema": "R8_DEVELOPMENT_SUMMARY.v1",
+  "StageA6": {
+    "independent_weak_count": 96,
+    "base": 60,
+    "C1": 74,
+    "gain": 14,
+    "loss": 0,
+    "FA_increase": 0,
+    "audit": 16,
+    "audit_extra": 0,
+    "p99_us": 673.6423,
+    "max_wall_us": 5111.221,
+    "ge1ms_cycles": 14
+  },
+  "landing": {
+    "A5_release_events": 16,
+    "base_detected": 13,
+    "candidate_detected": 11,
+    "loss": 2,
+    "A6_vertical_events": 56,
+    "base_detected_vertical": 48,
+    "landing_detected_vertical": 33,
+    "A7_H15_detected": 0,
+    "A7_H15_required": 8,
+    "A7_H15_total": 9,
+    "A7_D4_loss": 3,
+    "A7_D4_FA_increased_cases": 49,
+    "H13_earlier_release_peak_mg": [
+      1.47,
+      2.26
+    ]
+  },
+  "resources": {
+    "new_full_episodes": 522,
+    "parity": 8,
+    "holdout": 456,
+    "official": 58,
+    "synthetic_Plant_steps": 1,
+    "successful_saved_replays": 1960,
+    "unfinished_saved_replay_attempts": 3,
+    "serial_audit_replays": 32,
+    "GPU_jobs": 0,
+    "remote_operations": 0,
+    "package_additions": 0,
+    "training_runs": 0
+  },
+  "provenance": {
+    "STAGE_A6_REPORT.md": "940d7b8e5529ba6013b03535133b8bbe5294a7a58e3ff6fe96c4292c23cb35e4",
+    "STAGE_A7_REPORT.md": "d55c24c300ae2e7182b40b8e7921ab594602416d65cc7a36f78ca878e34fe0a9",
+    "a6/P2_DETECTION_REVIEW.json": "7aff7d706b5ab247ba904ca8f47967bf21ba398e068795d99b04ad7e327e2421",
+    "a6/P2_TIMING_REVIEW.json": "ed0bed82b5e8c22c3575cd6d4f1e2f7731b15eec4326626d7c032e0aa85116e8",
+    "a7/PART_A_REVIEW.json": "2e085e348b444c2fe1203e028e6505838ffbb89299d032774749179dcb8b1fdc",
+    "a5b/RELEASE_COLLISION_REVIEW.json": "89af8a60683373b178d65d11fafeb034b36d72f2269249a25579e46f62e3d052"
+  },
+  "procedural_findings": [
+    "Memory admission underestimated three own A6 readers, serial scheduling repair; original unfinished logs retained.",
+    "B1 whole suite ran at fallback work root rather than full candidate overlay; production-import failure detected only after official. No frozen source/test/threshold repair."
+  ]
+}

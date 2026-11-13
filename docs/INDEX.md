@@ -58,3 +58,9 @@
 - [results/presentation_R4.pdf](../results/presentation_R4.pdf)
 - [results/presentation_R5.pdf](../results/presentation_R5.pdf)
 - [results/presentation_R6.pdf](../results/presentation_R6.pdf)
+
+## R8 추가 검증
+
+- [R8 결과](R8_RESULTS.md)
+- [R8 방법](R8_METHODS.md)
+- [기존 R7 README](R7_README.md)

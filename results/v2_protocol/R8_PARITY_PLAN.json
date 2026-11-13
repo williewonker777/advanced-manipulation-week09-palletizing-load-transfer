@@ -1,0 +1,60 @@
+{
+  "stage": "parity",
+  "cases": [
+    {
+      "source_case_id": "R8_parity_0",
+      "kind": "reference",
+      "phase": "full",
+      "mass": 1.3365,
+      "com": [
+        0.00819,
+        0.00681,
+        0.0165
+      ],
+      "collision": null,
+      "pick_offset": null,
+      "stiffness_scale": 1.0,
+      "viscous_scale": 1.0,
+      "coulomb_scale": 1.0,
+      "sensor_seeds": {
+        "servo": 383281101,
+        "torque": 383281111
+      }
+    },
+    {
+      "source_case_id": "R8_parity_1",
+      "kind": "collision",
+      "phase": "pick",
+      "mass": 7.0731,
+      "com": [
+        -0.00408,
+        -0.0162,
+        0.02692
+      ],
+      "collision": [
+        1.6132,
+        [
+          8.131727983645296,
+          8.131727983645296,
+          0.0
+        ]
+      ],
+      "pick_offset": null,
+      "stiffness_scale": 1.0,
+      "viscous_scale": 1.0,
+      "coulomb_scale": 1.0,
+      "sensor_seeds": {
+        "servo": 383281102,
+        "torque": 383281112
+      }
+    }
+  ],
+  "variants": [
+    "experiment",
+    "C1"
+  ],
+  "episodes": 8,
+  "purpose": "fresh full-loop identity, not efficacy selection",
+  "registered_utc": "2026-11-13T00:54:59.686409+00:00",
+  "no_holdout_generation": true
+}

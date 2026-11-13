@@ -1,0 +1,32 @@
+{
+  "schema": "R8_ADOPTION.v1",
+  "adopted": false,
+  "final_selection": "fallback",
+  "final_detector_sha256": "e26c203aabc476fc51a1464877a3435e484bb8fc33244777e59968f00969c643",
+  "candidate_sha256": "3e3a67f75fcf795ec49d847b54ac72514d69bb17bc750f92478f1785e6d308e0",
+  "holdout_passed": true,
+  "holdout_servo_gain": 8,
+  "official_passed": true,
+  "submission_import_gate_passed": false,
+  "rejection": "Existing production import allowlist allows numpy/mujoco/sim only; C1 adds io/base64/collections. No postfreeze repair or test weakening.",
+  "document_only_failures": "three R7 historical restoration fixture mismatches are non-veto; not the reason for rejection",
+  "procedural_gap": "B1 whole suite ran at fallback work root, not final C1 overlay; final C1 suite detected this late. Evidence retained, no candidate retest.",
+  "candidate_final_suite": {
+    "tests": 703,
+    "failures": 3,
+    "errors": 1,
+    "production_import_failures": 1,
+    "historical_document_failures": 3
+  },
+  "fallback_final_tests": {
+    "tools": 703,
+    "r8": 72,
+    "passed": true
+  },
+  "fallback_contract_passed": true,
+  "threshold_changes": 0,
+  "redesigns": 0,
+  "holdout_batches": 1,
+  "official_batches_per_mode": 1,
+  "remote_operations": 0
+}
