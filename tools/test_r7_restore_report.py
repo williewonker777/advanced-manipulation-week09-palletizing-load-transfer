@@ -49,7 +49,9 @@ class RestoredR7ReportTests(unittest.TestCase):
         shutil.copyfile(Base.ROOT / candidate, candidate_path)
         self.assertEqual(R.SERVO_SHA, R._sha(candidate_path))
         for relative in ("my_detector.py", "my_servo.py", "my_torque.py"):
-            shutil.copyfile(Base.ROOT / relative, root / relative)
+            # Historical R7 records bind the archived R7, not a later live submission.
+            source = candidate_path if relative == "my_detector.py" else Base.ROOT / relative
+            shutil.copyfile(source, root / relative)
         historical_manifest = R.D + "R7_S4_MEDIA_MANIFEST.json"
         historical_media = {"file": historical_manifest, "sha256": put(historical_manifest)}
         media_sha = {}

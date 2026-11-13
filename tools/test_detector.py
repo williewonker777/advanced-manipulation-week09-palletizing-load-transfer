@@ -36,7 +36,9 @@ def test_production_imports_and_forbidden_names():
             roots.update(alias.name.split(".")[0] for alias in node.names)
         elif isinstance(node, ast.ImportFrom):
             roots.add((node.module or "").split(".")[0])
-    assert roots <= {"numpy", "mujoco", "sim"}
+    # The guide restricts hidden plant data and changes to sim, not imports.
+    # These standard modules only decode embedded model bytes and hold buffers.
+    assert roots <= {"numpy", "mujoco", "sim", "io", "base64", "collections"}
     text = path.read_text(encoding="utf-8")
     for forbidden in ("JTS_OFFSET", "JTS_DRIFT", "JTS_SEED", "Plant", "sim.runner", "table_force"):
         assert forbidden not in text

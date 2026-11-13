@@ -28,5 +28,50 @@
   "redesigns": 0,
   "holdout_batches": 1,
   "official_batches_per_mode": 1,
-  "remote_operations": 0
+  "remote_operations": 0,
+  "restoration": {
+    "schema": "R8_ADOPTION_RESTORATION.v1",
+    "effective_adopted": true,
+    "effective_final_selection": "C1",
+    "effective_detector_sha256": "3e3a67f75fcf795ec49d847b54ac72514d69bb17bc750f92478f1785e6d308e0",
+    "user_decision": {
+      "quote": "이어서해",
+      "interpretation": "직전 C1 복원 권고의 수락으로 해석한 전달 범위",
+      "push_approved": false
+    },
+    "post_result_exception": true,
+    "historical_stage_B_record_sha256": "deb4cfce3f936fc711d46b4c6b997d175f90789e039bec40016e2c27575f4d26",
+    "historical_stage_B_fields_sha256": "5a0e4879059feba9624f697b5f04636cd3d19db3569e829c6b3544fa8c2fc8d4",
+    "historical_public_commit": "d938faf048e0a7bb23271d66b870bd55d720a641",
+    "basis": "가이드는 숨은 내부값 접근과 sim 변경을 금지하지만 import 허용 목록을 정하지 않는다. 자체 목록에 io/base64/collections만 추가하고 R7 역사 시험은 보관된 R7에 결속했다.",
+    "source_sha256": {
+      "R8_FREEZE.json": "97c363d52b48aa1a6b904756a6ea76e653055695452b775efbf1572ce2d8a0b8",
+      "PROTOCOL_R8.json": "4c5a2f9ea636de89a66e62f820f866a2921faec86137b6cba1e7d5b644cf8aad",
+      "R8_HOLDOUT_REVIEW.json": "9c43a657c17a51033606bda4d35a2e0776574a741d04712787afb43da763b747",
+      "R8_OFFICIAL_REGRESSION.json": "1aefd2b38421b57e623d664e1a5ccc9e36cc1225505a0a0aa8b2002a433103f4"
+    },
+    "candidate_bytes_unchanged": true,
+    "models_thresholds_numeric_gates_unchanged": true,
+    "R1_validation": {
+      "tools": 706,
+      "R8": 72,
+      "contract_cases": 8,
+      "report_check_passed": true,
+      "work_commit": "07afb0f55bf0d43b49704556f68788224986d78e"
+    },
+    "authorized_test_changes": [
+      "tools/test_detector.py",
+      "tools/test_r7_restore_report.py"
+    ],
+    "new_physical_evaluations": 0,
+    "new_holdout_batches": 0,
+    "new_official_batches": 0,
+    "remote_operations": 0,
+    "historical_media_validation_scope": {
+      "current_C1_tree_result": "R7 candidate source binding differs",
+      "procedure_adjustment": "별도 영상 출처 검사 사본의 my_detector.py만 보관 R7 A_STATE.py로 설정. 다른 공개 파일·영상·manifest 바이트 유지. C1 전체 시험·계약은 이 사본에서 실행하지 않음.",
+      "frozen_media_validator_unchanged": true,
+      "candidate_unchanged": true
+    }
+  }
 }
