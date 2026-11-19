@@ -113,11 +113,23 @@ M1013 팔레타이징 시뮬레이션의 1 ms 제어 주기에서 박스를 작�
 
 ## 영상
 
-제어기는 최종과 같은 R1(v1) 제어기입니다. 영상 속 경보 표시는 영상을 만들 당시의 감지기 기준이며, 최종 감지기 영상은 아닙니다.
+제어기는 최종과 같은 R1(v1) 제어기입니다. 영상 속 경보 표시는 영상을 만들 당시의 감지기 기준이며, 최종 감지기 영상은 아닙니다. 모두 3.7 kg 박스 예시이며 공식 평가 조건은 아닙니다. 이미지를 누르면 1280×720 MP4로 볼 수 있습니다.
 
-| R1 A 서보 | R1 B 토크 | 기준/v1/R1/R2 A | 기준/v1/R1/R2 B |
-|---|---|---|---|
-| [![R1 A 서보](artifacts/media/05_v2_servo_transport_collision.gif)](artifacts/media/05_v2_servo_transport_collision.mp4) | [![R1 B 토크](artifacts/media/06_v2_torque_transport_collision.gif)](artifacts/media/06_v2_torque_transport_collision.mp4) | [![기준/v1/R1/R2 A](artifacts/media/07_r2_servo_comparison.gif)](artifacts/media/07_r2_servo_comparison.mp4) | [![기준/v1/R1/R2 B](artifacts/media/08_r2_torque_comparison.gif)](artifacts/media/08_r2_torque_comparison.mp4) |
+**서보 A — 운반 중 충돌 (R1)**
+
+[![R1 서보 A 운반 중 충돌](artifacts/media/05_v2_servo_transport_collision.gif)](artifacts/media/05_v2_servo_transport_collision.mp4)
+
+**토크 B — 운반 중 충돌 (R1)**
+
+[![R1 토크 B 운반 중 충돌](artifacts/media/06_v2_torque_transport_collision.gif)](artifacts/media/06_v2_torque_transport_collision.mp4)
+
+**서보 A — 기준 / v1 / R1 / R2 비교**
+
+[![서보 A 기준 v1 R1 R2 비교](artifacts/media/07_r2_servo_comparison.gif)](artifacts/media/07_r2_servo_comparison.mp4)
+
+**토크 B — 기준 / v1 / R1 / R2 비교**
+
+[![토크 B 기준 v1 R1 R2 비교](artifacts/media/08_r2_torque_comparison.gif)](artifacts/media/08_r2_torque_comparison.mp4)
 
 ## 문제별 해결한 부분과 미흡한 부분
 
