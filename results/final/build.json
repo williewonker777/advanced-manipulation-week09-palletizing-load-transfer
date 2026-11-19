@@ -1,0 +1,43 @@
+{
+  "codex_r10_r31_detector_sha256": "f1c8c3be5ebfe4fdcda61152b25daef01ba4ea836ee61745faa264679e787e56",
+  "codex_r31_record": {
+    "modules": 44,
+    "normal_tables": 7,
+    "r31_closure": "bf2cc4d8281e0256bd5a8988dd5bbdd27f11ff72a77ddee92b5a293855520c3b",
+    "r31_entry": "experiments.r31_held_identity.candidate:Detector",
+    "r31_source": "1e33b4698ef3678afe72cc4e286fcab5d27b2232e7bf087fdef7500ccc674764"
+  },
+  "controllers": {
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+  },
+  "detector_sha256": "010f8a1c6363866d24ed3832b35eea34e946007679eab754f02ca98c958a4b7e",
+  "members": {
+    "my_detector.py": "010f8a1c6363866d24ed3832b35eea34e946007679eab754f02ca98c958a4b7e",
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+  },
+  "new_detection_rules": false,
+  "r32_entry": "experiments.r32_servo_ownership.candidate:Detector",
+  "schema": "week09-final-combination.v1",
+  "selected": {
+    "fallback_detector": "R10",
+    "servo_controller": "R1 (my_servo.py)",
+    "servo_detector": "R32 servo ownership",
+    "torque_controller": "R1 (my_torque.py)",
+    "torque_detector": "R31 held identity"
+  },
+  "servo_modules": [
+    "experiments.r15_delayed_wrench.observer",
+    "experiments.r31_servo_release.candidate",
+    "experiments.r32_servo_ownership.candidate"
+  ],
+  "servo_sources": {
+    "experiments/r15_delayed_wrench/observer.py": "eff8f0b76d8c0358bb15b020be0db6e0b55d0e666a93ee2f46a1de6190ba2483",
+    "experiments/r31_servo_release/candidate.py": "2c1af9274f310dd84a9a8909987be7fe41e28fd89faf477be07087a7c2738303",
+    "experiments/r32_servo_ownership/candidate.py": "6c5cfca6b6f8d387a6b2c22a1ca41bf20c3f6df6f238add21f01a8f2b4c88d7f"
+  },
+  "zip": "week09-final-r32-servo-r31-torque.zip",
+  "zip_sha256": "2a3850363e1a6eee6fffb15e1210bbf7b2607f71d4179f76d2d2799b2b713ab5"
+}

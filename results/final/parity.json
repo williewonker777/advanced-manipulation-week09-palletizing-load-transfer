@@ -1,0 +1,988 @@
+{
+  "all_bit_identical": true,
+  "different_rows": [],
+  "episodes_each_side": 16,
+  "kit_unchanged": true,
+  "limits": "Disclosed deterministic simulator rows; not independent or hardware validation.",
+  "reference": {
+    "servo": "R32 servo ownership (experiments.r32_servo_ownership.candidate)",
+    "torque": "R31 held identity (experiments.r31_held_identity.candidate)"
+  },
+  "rows": [
+    {
+      "bit_identical": true,
+      "case_id": 0,
+      "different": [],
+      "direction": "none",
+      "force_n": 0.0,
+      "kind": "reference",
+      "mode": "servo",
+      "phase": "none",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "cc720697344eee1b602bb2e052843bf364def06d2cbf24810884c48b758f4404",
+          "submission": "cc720697344eee1b602bb2e052843bf364def06d2cbf24810884c48b758f4404"
+        },
+        "f_ext": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "f_table": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "e1dd7244faf87b5ee2748fda0747bd9191ad0e65e81194024c8316e31b35bd12",
+          "submission": "e1dd7244faf87b5ee2748fda0747bd9191ad0e65e81194024c8316e31b35bd12"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "eb8a17858b0868855138f907a2c3c51c66e7e33de29c145a0936d668c7dedd00",
+          "submission": "eb8a17858b0868855138f907a2c3c51c66e7e33de29c145a0936d668c7dedd00"
+        },
+        "r": {
+          "expected": "9251ca1dbc74cf900b1b6678724e8aef3e41aca632aab8bfc252a9dc42dcc8a4",
+          "submission": "9251ca1dbc74cf900b1b6678724e8aef3e41aca632aab8bfc252a9dc42dcc8a4"
+        },
+        "signed_push": {
+          "expected": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "submission": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "e36d21a20add0da35866be37adba92ddc8c51a4c2ec87d235a1eae7e385db680",
+          "submission": "e36d21a20add0da35866be37adba92ddc8c51a4c2ec87d235a1eae7e385db680"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 170,
+      "different": [],
+      "direction": "none",
+      "force_n": 0.0,
+      "kind": "reference",
+      "mode": "servo",
+      "phase": "none",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "04c1a61e703508f56327ca0c587d2be5a5e76de37c65cad894a0ad0feb5c8748",
+          "submission": "04c1a61e703508f56327ca0c587d2be5a5e76de37c65cad894a0ad0feb5c8748"
+        },
+        "f_ext": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "f_table": {
+          "expected": "9ce9251bd931cc0435bf51042aa13897e17e7770155c6b604e918fd97543771c",
+          "submission": "9ce9251bd931cc0435bf51042aa13897e17e7770155c6b604e918fd97543771c"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "5e6af430358f67cc29228ef9c0c8f4d51572690cbf10e18eb5095086dfc2b96a",
+          "submission": "5e6af430358f67cc29228ef9c0c8f4d51572690cbf10e18eb5095086dfc2b96a"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "c45a495aa30f8b24b412d8dec35f25f46e13a29416db1cabe83953e5333079de",
+          "submission": "c45a495aa30f8b24b412d8dec35f25f46e13a29416db1cabe83953e5333079de"
+        },
+        "r": {
+          "expected": "c1ef339389a328ea5943d95563e147462ae99e24d6e9f2af075d7d38aec5e316",
+          "submission": "c1ef339389a328ea5943d95563e147462ae99e24d6e9f2af075d7d38aec5e316"
+        },
+        "signed_push": {
+          "expected": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "submission": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "65b5ec8f9758dc19563380a77d4ce32fcef0d4481b2740ecf74bc2138e481b01",
+          "submission": "65b5ec8f9758dc19563380a77d4ce32fcef0d4481b2740ecf74bc2138e481b01"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 189,
+      "different": [],
+      "direction": "+x",
+      "force_n": 5.0,
+      "kind": "collision",
+      "mode": "servo",
+      "phase": "pick",
+      "sha256": {
+        "detect": {
+          "expected": "bbe76eafdfa8315b3c9149f25de8cc04d4ffe675a98c2869a9c2fde1ee8be93d",
+          "submission": "bbe76eafdfa8315b3c9149f25de8cc04d4ffe675a98c2869a9c2fde1ee8be93d"
+        },
+        "e_mm": {
+          "expected": "f3ddf676c2777f39a635c9950d755c9570d826807f118823f28b652bb050ae38",
+          "submission": "f3ddf676c2777f39a635c9950d755c9570d826807f118823f28b652bb050ae38"
+        },
+        "f_ext": {
+          "expected": "013a2b588e81a5e9b7ae366008dc2b0d31438f5943c0cee6bf8283c3f7533cfa",
+          "submission": "013a2b588e81a5e9b7ae366008dc2b0d31438f5943c0cee6bf8283c3f7533cfa"
+        },
+        "f_table": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "961a5bbe840d7da6f1b4c66d0f151451c393004ca41575a712fcfc75d2b9e5d9",
+          "submission": "961a5bbe840d7da6f1b4c66d0f151451c393004ca41575a712fcfc75d2b9e5d9"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "f4394a10e3ae19dc513b2de7ca95eb4ad1688469238c9fb67fec008c22ddc4d3",
+          "submission": "f4394a10e3ae19dc513b2de7ca95eb4ad1688469238c9fb67fec008c22ddc4d3"
+        },
+        "r": {
+          "expected": "9af183a60276124a2b4490fca3b53050b7128a0f2e3180998c01a89ff5214aa1",
+          "submission": "9af183a60276124a2b4490fca3b53050b7128a0f2e3180998c01a89ff5214aa1"
+        },
+        "signed_push": {
+          "expected": "a2ce90253cf80ee9d84d7844c2dcfb936137f3099e8d823b1aa96122c35ebe95",
+          "submission": "a2ce90253cf80ee9d84d7844c2dcfb936137f3099e8d823b1aa96122c35ebe95"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "1a3fc14f685148b64628e2cf48cbe9d9821e9e83eab18bf4793ba4dcf34eccdc",
+          "submission": "1a3fc14f685148b64628e2cf48cbe9d9821e9e83eab18bf4793ba4dcf34eccdc"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 266,
+      "different": [],
+      "direction": "-xy",
+      "force_n": 10.0,
+      "kind": "collision",
+      "mode": "servo",
+      "phase": "transport",
+      "sha256": {
+        "detect": {
+          "expected": "8f0508769d7c96dbbfd79e448746e12f94c191e182ae65802e611419f0ab5d45",
+          "submission": "8f0508769d7c96dbbfd79e448746e12f94c191e182ae65802e611419f0ab5d45"
+        },
+        "e_mm": {
+          "expected": "83e8cf6bdf390a600fd44521fb5fd22feb089dc15c8ca7bc1e69e94e4c90d897",
+          "submission": "83e8cf6bdf390a600fd44521fb5fd22feb089dc15c8ca7bc1e69e94e4c90d897"
+        },
+        "f_ext": {
+          "expected": "8595ee59c15a4a84485c11e1d8f834f20b329ca0de23528d9150f25cadef6c1a",
+          "submission": "8595ee59c15a4a84485c11e1d8f834f20b329ca0de23528d9150f25cadef6c1a"
+        },
+        "f_table": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "749f8abef71646164e067ce22dda9391524afa5cbad7a6b90458c6fcca1fbf38",
+          "submission": "749f8abef71646164e067ce22dda9391524afa5cbad7a6b90458c6fcca1fbf38"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "82e73815566e98fac8866df379307869199a43834631680e33641a15cfadf926",
+          "submission": "82e73815566e98fac8866df379307869199a43834631680e33641a15cfadf926"
+        },
+        "r": {
+          "expected": "25162d2f3d671752042e6c5b3840843bb4b4968e8143a614061504257f61a74e",
+          "submission": "25162d2f3d671752042e6c5b3840843bb4b4968e8143a614061504257f61a74e"
+        },
+        "signed_push": {
+          "expected": "e8b6cf51761da56624613b7a4a14f226e88ea2b2bf94975d694430dbd726d6f8",
+          "submission": "e8b6cf51761da56624613b7a4a14f226e88ea2b2bf94975d694430dbd726d6f8"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "35583693ed807792be96169c9367f9371c814d8bf94892d4ccd7938fc7f3c802",
+          "submission": "35583693ed807792be96169c9367f9371c814d8bf94892d4ccd7938fc7f3c802"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 310,
+      "different": [],
+      "direction": "-x",
+      "force_n": 5.0,
+      "kind": "collision",
+      "mode": "servo",
+      "phase": "place",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "8713677f60b1258efc9e8f97a9c7b43bcbe10b6cebea2764a58ccc1f13419684",
+          "submission": "8713677f60b1258efc9e8f97a9c7b43bcbe10b6cebea2764a58ccc1f13419684"
+        },
+        "f_ext": {
+          "expected": "46bc8d1134e5f9eea8d2c35b4d15b89ed30ad52122142dbac23ef0c4e5408ed1",
+          "submission": "46bc8d1134e5f9eea8d2c35b4d15b89ed30ad52122142dbac23ef0c4e5408ed1"
+        },
+        "f_table": {
+          "expected": "a04478d69abfb4a18a80896410fd1e57ea5760daa4151ac2f79daeb650618fcd",
+          "submission": "a04478d69abfb4a18a80896410fd1e57ea5760daa4151ac2f79daeb650618fcd"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "e8c40dde55ba7e6ad6f73659d4338c6a0cae3b400e76c0412e81cedaba453f47",
+          "submission": "e8c40dde55ba7e6ad6f73659d4338c6a0cae3b400e76c0412e81cedaba453f47"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "4b334f46c565e601cd5220983240aed1e4c5c6af0b06504237eccc6fa67212d6",
+          "submission": "4b334f46c565e601cd5220983240aed1e4c5c6af0b06504237eccc6fa67212d6"
+        },
+        "r": {
+          "expected": "1d2aa9d35c8bb0e9876335dac3ac240ccad0247285339f2e14017002fa08dc82",
+          "submission": "1d2aa9d35c8bb0e9876335dac3ac240ccad0247285339f2e14017002fa08dc82"
+        },
+        "signed_push": {
+          "expected": "c1107de2aeb4953c2c639f3e4db89c0258efb9c81d16f7bc23bfd0aa6ec18b54",
+          "submission": "c1107de2aeb4953c2c639f3e4db89c0258efb9c81d16f7bc23bfd0aa6ec18b54"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "418a62eef0dcc9fdba9b8fcf41afaa5df5c869e7ce69baec5e90409802403e9a",
+          "submission": "418a62eef0dcc9fdba9b8fcf41afaa5df5c869e7ce69baec5e90409802403e9a"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 377,
+      "different": [],
+      "direction": "offset",
+      "force_n": 0.0,
+      "kind": "offset",
+      "mode": "servo",
+      "phase": "pick",
+      "sha256": {
+        "detect": {
+          "expected": "81237a9152ab24085693eabd5c7de6d943b29f3a4c3baa2c95a32b6f902b11d0",
+          "submission": "81237a9152ab24085693eabd5c7de6d943b29f3a4c3baa2c95a32b6f902b11d0"
+        },
+        "e_mm": {
+          "expected": "d59acda56af4a4d4199bf43b34e6b255f21d1431a7a69d6413d37c48b20288ec",
+          "submission": "d59acda56af4a4d4199bf43b34e6b255f21d1431a7a69d6413d37c48b20288ec"
+        },
+        "f_ext": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "f_table": {
+          "expected": "bdb891699ae3557b5deb93cab5a1d4cdd94bfd7799b1ba557b2992d90703adbf",
+          "submission": "bdb891699ae3557b5deb93cab5a1d4cdd94bfd7799b1ba557b2992d90703adbf"
+        },
+        "f_tool": {
+          "expected": "166008440a00e33dac086d40aee7e206f6e22b78b78c6a37d393861d4c73096f",
+          "submission": "166008440a00e33dac086d40aee7e206f6e22b78b78c6a37d393861d4c73096f"
+        },
+        "q": {
+          "expected": "02f7e73d018e2eb52047d7dc8259f0454a658106a06ccf16e97f539bcf0bf808",
+          "submission": "02f7e73d018e2eb52047d7dc8259f0454a658106a06ccf16e97f539bcf0bf808"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "5ca2c32d50881951603dbd54fcf13ec387c498db7b7c2744b6091ba59ea2d682",
+          "submission": "5ca2c32d50881951603dbd54fcf13ec387c498db7b7c2744b6091ba59ea2d682"
+        },
+        "r": {
+          "expected": "dc856c969eb867a86515d81171bffe2d47b9947923aff56785f085d07e6f7b6d",
+          "submission": "dc856c969eb867a86515d81171bffe2d47b9947923aff56785f085d07e6f7b6d"
+        },
+        "signed_push": {
+          "expected": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "submission": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "96118e5e4380f3daf2c1726b4f26f7b4c080ec49f6a96f0ed5e8799ec7b04b10",
+          "submission": "96118e5e4380f3daf2c1726b4f26f7b4c080ec49f6a96f0ed5e8799ec7b04b10"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 43,
+      "different": [],
+      "direction": "none",
+      "force_n": 0.0,
+      "kind": "reference",
+      "mode": "torque",
+      "phase": "none",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "4fd1644fc3228fc4d5ae6e6548ca3ce24f18d540cabd44677c396eb9ec2a20ab",
+          "submission": "4fd1644fc3228fc4d5ae6e6548ca3ce24f18d540cabd44677c396eb9ec2a20ab"
+        },
+        "f_ext": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "f_table": {
+          "expected": "17a40ba569623cec86c28f5201481a2fc52fa38f8a9b6c41f1c11534233b2c4f",
+          "submission": "17a40ba569623cec86c28f5201481a2fc52fa38f8a9b6c41f1c11534233b2c4f"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "8330ba2a897fb822b821f86343d3f04329cecc5022089195e5dd48853997185c",
+          "submission": "8330ba2a897fb822b821f86343d3f04329cecc5022089195e5dd48853997185c"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "7b28caebee9b26b08fd6bbd41bf542621218671d47f0f088bbe08df394889e4f",
+          "submission": "7b28caebee9b26b08fd6bbd41bf542621218671d47f0f088bbe08df394889e4f"
+        },
+        "r": {
+          "expected": "b9241208ac5fe99ed436c82d2c5e11879da491bc25c5e89179a02ff2f498abe7",
+          "submission": "b9241208ac5fe99ed436c82d2c5e11879da491bc25c5e89179a02ff2f498abe7"
+        },
+        "signed_push": {
+          "expected": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "submission": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "2c7d305d4f7f8c25a78d99a13713860018fa154a9a0ad7ae77e2296cd74a733d",
+          "submission": "2c7d305d4f7f8c25a78d99a13713860018fa154a9a0ad7ae77e2296cd74a733d"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 170,
+      "different": [],
+      "direction": "none",
+      "force_n": 0.0,
+      "kind": "reference",
+      "mode": "torque",
+      "phase": "none",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "3fd359ab8fdb061208f70c7cad3718c52e84d8fda2361721c09ea37064c94e17",
+          "submission": "3fd359ab8fdb061208f70c7cad3718c52e84d8fda2361721c09ea37064c94e17"
+        },
+        "f_ext": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "f_table": {
+          "expected": "aa76f80ebc4456ab22cd5c45ee234a2d8ae4303ec4bb737d508b9b3a978dc57a",
+          "submission": "aa76f80ebc4456ab22cd5c45ee234a2d8ae4303ec4bb737d508b9b3a978dc57a"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "8856678179b42f69e917d5d5e1b15951a082a813f103d13420ee91c08b3c5bd7",
+          "submission": "8856678179b42f69e917d5d5e1b15951a082a813f103d13420ee91c08b3c5bd7"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "40ed474976b7180aba42a11a503fff26f011cc6e0ca738116dab1a48aa43791d",
+          "submission": "40ed474976b7180aba42a11a503fff26f011cc6e0ca738116dab1a48aa43791d"
+        },
+        "r": {
+          "expected": "82987a089f6a56881dc0f49286f4b42249efc52dbc8e2217512973b127986407",
+          "submission": "82987a089f6a56881dc0f49286f4b42249efc52dbc8e2217512973b127986407"
+        },
+        "signed_push": {
+          "expected": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "submission": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "b8bff585b5240dc5e4abccb53aa7f224f7df9f8a543468822767401276510270",
+          "submission": "b8bff585b5240dc5e4abccb53aa7f224f7df9f8a543468822767401276510270"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 190,
+      "different": [],
+      "direction": "-x",
+      "force_n": 5.0,
+      "kind": "collision",
+      "mode": "torque",
+      "phase": "pick",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "d8834cc076f4a715aa112068811955de4ac943a1bcde68cb133c71e668e5d8ff",
+          "submission": "d8834cc076f4a715aa112068811955de4ac943a1bcde68cb133c71e668e5d8ff"
+        },
+        "f_ext": {
+          "expected": "69abdf8ab0de92aa4c8414586563c1b81742ff90d1b2fe6d6c8401e24c7efc2e",
+          "submission": "69abdf8ab0de92aa4c8414586563c1b81742ff90d1b2fe6d6c8401e24c7efc2e"
+        },
+        "f_table": {
+          "expected": "9474b1a57d036c847467aabd7d7f21c478d2c547ac4e7b95aad5a2328767e4e8",
+          "submission": "9474b1a57d036c847467aabd7d7f21c478d2c547ac4e7b95aad5a2328767e4e8"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "012302e27331be6595669e0ced62b8330f38b0c15c99b97dbb47660579a78a63",
+          "submission": "012302e27331be6595669e0ced62b8330f38b0c15c99b97dbb47660579a78a63"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "24804171d5465f12ecb65d2d6aad652ed5aaddeba35e5ac0d27bba0fc59891bd",
+          "submission": "24804171d5465f12ecb65d2d6aad652ed5aaddeba35e5ac0d27bba0fc59891bd"
+        },
+        "r": {
+          "expected": "625af1115a369844f679d4c4ba095b873b6b5320e17c806f487c9d4a1fe5e49b",
+          "submission": "625af1115a369844f679d4c4ba095b873b6b5320e17c806f487c9d4a1fe5e49b"
+        },
+        "signed_push": {
+          "expected": "0e62ed61aebf0a89ef4bd7ca8908ec2cbc8ac024d81a4f6452f7cc6dd7bc8a18",
+          "submission": "0e62ed61aebf0a89ef4bd7ca8908ec2cbc8ac024d81a4f6452f7cc6dd7bc8a18"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "0cf7526a660c7e901fef1dd19f940fb33381c4bbf3e0658080b03e9fc0ced9b8",
+          "submission": "0cf7526a660c7e901fef1dd19f940fb33381c4bbf3e0658080b03e9fc0ced9b8"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 197,
+      "different": [],
+      "direction": "+xyz",
+      "force_n": 5.0,
+      "kind": "collision",
+      "mode": "torque",
+      "phase": "pick",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "7d7817b62a0c6e4187a1c3fa2d086574a8149997a1b9442293200b6668d1344d",
+          "submission": "7d7817b62a0c6e4187a1c3fa2d086574a8149997a1b9442293200b6668d1344d"
+        },
+        "f_ext": {
+          "expected": "91b104154ff8d98ee8b66eff673033a366e6bdd79e3d0c65fb848542edbfde6c",
+          "submission": "91b104154ff8d98ee8b66eff673033a366e6bdd79e3d0c65fb848542edbfde6c"
+        },
+        "f_table": {
+          "expected": "1bf96f0e7de0c8690c8d1807d75af08fd5cc57d400d7c68c85dfb13373480ec2",
+          "submission": "1bf96f0e7de0c8690c8d1807d75af08fd5cc57d400d7c68c85dfb13373480ec2"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "1eef2a0ca149ee61144465a182dc2c5f93e30ebef48684b3ead244f9fa3bc5ea",
+          "submission": "1eef2a0ca149ee61144465a182dc2c5f93e30ebef48684b3ead244f9fa3bc5ea"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "efad1dcc98fbb343116d77024ba24f197d6b5dfc85c7665ec4f5e45985a06b38",
+          "submission": "efad1dcc98fbb343116d77024ba24f197d6b5dfc85c7665ec4f5e45985a06b38"
+        },
+        "r": {
+          "expected": "8d3c57a4b6e30e2e0a70b07a85024fdf822353eccc17d78ba077477ba82f7bb4",
+          "submission": "8d3c57a4b6e30e2e0a70b07a85024fdf822353eccc17d78ba077477ba82f7bb4"
+        },
+        "signed_push": {
+          "expected": "8803ff81bb3014e0d90f792b2020aac8f3161d55ae833dc433332db878fc0df3",
+          "submission": "8803ff81bb3014e0d90f792b2020aac8f3161d55ae833dc433332db878fc0df3"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "c7f35aba6b6519173ca4dfc7edbcffcdb1f09e60ede67dc763b99c93015f34c9",
+          "submission": "c7f35aba6b6519173ca4dfc7edbcffcdb1f09e60ede67dc763b99c93015f34c9"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 287,
+      "different": [],
+      "direction": "+xyz",
+      "force_n": 25.0,
+      "kind": "collision",
+      "mode": "torque",
+      "phase": "transport",
+      "sha256": {
+        "detect": {
+          "expected": "c00dd8a629971d8e4c5ea0e7a80fc49038166abe18815bed92d44d33f735e818",
+          "submission": "c00dd8a629971d8e4c5ea0e7a80fc49038166abe18815bed92d44d33f735e818"
+        },
+        "e_mm": {
+          "expected": "50fcc20e48b62ce6b5b52d95accd9dba2307edfd149ea9ed3b582e22d0ad5a0f",
+          "submission": "50fcc20e48b62ce6b5b52d95accd9dba2307edfd149ea9ed3b582e22d0ad5a0f"
+        },
+        "f_ext": {
+          "expected": "72be400d3f1c8217ec856b2d51d5aee7cda7474fd90e093f26fe9590f1df5945",
+          "submission": "72be400d3f1c8217ec856b2d51d5aee7cda7474fd90e093f26fe9590f1df5945"
+        },
+        "f_table": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "7b5d905f7d2f591b5188904834808fcbe5e9c6cb35f8ae9814a656d154526b6a",
+          "submission": "7b5d905f7d2f591b5188904834808fcbe5e9c6cb35f8ae9814a656d154526b6a"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "8ff2cf9f3b8b37b669ef7f51e992d1ea4911dbe7b1cc67f2ba9944b9fc462eff",
+          "submission": "8ff2cf9f3b8b37b669ef7f51e992d1ea4911dbe7b1cc67f2ba9944b9fc462eff"
+        },
+        "r": {
+          "expected": "05f5fc3a7ef0241abf5cebf09806d48d0f53ab8dff5c6fb9787ce02f3b467ef1",
+          "submission": "05f5fc3a7ef0241abf5cebf09806d48d0f53ab8dff5c6fb9787ce02f3b467ef1"
+        },
+        "signed_push": {
+          "expected": "06088b5d5141cd2cf932b2c1cb967447cab6c71a24bd45b4f9d3127318b37657",
+          "submission": "06088b5d5141cd2cf932b2c1cb967447cab6c71a24bd45b4f9d3127318b37657"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "337b325c8f0c87e4eb71cfe512b7beca98da3fdbc4cfb3e0834e8d11860a7db9",
+          "submission": "337b325c8f0c87e4eb71cfe512b7beca98da3fdbc4cfb3e0834e8d11860a7db9"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 310,
+      "different": [],
+      "direction": "-x",
+      "force_n": 5.0,
+      "kind": "collision",
+      "mode": "torque",
+      "phase": "place",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "def3bf6e9e3a6728d8fe8de11004b94783f14bd8c22b629bbbbe01e305d9d997",
+          "submission": "def3bf6e9e3a6728d8fe8de11004b94783f14bd8c22b629bbbbe01e305d9d997"
+        },
+        "f_ext": {
+          "expected": "46bc8d1134e5f9eea8d2c35b4d15b89ed30ad52122142dbac23ef0c4e5408ed1",
+          "submission": "46bc8d1134e5f9eea8d2c35b4d15b89ed30ad52122142dbac23ef0c4e5408ed1"
+        },
+        "f_table": {
+          "expected": "80a62fc3580f4eb3382765026ffaab792d67cef5345392d3b4d91969bf133e25",
+          "submission": "80a62fc3580f4eb3382765026ffaab792d67cef5345392d3b4d91969bf133e25"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "315d5b59b61e01eae79fc304cf83ff627dde159bf2458958a063ee9e31f577b3",
+          "submission": "315d5b59b61e01eae79fc304cf83ff627dde159bf2458958a063ee9e31f577b3"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "401604a7489b98629bbcfcceaf8e09d701496d50fd977fbf67833b350532c5fb",
+          "submission": "401604a7489b98629bbcfcceaf8e09d701496d50fd977fbf67833b350532c5fb"
+        },
+        "r": {
+          "expected": "7276eaaf57e31bed5272537ab6963abb23d3422c7337b56b5c9e2fda9756245b",
+          "submission": "7276eaaf57e31bed5272537ab6963abb23d3422c7337b56b5c9e2fda9756245b"
+        },
+        "signed_push": {
+          "expected": "c1107de2aeb4953c2c639f3e4db89c0258efb9c81d16f7bc23bfd0aa6ec18b54",
+          "submission": "c1107de2aeb4953c2c639f3e4db89c0258efb9c81d16f7bc23bfd0aa6ec18b54"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "fb8d35d8b809de9e419530cc9f05a17cf0acfca69f1ce973740f7eada269a4e7",
+          "submission": "fb8d35d8b809de9e419530cc9f05a17cf0acfca69f1ce973740f7eada269a4e7"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 313,
+      "different": [],
+      "direction": "+z",
+      "force_n": 5.0,
+      "kind": "collision",
+      "mode": "torque",
+      "phase": "place",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "9f70e3ed8b3f1da019afe42085feb1f7baef3b675c9086fcb709e647624593e5",
+          "submission": "9f70e3ed8b3f1da019afe42085feb1f7baef3b675c9086fcb709e647624593e5"
+        },
+        "f_ext": {
+          "expected": "fab91371226dbcc4413a8994dfe8bdbb571eb70ae198bb6ddc286c620fbee5de",
+          "submission": "fab91371226dbcc4413a8994dfe8bdbb571eb70ae198bb6ddc286c620fbee5de"
+        },
+        "f_table": {
+          "expected": "8477e29430adec0b1c2a0738855e48455aa17a598492cd99ba4f39bc79318aa0",
+          "submission": "8477e29430adec0b1c2a0738855e48455aa17a598492cd99ba4f39bc79318aa0"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "41232b38a56c8c2cc551488c0ba9b6b4633f5fc8fec08cd80333d999a9519493",
+          "submission": "41232b38a56c8c2cc551488c0ba9b6b4633f5fc8fec08cd80333d999a9519493"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "2eaa3039744aded679224f54f736d3e8282a1eb29822f33cb0ee654bc562833a",
+          "submission": "2eaa3039744aded679224f54f736d3e8282a1eb29822f33cb0ee654bc562833a"
+        },
+        "r": {
+          "expected": "21baa20ff60a85fe98f1f0c9c092708d2410927eb9f5e570ad012146b35ef965",
+          "submission": "21baa20ff60a85fe98f1f0c9c092708d2410927eb9f5e570ad012146b35ef965"
+        },
+        "signed_push": {
+          "expected": "79f420547db5c8e3a472ecc3d1886f20ed4002d6f3408934a965d4e1c8e2e2ee",
+          "submission": "79f420547db5c8e3a472ecc3d1886f20ed4002d6f3408934a965d4e1c8e2e2ee"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "47b4dc8f068d692ba01a02b0b34ce5a5e4466d659d2bdc2195455b36407b0cfd",
+          "submission": "47b4dc8f068d692ba01a02b0b34ce5a5e4466d659d2bdc2195455b36407b0cfd"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 314,
+      "different": [],
+      "direction": "-z",
+      "force_n": 5.0,
+      "kind": "collision",
+      "mode": "torque",
+      "phase": "place",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "d355c9db23854f21ce9cba6bedf8be5cb11602cfbffa75e2237d20b8a20055d5",
+          "submission": "d355c9db23854f21ce9cba6bedf8be5cb11602cfbffa75e2237d20b8a20055d5"
+        },
+        "f_ext": {
+          "expected": "79670954383b0f6cff8b68fe8031f91bbc152a1f0d34d67697cf7725a681307f",
+          "submission": "79670954383b0f6cff8b68fe8031f91bbc152a1f0d34d67697cf7725a681307f"
+        },
+        "f_table": {
+          "expected": "a664e697a08a36af44e22167fa6a1df592a97305d047dc5378bb36efd7f4c8bc",
+          "submission": "a664e697a08a36af44e22167fa6a1df592a97305d047dc5378bb36efd7f4c8bc"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "3574207d845aeed52e1c21221b89f028ac399590de392a0d3703be2574b92b7f",
+          "submission": "3574207d845aeed52e1c21221b89f028ac399590de392a0d3703be2574b92b7f"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "4157e9a444c1a0f935fa1a1663d89df43f3dda906d3442da019c628e5e74d698",
+          "submission": "4157e9a444c1a0f935fa1a1663d89df43f3dda906d3442da019c628e5e74d698"
+        },
+        "r": {
+          "expected": "bde58c7b95f5fb964188e71d81ec5a98498062b778c5a72589c67aaf142cf0bb",
+          "submission": "bde58c7b95f5fb964188e71d81ec5a98498062b778c5a72589c67aaf142cf0bb"
+        },
+        "signed_push": {
+          "expected": "ea5dcfead3077d8bedc0e2a06ac4c45727af9d8272af78aeb4b3fd6385070717",
+          "submission": "ea5dcfead3077d8bedc0e2a06ac4c45727af9d8272af78aeb4b3fd6385070717"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "b74acea80ad2c0ac2c1a37ff88ef3d8270c5f950abf9c7dbe471b7e808a7a640",
+          "submission": "b74acea80ad2c0ac2c1a37ff88ef3d8270c5f950abf9c7dbe471b7e808a7a640"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 318,
+      "different": [],
+      "direction": "-xyz",
+      "force_n": 5.0,
+      "kind": "collision",
+      "mode": "torque",
+      "phase": "place",
+      "sha256": {
+        "detect": {
+          "expected": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50",
+          "submission": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+        },
+        "e_mm": {
+          "expected": "d09e3b22f7cb0b2d6deb33a8712eb675b9f41867b891d02b7d8a90e74655f80d",
+          "submission": "d09e3b22f7cb0b2d6deb33a8712eb675b9f41867b891d02b7d8a90e74655f80d"
+        },
+        "f_ext": {
+          "expected": "6982d3bba557d02ae2452d83e2d80c9061223def07eec70eff13a0a37eefb5f3",
+          "submission": "6982d3bba557d02ae2452d83e2d80c9061223def07eec70eff13a0a37eefb5f3"
+        },
+        "f_table": {
+          "expected": "dec35600b144a33bc63710780eac0df68809a7816ab7c222a93ee0877df432ea",
+          "submission": "dec35600b144a33bc63710780eac0df68809a7816ab7c222a93ee0877df432ea"
+        },
+        "f_tool": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "q": {
+          "expected": "8aa88ed1071fc59aa0093696312b00d74664312450cae6b627254447fe4330a8",
+          "submission": "8aa88ed1071fc59aa0093696312b00d74664312450cae6b627254447fe4330a8"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "66e6b544c7318a016a653fd61e08a19a60fc88c426dc743b2ce6d116d966d2b2",
+          "submission": "66e6b544c7318a016a653fd61e08a19a60fc88c426dc743b2ce6d116d966d2b2"
+        },
+        "r": {
+          "expected": "0591d566ce6133e05120cd8fb16211d95df9295212500419809edc4ad3788ea0",
+          "submission": "0591d566ce6133e05120cd8fb16211d95df9295212500419809edc4ad3788ea0"
+        },
+        "signed_push": {
+          "expected": "edfef49347d6a2ff10d85e51c6386077432067ac4a82f1a6023539b335230b54",
+          "submission": "edfef49347d6a2ff10d85e51c6386077432067ac4a82f1a6023539b335230b54"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "601f2cd8d753034bbbf2e9790e9167c58307a2f0c47ec765afdc9df447445b6f",
+          "submission": "601f2cd8d753034bbbf2e9790e9167c58307a2f0c47ec765afdc9df447445b6f"
+        }
+      }
+    },
+    {
+      "bit_identical": true,
+      "case_id": 377,
+      "different": [],
+      "direction": "offset",
+      "force_n": 0.0,
+      "kind": "offset",
+      "mode": "torque",
+      "phase": "pick",
+      "sha256": {
+        "detect": {
+          "expected": "9ead122715d8056784d4f6eadd4852be1de9af0f237a5ee807edfdcde5f8bae8",
+          "submission": "9ead122715d8056784d4f6eadd4852be1de9af0f237a5ee807edfdcde5f8bae8"
+        },
+        "e_mm": {
+          "expected": "ef65e42ad0d0d0af3110b3e323c77dc5cc1f7e311966221d5655f1ce4f83941b",
+          "submission": "ef65e42ad0d0d0af3110b3e323c77dc5cc1f7e311966221d5655f1ce4f83941b"
+        },
+        "f_ext": {
+          "expected": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "submission": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562"
+        },
+        "f_table": {
+          "expected": "bf3db8d63fe56091bd39814849ebe98da74e6888151a6c8994f01c897bd6e136",
+          "submission": "bf3db8d63fe56091bd39814849ebe98da74e6888151a6c8994f01c897bd6e136"
+        },
+        "f_tool": {
+          "expected": "8563afe8a7d6fb27fb441d5f5db92f26804efdbc761b9d5714213a90f72b3d5c",
+          "submission": "8563afe8a7d6fb27fb441d5f5db92f26804efdbc761b9d5714213a90f72b3d5c"
+        },
+        "q": {
+          "expected": "730040f14ab128d555b1bade7fe8306087cd662412c3e929daa0e82a8c2060ab",
+          "submission": "730040f14ab128d555b1bade7fe8306087cd662412c3e929daa0e82a8c2060ab"
+        },
+        "q_d": {
+          "expected": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "submission": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be"
+        },
+        "qpos": {
+          "expected": "66ddc53d972f9040fecd5586d05c2bc917dd6a8e16f6da9943636a7301ac6938",
+          "submission": "66ddc53d972f9040fecd5586d05c2bc917dd6a8e16f6da9943636a7301ac6938"
+        },
+        "r": {
+          "expected": "8d6dab897a20661cde6018dd56eb8984450f52887fdaa41cd41225202a38cd96",
+          "submission": "8d6dab897a20661cde6018dd56eb8984450f52887fdaa41cd41225202a38cd96"
+        },
+        "signed_push": {
+          "expected": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "submission": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        },
+        "t": {
+          "expected": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "submission": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb"
+        },
+        "tau": {
+          "expected": "7205ce3eb9b2c11b0c2fafe594735268416a0affbaf1532097e83b2419ea45a1",
+          "submission": "7205ce3eb9b2c11b0c2fafe594735268416a0affbaf1532097e83b2419ea45a1"
+        }
+      }
+    }
+  ],
+  "schema": "week09-final-r32-servo-r31-torque-parity.v1",
+  "scope": "representative",
+  "submission": {
+    "members": [
+      "my_detector.py",
+      "my_servo.py",
+      "my_torque.py"
+    ],
+    "sha256": {
+      "my_detector.py": "010f8a1c6363866d24ed3832b35eea34e946007679eab754f02ca98c958a4b7e",
+      "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "zip_sha256": "2a3850363e1a6eee6fffb15e1210bbf7b2607f71d4179f76d2d2799b2b713ab5"
+  }
+}
