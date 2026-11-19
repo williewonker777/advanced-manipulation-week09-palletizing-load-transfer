@@ -113,23 +113,11 @@ M1013 팔레타이징 시뮬레이션의 1 ms 제어 주기에서 박스를 작�
 
 ## 영상
 
-제어기는 최종과 같은 R1(v1) 제어기입니다. 영상 속 경보 표시는 영상을 만들 당시의 감지기 기준이며, 최종 감지기 영상은 아닙니다. 모두 3.7 kg 박스 예시이며 공식 평가 조건은 아닙니다. 이미지를 누르면 1280×720 MP4로 볼 수 있습니다.
+최종 제출본(`submission/`)을 그대로 써서 서보 A와 토크 B를 같은 조건에서 나란히 돌린 영상입니다. 공식 평가 조건 중 하나인 8 kg 박스·집기 직후 +y 10 N 충돌이며, 서보 A는 66 ms, 토크 B는 43 ms에 감지하고 오감지는 0회입니다. 공식 평가표와 같은 값입니다. 이미지를 누르면 1280×720 MP4로 볼 수 있습니다.
 
-**서보 A — 운반 중 충돌 (R1)**
+[![최종 제출본: 서보 A와 토크 B, 8 kg 집기 직후 +y 10 N 충돌](artifacts/media/11_final_servo_torque.gif)](artifacts/media/11_final_servo_torque.mp4)
 
-[![R1 서보 A 운반 중 충돌](artifacts/media/05_v2_servo_transport_collision.gif)](artifacts/media/05_v2_servo_transport_collision.mp4)
-
-**토크 B — 운반 중 충돌 (R1)**
-
-[![R1 토크 B 운반 중 충돌](artifacts/media/06_v2_torque_transport_collision.gif)](artifacts/media/06_v2_torque_transport_collision.mp4)
-
-**서보 A — 기준 / v1 / R1 / R2 비교**
-
-[![서보 A 기준 v1 R1 R2 비교](artifacts/media/07_r2_servo_comparison.gif)](artifacts/media/07_r2_servo_comparison.mp4)
-
-**토크 B — 기준 / v1 / R1 / R2 비교**
-
-[![토크 B 기준 v1 R1 R2 비교](artifacts/media/08_r2_torque_comparison.gif)](artifacts/media/08_r2_torque_comparison.mp4)
+위쪽은 3D 재생입니다. 청록 구는 목표 TCP, 빨간 화살표는 인가 외력입니다. 아래쪽 그래프는 TCP 오차, 인가 외력, 작업대 지지력/박스 무게, 충돌 경보입니다. 놓을 때 작업대 지지력이 박스 무게(1.0)에 부드럽게 수렴합니다. 이전 버전 비교 영상(기준/v1/R1/R2)은 [R8 README](README_R8.md)에 있습니다.
 
 ## 문제별 해결한 부분과 미흡한 부분
 

@@ -28,12 +28,14 @@ MEDIA_MANIFESTS = {"artifacts/media/media_manifest.json",
 R2_MEDIA_MANIFEST = "artifacts/media/r2_manifest.json"
 R6_MEDIA_MANIFEST = "artifacts/media/r6_manifest.json"
 R7_MEDIA_MANIFEST = "artifacts/media/r7_manifest.json"
+FINAL_MEDIA_MANIFEST = "artifacts/media/final_manifest.json"
 MEDIA_STEMS = ("01_servo_no_collision", "02_torque_no_collision",
                "03_servo_place_collision", "04_servo_transport_collision",
                "05_v2_servo_transport_collision", "06_v2_torque_transport_collision")
 R2_MEDIA_STEMS = ("07_r2_servo_comparison", "08_r2_torque_comparison")
 R6_MEDIA_STEMS = ("09_r6_servo_positive_comparison", "10_r6_servo_negative_comparison")
 R7_MEDIA_STEMS = ("09_r7_servo_positive_comparison", "10_r7_servo_negative_comparison")
+FINAL_MEDIA_STEMS = ("11_final_servo_torque",)
 ALLOWED_MEDIA_TAGS = {"encoder", "language", "handler_name", "vendor_id", "major_brand",
                       "minor_version", "compatible_brands"}
 # The course interface signature is an API contract, not prose redistribution.
@@ -334,7 +336,7 @@ def audit(root, kit=None, guide=None, ffprobe=None, require_checksums=True, requ
             errors.extend(f"{name}: {error}" for error in tag_errors)
         elif (PurePosixPath(name).is_relative_to(MEDIA_ROOT) and
               name not in MEDIA_MANIFESTS | {R2_MEDIA_MANIFEST, R6_MEDIA_MANIFEST,
-                                             R7_MEDIA_MANIFEST}):
+                                             R7_MEDIA_MANIFEST, FINAL_MEDIA_MANIFEST}):
             errors.append(f"unexpected file in media directory: {name}")
     media_bytes = sum(p.stat().st_size for p in media)
     if media_bytes > MEDIA_TOTAL_LIMIT:
@@ -370,15 +372,19 @@ def audit(root, kit=None, guide=None, ffprobe=None, require_checksums=True, requ
                        (root / R2_MEDIA_MANIFEST).is_file())
         r6_required = r6_present or r6_adopted
         r7_required = r7_present or r7_adopted
+        final_required = (root / FINAL_MEDIA_MANIFEST).is_file()
         stems = (MEDIA_STEMS + (R2_MEDIA_STEMS if r2_required else ())
                  + (R6_MEDIA_STEMS if r6_required else ())
-                 + (R7_MEDIA_STEMS if r7_required else ()))
+                 + (R7_MEDIA_STEMS if r7_required else ())
+                 + (FINAL_MEDIA_STEMS if final_required else ()))
         expected_media = {f"artifacts/media/{stem}.{suffix}"
                           for stem in stems for suffix in ("mp4", "gif")}
         expected_manifests = (MEDIA_MANIFESTS | ({R2_MEDIA_MANIFEST} if r2_required else set())
                               | ({R6_MEDIA_MANIFEST} if r6_required else set()))
         if r7_required:
             expected_manifests.add(R7_MEDIA_MANIFEST)
+        if final_required:
+            expected_manifests.add(FINAL_MEDIA_MANIFEST)
         manifests_present = {name for name in expected_manifests if (root/name).is_file()}
         if names != expected_media or manifests_present != expected_manifests:
             count = len(stems)
