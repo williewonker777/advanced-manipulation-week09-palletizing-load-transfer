@@ -1,0 +1,8 @@
+{
+ "schema":"r30-signed-yaw-headroom-followup.v1",
+ "status":"FROZEN_BEFORE_THIS_ARM_OUTPUT",
+ "motivation":"The yaw-blind/dominant force split alone repaired the four exposed R29 duplicates, but in an older genuinely opposite paired force still issued +35 followed by native yaw +43. At its early tick the yaw change is smaller than the transverse change but is comparable to the remaining signed moment margin, which the direction-only allocation ignores.",
+ "rule":"At the first sustained dual-sensor rising certificate in an excursion, measure native signed yaw and the joint-1 projection of each measured force change. Reserve the early notification only if the force is transverse-dominant in both channels AND the closed segment from current yaw to current yaw plus either projected change lies strictly inside the existing native interval. Otherwise keep both incumbent yaw and the original settled decision. This is a conservative one-innovation guard, not a certified future disturbance model. No threshold, time, or geometry cutoff fitted or changed.",
+ "stop":"Do not enroll on the previous R30 geometry-only prospect; keep the older R27 and R28 reservations closed. If any declared historical protection is lost, no fresh qualification for this mechanism. Any future new sampling, if authorized by evidence, needs its own immutable registration and case disjointness proof. No R10/default or hardware claim.",
+ "controls":["R26 all 156 strict/duplicate/normal/tool/force/prefix vs original C3 AND basic R29","R27 exposed signed24 and 33 normals","R24 three actual close same/opposite/cross families + R25 all 198 historical","stock direct official 29 and D4 strict/protection regression","compare timing vs actual shipped detector before broad conclusions"]
+}

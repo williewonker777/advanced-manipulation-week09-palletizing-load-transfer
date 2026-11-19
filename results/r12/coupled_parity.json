@@ -1,0 +1,175 @@
+{
+  "schema": "r12-coupled-demo.v1",
+  "status": "PASS",
+  "scope": "simulation demo; detector-qualified scientific result, not adoption",
+  "inputs": {
+    "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "hybrid": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+    "counter": "62e40ff4d81b6d14643cb87bbebdfafb6f9d62835416ef47fe7215a5fff9aec9",
+    "coefficients": "183df664558017be3e9d3faa9c5883cd6ca55c593c45a1e995afb0dcefee886c",
+    "private_fixture": "8f637a5d67d6bfd2f9021093b08e5d8b463bd58c71fa4e7da3f752087ed72f2d",
+    "private_research_npz": "5684d187ebf9a531f0b976fd5dc448c96ba56a8d94803bed4778f69c5f2be50b"
+  },
+  "exports": {
+    "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "my_torque.py": "682ae8eef25021eaebc34551bbe694185055ede5fe661ae2ba0f5968adfa1f5c",
+    "my_detector.py": "fb709c67d36e168af638b57490b16996525be996e65759fccbb9caf57adac4e7"
+  },
+  "sizes_bytes": {
+    "my_servo.py": 21721,
+    "my_torque.py": 25831,
+    "my_detector.py": 3487861
+  },
+  "embedded_model": {
+    "public_json_bytes": 3328933,
+    "encoding": "transparent float64 numeric literals in my_detector.py",
+    "compression": "none",
+    "sha256": "183df664558017be3e9d3faa9c5883cd6ca55c593c45a1e995afb0dcefee886c"
+  },
+  "limitations": [
+    "counterfactual correction is torque-mode only; servo retains the frozen R10 detector",
+    "two of three pickup-offset hybrid cases failed physical G4",
+    "no tool contact occurred in the frozen release pairs",
+    "simulation evidence only; no hardware or universal claim"
+  ],
+  "parity": [
+    {
+      "case": "ce0",
+      "kind": "normal",
+      "arrays": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true
+      },
+      "all_equal": true,
+      "detect_cycles": 0
+    },
+    {
+      "case": "ce0",
+      "kind": "release",
+      "arrays": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true
+      },
+      "all_equal": true,
+      "detect_cycles": 73
+    },
+    {
+      "case": "ce1",
+      "kind": "normal",
+      "arrays": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true
+      },
+      "all_equal": true,
+      "detect_cycles": 0
+    },
+    {
+      "case": "ce1",
+      "kind": "release",
+      "arrays": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true
+      },
+      "all_equal": true,
+      "detect_cycles": 176
+    },
+    {
+      "case": "ce2",
+      "kind": "normal",
+      "arrays": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true
+      },
+      "all_equal": true,
+      "detect_cycles": 0
+    },
+    {
+      "case": "ce2",
+      "kind": "release",
+      "arrays": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true
+      },
+      "all_equal": true,
+      "detect_cycles": 37
+    }
+  ],
+  "servo_fallback_parity": [
+    {
+      "kind": "normal",
+      "arrays": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true
+      },
+      "all_equal": true,
+      "finite": true
+    },
+    {
+      "kind": "collision",
+      "arrays": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true
+      },
+      "all_equal": true,
+      "finite": true
+    }
+  ]
+}

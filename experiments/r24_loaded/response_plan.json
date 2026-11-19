@@ -1,0 +1,10 @@
+{
+ "schema":"week09-r24-causal-support-revision.v1",
+ "reason":"Current signed table projection or instantaneous opposing sliding wrench moved the exposed no-force alarm from 3.861 to 3.867 only. The measured normal box-on-table reaction peaks before the base-yaw estimator; account for finite sensor memory, not elapsed task time.",
+ "cone":"Estimate an ambiguity interval for the signed base torque of the table: support unilateral Fz, geometric lever and prior frozen friction/torsion limits. The mean signed projected and total moments over the original yaw averaging window must corroborate the sign; subtract at most the modeled interval OR the corroborating measured net moment, whichever is smaller. Never add or reverse yaw.",
+ "fir":"No-intercept, normal-only ridge response of measured base yaw to past estimated support-normal force. Five consecutive 8-sample means span the existing 32+12 sample integration delay. Ridge = 0.02 * mean diagonal of X'X, no tuning. No tick, problem ID, actuator gain, force truth, ground-truth contact or current yaw as a regressor. No change to yaw threshold, core residual or other detection routes. Public model only.",
+ "mass_kg":[0.8,2.2,3.8,5.3,6.7,7.8],
+ "com_m":[[0.014,-0.02,0.008],[-0.018,0.013,-0.01],[0.02,0.006,-0.011],[-0.016,-0.014,0.019],[0.008,0.021,-0.013],[-0.023,0.015,0.006]],
+ "normal_gains":[[1,1,1,1,1,1],[1.009,0.99,1.007,0.993,1.011,0.989],[0.989,1.012,0.994,1.009,0.987,1.01],[1.017,0.982,1.013,0.989,1.02,0.983]],
+ "freeze":"24 no-force fitting simulations are not held-out evaluation. Both variants get exposed tests before selecting one with no protection loss; flag any new independent failure, no switching."
+}

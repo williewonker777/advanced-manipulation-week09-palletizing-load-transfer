@@ -1,0 +1,18 @@
+{
+  "schema": "r21-full-d4-force-audit-plan.v1",
+  "status": "FROZEN_BEFORE_AUDIT_RUN",
+  "matrix_sha256": "bc4b3dbb925cfb8609f535e1420f8b3f20785769b7f339708ca914b6992db791",
+  "cases": 180,
+  "detector_outcomes": false,
+  "proof": "exact array equality only; stock scalar order is one np.linalg.norm call per tick",
+  "source_pins": {
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "sim/runner.py": "3cf99c21b93f431cc57a0929e4d05b083fb8f35f06dc52bc2d2ddcde3e55ed1f",
+    "sim/plant.py": "8f4a16e1d083dc8559ac21427166c78db7261b7bedd149b8dae8f789a6245f1e",
+    "tools/kit_manifest.sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+    "tools/check_integrity.py": "f448980a2bd1384c0e23ceec6f7c19d8213b55cf7b2a6e1407d3162b6b5b69e5",
+    "tools/d4_robustness.py": "97420c69151a008a24b839a3df9b2b11eafc33033c4393cf6512fd91fb1f62e6",
+    "tools/sweep.py": "8b548d783a509e41392c8a99aa3107841ea0793ec9bad689c24be30923ea101e",
+    "experiments/r21_full_protection/force_audit.py": "16892b23329d72ff03c6a0d92c43e229799264f61f5dcf143fed746f5c8567b9"
+  }
+}

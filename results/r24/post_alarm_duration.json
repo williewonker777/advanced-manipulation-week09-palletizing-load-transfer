@@ -1,0 +1,959 @@
+{
+  "schema": "week09-r24-post-event-ablation.v1",
+  "post_disclosure_diagnosis_only": true,
+  "prior_independent_result_sha256": "dfce0da5e2ded2dd0dfb3e02a168aca48f661f715df0647fb1b46c1c87872c08",
+  "actual_episodes": 24,
+  "full_diagnostic_sha256": "519a5c5b28c3452dd938d72e425355e509cc694526efdfa39ca48948bcf2dff1",
+  "indices": "milliseconds, half-open intervals [first active sample, first inactive sample)",
+  "failed_slot_classification_priority": "no attributable edge; duplicate; only required quiet prefix failed; other",
+  "failed_slot_counts": {
+    "no_real_rise": 23,
+    "duplicate": 2,
+    "quiet_25ms": 8,
+    "other": 0
+  },
+  "rows": [
+    {
+      "case": "s24_transfer_offaxis_early",
+      "mechanics": "stock",
+      "arms": {
+        "r23": {
+          "none": {
+            "force_intervals": [],
+            "output_intervals": [],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          },
+          "force": {
+            "force_intervals": [
+              [
+                1334,
+                1453
+              ]
+            ],
+            "output_intervals": [
+              [
+                1394,
+                1400
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1394,
+                  1400
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          }
+        },
+        "pickup_only": {
+          "none": {
+            "force_intervals": [],
+            "output_intervals": [],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          },
+          "force": {
+            "force_intervals": [
+              [
+                1334,
+                1453
+              ]
+            ],
+            "output_intervals": [
+              [
+                1394,
+                1471
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1394,
+                  1407
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [
+                [
+                  1400,
+                  1471
+                ]
+              ],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          }
+        },
+        "dc_only": {
+          "none": {
+            "force_intervals": [],
+            "output_intervals": [],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          },
+          "force": {
+            "force_intervals": [
+              [
+                1334,
+                1453
+              ]
+            ],
+            "output_intervals": [
+              [
+                1394,
+                1400
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1394,
+                  1400
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          }
+        },
+        "joint": {
+          "none": {
+            "force_intervals": [],
+            "output_intervals": [],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          },
+          "force": {
+            "force_intervals": [
+              [
+                1334,
+                1453
+              ]
+            ],
+            "output_intervals": [
+              [
+                1394,
+                1471
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1394,
+                  1407
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [
+                [
+                  1400,
+                  1471
+                ]
+              ],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "case": "p24_transfer_near_cross",
+      "mechanics": "actuator_delay_gain",
+      "arms": {
+        "r23": {
+          "none": {
+            "force_intervals": [],
+            "output_intervals": [],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          },
+          "first": {
+            "force_intervals": [
+              [
+                1521,
+                1641
+              ]
+            ],
+            "output_intervals": [
+              [
+                1561,
+                1655
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1607,
+                  1640
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1561,
+                  1655
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          },
+          "second": {
+            "force_intervals": [
+              [
+                1686,
+                1806
+              ]
+            ],
+            "output_intervals": [
+              [
+                1714,
+                1732
+              ],
+              [
+                1737,
+                1754
+              ],
+              [
+                1786,
+                1808
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1714,
+                  1732
+                ],
+                [
+                  1737,
+                  1754
+                ],
+                [
+                  1786,
+                  1808
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          },
+          "both": {
+            "force_intervals": [
+              [
+                1521,
+                1641
+              ],
+              [
+                1686,
+                1806
+              ]
+            ],
+            "output_intervals": [
+              [
+                1561,
+                1655
+              ],
+              [
+                1714,
+                1752
+              ],
+              [
+                1791,
+                1807
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1607,
+                  1640
+                ],
+                [
+                  1714,
+                  1752
+                ],
+                [
+                  1791,
+                  1807
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1561,
+                  1655
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          }
+        },
+        "pickup_only": {
+          "none": {
+            "force_intervals": [],
+            "output_intervals": [],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          },
+          "first": {
+            "force_intervals": [
+              [
+                1521,
+                1641
+              ]
+            ],
+            "output_intervals": [
+              [
+                1561,
+                1655
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1607,
+                  1640
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1561,
+                  1655
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          },
+          "second": {
+            "force_intervals": [
+              [
+                1686,
+                1806
+              ]
+            ],
+            "output_intervals": [
+              [
+                1714,
+                1732
+              ],
+              [
+                1737,
+                1754
+              ],
+              [
+                1786,
+                1808
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1714,
+                  1732
+                ],
+                [
+                  1737,
+                  1754
+                ],
+                [
+                  1786,
+                  1808
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          },
+          "both": {
+            "force_intervals": [
+              [
+                1521,
+                1641
+              ],
+              [
+                1686,
+                1806
+              ]
+            ],
+            "output_intervals": [
+              [
+                1561,
+                1655
+              ],
+              [
+                1714,
+                1752
+              ],
+              [
+                1791,
+                1807
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1607,
+                  1640
+                ],
+                [
+                  1714,
+                  1752
+                ],
+                [
+                  1791,
+                  1807
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1561,
+                  1655
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [],
+              "dc_admitted": [],
+              "dc_reaction_active": []
+            }
+          }
+        },
+        "dc_only": {
+          "none": {
+            "force_intervals": [],
+            "output_intervals": [],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_admitted": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_reaction_active": [
+                [
+                  3841,
+                  3900
+                ]
+              ]
+            }
+          },
+          "first": {
+            "force_intervals": [
+              [
+                1521,
+                1641
+              ]
+            ],
+            "output_intervals": [
+              [
+                1561,
+                1655
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1607,
+                  1640
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1561,
+                  1655
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_admitted": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_reaction_active": [
+                [
+                  3836,
+                  3900
+                ]
+              ]
+            }
+          },
+          "second": {
+            "force_intervals": [
+              [
+                1686,
+                1806
+              ]
+            ],
+            "output_intervals": [
+              [
+                1714,
+                1732
+              ],
+              [
+                1737,
+                1754
+              ],
+              [
+                1786,
+                1808
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1714,
+                  1732
+                ],
+                [
+                  1737,
+                  1754
+                ],
+                [
+                  1786,
+                  1808
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_admitted": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_reaction_active": [
+                [
+                  3840,
+                  3900
+                ]
+              ]
+            }
+          },
+          "both": {
+            "force_intervals": [
+              [
+                1521,
+                1641
+              ],
+              [
+                1686,
+                1806
+              ]
+            ],
+            "output_intervals": [
+              [
+                1561,
+                1655
+              ],
+              [
+                1714,
+                1752
+              ],
+              [
+                1791,
+                1807
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1607,
+                  1640
+                ],
+                [
+                  1714,
+                  1752
+                ],
+                [
+                  1791,
+                  1807
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1561,
+                  1655
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_admitted": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_reaction_active": [
+                [
+                  3841,
+                  3900
+                ]
+              ]
+            }
+          }
+        },
+        "joint": {
+          "none": {
+            "force_intervals": [],
+            "output_intervals": [],
+            "channel_intervals": {
+              "r10": [],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_admitted": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_reaction_active": [
+                [
+                  3841,
+                  3900
+                ]
+              ]
+            }
+          },
+          "first": {
+            "force_intervals": [
+              [
+                1521,
+                1641
+              ]
+            ],
+            "output_intervals": [
+              [
+                1561,
+                1655
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1607,
+                  1640
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1561,
+                  1655
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_admitted": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_reaction_active": [
+                [
+                  3836,
+                  3900
+                ]
+              ]
+            }
+          },
+          "second": {
+            "force_intervals": [
+              [
+                1686,
+                1806
+              ]
+            ],
+            "output_intervals": [
+              [
+                1714,
+                1732
+              ],
+              [
+                1737,
+                1754
+              ],
+              [
+                1786,
+                1808
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1714,
+                  1732
+                ],
+                [
+                  1737,
+                  1754
+                ],
+                [
+                  1786,
+                  1808
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_admitted": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_reaction_active": [
+                [
+                  3840,
+                  3900
+                ]
+              ]
+            }
+          },
+          "both": {
+            "force_intervals": [
+              [
+                1521,
+                1641
+              ],
+              [
+                1686,
+                1806
+              ]
+            ],
+            "output_intervals": [
+              [
+                1561,
+                1655
+              ],
+              [
+                1714,
+                1752
+              ],
+              [
+                1791,
+                1807
+              ]
+            ],
+            "channel_intervals": {
+              "r10": [
+                [
+                  1607,
+                  1640
+                ],
+                [
+                  1714,
+                  1752
+                ],
+                [
+                  1791,
+                  1807
+                ]
+              ],
+              "horizontal": [],
+              "yaw": [
+                [
+                  1561,
+                  1655
+                ]
+              ],
+              "light": [],
+              "detached": [],
+              "pickup_event": [],
+              "changed_drive": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_admitted": [
+                [
+                  1007,
+                  6000
+                ]
+              ],
+              "dc_reaction_active": [
+                [
+                  3841,
+                  3900
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

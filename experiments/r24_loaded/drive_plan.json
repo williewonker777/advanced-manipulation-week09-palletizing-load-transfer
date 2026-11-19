@@ -1,0 +1,10 @@
+{
+ "schema": "week09-r24-measured-drive-departure.v1",
+ "reason": "Always crediting support suppressed the normal artifact but delayed stock near-contact shocks. Preserve the incumbent's original calibrated regime; admit the normal-pressure response only when independently measured motor transmission departs from nominal.",
+ "estimation": "Torque-side momentum identity on the three elastic joints. 48-sample mean command and inferred delivered motor torque, including encoder momentum difference, nominal friction and first-order JTS lag endpoint correction. Regression with intercept removes unknown constant sensor bias. 20 complete windows after a discarded first window, before first grip; lock the estimate and do not read force schedule, residual hit, variant labels or later contacts.",
+ "commissioning": "Original nominal drive, same taught unloaded motion with 12 predeclared different JTS noise seeds. Do not claim these are 12 trajectories. Separate unseen-by-envelope noise seeds check nominal rejection and detection of perturbations without tuning.",
+ "train_noise_seeds": [21,29,37,53,67,79,97,113,127,139,151,167],
+ "check_noise_seeds": [193,223,257,307],
+ "bands": "Per-joint min-to-max commissioning estimate padded on each side by one full observed span (minimum 0.002 gain) for conservative recognition. Require at least two of the three well-excited joints outside their bands. If unavailable, return the exact unmodified R23 yaw.",
+ "variants": "Use the previously locked normal-only FIR as the first candidate. A signed cone is separately reportable. No post-holdout revision or eligibility rule based on test case, actual gain, force schedule or robot mass."
+}

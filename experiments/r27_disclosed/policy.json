@@ -1,0 +1,18 @@
+{
+  "schema": "r27-closed-grip-comparison-policy.v1",
+  "state": "REGISTERED_BEFORE_FORCED_CANDIDATE_OUTPUT",
+  "control": "fixed default student my_torque; separate R24 landing-controller experiments must not be pooled",
+  "baseline": "experiments.r26_yaw_acquisition.candidate:Detector",
+  "baseline_sha256": "212f4e79367cb636c0143a2d1f8aa7ba5584aaaca5ecde6b412d01a4985b6784",
+  "prior_archive_sha256": "854459ef3292f3c20eae7bc8ba829a83eae70e6ce2b5e66f5b89abeb6836489a",
+  "disclosed_contrasts": {
+    "cases": ["s26_long_carry_signed", "s26_long_place_lateral"],
+    "mechanics": ["stock", "actuator_deadzone", "place_surface_shift"],
+    "directions": ["registered", "reverse", "perpendicular_xy", "perpendicular_tilt"],
+    "counterfactual": "One authentic (None,None) per family/arm, plus registered, negative, two linearly independent orthogonal force vectors of exactly the registered norm. Original mass, COM, duration and start. 30 episodes per arm. No use of the zero twin or direction by any runtime detector."
+  },
+  "known_candidates": ["r27_load_change: adjacent-block signed innovation in a native torque residual", "r27_loaded_observer: single-stream physics force model fit on independent normal-only data"],
+  "development_floor": "Signal requires a new quiet attributable single rise, stock target carry AND place while force is physically present; no new false/duplicate or prior strict timing/duration loss beyond +5, no stuck alarm, real tool and physical/prefix exact. Check registered broad R26(), transformed contrast families including negatives, audit normals, earlier R25/R24/R23 paired/weak/cohort protections, D4 385 and original 29 official torque. Mark a true partial gain if only one succeeds, but do not enroll it on a weak relative score.",
+  "tie": "Among genuinely eligible frozen mechanisms, rank by strict hits in the signed contrast panel, then fewer active samples on its new hits, then fewer added online inverse dynamics. No selection if none clears the floor.",
+  "independent": "One chosen SHA only, never use a blind output to reselect or tune. If none qualifies reserve the unopened test. Report positive qualification and existing-condition preservation separately; no automatic default or hardware changes."
+}

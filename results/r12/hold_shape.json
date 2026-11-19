@@ -1,0 +1,50 @@
+{
+  "schema": "r12-hold-shape-summary.v1",
+  "decision": "STOP_NEGATIVE",
+  "design": "second-order low-pass equilibrium-error state driving public mass-shaped omega=4rad/s, zeta=.8 auxiliary impedance; zero state outside stationary hold",
+  "episodes": 30,
+  "results": {
+    "tail_baseline_range_deg": [
+      0.19221568388663685,
+      0.3395634620997691
+    ],
+    "tail_candidate_range_deg": [
+      0.11857939503002139,
+      0.25859205204453367
+    ],
+    "tail_ratio_range": [
+      0.5543980444212757,
+      0.8624627941529401
+    ],
+    "tails_le_0.05deg": 0,
+    "normal_rms_ratio_range": [
+      0.9918619446883505,
+      0.9978114540659421
+    ],
+    "normal_peak_ratio_max": 1.0,
+    "event_failures": [
+      "hs0:rest_pulse"
+    ],
+    "delay_failures": [
+      "hs0:rest_pulse"
+    ],
+    "motion_failures": 0,
+    "normal_FA_failures": 0,
+    "saturation_failures": 0,
+    "worst_p99_us": 322.4631000000001,
+    "maximum_aux_nm": 2.3867106240341283
+  },
+  "pins": {
+    "candidate": "e5df9cc185551e02ff906018dd1a07abdb8101c3ced6bfcda9e3b2b01c020ad6",
+    "qualification": "5bfbac14200aed2fafb5f8a478bcccbcfaeffbd7b72e1cd60dfac76a26bdbcd5",
+    "r1": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "ring": "64995c9e26ef63142d053b503c87d27321e5032930198d03d7e5aa1cdc116e85",
+    "plan": "81fbc655693e637a81de24f574773aaeed1c0fd01b9e9342825e27de984806a5",
+    "development": "e5a194c9810b25028bfb19e302d82db9e2a109af9495427c9d50d2598f889168"
+  },
+  "retuning": false,
+  "independent_validation_opened": false,
+  "promotion_eligible": false,
+  "conclusion": "Slow impedance consistently reduced tail by 14\u201345%, preserved normal cost and pre-hold kinematics, but was far too weak for 0.05deg and altered one prompt detector signature enough to lose an R1 event. Stronger/faster gains would trade further against prompt detection and were not tried post-freeze."
+}

@@ -1,0 +1,493 @@
+{
+  "candidate_sha256": "1e33b4698ef3678afe72cc4e286fcab5d27b2232e7bf087fdef7500ccc674764",
+  "classification": "historical comparisons",
+  "comparators": {
+    "r29_composed": {
+      "normals": {
+        "additional": {
+          "episodes": 36,
+          "losses": [],
+          "new_false_rises": 0
+        },
+        "normal": {
+          "episodes": 30,
+          "losses": [],
+          "new_false_rises": 0
+        }
+      },
+      "r26": {
+        "absolute_non_strict": [
+          [
+            "p26_close_transfer_oblique",
+            "stock",
+            "both_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "stock",
+            "isolated_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "actuator_deadzone",
+            "both_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "actuator_deadzone",
+            "isolated_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "place_surface_shift",
+            "both_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "place_surface_shift",
+            "isolated_second",
+            []
+          ]
+        ],
+        "counts": {
+          "new": {
+            "all_four": 6,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 57,
+            "strict": 51
+          },
+          "old": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 57,
+            "strict": 48
+          }
+        },
+        "guard_losses": []
+      },
+      "signed": {
+        "gains": [],
+        "losses": [],
+        "new_duplicates": [],
+        "new_strict": 21,
+        "old_duplicates": [],
+        "old_strict": 21,
+        "slots": 24
+      }
+    },
+    "r29_rising": {
+      "normals": {
+        "additional": {
+          "episodes": 36,
+          "losses": [],
+          "new_false_rises": 0
+        },
+        "normal": {
+          "episodes": 30,
+          "losses": [],
+          "new_false_rises": 0
+        }
+      },
+      "r26": {
+        "absolute_non_strict": [
+          [
+            "p26_close_transfer_oblique",
+            "stock",
+            "both_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "stock",
+            "isolated_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "actuator_deadzone",
+            "both_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "actuator_deadzone",
+            "isolated_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "place_surface_shift",
+            "both_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "place_surface_shift",
+            "isolated_second",
+            []
+          ]
+        ],
+        "counts": {
+          "new": {
+            "all_four": 6,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 57,
+            "strict": 51
+          },
+          "old": {
+            "all_four": 6,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 57,
+            "strict": 51
+          }
+        },
+        "guard_losses": [
+          [
+            "p26_close_place_cross",
+            "stock",
+            [
+              "isolated_second:time"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "actuator_deadzone",
+            [
+              "isolated_second:time"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "place_surface_shift",
+            [
+              "isolated_second:time"
+            ]
+          ]
+        ]
+      },
+      "signed": {
+        "gains": [
+          [
+            "s26_long_carry_signed",
+            "stock",
+            "perpendicular_xy",
+            35
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "perpendicular_xy",
+            46
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "perpendicular_xy",
+            53
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "perpendicular_xy",
+            53
+          ]
+        ],
+        "losses": [],
+        "new_duplicates": [],
+        "new_strict": 21,
+        "old_duplicates": [
+          [
+            "s26_long_carry_signed",
+            "stock",
+            "perpendicular_xy",
+            [
+              29,
+              35
+            ]
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "perpendicular_xy",
+            [
+              32,
+              46
+            ]
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "perpendicular_xy",
+            [
+              30,
+              53
+            ]
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "perpendicular_xy",
+            [
+              32,
+              53
+            ]
+          ]
+        ],
+        "old_strict": 17,
+        "slots": 24
+      }
+    },
+    "r30_headroom": {
+      "normals": {
+        "additional": {
+          "episodes": 36,
+          "losses": [],
+          "new_false_rises": 0
+        },
+        "normal": {
+          "episodes": 30,
+          "losses": [],
+          "new_false_rises": 0
+        }
+      },
+      "r26": {
+        "absolute_non_strict": [
+          [
+            "p26_close_transfer_oblique",
+            "stock",
+            "both_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "stock",
+            "isolated_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "actuator_deadzone",
+            "both_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "actuator_deadzone",
+            "isolated_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "place_surface_shift",
+            "both_second",
+            []
+          ],
+          [
+            "p26_close_transfer_oblique",
+            "place_surface_shift",
+            "isolated_second",
+            []
+          ]
+        ],
+        "counts": {
+          "new": {
+            "all_four": 6,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 57,
+            "strict": 51
+          },
+          "old": {
+            "all_four": 6,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 57,
+            "strict": 51
+          }
+        },
+        "guard_losses": []
+      },
+      "signed": {
+        "gains": [],
+        "losses": [],
+        "new_duplicates": [],
+        "new_strict": 21,
+        "old_duplicates": [],
+        "old_strict": 21,
+        "slots": 24
+      }
+    }
+  },
+  "cross": {
+    "assessments": {
+      "c3": {
+        "counts": {
+          "c3": {
+            "all_four": 0,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 6
+          },
+          "new": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 12
+          }
+        },
+        "losses": []
+      },
+      "composed": {
+        "counts": {
+          "composed": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 12
+          },
+          "new": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 12
+          }
+        },
+        "losses": []
+      }
+    },
+    "episodes": 36
+  },
+  "input_sha256": {
+    "r29/composed/additional.json": "65f202ff95fda94600574d47d8cff1bfad9af9c8946f5702940ca78bed7aaa3c",
+    "r29/composed/directions.json": "71fc3970a48a74ea903c6e146aae5adfcd9b4ad9cd93fdb9d1465fb5bb4275f9",
+    "r29/composed/normal.json": "760ba028f5a1fa46acf7a2a425e43795df2ee382434188fde813aab9d5e239ca",
+    "r29/composed/whole.json": "ad4fd0337448640db59679489a8bde72db38ededa9b42d4f298615d6044a8051",
+    "r29/loaded_rising/additional.json": "746ad39d3b39e9785a1b70d53fbf9dbb0cd2091c6f0140523015ee2a37fdfef9",
+    "r29/loaded_rising/directions.json": "7039ff72aaacb66026d697da1f94591b2629292429ab7f83a80ce567b2cee90e",
+    "r29/loaded_rising/full_r26.json": "cb88fb4e9dd160c753931aadef4e0576f9023a8d81d7e2cf1f57da689038561a",
+    "r29/loaded_rising/normal.json": "81a893beda4f53a18458a2edf214fe2d440e40a26c5a59d5bc5309109226aa9f",
+    "r30/headroom/additional.json": "23c0edee4afb27e08cc2a762bca326fa4c6736638316589dd5986e7c7b9a6c38",
+    "r30/headroom/directions.json": "d0252c4614d0c1bcd38d8c40d0c6516d3f2f4f570a6a95e72b271c4b6477dec7",
+    "r30/headroom/full.json": "d4b4eac1aa264c31d8b5ab4ba6428d4ef07a4d84991613c1b64c0909666da9ec",
+    "r30/headroom/normal.json": "83910c99698614586c162d43b1a98eabd93d94d8bfd23aaf90ffb68bfa9d156e",
+    "r31/identity/additional.json": "ff9f3cb62bc6ca0325419cd603a6b143f1e8377e4879e5ef83ee47c1f8effca3",
+    "r31/identity/cross.json": "8919663c62e6f90f99bdc3b0937c0cd2f10a18ef316fb1c4a42b2142f5774b12",
+    "r31/identity/directions.json": "402c2a0a51a7653e344d6f38cec1ccfc778189b496035d2efd08b46b00714a15",
+    "r31/identity/full.json": "ca228e57391651369b3732dbb4b5bd38c05f0b8a92db0fd5bcaf6b00c6155b87",
+    "r31/identity/normals.json": "ef5688789fb3ddc21a81f4329d87894cccc2197a8a7e3bf9dc1765812d7c9ce4",
+    "r31/identity/r25.json": "088efca7ebde21bda1feb57022fcba40e727583b3a3bd0474ecb5ffd6a0848c8"
+  },
+  "normal_conditions_per_arm": 33,
+  "paired_second_slots": 9,
+  "paired_slots": {
+    "both_first": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 6,
+      "experiments.r31_held_identity.candidate:Detector": 9
+    },
+    "both_second": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 0,
+      "experiments.r31_held_identity.candidate:Detector": 6
+    },
+    "isolated_first": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 6,
+      "experiments.r31_held_identity.candidate:Detector": 9
+    },
+    "isolated_second": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 3,
+      "experiments.r31_held_identity.candidate:Detector": 6
+    },
+    "long_single": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 8,
+      "experiments.r31_held_identity.candidate:Detector": 9
+    }
+  },
+  "r25": {
+    "assessments": {
+      "c3": {
+        "counts": {
+          "c3": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 57
+          },
+          "new": {
+            "all_four": 5,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 62
+          }
+        },
+        "losses": []
+      },
+      "composed": {
+        "counts": {
+          "composed": {
+            "all_four": 5,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 62
+          },
+          "new": {
+            "all_four": 5,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 62
+          }
+        },
+        "losses": []
+      }
+    },
+    "episodes": 198
+  },
+  "r26_counts": {
+    "experiments.r26_yaw_acquisition.candidate:Detector": {
+      "all_four": 0,
+      "duplicate_edges": 0,
+      "duplicate_slots": 0,
+      "false_rises": 0,
+      "slots": 57,
+      "strict": 29
+    },
+    "experiments.r31_held_identity.candidate:Detector": {
+      "all_four": 6,
+      "duplicate_edges": 0,
+      "duplicate_slots": 0,
+      "false_rises": 0,
+      "slots": 57,
+      "strict": 51
+    }
+  },
+  "schema": "r31-disclosed-matched-controls.v1"
+}

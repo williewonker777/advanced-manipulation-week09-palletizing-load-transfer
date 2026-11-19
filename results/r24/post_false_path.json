@@ -1,0 +1,213 @@
+{
+  "schema": "r24-after-disclosure-false-path.v1",
+  "post_disclosure_diagnosis_only": true,
+  "prior_result_sha256": "dfce0da5e2ded2dd0dfb3e02a168aca48f661f715df0647fb1b46c1c87872c08",
+  "case": {
+    "id": "s24_detached_offaxis_b",
+    "phase": "post_detachment",
+    "mass": 7.43,
+    "com": [
+      0.025,
+      0.018,
+      -0.013
+    ],
+    "offset": null,
+    "impact": [
+      4.348,
+      [
+        -5.9,
+        6.4,
+        -2.0
+      ]
+    ]
+  },
+  "mechanics": "actuator_delay_gain",
+  "actual_episodes": 4,
+  "records": {
+    "r23_free": {
+      "none": {
+        "actual_impact_start_ms": null,
+        "reported_ticks_in_capture": [
+          3922,
+          3923,
+          3924,
+          3925,
+          3926,
+          3927,
+          3928,
+          3929
+        ],
+        "at_rise": {
+          "reported": true,
+          "active_paths": [
+            "r10",
+            "directional"
+          ],
+          "grip": false,
+          "drive_departure": null,
+          "estimated_table_N": 0.0,
+          "yaw_Nm": null,
+          "yaw_limit_Nm": 3.418925992202723,
+          "raw_yaw_Nm": null,
+          "r10_suspicion": 0.37739847418317823,
+          "r10_fast_suspicion": 1.7572142846703445,
+          "actual_table_N": 83.07418744258074,
+          "applied_force_N": 0.0,
+          "actual_tool_N": 0.0
+        },
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "60f63d6a56e82af465253e7c041c4e6a8792000ef49f48d803ab20af0a9ea834",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "78a0069c830e6e239d9735f7c595d4a0501ec6a9cb57f88c77e2ffc4eb1cb219",
+          "e_mm": "5348587ffdc829868958142b746af3caac8ebd7b8e845605908af789d265122a",
+          "f_table": "3d939cc554dc55c599763aaaebd8cce8e833e9487d03c88b2015ed5fb5fc83c9",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "416c207eee3683e766193b0df56db3d2b37bc3ea09aca208c20d79c270503ca1",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        }
+      },
+      "force": {
+        "actual_impact_start_ms": 4349,
+        "reported_ticks_in_capture": [
+          3922,
+          3923,
+          3924,
+          3925,
+          3926,
+          3927,
+          3928,
+          3929
+        ],
+        "at_rise": {
+          "reported": true,
+          "active_paths": [
+            "r10",
+            "directional"
+          ],
+          "grip": false,
+          "drive_departure": null,
+          "estimated_table_N": 0.0,
+          "yaw_Nm": null,
+          "yaw_limit_Nm": 3.418925992202723,
+          "raw_yaw_Nm": null,
+          "r10_suspicion": 0.37739847418317823,
+          "r10_fast_suspicion": 1.7572142846703445,
+          "actual_table_N": 83.07418744258074,
+          "applied_force_N": 0.0,
+          "actual_tool_N": 0.0
+        },
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "f9b5f4d34c025e5bad0d9a432891d7b4e463f3d540d28e98a704b74bd22e548b",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "a4f56b98929849c35474ec8a181ad617ea1a6d093d0465659bc10163de21299d",
+          "e_mm": "4d54b13a0e58f98d7c4b8da53ed5ca30e28e9dbcbede682ee4796496981b94ce",
+          "f_table": "3d939cc554dc55c599763aaaebd8cce8e833e9487d03c88b2015ed5fb5fc83c9",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "378f2664330f62adc7ef26e4fe3a7ee56b93f60e300ff42746eb57e78bb8b2de",
+          "f_ext": "d4ad7b20924907ab6ee17ef80ba76c9b2ad0c08106c5f35daf317f413b4d8d18",
+          "f_ext_xyz_native": "f41e1167a8eef1cd6318957a5cd0afd3dc6153c950acf6761351f77575bbcd81",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "50bf23903416c30d0b6336224faf6ba11f42d611b1981a89b12b93f739be0994"
+        }
+      }
+    },
+    "r24": {
+      "none": {
+        "actual_impact_start_ms": null,
+        "reported_ticks_in_capture": [
+          3922,
+          3923,
+          3924,
+          3925,
+          3926,
+          3927,
+          3928,
+          3929
+        ],
+        "at_rise": {
+          "reported": true,
+          "active_paths": [
+            "r10",
+            "directional"
+          ],
+          "grip": false,
+          "drive_departure": true,
+          "estimated_table_N": 0.0,
+          "yaw_Nm": null,
+          "yaw_limit_Nm": 3.418925992202723,
+          "raw_yaw_Nm": null,
+          "r10_suspicion": 0.37739847418317823,
+          "r10_fast_suspicion": 1.7572142846703445,
+          "actual_table_N": 83.07418744258074,
+          "applied_force_N": 0.0,
+          "actual_tool_N": 0.0
+        },
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "60f63d6a56e82af465253e7c041c4e6a8792000ef49f48d803ab20af0a9ea834",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "78a0069c830e6e239d9735f7c595d4a0501ec6a9cb57f88c77e2ffc4eb1cb219",
+          "e_mm": "5348587ffdc829868958142b746af3caac8ebd7b8e845605908af789d265122a",
+          "f_table": "3d939cc554dc55c599763aaaebd8cce8e833e9487d03c88b2015ed5fb5fc83c9",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "416c207eee3683e766193b0df56db3d2b37bc3ea09aca208c20d79c270503ca1",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        }
+      },
+      "force": {
+        "actual_impact_start_ms": 4349,
+        "reported_ticks_in_capture": [
+          3922,
+          3923,
+          3924,
+          3925,
+          3926,
+          3927,
+          3928,
+          3929
+        ],
+        "at_rise": {
+          "reported": true,
+          "active_paths": [
+            "r10",
+            "directional"
+          ],
+          "grip": false,
+          "drive_departure": true,
+          "estimated_table_N": 0.0,
+          "yaw_Nm": null,
+          "yaw_limit_Nm": 3.418925992202723,
+          "raw_yaw_Nm": null,
+          "r10_suspicion": 0.37739847418317823,
+          "r10_fast_suspicion": 1.7572142846703445,
+          "actual_table_N": 83.07418744258074,
+          "applied_force_N": 0.0,
+          "actual_tool_N": 0.0
+        },
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "f9b5f4d34c025e5bad0d9a432891d7b4e463f3d540d28e98a704b74bd22e548b",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "a4f56b98929849c35474ec8a181ad617ea1a6d093d0465659bc10163de21299d",
+          "e_mm": "4d54b13a0e58f98d7c4b8da53ed5ca30e28e9dbcbede682ee4796496981b94ce",
+          "f_table": "3d939cc554dc55c599763aaaebd8cce8e833e9487d03c88b2015ed5fb5fc83c9",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "378f2664330f62adc7ef26e4fe3a7ee56b93f60e300ff42746eb57e78bb8b2de",
+          "f_ext": "d4ad7b20924907ab6ee17ef80ba76c9b2ad0c08106c5f35daf317f413b4d8d18",
+          "f_ext_xyz_native": "f41e1167a8eef1cd6318957a5cd0afd3dc6153c950acf6761351f77575bbcd81",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "50bf23903416c30d0b6336224faf6ba11f42d611b1981a89b12b93f739be0994"
+        }
+      }
+    }
+  },
+  "scope": "Observation only. Applied/tool/table force truth is joined after simulation. No change to the candidate, scorer, or independent outcome."
+}

@@ -1,0 +1,228 @@
+{
+  "schema": "r18-release-continuity-summary.v1",
+  "decision": "reject",
+  "cause": "counterfactual directional My persistence exposes pre-release state when grip fall disables table projection; not post-release command discontinuity",
+  "reproduction": {
+    "r15": {
+      "support": {
+        "mean_mg": 0.762143302407863,
+        "min_mg": 0.6697116233359802,
+        "peak_mg": 1.0482700284915423,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "false_alarm_times": []
+    },
+    "r16": {
+      "support": {
+        "mean_mg": 0.5862790945620968,
+        "min_mg": 0.44220601213176003,
+        "peak_mg": 1.0426972740262785,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "false_alarm_times": []
+    },
+    "r17": {
+      "support": {
+        "mean_mg": 0.6191795753371304,
+        "min_mg": 0.4770819976412971,
+        "peak_mg": 1.0391750986013528,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "false_alarm_times": [
+        3.903
+      ]
+    },
+    "continuity": {
+      "support": {
+        "mean_mg": 0.6191795753371304,
+        "min_mg": 0.4770819976412971,
+        "peak_mg": 1.0391750986013528,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "false_alarm_times": [
+        3.903
+      ]
+    }
+  },
+  "scores": {
+    "r15": {
+      "3.9": 0.8609643376328988,
+      "3.901": 0.7410503511829318,
+      "3.902": 0.9737729915794658,
+      "3.903": 0.7956698909576789
+    },
+    "r16": {
+      "3.9": 1.2651334430748407,
+      "3.901": 1.0862126494272621,
+      "3.902": 1.2635334834720748,
+      "3.903": 0.9119878232229625
+    },
+    "r17": {
+      "3.9": 1.1408734437101025,
+      "3.901": 1.055877544033653,
+      "3.902": 1.2169693336509686,
+      "3.903": 1.0321048543208506
+    },
+    "continuity": {
+      "3.9": 1.1408734437101025,
+      "3.901": 1.055877544033653,
+      "3.902": 1.2169693336509686,
+      "3.903": 1.0328582584815376
+    }
+  },
+  "command_derivative_norm": {
+    "r17": {
+      "3.9": 1106.5104218216825,
+      "3.901": 1888.130123517783,
+      "3.902": 534.305395143616,
+      "3.903": 578.5442701137624
+    },
+    "continuity": {
+      "3.9": 0.0,
+      "3.901": 0.156520098544287,
+      "3.902": 1.6532105769572558,
+      "3.903": 6.213987001276239
+    }
+  },
+  "study": {
+    "schema": "r18-release-continuity-study.v1",
+    "rows": [
+      {
+        "domain": "stock",
+        "id": "sh5",
+        "candidate": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.6133808455887575,
+            "tcp_max": 8.522036262999025,
+            "place_step": 12.235051215735893,
+            "pick_step": 8.955447076802301,
+            "place_force": 67.79214631990716
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 1,
+          "false_alarm_times": [
+            3.903
+          ],
+          "tool_delay_ms": 11.0,
+          "ctrl_p99_us": 399.5010169455782,
+          "registration": {
+            "accepted": false,
+            "estimated_extra_height_mm": -0.1992332759821681,
+            "half_width_mm": 1.1593092812471633,
+            "command_world_z_mm": 0.0,
+            "finish_t": 3.5500000000000003,
+            "stream_completed_at_s": 3.527,
+            "stream_timing_us": {
+              "p95": 254.73899999999998,
+              "p99": 296.759,
+              "max": 376.439,
+              "finish": 17.84
+            },
+            "ik_max_position_error_m": 0.0,
+            "ik_max_orientation_error_rad": 0.0
+          },
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.6191795753371304,
+            "min_mg": 0.4770819976412971,
+            "peak_mg": 1.0391750986013528,
+            "samples": 20,
+            "mean_ge_050": true,
+            "min_ge_025": true,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.4605188665025444,
+              -2.234325086960428
+            ],
+            "mean_lowest_corner_mm": -2.380950997251151,
+            "mean_corner_spread_mm": 1.6447361153598457,
+            "mean_face_tilt_deg": 0.2763510931739549,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 4.52116988074839,
+            "free_minus_rigid_mean_mm": -0.912794651704598,
+            "first_to_last_lowest_corner_speed_mm_s": 11.848789986816278
+          },
+          "continuity": {
+            "samples": 40,
+            "edge_t": 3.9,
+            "max_delta_nm": 13.445984555031885
+          }
+        },
+        "g4": {
+          "mean_gain_mg": 0.4925626575873734,
+          "all_four_g4": true
+        },
+        "ratios": {
+          "r10": {
+            "tcp_rms": 1.042985015948643,
+            "tcp_max": 1.0003385414385175,
+            "place_step": 1.007657897365319,
+            "pick_step": 0.9992295088088584,
+            "place_force": 0.9886711808408736
+          },
+          "r15": {
+            "tcp_rms": 1.0370441737181668,
+            "tcp_max": 1.0,
+            "place_step": 1.0000159281319934,
+            "pick_step": 1.0,
+            "place_force": 0.9913238672832448
+          }
+        },
+        "gates": {
+          "status": true,
+          "g4": true,
+          "cost_r10": true,
+          "cost_r15": true,
+          "false_events": false,
+          "tool": true,
+          "saturation": true,
+          "timing": true
+        },
+        "passed": false
+      }
+    ],
+    "sh5_passed": false,
+    "complete": false,
+    "passed": false,
+    "sources": {
+      "experiments/r18_release_continuity/study.py": "62d67828c5e777ebe256f9a123ea476d624882336472a48c01637233549448c9",
+      "experiments/r18_release_continuity/controller.py": "6d3d9a690c196c1f7f06534c0bd8f0ed126067e7c76040722e71fbc534da1a38",
+      "experiments/r18_release_continuity/adjustment_plan.json": "612e9ebcac57b3fff093e53c81cc0ea9971838edad237ab8a90a63fde2eb81b9"
+    },
+    "inputs": {
+      "stock_height_calibration": "cfd91f8b53e71088cad01f1fba0dedfa7e778f85fd84dd1431f5c80e3d3c59e4",
+      "r17_calibration": "a0c642c3709c663b2bef39f48a0476e1fa2b0e04403f027489e606f9bfb157c3",
+      "r17_control_stock": "bb11e6c2b4da4deb345d3848eabbfbed3de47906ce4857df6b47409e3dc400c5",
+      "r17_control_perturbed": "76d67bb3f11bbbe3d32023611aca5bfe61b2016821cfa034083b986b918be4f2"
+    }
+  },
+  "scope": {
+    "protected_cases_run": 1,
+    "protected_cases_planned": 9,
+    "new_cases_run": 0,
+    "impacts_run": 0,
+    "cpu": 4
+  },
+  "limitations": [
+    "rp4:up discussed from already exposed frozen results; not rerun after sh5 failed",
+    "one post-release continuity law tested; no pre-release state-shape retuning",
+    "no detector changes or alarm masking"
+  ]
+}

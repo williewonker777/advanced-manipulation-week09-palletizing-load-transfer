@@ -1,0 +1,212 @@
+{
+  "audit_normals": [
+    {
+      "com": [
+        -0.007,
+        0.013,
+        0.014
+      ],
+      "id": "normal_audit_0",
+      "mass": 1.26,
+      "offset": [
+        -0.0012,
+        0.0,
+        -0.0005
+      ]
+    },
+    {
+      "com": [
+        0.018,
+        -0.015,
+        0.017
+      ],
+      "id": "normal_audit_1",
+      "mass": 2.86,
+      "offset": [
+        -0.0004,
+        0.0006,
+        0.0
+      ]
+    },
+    {
+      "com": [
+        -0.01,
+        0.017,
+        0.02
+      ],
+      "id": "normal_audit_2",
+      "mass": 3.84,
+      "offset": [
+        0.0004,
+        0.0012,
+        0.0005
+      ]
+    },
+    {
+      "com": [
+        0.021,
+        -0.019,
+        0.023
+      ],
+      "id": "normal_audit_3",
+      "mass": 5.58,
+      "offset": [
+        0.0012,
+        -0.0012,
+        -0.0005
+      ]
+    },
+    {
+      "com": [
+        -0.013,
+        0.021,
+        0.026
+      ],
+      "id": "normal_audit_4",
+      "mass": 6.92,
+      "offset": [
+        -0.0012,
+        -0.0006,
+        0.0
+      ]
+    }
+  ],
+  "checks": "Exact first native events, false/time/duration +5/protected true tool, new duplicate or anchor prealarm forbidden. Held normal, directional transfer panel, registered both R26 target stock before force ends; reject mechanism instead of fitting another directional cutoff.",
+  "features": "C3 normal_model.last_error world XY, genuine grip closed, effective normal route active, away from inferred table & inferred load_fraction>=0.8. No external dynamics or time beyond incumbent. Requires 80 successive eligible ticks. Same-source owner drops on return closer to pre-event mean; no fixed holdoff.",
+  "fit": "Nine loads each all three mechanics. For eight fixed compass directions take maximum of signed change over consecutive 40-sample means across all admissible normal ticks. Add between-mechanics range of the per-mechanics maxima. No forced outputs or approval changes to these fits.",
+  "fit_normals": [
+    {
+      "com": [
+        0.008,
+        -0.009,
+        0.013
+      ],
+      "id": "normal_fit_0",
+      "mass": 0.88,
+      "offset": [
+        -0.0012,
+        0.0,
+        -0.0005
+      ]
+    },
+    {
+      "com": [
+        -0.011,
+        0.016,
+        0.018
+      ],
+      "id": "normal_fit_1",
+      "mass": 1.73,
+      "offset": [
+        -0.0004,
+        0.0006,
+        0.0
+      ]
+    },
+    {
+      "com": [
+        0.014,
+        -0.023,
+        0.023
+      ],
+      "id": "normal_fit_2",
+      "mass": 2.57,
+      "offset": [
+        0.0004,
+        0.0012,
+        0.0005
+      ]
+    },
+    {
+      "com": [
+        -0.017,
+        0.011,
+        0.028
+      ],
+      "id": "normal_fit_3",
+      "mass": 3.51,
+      "offset": [
+        0.0012,
+        -0.0012,
+        -0.0005
+      ]
+    },
+    {
+      "com": [
+        0.02,
+        -0.018,
+        0.033
+      ],
+      "id": "normal_fit_4",
+      "mass": 4.43,
+      "offset": [
+        -0.0012,
+        -0.0006,
+        0.0
+      ]
+    },
+    {
+      "com": [
+        -0.023,
+        0.025,
+        0.017
+      ],
+      "id": "normal_fit_5",
+      "mass": 5.31,
+      "offset": [
+        -0.0004,
+        0.0,
+        0.0005
+      ]
+    },
+    {
+      "com": [
+        0.026,
+        -0.013,
+        0.022
+      ],
+      "id": "normal_fit_6",
+      "mass": 6.14,
+      "offset": [
+        0.0004,
+        0.0006,
+        -0.0005
+      ]
+    },
+    {
+      "com": [
+        -0.008,
+        0.02,
+        0.027
+      ],
+      "id": "normal_fit_7",
+      "mass": 7.11,
+      "offset": [
+        0.0012,
+        0.0012,
+        0.0
+      ]
+    },
+    {
+      "com": [
+        0.011,
+        -0.027,
+        0.032
+      ],
+      "id": "normal_fit_8",
+      "mass": 7.83,
+      "offset": [
+        -0.0012,
+        -0.0012,
+        0.0005
+      ]
+    }
+  ],
+  "mechanics": [
+    "stock",
+    "actuator_deadzone",
+    "place_surface_shift"
+  ],
+  "schema": "r27-rolling-signed-change-fit-before-force.v1",
+  "scope": "Normal-model signed planar change on same episode; C3 native alarms always pass. Competing single-stream concept independent of the full inverse-dynamics observer. Never reads labels, no-force twin, force direction or target schedule at runtime."
+}

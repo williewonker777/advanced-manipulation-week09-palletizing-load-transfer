@@ -1,0 +1,91 @@
+{
+  "schema": "r28-landing-replay-plan.v1",
+  "status": "FROZEN",
+  "classification": "Known disclosed finite-simulation replay; not a blind test, promotion, deployment, hardware, or safety claim.",
+  "arms": {
+    "c1": "experiments.r26_delivery_pair.candidate:Detector",
+    "r27_v3": "experiments.r27_landing_integration.unloaded_aware:Detector",
+    "r28": "experiments.r28_finite_contact.candidate:Detector",
+    "pulse_diagnostic": "experiments.r28_finite_contact.pulse_diagnostic:Detector",
+    "controller": "experiments.r26_delivery_pair.controller:Controller"
+  },
+  "candidate_freeze": {
+    "entrypoint": "experiments.r28_finite_contact.candidate:Detector",
+    "candidate_sha256": "9402c6de58a8948dd0461bea65c2300bcf8b872ba7c96b98cf5dcff8e7e6202b",
+    "frozen_dependency_sha256": "f764e6ebd13cfb67d41dad869e963ee56ccfd571d40efa58fa17f995e0daf4f7",
+    "pulse_diagnostic_sha256": "bb87916d443cc96dbbb012bcb53a08fd68c57c7ad4ab6d39e9b0ba1b70d6c680",
+    "preregistration_sha256": "b9f76ac4302b4ec23d229b391a0bad2e483caa532f2218d050ef42c14971e4dc"
+  },
+  "runtime": {
+    "mujoco": "3.17.0",
+    "samples_per_episode": 6000,
+    "dt_s": 0.001,
+    "episodes": 24
+  },
+  "scoring": {
+    "event_window_ms": 320,
+    "quiet_ms": 20,
+    "reference_twin_ms": 20,
+    "tool_force_threshold_N": 1.0,
+    "tool_tail_ms": 300
+  },
+  "known_tool_pair": [
+    {
+      "id": "known_5p25kg_29mm_tool",
+      "mass": 5.25,
+      "com": [0.022, -0.015, 0.036],
+      "offset": [0.0, 0.0, 0.029],
+      "mechanics": {
+        "table_friction_scale": 1.04,
+        "table_solref_time_scale": 0.99,
+        "suction_solref_time_scale": 0.96,
+        "dof_damping_scale": 1.01
+      }
+    },
+    {
+      "id": "known_5p25kg_friction_matched_zero_offset",
+      "mass": 5.25,
+      "com": [0.022, -0.015, 0.036],
+      "offset": [0.0, 0.0, 0.0],
+      "mechanics": {
+        "table_friction_scale": 1.04,
+        "table_solref_time_scale": 0.99,
+        "suction_solref_time_scale": 0.96,
+        "dof_damping_scale": 1.01
+      }
+    }
+  ],
+  "positive_controls": [
+    {
+      "id": "official_y15_mass0",
+      "mass": 0.0,
+      "com": [0.0, 0.0, 0.0],
+      "offset": null,
+      "impact": [1.42, [0.0, 15.0, 0.0]],
+      "mechanics": {
+        "table_friction_scale": 1.0,
+        "table_solref_time_scale": 1.0,
+        "suction_solref_time_scale": 1.0,
+        "dof_damping_scale": 1.0
+      }
+    },
+    {
+      "id": "official_y15_mass8",
+      "mass": 8.0,
+      "com": [0.0, 0.0, 0.0],
+      "offset": null,
+      "impact": [1.42, [0.0, 15.0, 0.0]],
+      "mechanics": {
+        "table_friction_scale": 1.0,
+        "table_solref_time_scale": 1.0,
+        "suction_solref_time_scale": 1.0,
+        "dof_damping_scale": 1.0
+      }
+    }
+  ],
+  "limits": [
+    "Never reads experiments/r27_loaded_holdout or experiments/r22_normal.",
+    "Known disclosed cases only; failure reproduction remains available when protection gates fail.",
+    "No default, course kit, candidate, or incumbent source is modified."
+  ]
+}

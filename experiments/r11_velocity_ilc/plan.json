@@ -1,0 +1,155 @@
+{
+  "schema": "r11-normal-velocity-identification.v1",
+  "hypothesis": "Shape the Cartesian normal reference on the unchanged final taught descent so that estimated link/rigid-box normal speed tracks the still-descending taught velocity instead of reversing. Coefficients fitted only to encoder/JTS reconstructed link geometry, taught references and known mass; table force, actual free-box/link state, measured motor torque and impacts are never fitting targets.",
+  "centers_phase": [
+    0.51,
+    0.71,
+    0.91,
+    1.09
+  ],
+  "halfwidth_phase": 0.26,
+  "probe_amplitude_mm": 0.35,
+  "maximum_abs_coefficient_mm": 1.6,
+  "position_command_limit_mm": 2.0,
+  "velocity_command_limit_mm_s": 60.0,
+  "acceleration_command_limit_mm_s2": 2600.0,
+  "gain_ramp_mass_kg": 2.0,
+  "fit_time_relative_s": [
+    -0.16,
+    0.082
+  ],
+  "fit_stride_ms": 3,
+  "speed_window_ms": 9,
+  "objective": "Weighted normal-only least squares. Independently fit servo/torque common four amplitudes (no branch by fitted case); time-weight final 40ms of grip 3 versus 1 elsewhere. Match the taught vertical velocity over 9ms from heights; units mm, mm/s *0.040s and position error *0.35. Per-amplitude ridge penalty 0.30 mm per stacked row RMS; symmetric signed probes. Reduce the fitted vector by one common factor until prescribed offset, speed and acceleration bounds all hold. No refit after physical or detection review.",
+  "fit": [
+    {
+      "id": "f0",
+      "mass": 4.13,
+      "com": [
+        0.018,
+        0.009,
+        -0.021
+      ],
+      "perturb": {
+        "seed": 128741,
+        "stiffness_scale": 0.97,
+        "viscous_scale": 1.03,
+        "coulomb_scale": 1.06
+      }
+    },
+    {
+      "id": "f1",
+      "mass": 6.83,
+      "com": [
+        -0.024,
+        0.016,
+        0.013
+      ],
+      "perturb": {
+        "seed": 128742,
+        "stiffness_scale": 1.04,
+        "viscous_scale": 0.96,
+        "coulomb_scale": 0.94
+      }
+    }
+  ],
+  "development": [
+    {
+      "id": "d0",
+      "mass": 3.71,
+      "com": [
+        0.012,
+        -0.023,
+        0.019
+      ],
+      "perturb": {
+        "seed": 128751,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0
+      },
+      "onset": 3.743,
+      "force": [
+        0,
+        16,
+        0
+      ]
+    },
+    {
+      "id": "d1",
+      "mass": 6.31,
+      "com": [
+        -0.018,
+        0.027,
+        -0.009
+      ],
+      "perturb": {
+        "seed": 128752,
+        "stiffness_scale": 0.93,
+        "viscous_scale": 1.07,
+        "coulomb_scale": 1.08
+      },
+      "onset": 3.847,
+      "force": [
+        7,
+        0,
+        -18
+      ]
+    },
+    {
+      "id": "d2",
+      "mass": 7.89,
+      "com": [
+        0.025,
+        0.014,
+        0.034
+      ],
+      "perturb": {
+        "seed": 128753,
+        "stiffness_scale": 1.07,
+        "viscous_scale": 0.95,
+        "coulomb_scale": 0.91
+      },
+      "onset": 3.911,
+      "force": [
+        -20,
+        -8,
+        0
+      ]
+    },
+    {
+      "id": "d3",
+      "mass": 5.49,
+      "com": [
+        -0.021,
+        -0.008,
+        0.024
+      ],
+      "perturb": {
+        "seed": 128754,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.0,
+        "coulomb_scale": 1.0
+      },
+      "onset": 3.783,
+      "force": [
+        0,
+        0,
+        17
+      ],
+      "offset": [
+        0.007,
+        -0.01,
+        0.004
+      ]
+    }
+  ],
+  "gates": {
+    "all_four_g4_each_normal": true,
+    "normal_cost_ratio_max": 1.05,
+    "new_fa_or_sat_or_lost_event_or_lost_tool": false,
+    "max_extra_delay_ms": 5.0,
+    "byte_exact_before_intervention": true
+  },
+  "policy": "First evaluate efficacy and all gates on previously unused held normal/impact groups; if any fails stop without retuning or new unseen credit. Score plant state only offline. Raw public-observable training curves and analysis evidence stay local."
+}

@@ -1,0 +1,253 @@
+{
+  "schema": "r23-transfer-summary.v1",
+  "decision": "reject_extension_new_normal_alarm",
+  "candidate": {
+    "path": "experiments/r23_transfer/controller.py",
+    "sha256": "fd8be109efecb2b4c5cae8f98dea08b715d88d26e85b2d30a615791c079c4e3f",
+    "coordinate": "bottom-centre world-y angular velocity",
+    "budget": "|My| <= 0.03*m*g*0.10m",
+    "activation": "positive mass + grip + hybrid_active + valid public support + alpha>0"
+  },
+  "sh5": {
+    "passed": true,
+    "false_alarm_times": {
+      "r19": [
+        3.903
+      ],
+      "candidate": []
+    },
+    "support": {
+      "mean_mg": 0.6191129254771376,
+      "min_mg": 0.4803850645177358,
+      "peak_mg": 1.0386996816883016,
+      "samples": 20,
+      "mean_ge_050": true,
+      "min_ge_025": true,
+      "peak_le_110": true
+    },
+    "g4": {
+      "mean_gain_mg": 0.49249600772738056,
+      "all_four_g4": true
+    },
+    "cost_ratios": {
+      "r10": {
+        "tcp_rms": 0.9894858247250683,
+        "tcp_max": 1.0003385414385175,
+        "place_step": 1.0076578973653214,
+        "pick_step": 0.9992295088088584,
+        "place_force": 0.9882188691934422
+      },
+      "r19": {
+        "tcp_rms": 0.999643511132839,
+        "tcp_max": 1.0,
+        "place_step": 1.0,
+        "pick_step": 1.0,
+        "place_force": 0.9996253720399546
+      }
+    },
+    "saturation_pct": 0.0,
+    "tool_delay_ms": 11.0,
+    "intervention": {
+      "samples": 46,
+      "impulse_nms": 0.008652850660574134,
+      "max_moment_nm": 0.19570950000000004,
+      "max_joint_delta_nm": 0.15040626740595142
+    },
+    "physical_sha256": {
+      "r10": "c7ad4dae2c1e8662fde359778dd7ee5e12649d2bf6f4b83bcf47bae716ad1126",
+      "r19": "d5a54d43d8a8ac7d29050e643bcb9cfac38b97b8d7c3dffde14956ca7178fc69",
+      "candidate": "a4bea1c7cbe48729fcb8274653a24b69b7d062c7e00c989410e2e47f6ebe58ce"
+    },
+    "release_scores": {
+      "3.9": {
+        "directional_score": 1.0946554801251827,
+        "corrected_my_nm": -6.984732988893201,
+        "table_my_nm": 0.0,
+        "fast_score": 1.1350577903634165,
+        "detected": false
+      },
+      "3.901": {
+        "directional_score": 0.9492589463397676,
+        "corrected_my_nm": -6.056992723174551,
+        "table_my_nm": 0.0,
+        "fast_score": 0.5231780627740559,
+        "detected": false
+      },
+      "3.902": {
+        "directional_score": 1.1391223632816199,
+        "corrected_my_nm": -7.268465461196275,
+        "table_my_nm": 0.0,
+        "fast_score": 0.7196339136850678,
+        "detected": false
+      },
+      "3.903": {
+        "directional_score": 1.0492141329376012,
+        "corrected_my_nm": -6.694782696291045,
+        "table_my_nm": 0.0,
+        "fast_score": 0.5662302259144517,
+        "detected": false
+      }
+    }
+  },
+  "extension": {
+    "sh3": {
+      "passed": true,
+      "false_alarm_times": [],
+      "support": {
+        "mean_mg": 0.6385818401803313,
+        "min_mg": 0.5037834213177979,
+        "peak_mg": 1.0359807694623733,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "g4": {
+        "mean_gain_mg": 0.6385818401803313,
+        "all_four_g4": true
+      },
+      "cost_ratios": {
+        "r10": {
+          "tcp_rms": 0.8371319512013731,
+          "tcp_max": 0.9242779009289515,
+          "place_step": 0.9885380823856978,
+          "pick_step": 1.0,
+          "place_force": 0.7814642660106984
+        },
+        "r19": {
+          "tcp_rms": 1.0003112327403503,
+          "tcp_max": 1.0,
+          "place_step": 1.0,
+          "pick_step": 1.0,
+          "place_force": 0.9996502094448892
+        }
+      },
+      "saturation_pct": 0.0,
+      "tool_delay_ms": null,
+      "intervention": {
+        "samples": 48,
+        "impulse_nms": 0.007974132630545496,
+        "max_moment_nm": 0.208953,
+        "max_joint_delta_nm": 0.16049484112614432
+      },
+      "physical_sha256": {
+        "r10": "16c3102b726226154b9ce9ee2ec8a797e866e428be3eb311959f339e7bd25f4c",
+        "r19": "b838abaeda460aeb0a0613e849f9e36921500a571dad36f16c8d03132949f22c",
+        "candidate": "2d1a2e08db55fbd5e0dcb7696f9e76339b2fc8ffd76817dfcae9ee0453eab5e1"
+      }
+    },
+    "unloaded": {
+      "passed": true,
+      "physical_parity": true,
+      "intervention_samples": 0,
+      "physical_sha256": {
+        "r19": "a7eaa996d3a144193ff04a45a2bb4b3140495c4fbb04fbfe8145418eff8dbdf2",
+        "candidate": "a7eaa996d3a144193ff04a45a2bb4b3140495c4fbb04fbfe8145418eff8dbdf2"
+      }
+    },
+    "heavy8_offset": {
+      "passed": false,
+      "failed_gates": [
+        "no_additional_false"
+      ],
+      "false_alarm_times": {
+        "r19": [
+          3.9170000000000003
+        ],
+        "candidate": [
+          3.876,
+          3.919
+        ]
+      },
+      "support": {
+        "mean_mg": 0.772917760384769,
+        "min_mg": 0.6574362285480853,
+        "peak_mg": 1.0537375620623737,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "g4": {
+        "mean_gain_mg": 0.6686511043427217,
+        "all_four_g4": true
+      },
+      "cost_ratios": {
+        "r10": {
+          "tcp_rms": 0.9847294657804407,
+          "tcp_max": 1.0003480322698022,
+          "place_step": 0.958130801291982,
+          "pick_step": 0.9999997477426298,
+          "place_force": 1.049760605828793
+        },
+        "r19": {
+          "tcp_rms": 0.9997782420429016,
+          "tcp_max": 1.0,
+          "place_step": 1.0,
+          "pick_step": 1.0,
+          "place_force": 0.9999938475683692
+        }
+      },
+      "saturation_pct": 0.0,
+      "tool_delay_ms": 12.0,
+      "intervention": {
+        "samples": 39,
+        "impulse_nms": 0.007774197405181912,
+        "max_moment_nm": 0.23544,
+        "max_joint_delta_nm": 0.18090065408815548
+      },
+      "physical_sha256": {
+        "r10": "a3729a5b8bebc5da8f6725daa4017a6ba871f65ce2988653756368ef2a3b50d5",
+        "r19": "ec89d3601c6a4c49550a9a16e154ecf27afbf877d952e3e8505587dd18aed452",
+        "candidate": "403bb9411e23790c2fa614397413d0a40987de906cb72630eb76f593fd046d60"
+      },
+      "new_event_3p876": {
+        "dominant_original_threshold_component": "negative normal Fz",
+        "component_scores": {
+          "force_xyz": [
+            0.03129626108816432,
+            0.11805537199967879,
+            1.2710201661524618
+          ],
+          "moment_xyz": [
+            0.31266320320238405,
+            0.1406424732023666,
+            0.20267817714288666
+          ],
+          "out_of_height_positive_fz": 0.0
+        },
+        "cf_alarm": 4,
+        "actuator": {
+          "t": 3.876,
+          "omega_y_rad_s": -0.0153441026141281,
+          "effective_inertia_kgm2": 1.1915506617356457,
+          "moment_nm": 0.23544,
+          "limit_nm": 0.23544,
+          "max_joint_delta_nm": 0.18086053885725792
+        }
+      }
+    },
+    "separate_ec3_validation_opened": false,
+    "stop_reason": "heavy8_offset no-additional-false gate failed"
+  },
+  "bounded_alternatives": [
+    "A future orientation-settling reference must be calibrated on normal-only multi-mass data before alarm outcomes and must demonstrate no pre-release directional event.",
+    "A future support/contact coordination law should act through a separately registered contact-frame coordinate rather than feed back the same wrench-observer-sensitive pitch channel.",
+    "Neither alternative may condition on detector state, release clock, case identity, or force labels."
+  ],
+  "scope": {
+    "r23_holdout_opened": false,
+    "detector_changed": false,
+    "threshold_changed": false,
+    "gain_retuned": false,
+    "hardware": false,
+    "remote": false
+  },
+  "evidence_sha256": {
+    "sh5.json": "04d75fb15a884caed57ac0ed239dae539ab43e529c7bb7c1ad1987ba3a77b10f",
+    "extension_v2.json": "caf0f93f1a1f70b6781780c9cde77adbc1710c3566951d34ef40ce719b2fb989",
+    "diagnosis_v2.json": "9938ec8bb55a79ceae74c240eb6388f888c16f87568521c680d315da13736ec6"
+  },
+  "detector_source_sha256": "9fecfee47778a370e743497a8370ad7465c68ab126ae06b9f17c1bbf3fd8a0e9",
+  "coefficient_sha256": "183df664558017be3e9d3faa9c5883cd6ca55c593c45a1e995afb0dcefee886c"
+}

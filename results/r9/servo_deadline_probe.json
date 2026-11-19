@@ -1,0 +1,98 @@
+{
+  "mode": "servo",
+  "cycles": 24000,
+  "gc_policy_unchanged": true,
+  "growing_recorder_control": false,
+  "episodes": [
+    {
+      "p99_wall_us": 378.80940000000004,
+      "max_wall_us": 574.499,
+      "max_cpu_us": 569.558,
+      "wall_ge_1ms": 0,
+      "cpu_ge_1ms": 0,
+      "gc_starts_during_calls": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "p99_wall_us": 342.42239000000006,
+      "max_wall_us": 542.339,
+      "max_cpu_us": 447.508,
+      "wall_ge_1ms": 0,
+      "cpu_ge_1ms": 0,
+      "gc_starts_during_calls": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "p99_wall_us": 342.85900999999996,
+      "max_wall_us": 467.699,
+      "max_cpu_us": 465.10900000000004,
+      "wall_ge_1ms": 0,
+      "cpu_ge_1ms": 0,
+      "gc_starts_during_calls": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "p99_wall_us": 372.3433000000001,
+      "max_wall_us": 1129.128,
+      "max_cpu_us": 493.618,
+      "wall_ge_1ms": 1,
+      "cpu_ge_1ms": 0,
+      "gc_starts_during_calls": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "episode": 3,
+      "cycle": 260,
+      "wall_us": 1129.128,
+      "cpu_us": 216.459,
+      "gc_starts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "sources": {
+    "detector": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+    "controller": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+    "probe": "7f00af52803ee7eabc4c5228a0b91a117c74812a7239ea52ca21659709551975"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.4",
+    "mujoco": "3.17.0",
+    "gc_threshold": [
+      700,
+      10,
+      10
+    ],
+    "scheduler": 0,
+    "blas_threads": "1",
+    "omp_threads": "1",
+    "affinity_cpu_count": 1
+  },
+  "private_source_record_sha256": "a0f44a335348749371d1d2ade274929bc6103a21594c8be372d57c0907c5216b",
+  "environment_scope": "Portable runtime versions and measurement settings; host kernel, architecture, and core IDs are retained only with the private original."
+}

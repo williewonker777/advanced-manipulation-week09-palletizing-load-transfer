@@ -1,0 +1,13 @@
+{
+  "schema":"r19-noise-witness-plan.v1",
+  "status":"FROZEN_BEFORE_WITNESS",
+  "case":{"id":"previously_exposed_rc1","mass":3.28,"com":[0.014,-0.025,0.019],"offset":[0.001,0.002,-0.002],"native_seed":19401},
+  "release_time_s":3.9,
+  "cutoff_age_ms":100,
+  "horizon_ms":16,
+  "alternative_native_seeds":[19601,19603],
+  "target":"controller-bound corrected fast innovation",
+  "band":"2 * 1.25 * unchanged R17C per-age envelope",
+  "scope":"conditional fixed-mechanical-state replay diagnostic; not a second closed-loop evaluation",
+  "forbidden":["model fitting","forces","threshold change","different mechanical trajectory","unrelated full-seed trajectory comparison"]
+}

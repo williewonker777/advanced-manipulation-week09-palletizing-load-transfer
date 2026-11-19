@@ -1,0 +1,273 @@
+{
+  "schema": "r21-yaw-release-audit.v1",
+  "variant": "yaw",
+  "status": "installable_research_option",
+  "default_submission_promoted": false,
+  "build": {
+    "schema": "r21-yaw-standalone-build.v1",
+    "r10_detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "r20_branch_sha256": "1770c36e002404a660c9cfc1ef45ddbb6cb1f53a3ec973c82b760e60881e7025",
+    "yaw_sources_sha256": {
+      "state.py": "f04d46e93c55e04aa869050fe43c895951f3a970e3729b01e8d94744532f3a9f",
+      "detector.py": "69e1e884f393a17751546165554f994c19b0cb127830233fba1f2329481c87cb",
+      "frozen.py": "71a75f131ea6d3aae94f9acf40c42abe92d9123000d86e685f8bb5f4a00a4342",
+      "coarse.py": "f3a8a4202e638346dfa6a7994b056cbf509be4f335fb09c76d6657d47abcafe9",
+      "normal_bins.json": "5f22f640eb8824f764ffeec7ecbef7ba23df02a874547b93b8ddc72925e25c15"
+    },
+    "yaw_lock_manifest_sha256": "a21d8536d407b3e470b4213c3dd2533e4082135ef6766928f26b8b4b518cc4dc",
+    "standalone_sha256": "f28a4b6da0939e435fc97130ee9be7db7b98b7c2956346f778914788162492ad",
+    "lines": 1973
+  },
+  "kit": {
+    "status": "ok",
+    "files": 20,
+    "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "evaluator_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+  "controllers": {
+    "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b"
+  },
+  "official": {
+    "torque": {
+      "episodes": 29,
+      "control": {
+        "0.0": [
+          "2.09",
+          "4.05",
+          "0.0",
+          "9.0",
+          "4.8",
+          "0",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "4.0": [
+          "2.32",
+          "4.42",
+          "0.0",
+          "9.0",
+          "6.8",
+          "39",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "8.0": [
+          "3.23",
+          "8.44",
+          "0.0",
+          "9.0",
+          "13.1",
+          "80",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ]
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "cells": [
+            "44",
+            "37",
+            "26",
+            "20",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "cells": [
+            "57",
+            "38",
+            "25",
+            "19",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "cells": [
+            "92",
+            "78",
+            "30",
+            "19",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "cells": [
+            "43",
+            "37",
+            "27",
+            "21",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "cells": [
+            "56",
+            "41",
+            "25",
+            "18",
+            "1회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "cells": [
+            "91",
+            "86",
+            "38",
+            "22",
+            "0회",
+            "10 N"
+          ]
+        }
+      ]
+    },
+    "servo": {
+      "episodes": 29,
+      "control": {
+        "0.0": [
+          "1.18",
+          "3.94",
+          "0.0",
+          "9.7",
+          "5.1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "4.0": [
+          "1.15",
+          "3.79",
+          "0.0",
+          "9.7",
+          "7.6",
+          "40",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "8.0": [
+          "1.17",
+          "3.91",
+          "0.0",
+          "9.7",
+          "14.6",
+          "79",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ]
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "cells": [
+            "46",
+            "42",
+            "36",
+            "23",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "cells": [
+            "38",
+            "32",
+            "23",
+            "18",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "cells": [
+            "놓침",
+            "78",
+            "31",
+            "19",
+            "0회",
+            "15 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "cells": [
+            "66",
+            "55",
+            "36",
+            "24",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "cells": [
+            "49",
+            "37",
+            "25",
+            "18",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "cells": [
+            "77",
+            "67",
+            "33",
+            "21",
+            "0회",
+            "10 N"
+          ]
+        }
+      ]
+    }
+  },
+  "recognized_collision_cells": {
+    "torque": 24,
+    "servo": 23
+  },
+  "gates": {
+    "standalone_default_filename": true,
+    "frozen_yaw_torque_table_exact": true,
+    "servo_R10_fallback_exact": true,
+    "protected_kit_unchanged": true
+  }
+}

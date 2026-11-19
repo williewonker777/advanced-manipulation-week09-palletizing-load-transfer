@@ -1,0 +1,12 @@
+{
+  "schema":"r22-payload-boundary-plan.v1",
+  "status":"FROZEN_BEFORE_R22_REPRODUCTION",
+  "classification":"Causal boundary audit of already exposed sh5, not a fresh holdout or candidate tuning set.",
+  "question":"Can the R22 outgoing base-axis momentum continuity mechanism legitimately repair the R17/R19 sh5 load-handoff false rise or improve actual load transfer?",
+  "required_reproduction":"Rerun the R19 support-weighted controller with its registered Coupled detector on stock sh5. Reproduce all four G4 clauses, final-20ms table support, tracking, peak force, saturation, tool timing and the 3.903s false rise. Record the decisive detector channel at 3.900--3.903s.",
+  "compatibility_gate":"The R22 release state may be proposed only if it is already a state used by this controller or registered detector, acts on the same decisive physical channel, and can change actual command/support. Do not install an R10-only optional detector on this controller, bypass Coupled, mask an alarm, or infer load transfer from detection.",
+  "causal_crosschecks":["R16/R17 actual-input versus payload-COM-model factorial","R18 post-release bumpless torque handover","R19 support-weighted removal of the information COM action","R17 bounded downward support-shape intervention"],
+  "decision":"If the compatibility gate fails and the crosschecks do not identify a unique pre-release actuator coordinate, report the tested boundary. Do not create a new gain or threshold from sh5 outcome.",
+  "next_valid_experiment":"A future control law must preregister a public pre-release physical coordinate, change actual table support or closed-loop sensor state, pass exposed normals first, then protected collisions/holdouts without retuning.",
+  "forbidden":["force labels","hidden plant state in control","detector suppression","case/time blacklist","R10 yaw calibration transplant","post-outcome gain search","stock edits","hardware claims"]
+}

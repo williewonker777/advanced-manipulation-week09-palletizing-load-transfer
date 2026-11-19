@@ -1,0 +1,9 @@
+{
+ "schema": "r21-yaw-coarse-normal-envelope.v1",
+ "status":"designed after inspecting only the 16 normal maxima for the yaw observer, before any yaw collision result",
+ "mechanical_motivation":"The largest normally observed yaw-balance departures with load occurred late in the handoff, not uniformly across all movements. Use a conservative bound on normal amplitude, not the per-tick sign/noise pattern.",
+ "bin_ms":100,"neighbor_bins":1,"duration_s":6,"range":"all times in the task; already-frozen grip + startup reset unchanged",
+ "bound":"Per grip and 100ms bin maximum absolute angular torque across every normal training trial in this and both adjacent bins; add largest positive held-COM-group excursion beyond its other groups' neighborhood bound for that grip; apply 5 percent reserve. Fall back to global bound outside observed cells. No force labels used.",
+ "sensors":"same frozen yaw-balance channel; current time, public task clock and grip only select the bound.",
+ "evaluate":"Global and coarse variants reported separately against original complete official table; independent unopened noise/perturbation comparisons separate. Neither is R21 horizontal wrench observer nor the R10 submission."
+}

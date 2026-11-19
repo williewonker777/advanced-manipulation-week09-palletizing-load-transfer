@@ -1,0 +1,2053 @@
+{
+  "schema": "r17-information-handoff.v1",
+  "notes": "Generated closed-loop no-external-force scenarios on conditions known before this test; never original demo footage. R10/R15/D are genuinely run comparators; the late comparator uses the same blend duration and release geometry as the 2.943s candidate. No external impacts are claimed for this controller.",
+  "domains": {
+    "stock": {
+      "passed": false,
+      "rows": [
+        {
+          "id": "rp1:up",
+          "gates": {
+            "status": true,
+            "g4": true,
+            "cost_r10": true,
+            "cost_r15": true,
+            "no_extra_false": true,
+            "tool": true,
+            "saturation": true,
+            "timing": true
+          },
+          "g4": {
+            "mean_gain_mg": 0.5134526104894575,
+            "all_four_g4": true
+          },
+          "ratios": {
+            "r10": {
+              "tcp_rms": 1.0033293387367155,
+              "tcp_max": 0.9999061833869202,
+              "place_step": 0.9992150461219723,
+              "pick_step": 1.0000319495930425,
+              "place_force": 1.0448983718202094
+            },
+            "r15": {
+              "tcp_rms": 1.008452532990839,
+              "tcp_max": 1.0,
+              "place_step": 1.0000113220605953,
+              "pick_step": 1.0,
+              "place_force": 0.9860117930313259
+            },
+            "d": {
+              "tcp_rms": 1.0028311229655835,
+              "tcp_max": 1.0,
+              "place_step": 1.0000113220605953,
+              "pick_step": 1.0,
+              "place_force": 0.9992317637566606
+            }
+          },
+          "passed": true,
+          "arms": {
+            "r10": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.7959595866256137,
+                "tcp_max": 6.604994767437741,
+                "place_step": 10.358730084969352,
+                "pick_step": 8.97835035416766,
+                "place_force": 32.25210388914441
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 72.83030732651241,
+              "support": {
+                "mean_mg": 0.12810530236653322,
+                "min_mg": 0.0045820578284786325,
+                "peak_mg": 1.00234031628827,
+                "samples": 20,
+                "mean_ge_050": false,
+                "min_ge_025": false,
+                "peak_le_110": true
+              },
+              "action": null,
+              "height": {}
+            },
+            "r15": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.7817554038600854,
+                "tcp_max": 6.604375109199251,
+                "place_step": 10.350481770835913,
+                "pick_step": 8.978637208807669,
+                "place_force": 34.178263464717574
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 223.8201063300949,
+              "support": {
+                "mean_mg": 0.824488390808477,
+                "min_mg": 0.43075470287348877,
+                "peak_mg": 1.062202066853061,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -3.153166661006777,
+                  -9.818445862270629
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.05661407888234399,
+                "half_width_mm": 1.2756929774598382,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "d": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.7973486451915117,
+                "tcp_max": 6.604375109199251,
+                "place_step": 10.350481770835913,
+                "pick_step": 8.978637208807669,
+                "place_force": 33.726080438882164
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 242.32420168118563,
+              "support": {
+                "mean_mg": 0.6504406607119282,
+                "min_mg": 0.4415489215272487,
+                "peak_mg": 1.0481489905423214,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -3.153166661006777,
+                  -9.818445862270629
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.05661407888234399,
+                "half_width_mm": 1.2756929774598382,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "late": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.8092855604405003,
+                "tcp_max": 6.604375109199251,
+                "place_step": 10.367472712461648,
+                "pick_step": 8.978637208807669,
+                "place_force": 33.67086526530214
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 233.31910590059127,
+              "support": {
+                "mean_mg": 0.6434897055211807,
+                "min_mg": 0.4208395914612734,
+                "peak_mg": 1.0464329972309907,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -3.282184930209844,
+                  -9.869233191871023
+                ],
+                "completed_at_s": 3.447
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.0018092661272693378,
+                "half_width_mm": 1.496464082721284,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "candidate": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.8052682831836573,
+                "tcp_max": 6.604375109199251,
+                "place_step": 10.350598959617713,
+                "pick_step": 8.978637208807669,
+                "place_force": 33.70017084154323
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 227.8998096880969,
+              "support": {
+                "mean_mg": 0.6415579128559907,
+                "min_mg": 0.42945799781464333,
+                "peak_mg": 1.047343764499367,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -3.2759466379907543,
+                  -9.886645241950308
+                ],
+                "completed_at_s": 2.943
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.01610118864580906,
+                "half_width_mm": 1.4630694847294383,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            }
+          }
+        },
+        {
+          "id": "sh3",
+          "gates": {
+            "status": true,
+            "g4": true,
+            "cost_r10": true,
+            "cost_r15": true,
+            "no_extra_false": true,
+            "tool": true,
+            "saturation": true,
+            "timing": true
+          },
+          "g4": {
+            "mean_gain_mg": 0.6378776471819474,
+            "all_four_g4": true
+          },
+          "ratios": {
+            "r10": {
+              "tcp_rms": 0.8387106722478506,
+              "tcp_max": 0.9242779009289515,
+              "place_step": 0.9885380823856885,
+              "pick_step": 1.0,
+              "place_force": 0.7814988829031445
+            },
+            "r15": {
+              "tcp_rms": 1.0390128334275834,
+              "tcp_max": 1.0,
+              "place_step": 0.9945955191388091,
+              "pick_step": 1.0,
+              "place_force": 0.9892726456603329
+            },
+            "d": {
+              "tcp_rms": 1.0753439884547267,
+              "tcp_max": 1.0,
+              "place_step": 0.9945955191388091,
+              "pick_step": 1.0,
+              "place_force": 0.9971337603790574
+            }
+          },
+          "passed": true,
+          "arms": {
+            "r10": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.892314176655566,
+                "tcp_max": 8.500591418395476,
+                "place_step": 12.169016769649716,
+                "pick_step": 8.98074462611001,
+                "place_force": 92.33575956349091
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 67.30028864694759,
+              "support": {
+                "mean_mg": 0.0,
+                "min_mg": 0.0,
+                "peak_mg": 1.325691800024277,
+                "samples": 20,
+                "mean_ge_050": false,
+                "min_ge_025": false,
+                "peak_le_110": false
+              },
+              "action": null,
+              "height": {}
+            },
+            "r15": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.1419491027202584,
+                "tcp_max": 7.85690879284923,
+                "place_step": 12.094903174714517,
+                "pick_step": 8.98074462611001,
+                "place_force": 72.94277595507047
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 226.50118306046355,
+              "support": {
+                "mean_mg": 0.8007146289854074,
+                "min_mg": 0.7186339299945809,
+                "peak_mg": 1.047261000632733,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -4.74648728278854,
+                  7.104736954082455
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.09276629571130529,
+                "half_width_mm": 1.6188797480994221,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "d": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.0357964286328176,
+                "tcp_max": 7.85690879284923,
+                "place_step": 12.094903174714517,
+                "pick_step": 8.98074462611001,
+                "place_force": 72.36771616623427
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 222.91909946943636,
+              "support": {
+                "mean_mg": 0.6704153803923438,
+                "min_mg": 0.5210297066799662,
+                "peak_mg": 1.0390046972223554,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -4.74648728278854,
+                  7.104736954082455
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.09276629571130529,
+                "half_width_mm": 1.6188797480994221,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "late": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.408880954940458,
+                "tcp_max": 7.85690879284923,
+                "place_step": 12.128267007185087,
+                "pick_step": 8.98074462611001,
+                "place_force": 70.87437818993132
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 242.7041027112867,
+              "support": {
+                "mean_mg": 0.5387510099204844,
+                "min_mg": 0.4231839417464861,
+                "peak_mg": 1.0175644023765822,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -4.969289112436542,
+                  6.914931779561231
+                ],
+                "completed_at_s": 3.447
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.1549411724257989,
+                "half_width_mm": 1.4668362019784458,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "candidate": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.264525439702629,
+                "tcp_max": 7.85690879284923,
+                "place_step": 12.029536501988815,
+                "pick_step": 8.98074462611001,
+                "place_force": 72.16029295088148
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 225.07390531245628,
+              "support": {
+                "mean_mg": 0.6378776471819474,
+                "min_mg": 0.5051502365907993,
+                "peak_mg": 1.0360266607928312,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -4.927744217486124,
+                  6.927585472886425
+                ],
+                "completed_at_s": 2.943
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.1349748583300019,
+                "half_width_mm": 1.4652449723387153,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            }
+          }
+        },
+        {
+          "id": "sh5",
+          "gates": {
+            "status": true,
+            "g4": true,
+            "cost_r10": true,
+            "cost_r15": true,
+            "no_extra_false": false,
+            "tool": true,
+            "saturation": true,
+            "timing": true
+          },
+          "g4": {
+            "mean_gain_mg": 0.4925626575873734,
+            "all_four_g4": true
+          },
+          "ratios": {
+            "r10": {
+              "tcp_rms": 0.9893733228787539,
+              "tcp_max": 1.0003385414385175,
+              "place_step": 1.007657897365319,
+              "pick_step": 0.9992295088088584,
+              "place_force": 0.9886711808408736
+            },
+            "r15": {
+              "tcp_rms": 0.9837378528303959,
+              "tcp_max": 1.0,
+              "place_step": 1.0000159281319934,
+              "pick_step": 1.0,
+              "place_force": 0.9913238672832448
+            },
+            "d": {
+              "tcp_rms": 1.0117216607510573,
+              "tcp_max": 1.0,
+              "place_step": 1.0000159281319934,
+              "pick_step": 1.0,
+              "place_force": 0.9966220536749605
+            }
+          },
+          "passed": false,
+          "arms": {
+            "r10": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.464460936960078,
+                "tcp_max": 8.519152176966086,
+                "place_step": 12.142068501349883,
+                "pick_step": 8.962352490448097,
+                "place_force": 68.56895157219951
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 11.0,
+              "ctrl_p99_us": 72.70010057254694,
+              "support": {
+                "mean_mg": 0.126616917749757,
+                "min_mg": 0.011674000943098936,
+                "peak_mg": 1.0510826235650212,
+                "samples": 20,
+                "mean_ge_050": false,
+                "min_ge_025": false,
+                "peak_le_110": true
+              },
+              "action": null,
+              "height": {}
+            },
+            "r15": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.484307551368348,
+                "tcp_max": 8.522036262999025,
+                "place_step": 12.234856337329234,
+                "pick_step": 8.955447076802301,
+                "place_force": 68.3854677136885
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 11.0,
+              "ctrl_p99_us": 248.54058792698223,
+              "support": {
+                "mean_mg": 0.762143302407863,
+                "min_mg": 0.6697116233359802,
+                "peak_mg": 1.0482700284915423,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -1.237550277366314,
+                  -9.827093783776363
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.19292080559883729,
+                "half_width_mm": 1.0871686162825722,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "d": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.387933027587154,
+                "tcp_max": 8.522036262999025,
+                "place_step": 12.234856337329234,
+                "pick_step": 8.955447076802301,
+                "place_force": 68.02192071701533
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 11.0,
+              "ctrl_p99_us": 227.36050712410363,
+              "support": {
+                "mean_mg": 0.5862790945620968,
+                "min_mg": 0.44220601213176003,
+                "peak_mg": 1.0426972740262785,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -1.237550277366314,
+                  -9.827093783776363
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.19292080559883729,
+                "half_width_mm": 1.0871686162825722,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "late": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.4776305365004134,
+                "tcp_max": 8.522036262999025,
+                "place_step": 12.163723997800815,
+                "pick_step": 8.955447076802301,
+                "place_force": 67.94938178090723
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 1,
+              "false_alarm_times": [
+                3.919
+              ],
+              "tool_delay_ms": 11.0,
+              "ctrl_p99_us": 227.16078805387977,
+              "support": {
+                "mean_mg": 0.7527584439483429,
+                "min_mg": 0.659642740396993,
+                "peak_mg": 1.0415853361370893,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -1.3845027522486055,
+                  -9.895908893715635
+                ],
+                "completed_at_s": 3.447
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.170292914341294,
+                "half_width_mm": 1.2157022420849022,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "candidate": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.4276452291838333,
+                "tcp_max": 8.522036262999025,
+                "place_step": 12.235051215735893,
+                "pick_step": 8.955447076802301,
+                "place_force": 67.79214631990716
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 1,
+              "false_alarm_times": [
+                3.903
+              ],
+              "tool_delay_ms": 11.0,
+              "ctrl_p99_us": 243.8858061213979,
+              "support": {
+                "mean_mg": 0.6191795753371304,
+                "min_mg": 0.4770819976412971,
+                "peak_mg": 1.0391750986013528,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -1.3879657278009438,
+                  -9.80807108599204
+                ],
+                "completed_at_s": 2.943
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.1992332759821681,
+                "half_width_mm": 1.1593092812471633,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            }
+          }
+        },
+        {
+          "id": "ec1:up",
+          "gates": {
+            "status": true,
+            "g4": true,
+            "cost_r10": true,
+            "cost_r15": true,
+            "no_extra_false": true,
+            "tool": true,
+            "saturation": true,
+            "timing": true
+          },
+          "g4": {
+            "mean_gain_mg": 0.519472081408503,
+            "all_four_g4": true
+          },
+          "ratios": {
+            "r10": {
+              "tcp_rms": 1.000319927079026,
+              "tcp_max": 1.0000612983569976,
+              "place_step": 1.0036622504439803,
+              "pick_step": 0.9999887094408687,
+              "place_force": 1.0439466143440201
+            },
+            "r15": {
+              "tcp_rms": 1.0067727401343494,
+              "tcp_max": 1.0,
+              "place_step": 0.999922893198112,
+              "pick_step": 1.0,
+              "place_force": 0.9826917068451276
+            },
+            "d": {
+              "tcp_rms": 1.0012719509190888,
+              "tcp_max": 1.0,
+              "place_step": 0.999922893198112,
+              "pick_step": 1.0,
+              "place_force": 0.9966343479259755
+            }
+          },
+          "passed": true,
+          "arms": {
+            "r10": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.712754296885733,
+                "tcp_max": 5.823303067875924,
+                "place_step": 10.392206332312412,
+                "pick_step": 8.989937778007288,
+                "place_force": 33.974783036372514
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 67.52009910997003,
+              "support": {
+                "mean_mg": 0.13534639348170346,
+                "min_mg": 0.00011898877194417942,
+                "peak_mg": 1.0038494596277832,
+                "samples": 20,
+                "mean_ge_050": false,
+                "min_ge_025": false,
+                "peak_le_110": true
+              },
+              "action": null,
+              "height": {}
+            },
+            "r15": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.695367159108748,
+                "tcp_max": 5.823660026786284,
+                "place_step": 10.43106950097635,
+                "pick_step": 8.989836276583219,
+                "place_force": 36.0925603389502
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 227.50139061827215,
+              "support": {
+                "mean_mg": 0.8576852159039327,
+                "min_mg": 0.48741166944133285,
+                "peak_mg": 1.0664232102394835,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -3.1049726985268924,
+                  -10.186127978179439
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.003351945913227572,
+                "half_width_mm": 1.4093800534031584,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "d": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.7101749708989247,
+                "tcp_max": 5.823660026786284,
+                "place_step": 10.43106950097635,
+                "pick_step": 8.989836276583219,
+                "place_force": 35.58763532252662
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 223.9704971725587,
+              "support": {
+                "mean_mg": 0.6863636662372323,
+                "min_mg": 0.4935955733067822,
+                "peak_mg": 1.0515042421228447,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -3.1049726985268924,
+                  -10.186127978179439
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.003351945913227572,
+                "half_width_mm": 1.4093800534031584,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "late": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.7289885416474724,
+                "tcp_max": 5.823660026786284,
+                "place_step": 10.407846944173443,
+                "pick_step": 8.989836276583219,
+                "place_force": 35.714917260328505
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 227.68400362110708,
+              "support": {
+                "mean_mg": 0.6844722977412538,
+                "min_mg": 0.5911658486634188,
+                "peak_mg": 1.0552650285963303,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -3.107810521050457,
+                  -10.15471534909165
+                ],
+                "completed_at_s": 3.447
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.04775399843324418,
+                "half_width_mm": 1.5944269768405,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "candidate": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.7136221804440512,
+                "tcp_max": 5.823660026786284,
+                "place_step": 10.430265194566857,
+                "pick_step": 8.989836276583219,
+                "place_force": 35.46785972389373
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 224.5019968540874,
+              "support": {
+                "mean_mg": 0.6548184748902065,
+                "min_mg": 0.3572371309949439,
+                "peak_mg": 1.0479652446894985,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -3.0767318842589844,
+                  -10.191621086217683
+                ],
+                "completed_at_s": 2.943
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.01645666356423764,
+                "half_width_mm": 1.562628657977513,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            }
+          }
+        },
+        {
+          "id": "ec3:up",
+          "gates": {
+            "status": true,
+            "g4": true,
+            "cost_r10": true,
+            "cost_r15": true,
+            "no_extra_false": true,
+            "tool": true,
+            "saturation": true,
+            "timing": true
+          },
+          "g4": {
+            "mean_gain_mg": 0.770840457376072,
+            "all_four_g4": true
+          },
+          "ratios": {
+            "r10": {
+              "tcp_rms": 0.9538560416193101,
+              "tcp_max": 0.9999606614817509,
+              "place_step": 0.995602663571199,
+              "pick_step": 1.0000024031146868,
+              "place_force": 1.0465624699826452
+            },
+            "r15": {
+              "tcp_rms": 1.0270857710183714,
+              "tcp_max": 1.0,
+              "place_step": 0.9944165009838717,
+              "pick_step": 1.0,
+              "place_force": 0.9863436039566634
+            },
+            "d": {
+              "tcp_rms": 1.0458999422307316,
+              "tcp_max": 1.0,
+              "place_step": 0.9944165009838717,
+              "pick_step": 1.0,
+              "place_force": 0.9981714473682788
+            }
+          },
+          "passed": true,
+          "arms": {
+            "r10": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.155206801920224,
+                "tcp_max": 6.663955212756754,
+                "place_step": 12.138267821465178,
+                "pick_step": 8.989941225376867,
+                "place_force": 64.4624109616852
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 71.62010108004324,
+              "support": {
+                "mean_mg": 0.0074632425896418945,
+                "min_mg": 0.0,
+                "peak_mg": 1.003220128419905,
+                "samples": 20,
+                "mean_ge_050": false,
+                "min_ge_025": false,
+                "peak_le_110": true
+              },
+              "action": null,
+              "height": {}
+            },
+            "r15": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.9302451221633325,
+                "tcp_max": 6.663693062633006,
+                "place_step": 12.152746623004106,
+                "pick_step": 8.98996282923666,
+                "place_force": 68.39801035508285
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 234.82190357754098,
+              "support": {
+                "mean_mg": 0.8562380540871668,
+                "min_mg": 0.7374740109923391,
+                "peak_mg": 1.0644693505627199,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -4.986845729158294,
+                  2.2287524374292156
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.16674455433766566,
+                "half_width_mm": 1.0170125905435996,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "d": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.87753440749881,
+                "tcp_max": 6.663693062633006,
+                "place_step": 12.152746623004106,
+                "pick_step": 8.98996282923666,
+                "place_force": 67.58752738817478
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 224.55128273577432,
+              "support": {
+                "mean_mg": 0.770163909631995,
+                "min_mg": 0.6300724697148531,
+                "peak_mg": 1.051855909426816,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -4.986845729158294,
+                  2.2287524374292156
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.16674455433766566,
+                "half_width_mm": 1.0170125905435996,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "late": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.0042640333784614,
+                "tcp_max": 6.663693062633006,
+                "place_step": 12.151969601816234,
+                "pick_step": 8.98996282923666,
+                "place_force": 66.40922801166892
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 228.182807477424,
+              "support": {
+                "mean_mg": 0.6085738797995461,
+                "min_mg": 0.4661976134177132,
+                "peak_mg": 1.0335181892860366,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -4.94436432526194,
+                  2.117374968958831
+                ],
+                "completed_at_s": 3.447
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.16858744777321955,
+                "half_width_mm": 1.0677813508498581,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "candidate": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.009613070569948,
+                "tcp_max": 6.663693062633006,
+                "place_step": 12.084891774191306,
+                "pick_step": 8.98996282923666,
+                "place_force": 67.4639400370976
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 221.89899755176157,
+              "support": {
+                "mean_mg": 0.7783036999657139,
+                "min_mg": 0.665904682643291,
+                "peak_mg": 1.049932535535442,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -4.922026353634451,
+                  2.170622414024388
+                ],
+                "completed_at_s": 2.943
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.12391409140980658,
+                "half_width_mm": 1.071096703437497,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            }
+          }
+        }
+      ]
+    },
+    "perturbed": {
+      "passed": false,
+      "rows": [
+        {
+          "id": "rp1:up",
+          "gates": {
+            "status": true,
+            "g4": true,
+            "cost_r10": true,
+            "cost_r15": true,
+            "no_extra_false": true,
+            "tool": true,
+            "saturation": true,
+            "timing": true
+          },
+          "g4": {
+            "mean_gain_mg": 0.4242565709747159,
+            "all_four_g4": true
+          },
+          "ratios": {
+            "r10": {
+              "tcp_rms": 0.9961476412454078,
+              "tcp_max": 1.0000211357941402,
+              "place_step": 0.998736118329301,
+              "pick_step": 1.000000035219812,
+              "place_force": 1.0343127707193847
+            },
+            "r15": {
+              "tcp_rms": 1.0030257985776696,
+              "tcp_max": 1.0,
+              "place_step": 0.9999708154793615,
+              "pick_step": 1.0,
+              "place_force": 0.9763947044840272
+            },
+            "d": {
+              "tcp_rms": 1.000128005638211,
+              "tcp_max": 1.0,
+              "place_step": 0.9999708154793615,
+              "pick_step": 1.0,
+              "place_force": 0.990995624536585
+            }
+          },
+          "passed": true,
+          "arms": {
+            "r10": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.9814390173247927,
+                "tcp_max": 6.9335267201795014,
+                "place_step": 10.425949071669734,
+                "pick_step": 8.927808540255072,
+                "place_force": 32.25889649463362
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 71.81010543718003,
+              "support": {
+                "mean_mg": 0.1272584795865971,
+                "min_mg": 0.011208043582115015,
+                "peak_mg": 1.0025514188680547,
+                "samples": 20,
+                "mean_ge_050": false,
+                "min_ge_025": false,
+                "peak_le_110": true
+              },
+              "action": null,
+              "height": {}
+            },
+            "r15": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.960994072970636,
+                "tcp_max": 6.933673265772924,
+                "place_step": 10.41307580636419,
+                "pick_step": 8.92780885469081,
+                "place_force": 34.17243913807008
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 223.89929828932512,
+              "support": {
+                "mean_mg": 0.670553452910955,
+                "min_mg": 0.572111309120416,
+                "peak_mg": 1.0620210567262773,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -3.903065509039426,
+                  -10.989176006941964
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.0008467182341966306,
+                "half_width_mm": 1.329850387789239,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "d": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.969573322496758,
+                "tcp_max": 6.933673265772924,
+                "place_step": 10.41307580636419,
+                "pick_step": 8.92780885469081,
+                "place_force": 33.66895653986065
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 229.7402915428393,
+              "support": {
+                "mean_mg": 0.6023327300269796,
+                "min_mg": 0.5098977884816365,
+                "peak_mg": 1.0463736773035432,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -3.903065509039426,
+                  -10.989176006941964
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.0008467182341966306,
+                "half_width_mm": 1.329850387789239,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "late": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.999761779614333,
+                "tcp_max": 6.933673265772924,
+                "place_step": 10.41200210539263,
+                "pick_step": 8.92780885469081,
+                "place_force": 33.32066237948668
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 234.51689296052808,
+              "support": {
+                "mean_mg": 0.6233532325052518,
+                "min_mg": 0.5555693099287945,
+                "peak_mg": 1.0355492895342817,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -2.7804099751789826,
+                  -10.36131588999207
+                ],
+                "completed_at_s": 3.447
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": 0.02700514495876577,
+                "half_width_mm": 1.424466015868496,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "candidate": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.969953444625119,
+                "tcp_max": 6.933673265772924,
+                "place_step": 10.41277190573841,
+                "pick_step": 8.92780885469081,
+                "place_force": 33.365788613714344
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 12.0,
+              "ctrl_p99_us": 226.16879796260056,
+              "support": {
+                "mean_mg": 0.551515050561313,
+                "min_mg": 0.46843886244629873,
+                "peak_mg": 1.036951735838068,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -2.9172449303594408,
+                  -10.505152631006498
+                ],
+                "completed_at_s": 2.943
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.013699503652608469,
+                "half_width_mm": 1.4079357167468047,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            }
+          }
+        },
+        {
+          "id": "rp1:down",
+          "gates": {
+            "status": true,
+            "g4": true,
+            "cost_r10": true,
+            "cost_r15": true,
+            "no_extra_false": true,
+            "tool": true,
+            "saturation": true,
+            "timing": true
+          },
+          "g4": {
+            "mean_gain_mg": 0.6908828418816264,
+            "all_four_g4": true
+          },
+          "ratios": {
+            "r10": {
+              "tcp_rms": 0.801283310473988,
+              "tcp_max": 0.6550892542240419,
+              "place_step": 0.7690920586705752,
+              "pick_step": 1.0,
+              "place_force": 0.33295632426345
+            },
+            "r15": {
+              "tcp_rms": 0.9767461484708261,
+              "tcp_max": 1.0,
+              "place_step": 1.0247351174735142,
+              "pick_step": 1.0,
+              "place_force": 0.9900224969997148
+            },
+            "d": {
+              "tcp_rms": 0.9920436096219946,
+              "tcp_max": 1.0,
+              "place_step": 1.0247351174735142,
+              "pick_step": 1.0,
+              "place_force": 1.0045672691893421
+            }
+          },
+          "passed": true,
+          "arms": {
+            "r10": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.2243900203937828,
+                "tcp_max": 8.283820183508423,
+                "place_step": 10.338528038075793,
+                "pick_step": 8.910547801407901,
+                "place_force": 98.9622830306832
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 85.92210797360173,
+              "support": {
+                "mean_mg": 0.0018806152652633898,
+                "min_mg": 0.0,
+                "peak_mg": 3.075578771993585,
+                "samples": 20,
+                "mean_ge_050": false,
+                "min_ge_025": false,
+                "peak_le_110": false
+              },
+              "action": null,
+              "height": {}
+            },
+            "r15": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.645160069323365,
+                "tcp_max": 5.426641586140598,
+                "place_step": 7.759351345380907,
+                "pick_step": 8.910547801407901,
+                "place_force": 33.2821911607782
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 1435.4854027624283,
+              "support": {
+                "mean_mg": 0.7424203677083829,
+                "min_mg": 0.6742714340566046,
+                "peak_mg": 1.0343536697489557,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -7.683402782540784,
+                  -6.2239109907311745
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": true,
+                "estimated_extra_height_mm": -3.9386277284422544,
+                "half_width_mm": 1.3847363551483718,
+                "command_world_z_mm": 3.9386277284422544,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "d": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.6043713045890056,
+                "tcp_max": 5.426641586140598,
+                "place_step": 7.759351345380907,
+                "pick_step": 8.910547801407901,
+                "place_force": 32.80031015265438
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 751.7852984892676,
+              "support": {
+                "mean_mg": 0.6786767446503102,
+                "min_mg": 0.6373934991364826,
+                "peak_mg": 1.0193776308599483,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -7.683402782540784,
+                  -6.2239109907311745
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": true,
+                "estimated_extra_height_mm": -3.9386277284422544,
+                "half_width_mm": 1.3847363551483718,
+                "command_world_z_mm": 3.9386277284422544,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "late": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.5486506774704822,
+                "tcp_max": 5.426641586140598,
+                "place_step": 7.748077151460933,
+                "pick_step": 8.910547801407901,
+                "place_force": 32.98680249105106
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 836.5747968491634,
+              "support": {
+                "mean_mg": 0.6828106790738496,
+                "min_mg": 0.6574365863942931,
+                "peak_mg": 1.0251734942893966,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -6.390280417506936,
+                  -5.547020645283037
+                ],
+                "completed_at_s": 3.447
+              },
+              "height": {
+                "accepted": true,
+                "estimated_extra_height_mm": -3.9297414135290785,
+                "half_width_mm": 1.4716005320579781,
+                "command_world_z_mm": 3.9297414135290785,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "candidate": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 2.58364990980042,
+                "tcp_max": 5.426641586140598,
+                "place_step": 7.951279812427174,
+                "pick_step": 8.910547801407901,
+                "place_force": 32.95011799861547
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 674.5949886681047,
+              "support": {
+                "mean_mg": 0.6927634571468898,
+                "min_mg": 0.6632949734465388,
+                "peak_mg": 1.0240334029056795,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  -6.536890031156292,
+                  -5.711191411540571
+                ],
+                "completed_at_s": 2.943
+              },
+              "height": {
+                "accepted": true,
+                "estimated_extra_height_mm": -3.889177522123486,
+                "half_width_mm": 1.466783468831888,
+                "command_world_z_mm": 3.8891775221234863,
+                "finish_t": 3.5500000000000003
+              }
+            }
+          }
+        },
+        {
+          "id": "rp4:up",
+          "gates": {
+            "status": true,
+            "g4": false,
+            "cost_r10": true,
+            "cost_r15": true,
+            "no_extra_false": true,
+            "tool": true,
+            "saturation": true,
+            "timing": true
+          },
+          "g4": {
+            "mean_gain_mg": 0.27105312144091853,
+            "all_four_g4": false
+          },
+          "ratios": {
+            "r10": {
+              "tcp_rms": 0.9757964672076813,
+              "tcp_max": 1.0002150784805992,
+              "place_step": 0.9385489998135939,
+              "pick_step": 0.9997659880148382,
+              "place_force": 0.9797523867226059
+            },
+            "r15": {
+              "tcp_rms": 0.947313156922029,
+              "tcp_max": 1.0,
+              "place_step": 0.9978139757322833,
+              "pick_step": 1.0,
+              "place_force": 0.9519895705078151
+            },
+            "d": {
+              "tcp_rms": 0.9581775557640101,
+              "tcp_max": 1.0,
+              "place_step": 0.9978139757322833,
+              "pick_step": 1.0,
+              "place_force": 0.9659577815197558
+            }
+          },
+          "passed": false,
+          "arms": {
+            "r10": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 4.303580676889904,
+                "tcp_max": 7.730382233366788,
+                "place_step": 13.267075729950989,
+                "pick_step": 8.912107119785347,
+                "place_force": 79.3843937297224
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 10.0,
+              "ctrl_p99_us": 72.38008955027908,
+              "support": {
+                "mean_mg": 0.15529018989567359,
+                "min_mg": 0.020555746916389183,
+                "peak_mg": 1.0334854408697878,
+                "samples": 20,
+                "mean_ge_050": false,
+                "min_ge_025": false,
+                "peak_le_110": true
+              },
+              "action": null,
+              "height": {}
+            },
+            "r15": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 4.43297846141712,
+                "tcp_max": 7.732044872231992,
+                "place_step": 12.47908022901612,
+                "pick_step": 8.910021579906271,
+                "place_force": 81.6994761652004
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 2,
+              "false_alarm_times": [
+                3.875,
+                3.918
+              ],
+              "tool_delay_ms": 10.0,
+              "ctrl_p99_us": 234.32250905898405,
+              "support": {
+                "mean_mg": 0.8643343323630877,
+                "min_mg": 0.5548351180338628,
+                "peak_mg": 1.0636249163896978,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": false,
+                "model_action_xy_mm": [
+                  0.0,
+                  0.0
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.27873798750184403,
+                "half_width_mm": 1.297673634704672,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "d": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 4.382714660336593,
+                "tcp_max": 7.732044872231992,
+                "place_step": 12.47908022901612,
+                "pick_step": 8.910021579906271,
+                "place_force": 80.51806270751793
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 2,
+              "false_alarm_times": [
+                3.876,
+                3.918
+              ],
+              "tool_delay_ms": 10.0,
+              "ctrl_p99_us": 226.79921574308537,
+              "support": {
+                "mean_mg": 0.6974386249386149,
+                "min_mg": 0.335042262612574,
+                "peak_mg": 1.0482443919465751,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": false,
+                "model_action_xy_mm": [
+                  0.0,
+                  0.0
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.27873798750184403,
+                "half_width_mm": 1.297673634704672,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "late": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 4.307013552368811,
+                "tcp_max": 7.732044872231992,
+                "place_step": 12.453206893359692,
+                "pick_step": 8.910021579906271,
+                "place_force": 80.09799186182444
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 1,
+              "false_alarm_times": [
+                3.919
+              ],
+              "tool_delay_ms": 10.0,
+              "ctrl_p99_us": 228.4891925228294,
+              "support": {
+                "mean_mg": 0.7162002452802999,
+                "min_mg": 0.5643149744303468,
+                "peak_mg": 1.0427755953385647,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  10.805483059265415,
+                  -0.1473557432230856
+                ],
+                "completed_at_s": 3.447
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.34915690674314676,
+                "half_width_mm": 1.3221391753843181,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "candidate": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 4.199418820852411,
+                "tcp_max": 7.732044872231992,
+                "place_step": 12.451800656796706,
+                "pick_step": 8.910021579906271,
+                "place_force": 77.7770492252226
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": 10.0,
+              "ctrl_p99_us": 242.7714091027156,
+              "support": {
+                "mean_mg": 0.4263433113365921,
+                "min_mg": 0.3300376222962376,
+                "peak_mg": 1.0125598273352392,
+                "samples": 20,
+                "mean_ge_050": false,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": true,
+                "model_action_xy_mm": [
+                  10.815171061885996,
+                  -0.10254559249130768
+                ],
+                "completed_at_s": 2.943
+              },
+              "height": {
+                "accepted": false,
+                "estimated_extra_height_mm": -0.28450911673568563,
+                "half_width_mm": 1.233570970591122,
+                "command_world_z_mm": 0.0,
+                "finish_t": 3.5500000000000003
+              }
+            }
+          }
+        },
+        {
+          "id": "rp4:none",
+          "gates": {
+            "status": true,
+            "g4": true,
+            "cost_r10": true,
+            "cost_r15": true,
+            "no_extra_false": true,
+            "tool": true,
+            "saturation": true,
+            "timing": true
+          },
+          "g4": {
+            "mean_gain_mg": 0.385470827832949,
+            "all_four_g4": true
+          },
+          "ratios": {
+            "r10": {
+              "tcp_rms": 1.043165870348179,
+              "tcp_max": 1.0000000000001437,
+              "place_step": 0.7018839657032447,
+              "pick_step": 1.000000000000003,
+              "place_force": 1.0212439613177242
+            },
+            "r15": {
+              "tcp_rms": 0.967078371614898,
+              "tcp_max": 1.0,
+              "place_step": 1.0,
+              "pick_step": 1.0,
+              "place_force": 0.9796880198734972
+            },
+            "d": {
+              "tcp_rms": 1.0,
+              "tcp_max": 1.0,
+              "place_step": 1.0,
+              "pick_step": 1.0,
+              "place_force": 1.0
+            }
+          },
+          "passed": true,
+          "arms": {
+            "r10": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.503526728373791,
+                "tcp_max": 8.686479573500213,
+                "place_step": 12.903095584776025,
+                "pick_step": 8.899105895225958,
+                "place_force": 78.66622561916839
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 58.15050608362072,
+              "support": {
+                "mean_mg": 0.14167857949167645,
+                "min_mg": 0.01752611478965755,
+                "peak_mg": 1.0241357910018107,
+                "samples": 20,
+                "mean_ge_050": false,
+                "min_ge_025": false,
+                "peak_le_110": true
+              },
+              "action": null,
+              "height": {}
+            },
+            "r15": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.7791761414218894,
+                "tcp_max": 8.68647957350146,
+                "place_step": 9.056475898890625,
+                "pick_step": 8.899105895225986,
+                "place_force": 82.00305224065818
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 664.2292099422775,
+              "support": {
+                "mean_mg": 0.6436884054459616,
+                "min_mg": 0.5531954257761386,
+                "peak_mg": 1.0675770969058103,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": false,
+                "model_action_xy_mm": [
+                  0.0,
+                  0.0
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": true,
+                "estimated_extra_height_mm": 1.2408200358110812,
+                "half_width_mm": 1.131798581764501,
+                "command_world_z_mm": -1.2408200358110812,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "d": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.654759508892154,
+                "tcp_max": 8.68647957350146,
+                "place_step": 9.056475898890625,
+                "pick_step": 8.899105895225986,
+                "place_force": 80.33740787323336
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 619.1918988770341,
+              "support": {
+                "mean_mg": 0.5271494073246255,
+                "min_mg": 0.4297135053132758,
+                "peak_mg": 1.04589249212995,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": false,
+                "model_action_xy_mm": [
+                  0.0,
+                  0.0
+                ],
+                "completed_at_s": 2.463
+              },
+              "height": {
+                "accepted": true,
+                "estimated_extra_height_mm": 1.2408200358110812,
+                "half_width_mm": 1.131798581764501,
+                "command_world_z_mm": -1.2408200358110812,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "late": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.654759508892154,
+                "tcp_max": 8.68647957350146,
+                "place_step": 9.056475898890625,
+                "pick_step": 8.899105895225986,
+                "place_force": 80.33740787323336
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 556.5494991606101,
+              "support": {
+                "mean_mg": 0.5271494073246255,
+                "min_mg": 0.4297135053132758,
+                "peak_mg": 1.04589249212995,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": false,
+                "model_action_xy_mm": [
+                  0.0,
+                  0.0
+                ],
+                "completed_at_s": 3.447
+              },
+              "height": {
+                "accepted": true,
+                "estimated_extra_height_mm": 1.2408200358110812,
+                "half_width_mm": 1.131798581764501,
+                "command_world_z_mm": -1.2408200358110812,
+                "finish_t": 3.5500000000000003
+              }
+            },
+            "candidate": {
+              "status": "ok",
+              "cost": {
+                "tcp_rms": 3.654759508892154,
+                "tcp_max": 8.68647957350146,
+                "place_step": 9.056475898890625,
+                "pick_step": 8.899105895225986,
+                "place_force": 80.33740787323336
+              },
+              "saturation_pct": 0.0,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_delay_ms": null,
+              "ctrl_p99_us": 783.6189804947945,
+              "support": {
+                "mean_mg": 0.5271494073246255,
+                "min_mg": 0.4297135053132758,
+                "peak_mg": 1.04589249212995,
+                "samples": 20,
+                "mean_ge_050": true,
+                "min_ge_025": true,
+                "peak_le_110": true
+              },
+              "action": {
+                "accept": false,
+                "model_action_xy_mm": [
+                  0.0,
+                  0.0
+                ],
+                "completed_at_s": 2.943
+              },
+              "height": {
+                "accepted": true,
+                "estimated_extra_height_mm": 1.2408200358110812,
+                "half_width_mm": 1.131798581764501,
+                "command_world_z_mm": -1.2408200358110812,
+                "finish_t": 3.5500000000000003
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

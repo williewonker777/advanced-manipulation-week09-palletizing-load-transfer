@@ -1,0 +1,14 @@
+{
+  "schema": "r32-conservative-release-preregistration.v1",
+  "status": "FROZEN_BEFORE_R32_TARGET_REPLAY",
+  "classification": "disclosed R26 causal falsification; no new candidate unless an END/REARM can satisfy the existing scorer causally",
+  "incumbent": "experiments.r31_torque_control_candidate.candidate:Detector",
+  "incumbent_sha256": "252929845a7a46d54ec6a0144700863968553011580913cd52f36b8cf1c68149",
+  "target": "p26_close_place_cross",
+  "mechanics": ["stock", "actuator_deadzone", "place_surface_shift"],
+  "actual_twins_per_mechanics": ["none", "first", "second", "both", "long"],
+  "episode_accounting": "C3 plus incumbent, five twins, three mechanics = 30 actual episodes",
+  "hypothesis": "A physical END or REARM after the first four-sample alert may restore quiet before the second input without changing onset.",
+  "falsifier": "If the first emitted sample itself lies inside the scorer's pre-second quiet interval, no causal END/REARM after emission can restore quiet. Suppressing it loses both_first; advancing it is a different early-onset mechanism and is forbidden in this slice.",
+  "forbidden": ["time/case/route identity branch", "true force at runtime", "retroactive output mutation", "optional early pulse", "scorer change", "closed R27/R28/R30/R31 novel protocols", "default change"]
+}

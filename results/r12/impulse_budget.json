@@ -1,0 +1,119 @@
+{
+  "schema": "R12_IMPULSE_SUMMARY.v1",
+  "official": false,
+  "training_passed": false,
+  "held_run": false,
+  "disposition": "STOP_NORMAL_GATE_FAILED_NO_IMPACTS",
+  "rows": [
+    {
+      "name": "light_300",
+      "passed": false,
+      "baseline_mg": {
+        "final20_mean_mg": 0.09307621599354299,
+        "final20_min_mg": 0.0,
+        "release_peak_mg": 1.0027634834471948
+      },
+      "candidate_mg": {
+        "final20_mean_mg": 0.3041378300483754,
+        "final20_min_mg": 0.0025429752739970905,
+        "release_peak_mg": 1.0026712849450585
+      },
+      "improvement": 0.21106161405483242,
+      "activation_s": 3.8320000000000003,
+      "maximum_brake_mg": 0.35,
+      "maximum_support_fraction": 0.6,
+      "cost_ratio_max": 1.0029780057358673,
+      "false_alarms": 0,
+      "g4": {
+        "mean": false,
+        "minimum": false,
+        "improvement": false,
+        "peak": true
+      },
+      "gates": {
+        "G4": false,
+        "cost": true,
+        "saturation": true,
+        "FA": true,
+        "no_divergence": true,
+        "activated": true,
+        "bumpless": true
+      }
+    },
+    {
+      "name": "offset_650",
+      "passed": false,
+      "baseline_mg": {
+        "final20_mean_mg": 0.0,
+        "final20_min_mg": 0.0,
+        "release_peak_mg": 1.4858706078033386
+      },
+      "candidate_mg": {
+        "final20_mean_mg": 0.4609408633793589,
+        "final20_min_mg": 0.2812159159366349,
+        "release_peak_mg": 1.381395298760921
+      },
+      "improvement": 0.4609408633793589,
+      "activation_s": 3.8240000000000003,
+      "maximum_brake_mg": 0.1692990526537203,
+      "maximum_support_fraction": 0.6,
+      "cost_ratio_max": 1.0,
+      "false_alarms": 0,
+      "g4": {
+        "mean": false,
+        "minimum": true,
+        "improvement": true,
+        "peak": false
+      },
+      "gates": {
+        "G4": false,
+        "cost": true,
+        "saturation": true,
+        "FA": true,
+        "no_divergence": true,
+        "activated": true,
+        "bumpless": true
+      }
+    },
+    {
+      "name": "heavy_780",
+      "passed": false,
+      "baseline_mg": {
+        "final20_mean_mg": 0.10992806360520731,
+        "final20_min_mg": 0.0074244944386608475,
+        "release_peak_mg": 1.0077824701279814
+      },
+      "candidate_mg": {
+        "final20_mean_mg": 0.8507973576794253,
+        "final20_min_mg": 0.8144458915476581,
+        "release_peak_mg": 1.053980500014542
+      },
+      "improvement": 0.740869294074218,
+      "activation_s": 3.83,
+      "maximum_brake_mg": 0.06352823610151019,
+      "maximum_support_fraction": 0.6,
+      "cost_ratio_max": 1.045841271560016,
+      "false_alarms": 1,
+      "g4": {
+        "mean": true,
+        "minimum": true,
+        "improvement": true,
+        "peak": true
+      },
+      "gates": {
+        "G4": true,
+        "cost": true,
+        "saturation": true,
+        "FA": false,
+        "no_divergence": true,
+        "activated": true,
+        "bumpless": true
+      }
+    }
+  ],
+  "limitations": [
+    "maximum_dynamic_fraction is accumulated across the full episode and is not interpreted as a pre-release-only estimate",
+    "simulation development only",
+    "no coefficient was retuned after these results"
+  ]
+}

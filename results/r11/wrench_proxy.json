@@ -1,0 +1,95 @@
+{
+  "decision": {
+    "schema": "r11-wrench-ilc-decision.v1",
+    "decision": "reject_publicly_infeasible",
+    "adoption_ready": false,
+    "failed_gates": [
+      "preregistered_pressure_slew",
+      "minimum_predicted_support"
+    ],
+    "result": "The frozen source violates its preregistered slew claim because the 100ms fade is faster than the 140ms rise used in the calculation. Independently, the actuator coordinate was observable and locally linear but quarter-weight authority was insufficient across the second calibration nuisance and remained in conflict with the velocity target.",
+    "stop_rule": "Stopped after servo public-only calibration. No torque calibration, true support, impacts, or held validation; no retuning or further variations.",
+    "pins": {
+      "controller": "ca78d2a03bd810d0bda6a18b3835e4728641fd26f98d66bc1c5f1376b97da610",
+      "identify": "9f9afd676a3c34564065cc00d8968b8f4c170d7b38cf32c373db5a392b2f5055",
+      "plan": "32518ca0609461c887f8f04215acf21edf1a24eabb6bd3ec626586058b9e4024",
+      "geometric_source": "14b25de6c47326371c05cc9c7d00a298497aab693d1cf360cb13a1fb162e246f"
+    }
+  },
+  "diagnostic": {
+    "schema": "r11-wrench-ilc-public-feasibility.v1",
+    "decision": "stop_before_true_support_development",
+    "mode_opened": "servo",
+    "torque_opened": false,
+    "source_contract_failure": {
+      "gate": "preregistered_pressure_slew",
+      "claimed_max_nm_per_ms": 0.23830472141365622,
+      "actual_max_nm_per_ms": 0.33362660997911997,
+      "root_cause": "The preregistration computed slew from the 140ms rise, but pressure_profile removes the plateau over 100ms; the shorter fade sets the true maximum derivative."
+    },
+    "columns_usable": true,
+    "scaled_singular_values": [
+      5.719725895718435,
+      1.26657175365557,
+      0.12791250088317724
+    ],
+    "scaled_condition": 44.71592577915643,
+    "max_probe_nonlinearity_scaled": 0.0430246882186566,
+    "frozen_limits": [
+      1.6,
+      1.0,
+      0.25
+    ],
+    "groups": [
+      {
+        "id": "f0",
+        "baseline_speed_mm_s": 38.99192700698569,
+        "baseline_support_proxy_mg": 0.23716711383219705,
+        "speed_response_per_unit": [
+          -19.681044885994154,
+          -9.063675780346244,
+          -42.546517785474244
+        ],
+        "support_response_per_unit": [
+          -0.0225078702965185,
+          -0.053715786466532967,
+          -0.8604730873900134
+        ],
+        "pressure_only_support_upper_bound_mg": 0.4522853856797004,
+        "all_coordinate_relaxed_support_upper_bound_mg": 0.542013764620663,
+        "bounded_fit_speed_mm_s": 19.18753430603975,
+        "bounded_fit_support_proxy_mg": 0.3995158766046477
+      },
+      {
+        "id": "f1",
+        "baseline_speed_mm_s": 40.42496521899916,
+        "baseline_support_proxy_mg": 0.19227165422041145,
+        "speed_response_per_unit": [
+          -17.499981842016687,
+          -11.072482797817202,
+          -25.951228345312938
+        ],
+        "support_response_per_unit": [
+          -0.005290123778234022,
+          -0.027300559402779423,
+          -0.9343287604139411
+        ],
+        "pressure_only_support_upper_bound_mg": 0.4258538443238967,
+        "all_coordinate_relaxed_support_upper_bound_mg": 0.46161860177185055,
+        "bounded_fit_speed_mm_s": 18.597117029895323,
+        "bounded_fit_support_proxy_mg": 0.4073724321127963
+      }
+    ],
+    "bounded_fit_coefficients": [
+      1.3559616937349641,
+      0.41421154950939726,
+      -0.25
+    ],
+    "public_fit_failed_gate": "minimum_predicted_support",
+    "required_minimum_proxy_mg": 0.5,
+    "target_proxy_mg": 0.7,
+    "mechanism": "The actuator coordinate is observable and materially increases support for negative p, but at the independently frozen quarter-weight limit its maximum local contribution is only 0.215/0.234mg. The heavier-nuisance f1 relaxed upper bound is 0.462mg even when all geometric coordinates are independently signed to maximize support and the speed/shared-coefficient constraints are ignored. Joint fitting saturates p=-0.25 and still leaves proxy about 0.40mg plus upward speed about 19mm/s.",
+    "bound_qualification": "Pressure-only and all-coordinate upper bounds maximize the local signed-probe linear response over the frozen rectangle independently per group, ignoring speed and shared coefficients. They are permissive local-model bounds, not global nonlinear certificates.",
+    "forbidden_channels_read_during_fit": []
+  }
+}

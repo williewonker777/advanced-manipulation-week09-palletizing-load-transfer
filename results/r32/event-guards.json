@@ -1,0 +1,965 @@
+{
+  "a": {
+    "candidate": "experiments.r32_measured_level.candidate:Detector",
+    "cross": {
+      "c3": {
+        "counts": {
+          "c3": {
+            "all_four": 0,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 6
+          },
+          "new": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 12
+          }
+        },
+        "losses": [
+          [
+            "cross_stress_0",
+            "stock",
+            [
+              "isolated_second:cost"
+            ]
+          ]
+        ]
+      },
+      "composed": {
+        "counts": {
+          "composed": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 12
+          },
+          "new": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 12
+          }
+        },
+        "losses": [
+          [
+            "cross_stress_0",
+            "stock",
+            [
+              "isolated_second:cost"
+            ]
+          ]
+        ]
+      }
+    },
+    "normals": {
+      "additional": {
+        "episodes": 36,
+        "false_rises": {
+          "experiments.r26_yaw_acquisition.candidate:Detector": 0,
+          "experiments.r32_measured_level.candidate:Detector": 0
+        },
+        "losses": []
+      },
+      "normal": {
+        "episodes": 30,
+        "false_rises": {
+          "experiments.r26_yaw_acquisition.candidate:Detector": 0,
+          "experiments.r32_measured_level.candidate:Detector": 0
+        },
+        "losses": []
+      }
+    },
+    "r25": {
+      "c3": {
+        "counts": {
+          "c3": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 57
+          },
+          "new": {
+            "all_four": 5,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 62
+          }
+        },
+        "losses": []
+      },
+      "composed": {
+        "counts": {
+          "composed": {
+            "all_four": 5,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 62
+          },
+          "new": {
+            "all_four": 5,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 62
+          }
+        },
+        "losses": []
+      }
+    },
+    "r26": {
+      "both_second": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": 0,
+        "experiments.r32_measured_level.candidate:Detector": 6
+      },
+      "episodes": 156,
+      "losses_vs_c3": [
+        [
+          "p26_close_place_cross",
+          "stock",
+          [
+            "long_single:cost"
+          ]
+        ],
+        [
+          "p26_close_place_cross",
+          "place_surface_shift",
+          [
+            "long_single:cost"
+          ]
+        ]
+      ],
+      "r26_c3": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": {
+          "all_four": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 29
+        },
+        "experiments.r32_measured_level.candidate:Detector": {
+          "all_four": 6,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 51
+        }
+      },
+      "vs_nearest": {
+        "composed": {
+          "absolute_non_strict": [
+            [
+              "p26_close_transfer_oblique",
+              "stock",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "stock",
+              "isolated_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "actuator_deadzone",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "actuator_deadzone",
+              "isolated_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "place_surface_shift",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "place_surface_shift",
+              "isolated_second",
+              []
+            ]
+          ],
+          "counts": {
+            "new": {
+              "all_four": 6,
+              "duplicate_edges": 0,
+              "duplicate_slots": 0,
+              "false_rises": 0,
+              "slots": 57,
+              "strict": 51
+            },
+            "old": {
+              "all_four": 3,
+              "duplicate_edges": 0,
+              "duplicate_slots": 0,
+              "false_rises": 0,
+              "slots": 57,
+              "strict": 48
+            }
+          },
+          "guard_losses": [
+            [
+              "s26_long_carry_signed",
+              "stock",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_carry_signed",
+              "actuator_deadzone",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_carry_signed",
+              "place_surface_shift",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "stock",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "actuator_deadzone",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "place_surface_shift",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "stock",
+              [
+                "both_first:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "actuator_deadzone",
+              [
+                "both_first:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "place_surface_shift",
+              [
+                "both_first:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ]
+          ]
+        },
+        "identity": {
+          "absolute_non_strict": [
+            [
+              "p26_close_transfer_oblique",
+              "stock",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "stock",
+              "isolated_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "actuator_deadzone",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "actuator_deadzone",
+              "isolated_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "place_surface_shift",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "place_surface_shift",
+              "isolated_second",
+              []
+            ]
+          ],
+          "counts": {
+            "new": {
+              "all_four": 6,
+              "duplicate_edges": 0,
+              "duplicate_slots": 0,
+              "false_rises": 0,
+              "slots": 57,
+              "strict": 51
+            },
+            "old": {
+              "all_four": 6,
+              "duplicate_edges": 0,
+              "duplicate_slots": 0,
+              "false_rises": 0,
+              "slots": 57,
+              "strict": 51
+            }
+          },
+          "guard_losses": [
+            [
+              "s26_long_carry_signed",
+              "stock",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_carry_signed",
+              "actuator_deadzone",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_carry_signed",
+              "place_surface_shift",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "stock",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "actuator_deadzone",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "place_surface_shift",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "stock",
+              [
+                "both_first:cost",
+                "both_second:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "actuator_deadzone",
+              [
+                "both_first:cost",
+                "both_second:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "place_surface_shift",
+              [
+                "both_first:cost",
+                "both_second:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    "raw_sha256": {
+      "additional": "244580152efe519b7454c798ebb29cf8443920a2d4ce477097e1ae096d5fa9e7",
+      "cross": "cad869624b5d63698c2e02a695fd8b2a3a3ef9cbc97b28dd7b888032b874f29c",
+      "directions": "d2e066577db430df842eb3b977fb819c92860179cece2e7d0725b33287b62586",
+      "normal": "bfb33c64c65e93cf10818e8ab2334407e3f269f64cf29bbe2b0fe8bedfaaff49",
+      "r25": "8e98426107bd621833fd48b5368284e7378f457bae0162473499159e770c9a3a",
+      "r26": "45f324d7d16824ee0e7946f30cdc81a182c9389df853c40480f23b6fcc90c8cc"
+    },
+    "sha256": "e08c0622c0fb6947f80b2c535a5ef0506f58a6fe8b44c8526323e5d405ebc25c",
+    "signed": {
+      "episodes": 30,
+      "losses": [],
+      "strict": 21
+    }
+  },
+  "actual_notice_client": {
+    "cross": {
+      "all_original_notice_records_exact": true,
+      "caveat": "Actual course Boolean here is the notice view. This is not a sustained-level duration or separation score.",
+      "client": "experiments.r32_native_handoff.candidate:NoticeCompatible",
+      "episodes": 36,
+      "matching_complete_rows": 3,
+      "panel": "cross",
+      "raw_sha256": "5fd2bd2bcca9cd635e5ef3e37b109811282e9fce60e0a309b1b6a8e770437f05",
+      "reference_sha256": "8919663c62e6f90f99bdc3b0937c0cd2f10a18ef316fb1c4a42b2142f5774b12",
+      "schema": "r32-actual-notice-guard.v1",
+      "scores": {
+        "example": {
+          "active_samples_in_slot": 4,
+          "attributable_rise_indices": [
+            1932
+          ],
+          "delays_ms": [
+            96
+          ],
+          "duplicate_rises": 0,
+          "exactly_one": true,
+          "high_before": false,
+          "quiet_before": true,
+          "raw_rise_indices": [
+            1932
+          ],
+          "strict": true
+        },
+        "slots": 12,
+        "strict": 12
+      },
+      "sha256": "d3949f6452b6d3573a9b61a63b77900d0ce78e8603dba2912a7b2e8c034dd837"
+    },
+    "r26": {
+      "all_original_notice_records_exact": true,
+      "caveat": "Actual course Boolean here is the notice view. This is not a sustained-level duration or separation score.",
+      "client": "experiments.r32_native_handoff.candidate:NoticeCompatible",
+      "episodes": 156,
+      "matching_complete_rows": 30,
+      "panel": "r26",
+      "raw_sha256": "7f5b69a26590b263864c9ad18535ab1fe1ec1c1faadba8ecc3e64db21470c637",
+      "reference_sha256": "ca228e57391651369b3732dbb4b5bd38c05f0b8a92db0fd5bcaf6b00c6155b87",
+      "schema": "r32-actual-notice-guard.v1",
+      "scores": {
+        "both_second": 6,
+        "slots": 57,
+        "strict": 51
+      },
+      "sha256": "d3949f6452b6d3573a9b61a63b77900d0ce78e8603dba2912a7b2e8c034dd837"
+    }
+  },
+  "b": {
+    "candidate": "experiments.r32_native_handoff.candidate:Detector",
+    "cross": {
+      "c3": {
+        "counts": {
+          "c3": {
+            "all_four": 0,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 6
+          },
+          "new": {
+            "all_four": 2,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 11
+          }
+        },
+        "losses": [
+          [
+            "cross_stress_0",
+            "stock",
+            [
+              "isolated_second:cost",
+              "both_second:time",
+              "both_second:cost",
+              "both_second:new_prealarm"
+            ]
+          ]
+        ]
+      },
+      "composed": {
+        "counts": {
+          "composed": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 12
+          },
+          "new": {
+            "all_four": 2,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 11
+          }
+        },
+        "losses": [
+          [
+            "cross_stress_0",
+            "stock",
+            [
+              "isolated_first:cost",
+              "isolated_second:cost",
+              "both_first:cost",
+              "both_second:time",
+              "both_second:cost",
+              "both_second:new_prealarm"
+            ]
+          ],
+          [
+            "cross_stress_1",
+            "stock",
+            [
+              "isolated_first:cost",
+              "both_first:cost"
+            ]
+          ],
+          [
+            "cross_stress_2",
+            "stock",
+            [
+              "isolated_first:cost",
+              "both_first:cost"
+            ]
+          ]
+        ]
+      }
+    },
+    "normals": {
+      "additional": {
+        "episodes": 36,
+        "false_rises": {
+          "experiments.r26_yaw_acquisition.candidate:Detector": 0,
+          "experiments.r32_native_handoff.candidate:Detector": 0
+        },
+        "losses": []
+      },
+      "normal": {
+        "episodes": 30,
+        "false_rises": {
+          "experiments.r26_yaw_acquisition.candidate:Detector": 0,
+          "experiments.r32_native_handoff.candidate:Detector": 0
+        },
+        "losses": []
+      }
+    },
+    "r25": {
+      "c3": {
+        "counts": {
+          "c3": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 57
+          },
+          "new": {
+            "all_four": 5,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 62
+          }
+        },
+        "losses": []
+      },
+      "composed": {
+        "counts": {
+          "composed": {
+            "all_four": 5,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 62
+          },
+          "new": {
+            "all_four": 5,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 75,
+            "strict": 62
+          }
+        },
+        "losses": []
+      }
+    },
+    "r26": {
+      "both_second": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": 0,
+        "experiments.r32_native_handoff.candidate:Detector": 6
+      },
+      "episodes": 156,
+      "losses_vs_c3": [
+        [
+          "p26_close_place_cross",
+          "stock",
+          [
+            "long_single:cost"
+          ]
+        ],
+        [
+          "p26_close_place_cross",
+          "place_surface_shift",
+          [
+            "long_single:cost"
+          ]
+        ]
+      ],
+      "r26_c3": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": {
+          "all_four": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 29
+        },
+        "experiments.r32_native_handoff.candidate:Detector": {
+          "all_four": 6,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 51
+        }
+      },
+      "vs_nearest": {
+        "composed": {
+          "absolute_non_strict": [
+            [
+              "p26_close_transfer_oblique",
+              "stock",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "stock",
+              "isolated_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "actuator_deadzone",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "actuator_deadzone",
+              "isolated_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "place_surface_shift",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "place_surface_shift",
+              "isolated_second",
+              []
+            ]
+          ],
+          "counts": {
+            "new": {
+              "all_four": 6,
+              "duplicate_edges": 0,
+              "duplicate_slots": 0,
+              "false_rises": 0,
+              "slots": 57,
+              "strict": 51
+            },
+            "old": {
+              "all_four": 3,
+              "duplicate_edges": 0,
+              "duplicate_slots": 0,
+              "false_rises": 0,
+              "slots": 57,
+              "strict": 48
+            }
+          },
+          "guard_losses": [
+            [
+              "s26_long_carry_signed",
+              "stock",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_carry_signed",
+              "actuator_deadzone",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_carry_signed",
+              "place_surface_shift",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "stock",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "actuator_deadzone",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "place_surface_shift",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "stock",
+              [
+                "both_first:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "actuator_deadzone",
+              [
+                "both_first:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "place_surface_shift",
+              [
+                "both_first:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ]
+          ]
+        },
+        "identity": {
+          "absolute_non_strict": [
+            [
+              "p26_close_transfer_oblique",
+              "stock",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "stock",
+              "isolated_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "actuator_deadzone",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "actuator_deadzone",
+              "isolated_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "place_surface_shift",
+              "both_second",
+              []
+            ],
+            [
+              "p26_close_transfer_oblique",
+              "place_surface_shift",
+              "isolated_second",
+              []
+            ]
+          ],
+          "counts": {
+            "new": {
+              "all_four": 6,
+              "duplicate_edges": 0,
+              "duplicate_slots": 0,
+              "false_rises": 0,
+              "slots": 57,
+              "strict": 51
+            },
+            "old": {
+              "all_four": 6,
+              "duplicate_edges": 0,
+              "duplicate_slots": 0,
+              "false_rises": 0,
+              "slots": 57,
+              "strict": 51
+            }
+          },
+          "guard_losses": [
+            [
+              "s26_long_carry_signed",
+              "stock",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_carry_signed",
+              "actuator_deadzone",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_carry_signed",
+              "place_surface_shift",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "stock",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "actuator_deadzone",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "s26_long_place_lateral",
+              "place_surface_shift",
+              [
+                "single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "stock",
+              [
+                "both_first:cost",
+                "both_second:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "actuator_deadzone",
+              [
+                "both_first:cost",
+                "both_second:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ],
+            [
+              "p26_close_place_cross",
+              "place_surface_shift",
+              [
+                "both_first:cost",
+                "both_second:cost",
+                "isolated_first:cost",
+                "long_single:cost"
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    "raw_sha256": {
+      "additional": "531203cb89b3b84648e7f402136bd6b82ec05bb0dfd70de9146ee7cafa51b018",
+      "cross": "c84bca4c76f5428416731448691ab6d4a2007a56ae0a8d9a85a079f2ad2fc94c",
+      "directions": "e224df63fc0610336edfbe196b8d1f907f584c22f70a2a6d12c6c324d1a3f8ec",
+      "normal": "e18431bd6dde354bd06b530fc9558a90526070fdaa69e53833500356e6c3768c",
+      "r25": "c24e761aa100dc3b971ac1e20eec4cd1fad5e645485cf686d6682f4ada7a19ca",
+      "r26": "170854a57010ea7fcdab3595b877bd82a614366354da0aae300768dcdf97c22a"
+    },
+    "sha256": "d3949f6452b6d3573a9b61a63b77900d0ce78e8603dba2912a7b2e8c034dd837",
+    "signed": {
+      "episodes": 30,
+      "losses": [],
+      "strict": 21
+    }
+  },
+  "schema": "r32-disclosed-simulator-guard-panels.v1"
+}

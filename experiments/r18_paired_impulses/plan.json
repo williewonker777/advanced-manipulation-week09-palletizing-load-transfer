@@ -1,0 +1,239 @@
+{
+  "schema": "r18-paired-impulse-plan.v1",
+  "status": "FROZEN_BEFORE_ANY_FRESH_SECOND_IMPACT",
+  "single_equivalence": {
+    "id": "prior_single_surface_normal",
+    "mass": 5.38,
+    "com": [
+      0.021,
+      -0.016,
+      0.011
+    ],
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "collision": [
+      3.94,
+      [
+        0.0,
+        0.0,
+        16.0
+      ]
+    ],
+    "claim": "previously_exposed_single_only"
+  },
+  "quiet_ms": 20.0,
+  "event_window_ms": 320.0,
+  "fresh_paired_cases": [
+    {
+      "id": "pair_before_opposed",
+      "mass": 4.26,
+      "com": [
+        0.018,
+        -0.023,
+        0.012
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "impacts": [
+        [
+          3.58,
+          [
+            7.0,
+            -6.0,
+            -8.0
+          ]
+        ],
+        [
+          3.82,
+          [
+            -7.0,
+            6.0,
+            8.0
+          ]
+        ]
+      ],
+      "phase": "both_before_release",
+      "claim": "fresh_sealed"
+    },
+    {
+      "id": "pair_return_opposed",
+      "mass": 5.71,
+      "com": [
+        -0.022,
+        0.014,
+        0.019
+      ],
+      "offset": null,
+      "impacts": [
+        [
+          3.82,
+          [
+            0.0,
+            0.0,
+            -13.0
+          ]
+        ],
+        [
+          4.18,
+          [
+            0.0,
+            0.0,
+            13.0
+          ]
+        ]
+      ],
+      "phase": "second_on_return",
+      "claim": "fresh_sealed"
+    },
+    {
+      "id": "pair_cross_axis_before",
+      "mass": 3.34,
+      "com": [
+        0.011,
+        0.025,
+        -0.017
+      ],
+      "offset": [
+        -0.002,
+        0.003,
+        0.0
+      ],
+      "impacts": [
+        [
+          3.61,
+          [
+            10.0,
+            0.0,
+            -4.0
+          ]
+        ],
+        [
+          3.84,
+          [
+            0.0,
+            -10.0,
+            4.0
+          ]
+        ]
+      ],
+      "phase": "both_before_release",
+      "claim": "fresh_sealed"
+    },
+    {
+      "id": "pair_cross_axis_return",
+      "mass": 7.22,
+      "com": [
+        -0.019,
+        -0.016,
+        0.024
+      ],
+      "offset": [
+        0.002,
+        -0.002,
+        0.0
+      ],
+      "impacts": [
+        [
+          3.79,
+          [
+            -9.0,
+            5.0,
+            -6.0
+          ]
+        ],
+        [
+          4.22,
+          [
+            9.0,
+            -5.0,
+            6.0
+          ]
+        ]
+      ],
+      "phase": "second_on_return",
+      "claim": "fresh_sealed"
+    }
+  ],
+  "candidate_pins": {
+    "recovery_detector_sha256": "92d7df88382f40d2f839a8d7f635db245ed21675a1c7514e9e9485fb0177e76c",
+    "recovery_plan_sha256": "d23c2cee0473f60ad10b0f15fd601b36958ed1685e3245e3a4ae6beb33b49496",
+    "r17c_model_sha256": "42ee9d2eebc85a424f67d2ab3e45431d4a42ea3cbd89b9e78532fa000aba4b81",
+    "known_result_sha256": "a397f697c9629eb9d5c19735583bb690ff8b23c1325bb251f02b817ea4ac64f1"
+  },
+  "diagnostic_sequences": [
+    {
+      "id": "diag_known_late_fz",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "impacts": [
+        [
+          3.94,
+          [
+            0.0,
+            0.0,
+            16.0
+          ]
+        ],
+        [
+          5.415,
+          [
+            0.0,
+            0.0,
+            18.0
+          ]
+        ]
+      ],
+      "phase": "tagged_known_anchor_late_post_return",
+      "claim": "diagnostic_not_heldout"
+    },
+    {
+      "id": "diag_known_late_fx",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "impacts": [
+        [
+          3.94,
+          [
+            0.0,
+            0.0,
+            16.0
+          ]
+        ],
+        [
+          5.505,
+          [
+            25.0,
+            0.0,
+            0.0
+          ]
+        ]
+      ],
+      "phase": "tagged_known_anchor_disjoint_direction",
+      "claim": "diagnostic_not_heldout"
+    }
+  ]
+}

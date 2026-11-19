@@ -1,0 +1,173 @@
+{
+  "schema": "r12-counterfactual-plan.v1",
+  "objective": "Subtract the normal-only signed full-cycle hybrid-minus-R1 sensor difference predicted solely from public clock and known mass, then independently replay unchanged R10 decisions.",
+  "model": {
+    "fit": "per-sample per-component least squares intercept+slope in known mass over four paired R1/hybrid normals",
+    "inputs": [
+      "public sample clock",
+      "known mass"
+    ],
+    "outputs": [
+      "six wrench differences",
+      "six fast-innovation differences"
+    ],
+    "unit_slope": true,
+    "live residual_or_alarm_input_to_prediction": false,
+    "collision_input": false
+  },
+  "decision": {
+    "shared_estimator_and_controller": "untouched original hybrid execution",
+    "replay": "unchanged main/fast thresholds, persistence and clear counts over measured innovations minus deterministic prediction",
+    "learned_branches": "original learned-only positives retained as OR",
+    "zero_model": "must reproduce R10 detect bits exactly on an actual fresh hybrid episode"
+  },
+  "pins": {
+    "detector": "2da4b6ebbaa0a0f235d5a834464e0f49af2862f0bbdd4f3a2b9314bffd0b04da",
+    "calibrate": "49d58cf3326ae0b0c68ae252e524e0f43eaf5dbba8a5c8287438227389a39135",
+    "qualification": "671783d0b9d0bd111f5d9e507db56bcac1058c0d4753a93c43ce8cd38a5fdf23",
+    "hybrid": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+    "r10": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67"
+  },
+  "calibration": [
+    {
+      "id": "cf0",
+      "mass": 4.3,
+      "com": [
+        0.019,
+        -0.021,
+        0.018
+      ],
+      "perturb": {
+        "seed": 945101,
+        "stiffness_scale": 0.92,
+        "viscous_scale": 1.08,
+        "coulomb_scale": 0.94
+      }
+    },
+    {
+      "id": "cf1",
+      "mass": 5.6,
+      "com": [
+        -0.024,
+        0.014,
+        -0.017
+      ],
+      "perturb": {
+        "seed": 945102,
+        "stiffness_scale": 1.07,
+        "viscous_scale": 0.94,
+        "coulomb_scale": 1.05
+      }
+    },
+    {
+      "id": "cf2",
+      "mass": 6.8,
+      "com": [
+        0.022,
+        0.025,
+        0.013
+      ],
+      "perturb": {
+        "seed": 945103,
+        "stiffness_scale": 0.95,
+        "viscous_scale": 1.05,
+        "coulomb_scale": 0.97
+      }
+    },
+    {
+      "id": "cf3",
+      "mass": 7.9,
+      "com": [
+        -0.026,
+        -0.016,
+        0.026
+      ],
+      "perturb": {
+        "seed": 945104,
+        "stiffness_scale": 1.09,
+        "viscous_scale": 0.91,
+        "coulomb_scale": 1.08
+      }
+    }
+  ],
+  "fresh": [
+    {
+      "id": "ce0",
+      "mass": 4.85,
+      "com": [
+        0.017,
+        0.027,
+        -0.015
+      ],
+      "perturb": {
+        "seed": 945201,
+        "stiffness_scale": 1.05,
+        "viscous_scale": 0.95,
+        "coulomb_scale": 0.96
+      },
+      "offset": [
+        0.008,
+        -0.01,
+        0.004
+      ],
+      "force": [
+        0,
+        17,
+        0
+      ]
+    },
+    {
+      "id": "ce1",
+      "mass": 6.35,
+      "com": [
+        -0.025,
+        0.012,
+        0.021
+      ],
+      "perturb": {
+        "seed": 945202,
+        "stiffness_scale": 0.93,
+        "viscous_scale": 1.07,
+        "coulomb_scale": 1.04
+      },
+      "offset": [
+        -0.011,
+        0.007,
+        -0.005
+      ],
+      "force": [
+        0,
+        0,
+        -35
+      ]
+    },
+    {
+      "id": "ce2",
+      "mass": 7.75,
+      "com": [
+        0.014,
+        -0.026,
+        0.028
+      ],
+      "perturb": {
+        "seed": 945203,
+        "stiffness_scale": 1.08,
+        "viscous_scale": 0.92,
+        "coulomb_scale": 1.06
+      },
+      "offset": [
+        0.006,
+        0.012,
+        0.005
+      ],
+      "force": [
+        13,
+        -11,
+        16
+      ]
+    }
+  ],
+  "gates": "fresh normal+offset first: zero-model bit parity, no R1 FA increase, hybrid/counter physics exact, costs/saturation/divergence; normal no-offset G4. If clean open preregistered simultaneous-release directions: no R1 event/tool loss, <=5ms delay, no extra FA, physics exact. Offset G4 is reported but does not block detector-only scientific study.",
+  "stop_rule": "No model form, fit set, correction, branch, threshold, persistence, case, offset or force change after normal fit. No positive retuning.",
+  "created_before_any_counterfactual_simulation": true
+}

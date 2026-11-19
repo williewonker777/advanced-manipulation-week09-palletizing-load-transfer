@@ -1,0 +1,15 @@
+{
+  "schema":"r15-early-com-dependencies.v1",
+  "public_runtime":[
+    "stock sim package, r1_torque.py and my_detector.py",
+    "experiments.r14_online.stream.Stream",
+    "experiments.r14_stock_handoff.controller.Controller and detector.Detector",
+    "experiments.r15_early_com.stream.Stream",
+    "experiments.r15_early_com.sensing.decide",
+    "experiments.r15_early_com.controller.Controller"
+  ],
+  "caller_owned_models":["R14 torque height calibration JSON","R15 early stock horizontal calibration JSON"],
+  "runtime_contract":"Controller(height_calibration, early_xy_calibration); public encoder/JTS prefix decision at 2.463s; C2 model-only COM blend 2.470-2.670s; R14 height decision remains at 3.55s",
+  "offline_only":["fresh.py truth scoring","control.py plant geometry/support scoring","tools.r11_placement physical scorer"],
+  "no_dependencies":["box freejoint state at runtime","table/tool force at runtime","case ID or configured offset","new package"]
+}

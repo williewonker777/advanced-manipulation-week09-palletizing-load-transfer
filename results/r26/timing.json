@@ -1,0 +1,251 @@
+{
+  "schema": "r26-shared-cpu-torque-placement.v1",
+  "note": "Shared machine. Per-tick controller.compute plus detector.update only, not end-to-end or hard real-time.",
+  "samples_per_arm": 36000,
+  "totals": {
+    "r24": {
+      "samples": 36000,
+      "p99_worst_wall_us": 445.51540000000006,
+      "max_wall_us": 1421.226,
+      "wall_at_least_1ms": 6,
+      "p99_worst_thread_us": 441.95708000000013
+    },
+    "pair": {
+      "samples": 36000,
+      "p99_worst_wall_us": 421.87800000000016,
+      "max_wall_us": 1273.317,
+      "wall_at_least_1ms": 6,
+      "p99_worst_thread_us": 418.27039
+    }
+  },
+  "rows": [
+    {
+      "repeat": 0,
+      "case": "none",
+      "arm": "r24",
+      "physical": "6c3198fbdb5645d429386abe170087806857d468fc90d461d9d0bb20e31cd153",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 213.9955,
+        "p99_us": 414.2968000000001,
+        "max_us": 1324.777,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 211.024,
+        "p99_us": 411.19180000000006,
+        "max_us": 1321.256,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 0,
+      "case": "none",
+      "arm": "pair",
+      "physical": "6c3198fbdb5645d429386abe170087806857d468fc90d461d9d0bb20e31cd153",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 267.78999999999996,
+        "p99_us": 419.1522,
+        "max_us": 1217.498,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 264.529,
+        "p99_us": 415.909,
+        "max_us": 1213.886,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 0,
+      "case": "late_x_pos",
+      "arm": "r24",
+      "physical": "08e5fc12ab20b0e6d021e1f0a04eabec8b386ccd252e5abec5b433eea1e6757a",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 215.69650000000001,
+        "p99_us": 421.1665000000001,
+        "max_us": 1255.717,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 212.52949999999998,
+        "p99_us": 417.81969000000004,
+        "max_us": 1252.166,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 0,
+      "case": "late_x_pos",
+      "arm": "pair",
+      "physical": "08e5fc12ab20b0e6d021e1f0a04eabec8b386ccd252e5abec5b433eea1e6757a",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 265.795,
+        "p99_us": 418.8324,
+        "max_us": 1236.458,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 262.519,
+        "p99_us": 415.54891000000003,
+        "max_us": 1233.086,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 0,
+      "case": "late_z_neg",
+      "arm": "r24",
+      "physical": "5b99959bb0f2edd3537890d484a2e888dda19b6fb9f94b1b30dff3db28374098",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 218.6265,
+        "p99_us": 424.58389000000005,
+        "max_us": 1234.488,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 215.5845,
+        "p99_us": 420.87359000000015,
+        "max_us": 1230.866,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 0,
+      "case": "late_z_neg",
+      "arm": "pair",
+      "physical": "5b99959bb0f2edd3537890d484a2e888dda19b6fb9f94b1b30dff3db28374098",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 264.83000000000004,
+        "p99_us": 418.5126,
+        "max_us": 1273.317,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 261.5095,
+        "p99_us": 415.05150000000003,
+        "max_us": 1264.736,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 1,
+      "case": "none",
+      "arm": "pair",
+      "physical": "6c3198fbdb5645d429386abe170087806857d468fc90d461d9d0bb20e31cd153",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 262.075,
+        "p99_us": 416.60229999999996,
+        "max_us": 1251.428,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 258.80949999999996,
+        "p99_us": 413.29989,
+        "max_us": 1248.306,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 1,
+      "case": "none",
+      "arm": "r24",
+      "physical": "6c3198fbdb5645d429386abe170087806857d468fc90d461d9d0bb20e31cd153",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 214.0765,
+        "p99_us": 445.51540000000006,
+        "max_us": 1421.226,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 210.969,
+        "p99_us": 441.95708000000013,
+        "max_us": 1417.175,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 1,
+      "case": "late_x_pos",
+      "arm": "pair",
+      "physical": "08e5fc12ab20b0e6d021e1f0a04eabec8b386ccd252e5abec5b433eea1e6757a",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 265.65,
+        "p99_us": 419.2257000000001,
+        "max_us": 1231.548,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 262.4145,
+        "p99_us": 416.08080000000007,
+        "max_us": 1228.086,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 1,
+      "case": "late_x_pos",
+      "arm": "r24",
+      "physical": "08e5fc12ab20b0e6d021e1f0a04eabec8b386ccd252e5abec5b433eea1e6757a",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 212.796,
+        "p99_us": 413.73460000000006,
+        "max_us": 1218.328,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 209.695,
+        "p99_us": 410.3591,
+        "max_us": 1214.816,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 1,
+      "case": "late_z_neg",
+      "arm": "pair",
+      "physical": "5b99959bb0f2edd3537890d484a2e888dda19b6fb9f94b1b30dff3db28374098",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 267.33500000000004,
+        "p99_us": 421.87800000000016,
+        "max_us": 1267.608,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 264.079,
+        "p99_us": 418.27039,
+        "max_us": 1264.196,
+        "at_least_1ms": 1
+      }
+    },
+    {
+      "repeat": 1,
+      "case": "late_z_neg",
+      "arm": "r24",
+      "physical": "5b99959bb0f2edd3537890d484a2e888dda19b6fb9f94b1b30dff3db28374098",
+      "samples": 6000,
+      "wall": {
+        "p50_us": 217.676,
+        "p99_us": 418.38439,
+        "max_us": 1310.978,
+        "at_least_1ms": 1
+      },
+      "thread": {
+        "p50_us": 214.4795,
+        "p99_us": 415.17040000000003,
+        "max_us": 1307.766,
+        "at_least_1ms": 1
+      }
+    }
+  ]
+}

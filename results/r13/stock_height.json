@@ -1,0 +1,138 @@
+{
+  "schema": "r13-grasp-audit.v1",
+  "pins": {
+    "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "estimator": "79d3fe1c90e06fd89aa0b75b51097528723ce7413468a453a20bbe41421fe0d9",
+    "plan": "cf090423dd0031a94cdd47d60901c2b0f8405c79d57610355e17c6f3e9055a3d",
+    "audit": "1651baab2a1d3e3ae91e8d523f10e5edab4a3568dd9f8c7b3035ae7ddba5373e",
+    "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "scope": {
+    "episodes": 42,
+    "calibration_episodes": 10,
+    "evaluation_episodes": 32,
+    "inference_deadline_s": 3.55,
+    "runner": "authenticated stock sim.runner.run_episode",
+    "pickup_offsets": "authored plan shifts reproduced through public pick_offset",
+    "research_parity": false,
+    "parity_limit": "Stock runner fixes JTS seed and exposes no stiffness/viscous/Coulomb perturbation arguments. Research perturb dictionaries were not applied; numeric equality with the private 42-run captures is neither expected nor claimed.",
+    "ignored_research_perturbations": [
+      {
+        "split": "fit",
+        "id": "f0",
+        "research_perturb": {
+          "seed": 146301,
+          "stiffness_scale": 0.97,
+          "viscous_scale": 1.04,
+          "coulomb_scale": 1.06
+        }
+      },
+      {
+        "split": "fit",
+        "id": "f1",
+        "research_perturb": {
+          "seed": 146302,
+          "stiffness_scale": 1.04,
+          "viscous_scale": 0.96,
+          "coulomb_scale": 0.94
+        }
+      },
+      {
+        "split": "fit",
+        "id": "f2",
+        "research_perturb": {
+          "seed": 146303
+        }
+      },
+      {
+        "split": "fit",
+        "id": "f3",
+        "research_perturb": {
+          "seed": 146304,
+          "stiffness_scale": 0.96,
+          "viscous_scale": 1.03,
+          "coulomb_scale": 1.07
+        }
+      },
+      {
+        "split": "fit",
+        "id": "f4",
+        "research_perturb": {
+          "seed": 146305,
+          "stiffness_scale": 1.03,
+          "viscous_scale": 0.95,
+          "coulomb_scale": 0.96
+        }
+      },
+      {
+        "split": "test",
+        "id": "a",
+        "research_perturb": {
+          "seed": 146311
+        }
+      },
+      {
+        "split": "test",
+        "id": "b",
+        "research_perturb": {
+          "seed": 146312,
+          "stiffness_scale": 0.95,
+          "viscous_scale": 1.05,
+          "coulomb_scale": 1.03
+        }
+      },
+      {
+        "split": "test",
+        "id": "c",
+        "research_perturb": {
+          "seed": 146313,
+          "stiffness_scale": 1.05,
+          "viscous_scale": 0.96,
+          "coulomb_scale": 0.92
+        }
+      },
+      {
+        "split": "test",
+        "id": "d",
+        "research_perturb": {
+          "seed": 146314,
+          "stiffness_scale": 0.98,
+          "viscous_scale": 1.07,
+          "coulomb_scale": 0.96
+        }
+      }
+    ],
+    "causal_split": "calibration uses only five zero-offset public-signal runs per mode; all 16 predictions are completed before any free-box pose is scored",
+    "retained_data": "derived calibration/evaluation JSON only; no raw captures"
+  },
+  "metrics": {
+    "servo": {
+      "height_sign_correct": 8,
+      "height_confident": 8,
+      "accepted_height_sign_correct": 8,
+      "vertical_count": 8,
+      "vertical_rmse_mm": 3.2302449306970575,
+      "paired_height_rmse_mm": 3.2005848585215237,
+      "true_required_zero_action_rmse_mm": 3.5967071824884655,
+      "control_max_abs_error_mm": 0.27265798050998896,
+      "control_count": 8,
+      "accepted_not_covered": 4,
+      "qualified": false
+    },
+    "torque": {
+      "height_sign_correct": 6,
+      "height_confident": 8,
+      "accepted_height_sign_correct": 6,
+      "vertical_count": 8,
+      "vertical_rmse_mm": 3.649197924296838,
+      "paired_height_rmse_mm": 3.5193588600592682,
+      "true_required_zero_action_rmse_mm": 3.5837747192994205,
+      "control_max_abs_error_mm": 0.33522863647050694,
+      "control_count": 8,
+      "accepted_not_covered": 4,
+      "qualified": false
+    }
+  }
+}

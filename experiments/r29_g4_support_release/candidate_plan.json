@@ -1,0 +1,28 @@
+{
+  "schema": "r29-g4-empty-inverse-release-plan.v1",
+  "status": "FROZEN_BEFORE_INJECTED_CONTROLS",
+  "classification": "One disclosed postmortem mechanism; not blind, enrolled, default, hardware, or safety qualified.",
+  "diagnostic_v3_sha256": "44c4764800a783d01558cc99786162b7c27bde25cb93dc6e3eb6e82febd6c392",
+  "observation": {
+    "3903": "Counterfactual slow onset after the actual grip-open transition. The fresh released observer is unavailable because its empty-model residual window has only 1 of 31 samples. A separately continuous empty-arm inverse observer is finite and measures [-3.243, 6.179, -31.360] N.",
+    "3923": "Counterfactual fast onset in the same unsettled public-channel lifecycle. The fresh released observer still has only 21 of 31 residual samples. Continuous empty inverse is finite and near its frozen normal bounds.",
+    "important_limit": "Offline box/table force coincidence does not prove force on the open arm and is not used by the mechanism. The causal witness is public encoder/JTS inverse-dynamics evidence plus the measured grip transition."
+  },
+  "mechanism": {
+    "base": "experiments.r28_contact_memory.candidate:Detector",
+    "independent_observer": "Run the already-published NormalForce estimator continuously with the empty-arm public model and grip=false, calibrated from the same startup normal. It never reads actual force, contact, case, mass, or time.",
+    "bounds": "Use the immutable R26 signed vector bounds without changes: experiments/r26_delivery_pair/bounds.json SHA256 5ddc2b6851efee211af450b423343b71afe7ddda0a12a70bcaa2ac0ef2448c6f.",
+    "ownership": "Only after an actual true-to-false grip transition, a rising CF route may be owned as payload-unloading when the independent vector is negative-world-z dominant under the frozen signed classifier and exceeds its frozen negative-z bound. Suppress only that CF episode; all learned, detached, and memory routes remain live.",
+    "rebound": "Keep one optional rebound identity while the public CF slow/fast counters have not jointly settled for the inherited release-persistence count. Consume the next rising CF episode only if the independent vector is within all frozen normal bounds. A non-normal independent vector is a distinct physical event: clear ownership and fail open.",
+    "termination": "Grip closure, a distinct non-normal independent vector, consumption of one rebound, non-finite/unavailable evidence, or inherited all-channel settling ends ownership. No elapsed-time deadline or late mask is used."
+  },
+  "falsifiers": [
+    "Either 3903 or 3923 remains, a genuine fixed injected control is lost or delayed over 5 ms, or an unrelated source is suppressed.",
+    "The matched quiet/load controls gain a rise, active duration grows over 5 samples, or exact force/physics/prefix checks fail.",
+    "If an injected impulse is observationally identical under the independent vector and is suppressed, reject rather than retune."
+  ],
+  "source_pins": {
+    "observer_sha256": "eff8f0b76d8c0358bb15b020be0db6e0b55d0e666a93ee2f46a1de6190ba2483",
+    "memory_base_sha256": "85c4107c3939c7624dd77040ad322a99595c8e6941c7b75751c516a33be7a07b"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "r29-native-event-link-preregistration.v1",
+  "status": "FROZEN_BEFORE_R29_RESULTS",
+  "classification": "Known disclosed my_torque simulation repair; not independent, default, deployment, hardware, or safety evidence.",
+  "mechanism": {
+    "idea": "An optional four-tick pose-certified notice may be followed by C3 r8_base+normal on the same continuous two-sensor force excursion. Capture the optional force direction, two channel references and peaks; consume a later native route only while both measured channel levels remain on the same excursion and native route provenance is complete.",
+    "native_route": ["r8_base", "normal"],
+    "fail_open": ["missing/nonfinite force", "grip change", "force returns nearer reference than excursion peak", "incomplete native provenance", "directional or any other independent native route"],
+    "forbidden": ["elapsed-time cooldown", "absolute task time", "case or mass lookup", "programmed-force oracle", "future samples", "change to C3, R27, or my_torque"]
+  },
+  "arms": {
+    "c3": "experiments.r26_yaw_acquisition.candidate:Detector",
+    "r27": "experiments.r27_load_change.manifold:Detector",
+    "r29": "experiments.r29_native_event_link.candidate:Detector",
+    "controller": "my_torque:Controller"
+  },
+  "source_pins": {
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "experiments/r26_yaw_acquisition/candidate.py": "212f4e79367cb636c0143a2d1f8aa7ba5584aaaca5ecde6b412d01a4985b6784",
+    "experiments/r27_load_change/manifold.py": "0b1979344956a1c8400f3f9d6039d56147392e498ad7af3d5050c2bd2f8bdadf",
+    "experiments/r27_load_change/settled_event.py": "39f727541a320a7f6304b6c9421ecdd2c4aaf74f3c50415e4fba2e3834c43c1b",
+    "experiments/r27_load_change/manifold_event.py": "5a1b1f8ef5b37f7d1df6ce743e14708e8558a8e7dbb0aecca83a12e5cac94e82",
+    "experiments/r27_load_change/settled_model.json": "10d4b498fdb3da1ad328aed7729407e6c7264790f36b66ffe4239e763bc4d291",
+    "experiments/r27_load_change/manifold_model.json": "e83dda1d03425ddc3421d52a7e1b9ba99c0668bb3b09fc5537f9b72384c84b8d",
+    "experiments/r25_fragment/selection_policy.json": "7cdfcb7669ce895cfd6a981098c52f16c130d0bf862e93c0a8ba75e66c7a3833",
+    "experiments/r24_holdout/plan.json": "cc84fca2bff1dda7ad8611b2e0aeb1baadecf131ec1ce2496156aa8a6bdb7280",
+    "experiments/r26_holdout/plan.json": "2047651eedd58b10e68bbf80b0f7cf973ab34643502a5190bffd02b4dcf62d77"
+  },
+  "known_panel": {
+    "p26_close_place_cross": {"variant": "stock", "twins": ["none", "long", "first", "second", "both"]},
+    "cross_stress_0": {"variant": "stock", "role": "known duplicate", "gap_s": 0.150, "second_vector_N": [7.9, 0.0, -2.1]},
+    "cross_stress_1": {"variant": "stock", "role": "distinct opposite close input", "gap_s": 0.182, "second_vector_N": [-7.9, 0.0, 2.1]},
+    "cross_stress_2": {"variant": "stock", "role": "distinct directional close input", "gap_s": 0.218, "second_vector_N": [0.0, -9.0, 2.4]}
+  },
+  "scoring": {
+    "p26": {"event_window_ms": 270, "quiet_ms": 22, "reference_twin_ms": 19},
+    "stress": {"event_window_ms": 260, "quiet_ms": 25, "reference_twin_ms": 18, "loaded_transfer_window_ms": [1250, 1900]},
+    "latency_slack_ms": 5,
+    "duration_slack_samples": 5
+  },
+  "episode_accounting": {"p26": 15, "stress": 36, "total": 51, "workers": 1},
+  "gates": {
+    "targets": "p26 long_single and cross_stress_0 both_second have exactly one attributable rise and zero duplicates.",
+    "counterexamples": "Every strict C3 or R27 close/opposite/directional slot remains strict within +5 ms; no distinct second is consumed.",
+    "cost": "No retained protected slot exceeds its source occupancy by more than 5 samples.",
+    "safety": "No new false rise, tool prealarm, stuck tail, force mismatch, prefix mismatch, or passive-detector physics mismatch."
+  },
+  "limits": ["No unopened R27 114-case cohort", "No R27 loaded holdout", "No new G4 matrix", "One CPU simulation worker"]
+}

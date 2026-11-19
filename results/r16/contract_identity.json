@@ -1,0 +1,158 @@
+{
+  "schema": "r16-payload-contract-independent-result.v1",
+  "plan_sha256": "9698a92b15457341f18d5043781af2941e236eca8a6b77148a51915cacd2a4cb",
+  "rows": [
+    {
+      "id": "cv_light_none",
+      "contract_active": "experiments.r16_balanced.controller.Controller",
+      "contract_detector": "experiments.r14_stock_handoff.detector.Detector",
+      "baseline_active": "experiments.r15_early_com.controller.Controller",
+      "D_vs_C_arrays": {
+        "t": true,
+        "e_mm": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "f_table": true,
+        "f_tool": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true,
+        "qpos": true
+      },
+      "D_vs_C_metrics": true,
+      "baseline_vs_R15_arrays": {
+        "t": true,
+        "e_mm": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "f_table": true,
+        "f_tool": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true,
+        "qpos": true
+      },
+      "baseline_vs_R15_metrics": true,
+      "passed": true
+    },
+    {
+      "id": "cv_mid_down",
+      "contract_active": "experiments.r16_balanced.controller.Controller",
+      "contract_detector": "experiments.r14_stock_handoff.detector.Detector",
+      "baseline_active": "experiments.r15_early_com.controller.Controller",
+      "D_vs_C_arrays": {
+        "t": true,
+        "e_mm": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "f_table": true,
+        "f_tool": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true,
+        "qpos": true
+      },
+      "D_vs_C_metrics": true,
+      "baseline_vs_R15_arrays": {
+        "t": true,
+        "e_mm": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "f_table": true,
+        "f_tool": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true,
+        "qpos": true
+      },
+      "baseline_vs_R15_metrics": true,
+      "passed": true
+    },
+    {
+      "id": "cv_edge8_zero",
+      "contract_active": "experiments.r16_balanced.controller.Controller",
+      "contract_detector": "experiments.r14_stock_handoff.detector.Detector",
+      "baseline_active": "experiments.r15_early_com.controller.Controller",
+      "D_vs_C_arrays": {
+        "t": true,
+        "e_mm": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "f_table": true,
+        "f_tool": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true,
+        "qpos": true
+      },
+      "D_vs_C_metrics": true,
+      "baseline_vs_R15_arrays": {
+        "t": true,
+        "e_mm": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "f_table": true,
+        "f_tool": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true,
+        "qpos": true
+      },
+      "baseline_vs_R15_metrics": true,
+      "passed": true
+    }
+  ],
+  "zero": {
+    "active": "r1_torque.Controller",
+    "detector": "my_detector.Detector",
+    "arrays": {
+      "t": true,
+      "e_mm": true,
+      "q": true,
+      "q_d": true,
+      "tau": true,
+      "f_table": true,
+      "f_tool": true,
+      "r": true,
+      "detect": true,
+      "f_ext": true,
+      "qpos": true
+    },
+    "metrics": true,
+    "passed": true
+  },
+  "invalid_rejected": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "domain_audit": {
+    "accepted_positive_outside_calibration": [
+      [
+        0.001,
+        true
+      ],
+      [
+        2.859,
+        true
+      ],
+      [
+        8.001,
+        true
+      ],
+      [
+        100.0,
+        true
+      ]
+    ]
+  },
+  "passed": true,
+  "boundary": "Only evaluated normal trajectories are proven identical. All positive masses dispatch to the loaded path, including outside the fitted range."
+}

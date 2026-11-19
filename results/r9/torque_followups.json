@@ -1,0 +1,74 @@
+{
+  "scope": "development only; rejected channels, not deployed, not extra holdouts",
+  "B2": {
+    "schema": "R9_TORQUE_NORMAL_INNOVATION_DEVELOPMENT.v1",
+    "classification": "fresh development only; no B1 inputs",
+    "passed": false,
+    "plan_sha256": "8e8c422fe2e1dad50f2565940dbf5e016b235cdfd977fe3d968bdb0965769674",
+    "base_sha256": "801098d6f14e23819d1832e3f5b41e4246a3b7ff1f31837fea472ba959c4cf86",
+    "model_sha256": "706f4050d248fc61b7e213b0b4456eb8aa41770561ad5f62cafc21a99ce4069c",
+    "gains": 10,
+    "losses": 0,
+    "gates": {
+      "additional_detected": true,
+      "event_losses": true,
+      "per_case_FA": false,
+      "matched_reference_FA": true,
+      "perturbation_FA": false,
+      "physical_bytes": true,
+      "runtime": true
+    },
+    "positive_cases": 24,
+    "perturbation_cases": 3,
+    "result_sha256": "b84196c6cd9a73e36dce3bc2deae04fdbd99362f8cc62bd89faefa5f3e6e37d8"
+  },
+  "B3": {
+    "schema": "R9_TORQUE_B3_FROZEN_DEVELOPMENT.v1",
+    "classification": "fresh development after negative-only model freeze",
+    "baseline": "deployable torque R1",
+    "eligible": false,
+    "gates": {
+      "additional_detected": false,
+      "event_loss": true,
+      "tool_loss": true,
+      "per_case_FA_increase": false,
+      "reference_FA": true,
+      "perturbation_FA": true,
+      "physical_bytes": true,
+      "timing": true,
+      "matched_reference": true
+    },
+    "gains": 0,
+    "event_losses": 0,
+    "tool_losses": 0,
+    "event_counts": {
+      "R1": {
+        "detected": 3,
+        "missed": 21,
+        "masked": 0,
+        "tool_detected": 0,
+        "false_alarms": 0
+      },
+      "candidate": {
+        "detected": 3,
+        "missed": 21,
+        "masked": 0,
+        "tool_detected": 0,
+        "false_alarms": 2
+      }
+    },
+    "pins": {
+      "plan": "1ccd1bf99093985ed5d05875b83309843f2d9d1d69cf1d1144806007e71b8531",
+      "conditions": "21f5c7dbc632823655aa47c0048dd0ef60eb5c3debb7b2ae3eacbd319857440d",
+      "model": "ac05dc5e685f07363f2064412c85f1b46a15b130f44f2a8dc1c44c3cf1a22db2",
+      "freeze": "871f34e31db1993837a02209d2ef9181d596d356428ac87aa81b958c5e40c491"
+    },
+    "positive_cases": 24,
+    "fit_normals": 36,
+    "calibration_normals": 12,
+    "audit_normals": 12,
+    "negative_audit_passed": true,
+    "result_sha256": "2a51b81eed116f49d17e5faebd736a193350910c62367b28a8517975e3f86106",
+    "negative_record_sha256": "9330e5081e98ced623beda8d09b2863a71ed6d7c890b9a04721f9fcc240d70f5"
+  }
+}

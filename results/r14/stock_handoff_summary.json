@@ -1,0 +1,114 @@
+{
+  "claims_not_made": [
+    "perturbed robustness",
+    "micro-sign/R13 strict accuracy",
+    "impact preservation",
+    "hardware behavior",
+    "global promotion"
+  ],
+  "composition": {
+    "controller": "frozen R12 hybrid plus causal stock-registered fixed-orientation world-z reference",
+    "detector": "frozen R12 counterfactual replay from transparent JSON coefficients"
+  },
+  "decision": "STOP_NORMAL_GATE_FAILED_NO_IMPACTS_PRESERVE_R10",
+  "important_gate_note": "The frozen runner encoded candidate FA nonincrease versus hybrid. The stricter requested comparison versus R10 independently fails sh5 (2 versus 0); this only strengthens the already-negative stop decision and no source or result was revised post-run.",
+  "manufactured": {
+    "max_corner_translation_error_um": 6.661338147750939e-10,
+    "max_ik_orientation_error_rad": 7.172081818735158e-16,
+    "max_ik_position_error_m": 4.440892098500626e-16,
+    "tests_passed": 5
+  },
+  "normal": {
+    "accepted_cases": [
+      "sh1",
+      "sh2",
+      "sh4"
+    ],
+    "accepted_support": [
+      {
+        "command_mm": 5.186592329100428,
+        "ctrl_p99_us": 640.8981034473982,
+        "estimate_mm": -5.186592329100428,
+        "id": "sh1",
+        "mean_mg": 0.8594757431205242,
+        "min_mg": 0.6662834570672889,
+        "peak_mg": 1.0332091679974076
+      },
+      {
+        "command_mm": 4.576954754374881,
+        "ctrl_p99_us": 655.6439981795849,
+        "estimate_mm": -4.576954754374881,
+        "id": "sh2",
+        "mean_mg": 0.7304372117593976,
+        "min_mg": 0.7095189043478625,
+        "peak_mg": 1.0055102668234375
+      },
+      {
+        "command_mm": 5.842514366372624,
+        "ctrl_p99_us": 663.246787444223,
+        "estimate_mm": -5.842514366372624,
+        "id": "sh4",
+        "mean_mg": 0.7799083065829656,
+        "min_mg": 0.7389535683799897,
+        "peak_mg": 1.002181365553794
+      }
+    ],
+    "cases": 6,
+    "failed_cases": [
+      "sh3",
+      "sh5"
+    ],
+    "failures": {
+      "sh3": "registration correctly abstained and exactly reproduced hybrid, but hybrid mean support .439mg and peak 1.326mg fail G4",
+      "sh5": "registration correctly abstained and exactly reproduced hybrid, but minimum support .041mg fails G4; coupled composition also has two off-event alarms versus zero for R10"
+    },
+    "impacts_run": 0,
+    "passed_cases": 4,
+    "unloaded_byte_parity": true
+  },
+  "pins": {
+    "calibration": "cfd91f8b53e71088cad01f1fba0dedfa7e778f85fd84dd1431f5c80e3d3c59e4",
+    "calibration_sources": {
+      "audit": "6f30501730880069c99cb1c4d12888c8be97ea95e7420dec4cb097cf10172b1b",
+      "base_audit": "1651baab2a1d3e3ae91e8d523f10e5edab4a3568dd9f8c7b3035ae7ddba5373e",
+      "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "estimator": "79d3fe1c90e06fd89aa0b75b51097528723ce7413468a453a20bbe41421fe0d9",
+      "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+      "plan": "c7b9ee36195e429305be27b822081f664979a75ef41a761117e7b31531e3cfeb",
+      "registration": "7da9c3e79d6dca610cff6e8048410783c3ceb03a58211f1ad30328e219944b04",
+      "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "evaluated_sources": {
+      "experiments/r12_hybrid/controller.py": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+      "experiments/r14_airborne/registration.py": "7da9c3e79d6dca610cff6e8048410783c3ceb03a58211f1ad30328e219944b04",
+      "experiments/r14_online/stream.py": "18d12c79398a5820bf64546a97f9c3cedb51e4af6b61ed44ba0aa887c36ef816",
+      "experiments/r14_stock_handoff/controller.py": "10f6657d255b52b4e9f802200bb6275b9db5b7499d2de21a36ee9f5260e67d61",
+      "experiments/r14_stock_handoff/detector.py": "9fecfee47778a370e743497a8370ad7465c68ab126ae06b9f17c1bbf3fd8a0e9",
+      "experiments/r14_stock_handoff/geometry.py": "cb7418f0c6b8ac562e45ac0188f137346db5b613a7a5752d81670a094ee7da54",
+      "experiments/r14_stock_handoff/plan.json": "a82dd8e8557259cd672bfca6f1b9095968ffc1e1f256389a6376f562baa82414",
+      "experiments/r14_stock_handoff/run.py": "14c4bea1ae2cb5531d0e7329168997e67fede9a0fe7790d8609bc917836e9161",
+      "experiments/r14_stock_handoff/test_controller.py": "bdf59066b3ce6c6d6cac9ba3bb22ff0f20dbe6c6c6eadf7fb6f9eb5156170384",
+      "models/r12/counterfactual_coefficients.json": "183df664558017be3e9d3faa9c5883cd6ca55c593c45a1e995afb0dcefee886c",
+      "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "geometry_result": "f8f30b0acad894ccb2aafd022ca66a6befea5147b31057d8bf4427295701b0a1",
+    "normal_result": "df241c5ab6e8f3979c2c1a59660be2d68957f20e06b10efb473af5e770c6f664"
+  },
+  "portable_contract": {
+    "controller": "Controller(stock_calibration_document[\"modes\"][\"torque\"][\"registered\"])",
+    "detector": "Detector()",
+    "minimal_dependencies": [
+      "stock r1_torque.py, my_detector.py, sim package",
+      "experiments/r12_hybrid/controller.py",
+      "experiments/r14_online/stream.py",
+      "experiments/r14_airborne/registration.py",
+      "models/r12/counterfactual_coefficients.json",
+      "explicit stock calibration JSON"
+    ],
+    "runner": "sim.runner.run_episode(controller,mass,com,detector,pick_offset=offset,collision=collision)"
+  },
+  "schema": "r14-stock-handoff-summary.v1",
+  "scope": "unchanged stock sim.runner.run_episode only; no perturbation fixture, hardware, kit write, or collision fitting"
+}

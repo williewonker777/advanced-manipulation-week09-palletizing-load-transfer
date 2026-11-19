@@ -1,0 +1,43 @@
+{
+  "schema": "r26-known-signed-yaw-registration.v1",
+  "classification": "Previously disclosed R25 targeted improvement, rejected on older duration guards; not validated for unopened R26 independent conditions.",
+  "case": {
+    "id": "s25_long_transfer_signed",
+    "phase": "handoff",
+    "mass": 3.77,
+    "com": [-0.024, 0.013, -0.006],
+    "offset": null,
+    "impact": [1.623, 180, [-6.0, 0.0, 2.3]]
+  },
+  "scoring": {"event_window_ms": 280, "quiet_ms": 20, "reference_twin_ms": 18},
+  "variants": {
+    "stock": {"kind": "stock"},
+    "actuator_shift": {"kind": "actuator_shift", "joint_gain": [1.017, 0.984, 1.013, 0.988, 1.016, 0.985]},
+    "contact_shift": {"kind": "contact_shift", "table_friction_scale": 0.95, "table_solref_time_scale": 1.06, "suction_solref_time_scale": 1.08}
+  },
+  "expected": {
+    "stock": {
+      "physical_signature": "ef224c24ed7cb7d8180f6193ce945439104855a76161c5f45bf037b4a1cf2e36",
+      "force_interval": [1624, 1803],
+      "r25_rises": [1684, 1708, 1778],
+      "r26_rises": [1684]
+    },
+    "actuator_shift": {
+      "physical_signature": "0aeae96d4171a293d1cf5e8ddeb9f23f579ea4ed5d6551a706dca73c0436e31d",
+      "force_interval": [1624, 1803],
+      "r25_rises": [1684, 1762],
+      "r26_rises": [1684]
+    },
+    "contact_shift": {
+      "physical_signature": "eec4cb60de216e6b275ec9745d6e1bae22296e59f1e390a062441c81ee064718",
+      "force_interval": [1624, 1803],
+      "r25_rises": [1675, 1767],
+      "r26_rises": [1675]
+    }
+  },
+  "arms": {
+    "r25": "experiments.r25_composed.detector:Detector",
+    "r26_long": "experiments.r26_long.candidate:Detector"
+  },
+  "candidate_sha256": "a0570079ad5ce8425e9fbdc291b20401a9056b3bca35824237d157ec37a73057"
+}

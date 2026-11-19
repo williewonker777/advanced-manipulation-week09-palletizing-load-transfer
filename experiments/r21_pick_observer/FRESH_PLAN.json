@@ -1,0 +1,17 @@
+{
+  "schema":"r21-pick-observer-fresh.v1",
+  "status":"FROZEN_BEFORE_ANY_FRESH_OUTCOME",
+  "candidate_sha256":"1f03ed4918fb279783813c8f1f769ee3a4476b1d973a765b2c5d81ce81e9e3e8",
+  "model_sha256":"499b2577f659dff86bcc665fffc385adddadfe21824ef0e06c7d848caa49c6bf",
+  "reference_twin_ms":20,
+  "cases":[
+    {"id":"fresh_10_px_m1","mass":1.10,"com":[0.011,-0.017,0.006],"time":1.445,"force":[10.0,0.0,0.0]},
+    {"id":"fresh_10_nx_m2","mass":2.85,"com":[-0.018,0.008,0.021],"time":1.485,"force":[-10.0,0.0,0.0]},
+    {"id":"fresh_10_py_m3","mass":3.65,"com":[0.007,0.013,-0.004],"time":1.525,"force":[0.0,10.0,0.0]},
+    {"id":"fresh_10_ny_m4","mass":4.45,"com":[-0.012,-0.006,0.026],"time":1.575,"force":[0.0,-10.0,0.0]},
+    {"id":"fresh_10_px_m6","mass":6.25,"com":[0.019,0.003,0.012],"time":1.635,"force":[10.0,0.0,0.0]},
+    {"id":"fresh_10_ny_m7","mass":7.35,"com":[-0.004,0.018,0.001],"time":1.700,"force":[0.0,-10.0,0.0]}
+  ],
+  "trials_per_case":["r20_none","r21_none","r20_force","r21_force"],
+  "gates":["source and model pins exact","physical and applied force logs exact","no added no-force or collision-run false rise","no R20 true-positive loss","report candidate-only strict detections without retuning"]
+}

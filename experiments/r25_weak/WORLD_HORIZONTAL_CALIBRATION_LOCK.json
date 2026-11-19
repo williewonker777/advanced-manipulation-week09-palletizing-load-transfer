@@ -1,0 +1,11 @@
+{
+  "schema": "r25-weak-world-horizontal-calibration-lock.v1",
+  "status": "written after disclosed target characterization and before force-free panel measurement",
+  "fit_mechanics": ["stock", "damping_coupled"],
+  "audit_mechanics": ["actuator_delay_gain", "contact_armature"],
+  "cases": "all four disclosed R24 negative cases plus all five disclosed R24 single-case force-free twins",
+  "eligible": "finite corrected world-horizontal samples while measured grip is true",
+  "threshold_formula_n": "1.10 * maximum eligible corrected norm over fit episodes + 0.25",
+  "audit_gate": "the frozen threshold must exceed every eligible corrected norm in every audit episode; otherwise stop without evaluating positives",
+  "selection": "no adjustment after audit"
+}

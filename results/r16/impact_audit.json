@@ -1,0 +1,99 @@
+{
+  "schema": "r16-impact-audit-report.v1",
+  "authored_check": {
+    "schema": "r16-contract-checker-audit.v1",
+    "qualification_sha256": "8d9bba11408bf8d50f16aff5563d2ad185b6cf4585d4de6526ca9d3738228ac0",
+    "forced_minus_same_arm_normal": true,
+    "false_events_compared_to_r10": true,
+    "false_events_compared_to_raw_r15": true,
+    "r10_true_positive_retention_5ms": true,
+    "raw_r15_true_positive_retention_5ms": false,
+    "impact_saturation_vs_minimum": false,
+    "tool_compared_to_r10": true,
+    "tool_compared_to_raw_r15": true,
+    "candidate_prealarm_forbidden": true,
+    "passed_required_audit": false
+  },
+  "retention_failure": {
+    "schema": "r16-payload-contract-impact-cause.v1",
+    "source_wrapper_sha256": "a2a88d892a9ceb39e305fa929aaaffa970d7f59188f2fa4518dc026513bc907f",
+    "case_id": "new_surface_normal_release",
+    "collision": [
+      3.94,
+      [
+        0.0,
+        0.0,
+        16.0
+      ]
+    ],
+    "requested_peak_N": 16.0,
+    "pulse_active_s": [
+      3.9410000000000003,
+      4.059
+    ],
+    "external_prefix_exact_all_arms": true,
+    "r10": {
+      "outcome": "detected",
+      "delay_ms": 40.000000000000036,
+      "prealarm": false,
+      "false_alarms": 0,
+      "false_alarm_times": [],
+      "tool_present": false,
+      "tool_detected": false,
+      "tool_prealarm": false,
+      "tool_delay_ms": null
+    },
+    "raw_r15": {
+      "outcome": "missed",
+      "delay_ms": null,
+      "prealarm": false,
+      "false_alarms": 0,
+      "false_alarm_times": [],
+      "tool_present": false,
+      "tool_detected": false,
+      "tool_prealarm": false,
+      "tool_delay_ms": null
+    },
+    "raw_c": {
+      "outcome": "missed",
+      "delay_ms": null,
+      "prealarm": false,
+      "false_alarms": 0,
+      "false_alarm_times": [],
+      "tool_present": false,
+      "tool_detected": false,
+      "tool_prealarm": false,
+      "tool_delay_ms": null
+    },
+    "contract_baseline": {
+      "outcome": "missed",
+      "delay_ms": null,
+      "prealarm": false,
+      "false_alarms": 0,
+      "false_alarm_times": [],
+      "tool_present": false,
+      "tool_detected": false,
+      "tool_prealarm": false,
+      "tool_delay_ms": null
+    },
+    "candidate": {
+      "outcome": "missed",
+      "delay_ms": null,
+      "prealarm": false,
+      "false_alarms": 0,
+      "false_alarm_times": [],
+      "tool_present": false,
+      "tool_detected": false,
+      "tool_prealarm": false,
+      "tool_delay_ms": null
+    },
+    "r10_detection_time_s": 3.98,
+    "candidate_detection_time_s": null,
+    "D_equals_raw_C_normal_and_forced": true,
+    "baseline_equals_raw_R15_normal_and_forced": true,
+    "bounded_attribution": "The dispatch wrapper is exonerated by exact D=raw-C and baseline=raw-R15 identities. All loaded Coupled-detector arms missed while genuine R10/my_detector rose at 3.980 s. These retained derived counters cannot separate detector response from the controller-dependent physical residual; no new probes were opened."
+  },
+  "supplemental_strict_qualification_run": false,
+  "decision": "failed genuine R10 retention under existing checker; a repeated strict run of the same impulses is unnecessary to reject this policy",
+  "scope": "No evidence for protected R15 +5ms and forced saturation non-regression from the authored counters. No raw traces included."
+}

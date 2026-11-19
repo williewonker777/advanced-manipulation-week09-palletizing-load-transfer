@@ -1,0 +1,217 @@
+{
+  "schema": "r29-new-detached-crossing.v1",
+  "candidates": {
+    "c3": "212f4e79367cb636c0143a2d1f8aa7ba5584aaaca5ecde6b412d01a4985b6784",
+    "endpoint": "0e3ba44c7ec952bd7f8b90f54454b309031ade7f7d8f5db93a2770044648310d"
+  },
+  "mechanics": [
+    "stock",
+    "actuator_deadzone",
+    "place_surface_shift"
+  ],
+  "paired": [
+    {
+      "id": "r29_detached_reverse_short",
+      "phase": "post_detachment",
+      "mass": 5.76,
+      "com": [
+        0.021,
+        -0.017,
+        0.016
+      ],
+      "impacts": [
+        [
+          4.437,
+          51,
+          [
+            -6.4,
+            4.7,
+            -1.3
+          ]
+        ],
+        [
+          4.536,
+          62,
+          [
+            5.2,
+            -5.7,
+            1.9
+          ]
+        ]
+      ],
+      "long": [
+        4.437,
+        161,
+        [
+          -6.4,
+          4.7,
+          -1.3
+        ]
+      ]
+    },
+    {
+      "id": "r29_detached_cross_moderate",
+      "phase": "post_detachment",
+      "mass": 2.48,
+      "com": [
+        -0.016,
+        0.024,
+        -0.011
+      ],
+      "impacts": [
+        [
+          4.582,
+          47,
+          [
+            4.6,
+            6.4,
+            2.1
+          ]
+        ],
+        [
+          4.685,
+          54,
+          [
+            -7.2,
+            1.7,
+            -1.4
+          ]
+        ]
+      ],
+      "long": [
+        4.582,
+        157,
+        [
+          4.6,
+          6.4,
+          2.1
+        ]
+      ]
+    },
+    {
+      "id": "r29_detached_same_two",
+      "phase": "post_detachment",
+      "mass": 7.12,
+      "com": [
+        0.012,
+        0.017,
+        -0.019
+      ],
+      "impacts": [
+        [
+          4.329,
+          64,
+          [
+            -6.3,
+            3.9,
+            1.2
+          ]
+        ],
+        [
+          4.448,
+          58,
+          [
+            -6.8,
+            4.3,
+            1.5
+          ]
+        ]
+      ],
+      "long": [
+        4.329,
+        177,
+        [
+          -6.3,
+          3.9,
+          1.2
+        ]
+      ]
+    },
+    {
+      "id": "r29_detached_opposite_late",
+      "phase": "post_detachment",
+      "mass": 0.74,
+      "com": [
+        -0.023,
+        -0.014,
+        0.009
+      ],
+      "impacts": [
+        [
+          4.803,
+          58,
+          [
+            6.9,
+            -5.6,
+            2.5
+          ]
+        ],
+        [
+          4.901,
+          68,
+          [
+            -5.8,
+            6.1,
+            -1.8
+          ]
+        ]
+      ],
+      "long": [
+        4.803,
+        166,
+        [
+          6.9,
+          -5.6,
+          2.5
+        ]
+      ]
+    },
+    {
+      "id": "r29_detached_orthogonal_short",
+      "phase": "post_detachment",
+      "mass": 4.18,
+      "com": [
+        0.025,
+        -0.019,
+        -0.013
+      ],
+      "impacts": [
+        [
+          4.635,
+          42,
+          [
+            -3.6,
+            -7.0,
+            -2.4
+          ]
+        ],
+        [
+          4.718,
+          53,
+          [
+            7.0,
+            -3.6,
+            0.7
+          ]
+        ]
+      ],
+      "long": [
+        4.635,
+        136,
+        [
+          -3.6,
+          -7.0,
+          -2.4
+        ]
+      ]
+    }
+  ],
+  "twins": [
+    "none",
+    "isolated_first",
+    "isolated_second",
+    "both",
+    "one_real_long_force"
+  ],
+  "qualification": "All exact physical trajectories and force prefixes, zero protected declines, absolute two strict in both and one strict for sustained. Disclose every miss; no retune. Only C3 and already frozen endpoint may use this independent set."
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "r27-loaded-observer-normal-protocol.v3",
+  "status": "LOCKED_BEFORE_V3_FIT_AUDIT_OUTCOMES_AND_BEFORE_ANY_FORCED_OUTCOME",
+  "classification": "A distinct normal-dynamics proposal after the global and physically gated magnitude proposals were falsified on normal-only data. Neither rejected proposal is retuned.",
+  "rejected_predecessors": {
+    "v1_report_sha256": "0b1cc56e1de0ac1279db7b5856bbb6a574c2acd33cba98e3fd61d034cfbb97ea",
+    "v2_report_sha256": "bdb202b75eb12aabea474df421a5b24f5147c1d38c4afa55731fa64cae9692da",
+    "v2_failure": "Even after causal payload-settle and table-geometry gates, normal vertical deceleration produced 19.701 N eight-sample and 16.521 N 32-sample 3D changes, yielding thresholds above the weak-force class."
+  },
+  "mechanism": "Fit signed normal vertical-to-horizontal coupling from force-free episodes. For each lag, ordinary least squares predicts the two-axis horizontal force change from [1, vertical force change]. Detection uses only the signed two-axis residual that normal vertical dynamics do not explain.",
+  "physical_eligibility": {
+    "observer_effective_grip_stability_samples": 96,
+    "observer_effective_table_support_allowed": false,
+    "ineligible_behavior": "Reset onset, pending, pulse, ownership, and history immediately."
+  },
+  "runtime_inputs": ["encoder", "joint_torque_sensor", "grip", "public_nominal_empty_model", "public_nominal_loaded_model", "public_table_geometry_gate"],
+  "forbidden_runtime_inputs": ["case_id", "target_time", "impact_schedule", "applied_force_truth", "contact_truth", "paired_no_force_trace", "mechanics_variant"],
+  "formal_fit_rule": {
+    "fit_only": "Pool every eligible fit sample. Independently for lags 8 and 32, solve numpy.linalg.lstsq on design [1, delta_fz] and response [delta_fx, delta_fy] with rcond=None.",
+    "onset_threshold": "1.05 * maximum Euclidean onset residual norm over fit + 0.05 N.",
+    "sustain_threshold": "1.05 * maximum Euclidean 32-sample residual norm over fit + 0.05 N.",
+    "ownership_release": "0.50 * sustain threshold.",
+    "audit_use": "Audit validates the frozen coefficients and thresholds only; it never changes them.",
+    "no_parameter_search": true
+  },
+  "fixed_event_rule": {
+    "onset_lag_samples": 8,
+    "sustain_lag_samples": 32,
+    "onset_persistence_samples": 3,
+    "coherence": "Successive signed onset residual vectors must have positive dot product.",
+    "pending_samples": 25,
+    "pulse_samples": 8,
+    "rearm_quiet_samples": 25,
+    "ownership": "Continuous sustain residual projection owns rearming only. It never holds the alarm output. A live native R26 report suppresses the extra pulse for that sample and cancels a still-pending extra."
+  },
+  "normal_falsifiers": [
+    "Any candidate-only alarm in any fit or disjoint audit normal episode.",
+    "Any nonfinite or rank-deficient two-column fit design.",
+    "Any audit-driven coefficient, threshold, lag, gate, or state-machine change.",
+    "Any passive-capture difference from the frozen R26 physical/native baseline."
+  ],
+  "forced_gate_deferred": "Only after passing normals, unit tests, candidate/model freeze, and forced-protocol fingerprint may disclosed target/control forces run. The independent challenge is presealed and remains unread."
+}

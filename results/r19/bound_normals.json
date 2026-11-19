@@ -1,0 +1,52 @@
+{
+  "schema": "r19-bound-normal-result.v1",
+  "question": "Can controller-bound seed-varied normal eligibility safely enable the R18 release predictor for the known 7.22 kg miss without relaxing physical floors or MARGIN?",
+  "sequence": [
+    {
+      "stage": "V1",
+      "meaning": "conditional release eligibility with the unchanged R17C per-age predictor",
+      "normal_data": "18 live D-controller training episodes; six entire tuples x three JTS seeds",
+      "blind_data": "eight disjoint tuple/seed live normal episodes, first and only independent normal evaluation for this lane",
+      "result": {
+        "passed": false,
+        "rows": 8,
+        "candidate_supported": 8,
+        "old_supported": 1,
+        "detect_exact": 8,
+        "predictive_envelope_rows_without_breach": 0,
+        "maximum_predictive_ratio": 22.223762615859112,
+        "total_over_margin_samples": 12473,
+        "total_auxiliary_detected_samples": 16736
+      }
+    },
+    {
+      "stage": "V2",
+      "meaning": "compact 24-knot normal-only predictor after V1 showed the old predictor invalid",
+      "normal_data": "same 18 training episodes; 864 coefficient/envelope parameters, not a per-tick fit",
+      "blind_data": "the same eight V1 tuples were now exposed development controls; not independent evidence",
+      "result": {
+        "passed": false,
+        "rows": 8,
+        "candidate_supported": 8,
+        "old_supported": 1,
+        "detect_exact": 8,
+        "predictive_envelope_rows_without_breach": 1,
+        "maximum_predictive_ratio": 1.6641312975502778,
+        "total_over_margin_samples": 37,
+        "total_auxiliary_detected_samples": 225
+      }
+    }
+  ],
+  "outcome": "rejected_before_impact_opening",
+  "decision": {
+    "authorized_to_open_known_impacts": false,
+    "known_7_22_executed": false,
+    "reason": "V2 retained output parity because physical floors blocked the prediction breaches, but its time-resolved normal prediction exceeded the unchanged 1.25 margin in 7/8 exposed controls. Eligibility alone is not valid force detection evidence.",
+    "thresholds_changed": false,
+    "physical_floors_changed": false,
+    "coupled_fallback_changed": false,
+    "submission_changed": false
+  },
+  "next_experiment": "Do not tune on the eight exposed controls. Freeze a new model class before any new normal tuple/seed: model continuous normal uncertainty directly (rather than maximum-bin envelopes), then use entirely new tuples/seeds once. Only if every time-resolved normal ratio stays <=1.25 may the known impact diagnostic open.",
+  "source_record_sha256": "ec635bc529b37f708e8b8eb655659d8383016f4aded5ead13716b58ad8480519"
+}

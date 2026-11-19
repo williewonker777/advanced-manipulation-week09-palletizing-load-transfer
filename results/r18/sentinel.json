@@ -1,0 +1,2048 @@
+{
+  "schema": "r18-known-gates.v1",
+  "arm_names": [
+    "r10",
+    "raw_r15",
+    "D_coupled",
+    "R17D_coincidence",
+    "R18",
+    "R18_fast"
+  ],
+  "source": "92d7df88382f40d2f839a8d7f635db245ed21675a1c7514e9e9485fb0177e76c",
+  "release_model_sha256": "42ee9d2eebc85a424f67d2ab3e45431d4a42ea3cbd89b9e78532fa000aba4b81",
+  "portable": {
+    "schema": "r18-known-sentinel-live.v1",
+    "case": {
+      "id": "new_surface_normal_release",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision": [
+        3.94,
+        [
+          0.0,
+          0.0,
+          16.0
+        ]
+      ],
+      "role": "ALREADY_EXPOSED_R16_SENTINEL"
+    },
+    "gates": {
+      "genuine_reference_signature": true,
+      "all_prefixes_and_realized_forces": true,
+      "all_D_physics_identical": true,
+      "fast_exact_residual_alarm_and_state": true,
+      "preserve_tool": true
+    },
+    "reproduced": true,
+    "scope": "previously exposed development sentinel only; no independent generalization or release claim",
+    "events": {
+      "r10": {
+        "outcome": "detected",
+        "delay_ms": 40.000000000000036,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "raw_r15": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "D_coupled": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "R17D_coincidence": {
+        "outcome": "detected",
+        "delay_ms": 28.999999999999915,
+        "prealarm": false,
+        "false_alarms": 2,
+        "false_alarm_times": [
+          5.417,
+          5.509
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "R18": {
+        "outcome": "detected",
+        "delay_ms": 32.999999999999915,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "R18_fast": {
+        "outcome": "detected",
+        "delay_ms": 32.999999999999915,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      }
+    },
+    "paired": {
+      "r10": {
+        "prefix": {
+          "passed": true,
+          "samples_through_onset": 3941,
+          "fields": {
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "r": true,
+            "detect": true,
+            "f_ext": true
+          }
+        },
+        "force": {
+          "passed": true,
+          "exact_trapezoid": true,
+          "requested_peak_N": 16.0,
+          "observed_peak_N": 16.0,
+          "zero_through_onset": true,
+          "active_first_s": 3.9410000000000003,
+          "active_last_s": 4.059
+        }
+      },
+      "raw_r15": {
+        "prefix": {
+          "passed": true,
+          "samples_through_onset": 3941,
+          "fields": {
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "r": true,
+            "detect": true,
+            "f_ext": true
+          }
+        },
+        "force": {
+          "passed": true,
+          "exact_trapezoid": true,
+          "requested_peak_N": 16.0,
+          "observed_peak_N": 16.0,
+          "zero_through_onset": true,
+          "active_first_s": 3.9410000000000003,
+          "active_last_s": 4.059
+        }
+      },
+      "D_coupled": {
+        "prefix": {
+          "passed": true,
+          "samples_through_onset": 3941,
+          "fields": {
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "r": true,
+            "detect": true,
+            "f_ext": true
+          }
+        },
+        "force": {
+          "passed": true,
+          "exact_trapezoid": true,
+          "requested_peak_N": 16.0,
+          "observed_peak_N": 16.0,
+          "zero_through_onset": true,
+          "active_first_s": 3.9410000000000003,
+          "active_last_s": 4.059
+        }
+      },
+      "R17D_coincidence": {
+        "prefix": {
+          "passed": true,
+          "samples_through_onset": 3941,
+          "fields": {
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "r": true,
+            "detect": true,
+            "f_ext": true
+          }
+        },
+        "force": {
+          "passed": true,
+          "exact_trapezoid": true,
+          "requested_peak_N": 16.0,
+          "observed_peak_N": 16.0,
+          "zero_through_onset": true,
+          "active_first_s": 3.9410000000000003,
+          "active_last_s": 4.059
+        }
+      },
+      "R18": {
+        "prefix": {
+          "passed": true,
+          "samples_through_onset": 3941,
+          "fields": {
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "r": true,
+            "detect": true,
+            "f_ext": true
+          }
+        },
+        "force": {
+          "passed": true,
+          "exact_trapezoid": true,
+          "requested_peak_N": 16.0,
+          "observed_peak_N": 16.0,
+          "zero_through_onset": true,
+          "active_first_s": 3.9410000000000003,
+          "active_last_s": 4.059
+        }
+      },
+      "R18_fast": {
+        "prefix": {
+          "passed": true,
+          "samples_through_onset": 3941,
+          "fields": {
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "r": true,
+            "detect": true,
+            "f_ext": true
+          }
+        },
+        "force": {
+          "passed": true,
+          "exact_trapezoid": true,
+          "requested_peak_N": 16.0,
+          "observed_peak_N": 16.0,
+          "zero_through_onset": true,
+          "active_first_s": 3.9410000000000003,
+          "active_last_s": 4.059
+        }
+      }
+    },
+    "D_physics": {
+      "R17D_coincidence": {
+        "normal": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        },
+        "forced": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        }
+      },
+      "R18": {
+        "normal": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        },
+        "forced": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        }
+      },
+      "R18_fast": {
+        "normal": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        },
+        "forced": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        }
+      }
+    },
+    "fast_parity": {
+      "normal": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      },
+      "forced": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      }
+    },
+    "support_hashes": {
+      "R18": {
+        "normal": "ff6698a6e831ffcf47af2fed388ffc262f319e72b26cd140929d1e19b1246ad4",
+        "forced": "d3be9b56fa07e9cc4a290657031a82c251c35223dd6fd921d9435ce786c7a332"
+      },
+      "R18_fast": {
+        "normal": "ff6698a6e831ffcf47af2fed388ffc262f319e72b26cd140929d1e19b1246ad4",
+        "forced": "d3be9b56fa07e9cc4a290657031a82c251c35223dd6fd921d9435ce786c7a332"
+      }
+    },
+    "records": {
+      "r10": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.6082849965646924,
+          "max_mm": 5.952791841822798,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": []
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.118689982251669,
+          "max_mm": 21.51546344358751,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": [
+            3.98
+          ]
+        }
+      },
+      "raw_r15": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.6511422261484836,
+          "max_mm": 5.952791841823865,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": []
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.241381539407742,
+          "max_mm": 22.024414582784114,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": []
+        }
+      },
+      "D_coupled": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.61105137994693,
+          "max_mm": 5.952791841823865,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": []
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.01650270161789,
+          "max_mm": 21.047104471310337,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": []
+        }
+      },
+      "R17D_coincidence": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.61105137994693,
+          "max_mm": 5.952791841823865,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": []
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.01650270161789,
+          "max_mm": 21.047104471310337,
+          "saturation_pct": 0.0,
+          "false_alarms": 2,
+          "false_alarm_times": [
+            5.417,
+            5.509
+          ],
+          "tool_contact_delay_ms": null,
+          "rising_times": [
+            3.969,
+            4.016,
+            5.417,
+            5.509
+          ]
+        }
+      },
+      "R18": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.61105137994693,
+          "max_mm": 5.952791841823865,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": []
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.01650270161789,
+          "max_mm": 21.047104471310337,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": [
+            3.973
+          ]
+        }
+      },
+      "R18_fast": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.61105137994693,
+          "max_mm": 5.952791841823865,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": []
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.01650270161789,
+          "max_mm": 21.047104471310337,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null,
+          "rising_times": [
+            3.973
+          ]
+        }
+      }
+    },
+    "promotion_eligible": false
+  },
+  "historical_roles": "7 known evaluation pairs; one 16 N pair also independently and directly reproduced with six arms. No default changes.",
+  "recorded_sensor_replay_rows": [
+    {
+      "id": "new_weak_oblique_pre",
+      "event": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "offline_exact": true,
+      "normal_within_20ms": null,
+      "complete_arrays": true,
+      "passed": true,
+      "against": {
+        "r10": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      }
+    },
+    {
+      "id": "new_vertical_pre",
+      "event": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": true,
+        "tool_detected": true,
+        "tool_prealarm": false,
+        "tool_delay_ms": 11.00000000000012
+      },
+      "offline_exact": true,
+      "normal_within_20ms": null,
+      "complete_arrays": true,
+      "passed": true,
+      "against": {
+        "r10": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.00000000000012
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.00000000000012
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.00000000000012
+        }
+      }
+    },
+    {
+      "id": "new_surface_normal_release",
+      "event": {
+        "outcome": "detected",
+        "delay_ms": 32.999999999999915,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "offline_exact": true,
+      "normal_within_20ms": false,
+      "complete_arrays": true,
+      "passed": true,
+      "against": {
+        "r10": {
+          "outcome": "detected",
+          "delay_ms": 40.000000000000036,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      }
+    },
+    {
+      "id": "new_off_release_pre",
+      "event": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "offline_exact": true,
+      "normal_within_20ms": null,
+      "complete_arrays": true,
+      "passed": true,
+      "against": {
+        "r10": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      }
+    },
+    {
+      "id": "new_oblique_post",
+      "event": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "offline_exact": true,
+      "normal_within_20ms": null,
+      "complete_arrays": true,
+      "passed": true,
+      "against": {
+        "r10": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      }
+    },
+    {
+      "id": "new_positive_heavy",
+      "event": {
+        "outcome": "detected",
+        "delay_ms": 22.00000000000024,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "offline_exact": true,
+      "normal_within_20ms": false,
+      "complete_arrays": true,
+      "passed": true,
+      "against": {
+        "r10": {
+          "outcome": "detected",
+          "delay_ms": 30.00000000000025,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "detected",
+          "delay_ms": 28.00000000000047,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "detected",
+          "delay_ms": 28.00000000000047,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      }
+    },
+    {
+      "id": "exposed_heavy_oblique_143ms",
+      "event": {
+        "outcome": "detected",
+        "delay_ms": 133.9999999999999,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "offline_exact": true,
+      "normal_within_20ms": false,
+      "complete_arrays": true,
+      "passed": true,
+      "against": {
+        "r10": {
+          "outcome": "detected",
+          "delay_ms": 143.00000000000023,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "detected",
+          "delay_ms": 133.9999999999999,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      }
+    }
+  ],
+  "recorded_sensor_replay_hashes": {
+    "online": "1b2de16b36ff773139fe8a943fcab8ed4b064f769a33b56900016fada42c0ae8",
+    "verification": "c366c3cc549ab48fb488d99ee1e31b0987e4a13e8e2d7e1ad083f147466373c3",
+    "online_source": "8274d6d4d28bc4983620d832bd5ca5a064582fca4f3dee1fc27d72d48fda940d",
+    "candidate_detector": "92d7df88382f40d2f839a8d7f635db245ed21675a1c7514e9e9485fb0177e76c"
+  },
+  "recorded_sensor_replay_gates": {
+    "online7": true,
+    "tool_positive_rows_actual": true,
+    "zero_exact_current_runtime": true,
+    "servo_exact_current_runtime": true
+  },
+  "recorded_sensor_replay_digest": "1b2de16b36ff773139fe8a943fcab8ed4b064f769a33b56900016fada42c0ae8",
+  "modality_note": "Replaying measured sensor inputs with a new estimator is not the same as sharing a controller whose nominal payload COM changes during the episode.",
+  "live_coupled_source_sha256": "83b9fa34cfac5b02810cb91a3fca2a36593d898d1cadf2ddc9ec90d128213af0",
+  "live_coupled_gate": {
+    "live7": true,
+    "sentinel_33ms_zero_false": true,
+    "tool_rows_direct": true,
+    "zero_direct_exact": true,
+    "servo_direct_exact": true
+  },
+  "live_coupled_rows": [
+    {
+      "id": "new_weak_oblique_pre",
+      "collision": [
+        3.78,
+        [
+          6.0,
+          -7.0,
+          -5.0
+        ]
+      ],
+      "events": {
+        "r10": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "R18": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "live_minus_replay_delay_ms": null,
+      "D_physical_max_abs_difference": {
+        "normal": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        },
+        "forced": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        }
+      },
+      "live_edge_forced": {
+        "t_s": 3.9,
+        "supported": false,
+        "max_excess_beyond_observed_range": 15.7560978308198,
+        "feature_index": [
+          0,
+          3
+        ],
+        "z_at_feature": 18.276728113087298,
+        "bound_at_feature": 2.520630282267499,
+        "provided_com": [
+          -0.017,
+          0.009,
+          0.024
+        ],
+        "early_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "early_weight": 0.0,
+        "effective_nominal_com": [
+          -0.017,
+          0.009,
+          0.024
+        ],
+        "live_binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": true
+        }
+      },
+      "same_sensor_dummy_replay": {
+        "edge": {
+          "t_s": 3.9,
+          "supported": false,
+          "max_excess_beyond_observed_range": 15.7560978308198,
+          "feature_index": [
+            0,
+            3
+          ],
+          "z_at_feature": 18.276728113087298,
+          "bound_at_feature": 2.520630282267499,
+          "provided_com": null,
+          "early_offset": null,
+          "early_weight": null,
+          "effective_nominal_com": null,
+          "live_binding": {
+            "implementation_ctrl_is_active_controller": true,
+            "shared_is_active_controller_estimator": true,
+            "shared_nom_box_is_active_controller_nom_box": false
+          }
+        },
+        "rises_s": [],
+        "residual_sha256": "69a42fa5f5da072c808da8e20555d05910f8e48536208142da82843d501940a7",
+        "detect_sha256": "58f100b8287d53a0cbd6c8e4e649ef9f239f41fd6a777ac7baa30870c019b026",
+        "binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": false
+        }
+      },
+      "gates": {
+        "all_complete": true,
+        "matched_prefix": true,
+        "force_exact": true,
+        "D_physics_exact": true,
+        "live_shared_binding": true,
+        "no_prealarm": true,
+        "no_false_rise": true,
+        "retain_r10_5ms": true,
+        "retain_raw_r15_5ms": true,
+        "retain_D_coupled_5ms": true,
+        "false_events_r10": true,
+        "false_events_raw_r15": true,
+        "false_events_D_coupled": true
+      },
+      "passed": true
+    },
+    {
+      "id": "new_vertical_pre",
+      "collision": [
+        3.86,
+        [
+          0.0,
+          0.0,
+          -13.0
+        ]
+      ],
+      "events": {
+        "r10": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.00000000000012
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.00000000000012
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.00000000000012
+        },
+        "R18": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.00000000000012
+        }
+      },
+      "live_minus_replay_delay_ms": null,
+      "D_physical_max_abs_difference": {
+        "normal": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        },
+        "forced": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        }
+      },
+      "live_edge_forced": {
+        "t_s": 3.9,
+        "supported": false,
+        "max_excess_beyond_observed_range": 0.016250850208284096,
+        "feature_index": [
+          4,
+          4
+        ],
+        "z_at_feature": 1.7684056170741997,
+        "bound_at_feature": 1.7521547668659156,
+        "provided_com": [
+          0.021,
+          -0.016,
+          0.011
+        ],
+        "early_offset": [
+          -0.0010205092607796277,
+          -0.005715407170841646,
+          0.0
+        ],
+        "early_weight": 1.0,
+        "effective_nominal_com": [
+          0.019979490739220375,
+          -0.021715407170841645,
+          0.011
+        ],
+        "live_binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": true
+        }
+      },
+      "same_sensor_dummy_replay": {
+        "edge": {
+          "t_s": 3.9,
+          "supported": false,
+          "max_excess_beyond_observed_range": 0.016250850208284096,
+          "feature_index": [
+            4,
+            4
+          ],
+          "z_at_feature": 1.7684056170741997,
+          "bound_at_feature": 1.7521547668659156,
+          "provided_com": null,
+          "early_offset": null,
+          "early_weight": null,
+          "effective_nominal_com": null,
+          "live_binding": {
+            "implementation_ctrl_is_active_controller": true,
+            "shared_is_active_controller_estimator": true,
+            "shared_nom_box_is_active_controller_nom_box": false
+          }
+        },
+        "rises_s": [
+          1.2750000000000001
+        ],
+        "residual_sha256": "0817b6ae3248fe625c7c750a0a13d813df3e254690691e1b1a99493827261140",
+        "detect_sha256": "25ebe0a25326da79d63671eedf709f9f7d0cfeff3b4fec2a908b29ea6f9d36fd",
+        "binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": false
+        }
+      },
+      "gates": {
+        "all_complete": true,
+        "matched_prefix": true,
+        "force_exact": true,
+        "D_physics_exact": true,
+        "live_shared_binding": true,
+        "no_prealarm": true,
+        "no_false_rise": true,
+        "retain_r10_5ms": true,
+        "retain_raw_r15_5ms": true,
+        "retain_D_coupled_5ms": true,
+        "false_events_r10": true,
+        "false_events_raw_r15": true,
+        "false_events_D_coupled": true
+      },
+      "passed": true
+    },
+    {
+      "id": "new_surface_normal_release",
+      "collision": [
+        3.94,
+        [
+          0.0,
+          0.0,
+          16.0
+        ]
+      ],
+      "events": {
+        "r10": {
+          "outcome": "detected",
+          "delay_ms": 40.000000000000036,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "R18": {
+          "outcome": "detected",
+          "delay_ms": 32.999999999999915,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "live_minus_replay_delay_ms": 0.0,
+      "D_physical_max_abs_difference": {
+        "normal": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        },
+        "forced": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        }
+      },
+      "live_edge_forced": {
+        "t_s": 3.9,
+        "supported": true,
+        "max_excess_beyond_observed_range": 0.0,
+        "feature_index": [
+          5,
+          4
+        ],
+        "z_at_feature": -1.7574220384743162,
+        "bound_at_feature": 2.321317908512624,
+        "provided_com": [
+          0.021,
+          -0.016,
+          0.011
+        ],
+        "early_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "early_weight": 0.0,
+        "effective_nominal_com": [
+          0.021,
+          -0.016,
+          0.011
+        ],
+        "live_binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": true
+        }
+      },
+      "same_sensor_dummy_replay": {
+        "edge": {
+          "t_s": 3.9,
+          "supported": true,
+          "max_excess_beyond_observed_range": 0.0,
+          "feature_index": [
+            5,
+            4
+          ],
+          "z_at_feature": -1.7574220384743162,
+          "bound_at_feature": 2.321317908512624,
+          "provided_com": null,
+          "early_offset": null,
+          "early_weight": null,
+          "effective_nominal_com": null,
+          "live_binding": {
+            "implementation_ctrl_is_active_controller": true,
+            "shared_is_active_controller_estimator": true,
+            "shared_nom_box_is_active_controller_nom_box": false
+          }
+        },
+        "rises_s": [
+          3.973
+        ],
+        "residual_sha256": "70cdf33db52fada22eecbc3e31e4496a271c7b1d8ab97c8600451d53983cb6a1",
+        "detect_sha256": "448df63781aa7e0f5bcfcbd82de47e98712cc0ee203d393614fc237bff5310ec",
+        "binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": false
+        }
+      },
+      "gates": {
+        "all_complete": true,
+        "matched_prefix": true,
+        "force_exact": true,
+        "D_physics_exact": true,
+        "live_shared_binding": true,
+        "no_prealarm": true,
+        "no_false_rise": true,
+        "retain_r10_5ms": true,
+        "retain_raw_r15_5ms": true,
+        "retain_D_coupled_5ms": true,
+        "false_events_r10": true,
+        "false_events_raw_r15": true,
+        "false_events_D_coupled": true
+      },
+      "passed": true
+    },
+    {
+      "id": "new_off_release_pre",
+      "collision": [
+        3.82,
+        [
+          11.0,
+          0.0,
+          -4.0
+        ]
+      ],
+      "events": {
+        "r10": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "R18": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "live_minus_replay_delay_ms": null,
+      "D_physical_max_abs_difference": {
+        "normal": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        },
+        "forced": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        }
+      },
+      "live_edge_forced": {
+        "t_s": 3.9,
+        "supported": false,
+        "max_excess_beyond_observed_range": 5.113168203461158,
+        "feature_index": [
+          0,
+          3
+        ],
+        "z_at_feature": 7.633798485728657,
+        "bound_at_feature": 2.520630282267499,
+        "provided_com": [
+          -0.009,
+          0.026,
+          -0.014
+        ],
+        "early_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "early_weight": 0.0,
+        "effective_nominal_com": [
+          -0.009,
+          0.026,
+          -0.014
+        ],
+        "live_binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": true
+        }
+      },
+      "same_sensor_dummy_replay": {
+        "edge": {
+          "t_s": 3.9,
+          "supported": false,
+          "max_excess_beyond_observed_range": 5.113168203461158,
+          "feature_index": [
+            0,
+            3
+          ],
+          "z_at_feature": 7.633798485728657,
+          "bound_at_feature": 2.520630282267499,
+          "provided_com": null,
+          "early_offset": null,
+          "early_weight": null,
+          "effective_nominal_com": null,
+          "live_binding": {
+            "implementation_ctrl_is_active_controller": true,
+            "shared_is_active_controller_estimator": true,
+            "shared_nom_box_is_active_controller_nom_box": false
+          }
+        },
+        "rises_s": [],
+        "residual_sha256": "5925b155f0704519dc5a063c16149d130c373f4e9a752c2d1aef76f1d143f7dc",
+        "detect_sha256": "58f100b8287d53a0cbd6c8e4e649ef9f239f41fd6a777ac7baa30870c019b026",
+        "binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": false
+        }
+      },
+      "gates": {
+        "all_complete": true,
+        "matched_prefix": true,
+        "force_exact": true,
+        "D_physics_exact": true,
+        "live_shared_binding": true,
+        "no_prealarm": true,
+        "no_false_rise": true,
+        "retain_r10_5ms": true,
+        "retain_raw_r15_5ms": true,
+        "retain_D_coupled_5ms": true,
+        "false_events_r10": true,
+        "false_events_raw_r15": true,
+        "false_events_D_coupled": true
+      },
+      "passed": true
+    },
+    {
+      "id": "new_oblique_post",
+      "collision": [
+        4.08,
+        [
+          -7.0,
+          9.0,
+          0.0
+        ]
+      ],
+      "events": {
+        "r10": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "R18": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "live_minus_replay_delay_ms": null,
+      "D_physical_max_abs_difference": {
+        "normal": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        },
+        "forced": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        }
+      },
+      "live_edge_forced": {
+        "t_s": 3.9,
+        "supported": true,
+        "max_excess_beyond_observed_range": 0.0,
+        "feature_index": [
+          1,
+          4
+        ],
+        "z_at_feature": 1.2665269726600665,
+        "bound_at_feature": 1.5283720552716678,
+        "provided_com": [
+          -0.017,
+          0.009,
+          0.024
+        ],
+        "early_offset": [
+          0.003536288405361378,
+          0.0027634667704835034,
+          0.0
+        ],
+        "early_weight": 1.0,
+        "effective_nominal_com": [
+          -0.013463711594638623,
+          0.011763466770483504,
+          0.024
+        ],
+        "live_binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": true
+        }
+      },
+      "same_sensor_dummy_replay": {
+        "edge": {
+          "t_s": 3.9,
+          "supported": true,
+          "max_excess_beyond_observed_range": 0.0,
+          "feature_index": [
+            1,
+            4
+          ],
+          "z_at_feature": 1.2665269726600665,
+          "bound_at_feature": 1.5283720552716678,
+          "provided_com": null,
+          "early_offset": null,
+          "early_weight": null,
+          "effective_nominal_com": null,
+          "live_binding": {
+            "implementation_ctrl_is_active_controller": true,
+            "shared_is_active_controller_estimator": true,
+            "shared_nom_box_is_active_controller_nom_box": false
+          }
+        },
+        "rises_s": [],
+        "residual_sha256": "708617acb920594d479f27eacbfa6c1a2f693427d3c3459b76a7f04a2e06a1fa",
+        "detect_sha256": "58f100b8287d53a0cbd6c8e4e649ef9f239f41fd6a777ac7baa30870c019b026",
+        "binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": false
+        }
+      },
+      "gates": {
+        "all_complete": true,
+        "matched_prefix": true,
+        "force_exact": true,
+        "D_physics_exact": true,
+        "live_shared_binding": true,
+        "no_prealarm": true,
+        "no_false_rise": true,
+        "retain_r10_5ms": true,
+        "retain_raw_r15_5ms": true,
+        "retain_D_coupled_5ms": true,
+        "false_events_r10": true,
+        "false_events_raw_r15": true,
+        "false_events_D_coupled": true
+      },
+      "passed": true
+    },
+    {
+      "id": "new_positive_heavy",
+      "collision": [
+        4.02,
+        [
+          0.0,
+          0.0,
+          20.0
+        ]
+      ],
+      "events": {
+        "r10": {
+          "outcome": "detected",
+          "delay_ms": 30.00000000000025,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "detected",
+          "delay_ms": 28.00000000000047,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "detected",
+          "delay_ms": 28.00000000000047,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "R18": {
+          "outcome": "detected",
+          "delay_ms": 28.00000000000047,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "live_minus_replay_delay_ms": 6.000000000000227,
+      "D_physical_max_abs_difference": {
+        "normal": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        },
+        "forced": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        }
+      },
+      "live_edge_forced": {
+        "t_s": 3.9,
+        "supported": false,
+        "max_excess_beyond_observed_range": 0.06760165582461486,
+        "feature_index": [
+          4,
+          2
+        ],
+        "z_at_feature": 2.2430300702340236,
+        "bound_at_feature": 2.1754284144094087,
+        "provided_com": [
+          -0.009,
+          0.026,
+          -0.014
+        ],
+        "early_offset": [
+          -0.0032316203800846896,
+          0.00256850488937348,
+          0.0
+        ],
+        "early_weight": 1.0,
+        "effective_nominal_com": [
+          -0.012231620380084688,
+          0.02856850488937348,
+          -0.014
+        ],
+        "live_binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": true
+        }
+      },
+      "same_sensor_dummy_replay": {
+        "edge": {
+          "t_s": 3.9,
+          "supported": true,
+          "max_excess_beyond_observed_range": 0.0,
+          "feature_index": [
+            1,
+            2
+          ],
+          "z_at_feature": 1.8655287871151514,
+          "bound_at_feature": 1.8655287871151514,
+          "provided_com": null,
+          "early_offset": null,
+          "early_weight": null,
+          "effective_nominal_com": null,
+          "live_binding": {
+            "implementation_ctrl_is_active_controller": true,
+            "shared_is_active_controller_estimator": true,
+            "shared_nom_box_is_active_controller_nom_box": false
+          }
+        },
+        "rises_s": [
+          4.042
+        ],
+        "residual_sha256": "f4446dad4306962e7c6596d694799e13d9fc51f1f8bbafb4c95c90c52b4235ca",
+        "detect_sha256": "bdb0d14c50020595935169c0fcb42772a6cb57ba1de5b4afc82dad1347fd6cab",
+        "binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": false
+        }
+      },
+      "gates": {
+        "all_complete": true,
+        "matched_prefix": true,
+        "force_exact": true,
+        "D_physics_exact": true,
+        "live_shared_binding": true,
+        "no_prealarm": true,
+        "no_false_rise": true,
+        "retain_r10_5ms": true,
+        "retain_raw_r15_5ms": true,
+        "retain_D_coupled_5ms": true,
+        "false_events_r10": true,
+        "false_events_raw_r15": true,
+        "false_events_D_coupled": true
+      },
+      "passed": true
+    },
+    {
+      "id": "exposed_heavy_oblique_143ms",
+      "collision": [
+        3.905,
+        [
+          8.0,
+          -5.0,
+          -15.0
+        ]
+      ],
+      "events": {
+        "r10": {
+          "outcome": "detected",
+          "delay_ms": 143.00000000000023,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "detected",
+          "delay_ms": 133.9999999999999,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "R18": {
+          "outcome": "detected",
+          "delay_ms": 133.9999999999999,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "live_minus_replay_delay_ms": 0.0,
+      "D_physical_max_abs_difference": {
+        "normal": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        },
+        "forced": {
+          "q": 0.0,
+          "q_d": 0.0,
+          "tau": 0.0,
+          "e_mm": 0.0,
+          "f_table": 0.0,
+          "f_tool": 0.0,
+          "qpos": 0.0,
+          "f_ext": 0.0
+        }
+      },
+      "live_edge_forced": {
+        "t_s": 3.9,
+        "supported": false,
+        "max_excess_beyond_observed_range": 0.2593696524780642,
+        "feature_index": [
+          4,
+          4
+        ],
+        "z_at_feature": -2.094125465513629,
+        "bound_at_feature": -1.8347558130355648,
+        "provided_com": [
+          -0.018,
+          0.025,
+          -0.017
+        ],
+        "early_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "early_weight": 0.0,
+        "effective_nominal_com": [
+          -0.018,
+          0.025,
+          -0.017
+        ],
+        "live_binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": true
+        }
+      },
+      "same_sensor_dummy_replay": {
+        "edge": {
+          "t_s": 3.9,
+          "supported": false,
+          "max_excess_beyond_observed_range": 0.2593696524780642,
+          "feature_index": [
+            4,
+            4
+          ],
+          "z_at_feature": -2.094125465513629,
+          "bound_at_feature": -1.8347558130355648,
+          "provided_com": null,
+          "early_offset": null,
+          "early_weight": null,
+          "effective_nominal_com": null,
+          "live_binding": {
+            "implementation_ctrl_is_active_controller": true,
+            "shared_is_active_controller_estimator": true,
+            "shared_nom_box_is_active_controller_nom_box": false
+          }
+        },
+        "rises_s": [
+          4.039
+        ],
+        "residual_sha256": "f545a8f30cc27bd7d1a390604c266efdddadd65ed0a0a513bedd121ca2439774",
+        "detect_sha256": "471246e3b2fdd893ad5a4542d3ba7aa86d0cd7b0a4c9642a9f961f07bb6a9b65",
+        "binding": {
+          "implementation_ctrl_is_active_controller": true,
+          "shared_is_active_controller_estimator": true,
+          "shared_nom_box_is_active_controller_nom_box": false
+        }
+      },
+      "gates": {
+        "all_complete": true,
+        "matched_prefix": true,
+        "force_exact": true,
+        "D_physics_exact": true,
+        "live_shared_binding": true,
+        "no_prealarm": true,
+        "no_false_rise": true,
+        "retain_r10_5ms": true,
+        "retain_raw_r15_5ms": true,
+        "retain_D_coupled_5ms": true,
+        "false_events_r10": true,
+        "false_events_raw_r15": true,
+        "false_events_D_coupled": true
+      },
+      "passed": true
+    }
+  ]
+}

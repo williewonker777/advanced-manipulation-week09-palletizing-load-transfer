@@ -1,0 +1,38 @@
+{
+  "schema": "r19-rolling-forecast-result.v1",
+  "outcome": "rejected_at_independent_normal_calibration_before_unseen_or_forces",
+  "design": {
+    "horizon_ms": 16,
+    "older_lag_ms": 24,
+    "parameters": 174,
+    "training_normal_episodes": 24,
+    "training_samples": 49824,
+    "error_band": "unchanged R17C per-age envelope",
+    "margin": 1.25,
+    "physical_floors": "unchanged"
+  },
+  "calibration": {
+    "episodes": 8,
+    "entirely_new_tuples": 4,
+    "entirely_new_seeds": 2,
+    "supported": 8,
+    "full_active_2076": 8,
+    "causal_source_proof": 8,
+    "r18_output_exact": 8,
+    "coverage_pass_rows": 0,
+    "max_ratio_min": 10.711823154791707,
+    "max_ratio_max": 17.662104921294944,
+    "over_margin_samples": 10068,
+    "raw_physical_coincidence_samples": 196
+  },
+  "decision": {
+    "authorized": false,
+    "unseen_tuple_seed_gate_executed": false,
+    "known_7_22_twins_executed": false,
+    "known_5_38_pair_executed": false,
+    "reason": "All eight normal calibrations were visible and preserved R18 output, but every row exceeded the unchanged original prediction envelope. Output parity from the physical floor is not predictor coverage and cannot authorize force opening.",
+    "submission_changed": false,
+    "threshold_or_floor_changed": false
+  },
+  "source_record_sha256": "1cb18cda14575a661724b7c488147f5fcae4e1e3d03665535d4e69f9400575d1"
+}

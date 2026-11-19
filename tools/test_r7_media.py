@@ -1,7 +1,6 @@
 """Simulation-free tests for conditional R7 preserved-media publication."""
 from pathlib import Path
 import hashlib
-import json
 import tempfile
 import unittest
 from unittest import mock
@@ -29,6 +28,9 @@ def fixture(folder):
     source.mkdir(); root.mkdir()
     candidate = Path(__file__).resolve().parents[1]/"experiments/r6_final/A_STATE.py"
     (root/"my_detector.py").write_bytes(candidate.read_bytes())
+    archive = root / "experiments/r7_final/A_STATE.py"
+    archive.parent.mkdir(parents=True)
+    archive.write_bytes(candidate.read_bytes())
     sidecars = []
     for variant in ("R1", "SCALE_STATE"):
         path = root/f"results/v2_protocol/R5_BASE_validation_{variant}_servo.json"
@@ -184,6 +186,18 @@ class R7MediaTests(unittest.TestCase):
                                       digest(root/M.INHERITED_EQUIVALENCE)):
                 with self.assertRaisesRegex(ValueError, "payload differs"):
                     M.build_manifest(source, root)
+
+    def test_historical_media_is_bound_to_exact_r7_not_later_submissions(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source, root = fixture(folder)
+            with mock.patch.object(M, "SOURCE_MANIFEST_SHA256", digest(source/"r5_manifest.json")), \
+                    mock.patch.object(M, "INHERITED_EQUIVALENCE_SHA256", digest(root/M.INHERITED_EQUIVALENCE)):
+                M.reuse(source, root)
+                (root / "my_detector.py").write_bytes(b"subsequent submission")
+                self.assertEqual(M.validate(root, probe_fn=fake_probe)["status"], "pass")
+                (root / "experiments/r7_final/A_STATE.py").write_bytes(b"different archive")
+                self.assertIn("R7 candidate source binding differs",
+                              M.validate(root, probe_fn=fake_probe)["errors"])
 
     def test_public_tamper_is_detected(self):
         with tempfile.TemporaryDirectory() as folder:

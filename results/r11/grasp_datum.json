@@ -1,0 +1,1855 @@
+{
+  "schema": "r11-grasp-datum.v1",
+  "pins": {
+    "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "plan": "036092d52a2d6cbbbeb2ed86b9d6c31b19b2b8ef0e1bc14a858ce786331e8a8f",
+    "candidate": "c209573bf0b4b1d0e6db66b74fed8354dab70d4cdff899025ff69025b40484c9",
+    "analysis": "8c841e53826409a0f0c336b7b3c6f1335172ffb205ab386f1a60c93012f19db0"
+  },
+  "all_gates": false,
+  "rows": [
+    {
+      "mode": "servo",
+      "id": "a",
+      "normal": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 1.0092546787170773,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.4457626479452164,
+              -1.5687169407602393
+            ],
+            "mean_lowest_corner_mm": -2.051073036241892,
+            "mean_corner_spread_mm": 0.460793399543264,
+            "mean_face_tilt_deg": 0.11007537032189077,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 47.52382251310256,
+            "free_minus_rigid_mean_mm": -0.7764668299139373,
+            "first_to_last_lowest_corner_speed_mm_s": 46.16030037815669
+          },
+          "costs": {
+            "rms_mm": 1.1490461767357008,
+            "peak_mm": 3.792189808975874,
+            "pick_step_nm": 9.656772698279909,
+            "place_step_nm": 10.73972878037803,
+            "place_peak_force_n": 37.92001956516165
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 1.0096526763068052,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.289317996038873,
+              -1.4840680517389988
+            ],
+            "mean_lowest_corner_mm": -1.9314008333626664,
+            "mean_corner_spread_mm": 0.4866360681663035,
+            "mean_face_tilt_deg": 0.11818633632315319,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 43.741924370193615,
+            "free_minus_rigid_mean_mm": -0.7762812877566855,
+            "first_to_last_lowest_corner_speed_mm_s": 42.38157601578286
+          },
+          "costs": {
+            "rms_mm": 1.1330953302693554,
+            "peak_mm": 3.5309160420102583,
+            "pick_step_nm": 9.656772698279909,
+            "place_step_nm": 10.73972878037803,
+            "place_peak_force_n": 37.93497325000218
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": 0.298244877189398,
+            "tilt_deg": [
+              -0.003453209674932451,
+              -0.004111563633981103,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        }
+      },
+      "impact": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 1.0086919951659985,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.410076868388163,
+              -1.6479660914594085
+            ],
+            "mean_lowest_corner_mm": -2.0601930296807245,
+            "mean_corner_spread_mm": 0.2859025847621238,
+            "mean_face_tilt_deg": 0.0455014973552447,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 47.083434932309125,
+            "free_minus_rigid_mean_mm": -1.0625888982008047,
+            "first_to_last_lowest_corner_speed_mm_s": 40.111093522566016
+          },
+          "costs": {
+            "rms_mm": 1.2431669027058863,
+            "peak_mm": 4.387370636634634,
+            "pick_step_nm": 9.656772698279909,
+            "place_step_nm": 10.73972878037803,
+            "place_peak_force_n": 37.89887824997545
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 37.00000000000037,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 1.0089259065757505,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.2545365678498865,
+              -1.5381136672180469
+            ],
+            "mean_lowest_corner_mm": -1.9280152171199223,
+            "mean_corner_spread_mm": 0.2615017393836684,
+            "mean_face_tilt_deg": 0.042350976581141356,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 43.28170634635303,
+            "free_minus_rigid_mean_mm": -1.0380479333608743,
+            "first_to_last_lowest_corner_speed_mm_s": 37.70646845430735
+          },
+          "costs": {
+            "rms_mm": 1.2279084348208213,
+            "peak_mm": 4.153498660237965,
+            "pick_step_nm": 9.656772698279909,
+            "place_step_nm": 10.73972878037803,
+            "place_peak_force_n": 37.90766683963608
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 36.00000000000003,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": 0.298244877189398,
+            "tilt_deg": [
+              -0.003453209674932451,
+              -0.004111563633981103,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        }
+      },
+      "gates": {
+        "mean_gain_mg": 0.0,
+        "all_four_g4": false,
+        "normal_cost": true,
+        "no_new_saturation": true,
+        "normal_fa": true,
+        "unchanged_preintervention": true,
+        "matched_prepulse": true,
+        "impact_fa": true,
+        "impact_retained": true,
+        "delay": true,
+        "tool": true
+      },
+      "cost_ratios": {
+        "rms_mm": 0.9861181849874304,
+        "peak_mm": 0.9311021388361951,
+        "pick_step_nm": 1.0,
+        "place_step_nm": 1.0,
+        "place_peak_force_n": 1.0003943480254496
+      }
+    },
+    {
+      "mode": "servo",
+      "id": "b",
+      "normal": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 1.0064598541093939,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.7142300854410566,
+              -1.8874358839740357
+            ],
+            "mean_lowest_corner_mm": -2.342410810962644,
+            "mean_corner_spread_mm": 0.9912758031971943,
+            "mean_face_tilt_deg": 0.1897296447996037,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 42.15693891477275,
+            "free_minus_rigid_mean_mm": -0.7394616797006403,
+            "first_to_last_lowest_corner_speed_mm_s": 43.51548428773794
+          },
+          "costs": {
+            "rms_mm": 1.127877473817574,
+            "peak_mm": 3.924402770134572,
+            "pick_step_nm": 9.671414349929947,
+            "place_step_nm": 12.091748248553387,
+            "place_peak_force_n": 60.91870011157716
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 9.652731071071888e-05,
+            "min_mg": 0.0,
+            "peak_mg": 1.0060473043577012,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.621318358765509,
+              -1.8533450680782906
+            ],
+            "mean_lowest_corner_mm": -2.2794697858912922,
+            "mean_corner_spread_mm": 1.0106993051338724,
+            "mean_face_tilt_deg": 0.19630168630624806,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 39.098064338111435,
+            "free_minus_rigid_mean_mm": -0.7391712880923775,
+            "first_to_last_lowest_corner_speed_mm_s": 40.41964687827465
+          },
+          "costs": {
+            "rms_mm": 1.1071508644711183,
+            "peak_mm": 3.734751288308908,
+            "pick_step_nm": 9.671414349929947,
+            "place_step_nm": 12.608819748707447,
+            "place_peak_force_n": 60.893729423971635
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": 0.21201233212216294,
+            "tilt_deg": [
+              -0.004028393283483057,
+              -0.00479758566576497,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        }
+      },
+      "impact": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.06009283201745417,
+            "min_mg": 0.0,
+            "peak_mg": 1.0035009802286956,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.7163209622028694,
+              -2.0199445216503196
+            ],
+            "mean_lowest_corner_mm": -2.3895037935903813,
+            "mean_corner_spread_mm": 0.9945592403958592,
+            "mean_face_tilt_deg": 0.18974842534007821,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 34.79319245631412,
+            "free_minus_rigid_mean_mm": -0.735289703479866,
+            "first_to_last_lowest_corner_speed_mm_s": 36.651391608028945
+          },
+          "costs": {
+            "rms_mm": 1.4607002427288942,
+            "peak_mm": 4.884256099351315,
+            "pick_step_nm": 9.671414349929947,
+            "place_step_nm": 12.880320453141138,
+            "place_peak_force_n": 60.739606280988426
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 72.00000000000006,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.06588462464014419,
+            "min_mg": 0.0,
+            "peak_mg": 1.0033377278942524,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.6234093966300738,
+              -1.9837448193502083
+            ],
+            "mean_lowest_corner_mm": -2.3261607627858263,
+            "mean_corner_spread_mm": 1.0135355408688471,
+            "mean_face_tilt_deg": 0.19624675823738563,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 31.823587306189335,
+            "free_minus_rigid_mean_mm": -0.7349499926711351,
+            "first_to_last_lowest_corner_speed_mm_s": 33.66655669894029
+          },
+          "costs": {
+            "rms_mm": 1.4668542048896482,
+            "peak_mm": 4.969006304147782,
+            "pick_step_nm": 9.671414349929947,
+            "place_step_nm": 13.400883335659927,
+            "place_peak_force_n": 60.72972499266494
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 70.99999999999973,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": 0.21201233212216294,
+            "tilt_deg": [
+              -0.004028393283483057,
+              -0.00479758566576497,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        }
+      },
+      "gates": {
+        "mean_gain_mg": 9.652731071071888e-05,
+        "all_four_g4": false,
+        "normal_cost": true,
+        "no_new_saturation": true,
+        "normal_fa": true,
+        "unchanged_preintervention": true,
+        "matched_prepulse": true,
+        "impact_fa": true,
+        "impact_retained": true,
+        "delay": true,
+        "tool": true
+      },
+      "cost_ratios": {
+        "rms_mm": 0.9816233502063824,
+        "peak_mm": 0.9516737977893232,
+        "pick_step_nm": 1.0,
+        "place_step_nm": 1.0427623441644116,
+        "place_peak_force_n": 0.999590098154429
+      }
+    },
+    {
+      "mode": "servo",
+      "id": "c",
+      "normal": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.002425833534618502,
+            "min_mg": 0.0,
+            "peak_mg": 1.0051255227633664,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.3430690218317882,
+              -1.6856460525941512
+            ],
+            "mean_lowest_corner_mm": -2.044253447614474,
+            "mean_corner_spread_mm": 0.3562109320181317,
+            "mean_face_tilt_deg": 0.07495104314929434,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 34.27478007723388,
+            "free_minus_rigid_mean_mm": -1.3331149887503873,
+            "first_to_last_lowest_corner_speed_mm_s": 34.60120890724405
+          },
+          "costs": {
+            "rms_mm": 1.2999684656229575,
+            "peak_mm": 3.7432089147335237,
+            "pick_step_nm": 9.050011560234125,
+            "place_step_nm": 14.732584550276783,
+            "place_peak_force_n": 76.21997505432567
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.004059724297021944,
+            "min_mg": 0.0,
+            "peak_mg": 1.0050283729653677,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.1812894945866343,
+              -1.5973921852489397
+            ],
+            "mean_lowest_corner_mm": -1.9201007983906144,
+            "mean_corner_spread_mm": 0.40558352862343805,
+            "mean_face_tilt_deg": 0.08580360519489787,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 29.437936497507316,
+            "free_minus_rigid_mean_mm": -1.3379415575223916,
+            "first_to_last_lowest_corner_speed_mm_s": 30.73143733356288
+          },
+          "costs": {
+            "rms_mm": 1.2798445359321522,
+            "peak_mm": 3.463877094920801,
+            "pick_step_nm": 9.050011560234125,
+            "place_step_nm": 15.031201411280023,
+            "place_peak_force_n": 76.2126080588487
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": 0.35325330592443177,
+            "tilt_deg": [
+              -0.004491144881847447,
+              -0.005351121901221506,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        }
+      },
+      "impact": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.002425833534618502,
+            "min_mg": 0.0,
+            "peak_mg": 1.0051255227633664,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.3430690218317882,
+              -1.6856460525941512
+            ],
+            "mean_lowest_corner_mm": -2.044253447614474,
+            "mean_corner_spread_mm": 0.3562109320181317,
+            "mean_face_tilt_deg": 0.07495104314929434,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 34.27478007723388,
+            "free_minus_rigid_mean_mm": -1.3331149887503873,
+            "first_to_last_lowest_corner_speed_mm_s": 34.60120890724405
+          },
+          "costs": {
+            "rms_mm": 1.418725165992164,
+            "peak_mm": 5.646942419253959,
+            "pick_step_nm": 9.050011560234125,
+            "place_step_nm": 14.732584550276783,
+            "place_peak_force_n": 76.21997505432567
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 53.99999999999983,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.004059724297021944,
+            "min_mg": 0.0,
+            "peak_mg": 1.0050283729653677,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.1812894945866343,
+              -1.5973921852489397
+            ],
+            "mean_lowest_corner_mm": -1.9201007983906144,
+            "mean_corner_spread_mm": 0.40558352862343805,
+            "mean_face_tilt_deg": 0.08580360519489787,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 29.437936497507316,
+            "free_minus_rigid_mean_mm": -1.3379415575223916,
+            "first_to_last_lowest_corner_speed_mm_s": 30.73143733356288
+          },
+          "costs": {
+            "rms_mm": 1.400857267359779,
+            "peak_mm": 5.61385884570627,
+            "pick_step_nm": 9.050011560234125,
+            "place_step_nm": 15.031201411280023,
+            "place_peak_force_n": 76.2126080588487
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 53.99999999999983,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": 0.35325330592443177,
+            "tilt_deg": [
+              -0.004491144881847447,
+              -0.005351121901221506,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        }
+      },
+      "gates": {
+        "mean_gain_mg": 0.0016338907624034423,
+        "all_four_g4": false,
+        "normal_cost": true,
+        "no_new_saturation": true,
+        "normal_fa": true,
+        "unchanged_preintervention": true,
+        "matched_prepulse": true,
+        "impact_fa": true,
+        "impact_retained": true,
+        "delay": true,
+        "tool": true
+      },
+      "cost_ratios": {
+        "rms_mm": 0.98451967857454,
+        "peak_mm": 0.9253763746091612,
+        "pick_step_nm": 1.0,
+        "place_step_nm": 1.0202691428638453,
+        "place_peak_force_n": 0.9999033456062965
+      }
+    },
+    {
+      "mode": "servo",
+      "id": "d",
+      "normal": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 1.0135986277747453,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.3275063065912733,
+              -1.6024443169528302
+            ],
+            "mean_lowest_corner_mm": -2.0095390826153943,
+            "mean_corner_spread_mm": 1.2971020248125131,
+            "mean_face_tilt_deg": 0.20913876299903666,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 39.71810672775016,
+            "free_minus_rigid_mean_mm": -0.4221202003371284,
+            "first_to_last_lowest_corner_speed_mm_s": 38.16115734939174
+          },
+          "costs": {
+            "rms_mm": 1.488313282798803,
+            "peak_mm": 4.710151538940644,
+            "pick_step_nm": 9.062036053522704,
+            "place_step_nm": 11.542709702069743,
+            "place_peak_force_n": 53.39607163158526
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 13.000000000000123
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 1.095725992094226,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -1.0564789876900293,
+              -0.6005287639926011
+            ],
+            "mean_lowest_corner_mm": -0.8724922288234401,
+            "mean_corner_spread_mm": 1.135756139384591,
+            "mean_face_tilt_deg": 0.1805739112148103,
+            "all_four_corners_below_plane_samples": 0,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 24.180343906713887,
+            "free_minus_rigid_mean_mm": -0.4246148532469382,
+            "first_to_last_lowest_corner_speed_mm_s": 23.997380194601487
+          },
+          "costs": {
+            "rms_mm": 1.4398703032040197,
+            "peak_mm": 4.710151538940644,
+            "pick_step_nm": 9.062036053522704,
+            "place_step_nm": 14.330020540792134,
+            "place_peak_force_n": 57.722516545726194
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 13.000000000000123
+          },
+          "captured_correction": {
+            "heave_mm": 1.5,
+            "tilt_deg": [
+              0.021623979985619005,
+              -0.0715695590015535,
+              0.0
+            ],
+            "scale": 0.44059824525609637
+          }
+        }
+      },
+      "impact": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 2.2586248792180026,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              0.37801608471531406,
+              2.185937022722125
+            ],
+            "mean_lowest_corner_mm": 1.2274003026238192,
+            "mean_corner_spread_mm": 0.7242449022587136,
+            "mean_face_tilt_deg": 0.11998855528113805,
+            "all_four_corners_below_plane_samples": 0,
+            "all_four_corners_above_plane_samples": 20,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 82.82397418313488,
+            "free_minus_rigid_mean_mm": -0.31003044771354676,
+            "first_to_last_lowest_corner_speed_mm_s": 95.15373357930585
+          },
+          "costs": {
+            "rms_mm": 1.961416710079128,
+            "peak_mm": 7.500180898790281,
+            "pick_step_nm": 9.062036053522704,
+            "place_step_nm": 13.26117849963282,
+            "place_peak_force_n": 118.98368104974062
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 13.000000000000123
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 2.489414754344545,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              2.043422148243448,
+              3.847668881034579
+            ],
+            "mean_lowest_corner_mm": 2.8921372282668925,
+            "mean_corner_spread_mm": 0.4250125144587864,
+            "mean_face_tilt_deg": 0.08379202622686377,
+            "all_four_corners_below_plane_samples": 0,
+            "all_four_corners_above_plane_samples": 20,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 78.33751533602236,
+            "free_minus_rigid_mean_mm": 0.054069716912841945,
+            "first_to_last_lowest_corner_speed_mm_s": 94.96035435742797
+          },
+          "costs": {
+            "rms_mm": 1.966485988012751,
+            "peak_mm": 8.221560940582904,
+            "pick_step_nm": 9.062036053522704,
+            "place_step_nm": 13.171586217782846,
+            "place_peak_force_n": 131.14162243444434
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 13.000000000000123
+          },
+          "captured_correction": {
+            "heave_mm": 1.5,
+            "tilt_deg": [
+              0.021623979985619005,
+              -0.0715695590015535,
+              0.0
+            ],
+            "scale": 0.44059824525609637
+          }
+        }
+      },
+      "gates": {
+        "mean_gain_mg": 0.0,
+        "all_four_g4": false,
+        "normal_cost": false,
+        "no_new_saturation": true,
+        "normal_fa": true,
+        "unchanged_preintervention": true,
+        "matched_prepulse": true,
+        "impact_fa": true,
+        "impact_retained": true,
+        "delay": true,
+        "tool": true
+      },
+      "cost_ratios": {
+        "rms_mm": 0.9674510869756632,
+        "peak_mm": 1.0,
+        "pick_step_nm": 1.0,
+        "place_step_nm": 1.2414780333791635,
+        "place_peak_force_n": 1.08102552831961
+      }
+    },
+    {
+      "mode": "torque",
+      "id": "a",
+      "normal": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.10190544695326473,
+            "min_mg": 0.0,
+            "peak_mg": 1.0042500660033178,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.431669525871375,
+              -2.2044184677134715
+            ],
+            "mean_lowest_corner_mm": -2.355011443477864,
+            "mean_corner_spread_mm": 0.8384071124281633,
+            "mean_face_tilt_deg": 0.13777176687796047,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 12.770371226576923,
+            "free_minus_rigid_mean_mm": -1.2762924480823585,
+            "first_to_last_lowest_corner_speed_mm_s": 11.632301317490672
+          },
+          "costs": {
+            "rms_mm": 2.2984645746669066,
+            "peak_mm": 4.284476362031506,
+            "pick_step_nm": 8.986921863802493,
+            "place_step_nm": 10.60148186608788,
+            "place_peak_force_n": 37.73198475489646
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.12617778326283619,
+            "min_mg": 0.0,
+            "peak_mg": 1.0156186860168237,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.2244325095683575,
+              -2.046099842608396
+            ],
+            "mean_lowest_corner_mm": -2.168086921434206,
+            "mean_corner_spread_mm": 0.7406706877171921,
+            "mean_face_tilt_deg": 0.12032187431086945,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 8.491407777704238,
+            "free_minus_rigid_mean_mm": -1.2823391260122199,
+            "first_to_last_lowest_corner_speed_mm_s": 8.51939727553245
+          },
+          "costs": {
+            "rms_mm": 2.2920955494502158,
+            "peak_mm": 4.284476362031506,
+            "pick_step_nm": 8.986921863802493,
+            "place_step_nm": 10.60148186608788,
+            "place_peak_force_n": 38.15912995662991
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": 0.3231956093680356,
+            "tilt_deg": [
+              -0.0017749255861240964,
+              0.025687958870870574,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        }
+      },
+      "impact": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.18814101029676736,
+            "min_mg": 0.14964533037768796,
+            "peak_mg": 1.0023633064388746,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.6503205726682344,
+              -2.424016376661645
+            ],
+            "mean_lowest_corner_mm": -2.574695388112253,
+            "mean_corner_spread_mm": 1.4875843897813779,
+            "mean_face_tilt_deg": 0.23703667093313835,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 12.531593730677757,
+            "free_minus_rigid_mean_mm": -1.2074002925451661,
+            "first_to_last_lowest_corner_speed_mm_s": 11.659551999246013
+          },
+          "costs": {
+            "rms_mm": 2.4526144633991693,
+            "peak_mm": 5.144933688421452,
+            "pick_step_nm": 8.986921863802493,
+            "place_step_nm": 10.60148186608788,
+            "place_peak_force_n": 37.66109485851334
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 37.00000000000037,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.19872951758594087,
+            "min_mg": 0.15249114267312194,
+            "peak_mg": 1.002363712953026,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.4809385806560122,
+              -2.3082415268855643
+            ],
+            "mean_lowest_corner_mm": -2.4282014544322665,
+            "mean_corner_spread_mm": 1.461087588550461,
+            "mean_face_tilt_deg": 0.235144016732057,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 8.576422492793569,
+            "free_minus_rigid_mean_mm": -1.2138609655761652,
+            "first_to_last_lowest_corner_speed_mm_s": 8.184045990713102
+          },
+          "costs": {
+            "rms_mm": 2.451811846270893,
+            "peak_mm": 5.037935933239906,
+            "pick_step_nm": 8.986921863802493,
+            "place_step_nm": 10.60148186608788,
+            "place_peak_force_n": 37.66111013218499
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 38.000000000000256,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": 0.3231956093680356,
+            "tilt_deg": [
+              -0.0017749255861240964,
+              0.025687958870870574,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        }
+      },
+      "gates": {
+        "mean_gain_mg": 0.024272336309571457,
+        "all_four_g4": false,
+        "normal_cost": true,
+        "no_new_saturation": true,
+        "normal_fa": true,
+        "unchanged_preintervention": true,
+        "matched_prepulse": true,
+        "impact_fa": true,
+        "impact_retained": true,
+        "delay": true,
+        "tool": true
+      },
+      "cost_ratios": {
+        "rms_mm": 0.9972290087535441,
+        "peak_mm": 1.0,
+        "pick_step_nm": 1.0,
+        "place_step_nm": 1.0,
+        "place_peak_force_n": 1.011320507111093
+      }
+    },
+    {
+      "mode": "torque",
+      "id": "b",
+      "normal": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.09295039536198088,
+            "min_mg": 0.0,
+            "peak_mg": 1.0028875516687397,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.5550748439792588,
+              -2.1780447034416657
+            ],
+            "mean_lowest_corner_mm": -2.3996418083153057,
+            "mean_corner_spread_mm": 0.30619894672772036,
+            "mean_face_tilt_deg": 0.05377248563213982,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 20.417868415314718,
+            "free_minus_rigid_mean_mm": -1.5702237934782959,
+            "first_to_last_lowest_corner_speed_mm_s": 19.84369160724174
+          },
+          "costs": {
+            "rms_mm": 2.8434169846993567,
+            "peak_mm": 7.847821695387037,
+            "pick_step_nm": 8.934419636187926,
+            "place_step_nm": 11.930460027510975,
+            "place_peak_force_n": 60.70247686113998
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.14427954965309447,
+            "min_mg": 0.0,
+            "peak_mg": 1.0232440168960828,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -1.9921068758952583,
+              -1.8370288705861342
+            ],
+            "mean_lowest_corner_mm": -1.943595337522845,
+            "mean_corner_spread_mm": 0.30139728107529795,
+            "mean_face_tilt_deg": 0.05666489463956257,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 7.445858006501304,
+            "free_minus_rigid_mean_mm": -1.567326718291379,
+            "first_to_last_lowest_corner_speed_mm_s": 7.126007145674451
+          },
+          "costs": {
+            "rms_mm": 2.6989781861871123,
+            "peak_mm": 7.847821695387037,
+            "pick_step_nm": 8.934419636187926,
+            "place_step_nm": 12.877195167134659,
+            "place_peak_force_n": 61.93460688148104
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": 1.0550841017995793,
+            "tilt_deg": [
+              -0.015175045892396965,
+              0.011579893090548465,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        }
+      },
+      "impact": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.2770652183752866,
+            "min_mg": 0.008048778688453028,
+            "peak_mg": 1.0112912235787983,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.5572350387299707,
+              -2.2276088218583183
+            ],
+            "mean_lowest_corner_mm": -2.423712304702918,
+            "mean_corner_spread_mm": 0.2970720763452083,
+            "mean_face_tilt_deg": 0.05307582136186404,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 17.65554928265537,
+            "free_minus_rigid_mean_mm": -1.5678962856463083,
+            "first_to_last_lowest_corner_speed_mm_s": 17.348748256402757
+          },
+          "costs": {
+            "rms_mm": 4.133050135913735,
+            "peak_mm": 13.461870164792325,
+            "pick_step_nm": 8.934419636187926,
+            "place_step_nm": 11.930460027510975,
+            "place_peak_force_n": 61.21113179341044
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.34171165541789345,
+            "min_mg": 0.026398196537092227,
+            "peak_mg": 1.0375700708988425,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -1.998015234669438,
+              -1.8694808035547796
+            ],
+            "mean_lowest_corner_mm": -1.9594349437512328,
+            "mean_corner_spread_mm": 0.28933591601971687,
+            "mean_face_tilt_deg": 0.055411032010353335,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 5.664509777223612,
+            "free_minus_rigid_mean_mm": -1.5642181907581338,
+            "first_to_last_lowest_corner_speed_mm_s": 5.491944952199115
+          },
+          "costs": {
+            "rms_mm": 4.316595969381828,
+            "peak_mm": 14.516250624991041,
+            "pick_step_nm": 8.934419636187926,
+            "place_step_nm": 13.334810896082985,
+            "place_peak_force_n": 62.801729980343865
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 139.00000000000023,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": 1.0550841017995793,
+            "tilt_deg": [
+              -0.015175045892396965,
+              0.011579893090548465,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        }
+      },
+      "gates": {
+        "mean_gain_mg": 0.05132915429111359,
+        "all_four_g4": false,
+        "normal_cost": false,
+        "no_new_saturation": true,
+        "normal_fa": true,
+        "unchanged_preintervention": true,
+        "matched_prepulse": true,
+        "impact_fa": true,
+        "impact_retained": true,
+        "delay": true,
+        "tool": true
+      },
+      "cost_ratios": {
+        "rms_mm": 0.9492023859710058,
+        "peak_mm": 1.0,
+        "pick_step_nm": 1.0,
+        "place_step_nm": 1.0793544538467557,
+        "place_peak_force_n": 1.0202978541247933
+      }
+    },
+    {
+      "mode": "torque",
+      "id": "c",
+      "normal": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.16050492554518755,
+            "min_mg": 0.023845378143518062,
+            "peak_mg": 1.035023424498928,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.0878814265461934,
+              -1.962473586020247
+            ],
+            "mean_lowest_corner_mm": -2.050192506185558,
+            "mean_corner_spread_mm": 0.8153427502177706,
+            "mean_face_tilt_deg": 0.1296647859795091,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 3.936641321791425,
+            "free_minus_rigid_mean_mm": 0.5259657655918343,
+            "first_to_last_lowest_corner_speed_mm_s": 4.679896375328355
+          },
+          "costs": {
+            "rms_mm": 4.257364184616412,
+            "peak_mm": 7.741979358937611,
+            "pick_step_nm": 8.946785243712,
+            "place_step_nm": 13.118443239238843,
+            "place_peak_force_n": 78.48717181020558
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.09625974783885714,
+            "min_mg": 0.00016172342145534145,
+            "peak_mg": 1.003098873450098,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.743296481944567,
+              -2.334231509706888
+            ],
+            "mean_lowest_corner_mm": -2.573294890263278,
+            "mean_corner_spread_mm": 0.5509586065040715,
+            "mean_face_tilt_deg": 0.09182684316144449,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 23.36754344133655,
+            "free_minus_rigid_mean_mm": 0.5339052123367615,
+            "first_to_last_lowest_corner_speed_mm_s": 21.529735380930457
+          },
+          "costs": {
+            "rms_mm": 4.432632952100999,
+            "peak_mm": 8.141832320783411,
+            "pick_step_nm": 8.946785243712,
+            "place_step_nm": 13.597343735481616,
+            "place_peak_force_n": 76.06629160225643
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": -1.5,
+            "tilt_deg": [
+              0.012121658308507536,
+              0.036486251248534524,
+              0.0
+            ],
+            "scale": 0.9206032129164737
+          }
+        }
+      },
+      "impact": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.16050492554518755,
+            "min_mg": 0.023845378143518062,
+            "peak_mg": 1.035023424498928,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.0878814265461934,
+              -1.962473586020247
+            ],
+            "mean_lowest_corner_mm": -2.050192506185558,
+            "mean_corner_spread_mm": 0.8153427502177706,
+            "mean_face_tilt_deg": 0.1296647859795091,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 3.936641321791425,
+            "free_minus_rigid_mean_mm": 0.5259657655918343,
+            "first_to_last_lowest_corner_speed_mm_s": 4.679896375328355
+          },
+          "costs": {
+            "rms_mm": 5.696137767707363,
+            "peak_mm": 16.825909794591187,
+            "pick_step_nm": 8.946785243712,
+            "place_step_nm": 13.118443239238843,
+            "place_peak_force_n": 78.48717181020558
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 59.00000000000016,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.09625974783885714,
+            "min_mg": 0.00016172342145534145,
+            "peak_mg": 1.003098873450098,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.743296481944567,
+              -2.334231509706888
+            ],
+            "mean_lowest_corner_mm": -2.573294890263278,
+            "mean_corner_spread_mm": 0.5509586065040715,
+            "mean_face_tilt_deg": 0.09182684316144449,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 23.36754344133655,
+            "free_minus_rigid_mean_mm": 0.5339052123367615,
+            "first_to_last_lowest_corner_speed_mm_s": 21.529735380930457
+          },
+          "costs": {
+            "rms_mm": 5.869797808027094,
+            "peak_mm": 17.583517843081204,
+            "pick_step_nm": 8.946785243712,
+            "place_step_nm": 13.597343735481616,
+            "place_peak_force_n": 76.06629160225643
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "detected",
+            "delay_ms": 79.99999999999963,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "captured_correction": {
+            "heave_mm": -1.5,
+            "tilt_deg": [
+              0.012121658308507536,
+              0.036486251248534524,
+              0.0
+            ],
+            "scale": 0.9206032129164737
+          }
+        }
+      },
+      "gates": {
+        "mean_gain_mg": -0.06424517770633041,
+        "all_four_g4": false,
+        "normal_cost": false,
+        "no_new_saturation": true,
+        "normal_fa": true,
+        "unchanged_preintervention": true,
+        "matched_prepulse": true,
+        "impact_fa": true,
+        "impact_retained": true,
+        "delay": false,
+        "tool": true
+      },
+      "cost_ratios": {
+        "rms_mm": 1.0411683755216208,
+        "peak_mm": 1.0516473815425762,
+        "pick_step_nm": 1.0,
+        "place_step_nm": 1.0365058938403853,
+        "place_peak_force_n": 0.9691557212202367
+      }
+    },
+    {
+      "mode": "torque",
+      "id": "d",
+      "normal": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.12444421691588366,
+            "min_mg": 0.00937121095323085,
+            "peak_mg": 1.0252508372108078,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -1.7504839484374295,
+              -1.6769129425894003
+            ],
+            "mean_lowest_corner_mm": -1.7246889909538834,
+            "mean_corner_spread_mm": 2.525311938098941,
+            "mean_face_tilt_deg": 0.49827275606073673,
+            "all_four_corners_below_plane_samples": 0,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": -1.2092961174848873,
+            "free_minus_rigid_mean_mm": -0.7994579994683997,
+            "first_to_last_lowest_corner_speed_mm_s": 0.587633013460478
+          },
+          "costs": {
+            "rms_mm": 3.1214572410099573,
+            "peak_mm": 7.727123287395744,
+            "pick_step_nm": 8.885541289603822,
+            "place_step_nm": 11.375584867840672,
+            "place_peak_force_n": 54.009906529014195
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 13.000000000000123
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.026418471699460454,
+            "min_mg": 0.0,
+            "peak_mg": 1.4022183085746038,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -0.28217261633844437,
+              -0.1674925211643415
+            ],
+            "mean_lowest_corner_mm": -0.252697933555072,
+            "mean_corner_spread_mm": 2.398461301202375,
+            "mean_face_tilt_deg": 0.5362710150447396,
+            "all_four_corners_below_plane_samples": 0,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": -9.027656440885469,
+            "free_minus_rigid_mean_mm": -0.5696466749456517,
+            "first_to_last_lowest_corner_speed_mm_s": -6.03579448284752
+          },
+          "costs": {
+            "rms_mm": 3.1381272127601925,
+            "peak_mm": 7.727123287395744,
+            "pick_step_nm": 8.885541289603822,
+            "place_step_nm": 12.657286965296976,
+            "place_peak_force_n": 73.86843983021757
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 13.000000000000123
+          },
+          "captured_correction": {
+            "heave_mm": 1.5,
+            "tilt_deg": [
+              0.03896352053494013,
+              -0.06687794074598254,
+              0.0
+            ],
+            "scale": 0.4069720302762626
+          }
+        }
+      },
+      "impact": {
+        "R1": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 2.247096590103013,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              1.3914790910368995,
+              2.9105145533247656
+            ],
+            "mean_lowest_corner_mm": 2.0962201934485547,
+            "mean_corner_spread_mm": 2.563069924519204,
+            "mean_face_tilt_deg": 0.5994336830359803,
+            "all_four_corners_below_plane_samples": 0,
+            "all_four_corners_above_plane_samples": 20,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 62.12847848910407,
+            "free_minus_rigid_mean_mm": -0.5111256343266545,
+            "first_to_last_lowest_corner_speed_mm_s": 79.94923485725612
+          },
+          "costs": {
+            "rms_mm": 4.930758272194529,
+            "peak_mm": 14.785388230473952,
+            "pick_step_nm": 8.885541289603822,
+            "place_step_nm": 11.85572782680768,
+            "place_peak_force_n": 118.37637423764971
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 13.000000000000123
+          }
+        },
+        "datum": {
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 2.521766858878818,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              3.0463698336167133,
+              4.526077426116143
+            ],
+            "mean_lowest_corner_mm": 3.7511378328821765,
+            "mean_corner_spread_mm": 2.3584484758388955,
+            "mean_face_tilt_deg": 0.6373020128879848,
+            "all_four_corners_below_plane_samples": 0,
+            "all_four_corners_above_plane_samples": 20,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 62.33926346444517,
+            "free_minus_rigid_mean_mm": -0.15006443730240054,
+            "first_to_last_lowest_corner_speed_mm_s": 77.87934697365421
+          },
+          "costs": {
+            "rms_mm": 4.829950897815155,
+            "peak_mm": 14.240641997329737,
+            "pick_step_nm": 8.885541289603822,
+            "place_step_nm": 11.706036622634826,
+            "place_peak_force_n": 132.84592159567848
+          },
+          "sat_pct": 0.0,
+          "diverged": false,
+          "event": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 13.000000000000123
+          },
+          "captured_correction": {
+            "heave_mm": 1.5,
+            "tilt_deg": [
+              0.03896352053494013,
+              -0.06687794074598254,
+              0.0
+            ],
+            "scale": 0.4069720302762626
+          }
+        }
+      },
+      "gates": {
+        "mean_gain_mg": -0.09802574521642321,
+        "all_four_g4": false,
+        "normal_cost": false,
+        "no_new_saturation": true,
+        "normal_fa": true,
+        "unchanged_preintervention": true,
+        "matched_prepulse": true,
+        "impact_fa": true,
+        "impact_retained": true,
+        "delay": true,
+        "tool": true
+      },
+      "cost_ratios": {
+        "rms_mm": 1.0053404453315022,
+        "peak_mm": 1.0,
+        "pick_step_nm": 1.0,
+        "place_step_nm": 1.1126713142530138,
+        "place_peak_force_n": 1.3676831636532336
+      }
+    }
+  ],
+  "episodes": 32
+}

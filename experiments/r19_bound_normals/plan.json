@@ -1,0 +1,30 @@
+{
+  "schema": "r19-bound-normal-plan.v1",
+  "status": "FROZEN_BEFORE_ACQUISITION",
+  "purpose": "replace only the brittle release eligibility certificate; preserve the frozen predictor, envelope, physical floors, 1.25 decision margin and Coupled fallback",
+  "train_seeds": [19101, 19103, 19107],
+  "blind_seeds": [19201, 19211],
+  "train": [
+    {"id":"tr_light_a","mass":3.15,"com":[0.018,-0.021,0.016],"offset":null},
+    {"id":"tr_light_b","mass":3.85,"com":[-0.024,0.013,-0.018],"offset":[-0.003,0.002,0.001]},
+    {"id":"tr_mid_a","mass":4.75,"com":[0.011,0.024,-0.012],"offset":[0.002,-0.003,-0.002]},
+    {"id":"tr_mid_b","mass":5.65,"com":[-0.021,-0.011,0.022],"offset":null},
+    {"id":"tr_heavy_a","mass":6.65,"com":[0.024,-0.018,-0.021],"offset":[-0.002,-0.002,0.002]},
+    {"id":"tr_heavy_b","mass":7.80,"com":[-0.012,0.021,0.019],"offset":[0.003,0.002,-0.001]}
+  ],
+  "blind": [
+    {"id":"bl_light","mass":3.48,"com":[-0.015,-0.018,0.021],"offset":[0.001,-0.003,0.002]},
+    {"id":"bl_mid_low","mass":4.38,"com":[0.022,0.012,-0.017],"offset":null},
+    {"id":"bl_mid_high","mass":5.92,"com":[-0.018,0.023,0.014],"offset":[-0.003,0.001,-0.002]},
+    {"id":"bl_heavy","mass":7.30,"com":[-0.020,-0.015,0.023],"offset":[0.002,-0.002,0.0]}
+  ],
+  "fit": {
+    "context": ["intercept", "known_mass", "controller_active_nominal_com_xyz"],
+    "target": "R17C standardized 6x5 release feature",
+    "ridge": 0.001,
+    "score": "RMS of channelwise cross-fit standardized residual",
+    "threshold": "maximum leave-one-entire-tuple-out normal score times 1.10",
+    "forbidden": ["collision labels", "force traces", "impact tuning", "threshold or floor changes", "absolute time", "dummy controller"]
+  },
+  "order": ["train normals", "fit and freeze", "disjoint blind normals", "blind gate authorization", "known impacts"]
+}

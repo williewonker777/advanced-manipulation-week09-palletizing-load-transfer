@@ -1,0 +1,22 @@
+{
+  "schema":"r19-impulse-gate-plan.v1",
+  "status":"FROZEN_BEFORE_ANY_NOVEL_FORCE",
+  "candidate":"experiments.r19_impulse_end.detector.Detector",
+  "published_reference":{"path":"local evidence r19/close_pairs/stock.json","sha256":"f101b6cede7afdc11cc4093381e6b7c592b97d5f9f0ae73148113a0b4677aa5d"},
+  "sequence":["twelve exposed four-twin regressions","six new no-force normals","six new four-twin contrasts"],
+  "known_gate":{"preserve_first_credited":"every credited R18 or V2 first response retained within +5ms","duplicates":"candidate raw and credited rises in every slot no more than V2","false_tool_tail":"no added false, tool loss or newly stuck tail vs R18 and V2","specific":["pair_return_opposed both_second exactly +33 once","both known anchors remain exactly one response per pulse","gap80_weak both_second exactly +24 with 20ms quiet and first response unsplit"]},
+  "normal_gate":"all six candidate normals have unchanged R18 bits/residual and D physics, and no false/tool regression vs actual R10/raw-R15/D/R18",
+  "novel_merit":"per case all four target slots have exactly one raw and credited response; all original force/prefix/quiet gates; no false/tool/tail loss and every available first credited baseline response retained within +5ms",
+  "aggregate":"report strict merit count out of six and require 6/6 for aggregate success; never reinterpret a known baseline miss as candidate success",
+  "quiet_ms":20,
+  "window_ms":320,
+  "new":[
+    {"id":"i18","mass":5.47,"com":[-0.017,0.014,0.009],"offset":null,"gap_ms":18,"impacts":[[4.115,[0,0,19]],[4.253,[0,0,24]]]},
+    {"id":"i35","mass":6.51,"com":[0.012,-0.018,0.016],"offset":[0,0,0],"gap_ms":35,"impacts":[[3.854,[0,0,-15]],[4.009,[0,0,18]]]},
+    {"id":"i65","mass":6.96,"com":[-0.014,0.007,0.025],"offset":null,"gap_ms":65,"impacts":[[3.889,[0,0,-15.5]],[4.074,[0,0,17.5]]]},
+    {"id":"i55","mass":4.12,"com":[0.009,0.021,-0.012],"offset":[0.001,-0.001,0],"gap_ms":55,"impacts":[[4.380,[25,0,0]],[4.555,[-24,0,0]]]},
+    {"id":"i100","mass":7.32,"com":[0.014,0.011,-0.013],"offset":null,"gap_ms":100,"impacts":[[4.580,[0,-18,0]],[4.800,[0,0,23]]]},
+    {"id":"i10","mass":3.82,"com":[-0.018,-0.011,0.012],"offset":[0,0,0],"gap_ms":10,"impacts":[[5.058,[-23,0,0]],[5.188,[0,26,0]]]}
+  ],
+  "restrictions":["no candidate or scorer edit","no posthoc tuning","no production/public/docs","no novel force if either earlier gate fails"]
+}

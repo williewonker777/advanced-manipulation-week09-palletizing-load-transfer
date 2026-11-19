@@ -1,0 +1,34 @@
+{
+  "arms": {
+    "inverse-lateral": {
+      "eligible": false,
+      "reason": "No gain on either required stock event.",
+      "source_sha256": "6c24a8d1944e3c5c23fd2c6a24f1b2afce1054c4817ec443cf5513bb21f87d4b"
+    },
+    "pose-certified": {
+      "eligible": false,
+      "reason": "R26 close-place: protected 22 ms quiet failed in three variants, two extra duplicate slots; not all lost events recovered.",
+      "source_sha256": "0b1979344956a1c8400f3f9d6039d56147392e498ad7af3d5050c2bd2f8bdadf"
+    },
+    "settled": {
+      "eligible": false,
+      "reason": "New duplicate and false rises.",
+      "source_sha256": "8970051b731531c48ec9846cd0fb68dcee36caea8bec77892ce982780ed67df1"
+    },
+    "signed-change": {
+      "eligible": false,
+      "reason": "One new no-force alarm and protected output duration / paired-history losses.",
+      "source_sha256": "cb1cb1373f1b3415999bb3c9442c37967fba71ff561fa292237dbf1ac8e2116e"
+    }
+  },
+  "default_promoted": false,
+  "hardware_tested": false,
+  "independent_episodes_reserved_not_scored": 114,
+  "independent_executed": false,
+  "independent_seal_sha256": "c1f9f8f776733c792a6b00d7dfd59d30f0b60137a06bbbbc3179d5f582deb5c1",
+  "note": "Mandatory pre-enrollment protections were not all satisfied. The separate landing-controller comparison is not eligible for this loaded-controller holdout. The holdout was not scored; this is not 0/114.",
+  "policy_sha256": "96bb4e6c5f777190e2e86dab1ac6677789a1cdb49e6ffb23836e0cc8f99b5765",
+  "retained_default": "R10 submission",
+  "schema": "r27-one-candidate-selection.v1",
+  "selected_for_independent": null
+}

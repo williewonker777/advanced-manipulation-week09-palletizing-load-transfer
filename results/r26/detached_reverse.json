@@ -1,0 +1,491 @@
+{
+  "boundaries": {
+    "first": {
+      "duration_samples": 48,
+      "first_nonzero_index": 4402,
+      "last_nonzero_index": 4449,
+      "nominal_index": 4401,
+      "nominal_sample_zero": true
+    },
+    "second": {
+      "duration_samples": 72,
+      "first_nonzero_index": 4492,
+      "last_nonzero_index": 4563,
+      "nominal_index": 4491,
+      "nominal_sample_zero": true
+    }
+  },
+  "case": {
+    "com": [
+      0.029,
+      0.018,
+      -0.023
+    ],
+    "id": "p26_close_detached_reverse",
+    "impacts": [
+      [
+        4.401,
+        49,
+        [
+          -6.8,
+          4.0,
+          -2.2
+        ]
+      ],
+      [
+        4.491,
+        73,
+        [
+          3.5,
+          -6.3,
+          1.6
+        ]
+      ]
+    ],
+    "long": [
+      4.401,
+      167,
+      [
+        -6.8,
+        4.0,
+        -2.2
+      ]
+    ],
+    "mass": 6.58,
+    "offset": [
+      0.0016,
+      0.0019,
+      -0.0005
+    ],
+    "phase": "post_detachment"
+  },
+  "diagnosis": {
+    "r25_joint": {
+      "both_active_in_quiet_ticks": [
+        4470,
+        4471,
+        4472
+      ],
+      "both_intervals": [
+        [
+          4435,
+          4473
+        ],
+        [
+          4519,
+          4592
+        ]
+      ],
+      "both_second_failure_is_quiet_only": true,
+      "both_second_rises": [
+        4519
+      ],
+      "first_only_active_in_quiet_ticks": [
+        4470,
+        4471,
+        4472
+      ],
+      "first_only_intervals": [
+        [
+          4435,
+          4473
+        ]
+      ],
+      "isolated_second_rises": [
+        4518
+      ],
+      "quiet_window": [
+        4470,
+        4492
+      ],
+      "second_only_intervals": [
+        [
+          4518,
+          4594
+        ]
+      ]
+    },
+    "r26": {
+      "both_active_in_quiet_ticks": [
+        4470,
+        4471,
+        4472
+      ],
+      "both_intervals": [
+        [
+          4435,
+          4473
+        ],
+        [
+          4519,
+          4592
+        ]
+      ],
+      "both_second_failure_is_quiet_only": true,
+      "both_second_rises": [
+        4519
+      ],
+      "first_only_active_in_quiet_ticks": [
+        4470,
+        4471,
+        4472
+      ],
+      "first_only_intervals": [
+        [
+          4435,
+          4473
+        ]
+      ],
+      "isolated_second_rises": [
+        4518
+      ],
+      "quiet_window": [
+        4470,
+        4492
+      ],
+      "second_only_intervals": [
+        [
+          4518,
+          4594
+        ]
+      ]
+    }
+  },
+  "evidence_level": "Full attribution replay only on stock; isolated and paired event records for all three disclosed mechanics and both frozen arms.",
+  "figure_sha256": "6770027a139ebc421ca20432605fab7e1696d59414d2529c0184fb5e2a86d73d",
+  "first_sha256": "854459ef3292f3c20eae7bc8ba829a83eae70e6ce2b5e66f5b89abeb6836489a",
+  "post_disclosure_only": true,
+  "public_rows": [
+    {
+      "arm": "r25_joint",
+      "both_second": {
+        "active_samples_in_slot": 73,
+        "attributable_rise_indices": [
+          4519
+        ],
+        "delays_ms": [
+          27
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": false,
+        "raw_rise_indices": [
+          4519
+        ],
+        "strict": false
+      },
+      "classification": "quiet-window-only miss",
+      "isolated_second": {
+        "active_samples_in_slot": 76,
+        "attributable_rise_indices": [
+          4518
+        ],
+        "delays_ms": [
+          26
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": true,
+        "raw_rise_indices": [
+          4518
+        ],
+        "strict": true
+      },
+      "variant": "stock"
+    },
+    {
+      "arm": "r26",
+      "both_second": {
+        "active_samples_in_slot": 73,
+        "attributable_rise_indices": [
+          4519
+        ],
+        "delays_ms": [
+          27
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": false,
+        "raw_rise_indices": [
+          4519
+        ],
+        "strict": false
+      },
+      "classification": "quiet-window-only miss",
+      "isolated_second": {
+        "active_samples_in_slot": 76,
+        "attributable_rise_indices": [
+          4518
+        ],
+        "delays_ms": [
+          26
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": true,
+        "raw_rise_indices": [
+          4518
+        ],
+        "strict": true
+      },
+      "variant": "stock"
+    },
+    {
+      "arm": "r25_joint",
+      "both_second": {
+        "active_samples_in_slot": 73,
+        "attributable_rise_indices": [
+          4518
+        ],
+        "delays_ms": [
+          26
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": false,
+        "raw_rise_indices": [
+          4518
+        ],
+        "strict": false
+      },
+      "classification": "quiet-window-only miss",
+      "isolated_second": {
+        "active_samples_in_slot": 75,
+        "attributable_rise_indices": [
+          4519
+        ],
+        "delays_ms": [
+          27
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": true,
+        "raw_rise_indices": [
+          4519
+        ],
+        "strict": true
+      },
+      "variant": "actuator_deadzone"
+    },
+    {
+      "arm": "r26",
+      "both_second": {
+        "active_samples_in_slot": 73,
+        "attributable_rise_indices": [
+          4518
+        ],
+        "delays_ms": [
+          26
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": false,
+        "raw_rise_indices": [
+          4518
+        ],
+        "strict": false
+      },
+      "classification": "quiet-window-only miss",
+      "isolated_second": {
+        "active_samples_in_slot": 75,
+        "attributable_rise_indices": [
+          4519
+        ],
+        "delays_ms": [
+          27
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": true,
+        "raw_rise_indices": [
+          4519
+        ],
+        "strict": true
+      },
+      "variant": "actuator_deadzone"
+    },
+    {
+      "arm": "r25_joint",
+      "both_second": {
+        "active_samples_in_slot": 75,
+        "attributable_rise_indices": [
+          4517
+        ],
+        "delays_ms": [
+          25
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": false,
+        "raw_rise_indices": [
+          4517
+        ],
+        "strict": false
+      },
+      "classification": "quiet-window-only miss",
+      "isolated_second": {
+        "active_samples_in_slot": 73,
+        "attributable_rise_indices": [
+          4518
+        ],
+        "delays_ms": [
+          26
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": true,
+        "raw_rise_indices": [
+          4518
+        ],
+        "strict": true
+      },
+      "variant": "place_surface_shift"
+    },
+    {
+      "arm": "r26",
+      "both_second": {
+        "active_samples_in_slot": 75,
+        "attributable_rise_indices": [
+          4517
+        ],
+        "delays_ms": [
+          25
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": false,
+        "raw_rise_indices": [
+          4517
+        ],
+        "strict": false
+      },
+      "classification": "quiet-window-only miss",
+      "isolated_second": {
+        "active_samples_in_slot": 73,
+        "attributable_rise_indices": [
+          4518
+        ],
+        "delays_ms": [
+          26
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": true,
+        "raw_rise_indices": [
+          4518
+        ],
+        "strict": true
+      },
+      "variant": "place_surface_shift"
+    }
+  ],
+  "public_sensor_routes_at_key_ticks": [
+    {
+      "acquisition_consumed": false,
+      "continuation_bridge": false,
+      "continuation_observed": false,
+      "detached": true,
+      "directional": false,
+      "grip": false,
+      "horizontal": false,
+      "light": false,
+      "normal": false,
+      "pickup_completion": false,
+      "pickup_hold": false,
+      "r8_base": false,
+      "r8_extra": false,
+      "report": true,
+      "tick": 4470,
+      "yaw": false,
+      "yaw_bound": 2.9679568956599796,
+      "yaw_value": 1.5872179645963265
+    },
+    {
+      "acquisition_consumed": false,
+      "continuation_bridge": false,
+      "continuation_observed": false,
+      "detached": true,
+      "directional": false,
+      "grip": false,
+      "horizontal": false,
+      "light": false,
+      "normal": false,
+      "pickup_completion": false,
+      "pickup_hold": false,
+      "r8_base": false,
+      "r8_extra": false,
+      "report": true,
+      "tick": 4471,
+      "yaw": false,
+      "yaw_bound": 2.9679568956599796,
+      "yaw_value": 1.0999899332501222
+    },
+    {
+      "acquisition_consumed": false,
+      "continuation_bridge": false,
+      "continuation_observed": false,
+      "detached": true,
+      "directional": false,
+      "grip": false,
+      "horizontal": false,
+      "light": false,
+      "normal": false,
+      "pickup_completion": false,
+      "pickup_hold": false,
+      "r8_base": false,
+      "r8_extra": false,
+      "report": true,
+      "tick": 4472,
+      "yaw": false,
+      "yaw_bound": 2.9679568956599796,
+      "yaw_value": 0.47716978753893463
+    },
+    {
+      "acquisition_consumed": false,
+      "continuation_bridge": false,
+      "continuation_observed": false,
+      "detached": false,
+      "directional": false,
+      "grip": false,
+      "horizontal": false,
+      "light": false,
+      "normal": false,
+      "pickup_completion": false,
+      "pickup_hold": false,
+      "r8_base": false,
+      "r8_extra": false,
+      "report": true,
+      "tick": 4519,
+      "yaw": true,
+      "yaw_bound": 2.913147298587709,
+      "yaw_value": -3.1071049462018765
+    }
+  ],
+  "raw_sha256": "de556e46b6e137793d97c3d1489a2b3d97f41526570f927406c0ad00289470dd",
+  "registered_evaluator_checks": {
+    "all_disclosed_events_and_common_exact": true,
+    "first_vs_both_prefix_through_second_boundary_both_arms": true,
+    "force_exact_all_twins": true,
+    "full_r25_signature_exact": true,
+    "r25_c3_physics_exact_each_twin": true
+  },
+  "runtime_mujoco": "3.17.0",
+  "schema": "r26-disclosed-detached-reverse-diagnostic.v1",
+  "scope_limit": "One stock mechanics row was rerun. The disclosed event records establish the same event shape in the other two mechanics, but channel-level causal attribution is not generalized beyond stock.",
+  "summary_sha256": "38499a811666eaabd48166fd0ea77653291efff342be7be1873705e9e021b7bf",
+  "variant": {
+    "kind": "stock"
+  }
+}

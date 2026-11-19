@@ -1,0 +1,18 @@
+{
+ "schema":"r32-servo-ownership-validation.v1","status":"FROZEN_BEFORE_VALIDATION_OUTPUT","seed":320032,
+ "single":[
+  {"id":"s1","mass":0.2,"com":[0.007,-0.011,0.016],"impact":[2.63,[0,9,0]]},{"id":"s2","mass":0.8,"com":[-0.014,0.008,0.022],"impact":[2.79,[10,0,0]]},
+  {"id":"s3","mass":1.6,"com":[0.018,0.013,-0.004],"impact":[2.96,[0,-11,0]]},{"id":"s4","mass":2.7,"com":[-0.021,-0.006,0.031],"impact":[3.11,[-12,0,0]]},
+  {"id":"s5","mass":3.9,"com":[0.009,-0.024,0.019],"impact":[3.28,[8,8,0]]},{"id":"s6","mass":5.1,"com":[-0.017,0.021,0.036],"impact":[3.43,[9,-9,0]]},
+  {"id":"s7","mass":6.3,"com":[0.025,0.004,0.008],"impact":[3.59,[-10,10,0]]},{"id":"s8","mass":7.4,"com":[-0.006,-0.019,0.027],"impact":[3.73,[-11,-11,0]]}
+ ],
+ "pairs":[
+  {"id":"p1","mass":0.45,"com":[0.011,-0.008,0.018],"first":[2.48,[0,10,0]],"second":[3.18,[10,0,0]]},
+  {"id":"p2","mass":1.9,"com":[-0.016,0.014,0.029],"first":[2.57,[0,-12,0]],"second":[3.29,[-10,0,0]]},
+  {"id":"p3","mass":4.4,"com":[0.022,-0.017,0.011],"first":[2.66,[9,9,0]],"second":[3.38,[-9,9,0]]},
+  {"id":"p4","mass":6.8,"com":[-0.023,0.006,0.034],"first":[2.75,[10,-10,0]],"second":[3.49,[-10,-10,0]]}
+ ],
+ "execution":"8 single calm/force twins and 4 none/first/second/both twins for R10 and R32; 64 episodes, retain all",
+ "gates":"exact signed force and physics, no calm false/duplicate/native loss, candidate-only strict gain, and both_second strict whenever isolated_second is strict; delay and active widths disclosed",
+ "no_closed_inputs":"no R31 prospective tuple reused and no closed panel executed"
+}

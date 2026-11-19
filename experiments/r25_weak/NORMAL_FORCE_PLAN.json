@@ -1,0 +1,23 @@
+{
+  "schema": "r25-weak-world-horizontal-development.v1",
+  "created_before_measurement": true,
+  "positive_family": "the disclosed R24 loaded-transfer off-axis single s24_transfer_offaxis_mid and sign-reversed/nearby development counterfactuals",
+  "mechanism": "causal public-model inverse dynamics projected to signed world-horizontal TCP force; subtract only the time-aligned horizontal component already attributed by the incumbent to physically admissible table support",
+  "causal_inputs": ["encoder", "joint_torque_sensor", "grip", "public_empty_model", "public_loaded_model", "incumbent_observed_table_support"],
+  "forbidden_inputs": ["case_id", "mass_value", "com_value", "impact_schedule", "mechanics_variant", "applied_force_truth"],
+  "calibration": "choose the vector-magnitude threshold and persistence using force-free disclosed twins only; fit on stock/damping_coupled and audit without adjustment on actuator_delay_gain/contact_armature",
+  "event_rule": "two consecutive finite signed horizontal samples above the frozen magnitude threshold and mutually acute; bounded eight-sample alarm, 25-sample rearm; the incumbent alarm remains unconditional",
+  "support_rule": "use the incumbent world-frame table-support estimate at the inverse observer effective time; subtract its observed horizontal component and then the unused radius of the public Coulomb bound mu*Fz while preserving residual sign, only when incumbent geometry declared support admissible; otherwise subtract zero",
+  "development_gates": {
+    "target_strict": true,
+    "opposite_sign_strict": true,
+    "force_free_new_rises": 0,
+    "prior_17_false_new_rises": 0,
+    "incumbent_strict_delay_slack_ms": 5,
+    "incumbent_strict_active_sample_slack": 5,
+    "genuine_tool_preserved": true,
+    "stuck_tail": false,
+    "worst_episode_p99_us": 800
+  },
+  "stop": "If the audited force-free corrected magnitude overlaps the disclosed target/nearby effect so no frozen threshold can satisfy both, retain the measurements as an identifiability bound and do not nominate a detector."
+}

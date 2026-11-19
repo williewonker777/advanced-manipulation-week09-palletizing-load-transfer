@@ -1,0 +1,11 @@
+{
+  "schema": "r25-weak-world-horizontal-deferred.v2",
+  "stage": "written after frozen v1 duplicate/cost rejection and before v2 comparisons",
+  "incumbent_evidence": "R24 normal-model EMA divided by its frozen threshold",
+  "approaching_ratio": 0.8,
+  "rule": "If weak evidence arrives while incumbent normalized evidence is at least 0.8, hold it pending. Consume pending evidence if incumbent alarms first. Otherwise release when normalized evidence falls below 0.8, with a finite 100-sample ceiling. Weak evidence below the approaching gate reports immediately. Incumbent output is never muted.",
+  "pending_ceiling_samples": 100,
+  "released_hold_samples": 8,
+  "forbidden": ["schedule", "case", "mass", "COM", "collision truth", "global dead time", "incumbent suppression"],
+  "gates": "same zero-false, strict-event, +5 active-sample, tool, tail, sign and nearby gates as v1"
+}

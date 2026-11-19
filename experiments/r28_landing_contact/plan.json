@@ -1,0 +1,35 @@
+{
+  "schema": "r28-landing-contact-preregistration.v1",
+  "status": "FROZEN_BEFORE_ANY_R28_OUTPUT",
+  "classification": "Bounded post-R27 repair motivated by a newly disclosed prospective G4 failure and causal ablation; not blind, default, hardware, deployment, or safety evidence.",
+  "immutable_references": {
+    "c1": "experiments.r26_delivery_pair.candidate:Detector",
+    "r27_v3": "experiments.r27_landing_integration.unloaded_aware:Detector",
+    "controller": "experiments.r26_delivery_pair.controller:Controller",
+    "r27_v3_sha256": "fe22ea86d0a3e975d8846e11f4fe63ccda99d40cf6bfb17d4ba34cac10ce4c69",
+    "horizontal_model_sha256": "447660558c5ba67ea65e53be568e493bdd5f42532b558f440884b3fb610b5939",
+    "normal_resolution_sha256": "4505aa2889b1ba48eacfc620080866ddcf11ac5c2ca01b2d4d8a361e1388ddb2"
+  },
+  "single_implementation": {
+    "signals": ["grip", "known payload weight", "G4 lambda_support_valid/lambda_support", "measured admissible table normal", "encoder/JTS reconstructed horizontal force", "C1 output"],
+    "ownership": "Grip must be physically closed. For payload weight above the frozen 0.5 N resolution, G4 support must be valid and at least half carried by the arm. At or below resolution, support fraction is unresolvable and the existing unresolved-load rule applies. For every branch and every optional onset, measured admissible table normal must be finite and <=0.5 N. Unknown is not owned.",
+    "onset": "The existing horizontal bound and two-sample onset persistence are unchanged. Above-bound onset samples must be contiguous while ownership remains valid; loss of ownership resets the onset counter.",
+    "lifecycle": "Actual ownership loss immediately terminates a pending optional pulse, clears its active identity, and requires a measured return below the existing release bound before rearming. It never suppresses, delays, shortens, or otherwise changes C1 output.",
+    "forbidden": ["absolute time", "mass/case ID lookup", "simulator contact truth", "programmed or paired force", "future samples", "schedule gates", "C1 muting"]
+  },
+  "ordered_validation": [
+    "unit state tests and source freeze",
+    "known 5.25 kg +29 mm tool failure and matched no-offset twin versus both V3 and C1",
+    "original prospective R27 36-episode holdback versus both V3 and C1",
+    "mass0/mass8 +Y pickup protections requiring same first rises 38/43 ms as V3",
+    "authentic official 29+29 landing comparison versus C1 requiring >=17/24, same control cells and false counts",
+    "earlier ten tool episodes, signed/pair panel, post-release X/Z, and near-zero panel using frozen runners where applicable"
+  ],
+  "gates": {
+    "integrity": "All passive-detector physics and authentic force traces match; source pins remain frozen.",
+    "relative": "Record every change separately versus V3 and C1. No new false rise, duplicate, tool prealarm, or stuck tail; no inherited first rise later by >5 ms; no event duration growth >5 samples.",
+    "official": "At least 17 detected of 24, identical control cells, identical no-impact false count and no worse impact-run false count versus C1.",
+    "stop": "Any gate failure stops this one-implementation lane without threshold or branch alternatives. True-impact rejection is reported, not broadened."
+  },
+  "limits": ["MuJoCo 3.17 CPU simulation with <=2 workers", "no R27 loaded holdout", "no R28 fresh challenge", "no public staging, package, remote, default, or frozen-source edits"]
+}

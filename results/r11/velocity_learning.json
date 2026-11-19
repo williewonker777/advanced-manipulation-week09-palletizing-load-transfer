@@ -1,0 +1,636 @@
+{
+  "schema": "r11-velocity-demo.v1",
+  "decision": "RESEARCH_ONLY_NOT_A_RELEASE",
+  "training": "36 independent normal runs; signed probes and paired baselines, 2 payloads per mode. Fit only to public encoder/JTS and taught reference.",
+  "validation": "32 new paired normal/offset and impact runs in 4 groups per mode; not an official validation.",
+  "sources": {
+    "r1_servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "r1_torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "r10_detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "frame": "c209573bf0b4b1d0e6db66b74fed8354dab70d4cdff899025ff69025b40484c9",
+    "profile": "46b69487f7ad8bb050fb5df1b47314e0f8ddce9298c61521aecd101a2c8110d7",
+    "plan": "7e406e3d55a34ed368c2bd203135e02089ca3d6a3cc2029b88fd9da9cc23e79d"
+  },
+  "modes": {
+    "servo": {
+      "model": {
+        "mode": "servo",
+        "amplitudes_mm": [
+          -0.07238441454266832,
+          1.3932872538469998,
+          1.6,
+          -0.13853586483116842
+        ],
+        "scale": 0.945327377814933,
+        "condition": 2.4138361949064326,
+        "signed_probe_matrix_singular_values": [
+          11.380615462961362,
+          9.234314709652791,
+          5.511847551248802,
+          4.714742237678024
+        ],
+        "before_rms": 1.6467913747564706,
+        "predicted_rms": 0.6872561722699957,
+        "command_maxima": [
+          1.866449033002867,
+          37.58653300278857,
+          1393.656232760762
+        ],
+        "plan_sha256": "7e406e3d55a34ed368c2bd203135e02089ca3d6a3cc2029b88fd9da9cc23e79d",
+        "controller_sha256": "46b69487f7ad8bb050fb5df1b47314e0f8ddce9298c61521aecd101a2c8110d7",
+        "fit_program_sha256": "7508b22a74a1b91b41f2957c95305f5e8c1d5c8ac453bfb218d81230f4881611",
+        "data_sha256": "07d53da9eaa818ba838866a947f44b65945528f450c62d676b37a2413b1037a4"
+      },
+      "development_sha256": "ccde07e0b9a6e28f662ad152974894e204edd6bb988e6e8d094e6780651e086a",
+      "rows": [
+        {
+          "id": "d0",
+          "gates": {
+            "mean_gain_mg": 0.18345582615112813,
+            "all_four_g4": false,
+            "cost": true,
+            "saturation": true,
+            "false_alarms": true,
+            "event": true,
+            "delay": true,
+            "tool": true,
+            "before": true
+          },
+          "cost_ratios": {
+            "tcp_rms": 0.9450710786744276,
+            "tcp_peak": 0.7292544680262533,
+            "pick_step": 1.0,
+            "place_step": 1.0,
+            "table_peak": 0.9912306917352907
+          },
+          "R1": {
+            "support": {
+              "mean_mg": 0.0,
+              "min_mg": 0.0,
+              "peak_mg": 1.0095557883145625,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 46.97719634564549,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "detected",
+              "delay_ms": 38.000000000000256,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "learned": {
+            "support": {
+              "mean_mg": 0.18345582615112813,
+              "min_mg": 0.0,
+              "peak_mg": 1.0007026823964105,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 4.398668530412042,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "detected",
+              "delay_ms": 38.000000000000256,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          }
+        },
+        {
+          "id": "d1",
+          "gates": {
+            "mean_gain_mg": 0.186689312936071,
+            "all_four_g4": false,
+            "cost": true,
+            "saturation": true,
+            "false_alarms": true,
+            "event": false,
+            "delay": false,
+            "tool": true,
+            "before": true
+          },
+          "cost_ratios": {
+            "tcp_rms": 0.9104831323336553,
+            "tcp_peak": 0.6532218818112934,
+            "pick_step": 1.0,
+            "place_step": 0.9315899049844307,
+            "table_peak": 1.0133833476645664
+          },
+          "R1": {
+            "support": {
+              "mean_mg": 0.00025466657173551306,
+              "min_mg": 0.0,
+              "peak_mg": 1.007202055145201,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 44.83570867402757,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "detected",
+              "delay_ms": 151.00000000000026,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "learned": {
+            "support": {
+              "mean_mg": 0.1869439795078065,
+              "min_mg": 0.021038338355082883,
+              "peak_mg": 1.020681790417675,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 4.1523186335204025,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          }
+        },
+        {
+          "id": "d2",
+          "gates": {
+            "mean_gain_mg": 0.19357829407588106,
+            "all_four_g4": false,
+            "cost": true,
+            "saturation": true,
+            "false_alarms": true,
+            "event": true,
+            "delay": false,
+            "tool": true,
+            "before": true
+          },
+          "cost_ratios": {
+            "tcp_rms": 0.9690651705106702,
+            "tcp_peak": 0.7999996416065889,
+            "pick_step": 1.0,
+            "place_step": 0.9260958567484929,
+            "table_peak": 0.9987311800227879
+          },
+          "R1": {
+            "support": {
+              "mean_mg": 0.0022907666308839454,
+              "min_mg": 0.0,
+              "peak_mg": 1.0052154348521258,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 36.11743166407746,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "detected",
+              "delay_ms": 54.00000000000027,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "learned": {
+            "support": {
+              "mean_mg": 0.19586906070676502,
+              "min_mg": 0.05815188034515361,
+              "peak_mg": 1.0039399974269834,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 5.575855022309062,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "detected",
+              "delay_ms": 81.99999999999986,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          }
+        },
+        {
+          "id": "d3",
+          "gates": {
+            "mean_gain_mg": 0.0894876045559051,
+            "all_four_g4": false,
+            "cost": true,
+            "saturation": true,
+            "false_alarms": true,
+            "event": true,
+            "delay": true,
+            "tool": true,
+            "before": true
+          },
+          "cost_ratios": {
+            "tcp_rms": 0.9632602625803918,
+            "tcp_peak": 1.0,
+            "pick_step": 1.0,
+            "place_step": 1.0,
+            "table_peak": 1.0489886823736865
+          },
+          "R1": {
+            "support": {
+              "mean_mg": 0.0,
+              "min_mg": 0.0,
+              "peak_mg": 1.0100803646046577,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 38.72885111902473,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 10.999999999999899
+            }
+          },
+          "learned": {
+            "support": {
+              "mean_mg": 0.0894876045559051,
+              "min_mg": 0.003712226718349589,
+              "peak_mg": 1.0595628707581726,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 1.5161485864614768,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 10.999999999999899
+            }
+          }
+        }
+      ]
+    },
+    "torque": {
+      "model": {
+        "mode": "torque",
+        "amplitudes_mm": [
+          -0.032887654806304095,
+          0.9811723248276618,
+          1.2699946347463424,
+          0.1993969982191349
+        ],
+        "scale": 1.0,
+        "condition": 1.733526846236479,
+        "signed_probe_matrix_singular_values": [
+          8.946064672571358,
+          8.513005385120218,
+          6.552884170445673,
+          5.160615015564046
+        ],
+        "before_rms": 1.1582643221602866,
+        "predicted_rms": 0.6370446337999893,
+        "command_maxima": [
+          1.4296158737529077,
+          24.803983567003883,
+          859.1205006562626
+        ],
+        "plan_sha256": "7e406e3d55a34ed368c2bd203135e02089ca3d6a3cc2029b88fd9da9cc23e79d",
+        "controller_sha256": "46b69487f7ad8bb050fb5df1b47314e0f8ddce9298c61521aecd101a2c8110d7",
+        "fit_program_sha256": "7508b22a74a1b91b41f2957c95305f5e8c1d5c8ac453bfb218d81230f4881611",
+        "data_sha256": "0ee08abc5d1926bd7ac6bf87e63527bd8d1e77f73ebe9d8b338906a9921116c0"
+      },
+      "development_sha256": "7f0e91179f775bc343ae5e2c6a26c8fa60501ecbd2dd0eaa501ffba66341e6a4",
+      "rows": [
+        {
+          "id": "d0",
+          "gates": {
+            "mean_gain_mg": 0.32820578698991404,
+            "all_four_g4": false,
+            "cost": true,
+            "saturation": true,
+            "false_alarms": true,
+            "event": true,
+            "delay": true,
+            "tool": true,
+            "before": true
+          },
+          "cost_ratios": {
+            "tcp_rms": 0.9977200558032986,
+            "tcp_peak": 1.0,
+            "pick_step": 1.0,
+            "place_step": 1.0,
+            "table_peak": 1.0449513905710195
+          },
+          "R1": {
+            "support": {
+              "mean_mg": 0.10460935612126317,
+              "min_mg": 0.0,
+              "peak_mg": 1.0044496508079632,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 11.317847718726185,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "detected",
+              "delay_ms": 38.000000000000256,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "learned": {
+            "support": {
+              "mean_mg": 0.4328151431111772,
+              "min_mg": 0.08078945072223788,
+              "peak_mg": 1.0496010593703562,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": -4.766216036212581,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "detected",
+              "delay_ms": 38.000000000000256,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          }
+        },
+        {
+          "id": "d1",
+          "gates": {
+            "mean_gain_mg": 0.25929336290839067,
+            "all_four_g4": false,
+            "cost": true,
+            "saturation": true,
+            "false_alarms": true,
+            "event": true,
+            "delay": true,
+            "tool": true,
+            "before": true
+          },
+          "cost_ratios": {
+            "tcp_rms": 0.9671965377563418,
+            "tcp_peak": 1.0,
+            "pick_step": 1.0,
+            "place_step": 1.0,
+            "table_peak": 0.9054909143520065
+          },
+          "R1": {
+            "support": {
+              "mean_mg": 0.03932855055193828,
+              "min_mg": 0.0,
+              "peak_mg": 1.1382666918005255,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": false
+            },
+            "lowest_corner_speed_mm_s": 31.33853980163318,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "learned": {
+            "support": {
+              "mean_mg": 0.29862191346032896,
+              "min_mg": 0.036062016728576486,
+              "peak_mg": 1.0306901475348913,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 8.15972122715994,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          }
+        },
+        {
+          "id": "d2",
+          "gates": {
+            "mean_gain_mg": 0.2012239709205479,
+            "all_four_g4": false,
+            "cost": true,
+            "saturation": true,
+            "false_alarms": false,
+            "event": true,
+            "delay": true,
+            "tool": true,
+            "before": true
+          },
+          "cost_ratios": {
+            "tcp_rms": 1.0013393196443543,
+            "tcp_peak": 1.009044581572435,
+            "pick_step": 1.0,
+            "place_step": 0.9663951505894532,
+            "table_peak": 1.0172413543431769
+          },
+          "R1": {
+            "support": {
+              "mean_mg": 0.1522757679576653,
+              "min_mg": 0.019542120808046945,
+              "peak_mg": 1.0358619088951975,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 4.085789786611525,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "detected",
+              "delay_ms": 103.99999999999964,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "learned": {
+            "support": {
+              "mean_mg": 0.3534997388782132,
+              "min_mg": 0.0707844309007265,
+              "peak_mg": 1.053721571117059,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": -13.842586675331441,
+            "normal_fa": 1,
+            "impact": {
+              "outcome": "detected",
+              "delay_ms": 98.00000000000031,
+              "prealarm": false,
+              "false_alarms": 1,
+              "false_alarm_times": [
+                3.8120000000000003
+              ],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          }
+        },
+        {
+          "id": "d3",
+          "gates": {
+            "mean_gain_mg": 0.07271303125511297,
+            "all_four_g4": false,
+            "cost": false,
+            "saturation": true,
+            "false_alarms": true,
+            "event": true,
+            "delay": true,
+            "tool": true,
+            "before": true
+          },
+          "cost_ratios": {
+            "tcp_rms": 1.002172287709046,
+            "tcp_peak": 1.0,
+            "pick_step": 1.0,
+            "place_step": 1.0,
+            "table_peak": 1.3281734351107612
+          },
+          "R1": {
+            "support": {
+              "mean_mg": 0.11560649938221104,
+              "min_mg": 0.01263525408486453,
+              "peak_mg": 1.0708349447282466,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": true
+            },
+            "lowest_corner_speed_mm_s": 1.2968842272607668,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 12.00000000000001
+            }
+          },
+          "learned": {
+            "support": {
+              "mean_mg": 0.188319530637324,
+              "min_mg": 0.005132725393718304,
+              "peak_mg": 1.4222545269763576,
+              "samples": 20,
+              "mean_ge_050": false,
+              "min_ge_025": false,
+              "peak_le_110": false
+            },
+            "lowest_corner_speed_mm_s": -14.63238417732694,
+            "normal_fa": 0,
+            "impact": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 12.00000000000001
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "r31-servo-release-portable-truth.v1",
+  "status": "REJECTED_NO_ENROLLMENT",
+  "classification": "post-disclosure simulator research; not deployment evidence",
+  "baseline": {
+    "entrypoint": "my_detector:Detector",
+    "mode": "SERVO",
+    "role": "shipped R10 baseline"
+  },
+  "candidate": {
+    "entrypoint": "experiments.r31_servo_release.candidate:Detector",
+    "sha256": "2c1af9274f310dd84a9a8909987be7fe41e28fd89faf477be07087a7c2738303",
+    "plan_sha256": "2ddeb22ffadc56d6f11440e5d0a57ad3889f0f341e9a0575bc07a16e48f36e1b",
+    "prospective_plan_sha256": "55f271aee39fb20258bdf6e28e7e016c85320ddce24277a201c69710547b954d",
+    "contract": "additive optional notice; native baseline output is never masked, delayed, shortened, or cleared"
+  },
+  "runtime": {
+    "mujoco": "3.17.0",
+    "official_evaluator_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f"
+  },
+  "known_cases": [
+    {"id":"target_none","mass_kg":0.0,"com_m":[0,0,0],"collision":null,"r10_edges":[],"candidate_edges":[]},
+    {"id":"target_py10","mass_kg":0.0,"com_m":[0,0,0],"collision":{"time_s":3.86,"force_N":[0,10,0]},"r10_edges":[],"candidate_edges":[3991],"candidate_active_samples":8,"delay_ms":131.0},
+    {"id":"target_py15","mass_kg":0.0,"com_m":[0,0,0],"collision":{"time_s":3.86,"force_N":[0,15,0]},"r10_edges":[3938],"candidate_edges":[3938]},
+    {"id":"target_py40","mass_kg":0.0,"com_m":[0,0,0],"collision":{"time_s":3.86,"force_N":[0,40,0]},"r10_edges":[3891],"candidate_edges":[3891]},
+    {"id":"target_py100","mass_kg":0.0,"com_m":[0,0,0],"collision":{"time_s":3.86,"force_N":[0,100,0]},"r10_edges":[3879],"candidate_edges":[3879]},
+    {"id":"official_prior_py100","mass_kg":8.0,"com_m":[0,0,0],"collision":{"time_s":3.0,"force_N":[0,100,0]},"r10_edges":[3018],"candidate_edges":[3018]},
+    {"id":"fresh_prior_ny40","mass_kg":7.15,"com_m":[-0.011,0.019,0.002],"collision":{"time_s":3.515,"force_N":[0,-40,0]},"r10_edges":[3540],"candidate_edges":[3540]},
+    {"id":"loaded_none","mass_kg":8.0,"com_m":[0,0,0],"collision":null,"r10_edges":[],"candidate_edges":[]}
+  ],
+  "known_summary": {"episodes":16,"passed":true,"physical_arrays_exact":true},
+  "official_summary": {
+    "episodes":58,
+    "passed_known_gate":true,
+    "r10":{"strict_detected":23,"missed":1,"no_impact_false_rises":0},
+    "candidate":{"strict_detected":24,"missed":0,"no_impact_false_rises":0},
+    "only_collision_cell_change":{"mass_kg":0.0,"time_s":3.86,"force_N":10,"r10":"miss","candidate_delay_ms":131},
+    "control_cells_equal":true
+  },
+  "prospective_cases": [
+    {"id":"p31_empty_py9","mass_kg":0.0,"com_m":[0,0,0],"time_s":3.845,"force_N":[0,9,0],"r10_force_edges":[],"candidate_force_edges":[3896,3975],"r10_none_edges":[],"candidate_none_edges":[],"candidate_strict":false,"failure":"two rises; no strict candidate-only gain"},
+    {"id":"p31_empty_ny10","mass_kg":0.0,"com_m":[0,0,0],"time_s":3.875,"force_N":[0,-10,0],"r10_force_edges":[3928],"candidate_force_edges":[3928,4002],"r10_none_edges":[],"candidate_none_edges":[],"candidate_strict":false,"failure":"duplicate candidate rise"},
+    {"id":"p31_empty_px10","mass_kg":0.0,"com_m":[0,0,0],"time_s":3.905,"force_N":[10,0,0],"r10_force_edges":[3953],"candidate_force_edges":[3953],"r10_none_edges":[],"candidate_none_edges":[],"candidate_strict":true},
+    {"id":"p31_light_py10","mass_kg":0.35,"com_m":[0.012,-0.009,0.018],"time_s":3.855,"force_N":[0,10,0],"r10_force_edges":[3912],"candidate_force_edges":[3912,3988],"r10_none_edges":[],"candidate_none_edges":[],"candidate_strict":false,"failure":"duplicate candidate rise"},
+    {"id":"p31_mid_nx12","mass_kg":2.3,"com_m":[-0.021,0.014,0.027],"time_s":3.885,"force_N":[-12,0,0],"r10_force_edges":[3936],"candidate_force_edges":[3936],"r10_none_edges":[],"candidate_none_edges":[],"candidate_strict":true},
+    {"id":"p31_heavy_oblique","mass_kg":6.4,"com_m":[0.026,-0.018,0.039],"time_s":3.915,"force_N":[9,-9,0],"r10_force_edges":[3969],"candidate_force_edges":[3969],"r10_none_edges":[],"candidate_none_edges":[],"candidate_strict":true}
+  ],
+  "prospective_summary": {
+    "episodes":24,
+    "passed":false,
+    "r10_strict":5,
+    "candidate_strict":3,
+    "candidate_only_strict":0,
+    "candidate_no_force_edges":0,
+    "physical_arrays_exact":true,
+    "scientific_failures":["p31_empty_py9","p31_empty_ny10","p31_light_py10"]
+  },
+  "evidence_sha256": {
+    "known":"71c2d9b367d6d7ca81a210b6730764b601329d7f4319fd7cf6e6a080f1431c25",
+    "official":"6ecfee642d6e4c3c0e18eae3b8a77561259708c9a6448c97fbe59787056d99a4",
+    "prospective":"46bb7a3158c382e8b98b23357cd44c42e8d1fa0bc2149504a03a4148b09ea498"
+  },
+  "stop_reason": "prelocked prospective duplicate rises and zero candidate-only strict gains; no retune and no enrollment"
+}

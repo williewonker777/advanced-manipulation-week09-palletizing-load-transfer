@@ -1,0 +1,82 @@
+{
+  "schema": "R10_TORQUE_FINDINGS.v1",
+  "status": "STOP_NO_HOLDOUT",
+  "candidate": "causal 8 ms mean minus 8 ms mean after a 4 ms gap over the R1 estimated 6D wrench; normal-only scaling and threshold; persistence 2",
+  "scope": {
+    "normal_calibration": 4,
+    "fresh_audit_references": 4,
+    "fresh_collisions": 20,
+    "paired_baseline_candidate_runs": 48,
+    "forces_N": [
+      [
+        0,
+        0,
+        8
+      ],
+      [
+        0,
+        0,
+        -8
+      ],
+      [
+        6,
+        0,
+        6
+      ],
+      [
+        0,
+        6,
+        6
+      ],
+      [
+        0,
+        8,
+        0
+      ]
+    ]
+  },
+  "result": {
+    "R1_detected": 3,
+    "candidate_detected": 3,
+    "additional_detected": 0,
+    "event_losses": 0,
+    "false_alarm_increased_cases": 0,
+    "tool_losses": 0,
+    "physical_arrays_byte_identical": true,
+    "candidate_worst_combined_p99_us": 324.74160749246994,
+    "candidate_ge1ms_cycles": 0
+  },
+  "diagnostic_separability": {
+    "deployable_wrench_peak_over_normal_threshold": 1,
+    "deployable_persistent_event_rise": 1,
+    "paired_wrench_oracle_peak_over_normal_threshold": 0,
+    "paired_joint_residual_oracle_peak_over_normal_threshold": 1,
+    "paired_torque_sensor_oracle_peak_over_normal_threshold": 0,
+    "paired_motor_link_oracle_peak_over_normal_threshold": 0,
+    "paired_velocity_oracle_peak_over_normal_threshold": 0,
+    "note": "the sole candidate extra rise was already detected by R1; paired-reference signals are diagnostic and unavailable at runtime"
+  },
+  "decision": "The local-time FIR does not robustly separate the weak events from independent stiffness/friction nuisance. Do not lower the normal-only threshold, change direction weights from these outcomes, or open a holdout.",
+  "next_admissible_hypothesis": "Estimate stiffness/friction uncertainty online from normal excitation before evaluating a newly preregistered joint-residual transient channel on disjoint cases. The current results cannot select its thresholds or directions.",
+  "pins": {
+    "plan": "7196dbc67a7704d8d03894d6cbc1674804f951b3348da5aaa7b759aca8382006",
+    "model": "22f2583124fc253222f9bd435556cad6f6f9275784c5f2fa48c15e062d65ff60",
+    "normal_freeze": "e891cd7b9d0e26ed05a5798f11f5bed1c99ad95ad60383f7f1bbd2b14b1f2177",
+    "development": "9fb4d5bf9250615d2bf06a0e7783bff29921304d1bb676f2ee7c0f197f21724c",
+    "signal_diagnosis": "2acd42930a10b94b18f06d4a37d096f909a06e818425403abc15ca0e9a2b011b",
+    "verification": "b431984f1c61aac13b38ba0af641341938366a71af1930afb03a6fa7f1a5adae",
+    "fir_channel.py": "b605109c593fdc45a27e08db8a0e6ce54144dda430101135f2c70963af484992",
+    "runner.py": "9c3cc0d382ea33be8d2b01933a4a082488539c707b66b8041b25b648e3bd23c5",
+    "prepare_normal_model.py": "19c9e57fda067f8a887c93f1a502f5be55b58ccc73de325d89ca10f56efd2c06",
+    "run_development.py": "2459093d909a67d8f825bb45483b1a3565cdc7e634941fff169fc8705b2284bd",
+    "analyze_separability.py": "494dbf1d875ea4d6f4b6db62aa12cf7e7889710af5142bef2c8bd9481804b4bb",
+    "diagnose_signal_families.py": "091ee7849421d47503697e7b49f46a60adcd05071854dbf01b1d30e36145066f",
+    "verify_result.py": "80ac0e0444943a92c77f16f29f6f1d1ae3f73591c3a6f5e4adf27e739a264252",
+    "portable_summary": "356e77e62b43feda2378cb4844f3a2486ec956bb4ed0612d24f9fb2db1ec1916"
+  },
+  "limits": [
+    "The paired-reference oracle is unavailable to the deployed detector and is diagnostic only.",
+    "Failure to cross this frozen FIR threshold is not a fundamental proof that the allowed signals are unidentifiable.",
+    "The measured p99 and zero >=1 ms cycles apply only to this finite run and are not a hard real-time guarantee."
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "schema": "R9_SATURATION_FEEDBACK_DEVELOPMENT.v1",
+  "classification": "one fixed law; development only; frozen before simulation",
+  "law": {
+    "description": "mirror public drive state and one-cycle delay; predict next J2 torque from encoder th/thd; above 310 Nm smoothly map magnitude through 310 + 18*tanh((magnitude-310)/18) by reducing feedforward only",
+    "soft_start_nm": 310.0,
+    "soft_band_nm": 18.0,
+    "asymptotic_demand_nm": 328.0,
+    "physical_reserve_nm": 18.0,
+    "feedback_unchanged": true,
+    "actuator_limits_unchanged": true,
+    "forbidden_inputs": [
+      "mass lookup",
+      "case id",
+      "time window",
+      "detector output",
+      "true force",
+      "saturation flag"
+    ],
+    "retuning_after_results": "forbidden"
+  },
+  "pins": {
+    "governor.py": "fb41a6ac2b8e86cee3607c7da757646f85233f46f46a23838a31b252ee01d9ab",
+    "runner.py": "6db3927cac750781dfe397181a03ef6527434bdc92ad0cdc7077f158485e83e9",
+    "run_development.py": "342fd193d7ed6958feb81bef05760649d9949cdc07dda0f84adeb546fded3d37",
+    "FAST2.py": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b"
+  },
+  "matrix": {
+    "paired_conditions": 9,
+    "episodes": 18,
+    "maximum_paired_conditions": 16,
+    "cpu": 4,
+    "conditions": [
+      {
+        "group_id": "C0",
+        "classification": "low-demand exact-R1 control",
+        "mass": 2.0,
+        "com": [
+          0.011,
+          -0.007,
+          0.021
+        ],
+        "perturb": {
+          "seed": 7,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0
+        },
+        "condition_id": "C0-reference",
+        "role": "reference",
+        "collision": null
+      },
+      {
+        "group_id": "N0",
+        "classification": "exposed D4 affected",
+        "mass": 8.0,
+        "com": [
+          -0.03,
+          0.02,
+          -0.02
+        ],
+        "perturb": {
+          "seed": 7,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0
+        },
+        "condition_id": "N0-reference",
+        "role": "reference",
+        "collision": null
+      },
+      {
+        "group_id": "N0",
+        "classification": "exposed D4 affected",
+        "mass": 8.0,
+        "com": [
+          -0.03,
+          0.02,
+          -0.02
+        ],
+        "perturb": {
+          "seed": 7,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0
+        },
+        "condition_id": "N0-collision",
+        "role": "collision",
+        "collision": [
+          2.3,
+          [
+            -100.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "group_id": "N1",
+        "classification": "exposed D4 affected",
+        "mass": 8.0,
+        "com": [
+          -0.03,
+          0.02,
+          0.015
+        ],
+        "perturb": {
+          "seed": 7,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0
+        },
+        "condition_id": "N1-reference",
+        "role": "reference",
+        "collision": null
+      },
+      {
+        "group_id": "N1",
+        "classification": "exposed D4 affected",
+        "mass": 8.0,
+        "com": [
+          -0.03,
+          0.02,
+          0.015
+        ],
+        "perturb": {
+          "seed": 7,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 1.0,
+          "coulomb_scale": 1.0
+        },
+        "condition_id": "N1-collision",
+        "role": "collision",
+        "collision": [
+          2.7,
+          [
+            0.0,
+            5.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "group_id": "P0",
+        "classification": "new combined perturbation",
+        "mass": 8.0,
+        "com": [
+          -0.0275,
+          0.0175,
+          -0.0115
+        ],
+        "perturb": {
+          "seed": 493017,
+          "stiffness_scale": 0.86,
+          "viscous_scale": 1.1,
+          "coulomb_scale": 0.93
+        },
+        "condition_id": "P0-reference",
+        "role": "reference",
+        "collision": null
+      },
+      {
+        "group_id": "P0",
+        "classification": "new combined perturbation",
+        "mass": 8.0,
+        "com": [
+          -0.0275,
+          0.0175,
+          -0.0115
+        ],
+        "perturb": {
+          "seed": 493017,
+          "stiffness_scale": 0.86,
+          "viscous_scale": 1.1,
+          "coulomb_scale": 0.93
+        },
+        "condition_id": "P0-collision",
+        "role": "collision",
+        "collision": [
+          3.853,
+          [
+            0.0,
+            14.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "group_id": "P1",
+        "classification": "new combined perturbation",
+        "mass": 7.98,
+        "com": [
+          -0.026,
+          0.0155,
+          0.005
+        ],
+        "perturb": {
+          "seed": 493021,
+          "stiffness_scale": 1.14,
+          "viscous_scale": 0.9,
+          "coulomb_scale": 1.11
+        },
+        "condition_id": "P1-reference",
+        "role": "reference",
+        "collision": null
+      },
+      {
+        "group_id": "P1",
+        "classification": "new combined perturbation",
+        "mass": 7.98,
+        "com": [
+          -0.026,
+          0.0155,
+          0.005
+        ],
+        "perturb": {
+          "seed": 493021,
+          "stiffness_scale": 1.14,
+          "viscous_scale": 0.9,
+          "coulomb_scale": 1.11
+        },
+        "condition_id": "P1-collision",
+        "role": "collision",
+        "collision": [
+          3.883,
+          [
+            -11.0,
+            5.5,
+            0.0
+          ]
+        ]
+      }
+    ]
+  },
+  "gates": {
+    "candidate_saturated_samples": 0,
+    "collision_saturation_nonincrease_per_case": true,
+    "newly_saturated_samples": 0,
+    "divergence": 0,
+    "FAST2_event_losses": 0,
+    "FAST2_tool_losses": 0,
+    "FAST2_extra_false_alarms_per_case": 0,
+    "normal_cost_ratio_each_max": 1.05,
+    "baseline_saturation_crossings_improved_min": 1,
+    "active_actual_demand_margin_min_nm": 10.0,
+    "catchup_after_last_intervention_max_s": 0.25,
+    "terminal_tracking_delta_max_mm": 0.05,
+    "combined_observed_p99_us_max": 800.0,
+    "low_demand_control_exact": true
+  },
+  "metric_contract": "tools.r5_metrics.event_result with per-variant matched references",
+  "stop": "first failed physics or detection gate; no holdout if development fails",
+  "official": false
+}

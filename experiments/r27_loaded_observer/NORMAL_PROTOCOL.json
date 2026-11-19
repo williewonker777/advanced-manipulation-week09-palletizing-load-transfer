@@ -1,0 +1,44 @@
+{
+  "schema": "r27-loaded-observer-normal-protocol.v1",
+  "status": "LOCKED_BEFORE_NORMAL_OUTCOMES",
+  "mechanism": "Causal change detection on the public delayed loaded-arm force observer. It detects a coherent signed onset, waits for a persistent displacement from its pre-onset baseline, and emits one bounded onset pulse. Continuous telemetry owns rearming but never directly holds the public alarm high.",
+  "runtime_inputs": ["encoder", "joint_torque_sensor", "grip", "public_nominal_empty_model", "public_nominal_loaded_model"],
+  "forbidden_runtime_inputs": ["case_id", "target_time", "impact_schedule", "applied_force_truth", "contact_truth", "paired_no_force_trace", "mechanics_variant"],
+  "normal_data": {
+    "fit": "Eight payload/COM/offset cases under stock and one fitted surface/friction perturbation; 16 force-free episodes.",
+    "audit": "Eight disjoint payload/COM/offset cases under a disjoint actuator perturbation and a different surface/friction perturbation; 16 force-free episodes.",
+    "separation": "Audit episodes are never used to choose or alter parameters."
+  },
+  "fixed_feature_rule": {
+    "grip_stability_samples": 64,
+    "onset_lag_samples": 8,
+    "sustain_lag_samples": 32,
+    "onset_persistence_samples": 3,
+    "pending_samples": 25,
+    "pulse_samples": 8,
+    "rearm_quiet_samples": 25,
+    "coherence": "Successive eight-sample force changes must have positive dot product.",
+    "onset_score": "Euclidean norm of public force now minus eight samples earlier.",
+    "sustain_score": "At pending expiry, Euclidean norm of public force now minus the frozen pre-onset 32-sample baseline.",
+    "telemetry_projection": "Projection of force-minus-baseline onto the frozen onset direction; used only to retain event ownership and rearm, never to hold alarm output."
+  },
+  "formal_fit_rule": {
+    "onset_threshold_N": "1.05 * maximum eligible fit onset score + 0.05 N",
+    "sustain_threshold_N": "1.05 * maximum eligible fit 32-sample displacement + 0.05 N",
+    "ownership_release_N": "0.50 * sustain_threshold_N",
+    "no_parameter_search": true
+  },
+  "normal_falsifiers": [
+    "Any candidate-only alarm on any fit or audit normal episode.",
+    "Any native R26 output change, physical trace change, or force-free prefix mismatch.",
+    "Any audit-driven parameter change.",
+    "Nonfinite observer/model output or incomplete 6000-sample episode."
+  ],
+  "forced_gate_deferred": "No forced candidate episode may run until the candidate, fitted model, forced protocol, and baselines are fingerprinted and the R27 challenge is confirmed presealed.",
+  "immutable_dependencies": {
+    "r26_candidate.py": "212f4e79367cb636c0143a2d1f8aa7ba5584aaaca5ecde6b412d01a4985b6784",
+    "normal_force_observer.py": "eff8f0b76d8c0358bb15b020be0db6e0b55d0e666a93ee2f46a1de6190ba2483",
+    "r26_evaluator.py": "ff51f2b17ffe1193bef37d8421c0ec69e3d94e55c7df21258ca528de8a277ed1",
+    "r26_runner.py": "ce88d4c2283c04909ec45eeffe8bed58061f8d01b6c1488cfa968830315f965f"
+  }
+}

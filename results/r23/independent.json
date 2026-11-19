@@ -1,0 +1,413 @@
+{
+  "claims": {
+    "positive_gain_count": 12,
+    "safety_qualification": false,
+    "scoped_detection_pass": false,
+    "scoped_regression_floor_pass": false
+  },
+  "episodes": 216,
+  "failed_rows": 15,
+  "failures": [
+    {
+      "failed_strict_events": {},
+      "id": "n23_detached_heavy_interp",
+      "kind": "negative",
+      "safety_floor_failures": [
+        "candidate_zero_false_rises"
+      ],
+      "variant": "actuator_skew"
+    },
+    {
+      "failed_strict_events": {
+        "single": {
+          "attributable_delays_ms": [],
+          "quiet": true,
+          "raw_rise_indices": []
+        }
+      },
+      "id": "s23_transfer_border_diag_a",
+      "kind": "single",
+      "safety_floor_failures": [],
+      "variant": "stock"
+    },
+    {
+      "failed_strict_events": {
+        "single": {
+          "attributable_delays_ms": [],
+          "quiet": true,
+          "raw_rise_indices": []
+        }
+      },
+      "id": "s23_transfer_border_diag_a",
+      "kind": "single",
+      "safety_floor_failures": [],
+      "variant": "contact_surface"
+    },
+    {
+      "failed_strict_events": {
+        "single": {
+          "attributable_delays_ms": [],
+          "quiet": true,
+          "raw_rise_indices": []
+        }
+      },
+      "id": "s23_transfer_border_diag_a",
+      "kind": "single",
+      "safety_floor_failures": [],
+      "variant": "actuator_skew"
+    },
+    {
+      "failed_strict_events": {},
+      "id": "s23_transfer_late_tangent",
+      "kind": "single",
+      "safety_floor_failures": [
+        "candidate_zero_false_rises"
+      ],
+      "variant": "actuator_skew"
+    },
+    {
+      "failed_strict_events": {},
+      "id": "s23_post_detach_radial",
+      "kind": "single",
+      "safety_floor_failures": [
+        "candidate_zero_false_rises"
+      ],
+      "variant": "actuator_skew"
+    },
+    {
+      "failed_strict_events": {
+        "both_first": {
+          "attributable_delays_ms": [
+            36,
+            98
+          ],
+          "quiet": true,
+          "raw_rise_indices": [
+            1389,
+            1451
+          ]
+        },
+        "both_second": {
+          "attributable_delays_ms": [
+            104
+          ],
+          "quiet": false,
+          "raw_rise_indices": [
+            1598
+          ]
+        },
+        "isolated_first": {
+          "attributable_delays_ms": [
+            36,
+            98
+          ],
+          "quiet": true,
+          "raw_rise_indices": [
+            1389,
+            1451
+          ]
+        }
+      },
+      "id": "p23_transfer_close_diagonals",
+      "kind": "paired",
+      "safety_floor_failures": [
+        "candidate_zero_duplicate_rises"
+      ],
+      "variant": "stock"
+    },
+    {
+      "failed_strict_events": {
+        "both_first": {
+          "attributable_delays_ms": [
+            36,
+            97
+          ],
+          "quiet": true,
+          "raw_rise_indices": [
+            1389,
+            1450
+          ]
+        },
+        "both_second": {
+          "attributable_delays_ms": [
+            103
+          ],
+          "quiet": false,
+          "raw_rise_indices": [
+            1597
+          ]
+        },
+        "isolated_first": {
+          "attributable_delays_ms": [
+            36,
+            97
+          ],
+          "quiet": true,
+          "raw_rise_indices": [
+            1389,
+            1450
+          ]
+        }
+      },
+      "id": "p23_transfer_close_diagonals",
+      "kind": "paired",
+      "safety_floor_failures": [
+        "candidate_zero_duplicate_rises"
+      ],
+      "variant": "contact_surface"
+    },
+    {
+      "failed_strict_events": {
+        "both_first": {
+          "attributable_delays_ms": [
+            39,
+            101
+          ],
+          "quiet": true,
+          "raw_rise_indices": [
+            1392,
+            1454
+          ]
+        },
+        "both_second": {
+          "attributable_delays_ms": [],
+          "quiet": false,
+          "raw_rise_indices": []
+        },
+        "isolated_first": {
+          "attributable_delays_ms": [
+            39,
+            101
+          ],
+          "quiet": true,
+          "raw_rise_indices": [
+            1392,
+            1454
+          ]
+        },
+        "isolated_second": {
+          "attributable_delays_ms": [],
+          "quiet": true,
+          "raw_rise_indices": []
+        }
+      },
+      "id": "p23_transfer_close_diagonals",
+      "kind": "paired",
+      "safety_floor_failures": [
+        "candidate_zero_duplicate_rises"
+      ],
+      "variant": "actuator_skew"
+    },
+    {
+      "failed_strict_events": {},
+      "id": "p23_transfer_to_carry",
+      "kind": "paired",
+      "safety_floor_failures": [
+        "candidate_zero_false_rises"
+      ],
+      "variant": "actuator_skew"
+    },
+    {
+      "failed_strict_events": {
+        "both_second": {
+          "attributable_delays_ms": [
+            37
+          ],
+          "quiet": false,
+          "raw_rise_indices": [
+            4150
+          ]
+        }
+      },
+      "id": "p23_detach_boundary_cross",
+      "kind": "paired",
+      "safety_floor_failures": [],
+      "variant": "stock"
+    },
+    {
+      "failed_strict_events": {
+        "both_second": {
+          "attributable_delays_ms": [
+            38
+          ],
+          "quiet": false,
+          "raw_rise_indices": [
+            4151
+          ]
+        }
+      },
+      "id": "p23_detach_boundary_cross",
+      "kind": "paired",
+      "safety_floor_failures": [],
+      "variant": "contact_surface"
+    },
+    {
+      "failed_strict_events": {
+        "both_second": {
+          "attributable_delays_ms": [
+            37
+          ],
+          "quiet": false,
+          "raw_rise_indices": [
+            4150
+          ]
+        }
+      },
+      "id": "p23_detach_boundary_cross",
+      "kind": "paired",
+      "safety_floor_failures": [],
+      "variant": "actuator_skew"
+    },
+    {
+      "failed_strict_events": {},
+      "id": "p23_post_detach_diagonal_pair",
+      "kind": "paired",
+      "safety_floor_failures": [
+        "candidate_zero_false_rises"
+      ],
+      "variant": "actuator_skew"
+    },
+    {
+      "failed_strict_events": {
+        "both_first": {
+          "attributable_delays_ms": [],
+          "quiet": true,
+          "raw_rise_indices": []
+        },
+        "isolated_first": {
+          "attributable_delays_ms": [],
+          "quiet": true,
+          "raw_rise_indices": []
+        }
+      },
+      "id": "p23_transfer_to_post_detach",
+      "kind": "paired",
+      "safety_floor_failures": [
+        "candidate_zero_false_rises"
+      ],
+      "variant": "actuator_skew"
+    }
+  ],
+  "lock_sha256": "bcfdeace274ae7f24a11d2d8d63824304c312b7a0dd447c55953995fe7ea22d8",
+  "mechanical_effect_observed": {
+    "actuator_skew": true,
+    "contact_surface": true,
+    "stock": true
+  },
+  "plan_sha256": "5414441771b006dfe0fb23c073b7a5f640964a87dd48dd7f6df87df668fc332b",
+  "protocol_provenance_sha256": "21137153200d8596543361481bd70728b83b7d9ba321252544afc00e6ac363c2",
+  "real_contact_evidence": {
+    "adequate": true,
+    "required": 1,
+    "rows": [
+      "stock:n23_transfer_mid_offset",
+      "contact_surface:n23_transfer_mid_offset",
+      "actuator_skew:n23_transfer_mid_offset",
+      "stock:n23_detached_contact_probe",
+      "contact_surface:n23_detached_contact_probe",
+      "actuator_skew:n23_detached_contact_probe"
+    ]
+  },
+  "result_sha256": "8b55ed07f64128d5b957630019576b8477b47f57447989668fd284bee7abd022",
+  "rows": 45,
+  "safety_qualification": false,
+  "schema": "r23-locked-independent-summary.v1",
+  "strict_gains": [
+    [
+      "p23_post_detach_diagonal_pair",
+      "stock",
+      "isolated_first"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "stock",
+      "isolated_second"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "stock",
+      "both_first"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "stock",
+      "both_second"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "contact_surface",
+      "isolated_first"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "contact_surface",
+      "isolated_second"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "contact_surface",
+      "both_first"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "contact_surface",
+      "both_second"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "actuator_skew",
+      "isolated_first"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "actuator_skew",
+      "isolated_second"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "actuator_skew",
+      "both_first"
+    ],
+    [
+      "p23_post_detach_diagonal_pair",
+      "actuator_skew",
+      "both_second"
+    ]
+  ],
+  "strict_losses": [],
+  "totals": {
+    "r22_light": {
+      "all_episode_false_rises": 17,
+      "events_with_no_attributable_rise": 19,
+      "negative_actual_tool_detected": 3,
+      "negative_false_rises": 1,
+      "negative_rows": 12,
+      "negatives_with_actual_tool": 6,
+      "pair_rows": 15,
+      "pair_slots": 60,
+      "single_total": 18,
+      "slots_with_multiple_rises": 6,
+      "strict_complete_pair_rows": 5,
+      "strict_failed_slots": 30,
+      "strict_pair_slots": 33,
+      "strict_singles": 15
+    },
+    "r23": {
+      "all_episode_false_rises": 17,
+      "events_with_no_attributable_rise": 7,
+      "negative_actual_tool_detected": 3,
+      "negative_false_rises": 1,
+      "negative_rows": 12,
+      "negatives_with_actual_tool": 6,
+      "pair_rows": 15,
+      "pair_slots": 60,
+      "single_total": 18,
+      "slots_with_multiple_rises": 6,
+      "strict_complete_pair_rows": 8,
+      "strict_failed_slots": 18,
+      "strict_pair_slots": 45,
+      "strict_singles": 15
+    }
+  },
+  "verdict": "FAIL"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "r22-tangent-plan.v1",
+  "decision_before_forced_data": "Use the existing causal 18 ms delayed six-axis force estimate, not R10 raw residual, and measure only the world horizontal force vector. Average first, then take its magnitude. Reject if a normal-bound channel cannot resolve weak collision from real return motion. No online table force, future sensor, force/clock pattern, contact id or test labels.",
+  "mechanical_basis": "Nominal inverse dynamics and inverse JTS filtering remove much of the commanded dynamics. Gravity/table normal do not have a world-horizontal force; remaining friction, dynamic load-model errors and estimator noise bound the identifiable force. A positive-mass grasp can create more tangential nuisance than an empty arm.",
+  "temporal_rule": "Average the last 12 valid estimated horizontal force samples; require three successive exceedances to set and eight clear below 80% of the limit to unset. Clear witness when the synchronized finite support window changes. Keep original base detector active at all samples.",
+  "bound": "No impact labels. Use 1.05 times the largest per-trial normal statistic for (unloaded, 0-1 kg, 1-4 kg, 4-8 kg) during the entire valid trajectory, never specific task-clock samples. Training masses are sampled at midpoints and boundaries; zero payload always classed as unloaded, irrespective of grip. Outside declared mass span use no auxiliary evidence.",
+  "masses": [0, 0.35, 0.75, 1, 2.5, 4, 5.5, 8],
+  "coms": [[0,0,0],[0.02,-0.01,0.03],[-0.022,0.016,-0.01],[0.017,0.026,0.012]],
+  "run_order": ["normal fit only", "freeze normal envelopes", "three separately defined no-force qualifications", "exposed R21 weak set; not blind", "only if positive, independent protection"],
+  "qualification": [[0.42,[0.018,0.006,-0.013]],[3.1,[-0.013,-0.020,0.015]],[7.55,[0.011,0.019,-0.022]]],
+  "outcome": "Only contribute to integration if no new negative rises and genuine weak gains with no extra false/duplicate or known-positive loss. This is not a substitute for the independent R22 challenge."
+}

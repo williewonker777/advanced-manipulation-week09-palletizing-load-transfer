@@ -1,0 +1,104 @@
+{
+  "decision": "REJECT; engineering development; no independent release test",
+  "plan_sha256": "115d1d199994f80843c3c04513d1f020800b4f9a41aef78fbcc6250f72a6df61",
+  "source_sha256": "4d2b9beca9cc5f697f3c38c5ab4c46c001a63d612e7e0cd749f23a704f258ea0",
+  "standalone_sha256": "47a9a5b2edc924ccdcf7a669d514fc29ea124965a5c412fab5e4edfe3843cfc7",
+  "complete_record_sha256": "5d8cfe8982008178a8799e6d53f30d6864df393af2c82073889215da1c22ae6e",
+  "runner_sha256": "aff5f29afc33b967e921a67c0a384738ef5657231078d28aad375e8d05e35833",
+  "original_runner_sha256": "0aef63bbfdfbab8afaf381e1fd1b9e71065a90249285e390f3feb8a9c2d85fb6",
+  "reporting_note": "First evaluation completed simulations but wrote only partial JSON due to NumPy boolean serialization. Retained original. Reran identical design and physics with native scalar conversion and complete serialization; not a new test set.",
+  "finite_scope": {
+    "groups": 3,
+    "matched_conditions": 10,
+    "episodes": 20
+  },
+  "passed": false,
+  "summary": [
+    {
+      "id": "d0-normal",
+      "failed": []
+    },
+    {
+      "id": "d0-early_event",
+      "failed": []
+    },
+    {
+      "id": "d0-hold_pulse",
+      "failed": [],
+      "tail_before_after_deg": [
+        0.1778770138118806,
+        0.005619140073159389
+      ],
+      "spectrum_flags": {
+        "angle_deg": [],
+        "torque_pct_rated": []
+      },
+      "event_before_after": [
+        "detected",
+        "detected"
+      ]
+    },
+    {
+      "id": "d1-normal",
+      "failed": []
+    },
+    {
+      "id": "d1-early_event",
+      "failed": []
+    },
+    {
+      "id": "d1-hold_pulse",
+      "failed": [
+        "terminal_response"
+      ],
+      "tail_before_after_deg": [
+        0.19373138253611835,
+        0.0914761219397499
+      ],
+      "spectrum_flags": {
+        "angle_deg": [],
+        "torque_pct_rated": []
+      },
+      "event_before_after": [
+        "missed",
+        "missed"
+      ]
+    },
+    {
+      "id": "d1-offset",
+      "failed": []
+    },
+    {
+      "id": "d2-normal",
+      "failed": []
+    },
+    {
+      "id": "d2-early_event",
+      "failed": []
+    },
+    {
+      "id": "d2-hold_pulse",
+      "failed": [],
+      "tail_before_after_deg": [
+        0.2781459808350387,
+        0.004121825253291653
+      ],
+      "spectrum_flags": {
+        "angle_deg": [],
+        "torque_pct_rated": []
+      },
+      "event_before_after": [
+        "detected",
+        "detected"
+      ]
+    }
+  ],
+  "failed_case_diagnosis": {
+    "joint": "J2",
+    "reference_motor_target_error_deg_at_5p35": -0.7259,
+    "unbounded_added_request_nm_at_5p35": -29.8813,
+    "bounded_extra_nm_at_5p35": -5.9994,
+    "scope": "Diagnostic after failed development. On this run even the unforced initial hold error consumes almost the entire bounded extra effort. Matched pulse response is relative to its own unforced trace, not absolute accuracy.",
+    "private_record_sha256": "5ced877cdf6544bcc117a2fb717bce66b442b0999c3fce8c3b433f4ad0bb8253"
+  }
+}

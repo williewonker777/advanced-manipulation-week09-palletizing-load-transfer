@@ -1,0 +1,514 @@
+{
+  "schema": "r22-release-audit.v1",
+  "variant": "light",
+  "status": "research_option",
+  "default_submission_promoted": false,
+  "build": {
+    "schema": "r22-standalone-build.v1",
+    "variant": "light",
+    "r10_detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "frozen_sources_sha256": {
+      "experiments/r22_combined/selection.json": "b74b3a1eac159f3836eea9b83b45b23872417573413cd416a1b3758abf6cedc0",
+      "experiments/r22_combined/core.py": "bdcd186ea58db958e2d4de0a4bcfa9b2a32ea54d54b9860d8a29d249d5abd8ad",
+      "experiments/r22_combined/candidate.py": "0d69976ee4f6529cdd8ae67d6321d1d2637a60b7b27adc1b2e95c4e48a37367b",
+      "experiments/r22_normal/candidate.py": "658683de0a0db00d520ebbd4c7a28cbaa4beb11bd6e93dd8e71edded6472279d",
+      "experiments/r22_release/state.py": "30cd330f75b7bd4078ba9d20ef0e902993626c14962466305136d0138c42e215",
+      "experiments/r22_release/model.json": "fb02dd2121120ba90c64748272fe1c9f1873f174ac8ef107ba80e70b1b337340",
+      "experiments/r22_tangent/state.py": "5ab5424fb795c2e2240b6cbed0f2dcdae30929d9ec543188cb570421288725a0",
+      "experiments/r22_tangent/frozen.py": "dac541250c09e0e400414441e58458121d24f4e138d99da9769d7e2d90a0746a",
+      "experiments/r22_tangent/model.json": "896ffbe13c95a24444f06541c55206a0718e6378da04fdc876c1907876fa0732",
+      "experiments/r22_tangent/detector.py": "681c6a5d17a48efad81b4555bc2a0ff7a03f47556832ae752cc279ac0572bd4e",
+      "experiments/r15_delayed_wrench/observer.py": "eff8f0b76d8c0358bb15b020be0db6e0b55d0e666a93ee2f46a1de6190ba2483",
+      "experiments/r21_yaw_impulse/normal_bins.json": "5f22f640eb8824f764ffeec7ecbef7ba23df02a874547b93b8ddc72925e25c15",
+      "experiments/r22_guarded/candidate.py": "23d8dc0b9747e38dd9a346872f27612b7ba67052aff4c6d604401aba387dc1f1",
+      "experiments/r22_guarded/plan.json": "56ce7cdac16699a8db591195b89260ec24fc3991638a829368612ba1b27a546c",
+      "experiments/r22_light/selection.json": "0650647478ce28542f66753f97242046e3c7123cb469de08908b40adf59affa3",
+      "experiments/r22_light/plan.json": "e29341a31bd46a2aaa43b9ba2e4b0ee1b8b3a603f47a82226e9757b904bc69e6",
+      "experiments/r22_light/witness.py": "430b2b2ebdda4c4cde9e9d1760a581f77628fca4ebe52e1211d80edc14153d7b",
+      "experiments/r22_light/candidate.py": "1d6738b62af1a56e679544ed2a5f7695c920b5ecb6aa74d35c0b1952d141a5b1"
+    },
+    "standalone_sha256": "881d5e740230d4811c4fccf622c7acc4785f06f40700885b509e622a6861e49b",
+    "lines": 2178
+  },
+  "kit": {
+    "status": "ok",
+    "files": 20,
+    "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "evaluator_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+  "controllers": {
+    "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b"
+  },
+  "official": {
+    "torque": {
+      "episodes": 29,
+      "control": {
+        "0.0": [
+          "2.09",
+          "4.05",
+          "0.0",
+          "9.0",
+          "4.8",
+          "0",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "4.0": [
+          "2.32",
+          "4.42",
+          "0.0",
+          "9.0",
+          "6.8",
+          "39",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "8.0": [
+          "3.23",
+          "8.44",
+          "0.0",
+          "9.0",
+          "13.1",
+          "80",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ]
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "cells": [
+            "38",
+            "34",
+            "26",
+            "19",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "cells": [
+            "57",
+            "38",
+            "25",
+            "19",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "cells": [
+            "49",
+            "42",
+            "30",
+            "19",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "cells": [
+            "43",
+            "37",
+            "27",
+            "22",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "cells": [
+            "56",
+            "41",
+            "25",
+            "18",
+            "1회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "cells": [
+            "91",
+            "86",
+            "38",
+            "22",
+            "0회",
+            "10 N"
+          ]
+        }
+      ]
+    },
+    "servo": {
+      "episodes": 29,
+      "control": {
+        "0.0": [
+          "1.18",
+          "3.94",
+          "0.0",
+          "9.7",
+          "5.1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "4.0": [
+          "1.15",
+          "3.79",
+          "0.0",
+          "9.7",
+          "7.6",
+          "40",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "8.0": [
+          "1.17",
+          "3.91",
+          "0.0",
+          "9.7",
+          "14.6",
+          "79",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ]
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "cells": [
+            "46",
+            "42",
+            "36",
+            "23",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "cells": [
+            "38",
+            "32",
+            "23",
+            "18",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "cells": [
+            "놓침",
+            "78",
+            "31",
+            "19",
+            "0회",
+            "15 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "cells": [
+            "66",
+            "55",
+            "36",
+            "24",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "cells": [
+            "49",
+            "37",
+            "25",
+            "18",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "cells": [
+            "77",
+            "67",
+            "33",
+            "21",
+            "0회",
+            "10 N"
+          ]
+        }
+      ]
+    }
+  },
+  "recognized_collision_cells": {
+    "torque": 24,
+    "servo": 23
+  },
+  "parity": [
+    {
+      "case_id": 174,
+      "controller": "torque",
+      "samples": 6000,
+      "exact": {
+        "t": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      },
+      "metrics_exact": {
+        "detect_delay_ms": true,
+        "alarm_before_collision": true,
+        "false_alarm_times": true,
+        "tool_contact_delay_ms": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": 319,
+      "controller": "torque",
+      "samples": 6000,
+      "exact": {
+        "t": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      },
+      "metrics_exact": {
+        "detect_delay_ms": true,
+        "alarm_before_collision": true,
+        "false_alarm_times": true,
+        "tool_contact_delay_ms": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": 330,
+      "controller": "torque",
+      "samples": 6000,
+      "exact": {
+        "t": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      },
+      "metrics_exact": {
+        "detect_delay_ms": true,
+        "alarm_before_collision": true,
+        "false_alarm_times": true,
+        "tool_contact_delay_ms": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": 335,
+      "controller": "torque",
+      "samples": 6000,
+      "exact": {
+        "t": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      },
+      "metrics_exact": {
+        "detect_delay_ms": true,
+        "alarm_before_collision": true,
+        "false_alarm_times": true,
+        "tool_contact_delay_ms": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": 339,
+      "controller": "torque",
+      "samples": 6000,
+      "exact": {
+        "t": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      },
+      "metrics_exact": {
+        "detect_delay_ms": true,
+        "alarm_before_collision": true,
+        "false_alarm_times": true,
+        "tool_contact_delay_ms": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": 349,
+      "controller": "torque",
+      "samples": 6000,
+      "exact": {
+        "t": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      },
+      "metrics_exact": {
+        "detect_delay_ms": true,
+        "alarm_before_collision": true,
+        "false_alarm_times": true,
+        "tool_contact_delay_ms": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "weak6",
+      "controller": "torque",
+      "samples": 6000,
+      "exact": {
+        "t": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      },
+      "metrics_exact": {
+        "detect_delay_ms": true,
+        "alarm_before_collision": true,
+        "false_alarm_times": true,
+        "tool_contact_delay_ms": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "servo_normal",
+      "controller": "servo",
+      "samples": 6000,
+      "exact": {
+        "t": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      },
+      "metrics_exact": {
+        "detect_delay_ms": true,
+        "alarm_before_collision": true,
+        "false_alarm_times": true,
+        "tool_contact_delay_ms": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "servo_force",
+      "controller": "servo",
+      "samples": 6000,
+      "exact": {
+        "t": true,
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "f_ext": true,
+        "r": true,
+        "detect": true
+      },
+      "metrics_exact": {
+        "detect_delay_ms": true,
+        "alarm_before_collision": true,
+        "false_alarm_times": true,
+        "tool_contact_delay_ms": true
+      },
+      "passed": true
+    }
+  ],
+  "gates": {
+    "default_filename": true,
+    "torque_official_24_of_24": true,
+    "torque_controls_R10_exact_except_compute": true,
+    "servo_R10_exact": true,
+    "modular_generated_6000_exact": true,
+    "protected_kit_unchanged": true
+  }
+}

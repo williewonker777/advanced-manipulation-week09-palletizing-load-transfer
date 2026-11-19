@@ -1,0 +1,108 @@
+{
+  "baseline": {
+    "artifacts": {
+      "amendment_sha256": "34b5c405f6e6e156d13d104c6a84b998d177986f9d7a53e4b86da43a40651a5d",
+      "analysis_sha256": "37ea87fe468db43548e65dfd845c6bcb2a21682312bf20033d5e0503141529b5",
+      "naive_ablation_sha256": "238748b379285f345506fdf2d905db04b51e7b5d0157c97ffb93f569a3fcd57a",
+      "novelty_sha256": "86168460a13372c6357117bd9844fc76f7abb2e052b5ec3d0a170f1e2d6d646d",
+      "prefreeze_sha256": "cc1c3dfb5c1cf309278545bca8a133ed3521c815a5bb648756bd4249862399a2",
+      "report_sha256": "a1a77f04a637db2274b4fea567d6ceead6d0260ad8b1773e817680bfb6d97a75",
+      "result_v2_sha256": "e04d96e32f6df73a5481af99788b27f7c4b396ee23a21cb6603b53cdc3b8ba7e",
+      "runner_sha256": "8101cdf22718484094f12575510185b69902ab0ce451913e13061684b04975e1",
+      "unit_tests_final_sha256": "fb184ea57734512b1f088f9181209901b9cd46df3eb7eaa2500ea9e48dde20b5"
+    },
+    "classification": "Bounded anti-masking control only; no new R31 method, promotion, or default change.",
+    "closed_or_reserved_rows_run": 0,
+    "default_changed": false,
+    "effective_plan_sha256": "f3ea874b52ef45a2bbd9598d22fa5e0bc07f98acd0eaea579b777f8293065165",
+    "episodes": 60,
+    "initial_plan_sha256": "ac09ab64c824a2da45f782a5a06a98c80e4f9b7c5055f2ec79d5b62b97f9ad56",
+    "integrity": {
+      "disjoint_supports_all": true,
+      "force_exact_all": true,
+      "kit_status": "ok",
+      "motion_exact_all": true,
+      "prefix_exact_all": true,
+      "same_grip_all": true,
+      "sources_exact": true,
+      "v1_v2_rows_exact": true
+    },
+    "new_r31_method_run": false,
+    "plan_amendment": "Only run.py source pin changed after v1 to correct summary taxonomy; cases, gates, arms, scoring and all per-row results unchanged.",
+    "schema": "r31-distinct-force-final.v1",
+    "summary": {
+      "c3": {
+        "duplicates": 0,
+        "false_rises": 0,
+        "informative_detected_second_ids": [
+          "r31_loaded_opposite_mid",
+          "r31_loaded_diagonal_distinct"
+        ],
+        "second_rise_absent_in_both_ids": [],
+        "second_rise_present_but_not_strict_ids": [
+          "r31_loaded_orthogonal_close"
+        ],
+        "strict_slots": 14,
+        "total_slots": 15
+      },
+      "naive_one_per_grip_ablation": {
+        "duplicates": 0,
+        "false_rises": 0,
+        "informative_detected_second_ids": [],
+        "second_rise_absent_in_both_ids": [
+          "r31_loaded_orthogonal_close",
+          "r31_loaded_opposite_mid",
+          "r31_loaded_diagonal_distinct"
+        ],
+        "second_rise_present_but_not_strict_ids": [],
+        "strict_slots": 12,
+        "total_slots": 15
+      },
+      "r29_composed": {
+        "duplicates": 0,
+        "false_rises": 0,
+        "informative_detected_second_ids": [
+          "r31_loaded_opposite_mid",
+          "r31_loaded_diagonal_distinct"
+        ],
+        "second_rise_absent_in_both_ids": [],
+        "second_rise_present_but_not_strict_ids": [
+          "r31_loaded_orthogonal_close"
+        ],
+        "strict_slots": 14,
+        "total_slots": 15
+      },
+      "r30_headroom": {
+        "duplicates": 4,
+        "false_rises": 0,
+        "informative_detected_second_ids": [
+          "r31_loaded_opposite_mid",
+          "r31_loaded_diagonal_distinct"
+        ],
+        "second_rise_absent_in_both_ids": [],
+        "second_rise_present_but_not_strict_ids": [
+          "r31_loaded_orthogonal_close"
+        ],
+        "strict_slots": 10,
+        "total_slots": 15
+      }
+    },
+    "verdict": "PASS_INFORMATIVE_CONTROL"
+  },
+  "candidate_is_not_scored": true,
+  "reason": {
+    "candidate": "experiments.r31_held_identity.candidate:Detector",
+    "candidate_sha256": "1e33b4698ef3678afe72cc4e286fcab5d27b2232e7bf087fdef7500ccc674764",
+    "later_history_results_do_not_reopen": true,
+    "original_candidate_episodes_run": 0,
+    "original_candidate_rows_scored": 0,
+    "original_case_payload_sha256": "772e0f32a2182517aa6b3e09ce40b7bf322a63f940564b4b57774f7283aa5bce",
+    "original_files_preserved": true,
+    "reason": "No authenticated pre-output lock exists; local candidate file mtime is 0.743443802 s after the first baseline result mtime.",
+    "replacement_or_substitution_in_original_panel": false,
+    "schema": "r31-original-distinct-non-enrollment.v1",
+    "status": "PERMANENTLY_CLOSED_UNSCORED"
+  },
+  "schema": "r31-informative-baseline-only.v1",
+  "status": "CLOSED_NO_ENROLLMENT"
+}

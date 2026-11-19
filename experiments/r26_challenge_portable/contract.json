@@ -1,0 +1,45 @@
+{
+  "accounting": {
+    "episodes_per_run": 156,
+    "worker_cap": 2
+  },
+  "fail_closed_probe": {
+    "exit_code": 2,
+    "log_sha256": "aaba8e29cf2bb398d380fc42dead69c3e2e9e0d3f125f3bdbe8643c4173dcc96",
+    "output_created": false
+  },
+  "required_invariants": [
+    "selection finalized before independent output",
+    "candidate lock matches sealed plan/protocol/evaluator and selection hash",
+    "selected source pins are covered by complete transitive lock closure",
+    "authored closure exactly accounts overlay and public files",
+    "public source contains no sim/model/evaluate.py kit bytes",
+    "MuJoCo other than 3.17.0 fails closed",
+    "optional authoritative result comparison is byte-exact"
+  ],
+  "required_release_schemas": {
+    "closure": "r26-independent-authored-closure.v1",
+    "lock": "r26-candidate-lock.v1",
+    "selection": "r26-finalized-exposed-choice.v1"
+  },
+  "required_runtime": {
+    "authentic_external_kit": true,
+    "kit_redistribution": false,
+    "mujoco": "3.17.0"
+  },
+  "scaffold_files": {
+    "experiments/r26_challenge_portable/__init__.py": "c45a94dfef88ae3342db8dc8af2ce6b11cf9cd74442626575bc20191ebd88714",
+    "experiments/r26_challenge_portable/support.py": "2eabd83342e54e816aa06c6dd48a2c86bab1ec282db0975aa76b035f8509cc67",
+    "experiments/r26_challenge_portable/test_support.py": "c6eb1b4b70dfc2bf080d1808b8637c88c0254a38cf25870533546e40e43c96e8",
+    "tools/r26_challenge_replay.py": "1da5935fd16b292829c2ad637b2090e7b132566d0fd451f887200f49c5bce2eb"
+  },
+  "schema": "r26-portable-replay-integration-contract.v1",
+  "science_run_performed": false,
+  "sealed_holdout": {
+    "closure_sha256": "ae82e92da0efe1582b4e449d9190182a1aa4c1c857aa7870f23ebefac8ba3a5d",
+    "evaluator_sha256": "ff51f2b17ffe1193bef37d8421c0ec69e3d94e55c7df21258ca528de8a277ed1",
+    "plan_sha256": "2047651eedd58b10e68bbf80b0f7cf973ab34643502a5190bffd02b4dcf62d77",
+    "protocol_sha256": "3745d060e563fc41e79a3ec84eb6c35fca320f36d382468df336a6fc3ef50de0"
+  },
+  "status": "AWAITING_FINALIZED_SELECTION_LOCK_AND_CLOSURE"
+}

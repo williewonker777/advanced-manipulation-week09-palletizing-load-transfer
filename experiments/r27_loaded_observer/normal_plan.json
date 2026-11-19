@@ -1,0 +1,33 @@
+{
+  "schema": "r27-loaded-observer-normal-plan.v1",
+  "created_before_normal_outcomes": true,
+  "classification": "Normal-only fit and disjoint normal-only audit; no forced episode belongs to this plan.",
+  "fit_cases": [
+    {"id": "fit_01", "mass": 0.85, "com": [-0.027, -0.018, 0.024], "offset": [-0.0021, 0.0014, -0.0008]},
+    {"id": "fit_02", "mass": 1.75, "com": [0.021, -0.026, -0.017], "offset": [0.0016, -0.0018, 0.0005]},
+    {"id": "fit_03", "mass": 2.65, "com": [-0.014, 0.023, 0.011], "offset": [-0.0007, -0.0011, 0.0012]},
+    {"id": "fit_04", "mass": 3.55, "com": [0.029, 0.009, -0.025], "offset": [0.0022, 0.0004, -0.0010]},
+    {"id": "fit_05", "mass": 4.45, "com": [-0.024, 0.016, -0.006], "offset": [-0.0015, 0.0020, 0.0009]},
+    {"id": "fit_06", "mass": 5.35, "com": [0.008, -0.029, 0.019], "offset": [0.0008, -0.0022, -0.0004]},
+    {"id": "fit_07", "mass": 6.75, "com": [-0.019, -0.004, -0.028], "offset": [-0.0023, 0.0007, 0.0011]},
+    {"id": "fit_08", "mass": 7.65, "com": [0.025, 0.027, 0.004], "offset": [0.0019, 0.0015, -0.0012]}
+  ],
+  "audit_cases": [
+    {"id": "audit_01", "mass": 1.25, "com": [0.017, -0.013, 0.027], "offset": [-0.0018, -0.0006, 0.0010]},
+    {"id": "audit_02", "mass": 2.15, "com": [-0.029, 0.007, -0.014], "offset": [0.0020, -0.0014, -0.0007]},
+    {"id": "audit_03", "mass": 3.05, "com": [0.012, 0.028, -0.022], "offset": [-0.0009, 0.0023, 0.0003]},
+    {"id": "audit_04", "mass": 3.95, "com": [-0.006, -0.024, 0.016], "offset": [0.0014, 0.0009, -0.0011]},
+    {"id": "audit_05", "mass": 4.85, "com": [0.028, -0.002, -0.009], "offset": [-0.0022, 0.0018, 0.0006]},
+    {"id": "audit_06", "mass": 5.75, "com": [-0.022, 0.025, 0.008], "offset": [0.0006, -0.0020, 0.0012]},
+    {"id": "audit_07", "mass": 6.55, "com": [0.004, -0.028, -0.026], "offset": [0.0023, 0.0002, -0.0009]},
+    {"id": "audit_08", "mass": 7.45, "com": [-0.016, 0.014, 0.022], "offset": [-0.0012, -0.0023, 0.0008]}
+  ],
+  "fit_variants": {
+    "fit_stock": {"kind": "stock"},
+    "fit_surface": {"kind": "place_surface_shift", "pick_friction_scale": 1.02, "place_friction_scale": 0.95, "table_solref_time_scale": 1.04, "damping_scale": 1.01}
+  },
+  "audit_variants": {
+    "audit_actuator": {"kind": "actuator_deadzone", "joint_gain": [0.994, 1.009, 0.989, 1.011, 0.996, 1.008], "deadzone_Nm": 0.014, "bias_Nm": [0.009, -0.008, 0.007, -0.009, 0.006, -0.005]},
+    "audit_surface": {"kind": "place_surface_shift", "pick_friction_scale": 0.97, "place_friction_scale": 1.06, "table_solref_time_scale": 0.94, "damping_scale": 0.985}
+  }
+}

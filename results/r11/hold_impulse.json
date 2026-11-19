@@ -1,0 +1,46 @@
+{
+  "schema": "r11-hold-impulse-summary.v1",
+  "decision": "STOP_NORMAL_AUDIT_FAILED",
+  "materially_distinct": true,
+  "comparison_to_prior": {
+    "r10_hold_monitor": "instantaneous per-component absolute innovation, three consecutive crossings",
+    "r10_torque_fir": "local transport-time FIR response",
+    "r11_candidate": "20ms signed vector sum, phase-conditioned full-covariance whitening, direction-agnostic accumulated norm, single familywise crossing"
+  },
+  "normal_only": {
+    "episodes": 16,
+    "fit_episodes": 8,
+    "threshold_episodes": 4,
+    "audit_episodes": 4,
+    "threshold": 6.18517885870112,
+    "threshold_maximum": 5.795408436858209,
+    "audit_maximum": 7.365511701417942,
+    "audit_crossings_total": 34,
+    "failed_rows": [
+      {
+        "group": "ia0",
+        "case": "normal",
+        "maximum": 7.365511701417942,
+        "crossings": 18
+      },
+      {
+        "group": "ia0",
+        "case": "offset",
+        "maximum": 7.326612486866021,
+        "crossings": 16
+      }
+    ]
+  },
+  "pins": {
+    "plan_sha256": "237fa27f0d1ae9077f9fe976e16e5992841ef64da05fbeaa2d98630184563bed",
+    "model_sha256": "c54022ffd2db55ee7f0162bd601e8f785ea6d166c06a4696704206b99e38067c",
+    "capture_sha256": "9fe7bf26a0555e439068c911651d9ef1f6a0aacfd788d0c5913635e78855ada8",
+    "r10_detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67"
+  },
+  "positive_collision_data_opened": false,
+  "r3_regression_opened": false,
+  "development_opened": false,
+  "independent_validation_opened": false,
+  "retuning": false,
+  "conclusion": "The signed coherent impulse is not separable under the preregistered normal uncertainty model: an independent ia0 nuisance condition exceeds the already-familywise threshold in 34 windows, including 18 crossings in a normal run with zero base alarm cycles. Widening the envelope or changing phase/horizon after audit would be posthoc; stop."
+}

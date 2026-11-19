@@ -1,0 +1,99 @@
+{
+  "schema": "r14-online-summary.v1",
+  "api": {
+    "import": "from experiments.r14_online.stream import Stream",
+    "construct": "Stream(mass, com)",
+    "sample": "observe(t, encoder, jts, grip)",
+    "result": "finish() or feature"
+  },
+  "feature_keys_shapes": {
+    "mass": [],
+    "y": [
+      227,
+      6
+    ],
+    "jac": [
+      227,
+      6,
+      3
+    ],
+    "stiffness": [
+      227,
+      6
+    ],
+    "prior_bottom_mm": [],
+    "prior_com_mm": [
+      3
+    ],
+    "vertical": [
+      3
+    ]
+  },
+  "completion_s": 3.527,
+  "fixed_state_bytes": 910031,
+  "models": 9,
+  "set_payload_calls": 9,
+  "inverse_dynamics_calls": 2043,
+  "tests": {
+    "count": 4,
+    "passed": 4,
+    "coverage": [
+      "entire passive public input exact parity",
+      "independent probe public input exact parity",
+      "frame alignment and shapes",
+      "too early/malformed/no-grip"
+    ]
+  },
+  "benchmark_rows": [
+    {
+      "path_name": "torque_e_zero.npz",
+      "sha256": "39f889f41c0ce3479088e6e7ec2a26b53bf81bea0ec6e7bde8332ac1fe0cf686",
+      "exact_parity": true,
+      "completed_at_s": 3.527,
+      "inverse_dynamics_calls": 2043,
+      "payload_set_calls": 9,
+      "state_bytes": 910031,
+      "init_us": 411315.329,
+      "observe_us": {
+        "p95": 206.82599999999985,
+        "p99": 270.3796,
+        "max": 350.629,
+        "finish": 41.37
+      },
+      "role": "passive_public_input"
+    },
+    {
+      "path_name": "torque_e_zero.npz",
+      "sha256": "7f23e800655e115ae8a69ad5dcfb4a4500f6a0e41e79a4ce9df3b27545748aea",
+      "exact_parity": true,
+      "completed_at_s": 3.527,
+      "inverse_dynamics_calls": 2043,
+      "payload_set_calls": 9,
+      "state_bytes": 910031,
+      "init_us": 261539.156,
+      "observe_us": {
+        "p95": 129.74055,
+        "p99": 136.0251,
+        "max": 207.15,
+        "finish": 13.58
+      },
+      "role": "independent_probe_public_input"
+    }
+  ],
+  "worst_observe_us": {
+    "p95": 206.82599999999985,
+    "p99": 270.3796,
+    "max": 350.629
+  },
+  "pins": {
+    "stream": "18d12c79398a5820bf64546a97f9c3cedb51e4af6b61ed44ba0aa887c36ef816",
+    "tests": "d3fb1b4a7812e6354f991477e1e11b483466c8e5852d0d358cacaa8fe3d9027d",
+    "benchmark": "07124085b6bd7e9e3e3c555413b7fd6776f0e01ff479a4fe668166684e5fd795",
+    "batch_reference": "79d3fe1c90e06fd89aa0b75b51097528723ce7413468a453a20bbe41421fe0d9"
+  },
+  "limitations": [
+    "Fixed 3551-sample storage is used instead of a 55 ms ring buffer.",
+    "Nine public Nominal constructions occur in Stream.__init__; init cost is reported separately from observe latency.",
+    "No truth, predictions, held outcomes, geometry labels, or force labels are read."
+  ]
+}

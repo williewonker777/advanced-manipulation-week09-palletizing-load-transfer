@@ -1,0 +1,83 @@
+{
+  "status": "rejected; not in submitted detector",
+  "source_sha256": "801098d6f14e23819d1832e3f5b41e4246a3b7ff1f31837fea472ba959c4cf86",
+  "design_sha256": "1f8274c36b76a5a274bf3f681253da54cc3716cd69aa2342bc1c7b1779c2050f",
+  "review_sha256": "3bfb8eda5b2b950c78fdc75b7f6fe19377eb69b4001fd0fbf46fb14bc16c9181",
+  "independent_checks_sha256": "d404c4de1ee04c14140d87218c86799ff1ff474132d357715af44d7a72518329",
+  "scores": {
+    "baseline": 58,
+    "candidate": 62
+  },
+  "gain": 4,
+  "gates": {
+    "additional_detected": false,
+    "combined_worst_episode_p99_le800": false,
+    "event_loss": true,
+    "matched_references": false,
+    "per_case_FA_increase": true,
+    "physical_8_arrays_byte_equal": true,
+    "reference_FA_zero": true,
+    "tool_loss": true
+  },
+  "post_review_matched_all_collision_refs": true,
+  "reference_note": "Reviewer incorrectly required paired reference IDs for offset rows too. All 90 collision pairs are valid. Correcting this does not change rejection.",
+  "gate_min_additional": 6,
+  "control": "r1_torque.py",
+  "conditions": [
+    {
+      "kind": "collision",
+      "stiffness_scale": 1.0,
+      "viscous_scale": 1.0,
+      "coulomb_scale": 1.0,
+      "rows": 90,
+      "gains": 4,
+      "losses": 0,
+      "tool_losses": 0,
+      "FA_increased_cases": 0,
+      "baseline_FA": 1,
+      "candidate_FA": 1
+    },
+    {
+      "kind": "offset",
+      "stiffness_scale": 1.0,
+      "viscous_scale": 1.0,
+      "coulomb_scale": 1.0,
+      "rows": 12,
+      "gains": 0,
+      "losses": 0,
+      "tool_losses": 0,
+      "FA_increased_cases": 0,
+      "baseline_FA": 3,
+      "candidate_FA": 3
+    },
+    {
+      "kind": "reference",
+      "stiffness_scale": 1.0,
+      "viscous_scale": 1.0,
+      "coulomb_scale": 1.0,
+      "rows": 12,
+      "gains": 0,
+      "losses": 0,
+      "tool_losses": 0,
+      "FA_increased_cases": 0,
+      "baseline_FA": 0,
+      "candidate_FA": 0
+    }
+  ],
+  "timing": {
+    "baseline": {
+      "p99_us": 485.27231000000006,
+      "maximum_us": 884.301,
+      "maximum_cpu_us": 881.817,
+      "ge1ms_cycles": 0,
+      "cycles": 684000
+    },
+    "candidate": {
+      "p99_us": 808.62339,
+      "maximum_us": 1244.902,
+      "maximum_cpu_us": 1240.776,
+      "ge1ms_cycles": 10,
+      "cycles": 684000
+    }
+  }
+}

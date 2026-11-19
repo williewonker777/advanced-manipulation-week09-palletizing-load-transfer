@@ -1,0 +1,995 @@
+{
+  "schema": "r15-horizontal-sensing-report.v1",
+  "scope": "Known mass/COM; free-body pose is withheld until scoring. Research perturbations are not an original-kit option. No official scores or collision trials here.",
+  "domains": {
+    "stock": {
+      "metrics": {
+        "count": 20,
+        "vector_point_rmse_mm": 0.09007968296320924,
+        "max_point_error_mm": 0.11861938755737682,
+        "max_action_error_mm": 0.11861938755737682,
+        "zero_action_rmse_mm": 7.1346092464744135,
+        "action_rmse_mm": 0.0707969228177644,
+        "accepted": 12,
+        "accepted_interval_misses": 0,
+        "tiny_n": 8,
+        "false_tiny_actions": 0,
+        "big_n": 12,
+        "big_signed": 12,
+        "qualified": true
+      },
+      "guard_mm": 0.14725169246239428,
+      "explicit_zero_audit": [
+        {
+          "id": "j",
+          "physics_digest_match": {
+            "q": true,
+            "tau": true,
+            "f_tool": true,
+            "f_table": true,
+            "r": true,
+            "detect": true
+          },
+          "default_tool_peak_n": 0.0,
+          "enabled_tool_peak_n": 0.0,
+          "true_xy_change_mm": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "k",
+          "physics_digest_match": {
+            "q": true,
+            "tau": true,
+            "f_tool": true,
+            "f_table": true,
+            "r": true,
+            "detect": true
+          },
+          "default_tool_peak_n": 0.0,
+          "enabled_tool_peak_n": 0.0,
+          "true_xy_change_mm": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "l",
+          "physics_digest_match": {
+            "q": true,
+            "tau": true,
+            "f_tool": true,
+            "f_table": true,
+            "r": true,
+            "detect": true
+          },
+          "default_tool_peak_n": 0.0,
+          "enabled_tool_peak_n": 0.0,
+          "true_xy_change_mm": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "m",
+          "physics_digest_match": {
+            "q": true,
+            "tau": true,
+            "f_tool": true,
+            "f_table": true,
+            "r": true,
+            "detect": true
+          },
+          "default_tool_peak_n": 0.0,
+          "enabled_tool_peak_n": 0.0,
+          "true_xy_change_mm": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "predictions_sha256": "6d1be249610bff19d1dfb60c83ab1b9556971c74f8eb2e035e4b9886030fe235",
+      "cases": [
+        {
+          "id": "j",
+          "variant": "none",
+          "relative_xy_mm": [
+            0.06867162937946347,
+            -0.024394273939819494
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 0.9636737022747807,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "j",
+          "variant": "explicit_zero",
+          "relative_xy_mm": [
+            0.06867162937946347,
+            -0.024394273939819494
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 0.9636737022747807,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "j",
+          "variant": "xy",
+          "relative_xy_mm": [
+            -5.4335951558932445,
+            -7.039972755745399
+          ],
+          "model_action_xy_mm": [
+            -5.4335951558932445,
+            -7.039972755745399
+          ],
+          "true_xy_mm": [
+            -5.496577123234231,
+            -7.00296607691046
+          ],
+          "halfwidth_radius_mm": 0.9706619103189832,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "j",
+          "variant": "up",
+          "relative_xy_mm": [
+            -2.601703294095396,
+            -10.817534868320157
+          ],
+          "model_action_xy_mm": [
+            -2.601703294095396,
+            -10.817534868320157
+          ],
+          "true_xy_mm": [
+            -2.693408892599898,
+            -10.803004694120482
+          ],
+          "halfwidth_radius_mm": 0.961342919312237,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "j",
+          "variant": "down",
+          "relative_xy_mm": [
+            -5.411721427556423,
+            -7.014799899853399
+          ],
+          "model_action_xy_mm": [
+            -5.411721427556423,
+            -7.014799899853399
+          ],
+          "true_xy_mm": [
+            -5.499841381551211,
+            -6.995426507190898
+          ],
+          "halfwidth_radius_mm": 1.0301269672819677,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "k",
+          "variant": "none",
+          "relative_xy_mm": [
+            -0.09395200961045924,
+            0.047595664902922385
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 0.9788002169908133,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "k",
+          "variant": "explicit_zero",
+          "relative_xy_mm": [
+            -0.09395200961045924,
+            0.047595664902922385
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 0.9788002169908133,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "k",
+          "variant": "xy",
+          "relative_xy_mm": [
+            5.930370689883915,
+            -4.434529455317235
+          ],
+          "model_action_xy_mm": [
+            5.930370689883915,
+            -4.434529455317235
+          ],
+          "true_xy_mm": [
+            6.0024089526309785,
+            -4.49703324387454
+          ],
+          "halfwidth_radius_mm": 0.9910623602965407,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "k",
+          "variant": "up",
+          "relative_xy_mm": [
+            9.131627919307832,
+            -9.006607852850607
+          ],
+          "model_action_xy_mm": [
+            9.131627919307832,
+            -9.006607852850607
+          ],
+          "true_xy_mm": [
+            9.24185855794458,
+            -9.050422980491888
+          ],
+          "halfwidth_radius_mm": 0.9943512079055878,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "k",
+          "variant": "down",
+          "relative_xy_mm": [
+            5.88327580186538,
+            -4.475109101804244
+          ],
+          "model_action_xy_mm": [
+            5.88327580186538,
+            -4.475109101804244
+          ],
+          "true_xy_mm": [
+            5.997821688834599,
+            -4.49585068470693
+          ],
+          "halfwidth_radius_mm": 1.008905089883456,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "l",
+          "variant": "none",
+          "relative_xy_mm": [
+            -0.03298937802347998,
+            0.0683344159696421
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 0.9527754804401282,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "l",
+          "variant": "explicit_zero",
+          "relative_xy_mm": [
+            -0.03298937802347998,
+            0.0683344159696421
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 0.9527754804401282,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "l",
+          "variant": "xy",
+          "relative_xy_mm": [
+            -7.523813425793241,
+            5.069190591997015
+          ],
+          "model_action_xy_mm": [
+            -7.523813425793241,
+            5.069190591997015
+          ],
+          "true_xy_mm": [
+            -7.502862219855942,
+            4.996457085167024
+          ],
+          "halfwidth_radius_mm": 0.9512397484166946,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "l",
+          "variant": "up",
+          "relative_xy_mm": [
+            -5.282535402935802,
+            1.8535035490792353
+          ],
+          "model_action_xy_mm": [
+            -5.282535402935802,
+            1.8535035490792353
+          ],
+          "true_xy_mm": [
+            -5.250192247931757,
+            1.7940797801812187
+          ],
+          "halfwidth_radius_mm": 0.9513691103589264,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "l",
+          "variant": "down",
+          "relative_xy_mm": [
+            -7.538828321206546,
+            5.056491030018708
+          ],
+          "model_action_xy_mm": [
+            -7.538828321206546,
+            5.056491030018708
+          ],
+          "true_xy_mm": [
+            -7.506333121796775,
+            4.997349996895979
+          ],
+          "halfwidth_radius_mm": 0.9395716683924882,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "m",
+          "variant": "none",
+          "relative_xy_mm": [
+            0.053474807754967546,
+            -0.07746484867398017
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 0.9782048129727219,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "m",
+          "variant": "explicit_zero",
+          "relative_xy_mm": [
+            0.053474807754967546,
+            -0.07746484867398017
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 0.9782048129727219,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "m",
+          "variant": "xy",
+          "relative_xy_mm": [
+            5.068879810802037,
+            7.945658844923142
+          ],
+          "model_action_xy_mm": [
+            5.068879810802037,
+            7.945658844923142
+          ],
+          "true_xy_mm": [
+            4.996032008238468,
+            8.002791604955204
+          ],
+          "halfwidth_radius_mm": 0.9381001638302764,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "m",
+          "variant": "up",
+          "relative_xy_mm": [
+            8.718446321105233,
+            2.969242701791373
+          ],
+          "model_action_xy_mm": [
+            8.718446321105233,
+            2.969242701791373
+          ],
+          "true_xy_mm": [
+            8.669978032276587,
+            3.042443307342136
+          ],
+          "halfwidth_radius_mm": 0.9277381797607981,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "m",
+          "variant": "down",
+          "relative_xy_mm": [
+            5.05597596938532,
+            7.932299850183395
+          ],
+          "model_action_xy_mm": [
+            5.05597596938532,
+            7.932299850183395
+          ],
+          "true_xy_mm": [
+            4.992382317107394,
+            8.011331537168422
+          ],
+          "halfwidth_radius_mm": 0.94357018177,
+          "accept": true,
+          "covered": true
+        }
+      ]
+    },
+    "perturbed": {
+      "metrics": {
+        "count": 20,
+        "vector_point_rmse_mm": 0.8790872367791943,
+        "max_point_error_mm": 0.9926942622069104,
+        "max_action_error_mm": 0.9926942622069104,
+        "zero_action_rmse_mm": 7.353711980092816,
+        "action_rmse_mm": 0.7135572250817694,
+        "accepted": 12,
+        "accepted_interval_misses": 0,
+        "tiny_n": 8,
+        "false_tiny_actions": 0,
+        "big_n": 12,
+        "big_signed": 12,
+        "qualified": true
+      },
+      "guard_mm": 1.0647692206301977,
+      "explicit_zero_audit": [
+        {
+          "id": "j",
+          "physics_digest_match": {
+            "q": true,
+            "tau": true,
+            "f_tool": true,
+            "f_table": true,
+            "r": true,
+            "detect": true
+          },
+          "default_tool_peak_n": 0.0,
+          "enabled_tool_peak_n": 0.0,
+          "true_xy_change_mm": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "k",
+          "physics_digest_match": {
+            "q": false,
+            "tau": false,
+            "f_tool": false,
+            "f_table": false,
+            "r": false,
+            "detect": true
+          },
+          "default_tool_peak_n": 0.0,
+          "enabled_tool_peak_n": 13.774919123647742,
+          "true_xy_change_mm": [
+            0.20048706260555882,
+            -0.28175265893680757
+          ]
+        },
+        {
+          "id": "l",
+          "physics_digest_match": {
+            "q": true,
+            "tau": true,
+            "f_tool": true,
+            "f_table": true,
+            "r": true,
+            "detect": true
+          },
+          "default_tool_peak_n": 0.0,
+          "enabled_tool_peak_n": 0.0,
+          "true_xy_change_mm": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "m",
+          "physics_digest_match": {
+            "q": false,
+            "tau": false,
+            "f_tool": false,
+            "f_table": false,
+            "r": false,
+            "detect": false
+          },
+          "default_tool_peak_n": 0.0,
+          "enabled_tool_peak_n": 24.194728453208413,
+          "true_xy_change_mm": [
+            0.5512634831361637,
+            -0.712699111691752
+          ]
+        }
+      ],
+      "predictions_sha256": "e5f4fde9d0ab43ae77d47c04c4c76e63d5d72aa1919b9ade92cbe1126f1aca3a",
+      "cases": [
+        {
+          "id": "j",
+          "variant": "none",
+          "relative_xy_mm": [
+            0.4734369843227919,
+            -0.8718820947422349
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 2.0280580887567283,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "j",
+          "variant": "explicit_zero",
+          "relative_xy_mm": [
+            0.4734369843227919,
+            -0.8718820947422349
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 2.0280580887567283,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "j",
+          "variant": "xy",
+          "relative_xy_mm": [
+            -5.034676837365997,
+            -7.866897616753392
+          ],
+          "model_action_xy_mm": [
+            -5.034676837365997,
+            -7.866897616753392
+          ],
+          "true_xy_mm": [
+            -5.504082779472707,
+            -6.997063675324514
+          ],
+          "halfwidth_radius_mm": 2.0108422693217713,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "j",
+          "variant": "up",
+          "relative_xy_mm": [
+            -3.4075058211462217,
+            -10.110313424392796
+          ],
+          "model_action_xy_mm": [
+            -3.4075058211462217,
+            -10.110313424392796
+          ],
+          "true_xy_mm": [
+            -3.878930597052373,
+            -9.241148484758233
+          ],
+          "halfwidth_radius_mm": 2.009407003816851,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "j",
+          "variant": "down",
+          "relative_xy_mm": [
+            -5.041949098172732,
+            -7.855450434510524
+          ],
+          "model_action_xy_mm": [
+            -5.041949098172732,
+            -7.855450434510524
+          ],
+          "true_xy_mm": [
+            -5.506842191604874,
+            -6.988896157299026
+          ],
+          "halfwidth_radius_mm": 1.9976133846071722,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "k",
+          "variant": "none",
+          "relative_xy_mm": [
+            -0.6454783463390994,
+            0.7423818622861571
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 1.9661655334047892,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "k",
+          "variant": "explicit_zero",
+          "relative_xy_mm": [
+            -0.4574336060111902,
+            0.45693448601686004
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.20048706260555882,
+            -0.28175265893680757
+          ],
+          "halfwidth_radius_mm": 1.9521449980042167,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "k",
+          "variant": "xy",
+          "relative_xy_mm": [
+            5.553293620091069,
+            -4.028944679135316
+          ],
+          "model_action_xy_mm": [
+            5.553293620091069,
+            -4.028944679135316
+          ],
+          "true_xy_mm": [
+            6.208063343545918,
+            -4.770992408345256
+          ],
+          "halfwidth_radius_mm": 1.9649936894593227,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "k",
+          "variant": "up",
+          "relative_xy_mm": [
+            9.791058841855003,
+            -9.722942487844673
+          ],
+          "model_action_xy_mm": [
+            9.791058841855003,
+            -9.722942487844673
+          ],
+          "true_xy_mm": [
+            10.45020476630179,
+            -10.462598374604093
+          ],
+          "halfwidth_radius_mm": 1.9803928935689041,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "k",
+          "variant": "down",
+          "relative_xy_mm": [
+            5.342689963989761,
+            -3.7484266395669987
+          ],
+          "model_action_xy_mm": [
+            5.342689963989761,
+            -3.7484266395669987
+          ],
+          "true_xy_mm": [
+            6.001100345815756,
+            -4.491351714740983
+          ],
+          "halfwidth_radius_mm": 1.9472431886915056,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "l",
+          "variant": "none",
+          "relative_xy_mm": [
+            0.3928612866544168,
+            -0.25966670948648896
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 1.920810412951597,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "l",
+          "variant": "explicit_zero",
+          "relative_xy_mm": [
+            0.3928612866544168,
+            -0.25966670948648896
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 1.920810412951597,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "l",
+          "variant": "xy",
+          "relative_xy_mm": [
+            -7.116863264980503,
+            4.738541177250661
+          ],
+          "model_action_xy_mm": [
+            -7.116863264980503,
+            4.738541177250661
+          ],
+          "true_xy_mm": [
+            -7.500243472811775,
+            5.000402154098773
+          ],
+          "halfwidth_radius_mm": 1.9191451041217231,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "l",
+          "variant": "up",
+          "relative_xy_mm": [
+            -5.481012645218235,
+            2.373189494232939
+          ],
+          "model_action_xy_mm": [
+            -5.481012645218235,
+            2.373189494232939
+          ],
+          "true_xy_mm": [
+            -5.859538593724306,
+            2.6360981030352626
+          ],
+          "halfwidth_radius_mm": 1.9280820734181496,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "l",
+          "variant": "down",
+          "relative_xy_mm": [
+            -7.128526844456386,
+            4.722232637907322
+          ],
+          "model_action_xy_mm": [
+            -7.128526844456386,
+            4.722232637907322
+          ],
+          "true_xy_mm": [
+            -7.5036542174699425,
+            5.001466074689855
+          ],
+          "halfwidth_radius_mm": 1.9291283700211002,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "m",
+          "variant": "none",
+          "relative_xy_mm": [
+            -0.5159518726525298,
+            0.8073689635621506
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "halfwidth_radius_mm": 1.9345377875363232,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "m",
+          "variant": "explicit_zero",
+          "relative_xy_mm": [
+            0.02970886349213675,
+            0.09691997298646948
+          ],
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "true_xy_mm": [
+            0.5512634831361637,
+            -0.712699111691752
+          ],
+          "halfwidth_radius_mm": 1.9298695091929186,
+          "accept": false,
+          "covered": true
+        },
+        {
+          "id": "m",
+          "variant": "xy",
+          "relative_xy_mm": [
+            4.9856799438652635,
+            8.114289427215548
+          ],
+          "model_action_xy_mm": [
+            4.9856799438652635,
+            8.114289427215548
+          ],
+          "true_xy_mm": [
+            5.520261655320279,
+            7.313919341808085
+          ],
+          "halfwidth_radius_mm": 1.905038684801041,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "m",
+          "variant": "up",
+          "relative_xy_mm": [
+            9.799343241425515,
+            1.9982232619484668
+          ],
+          "model_action_xy_mm": [
+            9.799343241425515,
+            1.9982232619484668
+          ],
+          "true_xy_mm": [
+            10.351336744318354,
+            1.2302299095192684
+          ],
+          "halfwidth_radius_mm": 1.9519607685214138,
+          "accept": true,
+          "covered": true
+        },
+        {
+          "id": "m",
+          "variant": "down",
+          "relative_xy_mm": [
+            4.461718656599456,
+            8.821181282721222
+          ],
+          "model_action_xy_mm": [
+            4.461718656599456,
+            8.821181282721222
+          ],
+          "true_xy_mm": [
+            4.981334509951843,
+            8.017258663136372
+          ],
+          "halfwidth_radius_mm": 1.9059038041489254,
+          "accept": true,
+          "covered": true
+        }
+      ]
+    }
+  },
+  "portable_stock_check": {
+    "schema": "r15-payload-audit.v1",
+    "pins": {
+      "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "estimator": "79d3fe1c90e06fd89aa0b75b51097528723ce7413468a453a20bbe41421fe0d9",
+      "registration": "7da9c3e79d6dca610cff6e8048410783c3ceb03a58211f1ad30328e219944b04",
+      "r14_plan": "c7b9ee36195e429305be27b822081f664979a75ef41a761117e7b31531e3cfeb",
+      "sensing": "2a0a2462985a3d6b9198990759c7354d271f0e4202f20675544dac1cd8761470",
+      "r15_plan": "6272df152d925d55c4cfaef7d7efe63e4232e60c641d122e588aa6a5294fb14c",
+      "base_audit": "1651baab2a1d3e3ae91e8d523f10e5edab4a3568dd9f8c7b3035ae7ddba5373e",
+      "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+      "audit": "cc7cf5833faf2dc6fbce16b00c26a71c119b1658fe030dc09aa4961f76735f68"
+    },
+    "scope": {
+      "mode": "torque",
+      "episodes": 32,
+      "calibration_episodes": 12,
+      "evaluation_episodes": 20,
+      "runner": "authenticated original stock sim.runner.run_episode",
+      "inference_deadline_s": 3.55,
+      "predictions_sealed_before_truth": true,
+      "retained_data": "derived JSON only; no raw sensor captures or kit copies",
+      "research_perturbations_applied": false,
+      "collision_episodes": 0
+    },
+    "prediction_seal_sha256": "f0b82a3c1f5678cdffc875eef68c1a6498f6829b5fe601fb3085c653def83895",
+    "metrics": {
+      "count": 20,
+      "vector_point_rmse_mm": 0.09007968296320924,
+      "max_point_error_mm": 0.11861938755737682,
+      "max_action_error_mm": 0.11861938755737682,
+      "zero_action_rmse_mm": 7.1346092464744135,
+      "action_rmse_mm": 0.0707969228177644,
+      "accepted": 12,
+      "abstained": 8,
+      "accepted_interval_misses": 0,
+      "tiny_n": 8,
+      "false_tiny_actions": 0,
+      "big_n": 12,
+      "big_signed": 12,
+      "qualified": true
+    },
+    "accepted": 12,
+    "abstained": 8,
+    "decision": "stock sensing qualification passed"
+  }
+}

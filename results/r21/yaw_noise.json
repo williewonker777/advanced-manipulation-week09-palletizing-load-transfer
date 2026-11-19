@@ -1,0 +1,606 @@
+{
+  "schema": "r21-yaw-normal-and-seeds.v1",
+  "global_normal_bounds_Nm": [
+    3.23779270273884,
+    5.111942835466052
+  ],
+  "normal_episodes": 32,
+  "normal_bins_sha256": "5f22f640eb8824f764ffeec7ecbef7ba23df02a874547b93b8ddc72925e25c15",
+  "authored_pins": {
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "experiments/r20_horizontal/candidate_detector.py": "1770c36e002404a660c9cfc1ef45ddbb6cb1f53a3ec973c82b760e60881e7025",
+    "experiments/r18_paired_impulses/runner.py": "7592d38f96515392cd27d0c8593d1edebca4f54f38f88abf0fe9367984c453fa",
+    "experiments/r21_weak_challenge/evaluator.py": "690d77d962c74907aab2123f5b2d1cd55e562fb0c9db9eb699e644cb7f3ac6f7",
+    "experiments/r21_yaw_impulse/state.py": "f04d46e93c55e04aa869050fe43c895951f3a970e3729b01e8d94744532f3a9f",
+    "experiments/r21_yaw_impulse/detector.py": "69e1e884f393a17751546165554f994c19b0cb127830233fba1f2329481c87cb",
+    "experiments/r21_yaw_impulse/frozen.py": "71a75f131ea6d3aae94f9acf40c42abe92d9123000d86e685f8bb5f4a00a4342",
+    "experiments/r21_yaw_impulse/coarse.py": "f3a8a4202e638346dfa6a7994b056cbf509be4f335fb09c76d6657d47abcafe9",
+    "experiments/r21_yaw_impulse/calibrate.py": "51401a186eb80626521e0732a25d510b9e115a79b08385e6753530a91a039c1d",
+    "experiments/r21_yaw_impulse/coarse_calibration.py": "47195ec46c77294db727460c3abef62d035429172376c8dd7e28082c988d35dc",
+    "experiments/r21_yaw_impulse/plan.json": "9bf0d56cc25848e946721264f48d5d6c4a053246e58331ec7561fb42a42b93a2",
+    "experiments/r21_yaw_impulse/normal_bins.json": "5f22f640eb8824f764ffeec7ecbef7ba23df02a874547b93b8ddc72925e25c15",
+    "experiments/r21_yaw_impulse/noise.py": "e84f201f43fcd25aeca33a8dfa513b0172ba41ca6a14f13f66cec4ae1385dc88",
+    "experiments/r21_yaw_impulse/noise_plan.json": "98916c7a19bed46bf4963cd3683892a4d2b6f9e36179e6063b2c990e83da66cc"
+  },
+  "fixture": "Only JTS_SEED differs inside each alternative physics copy; exposed geometry.",
+  "noise_episodes": 48,
+  "seeds": [
+    {
+      "seed": 11,
+      "fixture_config_sha256": "ea8dea38025f7ff16b33249dd2963fa742baacc8ebf139f257f4c69e7aa39d27",
+      "episodes": 12,
+      "rows": [
+        {
+          "seed": 11,
+          "mass": 0,
+          "time": 1.42,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 43.00000000000015,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                1.463
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 11,
+          "mass": 0,
+          "time": 3.86,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 90.0000000000003,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                3.95
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 11,
+          "mass": 8,
+          "time": 1.42,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 43.00000000000015,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                1.463
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 11,
+          "mass": 8,
+          "time": 3.86,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 90.0000000000003,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                3.95
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        }
+      ]
+    },
+    {
+      "seed": 29,
+      "fixture_config_sha256": "b05e114a614a6a9974fddb9f7ebe7b627dc56d35f5c6b4889e6e4d9acdb4f09a",
+      "episodes": 12,
+      "rows": [
+        {
+          "seed": 29,
+          "mass": 0,
+          "time": 1.42,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 45.00000000000015,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                1.465
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 29,
+          "mass": 0,
+          "time": 3.86,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 89.00000000000041,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                3.9490000000000003
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 29,
+          "mass": 8,
+          "time": 1.42,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 44.00000000000004,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                1.464
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 29,
+          "mass": 8,
+          "time": 3.86,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 89.00000000000041,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                3.9490000000000003
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        }
+      ]
+    },
+    {
+      "seed": 41,
+      "fixture_config_sha256": "07db2a9408e2d978fdc9f0b7767d72b49efaa8d24f142f1bcdf47c5b1968e9c5",
+      "episodes": 12,
+      "rows": [
+        {
+          "seed": 41,
+          "mass": 0,
+          "time": 1.42,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 44.00000000000004,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                1.464
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 41,
+          "mass": 0,
+          "time": 3.86,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 86.0000000000003,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                3.946
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 41,
+          "mass": 8,
+          "time": 1.42,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 46.00000000000004,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                1.466
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 41,
+          "mass": 8,
+          "time": 3.86,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 86.0000000000003,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                3.946
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        }
+      ]
+    },
+    {
+      "seed": 53,
+      "fixture_config_sha256": "16651cefcaad666d8e82a5e65534b33c49024ef184ccbafc7b45a1f8be5aea14",
+      "episodes": 12,
+      "rows": [
+        {
+          "seed": 53,
+          "mass": 0,
+          "time": 1.42,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 45.00000000000015,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                1.465
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 53,
+          "mass": 0,
+          "time": 3.86,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 87.00000000000018,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                3.947
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 53,
+          "mass": 8,
+          "time": 1.42,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 47.000000000000156,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                1.467
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        },
+        {
+          "seed": 53,
+          "mass": 8,
+          "time": 3.86,
+          "scores": {
+            "r20": {
+              "official": "missed",
+              "strict_true_positive": false,
+              "delay_ms": null,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [],
+              "normal_false": [],
+              "window_rises": 0
+            },
+            "yaw": {
+              "official": "detected",
+              "strict_true_positive": true,
+              "delay_ms": 97.00000000000043,
+              "alarm_before": false,
+              "reference_twin": false,
+              "false_rise_times": [],
+              "all_rise_times": [
+                3.9570000000000003
+              ],
+              "normal_false": [],
+              "window_rises": 1
+            }
+          },
+          "physics_force_and_prefix_exact": true,
+          "added_normal_false": [],
+          "added_force_false": []
+        }
+      ]
+    }
+  ],
+  "strict_of_16": {
+    "r20": 0,
+    "yaw": 16
+  }
+}

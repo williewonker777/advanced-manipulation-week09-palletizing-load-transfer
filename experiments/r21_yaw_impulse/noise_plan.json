@@ -1,0 +1,8 @@
+{
+  "schema": "r21-yaw-seed-check.v1",
+  "classification": "Exposed official force geometry and earlier pick-wrench seed set; new test of the unchanged yaw arm on these sensor sequences, not hidden mechanics.",
+  "seeds": [11, 29, 41, 53], "masses": [0, 8], "com": [0.02, -0.01, 0.03],
+  "time": [1.42, 3.86], "force": [0, 10, 0], "reference_radius_ms": 20,
+  "allowed_config_change": "Only the sensor noise seed in a temporary copy, after authenticating the original local kit.",
+  "scoring": "R20 and fixed R21 yaw: one clean reference plus both single impulses per seed/mass. Report strict twin-attributed detections, duplicate rises in the window, every added unmatched false rise and bitwise physical equality; do not adjust the model."
+}

@@ -1,0 +1,28 @@
+{
+  "scope": "all D4 collision/offset rows whose payload activates the guard, plus matched references",
+  "baseline": "r1_servo",
+  "candidate": "experiments.r9_saturation.headroom_guard",
+  "detector": "experiments.r8_final.C1",
+  "source_sha256": {
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "headroom_guard.py": "773d1afe8da62a35c97281c22120354322121b6820a58f64044e5e64e774c228",
+    "C1.py": "3e3a67f75fcf795ec49d847b54ac72514d69bb17bc750f92478f1785e6d308e0"
+  },
+  "inventory_per_controller": {
+    "total": 4,
+    "matched_reference": 2,
+    "collision": 2,
+    "offset": 0
+  },
+  "gates": {
+    "baseline_detected_event_losses": 0,
+    "baseline_tool_event_losses": 0,
+    "conditions_with_increased_false_alarms": 0,
+    "candidate_saturated_episodes": 0,
+    "candidate_diverged": 0,
+    "normal_each_cost_ratio_max": 1.05
+  },
+  "classification": "existing tools.sweep.classify_rows with matched C1 references",
+  "development_only": true,
+  "no_retuning_after_run": true
+}

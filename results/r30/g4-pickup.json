@@ -1,0 +1,1304 @@
+{
+  "first": {
+    "classification": "post-disclosure known-case rejection; not blind evidence",
+    "entrypoint": "experiments.r30_g4_tool_innovation.candidate:Detector",
+    "episodes": 20,
+    "failed_protections": [
+      {
+        "case": "r29_tool_a_high",
+        "record": {
+          "active_delta": 8,
+          "added_rises": [
+            1352
+          ],
+          "baseline_rises": [
+            1125
+          ],
+          "candidate_rises": [
+            1125,
+            1352
+          ],
+          "force_exact": true,
+          "lost_rises": [],
+          "passed": false,
+          "physical_exact": true,
+          "tool": {
+            "delay_ms": 10,
+            "detected": true,
+            "peak_N": 171.03151159371888,
+            "prealarm": false,
+            "present": true
+          }
+        }
+      },
+      {
+        "case": "r29_tool_b_high",
+        "record": {
+          "active_delta": 8,
+          "added_rises": [
+            1322
+          ],
+          "baseline_rises": [
+            1091,
+            1329,
+            3903
+          ],
+          "candidate_rises": [
+            1090,
+            1322,
+            3903
+          ],
+          "force_exact": true,
+          "lost_rises": [
+            1329
+          ],
+          "passed": false,
+          "physical_exact": true,
+          "tool": {
+            "delay_ms": 9,
+            "detected": true,
+            "peak_N": 249.51970143248832,
+            "prealarm": false,
+            "present": true
+          }
+        }
+      },
+      {
+        "case": "r29_late_support_oblique",
+        "record": {
+          "active_delta": 8,
+          "added_rises": [
+            4003
+          ],
+          "baseline_rises": [
+            4103
+          ],
+          "candidate_rises": [
+            4003,
+            4103
+          ],
+          "force_exact": true,
+          "lost_rises": [],
+          "passed": false,
+          "physical_exact": true,
+          "tool": {
+            "delay_ms": null,
+            "detected": false,
+            "peak_N": 0.0,
+            "prealarm": false,
+            "present": false
+          }
+        },
+        "twin": "force"
+      }
+    ],
+    "hashes": {
+      "candidate_sha256": "27add785807587380fb0fc7f2ba58037d2e3a48c0c9edef77786f4a3775e1e8a",
+      "diagnostic_sha256": "4de490cd22d488a2b20fc0c5e05f48c7f564e58a9349fdbee0a1ae2f807361ce",
+      "known_result_sha256": "c78581443f1c67cb91b15d2ed0a55610522b92ac0f81c1cfff0438314ad68a71",
+      "known_runner_sha256": "94344189068b7590522469cc54c554eef399b845b945b921d05e20bd1e169084",
+      "plan_sha256": "7011cc008a75a4d9714c10f4c85776615d68249298817a0ead4db96fddf0a8fe"
+    },
+    "limits": [
+      "Only the published R29 weak case and disclosed known controls were used.",
+      "Programmed force and tool force were verification-only and are not candidate inputs."
+    ],
+    "matched_zero": {
+      "active_samples": 0,
+      "force_exact": true,
+      "passed": true,
+      "rises": [],
+      "tool": {
+        "delay_ms": null,
+        "detected": false,
+        "peak_N": 0.0,
+        "prealarm": false,
+        "present": false
+      }
+    },
+    "passed_controls": [
+      "r29_tool_a_zero",
+      "r29_tool_b_zero",
+      "r29_tool_c_high",
+      "r29_tool_c_zero",
+      "r29_pick_heavy_opposite_tool",
+      "r30_weak_zero_offset",
+      "r29_pick_center_ypos:none",
+      "r29_pick_center_ypos:force",
+      "r29_pick_center_yneg:none",
+      "r29_pick_center_yneg:force",
+      "r29_pick_noncenter_oblique:none",
+      "r29_pick_noncenter_oblique:force",
+      "r29_pick_light_ypos:none",
+      "r29_pick_light_ypos:force",
+      "r29_late_support_xpos:none",
+      "r29_late_support_xpos:force",
+      "r29_late_support_oblique:none"
+    ],
+    "schema": "r30-g4-tool-innovation-verdict.v1",
+    "status": "REJECTED_STOP",
+    "stopped": {
+      "candidate_changed_after_scoring": false,
+      "independent_offset_matrix_opened": false,
+      "official_sweep_opened": false,
+      "reason": "preregistered strong-tool/duplicate protection failed; no alternative permitted"
+    },
+    "target_gain": {
+      "active_delta": 8,
+      "added_rises": [
+        1318
+      ],
+      "attributable_after_contact": [
+        1318
+      ],
+      "baseline_rises": [],
+      "candidate_rises": [
+        1318
+      ],
+      "first_contact_tick": 1303,
+      "force_exact": true,
+      "last_contact_tick": 1346,
+      "lost_rises": [],
+      "passed": true,
+      "physical_exact": true,
+      "prealarm": false,
+      "tool": {
+        "delay_ms": 15,
+        "detected": true,
+        "peak_N": 24.319640971235213,
+        "prealarm": false,
+        "present": true
+      }
+    }
+  },
+  "limits": "Same fixed landing controller, not R10. First fresh 14 episodes preserved already-native contacts; none of the three distinct offset normals required a new rescue.",
+  "owner_independent": {
+    "episodes": 12,
+    "passed": false,
+    "records": [
+      {
+        "active_delta": 8,
+        "added_edges_physically_attributable": true,
+        "added_rises": [
+          1324
+        ],
+        "candidate_rises": [
+          1324
+        ],
+        "case": {
+          "com": [
+            0.029,
+            0.023,
+            0.044
+          ],
+          "id": "r30_offset_low",
+          "impact": null,
+          "mass": 6.1,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.0017,
+            0.0012,
+            0.001
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_offset_low",
+        "lost_native": [],
+        "memory_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "role": "weak_offset",
+        "tool": {
+          "delay_ms": 17,
+          "detected": true,
+          "peak_N": 21.542833918069583,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      {
+        "active_delta": 8,
+        "added_edges_physically_attributable": true,
+        "added_rises": [
+          1315
+        ],
+        "candidate_rises": [
+          1315
+        ],
+        "case": {
+          "com": [
+            0.029,
+            0.023,
+            0.044
+          ],
+          "id": "r30_offset_high",
+          "impact": null,
+          "mass": 6.1,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.0021,
+            0.0016,
+            0.0012
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_offset_high",
+        "lost_native": [
+          1323
+        ],
+        "memory_rises": [
+          1323
+        ],
+        "passed": false,
+        "physical_exact": true,
+        "role": "weak_offset",
+        "tool": {
+          "delay_ms": 16,
+          "detected": true,
+          "peak_N": 28.69620172315571,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      {
+        "active_delta": 0,
+        "added_edges_physically_attributable": true,
+        "added_rises": [],
+        "candidate_rises": [],
+        "case": {
+          "com": [
+            0.026,
+            0.02,
+            0.041
+          ],
+          "id": "r30_normal_low",
+          "impact": null,
+          "mass": 5.7,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_normal_low",
+        "lost_native": [],
+        "memory_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "role": "normal",
+        "tool": {
+          "delay_ms": null,
+          "detected": false,
+          "peak_N": 0.0,
+          "prealarm": false,
+          "present": false
+        }
+      },
+      {
+        "active_delta": 0,
+        "added_edges_physically_attributable": true,
+        "added_rises": [],
+        "candidate_rises": [],
+        "case": {
+          "com": [
+            0.031,
+            0.025,
+            0.046
+          ],
+          "id": "r30_normal_high",
+          "impact": null,
+          "mass": 6.5,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_normal_high",
+        "lost_native": [],
+        "memory_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "role": "normal",
+        "tool": {
+          "delay_ms": null,
+          "detected": false,
+          "peak_N": 0.0,
+          "prealarm": false,
+          "present": false
+        }
+      },
+      {
+        "active_delta": 8,
+        "added_edges_physically_attributable": true,
+        "added_rises": [
+          1318
+        ],
+        "candidate_rises": [
+          1318,
+          1725
+        ],
+        "case": {
+          "com": [
+            0.029,
+            0.023,
+            0.044
+          ],
+          "id": "r30_second_oblique",
+          "impact": [
+            1.675,
+            [
+              -10.0,
+              11.0,
+              0.0
+            ]
+          ],
+          "mass": 6.1,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.0019,
+            0.0014,
+            0.0011
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_second_oblique",
+        "lost_native": [],
+        "memory_rises": [
+          1725
+        ],
+        "passed": true,
+        "physical_exact": true,
+        "role": "second_external",
+        "tool": {
+          "delay_ms": 15,
+          "detected": true,
+          "peak_N": 24.319640971235213,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      {
+        "active_delta": 8,
+        "added_edges_physically_attributable": true,
+        "added_rises": [
+          1318
+        ],
+        "candidate_rises": [
+          1318,
+          1702
+        ],
+        "case": {
+          "com": [
+            0.029,
+            0.023,
+            0.044
+          ],
+          "id": "r30_second_negative_z",
+          "impact": [
+            1.655,
+            [
+              0.0,
+              0.0,
+              -15.0
+            ]
+          ],
+          "mass": 6.1,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.0019,
+            0.0014,
+            0.0011
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_second_negative_z",
+        "lost_native": [],
+        "memory_rises": [
+          1702
+        ],
+        "passed": true,
+        "physical_exact": true,
+        "role": "second_external",
+        "tool": {
+          "delay_ms": 15,
+          "detected": true,
+          "peak_N": 24.319640971235213,
+          "prealarm": false,
+          "present": true
+        }
+      }
+    ]
+  },
+  "schema": "r30-gripper-attempt-ownership-results.v1",
+  "source_report_sha256": {
+    "g4_attempt/independent": "019d1f1947f68f9c9592657e32bd827dad879da1a17570d3d4909f96a2d99f10",
+    "g4_attempt/known": "b733e51fde416f25242657f9df4580ed6c29b35ac7ef4f3cf89d9454492be05d",
+    "g4_tool/verdict": "8c06c4085e19c99fc69b4e3b971d25f93181193366a2801a90e3231eda940183",
+    "g4_unload/diagnosis": "d56a596b60b065349266e5a27553ed27be1635ce60acffa034c1e54b151e3acd",
+    "g4_unload/fresh": "6cb6b18697fffc3b10011eb7ebaa2103a910f23e760977686df25bcadf7f60de",
+    "g4_unload/known": "cefc33a0539dd987414dca421dd6f7d4a263283dfc2222875f50f7ce74c216e8",
+    "g4_unload/known-offsets": "26da557140a98980d73b868be63a252947341ecc5205d8116921815a58464358"
+  },
+  "unload_first_fresh": {
+    "classification": "prelocked post-freeze development matrix; not blind evidence",
+    "episodes": 14,
+    "passed": true,
+    "rows": [
+      {
+        "active_delta": 0,
+        "added_rises": [],
+        "candidate_rises": [
+          1323
+        ],
+        "case": {
+          "com": [
+            0.029,
+            0.023,
+            0.044
+          ],
+          "id": "r30_fresh_offset_1",
+          "impact": null,
+          "mass": 6.1,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.00175,
+            0.0013,
+            0.00105
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_fresh_offset_1",
+        "lost_native": [],
+        "memory_rises": [
+          1323
+        ],
+        "passed": true,
+        "physical_exact": true,
+        "role": "offset",
+        "tool": {
+          "delay_ms": 18,
+          "detected": true,
+          "peak_N": 23.106517439307773,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      {
+        "active_delta": 0,
+        "added_rises": [],
+        "candidate_rises": [
+          1323
+        ],
+        "case": {
+          "com": [
+            0.029,
+            0.023,
+            0.044
+          ],
+          "id": "r30_fresh_offset_2",
+          "impact": null,
+          "mass": 6.1,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.002,
+            0.0015,
+            0.00115
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_fresh_offset_2",
+        "lost_native": [],
+        "memory_rises": [
+          1323
+        ],
+        "passed": true,
+        "physical_exact": true,
+        "role": "offset",
+        "tool": {
+          "delay_ms": 22,
+          "detected": true,
+          "peak_N": 25.286602337631177,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      {
+        "active_delta": 0,
+        "added_rises": [],
+        "candidate_rises": [
+          1312
+        ],
+        "case": {
+          "com": [
+            0.029,
+            0.023,
+            0.044
+          ],
+          "id": "r30_fresh_offset_3",
+          "impact": null,
+          "mass": 6.1,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.00225,
+            0.0017,
+            0.00125
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_fresh_offset_3",
+        "lost_native": [],
+        "memory_rises": [
+          1312
+        ],
+        "passed": true,
+        "physical_exact": true,
+        "role": "offset",
+        "tool": {
+          "delay_ms": 15,
+          "detected": true,
+          "peak_N": 30.00396556352392,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      {
+        "active_delta": 0,
+        "added_rises": [],
+        "candidate_rises": [],
+        "case": {
+          "com": [
+            0.027,
+            0.021,
+            0.042
+          ],
+          "id": "r30_fresh_normal_1",
+          "impact": null,
+          "mass": 5.9,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_fresh_normal_1",
+        "lost_native": [],
+        "memory_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "role": "normal",
+        "tool": {
+          "delay_ms": null,
+          "detected": false,
+          "peak_N": 0.0,
+          "prealarm": false,
+          "present": false
+        }
+      },
+      {
+        "active_delta": 0,
+        "added_rises": [],
+        "candidate_rises": [],
+        "case": {
+          "com": [
+            0.03,
+            0.024,
+            0.045
+          ],
+          "id": "r30_fresh_normal_2",
+          "impact": null,
+          "mass": 6.3,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_fresh_normal_2",
+        "lost_native": [],
+        "memory_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "role": "normal",
+        "tool": {
+          "delay_ms": null,
+          "detected": false,
+          "peak_N": 0.0,
+          "prealarm": false,
+          "present": false
+        }
+      },
+      {
+        "active_delta": 8,
+        "added_rises": [
+          1353
+        ],
+        "candidate_rises": [
+          1353,
+          1702
+        ],
+        "case": {
+          "com": [
+            0.029,
+            0.023,
+            0.044
+          ],
+          "id": "r30_fresh_later_oblique",
+          "impact": [
+            1.665,
+            [
+              11.0,
+              -9.0,
+              0.0
+            ]
+          ],
+          "mass": 6.1,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.0019,
+            0.0014,
+            0.0011
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_fresh_later_oblique",
+        "lost_native": [],
+        "memory_rises": [
+          1702
+        ],
+        "passed": true,
+        "physical_exact": true,
+        "role": "later_external",
+        "tool": {
+          "delay_ms": 50,
+          "detected": true,
+          "peak_N": 24.319640971235213,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      {
+        "active_delta": 8,
+        "added_rises": [
+          1353
+        ],
+        "candidate_rises": [
+          1353,
+          1699
+        ],
+        "case": {
+          "com": [
+            0.029,
+            0.023,
+            0.044
+          ],
+          "id": "r30_fresh_later_negative_z",
+          "impact": [
+            1.645,
+            [
+              0.0,
+              0.0,
+              -15.0
+            ]
+          ],
+          "mass": 6.1,
+          "mechanics": {
+            "dof_damping_scale": 0.945,
+            "suction_solref_time_scale": 1.055,
+            "table_friction_scale": 0.945,
+            "table_solref_time_scale": 1.015,
+            "torque_deadband_nm": 0.028
+          },
+          "offset": [
+            0.0019,
+            0.0014,
+            0.0011
+          ],
+          "phase": "pickup"
+        },
+        "force_exact": true,
+        "id": "r30_fresh_later_negative_z",
+        "lost_native": [],
+        "memory_rises": [
+          1699
+        ],
+        "passed": true,
+        "physical_exact": true,
+        "role": "later_external",
+        "tool": {
+          "delay_ms": 50,
+          "detected": true,
+          "peak_N": 24.319640971235213,
+          "prealarm": false,
+          "present": true
+        }
+      }
+    ],
+    "schema": "r30-g4-unload-notice-fresh.v1"
+  },
+  "unload_known": {
+    "classification": "post-disclosure known gates; not blind evidence",
+    "episodes": 20,
+    "passed": true,
+    "records": {
+      "r29_pick_heavy_opposite_tool": {
+        "active_delta": 8,
+        "added_rises": [
+          1353
+        ],
+        "attributable_after_contact": [
+          1353
+        ],
+        "baseline_rises": [],
+        "candidate_rises": [
+          1353
+        ],
+        "first_contact_tick": 1303,
+        "force_exact": true,
+        "last_contact_tick": 1346,
+        "lost_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "prealarm": false,
+        "tool": {
+          "delay_ms": 50,
+          "detected": true,
+          "peak_N": 24.319640971235213,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      "r29_tool_a_high": {
+        "active_delta": 0,
+        "added_rises": [],
+        "baseline_rises": [
+          1125
+        ],
+        "candidate_rises": [
+          1125
+        ],
+        "force_exact": true,
+        "lost_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "tool": {
+          "delay_ms": 10,
+          "detected": true,
+          "peak_N": 171.03151159371888,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      "r29_tool_a_zero": {
+        "active_delta": 0,
+        "added_rises": [],
+        "baseline_rises": [],
+        "candidate_rises": [],
+        "force_exact": true,
+        "lost_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "tool": {
+          "delay_ms": null,
+          "detected": false,
+          "peak_N": 0.0,
+          "prealarm": false,
+          "present": false
+        }
+      },
+      "r29_tool_b_high": {
+        "active_delta": 0,
+        "added_rises": [],
+        "baseline_rises": [
+          1091,
+          1329,
+          3903
+        ],
+        "candidate_rises": [
+          1091,
+          1329,
+          3903
+        ],
+        "force_exact": true,
+        "lost_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "tool": {
+          "delay_ms": 10,
+          "detected": true,
+          "peak_N": 249.51970143248832,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      "r29_tool_b_zero": {
+        "active_delta": 0,
+        "added_rises": [],
+        "baseline_rises": [],
+        "candidate_rises": [],
+        "force_exact": true,
+        "lost_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "tool": {
+          "delay_ms": null,
+          "detected": false,
+          "peak_N": 0.0,
+          "prealarm": false,
+          "present": false
+        }
+      },
+      "r29_tool_c_high": {
+        "active_delta": 0,
+        "added_rises": [],
+        "baseline_rises": [
+          1074,
+          1291,
+          1460,
+          3903
+        ],
+        "candidate_rises": [
+          1074,
+          1291,
+          1460,
+          3903
+        ],
+        "force_exact": true,
+        "lost_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "tool": {
+          "delay_ms": 9,
+          "detected": true,
+          "peak_N": 298.83371686728174,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      "r29_tool_c_zero": {
+        "active_delta": 0,
+        "added_rises": [],
+        "baseline_rises": [],
+        "candidate_rises": [],
+        "force_exact": true,
+        "lost_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "tool": {
+          "delay_ms": null,
+          "detected": false,
+          "peak_N": 0.0,
+          "prealarm": false,
+          "present": false
+        }
+      },
+      "r30_weak_zero_offset": {
+        "active_samples": 0,
+        "force_exact": true,
+        "passed": true,
+        "rises": [],
+        "tool": {
+          "delay_ms": null,
+          "detected": false,
+          "peak_N": 0.0,
+          "prealarm": false,
+          "present": false
+        }
+      },
+      "signed_and_matched": {
+        "r29_late_support_oblique": {
+          "passed": true,
+          "twins": {
+            "force": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [
+                4103
+              ],
+              "candidate_rises": [
+                4103
+              ],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            },
+            "none": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [],
+              "candidate_rises": [],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            }
+          }
+        },
+        "r29_late_support_xpos": {
+          "passed": true,
+          "twins": {
+            "force": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [
+                4002
+              ],
+              "candidate_rises": [
+                4002
+              ],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            },
+            "none": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [],
+              "candidate_rises": [],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            }
+          }
+        },
+        "r29_pick_center_yneg": {
+          "passed": true,
+          "twins": {
+            "force": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [
+                1588
+              ],
+              "candidate_rises": [
+                1588
+              ],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            },
+            "none": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [],
+              "candidate_rises": [],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            }
+          }
+        },
+        "r29_pick_center_ypos": {
+          "passed": true,
+          "twins": {
+            "force": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [
+                1584
+              ],
+              "candidate_rises": [
+                1584
+              ],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            },
+            "none": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [],
+              "candidate_rises": [],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            }
+          }
+        },
+        "r29_pick_light_ypos": {
+          "passed": true,
+          "twins": {
+            "force": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [],
+              "candidate_rises": [],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            },
+            "none": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [],
+              "candidate_rises": [],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            }
+          }
+        },
+        "r29_pick_noncenter_oblique": {
+          "passed": true,
+          "twins": {
+            "force": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [
+                1658
+              ],
+              "candidate_rises": [
+                1658
+              ],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            },
+            "none": {
+              "active_delta": 0,
+              "added_rises": [],
+              "baseline_rises": [],
+              "candidate_rises": [],
+              "force_exact": true,
+              "lost_rises": [],
+              "passed": true,
+              "physical_exact": true,
+              "tool": {
+                "delay_ms": null,
+                "detected": false,
+                "peak_N": 0.0,
+                "prealarm": false,
+                "present": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "schema": "r30-g4-tool-innovation-known-result.v1"
+  },
+  "unload_low_high": {
+    "episodes": 4,
+    "passed": true,
+    "rows": [
+      {
+        "active_delta": 8,
+        "candidate_rises": [
+          1357
+        ],
+        "force_exact": true,
+        "id": "r30_offset_low",
+        "memory_rises": [],
+        "passed": true,
+        "physical_exact": true,
+        "tool": {
+          "delay_ms": 50,
+          "detected": true,
+          "peak_N": 21.542833918069583,
+          "prealarm": false,
+          "present": true
+        }
+      },
+      {
+        "active_delta": 0,
+        "candidate_rises": [
+          1323
+        ],
+        "force_exact": true,
+        "id": "r30_offset_high",
+        "memory_rises": [
+          1323
+        ],
+        "passed": true,
+        "physical_exact": true,
+        "tool": {
+          "delay_ms": 24,
+          "detected": true,
+          "peak_N": 28.69620172315571,
+          "prealarm": false,
+          "present": true
+        }
+      }
+    ],
+    "schema": "r30-g4-unload-known-offsets.v1"
+  }
+}

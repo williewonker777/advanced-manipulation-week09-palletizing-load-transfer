@@ -1,0 +1,93 @@
+{
+  "schema": "r23-exposed-only-choice.v1",
+  "candidates_in_predeclared_order": [
+    "onset",
+    "free"
+  ],
+  "selected_for_independent": "free",
+  "default_promoted": false,
+  "gates": {
+    "onset": {
+      "causal_after_release_all_three": true,
+      "old_challenge_full_retain": true,
+      "d4_full_retain": true,
+      "all_15_small_and_control_twins": true,
+      "official_original_29_each": true,
+      "all_legacy_pair_protection": true
+    },
+    "free": {
+      "causal_after_release_all_three": true,
+      "old_challenge_full_retain": true,
+      "d4_full_retain": true,
+      "all_15_small_and_control_twins": true,
+      "official_original_29_each": true,
+      "all_legacy_pair_protection": true
+    }
+  },
+  "exposed_inputs_sha256": {
+    "target": "6db9e3cc0acfc266bb600188d495d1b8d5c676b7d3a17b66063b749ee76b8461",
+    "previous": "5a7a87c2ae5bd133db3810456ae8630bc0d08b1d69a82ddc891d58c1653bc727",
+    "d4": "f182141ef712101b005ba9349b5f2d2137650ccf8310e1a89fb8bdae75972eec",
+    "weak": "3852da195234557ebf21556b186032da06603f21d754471872145dc8ac30e09a",
+    "official": "626d2900f29d5c07386340d9722dd65f5d034e8c8dcda6da217588b48db6d572",
+    "pairs": "db7726a0b93e06458ea479d316bc81544d6e89845a3e422033608ae5d3155edb"
+  },
+  "only_free_strict": [
+    [
+      "D4",
+      311
+    ],
+    [
+      "D4",
+      315
+    ],
+    [
+      "D4",
+      317
+    ],
+    [
+      "D4",
+      326
+    ],
+    [
+      "D4",
+      327
+    ],
+    [
+      "D4",
+      336
+    ],
+    [
+      "previous",
+      "actuator_gain",
+      "p_release_cross",
+      "both_second"
+    ],
+    [
+      "previous",
+      "actuator_gain",
+      "p_release_cross",
+      "isolated_second"
+    ],
+    [
+      "previous",
+      "contact_suction",
+      "p_release_cross",
+      "both_second"
+    ],
+    [
+      "previous",
+      "contact_suction",
+      "p_release_cross",
+      "isolated_second"
+    ],
+    [
+      "previous",
+      "stock",
+      "p_release_cross",
+      "isolated_second"
+    ]
+  ],
+  "only_onset_strict": [],
+  "selection_policy_sha256": "d50e080fb6442a4846cf5760ea9784daa03e0df9866b973eddc2db8ecdfd5dd1"
+}

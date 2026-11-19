@@ -1,0 +1,90 @@
+{
+  "cases": [
+    {
+      "collision": null,
+      "com": [
+        0.02,
+        -0.01,
+        0.03
+      ],
+      "id": "official_zero_control",
+      "mass": 0.0,
+      "offset": null
+    },
+    {
+      "collision": null,
+      "com": [
+        0.02,
+        -0.01,
+        0.03
+      ],
+      "id": "official_heavy_control",
+      "mass": 8.0,
+      "offset": null
+    },
+    {
+      "collision": [
+        1.42,
+        [
+          0.0,
+          15.0,
+          0.0
+        ]
+      ],
+      "com": [
+        0.02,
+        -0.01,
+        0.03
+      ],
+      "id": "official_zero_pick_15N",
+      "mass": 0.0,
+      "offset": null
+    },
+    {
+      "collision": [
+        3.0,
+        [
+          0.0,
+          40.0,
+          0.0
+        ]
+      ],
+      "com": [
+        0.02,
+        -0.01,
+        0.03
+      ],
+      "id": "official_heavy_transfer_40N",
+      "mass": 8.0,
+      "offset": null
+    }
+  ],
+  "order": [
+    [
+      "production",
+      "composed",
+      "headroom"
+    ],
+    [
+      "composed",
+      "headroom",
+      "production"
+    ],
+    [
+      "headroom",
+      "production",
+      "composed"
+    ]
+  ],
+  "reference_sha256": "1902c380ff733a789c28cf32cdeeaa9a46d58f69a0376df8cb50edf9c4c5266a",
+  "rule": "Four completed public stock cases, same three methods per case repeated in reverse order. Preserve every outlier. Explicit 800 us worst-episode p99 comparator (not WCET); no threshold fitting.",
+  "schema": "r30-runtime-preflight.v1",
+  "sources": {
+    "experiments/r29_disjoint_events/candidate.py": "4567628058b7284e6db1216d38e891bd182e18c415fc79613075c8a38b848a5a",
+    "experiments/r30_runtime/compare.py": "f272cec72cea6f54172e3932d6c1aed7b9ce574aac5a1baf7ec8235b47d3b7a6",
+    "experiments/r30_source_association/candidate.py": "e0dd213c1eae3a1b54410abcfc3a5797c7f933f6a355685a5f6761dde81b28f2",
+    "experiments/r30_yaw_headroom/candidate.py": "869ec502c5538e4b9e2de501a0cc501071ce7249b9b902658657e57bd3b4e5b1",
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+  }
+}

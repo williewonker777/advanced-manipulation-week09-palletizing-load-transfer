@@ -1,0 +1,235 @@
+{
+  "arms": {
+    "c3": {
+      "entrypoint": "experiments.r26_yaw_acquisition.candidate:Detector",
+      "sha256": "212f4e79367cb636c0143a2d1f8aa7ba5584aaaca5ecde6b412d01a4985b6784"
+    },
+    "r30_headroom": {
+      "entrypoint": "experiments.r30_yaw_headroom.candidate:Detector",
+      "sha256": "869ec502c5538e4b9e2de501a0cc501071ce7249b9b902658657e57bd3b4e5b1"
+    },
+    "r31_held": {
+      "entrypoint": "experiments.r31_held_identity.candidate:Detector",
+      "sha256": "1e33b4698ef3678afe72cc4e286fcab5d27b2232e7bf087fdef7500ccc674764"
+    }
+  },
+  "cases": [
+    {
+      "com": [
+        0.0233,
+        0.0259,
+        0.0187
+      ],
+      "force": [
+        9.551,
+        0.0,
+        0.0
+      ],
+      "id": "s01",
+      "mass": 5.149,
+      "time": 2.498
+    },
+    {
+      "com": [
+        0.0043,
+        -0.0092,
+        0.0018
+      ],
+      "force": [
+        -18.585,
+        0.0,
+        0.0
+      ],
+      "id": "s02",
+      "mass": 4.062,
+      "time": 2.159
+    },
+    {
+      "com": [
+        -0.0007,
+        0.0216,
+        0.0326
+      ],
+      "force": [
+        0.0,
+        16.754,
+        0.0
+      ],
+      "id": "s03",
+      "mass": 3.65,
+      "time": 2.441
+    },
+    {
+      "com": [
+        0.0079,
+        0.011,
+        -0.0035
+      ],
+      "force": [
+        0.0,
+        -20.127,
+        0.0
+      ],
+      "id": "s04",
+      "mass": 1.617,
+      "time": 3.181
+    },
+    {
+      "com": [
+        0.0152,
+        0.0182,
+        0.0157
+      ],
+      "force": [
+        7.392801,
+        7.392801,
+        0.0
+      ],
+      "id": "s05",
+      "mass": 4.001,
+      "time": 2.709
+    },
+    {
+      "com": [
+        -0.0158,
+        0.0083,
+        0.0126
+      ],
+      "force": [
+        13.108346,
+        -13.108346,
+        0.0
+      ],
+      "id": "s06",
+      "mass": 5.718,
+      "time": 2.217
+    },
+    {
+      "com": [
+        -0.001,
+        0.0159,
+        0.0057
+      ],
+      "force": [
+        -10.915607,
+        10.915607,
+        0.0
+      ],
+      "id": "s07",
+      "mass": 2.354,
+      "time": 2.205
+    },
+    {
+      "com": [
+        0.0081,
+        -0.0131,
+        0.0079
+      ],
+      "force": [
+        -13.961823,
+        -13.961823,
+        0.0
+      ],
+      "id": "s08",
+      "mass": 6.071,
+      "time": 2.508
+    },
+    {
+      "com": [
+        0.027,
+        -0.0084,
+        -0.0031
+      ],
+      "force": [
+        15.976,
+        0.0,
+        0.0
+      ],
+      "id": "s09",
+      "mass": 2.044,
+      "time": 3.173
+    },
+    {
+      "com": [
+        0.0078,
+        0.0134,
+        0.0153
+      ],
+      "force": [
+        -19.509,
+        0.0,
+        0.0
+      ],
+      "id": "s10",
+      "mass": 2.531,
+      "time": 2.59
+    },
+    {
+      "com": [
+        0.0043,
+        0.0092,
+        0.0157
+      ],
+      "force": [
+        0.0,
+        17.458,
+        0.0
+      ],
+      "id": "s11",
+      "mass": 6.699,
+      "time": 2.318
+    },
+    {
+      "com": [
+        0.0021,
+        0.0053,
+        0.0151
+      ],
+      "force": [
+        0.0,
+        -10.722,
+        0.0
+      ],
+      "id": "s12",
+      "mass": 6.095,
+      "time": 2.451
+    }
+  ],
+  "classification": "fresh deterministic single-force/calm-twin loaded-transport panel; disjoint from invalid R31 panel and all double-force panels",
+  "execution": "12 collision inputs plus exact calm twins for all three arms; 72 episodes once; retain every row",
+  "failure": "any gate fails or duplicate removal loses strict detection",
+  "inconclusive": "all gates pass but no R30 duplicate is exercised",
+  "input_contracts": [
+    "complete finite 6000-sample trace",
+    "exact signed vector and scalar norm",
+    "generic arbitrary-onset calm/forced prefix exact",
+    "same-input physical arrays byte-identical across arms"
+  ],
+  "invalid_predecessor": {
+    "plan_sha256": "101e960bc5bfa86a534cf27cf9af6a6404e53c3743a2c9bd09282356aa73a0a0",
+    "released_case_outputs": 0,
+    "reused_tuples": 0,
+    "status": "INVALID_INFRASTRUCTURE"
+  },
+  "no_third_panel": true,
+  "preflight": {
+    "passed": true,
+    "published_cases": [
+      39,
+      330
+    ],
+    "receipt_sha256": "2ce24c4ae008524fc81d314e016a908b105ce11a9125220a8fe3101d585460b2",
+    "scorer_sha256": "d2a6a380d3bf8144a491ba220c0a068869ca6f5c0707b635290cefcc812f46eb"
+  },
+  "protection": [
+    "R31 retains every C3/R30 strict detection",
+    "no new false/delayed false/duplicate/mask/tool prealarm/stuck tail versus either parent",
+    "first attributable rise no more than 5ms later",
+    "primary attributable interval no more than 5 samples shorter",
+    "all R31 calm twins have zero false rise"
+  ],
+  "schema": "r31-single-counterfactual-plan.v1",
+  "seed": 310031,
+  "status": "FROZEN_BEFORE_ANY_NOVEL_OUTPUT",
+  "success": "all input/protection gates pass and at least one actual R30 duplicate is removed while R31 remains strict"
+}

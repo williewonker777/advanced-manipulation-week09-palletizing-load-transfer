@@ -1,0 +1,526 @@
+{
+  "arm_totals": {
+    "r10": {
+      "negative_false_rises": 0,
+      "paired_all_four_one_to_one": 6,
+      "paired_one_to_one_slots": 48,
+      "paired_rows": 24,
+      "paired_slots": 96,
+      "single_one_to_one": 9,
+      "single_total": 24,
+      "tool_detected_rows": 0,
+      "tool_present_rows": 2
+    },
+    "r21_yaw": {
+      "negative_false_rises": 0,
+      "paired_all_four_one_to_one": 15,
+      "paired_one_to_one_slots": 79,
+      "paired_rows": 24,
+      "paired_slots": 96,
+      "single_one_to_one": 18,
+      "single_total": 24,
+      "tool_detected_rows": 0,
+      "tool_present_rows": 2
+    },
+    "r22": {
+      "negative_false_rises": 0,
+      "paired_all_four_one_to_one": 14,
+      "paired_one_to_one_slots": 78,
+      "paired_rows": 24,
+      "paired_slots": 96,
+      "single_one_to_one": 21,
+      "single_total": 24,
+      "tool_detected_rows": 0,
+      "tool_present_rows": 2
+    }
+  },
+  "classification": "New finite research challenge selected without any R22 candidate output; not a hidden production or hardware certificate.",
+  "episodes": 486,
+  "evaluator_sha256": "0db7cc47ce7529ab88f93fdabe4ec8ad1f1158e4466d5c35e76c1b45ee0a11fa",
+  "failed_gate_counts": {
+    "paired:no_added_false_vs_r10": 1,
+    "paired:no_added_false_vs_r21": 1,
+    "paired:preserve_r21": 3,
+    "paired:r22_one_to_one_4_slots": 10,
+    "single:preserve_r21": 2,
+    "single:r22_one_to_one": 3
+  },
+  "failed_rows": [
+    {
+      "candidate_event": {
+        "attributable_rise_indices": [
+          3848,
+          3902
+        ],
+        "delays_ms": [
+          36,
+          90
+        ],
+        "quiet_before": true,
+        "raw_rise_indices": [
+          3848,
+          3902
+        ]
+      },
+      "failed_gates": [
+        "r22_one_to_one",
+        "preserve_r21"
+      ],
+      "id": "s_release_tangent",
+      "kind": "single",
+      "variant": "stock"
+    },
+    {
+      "candidate_event": {
+        "attributable_rise_indices": [
+          3849,
+          3902
+        ],
+        "delays_ms": [
+          37,
+          90
+        ],
+        "quiet_before": true,
+        "raw_rise_indices": [
+          3849,
+          3902
+        ]
+      },
+      "failed_gates": [
+        "r22_one_to_one"
+      ],
+      "id": "s_release_tangent",
+      "kind": "single",
+      "variant": "contact_suction"
+    },
+    {
+      "candidate_event": {
+        "attributable_rise_indices": [
+          3848,
+          3904
+        ],
+        "delays_ms": [
+          36,
+          92
+        ],
+        "quiet_before": true,
+        "raw_rise_indices": [
+          3848,
+          3904
+        ]
+      },
+      "failed_gates": [
+        "r22_one_to_one",
+        "preserve_r21"
+      ],
+      "id": "s_release_tangent",
+      "kind": "single",
+      "variant": "actuator_gain"
+    },
+    {
+      "candidate_failed_slots": {
+        "both_second": {
+          "attributable_rise_indices": [
+            1586
+          ],
+          "delays_ms": [
+            37
+          ],
+          "quiet_before": false,
+          "raw_rise_indices": [
+            1586
+          ]
+        }
+      },
+      "failed_gates": [
+        "r22_one_to_one_4_slots"
+      ],
+      "id": "p_pick_close_xy",
+      "kind": "paired",
+      "variant": "stock"
+    },
+    {
+      "candidate_failed_slots": {
+        "both_second": {
+          "attributable_rise_indices": [
+            1586
+          ],
+          "delays_ms": [
+            37
+          ],
+          "quiet_before": false,
+          "raw_rise_indices": [
+            1586
+          ]
+        }
+      },
+      "failed_gates": [
+        "r22_one_to_one_4_slots"
+      ],
+      "id": "p_pick_close_xy",
+      "kind": "paired",
+      "variant": "contact_suction"
+    },
+    {
+      "candidate_failed_slots": {
+        "both_second": {
+          "attributable_rise_indices": [
+            1586
+          ],
+          "delays_ms": [
+            37
+          ],
+          "quiet_before": false,
+          "raw_rise_indices": [
+            1586
+          ]
+        }
+      },
+      "failed_gates": [
+        "r22_one_to_one_4_slots"
+      ],
+      "id": "p_pick_close_xy",
+      "kind": "paired",
+      "variant": "actuator_gain"
+    },
+    {
+      "candidate_failed_slots": {
+        "both_second": {
+          "attributable_rise_indices": [
+            1675,
+            1720
+          ],
+          "delays_ms": [
+            57,
+            102
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            1675,
+            1720
+          ]
+        },
+        "isolated_second": {
+          "attributable_rise_indices": [
+            1674,
+            1719
+          ],
+          "delays_ms": [
+            56,
+            101
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            1674,
+            1719
+          ]
+        }
+      },
+      "failed_gates": [
+        "r22_one_to_one_4_slots"
+      ],
+      "id": "p_pick_close_diag",
+      "kind": "paired",
+      "variant": "stock"
+    },
+    {
+      "candidate_failed_slots": {
+        "both_second": {
+          "attributable_rise_indices": [
+            1675,
+            1719
+          ],
+          "delays_ms": [
+            57,
+            101
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            1675,
+            1719
+          ]
+        },
+        "isolated_second": {
+          "attributable_rise_indices": [
+            1675,
+            1719
+          ],
+          "delays_ms": [
+            57,
+            101
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            1675,
+            1719
+          ]
+        }
+      },
+      "failed_gates": [
+        "r22_one_to_one_4_slots"
+      ],
+      "id": "p_pick_close_diag",
+      "kind": "paired",
+      "variant": "contact_suction"
+    },
+    {
+      "candidate_failed_slots": {
+        "both_second": {
+          "attributable_rise_indices": [
+            1675,
+            1718
+          ],
+          "delays_ms": [
+            57,
+            100
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            1675,
+            1718
+          ]
+        },
+        "isolated_second": {
+          "attributable_rise_indices": [
+            1676,
+            1721
+          ],
+          "delays_ms": [
+            58,
+            103
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            1676,
+            1721
+          ]
+        }
+      },
+      "failed_gates": [
+        "r22_one_to_one_4_slots"
+      ],
+      "id": "p_pick_close_diag",
+      "kind": "paired",
+      "variant": "actuator_gain"
+    },
+    {
+      "candidate_failed_slots": {},
+      "failed_gates": [
+        "no_added_false_vs_r10",
+        "no_added_false_vs_r21"
+      ],
+      "id": "p_carry_orthogonal",
+      "kind": "paired",
+      "variant": "stock"
+    },
+    {
+      "candidate_failed_slots": {
+        "both_second": {
+          "attributable_rise_indices": [
+            3892,
+            3902
+          ],
+          "delays_ms": [
+            48,
+            58
+          ],
+          "quiet_before": false,
+          "raw_rise_indices": [
+            3892,
+            3902
+          ]
+        },
+        "isolated_second": {
+          "attributable_rise_indices": [
+            3891,
+            3902
+          ],
+          "delays_ms": [
+            47,
+            58
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            3891,
+            3902
+          ]
+        }
+      },
+      "failed_gates": [
+        "r22_one_to_one_4_slots",
+        "preserve_r21"
+      ],
+      "id": "p_release_short",
+      "kind": "paired",
+      "variant": "stock"
+    },
+    {
+      "candidate_failed_slots": {
+        "both_second": {
+          "attributable_rise_indices": [
+            3890,
+            3902
+          ],
+          "delays_ms": [
+            46,
+            58
+          ],
+          "quiet_before": false,
+          "raw_rise_indices": [
+            3890,
+            3902
+          ]
+        },
+        "isolated_second": {
+          "attributable_rise_indices": [
+            3891,
+            3902
+          ],
+          "delays_ms": [
+            47,
+            58
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            3891,
+            3902
+          ]
+        }
+      },
+      "failed_gates": [
+        "r22_one_to_one_4_slots",
+        "preserve_r21"
+      ],
+      "id": "p_release_short",
+      "kind": "paired",
+      "variant": "contact_suction"
+    },
+    {
+      "candidate_failed_slots": {
+        "both_second": {
+          "attributable_rise_indices": [
+            3885,
+            3902
+          ],
+          "delays_ms": [
+            41,
+            58
+          ],
+          "quiet_before": false,
+          "raw_rise_indices": [
+            3885,
+            3902
+          ]
+        },
+        "isolated_second": {
+          "attributable_rise_indices": [
+            3884,
+            3901
+          ],
+          "delays_ms": [
+            40,
+            57
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            3884,
+            3901
+          ]
+        }
+      },
+      "failed_gates": [
+        "r22_one_to_one_4_slots",
+        "preserve_r21"
+      ],
+      "id": "p_release_short",
+      "kind": "paired",
+      "variant": "actuator_gain"
+    },
+    {
+      "candidate_failed_slots": {
+        "both_first": {
+          "attributable_rise_indices": [
+            3792,
+            3887
+          ],
+          "delays_ms": [
+            40,
+            135
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            3792,
+            3887
+          ]
+        },
+        "both_second": {
+          "attributable_rise_indices": [
+            3946
+          ],
+          "delays_ms": [
+            29
+          ],
+          "quiet_before": false,
+          "raw_rise_indices": [
+            3946
+          ]
+        },
+        "isolated_first": {
+          "attributable_rise_indices": [
+            3792,
+            3887
+          ],
+          "delays_ms": [
+            40,
+            135
+          ],
+          "quiet_before": true,
+          "raw_rise_indices": [
+            3792,
+            3887
+          ]
+        }
+      },
+      "failed_gates": [
+        "r22_one_to_one_4_slots"
+      ],
+      "id": "p_release_cross",
+      "kind": "paired",
+      "variant": "stock"
+    }
+  ],
+  "interpretation": "Every candidate failure remains a release failure; this finite challenge was not used for tuning.",
+  "lock_sha256": "666f06e78c858f52d89e66245b54e10a63f33bd2f27fdf463123be552409a6a5",
+  "mechanical_effect_observed": {
+    "actuator_gain": true,
+    "contact_suction": true,
+    "stock": true
+  },
+  "plan_sha256": "6dd4cc67c11853a6d0434b71f70aee40345466b10cd242198c2c3b69ef47b679",
+  "result_sha256": "38b0958921f57b19165c7d8a4f09759b60875d7c9fc3aa71f040fd09b253ac12",
+  "rows": 66,
+  "schema": "r22-independent-protection-summary.v1",
+  "tool_test_gap": "Two negative rows produced real tool contact, but no arm detected either; preservation is therefore not demonstrated by this cohort.",
+  "verdict": "FAIL",
+  "verified_accounting": {
+    "episodes": 486,
+    "failed": [
+      "stock:s_release_tangent",
+      "contact_suction:s_release_tangent",
+      "actuator_gain:s_release_tangent",
+      "stock:p_pick_close_xy",
+      "contact_suction:p_pick_close_xy",
+      "actuator_gain:p_pick_close_xy",
+      "stock:p_pick_close_diag",
+      "contact_suction:p_pick_close_diag",
+      "actuator_gain:p_pick_close_diag",
+      "stock:p_carry_orthogonal",
+      "stock:p_release_short",
+      "contact_suction:p_release_short",
+      "actuator_gain:p_release_short",
+      "stock:p_release_cross"
+    ],
+    "passed": false,
+    "rows": 66
+  }
+}

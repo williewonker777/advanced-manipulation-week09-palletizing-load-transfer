@@ -1,0 +1,211 @@
+{
+  "schema": "week09-r23-public-pregrasp-replay.v1",
+  "scope": "independent execution of an already exposed tool-contact study, not a new cohort or part of the R23 free detector",
+  "original_demo": false,
+  "default_promoted": false,
+  "output_sha256": "c2540fd3caf2509b102a91c567336d4601b20228f606343c213f3e12890f2368",
+  "original_evaluator_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+  "original_manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+  "tool_dataset": {
+    "schema": "r23-measured-offset-replay.v1",
+    "classification": "separate scheduled pregrasp research witness; previously exposed cases, not R23 FREE or a new holdout",
+    "episodes": 12,
+    "case_id": "n_tool_xyz",
+    "mass_kg": 5.42,
+    "candidate_sha256": "2ed447199694cb159770e43fe9a2f1b8a9c513a1c7480d96d079313df1002a38",
+    "model_sha256": "9633182c1d986117fd6fd541e361f9bddf28d79a05763e6012dcb118805a1e37",
+    "rows": [
+      {
+        "mechanics": "stock",
+        "offset_m": [
+          -0.0042,
+          0.0033,
+          0.0012
+        ],
+        "physical_and_zero_external_force_certified": true,
+        "records": {
+          "offset:light": {
+            "tool": {
+              "present": true,
+              "detected": false,
+              "prealarm": false,
+              "delay_ms": null,
+              "peak_N": 11.079329420450694
+            },
+            "positive_duration_ms": 29,
+            "onset": 1332,
+            "rises": [],
+            "genuine_contact_rises": []
+          },
+          "offset:approach": {
+            "tool": {
+              "present": true,
+              "detected": true,
+              "prealarm": false,
+              "delay_ms": 9,
+              "peak_N": 11.079329420450694
+            },
+            "positive_duration_ms": 29,
+            "onset": 1332,
+            "rises": [
+              1341
+            ],
+            "genuine_contact_rises": [
+              1341
+            ]
+          },
+          "normal:light": {
+            "tool": {
+              "present": false,
+              "detected": false,
+              "prealarm": false,
+              "delay_ms": null,
+              "peak_N": 0.0
+            },
+            "positive_duration_ms": 0,
+            "onset": null,
+            "rises": []
+          },
+          "normal:approach": {
+            "tool": {
+              "present": false,
+              "detected": false,
+              "prealarm": false,
+              "delay_ms": null,
+              "peak_N": 0.0
+            },
+            "positive_duration_ms": 0,
+            "onset": null,
+            "rises": []
+          }
+        }
+      },
+      {
+        "mechanics": "contact_suction",
+        "offset_m": [
+          -0.0042,
+          0.0033,
+          0.0012
+        ],
+        "physical_and_zero_external_force_certified": true,
+        "records": {
+          "offset:light": {
+            "tool": {
+              "present": true,
+              "detected": false,
+              "prealarm": false,
+              "delay_ms": null,
+              "peak_N": 10.33820930576907
+            },
+            "positive_duration_ms": 28,
+            "onset": 1332,
+            "rises": [],
+            "genuine_contact_rises": []
+          },
+          "offset:approach": {
+            "tool": {
+              "present": true,
+              "detected": true,
+              "prealarm": false,
+              "delay_ms": 9,
+              "peak_N": 10.33820930576907
+            },
+            "positive_duration_ms": 28,
+            "onset": 1332,
+            "rises": [
+              1341
+            ],
+            "genuine_contact_rises": [
+              1341
+            ]
+          },
+          "normal:light": {
+            "tool": {
+              "present": false,
+              "detected": false,
+              "prealarm": false,
+              "delay_ms": null,
+              "peak_N": 0.0
+            },
+            "positive_duration_ms": 0,
+            "onset": null,
+            "rises": []
+          },
+          "normal:approach": {
+            "tool": {
+              "present": false,
+              "detected": false,
+              "prealarm": false,
+              "delay_ms": null,
+              "peak_N": 0.0
+            },
+            "positive_duration_ms": 0,
+            "onset": null,
+            "rises": []
+          }
+        }
+      },
+      {
+        "mechanics": "actuator_gain",
+        "offset_m": [
+          -0.0042,
+          0.0033,
+          0.0012
+        ],
+        "physical_and_zero_external_force_certified": true,
+        "records": {
+          "offset:light": {
+            "tool": {
+              "present": false,
+              "detected": false,
+              "prealarm": false,
+              "delay_ms": null,
+              "peak_N": 0.0
+            },
+            "positive_duration_ms": 0,
+            "onset": null,
+            "rises": [],
+            "genuine_contact_rises": []
+          },
+          "offset:approach": {
+            "tool": {
+              "present": false,
+              "detected": false,
+              "prealarm": false,
+              "delay_ms": null,
+              "peak_N": 0.0
+            },
+            "positive_duration_ms": 0,
+            "onset": null,
+            "rises": [],
+            "genuine_contact_rises": []
+          },
+          "normal:light": {
+            "tool": {
+              "present": false,
+              "detected": false,
+              "prealarm": false,
+              "delay_ms": null,
+              "peak_N": 0.0
+            },
+            "positive_duration_ms": 0,
+            "onset": null,
+            "rises": []
+          },
+          "normal:approach": {
+            "tool": {
+              "present": false,
+              "detected": false,
+              "prealarm": false,
+              "delay_ms": null,
+              "peak_N": 0.0
+            },
+            "positive_duration_ms": 0,
+            "onset": null,
+            "rises": []
+          }
+        }
+      }
+    ]
+  }
+}

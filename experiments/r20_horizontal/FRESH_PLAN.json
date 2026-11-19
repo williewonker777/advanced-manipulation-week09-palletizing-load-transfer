@@ -1,0 +1,22 @@
+{
+  "schema": "R20_HORIZONTAL_FRESH_PLAN.v1",
+  "candidate_sha256": "1770c36e002404a660c9cfc1ef45ddbb6cb1f53a3ec973c82b760e60881e7025",
+  "frozen_before_execution": true,
+  "dt": 0.001,
+  "reference_twin_ms": 20,
+  "cases": [
+    {"id": "fresh_early_px_light", "mass": 0.70, "com": [0.011, -0.034, 0.007], "time": 1.470, "force": [14.0, 0.0, 0.0]},
+    {"id": "fresh_early_ny_lowmid", "mass": 2.65, "com": [-0.029, -0.004, 0.017], "time": 1.535, "force": [0.0, -16.0, 0.0]},
+    {"id": "fresh_early_nx_strong", "mass": 4.75, "com": [0.023, 0.018, -0.023], "time": 1.625, "force": [-20.0, 0.0, 0.0]},
+    {"id": "fresh_early_py_heavy", "mass": 7.85, "com": [-0.006, 0.033, 0.011], "time": 1.695, "force": [0.0, 18.0, 0.0]},
+    {"id": "fresh_outside_px_carry", "mass": 3.15, "com": [0.034, -0.017, 0.026], "time": 2.215, "force": [14.0, 0.0, 0.0]},
+    {"id": "fresh_outside_ny_release", "mass": 6.05, "com": [-0.024, 0.009, -0.018], "time": 3.910, "force": [0.0, -18.0, 0.0]}
+  ],
+  "four_trials_per_case": ["r10_none", "candidate_none", "r10_force", "candidate_force"],
+  "gates": [
+    "candidate source hash equals the pre-run pin",
+    "baseline and candidate physical and applied-force logs are byte-identical within each arm",
+    "candidate has no extra false rises in no-force or force trials",
+    "candidate loses no strict baseline true positive"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "classification": "reused exposed D4 subset, not independent holdout",
+  "standalone_sha256": "f28a4b6da0939e435fc97130ee9be7db7b98b7c2956346f778914788162492ad",
+  "episodes": 106,
+  "selection": {
+    "references": 7,
+    "impacts": 12,
+    "offsets": 16,
+    "parity": 6
+  },
+  "parity": [
+    {
+      "id": "normal-0",
+      "samples": 6000,
+      "detect_exact": true,
+      "residual_exact": true,
+      "physical_exact": true,
+      "delay_exact": true,
+      "false_exact": true
+    },
+    {
+      "id": "early-0-10",
+      "samples": 6000,
+      "detect_exact": true,
+      "residual_exact": true,
+      "physical_exact": true,
+      "delay_exact": true,
+      "false_exact": true
+    },
+    {
+      "id": "early-0-15",
+      "samples": 6000,
+      "detect_exact": true,
+      "residual_exact": true,
+      "physical_exact": true,
+      "delay_exact": true,
+      "false_exact": true
+    },
+    {
+      "id": "normal-8",
+      "samples": 6000,
+      "detect_exact": true,
+      "residual_exact": true,
+      "physical_exact": true,
+      "delay_exact": true,
+      "false_exact": true
+    },
+    {
+      "id": "early-8-10",
+      "samples": 6000,
+      "detect_exact": true,
+      "residual_exact": true,
+      "physical_exact": true,
+      "delay_exact": true,
+      "false_exact": true
+    },
+    {
+      "id": "early-8-15",
+      "samples": 6000,
+      "detect_exact": true,
+      "residual_exact": true,
+      "physical_exact": true,
+      "delay_exact": true,
+      "false_exact": true
+    }
+  ],
+  "candidate_only_detections": [
+    199,
+    200,
+    201,
+    202,
+    210
+  ],
+  "failed": [],
+  "gates": {
+    "all_D4_subset_protection": true,
+    "all_modular_standalone_parity": true
+  }
+}

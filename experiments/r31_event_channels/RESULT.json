@@ -1,0 +1,19 @@
+{
+  "schema":"r31-event-channels-portable-result.v1",
+  "status":"PASS_READ_ONLY_TELEMETRY",
+  "classification":"optional observability adapter; not a detector candidate",
+  "held_entrypoint":"experiments.r31_held_identity.candidate:Detector",
+  "held_sha256":"1e33b4698ef3678afe72cc4e286fcab5d27b2232e7bf087fdef7500ccc674764",
+  "adapter_entrypoint":"experiments.r31_event_channels.adapter:Detector",
+  "adapter_sha256":"b408e9b5da45a66222245ac29712fe1bb34d9a297cd7556f202e6022022f1a81",
+  "episodes":16,
+  "cases":[
+    {"case_id":266,"reference_id":10,"output":[[2729,2733]],"notice":[[2729,2733]],"native":[[2740,2834]],"source_linked_native":[[2740,2834]]},
+    {"case_id":287,"reference_id":25,"output":[[3127,3131]],"notice":[[3127,3131]],"native":[[3135,3252]],"source_linked_native":[[3135,3252]]},
+    {"case_id":298,"reference_id":119,"output":[[3422,3426],[3818,3862]],"notice":[[3422,3426]],"native":[[3428,3561],[3818,3862]],"source_linked_native":[[3428,3561]]},
+    {"case_id":316,"reference_id":47,"output":[[3951,3963]],"notice":[],"native":[[3951,3989]],"source_linked_native":[]}
+  ],
+  "verification":{"all_physical_arrays_exact":true,"public_residual_exact":true,"public_boolean_exact":true,"output_intervals_exact":true,"semantic_metrics_exact":true,"matched_no_force_channels_empty":true,"timing_metric_excluded":"ctrl_time_us is observational runtime, not a scientific output"},
+  "interpretation":"A notice interval is an optional reporting envelope. Native intervals are internal measured detector evidence. Neither is physical force truth or certified contact duration.",
+  "limits":["not a safety stop","not a physical-force estimator","not a repair for the failed R31 occupancy gate","does not alter control or detector decisions"]
+}

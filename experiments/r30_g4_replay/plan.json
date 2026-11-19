@@ -1,0 +1,86 @@
+{
+  "schema": "r30-g4-disclosed-replay-plan.v1",
+  "classification": "disclosed post-development comparison only; not blind, prospective, enrolled, promoted, default, hardware, or safety qualified",
+  "controller": "experiments.r26_delivery_pair.controller:Controller",
+  "arms": {
+    "memory": "experiments.r28_contact_memory.candidate:Detector",
+    "early_onset_rejected": "experiments.r30_g4_tool_innovation.candidate:Detector",
+    "rising_owner_rejected": "experiments.r30_g4_pickup_attempt.candidate:Detector",
+    "unload_notice": "experiments.r30_g4_unload_notice.candidate:Detector"
+  },
+  "candidate_sha256": {
+    "memory": "85c4107c3939c7624dd77040ad322a99595c8e6941c7b75751c516a33be7a07b",
+    "early_onset_rejected": "27add785807587380fb0fc7f2ba58037d2e3a48c0c9edef77786f4a3775e1e8a",
+    "rising_owner_rejected": "83f8b97514fffe04275d96897e0ec197535b5f38d667c118f5a333181c8e80ef",
+    "unload_notice": "db394659e0f61b159bb740d4fe9e9acea4d1f3be068aabc613fc396bca606d42"
+  },
+  "tool_threshold_N": 1.0,
+  "cases": [
+    {
+      "id": "published_weak_24_32N",
+      "source_id": "r29_pick_heavy_opposite",
+      "mass": 6.1,
+      "com": [0.029, 0.023, 0.044],
+      "offset": [0.0019, 0.0014, 0.0011],
+      "mechanics": {
+        "table_friction_scale": 0.945,
+        "table_solref_time_scale": 1.015,
+        "suction_solref_time_scale": 1.055,
+        "dof_damping_scale": 0.945,
+        "torque_deadband_nm": 0.028
+      }
+    },
+    {
+      "id": "published_weak_zero_offset",
+      "source_id": "r30_weak_zero_offset",
+      "mass": 6.1,
+      "com": [0.029, 0.023, 0.044],
+      "offset": [0.0, 0.0, 0.0],
+      "mechanics": {
+        "table_friction_scale": 0.945,
+        "table_solref_time_scale": 1.015,
+        "suction_solref_time_scale": 1.055,
+        "dof_damping_scale": 0.945,
+        "torque_deadband_nm": 0.028
+      }
+    },
+    {
+      "id": "disclosed_low_offset",
+      "source_id": "r30_offset_low",
+      "mass": 6.1,
+      "com": [0.029, 0.023, 0.044],
+      "offset": [0.0017, 0.0012, 0.0010],
+      "mechanics": {
+        "table_friction_scale": 0.945,
+        "table_solref_time_scale": 1.015,
+        "suction_solref_time_scale": 1.055,
+        "dof_damping_scale": 0.945,
+        "torque_deadband_nm": 0.028
+      }
+    },
+    {
+      "id": "disclosed_high_offset_8ms_steal",
+      "source_id": "r30_offset_high",
+      "mass": 6.1,
+      "com": [0.029, 0.023, 0.044],
+      "offset": [0.0021, 0.0016, 0.0012],
+      "mechanics": {
+        "table_friction_scale": 0.945,
+        "table_solref_time_scale": 1.015,
+        "suction_solref_time_scale": 1.055,
+        "dof_damping_scale": 0.945,
+        "torque_deadband_nm": 0.028
+      }
+    }
+  ],
+  "episode_accounting": {
+    "cases": 4,
+    "arms": 4,
+    "total_actual": 16
+  },
+  "claim_limits": [
+    "All cases and mechanisms were previously disclosed before this replay artifact.",
+    "The first two optional mechanisms were rejected; unload_notice is development evidence awaiting broad independent review.",
+    "No result or licensed course kit is included in the archive."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+ "schema": "week09-r24-joint-consistency.v1",
+ "reason": "The initial two-axis rule left the exposed heavy no-force rise and missed a changed-drive noise sample; one nonnominal motor is physically sufficient to alter the contact. Do not lower a yaw or drive threshold.",
+ "rule": "Keep previous multi-joint decision. Separately allow one motor only when its full regression and two disjoint interleaved 10-window regressions all depart outside their own independently nominal-calibrated ranges in the same direction; require excitation in all three and finite history. Any of the three elastic joints may qualify.",
+ "predeclared": "Use the same 12 original nominal seeds, min/max plus one span or 0.002 on each side, unchanged 48-sample windows and controller; no target labels select a joint or sign.",
+ "check":"Use untrained seeds 193,223,257,307 on stock, the disclosed skew, and positive/negative one-joint changes for each of the three elastic joints. Report misses including solitary unobservable changes. Do not use seed or plant kind at runtime."
+}

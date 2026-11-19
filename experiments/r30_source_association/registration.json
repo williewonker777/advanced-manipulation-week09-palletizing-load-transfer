@@ -1,0 +1,11 @@
+{
+ "schema":"r30-yaw-observability-pre-force-scoring.v1",
+ "status":"FROZEN_BEFORE_CANDIDATE_SIMULATION",
+ "motivation":"45 R29 route-audited runs; all four duplicated single-force cases report a later native yaw-only rise. Prevent a duplicate at the optional decision, never suppress native yaw. The force Jacobian maps planar force into possible base-axis torque.",
+ "input":"Measured signed differences of two existing 40-tick planar force windows, existing paired onset/pose certificate, observed grip and the translational Jacobian column at the already integrated pose. No future force, true plant state, score labels or new clock-based thresholds.",
+ "selection":"Require strict transverse>yaw-visible component in both instruments, with agreeing transverse sign, to announce early. Unknown/visible/mixed falls back for the excursion. No fitted cutoff, new timing, retuning or mass/case rules.",
+ "source_tests":"Rotation/sign invariance; unknown/disagree/tie remain on native; no additional plant solve.",
+ "historical":"Single immutable candidate, C3 and R29 composed physical signatures on disclosed R26 156 and 24 signed events plus 33 non-training normals. Preserve each old strict onset within +5ms and +5 active samples, no new duplicate/prealarm/false/tail or tool losses. Check actual opposite/distinct force vs joined long in known cohorts. Report every absolute miss; motion is unchanged.",
+ "fresh":"Separate pre-enrolled plan only if full historical gates relative to C3 AND basic composed, signed/33-normal and previously disclosed true close controls pass. No further candidate may take its place. R27 114 and R28 19 are not available to this study. Never silently change R10.",
+ "limits":"Choosing an optional route, not a proof of causal separation of all disturbances; yaw only observes the tangential component. Compare against actual submitted R10 as well as research C3 before drawing any deployment inference."
+}

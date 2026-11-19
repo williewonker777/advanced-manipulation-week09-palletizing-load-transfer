@@ -1,0 +1,4498 @@
+{
+  "schema": "r19-event-separation-summary.v1",
+  "research_only": true,
+  "submitted_candidate": false,
+  "plan_sha256": "f771623fd41aec91754a2e39e2b376be21d8c4344a202ac42d4a1ad164636c94",
+  "source_sha256": "f2666f8adedb4e09051b2b7f75bc977362394c00894ba7a016a52b43d78b5c2f",
+  "episodes": 270,
+  "stages": {
+    "known": {
+      "passed": true,
+      "conditions": 6,
+      "passed_conditions": 6
+    },
+    "normal": {
+      "passed": true,
+      "conditions": 6,
+      "passed_conditions": 6
+    },
+    "new": {
+      "passed": false,
+      "conditions": 6,
+      "passed_conditions": 2
+    }
+  },
+  "by_stage": {
+    "known": {
+      "status": "completed",
+      "rows": [
+        {
+          "id": "pair_before_opposed",
+          "mass_kg": 4.26,
+          "impact_onsets_ms": [
+            3580,
+            3820
+          ],
+          "applied_forces_N": [
+            [
+              7.0,
+              -6.0,
+              -8.0
+            ],
+            [
+              -7.0,
+              6.0,
+              8.0
+            ]
+          ],
+          "gap_ms": 120,
+          "observed_zero_force_samples": 120,
+          "passed": true,
+          "failed_gates": [],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {},
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [
+                  59,
+                  274
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  59
+                ],
+                "both_second": [
+                  83
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  59,
+                  274
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  59
+                ],
+                "both_second": [
+                  83
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 3709,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 3709,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 3913,
+                  "end_minus_nominal_force_end_ms": -27,
+                  "max_active_run_ms": 10,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [
+                  59,
+                  274
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  59
+                ],
+                "both_second": [
+                  83
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  59,
+                  274
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  59
+                ],
+                "both_second": [
+                  83
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 3709,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 3709,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 3913,
+                  "end_minus_nominal_force_end_ms": -27,
+                  "max_active_run_ms": 10,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [
+                  59,
+                  274
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  59
+                ],
+                "both_second": [
+                  83
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  59,
+                  274
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  59
+                ],
+                "both_second": [
+                  83
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 3709,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 3709,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 3913,
+                  "end_minus_nominal_force_end_ms": -27,
+                  "max_active_run_ms": 10,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [
+                  59
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  59
+                ],
+                "both_second": [
+                  83
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  59
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  59
+                ],
+                "both_second": [
+                  83
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 3711,
+                  "end_minus_nominal_force_end_ms": 11,
+                  "max_active_run_ms": 72,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 3711,
+                  "end_minus_nominal_force_end_ms": 11,
+                  "max_active_run_ms": 72,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 3927,
+                  "end_minus_nominal_force_end_ms": -13,
+                  "max_active_run_ms": 24,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [
+                  59
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  59
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  59
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  59
+                ],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 3711,
+                  "end_minus_nominal_force_end_ms": 11,
+                  "max_active_run_ms": 72,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 3711,
+                  "end_minus_nominal_force_end_ms": 11,
+                  "max_active_run_ms": 72,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            }
+          }
+        },
+        {
+          "id": "pair_return_opposed",
+          "mass_kg": 5.71,
+          "impact_onsets_ms": [
+            3820,
+            4180
+          ],
+          "applied_forces_N": [
+            [
+              0.0,
+              0.0,
+              -13.0
+            ],
+            [
+              0.0,
+              0.0,
+              13.0
+            ]
+          ],
+          "gap_ms": 240,
+          "observed_zero_force_samples": 241,
+          "passed": true,
+          "failed_gates": [],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {},
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  32
+                ],
+                "both_first": [],
+                "both_second": [
+                  33,
+                  44,
+                  57
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  32
+                ],
+                "both_first": [],
+                "both_second": [
+                  33,
+                  44,
+                  57
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4286,
+                  "end_minus_nominal_force_end_ms": -14,
+                  "max_active_run_ms": 74,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4223,
+                  "end_minus_nominal_force_end_ms": -77,
+                  "max_active_run_ms": 10,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  32
+                ],
+                "both_first": [],
+                "both_second": [
+                  33
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  32
+                ],
+                "both_first": [],
+                "both_second": [
+                  33
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4286,
+                  "end_minus_nominal_force_end_ms": -14,
+                  "max_active_run_ms": 74,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4286,
+                  "end_minus_nominal_force_end_ms": -14,
+                  "max_active_run_ms": 73,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  38
+                ],
+                "both_first": [],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  38
+                ],
+                "both_first": [],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4286,
+                  "end_minus_nominal_force_end_ms": -14,
+                  "max_active_run_ms": 68,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": [
+                  38
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": [
+                  38
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4287,
+                  "end_minus_nominal_force_end_ms": -13,
+                  "max_active_run_ms": 69,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  38
+                ],
+                "both_first": [],
+                "both_second": [
+                  38
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  38
+                ],
+                "both_first": [],
+                "both_second": [
+                  38
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4276,
+                  "end_minus_nominal_force_end_ms": -24,
+                  "max_active_run_ms": 58,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4273,
+                  "end_minus_nominal_force_end_ms": -27,
+                  "max_active_run_ms": 55,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            }
+          }
+        },
+        {
+          "id": "pair_cross_axis_before",
+          "mass_kg": 3.34,
+          "impact_onsets_ms": [
+            3610,
+            3840
+          ],
+          "applied_forces_N": [
+            [
+              10.0,
+              0.0,
+              -4.0
+            ],
+            [
+              0.0,
+              -10.0,
+              4.0
+            ]
+          ],
+          "gap_ms": 110,
+          "observed_zero_force_samples": 111,
+          "passed": true,
+          "failed_gates": [],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {},
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [
+                  58
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  58
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  58
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  58
+                ],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 3744,
+                  "end_minus_nominal_force_end_ms": 14,
+                  "max_active_run_ms": 76,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 3744,
+                  "end_minus_nominal_force_end_ms": 14,
+                  "max_active_run_ms": 76,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [
+                  58
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  58
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  58
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  58
+                ],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 3744,
+                  "end_minus_nominal_force_end_ms": 14,
+                  "max_active_run_ms": 76,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 3744,
+                  "end_minus_nominal_force_end_ms": 14,
+                  "max_active_run_ms": 76,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [
+                  58
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  58
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  58
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  58
+                ],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 3744,
+                  "end_minus_nominal_force_end_ms": 14,
+                  "max_active_run_ms": 76,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 3744,
+                  "end_minus_nominal_force_end_ms": 14,
+                  "max_active_run_ms": 76,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [
+                  58
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  58
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  58
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  58
+                ],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 3744,
+                  "end_minus_nominal_force_end_ms": 14,
+                  "max_active_run_ms": 76,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 3744,
+                  "end_minus_nominal_force_end_ms": 14,
+                  "max_active_run_ms": 76,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [
+                  58
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  58
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  58
+                ],
+                "isolated_second": [],
+                "both_first": [
+                  58
+                ],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 3744,
+                  "end_minus_nominal_force_end_ms": 14,
+                  "max_active_run_ms": 76,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 3744,
+                  "end_minus_nominal_force_end_ms": 14,
+                  "max_active_run_ms": 76,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            }
+          }
+        },
+        {
+          "id": "pair_cross_axis_return",
+          "mass_kg": 7.22,
+          "impact_onsets_ms": [
+            3790,
+            4220
+          ],
+          "applied_forces_N": [
+            [
+              -9.0,
+              5.0,
+              -6.0
+            ],
+            [
+              9.0,
+              -5.0,
+              6.0
+            ]
+          ],
+          "gap_ms": 310,
+          "observed_zero_force_samples": 311,
+          "passed": true,
+          "failed_gates": [],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {},
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [],
+                "both_first": [],
+                "both_second": []
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            }
+          }
+        },
+        {
+          "id": "diag_known_late_fz",
+          "mass_kg": 5.38,
+          "impact_onsets_ms": [
+            3940,
+            5415
+          ],
+          "applied_forces_N": [
+            [
+              0.0,
+              0.0,
+              16.0
+            ],
+            [
+              0.0,
+              0.0,
+              18.0
+            ]
+          ],
+          "gap_ms": 1355,
+          "observed_zero_force_samples": 1356,
+          "passed": true,
+          "failed_gates": [],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {},
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [
+                  33
+                ],
+                "isolated_second": [
+                  22
+                ],
+                "both_first": [
+                  33
+                ],
+                "both_second": [
+                  21
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  33
+                ],
+                "isolated_second": [
+                  22
+                ],
+                "both_first": [
+                  33
+                ],
+                "both_second": [
+                  21
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4005,
+                  "end_minus_nominal_force_end_ms": -55,
+                  "max_active_run_ms": 32,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5502,
+                  "end_minus_nominal_force_end_ms": -33,
+                  "max_active_run_ms": 65,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4005,
+                  "end_minus_nominal_force_end_ms": -55,
+                  "max_active_run_ms": 32,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5498,
+                  "end_minus_nominal_force_end_ms": -37,
+                  "max_active_run_ms": 62,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [
+                  33
+                ],
+                "isolated_second": [
+                  22
+                ],
+                "both_first": [
+                  33
+                ],
+                "both_second": [
+                  21
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  33
+                ],
+                "isolated_second": [
+                  22
+                ],
+                "both_first": [
+                  33
+                ],
+                "both_second": [
+                  21
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4031,
+                  "end_minus_nominal_force_end_ms": -29,
+                  "max_active_run_ms": 58,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5502,
+                  "end_minus_nominal_force_end_ms": -33,
+                  "max_active_run_ms": 65,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4031,
+                  "end_minus_nominal_force_end_ms": -29,
+                  "max_active_run_ms": 58,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5498,
+                  "end_minus_nominal_force_end_ms": -37,
+                  "max_active_run_ms": 62,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  26
+                ],
+                "both_first": [],
+                "both_second": [
+                  25
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  26
+                ],
+                "both_first": [],
+                "both_second": [
+                  25
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5502,
+                  "end_minus_nominal_force_end_ms": -33,
+                  "max_active_run_ms": 61,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5498,
+                  "end_minus_nominal_force_end_ms": -37,
+                  "max_active_run_ms": 58,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  29
+                ],
+                "both_first": [],
+                "both_second": [
+                  30
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  29
+                ],
+                "both_first": [],
+                "both_second": [
+                  30
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5502,
+                  "end_minus_nominal_force_end_ms": -33,
+                  "max_active_run_ms": 58,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5501,
+                  "end_minus_nominal_force_end_ms": -34,
+                  "max_active_run_ms": 56,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [
+                  40
+                ],
+                "isolated_second": [
+                  25
+                ],
+                "both_first": [
+                  40
+                ],
+                "both_second": [
+                  28
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  40
+                ],
+                "isolated_second": [
+                  25
+                ],
+                "both_first": [
+                  40
+                ],
+                "both_second": [
+                  28
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4025,
+                  "end_minus_nominal_force_end_ms": -35,
+                  "max_active_run_ms": 45,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5502,
+                  "end_minus_nominal_force_end_ms": -33,
+                  "max_active_run_ms": 62,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4025,
+                  "end_minus_nominal_force_end_ms": -35,
+                  "max_active_run_ms": 45,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5517,
+                  "end_minus_nominal_force_end_ms": -18,
+                  "max_active_run_ms": 74,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            }
+          }
+        },
+        {
+          "id": "diag_known_late_fx",
+          "mass_kg": 5.38,
+          "impact_onsets_ms": [
+            3940,
+            5505
+          ],
+          "applied_forces_N": [
+            [
+              0.0,
+              0.0,
+              16.0
+            ],
+            [
+              25.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "gap_ms": 1445,
+          "observed_zero_force_samples": 1446,
+          "passed": true,
+          "failed_gates": [],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {},
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [
+                  33
+                ],
+                "isolated_second": [
+                  28
+                ],
+                "both_first": [
+                  33
+                ],
+                "both_second": [
+                  28
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  33
+                ],
+                "isolated_second": [
+                  28
+                ],
+                "both_first": [
+                  33
+                ],
+                "both_second": [
+                  28
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4005,
+                  "end_minus_nominal_force_end_ms": -55,
+                  "max_active_run_ms": 32,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5646,
+                  "end_minus_nominal_force_end_ms": 21,
+                  "max_active_run_ms": 113,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4005,
+                  "end_minus_nominal_force_end_ms": -55,
+                  "max_active_run_ms": 32,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5642,
+                  "end_minus_nominal_force_end_ms": 17,
+                  "max_active_run_ms": 109,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [
+                  33
+                ],
+                "isolated_second": [
+                  28
+                ],
+                "both_first": [
+                  33
+                ],
+                "both_second": [
+                  28
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  33
+                ],
+                "isolated_second": [
+                  28
+                ],
+                "both_first": [
+                  33
+                ],
+                "both_second": [
+                  28
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4031,
+                  "end_minus_nominal_force_end_ms": -29,
+                  "max_active_run_ms": 58,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5646,
+                  "end_minus_nominal_force_end_ms": 21,
+                  "max_active_run_ms": 113,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4031,
+                  "end_minus_nominal_force_end_ms": -29,
+                  "max_active_run_ms": 58,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5642,
+                  "end_minus_nominal_force_end_ms": 17,
+                  "max_active_run_ms": 109,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  28
+                ],
+                "both_first": [],
+                "both_second": [
+                  28
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  28
+                ],
+                "both_first": [],
+                "both_second": [
+                  28
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5646,
+                  "end_minus_nominal_force_end_ms": 21,
+                  "max_active_run_ms": 113,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5642,
+                  "end_minus_nominal_force_end_ms": 17,
+                  "max_active_run_ms": 109,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  33
+                ],
+                "both_first": [],
+                "both_second": [
+                  33
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  33
+                ],
+                "both_first": [],
+                "both_second": [
+                  33
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5646,
+                  "end_minus_nominal_force_end_ms": 21,
+                  "max_active_run_ms": 108,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5644,
+                  "end_minus_nominal_force_end_ms": 19,
+                  "max_active_run_ms": 106,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [
+                  40
+                ],
+                "isolated_second": [
+                  33
+                ],
+                "both_first": [
+                  40
+                ],
+                "both_second": [
+                  33
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  40
+                ],
+                "isolated_second": [
+                  33
+                ],
+                "both_first": [
+                  40
+                ],
+                "both_second": [
+                  33
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4025,
+                  "end_minus_nominal_force_end_ms": -35,
+                  "max_active_run_ms": 45,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5647,
+                  "end_minus_nominal_force_end_ms": 22,
+                  "max_active_run_ms": 109,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4025,
+                  "end_minus_nominal_force_end_ms": -35,
+                  "max_active_run_ms": 45,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5646,
+                  "end_minus_nominal_force_end_ms": 21,
+                  "max_active_run_ms": 108,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            }
+          }
+        }
+      ],
+      "by_arm": {
+        "single_pass": {
+          "both_first": 4,
+          "both_second": 4,
+          "both_hits_on_same_trace": 3,
+          "one_genuine_in_all_four_contexts": 2,
+          "excess_raw_rises_all_four_contexts": 3,
+          "second_onsets_masked_preexisting": 0,
+          "second_onsets_not_quiet_20ms": 0
+        },
+        "event": {
+          "both_first": 4,
+          "both_second": 4,
+          "both_hits_on_same_trace": 3,
+          "one_genuine_in_all_four_contexts": 2,
+          "excess_raw_rises_all_four_contexts": 1,
+          "second_onsets_masked_preexisting": 0,
+          "second_onsets_not_quiet_20ms": 0
+        },
+        "D_coupled": {
+          "both_first": 2,
+          "both_second": 3,
+          "both_hits_on_same_trace": 1,
+          "one_genuine_in_all_four_contexts": 0,
+          "excess_raw_rises_all_four_contexts": 1,
+          "second_onsets_masked_preexisting": 0,
+          "second_onsets_not_quiet_20ms": 0
+        },
+        "raw_r15": {
+          "both_first": 2,
+          "both_second": 4,
+          "both_hits_on_same_trace": 1,
+          "one_genuine_in_all_four_contexts": 0,
+          "excess_raw_rises_all_four_contexts": 0,
+          "second_onsets_masked_preexisting": 0,
+          "second_onsets_not_quiet_20ms": 0
+        },
+        "r10": {
+          "both_first": 4,
+          "both_second": 3,
+          "both_hits_on_same_trace": 2,
+          "one_genuine_in_all_four_contexts": 2,
+          "excess_raw_rises_all_four_contexts": 0,
+          "second_onsets_masked_preexisting": 0,
+          "second_onsets_not_quiet_20ms": 0
+        }
+      }
+    },
+    "new": {
+      "status": "completed",
+      "rows": [
+        {
+          "id": "gap12_aligned",
+          "mass_kg": 5.24,
+          "impact_onsets_ms": [
+            4200,
+            4332
+          ],
+          "applied_forces_N": [
+            [
+              0,
+              0,
+              22
+            ],
+            [
+              0,
+              0,
+              26
+            ]
+          ],
+          "gap_ms": 12,
+          "observed_zero_force_samples": 13,
+          "passed": true,
+          "failed_gates": [],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {},
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [
+                  31
+                ],
+                "isolated_second": [
+                  27
+                ],
+                "both_first": [
+                  31
+                ],
+                "both_second": [
+                  38
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  31
+                ],
+                "isolated_second": [
+                  27
+                ],
+                "both_first": [
+                  31
+                ],
+                "both_second": [
+                  38
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4301,
+                  "end_minus_nominal_force_end_ms": -19,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4447,
+                  "end_minus_nominal_force_end_ms": -5,
+                  "max_active_run_ms": 88,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4301,
+                  "end_minus_nominal_force_end_ms": -19,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4443,
+                  "end_minus_nominal_force_end_ms": -9,
+                  "max_active_run_ms": 73,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [
+                  31
+                ],
+                "isolated_second": [
+                  27
+                ],
+                "both_first": [
+                  31
+                ],
+                "both_second": [
+                  38
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  31
+                ],
+                "isolated_second": [
+                  27
+                ],
+                "both_first": [
+                  31
+                ],
+                "both_second": [
+                  38
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4301,
+                  "end_minus_nominal_force_end_ms": -19,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4447,
+                  "end_minus_nominal_force_end_ms": -5,
+                  "max_active_run_ms": 88,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4301,
+                  "end_minus_nominal_force_end_ms": -19,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4443,
+                  "end_minus_nominal_force_end_ms": -9,
+                  "max_active_run_ms": 73,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [
+                  31
+                ],
+                "isolated_second": [
+                  27
+                ],
+                "both_first": [
+                  31
+                ],
+                "both_second": [
+                  38
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  31
+                ],
+                "isolated_second": [
+                  27
+                ],
+                "both_first": [
+                  31
+                ],
+                "both_second": [
+                  38
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4301,
+                  "end_minus_nominal_force_end_ms": -19,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4447,
+                  "end_minus_nominal_force_end_ms": -5,
+                  "max_active_run_ms": 88,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4301,
+                  "end_minus_nominal_force_end_ms": -19,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4443,
+                  "end_minus_nominal_force_end_ms": -9,
+                  "max_active_run_ms": 73,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [
+                  31
+                ],
+                "isolated_second": [
+                  27
+                ],
+                "both_first": [
+                  31
+                ],
+                "both_second": [
+                  36
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  31
+                ],
+                "isolated_second": [
+                  27
+                ],
+                "both_first": [
+                  31
+                ],
+                "both_second": [
+                  36
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4312,
+                  "end_minus_nominal_force_end_ms": -8,
+                  "max_active_run_ms": 81,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4445,
+                  "end_minus_nominal_force_end_ms": -7,
+                  "max_active_run_ms": 86,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4312,
+                  "end_minus_nominal_force_end_ms": -8,
+                  "max_active_run_ms": 81,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4439,
+                  "end_minus_nominal_force_end_ms": -13,
+                  "max_active_run_ms": 71,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [
+                  27
+                ],
+                "isolated_second": [
+                  24
+                ],
+                "both_first": [
+                  27
+                ],
+                "both_second": [
+                  46
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  27
+                ],
+                "isolated_second": [
+                  24
+                ],
+                "both_first": [
+                  27
+                ],
+                "both_second": [
+                  46
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4301,
+                  "end_minus_nominal_force_end_ms": -19,
+                  "max_active_run_ms": 74,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4441,
+                  "end_minus_nominal_force_end_ms": -11,
+                  "max_active_run_ms": 85,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4301,
+                  "end_minus_nominal_force_end_ms": -19,
+                  "max_active_run_ms": 74,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4431,
+                  "end_minus_nominal_force_end_ms": -21,
+                  "max_active_run_ms": 53,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            }
+          }
+        },
+        {
+          "id": "gap24_reverse",
+          "mass_kg": 5.89,
+          "impact_onsets_ms": [
+            4010,
+            4154
+          ],
+          "applied_forces_N": [
+            [
+              0,
+              0,
+              25
+            ],
+            [
+              0,
+              0,
+              -23
+            ]
+          ],
+          "gap_ms": 24,
+          "observed_zero_force_samples": 25,
+          "passed": false,
+          "failed_gates": [
+            "all_reference_requirements"
+          ],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {
+              "keep_first_genuine": [
+                "isolated_second"
+              ]
+            },
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [
+                  22
+                ],
+                "isolated_second": [
+                  49
+                ],
+                "both_first": [
+                  22
+                ],
+                "both_second": [
+                  49
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  22
+                ],
+                "isolated_second": [
+                  49
+                ],
+                "both_first": [
+                  22
+                ],
+                "both_second": [
+                  49
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4122,
+                  "end_minus_nominal_force_end_ms": -8,
+                  "max_active_run_ms": 90,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4363,
+                  "end_minus_nominal_force_end_ms": 89,
+                  "max_active_run_ms": 160,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4122,
+                  "end_minus_nominal_force_end_ms": -8,
+                  "max_active_run_ms": 90,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4366,
+                  "end_minus_nominal_force_end_ms": 92,
+                  "max_active_run_ms": 163,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [
+                  22
+                ],
+                "isolated_second": [
+                  49
+                ],
+                "both_first": [
+                  22
+                ],
+                "both_second": [
+                  49
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  22
+                ],
+                "isolated_second": [
+                  49
+                ],
+                "both_first": [
+                  22
+                ],
+                "both_second": [
+                  49
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4122,
+                  "end_minus_nominal_force_end_ms": -8,
+                  "max_active_run_ms": 90,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4363,
+                  "end_minus_nominal_force_end_ms": 89,
+                  "max_active_run_ms": 160,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4122,
+                  "end_minus_nominal_force_end_ms": -8,
+                  "max_active_run_ms": 90,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4366,
+                  "end_minus_nominal_force_end_ms": 92,
+                  "max_active_run_ms": 163,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [
+                  26
+                ],
+                "isolated_second": [
+                  49
+                ],
+                "both_first": [
+                  26
+                ],
+                "both_second": [
+                  49
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  26
+                ],
+                "isolated_second": [
+                  49
+                ],
+                "both_first": [
+                  26
+                ],
+                "both_second": [
+                  49
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4122,
+                  "end_minus_nominal_force_end_ms": -8,
+                  "max_active_run_ms": 86,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4363,
+                  "end_minus_nominal_force_end_ms": 89,
+                  "max_active_run_ms": 160,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4122,
+                  "end_minus_nominal_force_end_ms": -8,
+                  "max_active_run_ms": 86,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4366,
+                  "end_minus_nominal_force_end_ms": 92,
+                  "max_active_run_ms": 163,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [
+                  23
+                ],
+                "isolated_second": [
+                  43
+                ],
+                "both_first": [
+                  23
+                ],
+                "both_second": [
+                  50
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  23
+                ],
+                "isolated_second": [
+                  43
+                ],
+                "both_first": [
+                  23
+                ],
+                "both_second": [
+                  50
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4123,
+                  "end_minus_nominal_force_end_ms": -7,
+                  "max_active_run_ms": 90,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4366,
+                  "end_minus_nominal_force_end_ms": 92,
+                  "max_active_run_ms": 169,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4123,
+                  "end_minus_nominal_force_end_ms": -7,
+                  "max_active_run_ms": 90,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4357,
+                  "end_minus_nominal_force_end_ms": 83,
+                  "max_active_run_ms": 153,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [
+                  26
+                ],
+                "isolated_second": [
+                  50
+                ],
+                "both_first": [
+                  26
+                ],
+                "both_second": [
+                  50
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  26
+                ],
+                "isolated_second": [
+                  50
+                ],
+                "both_first": [
+                  26
+                ],
+                "both_second": [
+                  50
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4122,
+                  "end_minus_nominal_force_end_ms": -8,
+                  "max_active_run_ms": 86,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4361,
+                  "end_minus_nominal_force_end_ms": 87,
+                  "max_active_run_ms": 157,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4122,
+                  "end_minus_nominal_force_end_ms": -8,
+                  "max_active_run_ms": 86,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4363,
+                  "end_minus_nominal_force_end_ms": 89,
+                  "max_active_run_ms": 159,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            }
+          }
+        },
+        {
+          "id": "gap40_cross",
+          "mass_kg": 4.68,
+          "impact_onsets_ms": [
+            4760,
+            4920
+          ],
+          "applied_forces_N": [
+            [
+              28,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              22
+            ]
+          ],
+          "gap_ms": 40,
+          "observed_zero_force_samples": 41,
+          "passed": false,
+          "failed_gates": [
+            "exactly_one_genuine_rise_in_each_context",
+            "original_candidate_gates"
+          ],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {},
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [
+                  30
+                ],
+                "isolated_second": [
+                  21
+                ],
+                "both_first": [
+                  30
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  30
+                ],
+                "isolated_second": [
+                  21
+                ],
+                "both_first": [
+                  30
+                ],
+                "both_second": [
+                  22
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4907,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 117,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5033,
+                  "end_minus_nominal_force_end_ms": -7,
+                  "max_active_run_ms": 92,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4907,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 117,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [
+                  30
+                ],
+                "isolated_second": [
+                  21
+                ],
+                "both_first": [
+                  30
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  30
+                ],
+                "isolated_second": [
+                  21
+                ],
+                "both_first": [
+                  30
+                ],
+                "both_second": [
+                  22
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4907,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 117,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5033,
+                  "end_minus_nominal_force_end_ms": -7,
+                  "max_active_run_ms": 92,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4907,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 117,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [
+                  30
+                ],
+                "isolated_second": [
+                  27
+                ],
+                "both_first": [
+                  30
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  30
+                ],
+                "isolated_second": [
+                  27
+                ],
+                "both_first": [
+                  30
+                ],
+                "both_second": [
+                  27
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4907,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 117,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5033,
+                  "end_minus_nominal_force_end_ms": -7,
+                  "max_active_run_ms": 86,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4907,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 117,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [
+                  28
+                ],
+                "isolated_second": [
+                  26
+                ],
+                "both_first": [
+                  28
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  28
+                ],
+                "isolated_second": [
+                  26
+                ],
+                "both_first": [
+                  28
+                ],
+                "both_second": [
+                  26
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4907,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 119,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5029,
+                  "end_minus_nominal_force_end_ms": -11,
+                  "max_active_run_ms": 83,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4907,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 119,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [
+                  30
+                ],
+                "isolated_second": [
+                  24
+                ],
+                "both_first": [
+                  30
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  30
+                ],
+                "isolated_second": [
+                  24
+                ],
+                "both_first": [
+                  30
+                ],
+                "both_second": [
+                  27
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4908,
+                  "end_minus_nominal_force_end_ms": 28,
+                  "max_active_run_ms": 118,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5019,
+                  "end_minus_nominal_force_end_ms": -21,
+                  "max_active_run_ms": 75,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4908,
+                  "end_minus_nominal_force_end_ms": 28,
+                  "max_active_run_ms": 118,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            }
+          }
+        },
+        {
+          "id": "gap80_weak",
+          "mass_kg": 6.84,
+          "impact_onsets_ms": [
+            3866,
+            4066
+          ],
+          "applied_forces_N": [
+            [
+              0,
+              0,
+              -14
+            ],
+            [
+              0,
+              0,
+              16
+            ]
+          ],
+          "gap_ms": 80,
+          "observed_zero_force_samples": 81,
+          "passed": false,
+          "failed_gates": [
+            "exactly_one_genuine_rise_in_each_context",
+            "original_candidate_gates",
+            "all_reference_requirements"
+          ],
+          "failed_comparisons": {
+            "r10": {
+              "preserve_quiet": [
+                "both_second"
+              ]
+            },
+            "raw_r15": {},
+            "D_coupled": {
+              "preserve_quiet": [
+                "both_second"
+              ]
+            },
+            "single_pass": {
+              "preserve_quiet": [
+                "both_second"
+              ]
+            }
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [
+                  133,
+                  156,
+                  160
+                ],
+                "isolated_second": [
+                  24
+                ],
+                "both_first": [
+                  133,
+                  156,
+                  160
+                ],
+                "both_second": [
+                  24
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  133,
+                  156,
+                  160
+                ],
+                "isolated_second": [
+                  24
+                ],
+                "both_first": [
+                  133,
+                  156,
+                  160
+                ],
+                "both_second": [
+                  24
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4012,
+                  "end_minus_nominal_force_end_ms": 26,
+                  "max_active_run_ms": 13,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4175,
+                  "end_minus_nominal_force_end_ms": -11,
+                  "max_active_run_ms": 85,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4012,
+                  "end_minus_nominal_force_end_ms": 26,
+                  "max_active_run_ms": 13,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4171,
+                  "end_minus_nominal_force_end_ms": -15,
+                  "max_active_run_ms": 81,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [
+                  133
+                ],
+                "isolated_second": [
+                  24
+                ],
+                "both_first": [
+                  133
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  133
+                ],
+                "isolated_second": [
+                  24
+                ],
+                "both_first": [
+                  133
+                ],
+                "both_second": [
+                  24
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4068,
+                  "end_minus_nominal_force_end_ms": 82,
+                  "max_active_run_ms": 69,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4175,
+                  "end_minus_nominal_force_end_ms": -11,
+                  "max_active_run_ms": 85,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4068,
+                  "end_minus_nominal_force_end_ms": 82,
+                  "max_active_run_ms": 69,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": true,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  36
+                ],
+                "both_first": [],
+                "both_second": [
+                  35
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  36
+                ],
+                "both_first": [],
+                "both_second": [
+                  35
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4175,
+                  "end_minus_nominal_force_end_ms": -11,
+                  "max_active_run_ms": 73,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4171,
+                  "end_minus_nominal_force_end_ms": -15,
+                  "max_active_run_ms": 70,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [
+                  144
+                ],
+                "isolated_second": [
+                  40
+                ],
+                "both_first": [
+                  144
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  144
+                ],
+                "isolated_second": [
+                  40
+                ],
+                "both_first": [
+                  144
+                ],
+                "both_second": [
+                  40
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 4058,
+                  "end_minus_nominal_force_end_ms": 72,
+                  "max_active_run_ms": 48,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4154,
+                  "end_minus_nominal_force_end_ms": -32,
+                  "max_active_run_ms": 48,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 4058,
+                  "end_minus_nominal_force_end_ms": 72,
+                  "max_active_run_ms": 48,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  35
+                ],
+                "both_first": [],
+                "both_second": [
+                  28
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [],
+                "isolated_second": [
+                  35
+                ],
+                "both_first": [],
+                "both_second": [
+                  28
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 4175,
+                  "end_minus_nominal_force_end_ms": -11,
+                  "max_active_run_ms": 74,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 4159,
+                  "end_minus_nominal_force_end_ms": -27,
+                  "max_active_run_ms": 65,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            }
+          }
+        },
+        {
+          "id": "gap160_lateral",
+          "mass_kg": 7.06,
+          "impact_onsets_ms": [
+            4910,
+            5190
+          ],
+          "applied_forces_N": [
+            [
+              0,
+              -20,
+              0
+            ],
+            [
+              26,
+              0,
+              0
+            ]
+          ],
+          "gap_ms": 160,
+          "observed_zero_force_samples": 161,
+          "passed": true,
+          "failed_gates": [],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {},
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [
+                  49
+                ],
+                "isolated_second": [
+                  33
+                ],
+                "both_first": [
+                  49
+                ],
+                "both_second": [
+                  33
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  49
+                ],
+                "isolated_second": [
+                  33
+                ],
+                "both_first": [
+                  49
+                ],
+                "both_second": [
+                  33
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 5039,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 80,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5337,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 114,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 5039,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 80,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5334,
+                  "end_minus_nominal_force_end_ms": 24,
+                  "max_active_run_ms": 111,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [
+                  49
+                ],
+                "isolated_second": [
+                  33
+                ],
+                "both_first": [
+                  49
+                ],
+                "both_second": [
+                  33
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  49
+                ],
+                "isolated_second": [
+                  33
+                ],
+                "both_first": [
+                  49
+                ],
+                "both_second": [
+                  33
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 5039,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 80,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5337,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 114,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 5039,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 80,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5334,
+                  "end_minus_nominal_force_end_ms": 24,
+                  "max_active_run_ms": 111,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [
+                  49
+                ],
+                "isolated_second": [
+                  33
+                ],
+                "both_first": [
+                  49
+                ],
+                "both_second": [
+                  33
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  49
+                ],
+                "isolated_second": [
+                  33
+                ],
+                "both_first": [
+                  49
+                ],
+                "both_second": [
+                  33
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 5039,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 80,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5337,
+                  "end_minus_nominal_force_end_ms": 27,
+                  "max_active_run_ms": 114,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 5039,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 80,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5334,
+                  "end_minus_nominal_force_end_ms": 24,
+                  "max_active_run_ms": 111,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [
+                  49
+                ],
+                "isolated_second": [
+                  32
+                ],
+                "both_first": [
+                  49
+                ],
+                "both_second": [
+                  31
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  49
+                ],
+                "isolated_second": [
+                  32
+                ],
+                "both_first": [
+                  49
+                ],
+                "both_second": [
+                  31
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 5039,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 80,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5332,
+                  "end_minus_nominal_force_end_ms": 22,
+                  "max_active_run_ms": 110,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 5039,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 80,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5334,
+                  "end_minus_nominal_force_end_ms": 24,
+                  "max_active_run_ms": 113,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [
+                  48
+                ],
+                "isolated_second": [
+                  29
+                ],
+                "both_first": [
+                  48
+                ],
+                "both_second": [
+                  30
+                ]
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  48
+                ],
+                "isolated_second": [
+                  29
+                ],
+                "both_first": [
+                  48
+                ],
+                "both_second": [
+                  30
+                ]
+              },
+              "count_all_four_as_one": true,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 5039,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 81,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5334,
+                  "end_minus_nominal_force_end_ms": 24,
+                  "max_active_run_ms": 115,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 5039,
+                  "end_minus_nominal_force_end_ms": 9,
+                  "max_active_run_ms": 81,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": 5334,
+                  "end_minus_nominal_force_end_ms": 24,
+                  "max_active_run_ms": 114,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": true,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": true
+            }
+          }
+        },
+        {
+          "id": "gap24_late_aligned",
+          "mass_kg": 3.57,
+          "impact_onsets_ms": [
+            5180,
+            5324
+          ],
+          "applied_forces_N": [
+            [
+              22,
+              0,
+              0
+            ],
+            [
+              27,
+              0,
+              0
+            ]
+          ],
+          "gap_ms": 24,
+          "observed_zero_force_samples": 25,
+          "passed": false,
+          "failed_gates": [
+            "exactly_one_genuine_rise_in_each_context",
+            "original_candidate_gates"
+          ],
+          "failed_comparisons": {
+            "r10": {},
+            "raw_r15": {},
+            "D_coupled": {},
+            "single_pass": {}
+          },
+          "arms": {
+            "single_pass": {
+              "credited_ms": {
+                "isolated_first": [
+                  36
+                ],
+                "isolated_second": [
+                  30
+                ],
+                "both_first": [
+                  36
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  36
+                ],
+                "isolated_second": [
+                  30
+                ],
+                "both_first": [
+                  36
+                ],
+                "both_second": [
+                  28
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 5316,
+                  "end_minus_nominal_force_end_ms": 16,
+                  "max_active_run_ms": 100,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5477,
+                  "end_minus_nominal_force_end_ms": 33,
+                  "max_active_run_ms": 123,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 5316,
+                  "end_minus_nominal_force_end_ms": 16,
+                  "max_active_run_ms": 100,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "event": {
+              "credited_ms": {
+                "isolated_first": [
+                  36
+                ],
+                "isolated_second": [
+                  30
+                ],
+                "both_first": [
+                  36
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  36
+                ],
+                "isolated_second": [
+                  30
+                ],
+                "both_first": [
+                  36
+                ],
+                "both_second": [
+                  28
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 5316,
+                  "end_minus_nominal_force_end_ms": 16,
+                  "max_active_run_ms": 100,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5477,
+                  "end_minus_nominal_force_end_ms": 33,
+                  "max_active_run_ms": 123,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 5316,
+                  "end_minus_nominal_force_end_ms": 16,
+                  "max_active_run_ms": 100,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "D_coupled": {
+              "credited_ms": {
+                "isolated_first": [
+                  36
+                ],
+                "isolated_second": [
+                  30
+                ],
+                "both_first": [
+                  36
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  36
+                ],
+                "isolated_second": [
+                  30
+                ],
+                "both_first": [
+                  36
+                ],
+                "both_second": [
+                  28
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 5316,
+                  "end_minus_nominal_force_end_ms": 16,
+                  "max_active_run_ms": 100,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5477,
+                  "end_minus_nominal_force_end_ms": 33,
+                  "max_active_run_ms": 123,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 5316,
+                  "end_minus_nominal_force_end_ms": 16,
+                  "max_active_run_ms": 100,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "raw_r15": {
+              "credited_ms": {
+                "isolated_first": [
+                  36
+                ],
+                "isolated_second": [
+                  30
+                ],
+                "both_first": [
+                  36
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  36
+                ],
+                "isolated_second": [
+                  30
+                ],
+                "both_first": [
+                  36
+                ],
+                "both_second": [
+                  28
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 5313,
+                  "end_minus_nominal_force_end_ms": 13,
+                  "max_active_run_ms": 97,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5478,
+                  "end_minus_nominal_force_end_ms": 34,
+                  "max_active_run_ms": 124,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 5313,
+                  "end_minus_nominal_force_end_ms": 13,
+                  "max_active_run_ms": 97,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            },
+            "r10": {
+              "credited_ms": {
+                "isolated_first": [
+                  34
+                ],
+                "isolated_second": [
+                  30
+                ],
+                "both_first": [
+                  34
+                ],
+                "both_second": []
+              },
+              "raw_ms": {
+                "isolated_first": [
+                  34
+                ],
+                "isolated_second": [
+                  30
+                ],
+                "both_first": [
+                  34
+                ],
+                "both_second": [
+                  30
+                ]
+              },
+              "count_all_four_as_one": false,
+              "response": {
+                "isolated_first": {
+                  "first_end_ms": 5318,
+                  "end_minus_nominal_force_end_ms": 18,
+                  "max_active_run_ms": 104,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "isolated_second": {
+                  "first_end_ms": 5477,
+                  "end_minus_nominal_force_end_ms": 33,
+                  "max_active_run_ms": 123,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_first": {
+                  "first_end_ms": 5318,
+                  "end_minus_nominal_force_end_ms": 18,
+                  "max_active_run_ms": 104,
+                  "high_before_onset": false,
+                  "quiet_previous_20": true
+                },
+                "both_second": {
+                  "first_end_ms": null,
+                  "end_minus_nominal_force_end_ms": null,
+                  "max_active_run_ms": null,
+                  "high_before_onset": false,
+                  "quiet_previous_20": false
+                }
+              },
+              "signed_scalar_certified": true,
+              "both_first_and_second_credited": false,
+              "outside_programmed_windows_rises_s": {
+                "none": [],
+                "first": [],
+                "second": [],
+                "both": []
+              },
+              "original_twin_gate": false
+            }
+          }
+        }
+      ],
+      "by_arm": {
+        "single_pass": {
+          "both_first": 6,
+          "both_second": 4,
+          "both_hits_on_same_trace": 4,
+          "one_genuine_in_all_four_contexts": 3,
+          "excess_raw_rises_all_four_contexts": 4,
+          "second_onsets_masked_preexisting": 0,
+          "second_onsets_not_quiet_20ms": 2
+        },
+        "event": {
+          "both_first": 6,
+          "both_second": 3,
+          "both_hits_on_same_trace": 3,
+          "one_genuine_in_all_four_contexts": 3,
+          "excess_raw_rises_all_four_contexts": 0,
+          "second_onsets_masked_preexisting": 1,
+          "second_onsets_not_quiet_20ms": 3
+        },
+        "D_coupled": {
+          "both_first": 5,
+          "both_second": 4,
+          "both_hits_on_same_trace": 3,
+          "one_genuine_in_all_four_contexts": 3,
+          "excess_raw_rises_all_four_contexts": 0,
+          "second_onsets_masked_preexisting": 0,
+          "second_onsets_not_quiet_20ms": 2
+        },
+        "raw_r15": {
+          "both_first": 6,
+          "both_second": 3,
+          "both_hits_on_same_trace": 3,
+          "one_genuine_in_all_four_contexts": 3,
+          "excess_raw_rises_all_four_contexts": 0,
+          "second_onsets_masked_preexisting": 0,
+          "second_onsets_not_quiet_20ms": 3
+        },
+        "r10": {
+          "both_first": 5,
+          "both_second": 4,
+          "both_hits_on_same_trace": 3,
+          "one_genuine_in_all_four_contexts": 3,
+          "excess_raw_rises_all_four_contexts": 0,
+          "second_onsets_masked_preexisting": 0,
+          "second_onsets_not_quiet_20ms": 2
+        }
+      }
+    }
+  },
+  "audit_sha256": "f101b6cede7afdc11cc4093381e6b7c592b97d5f9f0ae73148113a0b4677aa5d"
+}

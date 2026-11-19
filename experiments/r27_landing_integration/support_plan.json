@@ -1,0 +1,32 @@
+{
+  "schema": "r27-landing-support-aware-preregistration.v1",
+  "classification": "Separate post-v1 disclosed development proposal; not a retune or blind study.",
+  "immutable_v1": {
+    "candidate_sha256": "ffde18b42b8ccd8250eae184147f7e498003356cfdb1a7cd46ccc5edfce0fb95",
+    "model_sha256": "447660558c5ba67ea65e53be568e493bdd5f42532b558f440884b3fb610b5939"
+  },
+  "diagnostic_basis": {
+    "pickup_gain": "At the 1.461 s source edge, the causal controller estimator was valid and assigned 1.0 of payload support to the carried arm; observed table normal was 0 N.",
+    "tool_counterexample": "At the 3.857 s source edge, the same estimator was valid but assigned only 0.3047 of payload support to the arm while measured table normal was 27.28 N.",
+    "proposal": "Acquire the optional gripped inverse-force episode only while the actual controller's causal support estimate is valid and at least half of payload support remains carried by the arm. Half-weight is a physical ownership boundary, not selected from a missed-force magnitude or timestamp. Under invalid/uncertain support, C1 passes through unchanged."
+  },
+  "source": {
+    "normal_model": "Reuse the frozen v1 inverse-force model fit only on seven normal G4 episodes.",
+    "support_feature": "shared_estimator.lambda_support and lambda_support_valid from the unmodified G4 controller, sampled causally before the current controller update.",
+    "support_boundary": 0.5,
+    "arbitration": "Never suppress or delay C1. The optional episode may start only when support-valid and arm-support >= 0.5; incumbent ownership and physical rearm remain v1-identical."
+  },
+  "prepositive_gates": {
+    "separated_normal_audit": "All six v1 audit normals must have byte-identical C1 rise/active/false/tool/cost/physics.",
+    "source_pins": "Freeze support_plan.json, support_aware.py and the reused model before any challenged output."
+  },
+  "postfreeze_panels": {
+    "authentic_official": "All 29 stock evaluate.py episodes per C1/support-aware arm; retain at least 17/24 and no control/false regression.",
+    "signed_pair": "The frozen v1 signed X/Y/Z and two-impulse panel; no inherited loss, added duplicate or changed physics.",
+    "known_tool": "The disclosed tool_high/tool_lateral/tool_low guard must have no new rise.",
+    "unseen_true_tools": [[0.0, 0.0, 0.025], [0.0, 0.0, 0.035]],
+    "postrelease": "C1 post-release late signed X/Z behavior must remain byte-identical because the support-aware source is gripped-only."
+  },
+  "falsifier": "Reject without another threshold alternative for any separated-normal change, official gain loss below 17/24, new false/duplicate/tool rise, inherited delay >5 ms, changed physics/controller cells, or failed signed/pair/post-release protection.",
+  "limits": ["finite MuJoCo 3.17 CPU simulation", "disclosed development", "no R27 loaded holdout", "no hardware/deployment/safety claim"]
+}

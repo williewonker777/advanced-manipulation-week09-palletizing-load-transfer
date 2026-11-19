@@ -1,0 +1,930 @@
+{
+  "schema": "r18-sequential-com-result.v1",
+  "decision": "REJECT_EARLY_CERTIFICATE_STOP_BEFORE_EXPOSED_OR_CONTROL",
+  "crossfit_diagnostic": {
+    "passed_training_only": true,
+    "interior_stock_certified": 10,
+    "endpoint_stock_abstained": 2,
+    "perturbed_normals_abstained": 12,
+    "early_certified_radius_mm_range": [
+      1.159,
+      1.525
+    ],
+    "deployment_signature_radius": 1.7161802167178757e-15,
+    "interpretation": "All stock rows share a deterministic simulator signature; the nominal crossfit pass does not establish sensor-robust support."
+  },
+  "negative_control": {
+    "case_count": 9,
+    "supported_cases": 0,
+    "minimum_perturbed_distance": 1.1813798560780149,
+    "certificate_radius": 1.7161802167178757e-15,
+    "minimum_distance_over_radius": 688377505211751.9,
+    "sensor_uncertainty_exceeds_support": true,
+    "deployable_early_certificate": false,
+    "encoder_quantum_rad": 2.3968449810713143e-05,
+    "jts_sd_nm": [
+      0.3,
+      0.3,
+      0.15,
+      0.05,
+      0.05,
+      0.05
+    ],
+    "baseline_lies_on_closed_support_boundary": true
+  },
+  "scope": {
+    "exposed_20_plus_20_predictions_run": false,
+    "truth_opened": false,
+    "sh5_or_other_closed_loop_run": false,
+    "new_impacts_or_holdout_run": false,
+    "threshold_or_radius_refit": false
+  },
+  "root_cause": "The 12 stock normal signatures have no independent sensor-noise variation because the simulator uses fixed JTS seed 7 and deterministic encoder quantization. Their inferred radius 1.716e-15 is numerical equality, not a physical uncertainty set.",
+  "needed_evidence": "Independent normal sensor realizations with unchanged physical stock parameters: at minimum three distinct encoder/JTS noise realizations at a fixed interior mass to establish repeatability; for a deployable mass-interpolated certificate, repeat this across the interior mass groups and reserve at least one entire sensor seed per mass as a held support check. Recompute support from training seeds only and retain the unchanged 0.75 mm/2.5 mm/action gates.",
+  "pins": {
+    "plan.py_or_json": "db7a8ee8687fc17ad3809696fa6d167d53bde647f03c3328008b7e09d56b02e6",
+    "crossfit.py": "5d9ad45202550e388303c1e30a151e173820fe71266c0b65b5598cf286e0ae4f",
+    "repeatability.py": "3ae472df8d3ccda58d6031a4616236c71382a318bede44e4bb44d8739411da70",
+    "test_repeatability.py": "11d4e5b1aebafa4ebe92f9fbee06458f3b5fa794560b54614eaeb71778e91747",
+    "CROSSFIT.json": "26f04f8cff5f596ab0afcdcdee21ad4f2a465e77ba09573464bd8915cd371739",
+    "REPEATABILITY_V2.json": "1f3617428a5cb3cd08ec3857981b81d2c1e7cc1fe1725080484ee217bf56c7c7"
+  },
+  "verification": {
+    "unit_tests": "1 passed",
+    "cpu": "taskset -c 4",
+    "python": "-B",
+    "blas_threads": 1
+  },
+  "closed_loop_seed_repeats": {
+    "schema": "r18-seed-repeatability-result.v1",
+    "summary": {
+      "seed7_exact_all_groups": true,
+      "capture_count": 12,
+      "nonoriginal_supported": 0,
+      "nonoriginal_count": 9,
+      "minimum_nonoriginal_distance": 0.07400457053683879,
+      "certificate_radius": 1.7161802167178757e-15,
+      "minimum_distance_over_radius": 43121677907678.89,
+      "saved_sample_perturbation_minimum_distance": 1.1813798560780149,
+      "genuine_seed_change_material": true,
+      "estimator_improvement": false
+    },
+    "seed7_checks": [
+      {
+        "id": "n01",
+        "feature_parity": {
+          "mass": true,
+          "y": true,
+          "jac": true,
+          "stiffness": true,
+          "prior_com_mm": true,
+          "signature": true,
+          "completed_at_s": true
+        },
+        "raw_prefix_parity": {
+          "t": true,
+          "encoder": true,
+          "jts": true,
+          "grip": true
+        },
+        "passed": true
+      },
+      {
+        "id": "n05",
+        "feature_parity": {
+          "mass": true,
+          "y": true,
+          "jac": true,
+          "stiffness": true,
+          "prior_com_mm": true,
+          "signature": true,
+          "completed_at_s": true
+        },
+        "raw_prefix_parity": {
+          "t": true,
+          "encoder": true,
+          "jts": true,
+          "grip": true
+        },
+        "passed": true
+      },
+      {
+        "id": "n10",
+        "feature_parity": {
+          "mass": true,
+          "y": true,
+          "jac": true,
+          "stiffness": true,
+          "prior_com_mm": true,
+          "signature": true,
+          "completed_at_s": true
+        },
+        "raw_prefix_parity": {
+          "t": true,
+          "encoder": true,
+          "jts": true,
+          "grip": true
+        },
+        "passed": true
+      }
+    ],
+    "sensor_variation": [
+      {
+        "id": "n01",
+        "seed": 18017,
+        "first_32_jts_max_abs_nm": 1.0550024569591243,
+        "full_jts_rms_nm": 0.26542924788166344,
+        "full_encoder_max_abs_rad": 4.7936899621570106e-05
+      },
+      {
+        "id": "n01",
+        "seed": 18029,
+        "first_32_jts_max_abs_nm": 1.2215716111185557,
+        "full_jts_rms_nm": 0.2654517885880116,
+        "full_encoder_max_abs_rad": 7.190534943224414e-05
+      },
+      {
+        "id": "n01",
+        "seed": 18041,
+        "first_32_jts_max_abs_nm": 1.1865785720755682,
+        "full_jts_rms_nm": 0.2635698373719762,
+        "full_encoder_max_abs_rad": 4.7936899621570106e-05
+      },
+      {
+        "id": "n05",
+        "seed": 18017,
+        "first_32_jts_max_abs_nm": 1.0550024569591243,
+        "full_jts_rms_nm": 0.26612303244644075,
+        "full_encoder_max_abs_rad": 4.7936899621570106e-05
+      },
+      {
+        "id": "n05",
+        "seed": 18029,
+        "first_32_jts_max_abs_nm": 1.2215716111185557,
+        "full_jts_rms_nm": 0.2662577250937003,
+        "full_encoder_max_abs_rad": 9.587379924291817e-05
+      },
+      {
+        "id": "n05",
+        "seed": 18041,
+        "first_32_jts_max_abs_nm": 1.1865785720755682,
+        "full_jts_rms_nm": 0.26435733629599917,
+        "full_encoder_max_abs_rad": 7.190534943224414e-05
+      },
+      {
+        "id": "n10",
+        "seed": 18017,
+        "first_32_jts_max_abs_nm": 1.0550024569591243,
+        "full_jts_rms_nm": 0.26538289821686734,
+        "full_encoder_max_abs_rad": 4.7936899621459084e-05
+      },
+      {
+        "id": "n10",
+        "seed": 18029,
+        "first_32_jts_max_abs_nm": 1.2215716111185557,
+        "full_jts_rms_nm": 0.26656792091277376,
+        "full_encoder_max_abs_rad": 0.00014381069886448827
+      },
+      {
+        "id": "n10",
+        "seed": 18041,
+        "first_32_jts_max_abs_nm": 1.1865785720755682,
+        "full_jts_rms_nm": 0.26448972697242457,
+        "full_encoder_max_abs_rad": 7.190534943213311e-05
+      }
+    ],
+    "rows": [
+      {
+        "id": "n01",
+        "role": "low",
+        "seed": 7,
+        "public_sha256": "4f3413152d8f5365747c7ef03f0f4c190eeeecd57a222e2129f087f27fc6c46b",
+        "signature": [
+          0.016757400188998843,
+          0.000634596753454605,
+          -0.07020502118028607,
+          0.0002563251301782545
+        ],
+        "signature_distance": 1.7161802167178757e-15,
+        "certificate": true,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            0.16680886052510724,
+            0.09670702888636137
+          ],
+          "absolute_com_offset_mm": [
+            0.6172975445067732,
+            -0.09381409974728461,
+            -1.0087230262571953
+          ],
+          "expected_normal_xy_mm": [
+            0.45048868398166597,
+            -0.19052112863364598
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              0.0350807993235957,
+              -0.024023490672265335
+            ],
+            [
+              0.27325451185453464,
+              0.10648091964906581
+            ],
+            [
+              0.12252859935604477,
+              0.1273964746185523
+            ],
+            [
+              0.13004386943020452,
+              0.09369594265178338
+            ],
+            [
+              0.30348056608970797,
+              0.23389086836806072
+            ]
+          ],
+          "halfwidth_radius_mm": 1.2911415305005347,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "ebb260183285cd3a46c89b75d8b5b45fc033ee6664319dc4e41f5fec5e5da4cc"
+      },
+      {
+        "id": "n01",
+        "role": "low",
+        "seed": 18017,
+        "public_sha256": "0e074d8884a73c61688fe49016cb4bb3b87e6caf1104869d2aba27be7d813365",
+        "signature": [
+          0.01660417325865494,
+          0.0006256128487260969,
+          -0.07085317773134668,
+          0.000254448271993783
+        ],
+        "signature_distance": 0.07400457053683879,
+        "certificate": false,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            -1.6470711722639302,
+            -1.0564959947888943
+          ],
+          "absolute_com_offset_mm": [
+            -1.1965824882822642,
+            -1.2470171234225402,
+            -0.016457729505116703
+          ],
+          "expected_normal_xy_mm": [
+            0.45048868398166597,
+            -0.19052112863364598
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              -1.3861877082160963,
+              -1.6218797232696693
+            ],
+            [
+              -1.830423840731471,
+              -1.0026095664420793
+            ],
+            [
+              -1.1642347573878333,
+              -0.49102843988607303
+            ],
+            [
+              -2.065017208419037,
+              -1.620090266786181
+            ],
+            [
+              -0.19228808089235694,
+              1.175421089836397
+            ]
+          ],
+          "halfwidth_radius_mm": 3.7616746982313973,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "4f072f8084d63cb13909877ae4809e46244346c41e9f5c9d504a8eabfd72e876"
+      },
+      {
+        "id": "n01",
+        "role": "low",
+        "seed": 18029,
+        "public_sha256": "a2b41d4ae1eb6e97e5144cd4dbe50f219a36ea4b981434bffc01759747f4d977",
+        "signature": [
+          0.018170777898390455,
+          0.0005976160913986777,
+          -0.06989182592110672,
+          0.00025604465385340504
+        ],
+        "signature_distance": 0.6443364818530184,
+        "certificate": false,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            -0.0507671705241759,
+            -1.1427367462945774
+          ],
+          "absolute_com_offset_mm": [
+            0.3997215134574901,
+            -1.3332578749282233,
+            -4.156263646788927
+          ],
+          "expected_normal_xy_mm": [
+            0.45048868398166597,
+            -0.19052112863364598
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              0.11193611444284146,
+              -1.5565647881546203
+            ],
+            [
+              -0.0851233607598349,
+              -1.0092798427000118
+            ],
+            [
+              -0.05623165664216656,
+              -0.9411715267221633
+            ],
+            [
+              0.11181944116598186,
+              -1.6835673940534996
+            ],
+            [
+              0.7595725880366491,
+              1.1034827263724059
+            ]
+          ],
+          "halfwidth_radius_mm": 3.485414093363647,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "00d47d41167276269c620d1d0887536168dcf4d244a442ab7a45d3413ddc7c04"
+      },
+      {
+        "id": "n01",
+        "role": "low",
+        "seed": 18041,
+        "public_sha256": "caa0fe43ae7a74b1fcb876163507c12153a5c7b0645be63465336916df76e18e",
+        "signature": [
+          0.01280542376087037,
+          0.0006242482310587012,
+          -0.07081308237322854,
+          0.0002557073794740356
+        ],
+        "signature_distance": 1.799937239253457,
+        "certificate": false,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            -1.764761058436057,
+            -0.27120915459655437
+          ],
+          "absolute_com_offset_mm": [
+            -1.314272374454391,
+            -0.4617302832302004,
+            1.690222632402968
+          ],
+          "expected_normal_xy_mm": [
+            0.45048868398166597,
+            -0.19052112863364598
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              -0.9802304939413702,
+              -0.6365541040515436
+            ],
+            [
+              -1.8468978241723129,
+              0.28004999128885955
+            ],
+            [
+              -2.0198932449733746,
+              -0.4411459969451923
+            ],
+            [
+              -1.4470356783755198,
+              -0.5370858251785969
+            ],
+            [
+              -1.2534259724112804,
+              0.9456170074877629
+            ]
+          ],
+          "halfwidth_radius_mm": 2.417393604843623,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "9bd7841a41d8d89f8fe3fd834814986f5e07bffd22ff45cfa2ef18a92a60263e"
+      },
+      {
+        "id": "n05",
+        "role": "interior",
+        "seed": 7,
+        "public_sha256": "16a56d56a22f379c39ec59a4383f76056888ec4713927e28356813737c1ed12e",
+        "signature": [
+          0.016757400188998843,
+          0.000634596753454605,
+          -0.07020502118028607,
+          0.0002563251301782545
+        ],
+        "signature_distance": 1.7161802167178757e-15,
+        "certificate": true,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            0.09614168370364051,
+            0.056176806901509974
+          ],
+          "absolute_com_offset_mm": [
+            0.5198511301461364,
+            -0.164549963449265,
+            -0.6631778236003075
+          ],
+          "expected_normal_xy_mm": [
+            0.42370944644249586,
+            -0.22072677035077498
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              0.5106950968604481,
+              0.15892429709996492
+            ],
+            [
+              -0.08937460130221342,
+              0.004070825667955996
+            ],
+            [
+              0.1605050748195841,
+              0.1316538882296449
+            ],
+            [
+              0.11319303876580744,
+              0.06639226433404546
+            ],
+            [
+              0.0006318024993836602,
+              -0.25340523900497436
+            ]
+          ],
+          "halfwidth_radius_mm": 1.5245927648169282,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "ebb260183285cd3a46c89b75d8b5b45fc033ee6664319dc4e41f5fec5e5da4cc"
+      },
+      {
+        "id": "n05",
+        "role": "interior",
+        "seed": 18017,
+        "public_sha256": "68e525dd8b2a53edeec8b1fc515d98d2de32693136277d70043c668e93625201",
+        "signature": [
+          0.01660417325865494,
+          0.0006256128487260969,
+          -0.07085317773134668,
+          0.000254448271993783
+        ],
+        "signature_distance": 0.07400457053683879,
+        "certificate": false,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            -1.0408315403502066,
+            -0.6783186249682123
+          ],
+          "absolute_com_offset_mm": [
+            -0.6171220939077107,
+            -0.8990453953189872,
+            0.19317984281264336
+          ],
+          "expected_normal_xy_mm": [
+            0.42370944644249586,
+            -0.22072677035077498
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              -0.466254392060839,
+              -0.8461760023084326
+            ],
+            [
+              -1.291502338945374,
+              -0.6607868516132822
+            ],
+            [
+              -0.821669535263883,
+              -0.34488855022037496
+            ],
+            [
+              -1.3499664459338487,
+              -1.019648143121185
+            ],
+            [
+              0.08091623619532207,
+              0.36163818126352665
+            ]
+          ],
+          "halfwidth_radius_mm": 2.627145788173747,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "4f072f8084d63cb13909877ae4809e46244346c41e9f5c9d504a8eabfd72e876"
+      },
+      {
+        "id": "n05",
+        "role": "interior",
+        "seed": 18029,
+        "public_sha256": "4b868fb055300e081d13b941604e018a9aab1cac62f2c3c14c4557b58b4174a7",
+        "signature": [
+          0.018170777898390455,
+          0.0005976160913986777,
+          -0.06989182592110672,
+          0.00025604465385340504
+        ],
+        "signature_distance": 0.6443364818530184,
+        "certificate": false,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            0.18949017780342658,
+            -0.6587403004593928
+          ],
+          "absolute_com_offset_mm": [
+            0.6131996242459224,
+            -0.8794670708101677,
+            -3.884374981811643
+          ],
+          "expected_normal_xy_mm": [
+            0.42370944644249586,
+            -0.22072677035077498
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              0.7265886475167004,
+              -0.6471451227164957
+            ],
+            [
+              0.09407736601153716,
+              -0.660393300679452
+            ],
+            [
+              0.20767567690789412,
+              -0.5271486688035103
+            ],
+            [
+              0.3240313085950731,
+              -0.9805345456760084
+            ],
+            [
+              0.5892170538645128,
+              0.27134335016192757
+            ]
+          ],
+          "halfwidth_radius_mm": 2.109838497572707,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "00d47d41167276269c620d1d0887536168dcf4d244a442ab7a45d3413ddc7c04"
+      },
+      {
+        "id": "n05",
+        "role": "interior",
+        "seed": 18041,
+        "public_sha256": "4743bfb7f71e9db0eb45b2b2a5dd7196260d2a004e9afa74d0560d7492ed5758",
+        "signature": [
+          0.01280542376087037,
+          0.0006242482310587012,
+          -0.07081308237322854,
+          0.0002557073794740356
+        ],
+        "signature_distance": 1.799937239253457,
+        "certificate": false,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            -0.9589339627661203,
+            -0.20569637319351514
+          ],
+          "absolute_com_offset_mm": [
+            -0.5352245163236244,
+            -0.4264231435442901,
+            1.3919171138183573
+          ],
+          "expected_normal_xy_mm": [
+            0.42370944644249586,
+            -0.22072677035077498
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              -0.38153572358784604,
+              -0.28457965175770045
+            ],
+            [
+              -0.9878461320459903,
+              0.08883256906202375
+            ],
+            [
+              -1.1138116501449709,
+              -0.2528218275126101
+            ],
+            [
+              -0.7958683268187443,
+              -0.33855417591692455
+            ],
+            [
+              -0.5509242060545575,
+              0.22062344433821016
+            ]
+          ],
+          "halfwidth_radius_mm": 1.6875982297337488,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "9bd7841a41d8d89f8fe3fd834814986f5e07bffd22ff45cfa2ef18a92a60263e"
+      },
+      {
+        "id": "n10",
+        "role": "high",
+        "seed": 7,
+        "public_sha256": "6ede9e322a176b168f6e86f3f74bec1412e87f760604232e20a710ca3624b7bf",
+        "signature": [
+          0.016757400188998843,
+          0.000634596753454605,
+          -0.07020502118028607,
+          0.0002563251301782545
+        ],
+        "signature_distance": 1.7161802167178757e-15,
+        "certificate": true,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            -0.004565296387218587,
+            0.06127900639641637
+          ],
+          "absolute_com_offset_mm": [
+            0.38991014907501653,
+            -0.19242225616222441,
+            -0.25763491755978085
+          ],
+          "expected_normal_xy_mm": [
+            0.3944754454622351,
+            -0.2537012625586408
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              0.05990587645426193,
+              0.04363677961425627
+            ],
+            [
+              -0.02370180515126663,
+              0.08232394221938452
+            ],
+            [
+              -0.01464326738754368,
+              0.05761407026819104
+            ],
+            [
+              0.037007448460400494,
+              0.06930603971616564
+            ],
+            [
+              -0.003780375518347978,
+              0.007518503658755921
+            ]
+          ],
+          "halfwidth_radius_mm": 1.1643375353203338,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "ebb260183285cd3a46c89b75d8b5b45fc033ee6664319dc4e41f5fec5e5da4cc"
+      },
+      {
+        "id": "n10",
+        "role": "high",
+        "seed": 18017,
+        "public_sha256": "181ff9007c6901934ac788a061d1dfc02f0ea1634c81c3e44b19e544d53a7c3e",
+        "signature": [
+          0.01660417325865494,
+          0.0006256128487260969,
+          -0.07085317773134668,
+          0.000254448271993783
+        ],
+        "signature_distance": 0.07400457053683879,
+        "certificate": false,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            -0.5376906529424428,
+            0.014748584838164824
+          ],
+          "absolute_com_offset_mm": [
+            -0.14321520748020766,
+            -0.23895267772047596,
+            0.4750653418000264
+          ],
+          "expected_normal_xy_mm": [
+            0.3944754454622351,
+            -0.2537012625586408
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              -0.22439690630002662,
+              -0.23059259670502885
+            ],
+            [
+              -0.6326737936617515,
+              0.06213173296801716
+            ],
+            [
+              -0.33980702635157223,
+              0.2369800711897282
+            ],
+            [
+              -0.512706392911725,
+              -0.18992530189071377
+            ],
+            [
+              -0.19853376970872527,
+              0.7905155714652673
+            ]
+          ],
+          "halfwidth_radius_mm": 1.9441611892141855,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "4f072f8084d63cb13909877ae4809e46244346c41e9f5c9d504a8eabfd72e876"
+      },
+      {
+        "id": "n10",
+        "role": "high",
+        "seed": 18029,
+        "public_sha256": "5ae4ad1402fb10f1b65d63c0b8f135f413d992d8a9fb6cd7f7889f6c005beb47",
+        "signature": [
+          0.018170777898390455,
+          0.0005976160913986777,
+          -0.06989182592110672,
+          0.00025604465385340504
+        ],
+        "signature_distance": 0.6443364818530184,
+        "certificate": false,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            -0.03303149618746515,
+            0.0397218610539663
+          ],
+          "absolute_com_offset_mm": [
+            0.36144394927476997,
+            -0.21397940150467448,
+            -0.2176885771849909
+          ],
+          "expected_normal_xy_mm": [
+            0.3944754454622351,
+            -0.2537012625586408
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              -0.009327179227530735,
+              -0.16726208585948976
+            ],
+            [
+              0.012486499963889786,
+              0.14639897441577499
+            ],
+            [
+              0.013652084056015978,
+              0.14039277565450486
+            ],
+            [
+              0.1306442921807912,
+              -0.13016886293508845
+            ],
+            [
+              0.2582578952606286,
+              0.7997704650297245
+            ]
+          ],
+          "halfwidth_radius_mm": 1.911451476948479,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "00d47d41167276269c620d1d0887536168dcf4d244a442ab7a45d3413ddc7c04"
+      },
+      {
+        "id": "n10",
+        "role": "high",
+        "seed": 18041,
+        "public_sha256": "c12e568c8725ad2512170492e703e494a8e6260ab9b96876664b7250561bd601",
+        "signature": [
+          0.01280542376087037,
+          0.0006242482310587012,
+          -0.07081308237322854,
+          0.0002557073794740356
+        ],
+        "signature_distance": 1.799937239253457,
+        "certificate": false,
+        "mass_interpolated": true,
+        "early": {
+          "relative_xy_mm": [
+            -0.6558705761505932,
+            0.3866252254971038
+          ],
+          "absolute_com_offset_mm": [
+            -0.261395130688358,
+            0.13292396293846304,
+            1.7368344991626858
+          ],
+          "expected_normal_xy_mm": [
+            0.3944754454622351,
+            -0.2537012625586408
+          ],
+          "deleted_relative_xy_mm": [
+            [
+              -0.33948236761677747,
+              0.18321311627109832
+            ],
+            [
+              -0.5977471128543645,
+              0.6422872671585917
+            ],
+            [
+              -0.744251614390695,
+              0.33029127815306636
+            ],
+            [
+              -0.49788649615325037,
+              0.27303400450008863
+            ],
+            [
+              -0.32345993429372905,
+              1.0512981237495511
+            ]
+          ],
+          "halfwidth_radius_mm": 1.84065615353021,
+          "accept": false,
+          "model_action_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "completed_at_s": 2.463
+        },
+        "first_jts_sha256": "9bd7841a41d8d89f8fe3fd834814986f5e07bffd22ff45cfa2ef18a92a60263e"
+      }
+    ],
+    "pins": {
+      "plan": "aa9973a86dbf087a7c6cd14255e1fa0f4ec7fb9f2bca35fcc594ba9728bba37b",
+      "crossfit": "26f04f8cff5f596ab0afcdcdee21ad4f2a465e77ba09573464bd8915cd371739",
+      "early": "d07c7c49308680eb50824ef3790596c6f2789abb084fa313f33e7569944575a3",
+      "saved_perturbation": "1f3617428a5cb3cd08ec3857981b81d2c1e7cc1fe1725080484ee217bf56c7c7"
+    },
+    "scope": {
+      "truth_opened": false,
+      "model_refit": false,
+      "impacts": false
+    }
+  }
+}

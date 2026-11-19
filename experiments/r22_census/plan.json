@@ -1,0 +1,10 @@
+{
+  "schema": "r22-exposed-census-protocol.v1",
+  "matrix_sha256": "bc4b3dbb925cfb8609f535e1420f8b3f20785769b7f339708ca914b6992db791",
+  "scope": "The same exposed 385 D4 control, collision and offset cases used by R21. Independent unseen R22 testing is NOT this census.",
+  "ports": "Actual unmodified stock loop, byte-authenticated simulation/nominal physics and R10 torque control. Only detector varies. Allow optional exact SHA-pinned R21 archive to avoid repeating the two protected comparators; public default re-simulates all three arms.",
+  "checks": "6,000 exact timestamps; complete independent signed trapezoid and identical stock-ordered per-sample scalar digest; actual nonzero bounds (including nominal-time floating onsets); compare normal and force sample prefixes strictly before actual first nonzero input, including the nominal onset only when that sample is zero. All physical channels must match across observers. No four-case blacklists.",
+  "protection": "No additional false rises, delayed false, masking, added attributable OR raw duplicates vs R10, no tool detection loss, prealarm or stuck tail. Preserve EVERY strict R21 and R10 positive, and compare time for shared positives; report added delay even where still detected. Strict attribution excludes alarm active immediately before onset and any no-force twin within 20 ms. Comparing false rises uses sorted one-to-one matching within one sample, never reuse a reference.",
+  "registered_prior_issues": [174, 330, 339, 349],
+  "fail_closed": "Report certification, strict counts and failed case IDs separately; a correct reproduction of a failed detector is not passing protection. No changes to R21's previously negative decision."
+}

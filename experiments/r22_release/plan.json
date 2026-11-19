@@ -1,0 +1,10 @@
+{
+  "schema":"r22-release-plan.v1",
+  "status":"FROZEN_BEFORE_R22_FRESH_FORCE_OUTCOMES",
+  "exposed_diagnostics":[330,339,349,"r21_surface_pairs","r21_yaw_continuity"],
+  "mechanism":"At model release, preserve the causal yaw-balance history after subtracting modeled outgoing payload momentum. If an alarm remains active, permit a new alarm edge only from a newly separated mechanical impulse witness that is quiescent before the new innovation; never from elapsed time or a scheduled phase.",
+  "candidate_order":["release momentum continuity","continuity plus causal separated-innovation edge only if continuity cannot preserve close real seconds"],
+  "must_pass":["remove every added D4 duplicate 330/339/349 without losing its first genuine collision","retain all R21 surface isolated and both-impact genuine detections; no added false/tool/tail","retain continuity exposed 8/8","retain or improve continuity fresh 4/6 including short_gap_y_to_x","physical and applied force traces exact","no time, COM, collision-label, plant-state or global refractory input"],
+  "fresh_selection":"Use r21_yaw_continuity fresh cases unchanged as the first closed cohort. If a second separated-innovation architecture is required, define its constants from exposed diagnostics and normal no-force runs, pin it, then open no additional force outcomes until fixed.",
+  "not_claimed":"hardware safety, hidden holdout, universal close-impact separation"
+}

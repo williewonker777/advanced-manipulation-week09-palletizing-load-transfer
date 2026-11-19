@@ -1,0 +1,113 @@
+{
+  "schema": "R12_SERVO_HYBRID_SUMMARY.v1",
+  "status": "FAIL_STOP_NO_HELD",
+  "adopt": false,
+  "training_passed": false,
+  "held_executed": false,
+  "impact_preservation_tested": false,
+  "pins": {
+    "plan": "4650fc54cf0104582fef3722309ab78987f1ff72226e4679af960d6cebb0e94e",
+    "drive": "ad69f9d975832494708245c3c805ebb091509c0c3f969f45e90d256a36709a3c",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "experiments/r12_servo_hybrid/controller.py": "9fe7b4d84fed8c325af7070e71fc344a962dd9be41c7ed21c59d923447632b40",
+    "experiments/r12_servo_hybrid/plan.py": "97e04004123a761a6b866112c23af66c4a37e5f271bcec37e23ee5cd42c0c41a",
+    "experiments/r12_servo_hybrid/run.py": "a885899addedaa12d1acb7b8a254054d0be64ecb4759ad073a7c53dedbb4bbad"
+  },
+  "mechanism": "map only nominal world-vertical proportional position-loop torque into bounded servo position-command correction; retain speed feedforward, torque feedforward, fixed Drive gains/filter/integrator, tangential torque, and bumpless partial gravity support",
+  "rows": [
+    {
+      "case": "train_mid_630",
+      "passed": false,
+      "failed_gates": [
+        "G4"
+      ],
+      "g4": {
+        "mean": false,
+        "minimum": true,
+        "improvement": true,
+        "peak": true
+      },
+      "ratios": {
+        "rms_mm": 0.9783862885607836,
+        "max_tcp_mm": 1.0,
+        "torque_step_place_nm": 1.0,
+        "table_force_place_max_n": 1.0262089692110705
+      },
+      "baseline": {
+        "final20_mean_mg": 0.0,
+        "final20_min_mg": 0.0,
+        "release_peak_mg": 1.005015987391878,
+        "false_alarms": 0
+      },
+      "candidate": {
+        "activation_s": 3.855,
+        "final20_mean_mg": 0.48091879439165763,
+        "final20_min_mg": 0.4112045100459138,
+        "release_peak_mg": 1.0313564204620653,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "saturation_pct": 0.0,
+        "applied_torque_peak_place_nm": 312.0189753358167,
+        "max_position_correction_rad": 0.0008573925362697803,
+        "correction_cutoff_samples": 0,
+        "response_vz_range_mm_s": [
+          -112.66534834497577,
+          -12.38511903581263
+        ],
+        "response_az_peak_m_s2": 8.16181716836728
+      }
+    },
+    {
+      "case": "train_heavy_775",
+      "passed": false,
+      "failed_gates": [
+        "FA"
+      ],
+      "g4": {
+        "mean": true,
+        "minimum": true,
+        "improvement": true,
+        "peak": true
+      },
+      "ratios": {
+        "rms_mm": 0.9529885799718955,
+        "max_tcp_mm": 1.0,
+        "torque_step_place_nm": 0.8094159266480655,
+        "table_force_place_max_n": 1.0198333458942803
+      },
+      "baseline": {
+        "final20_mean_mg": 0.0,
+        "final20_min_mg": 0.0,
+        "release_peak_mg": 1.0059253457330801,
+        "false_alarms": 0
+      },
+      "candidate": {
+        "activation_s": 3.855,
+        "final20_mean_mg": 0.5150975847514092,
+        "final20_min_mg": 0.461402818147445,
+        "release_peak_mg": 1.0258762110588278,
+        "false_alarms": 1,
+        "false_alarm_times": [
+          3.903
+        ],
+        "saturation_pct": 0.0,
+        "applied_torque_peak_place_nm": 341.1287435245373,
+        "max_position_correction_rad": 0.0007293156228821126,
+        "correction_cutoff_samples": 0,
+        "response_vz_range_mm_s": [
+          -111.15736882688631,
+          -8.999296615741503
+        ],
+        "response_az_peak_m_s2": 8.56867251119997
+      }
+    }
+  ],
+  "limitations": [
+    "two servo normal development cases only",
+    "mid case misses G4 mean by0.0191mg",
+    "heavy case adds release false alarm at3.903",
+    "held normal/impact stage prohibited",
+    "fixed Drive integrator is retained and unobserved",
+    "not official/hardware evidence"
+  ]
+}

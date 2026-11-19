@@ -1,0 +1,14 @@
+{
+  "schema":"r23-tool-contact-weak-boundary.v1",
+  "candidate_sha256":"2ed447199694cb159770e43fe9a2f1b8a9c513a1c7480d96d079313df1002a38",
+  "model_sha256":"9633182c1d986117fd6fd541e361f9bddf28d79a05763e6012dcb118805a1e37",
+  "classification":"Post-freeze observability boundary characterization; not fit, holdout, or promotion evidence.",
+  "mechanics":["stock","contact_suction"],
+  "cases":[
+    {"id":"weak_a","mass":5.42,"com":[-0.009,0.022,-0.014],"offset":[-0.0033,0.0026,0.00075]},
+    {"id":"weak_b","mass":5.42,"com":[-0.009,0.022,-0.014],"offset":[-0.0035,0.00275,0.00085]},
+    {"id":"weak_c","mass":5.42,"com":[-0.009,0.022,-0.014],"offset":[-0.00365,0.00285,0.00092]},
+    {"id":"weak_d","mass":5.42,"com":[-0.009,0.022,-0.014],"offset":[-0.00375,0.00295,0.00098]}
+  ],
+  "scoring":"Only episodes with measured f_tool > 1 N are genuine contacts; report rather than retune every miss near the boundary."
+}

@@ -1,0 +1,994 @@
+{
+  "causal_pulse_restart": {
+    "episodes": 46,
+    "exported_source_sha256": "bb87916d443cc96dbbb012bcb53a08fd68c57c7ad4ab6d39e9b0ba1b70d6c680",
+    "removed_only": [
+      3878,
+      3880,
+      3884
+    ],
+    "reproduced": true,
+    "retains_initial_3858": true
+  },
+  "classification": "Known laboratory simulation on same R24 G4 controller, not R10, original servo demonstration, hardware, deployment or prospective validation of the postmortem.",
+  "default_promoted": false,
+  "disclosed_memory_followup": {
+    "all_known_panels": {
+      "ablation46": {
+        "episodes": 46,
+        "failures": [],
+        "gates": {
+          "all_c1_edges_active": true,
+          "all_four_v3_only_removed": true,
+          "all_v3_repeated": true,
+          "no_added_affected": true,
+          "no_other_hard_failure": true,
+          "no_tool_exact": true,
+          "pickup0_exact": true,
+          "pickup8_exact": true,
+          "real_tool_exact": true
+        },
+        "passed": true,
+        "result_sha256": "74b2518211c190141c79f5a72c74cc883671bf0608f0eef11415164f471ac9f8"
+      },
+      "nearzero24": {
+        "episodes": 24,
+        "failures": [],
+        "gates": {},
+        "passed": true,
+        "result_sha256": "b7030f2239fe505caa9fe4968a8cf759239798ba16fee8b5afc2f9d419badd4f"
+      },
+      "postrelease10": {
+        "episodes": 10,
+        "failures": [],
+        "gates": {
+          "detector_outputs_exact": true,
+          "force_prefix_exact": true,
+          "normal_exact": true,
+          "same_physics": true,
+          "v3_repeats": true
+        },
+        "passed": true,
+        "result_sha256": "c4c2e7184977a9602e38fd3b0b859523285f0e8b1d5f35b2407216de453c0a56"
+      },
+      "signed_pair20": {
+        "episodes": 20,
+        "failures": [],
+        "gates": {
+          "detector_outputs_exact": true,
+          "forces_exact": true,
+          "preserve_v3_strict_plus5ms": true,
+          "same_physics": true,
+          "tool_lateral_exact": true,
+          "v3_repeats": true
+        },
+        "passed": true,
+        "result_sha256": "ae8fc760c438c4b99b37220300fa59957fb5e2c60797d8d54f530602ae1d7601"
+      }
+    },
+    "all_registered_known_gates": {
+      "all_c1_edges_active": true,
+      "all_four_v3_only_removed": true,
+      "all_v3_repeated": true,
+      "no_added_affected": true,
+      "no_other_hard_failure": true,
+      "no_tool_exact": true,
+      "pickup0_exact": true,
+      "pickup8_exact": true,
+      "real_tool_exact": true
+    },
+    "baseline_tool_false_retained_ticks": [
+      3903,
+      3923
+    ],
+    "candidate_sha256": "85c4107c3939c7624dd77040ad322a99595c8e6941c7b75751c516a33be7a07b",
+    "classification": "Disclosed causal postmortem only after R28 non-enrollment. Passing cannot enroll, promote, grade, or change the rejected R28 candidate.",
+    "episodes": 46,
+    "failed_rows": [],
+    "known_tool": {
+      "memory_active": 207,
+      "memory_rises": [
+        1093,
+        1323,
+        1458,
+        3903,
+        3923
+      ],
+      "removed": [
+        3858,
+        3878,
+        3880,
+        3884
+      ],
+      "v3_active": 214,
+      "v3_rises": [
+        1093,
+        1323,
+        1458,
+        3858,
+        3878,
+        3880,
+        3884,
+        3903,
+        3923
+      ]
+    },
+    "original_C1_mask_edges_checked": 15,
+    "pickups": [
+      {
+        "gates": {
+          "duration_not_increased": true,
+          "exact_first_rise": true,
+          "memory_strict": true,
+          "same_physics": true,
+          "v3_repeats": true,
+          "v3_strict": true
+        },
+        "id": "pickup_y15_mass0",
+        "passed": true
+      },
+      {
+        "gates": {
+          "duration_not_increased": true,
+          "exact_first_rise": true,
+          "memory_strict": true,
+          "same_physics": true,
+          "v3_repeats": true,
+          "v3_strict": true
+        },
+        "id": "pickup_y15_mass8",
+        "passed": true
+      }
+    ],
+    "pre_positive_reference_distinct": true,
+    "result_sha256": "74b2518211c190141c79f5a72c74cc883671bf0608f0eef11415164f471ac9f8",
+    "total_simulated_episodes_in_these_panels": 100
+  },
+  "hardware_tested": false,
+  "non_enrollment": {
+    "baseline_only_episodes": 19,
+    "candidate_episodes": 0,
+    "corrected_entry": "experiments.r28_finite_contact.candidate:Detector",
+    "plan_sha256": "0dc490e294ddd4eac5b1e78b620a393387fc258cd94a231538d86cf612e9ad99",
+    "refusal_receipt_sha256": "ccbcdf6bec550932087f29805b5dd767968c066102647761f3bfd765070c4668",
+    "scored": false,
+    "unrelated_C3_reserved_not_run": 114
+  },
+  "official": {
+    "episodes": 116,
+    "grader_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+    "latency_changes_vs_v3": [
+      {
+        "delay_ms": [
+          28,
+          33
+        ],
+        "force_N": 40,
+        "mass_kg": 8.0,
+        "time_s": 1.42
+      },
+      {
+        "delay_ms": [
+          21,
+          24
+        ],
+        "force_N": 100,
+        "mass_kg": 8.0,
+        "time_s": 1.42
+      },
+      {
+        "delay_ms": [
+          25,
+          27
+        ],
+        "force_N": 100,
+        "mass_kg": 8.0,
+        "time_s": 3.86
+      }
+    ],
+    "raw_sha256": "5770b7fcaed08861c41c281301f5bf432b3abd5289c745ccec06cbc402f6c407",
+    "records": {
+      "c1": {
+        "cells": {
+          "collisions": [
+            {
+              "cells": [
+                "놓침",
+                "놓침",
+                "37",
+                "22",
+                "2회",
+                "40 N"
+              ],
+              "mass": 0.0,
+              "time": 1.42
+            },
+            {
+              "cells": [
+                "57",
+                "42",
+                "27",
+                "19",
+                "1회",
+                "10 N"
+              ],
+              "mass": 0.0,
+              "time": 3.0
+            },
+            {
+              "cells": [
+                "구분 불가",
+                "구분 불가",
+                "구분 불가",
+                "구분 불가",
+                "0회",
+                "—"
+              ],
+              "mass": 0.0,
+              "time": 3.86
+            },
+            {
+              "cells": [
+                "놓침",
+                "놓침",
+                "36",
+                "24",
+                "0회",
+                "40 N"
+              ],
+              "mass": 8.0,
+              "time": 1.42
+            },
+            {
+              "cells": [
+                "56",
+                "43",
+                "26",
+                "18",
+                "2회",
+                "10 N"
+              ],
+              "mass": 8.0,
+              "time": 3.0
+            },
+            {
+              "cells": [
+                "놓침",
+                "78",
+                "45",
+                "27",
+                "0회",
+                "15 N"
+              ],
+              "mass": 8.0,
+              "time": 3.86
+            }
+          ],
+          "control": {
+            "0.0": [
+              "2.09",
+              "4.05",
+              "0.0",
+              "9.0",
+              "4.8",
+              "0",
+              "0",
+              "1",
+              "0",
+              "정상"
+            ],
+            "4.0": [
+              "2.34",
+              "4.42",
+              "0.0",
+              "9.0",
+              "6.1",
+              "41",
+              "0",
+              "0",
+              "0",
+              "정상"
+            ],
+            "8.0": [
+              "3.26",
+              "8.44",
+              "0.0",
+              "9.0",
+              "9.4",
+              "82",
+              "0",
+              "0",
+              "0",
+              "정상"
+            ]
+          }
+        },
+        "counts": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 15,
+            "indistinguishable": 4,
+            "missed": 5
+          },
+          "no_impact_false_rises": 1,
+          "worst_false_count_in_an_impact_run": 2
+        },
+        "detector": "experiments.r26_delivery_pair.candidate",
+        "episodes": 29
+      },
+      "contact-reset": {
+        "cells": {
+          "collisions": [
+            {
+              "cells": [
+                "놓침",
+                "39",
+                "27",
+                "20",
+                "2회",
+                "15 N"
+              ],
+              "mass": 0.0,
+              "time": 1.42
+            },
+            {
+              "cells": [
+                "57",
+                "42",
+                "26",
+                "19",
+                "1회",
+                "10 N"
+              ],
+              "mass": 0.0,
+              "time": 3.0
+            },
+            {
+              "cells": [
+                "구분 불가",
+                "구분 불가",
+                "구분 불가",
+                "구분 불가",
+                "0회",
+                "—"
+              ],
+              "mass": 0.0,
+              "time": 3.86
+            },
+            {
+              "cells": [
+                "놓침",
+                "놓침",
+                "36",
+                "24",
+                "0회",
+                "40 N"
+              ],
+              "mass": 8.0,
+              "time": 1.42
+            },
+            {
+              "cells": [
+                "56",
+                "43",
+                "26",
+                "18",
+                "2회",
+                "10 N"
+              ],
+              "mass": 8.0,
+              "time": 3.0
+            },
+            {
+              "cells": [
+                "놓침",
+                "78",
+                "45",
+                "27",
+                "0회",
+                "15 N"
+              ],
+              "mass": 8.0,
+              "time": 3.86
+            }
+          ],
+          "control": {
+            "0.0": [
+              "2.09",
+              "4.05",
+              "0.0",
+              "9.0",
+              "4.8",
+              "0",
+              "0",
+              "1",
+              "0",
+              "정상"
+            ],
+            "4.0": [
+              "2.34",
+              "4.42",
+              "0.0",
+              "9.0",
+              "6.1",
+              "41",
+              "0",
+              "0",
+              "0",
+              "정상"
+            ],
+            "8.0": [
+              "3.26",
+              "8.44",
+              "0.0",
+              "9.0",
+              "9.4",
+              "82",
+              "0",
+              "0",
+              "0",
+              "정상"
+            ]
+          }
+        },
+        "counts": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 16,
+            "indistinguishable": 4,
+            "missed": 4
+          },
+          "no_impact_false_rises": 1,
+          "worst_false_count_in_an_impact_run": 2
+        },
+        "detector": "experiments.r28_finite_contact.candidate",
+        "episodes": 29
+      },
+      "observation-memory": {
+        "cells": {
+          "collisions": [
+            {
+              "cells": [
+                "놓침",
+                "39",
+                "27",
+                "20",
+                "2회",
+                "15 N"
+              ],
+              "mass": 0.0,
+              "time": 1.42
+            },
+            {
+              "cells": [
+                "57",
+                "42",
+                "26",
+                "19",
+                "1회",
+                "10 N"
+              ],
+              "mass": 0.0,
+              "time": 3.0
+            },
+            {
+              "cells": [
+                "구분 불가",
+                "구분 불가",
+                "구분 불가",
+                "구분 불가",
+                "0회",
+                "—"
+              ],
+              "mass": 0.0,
+              "time": 3.86
+            },
+            {
+              "cells": [
+                "놓침",
+                "39",
+                "33",
+                "24",
+                "0회",
+                "15 N"
+              ],
+              "mass": 8.0,
+              "time": 1.42
+            },
+            {
+              "cells": [
+                "56",
+                "43",
+                "26",
+                "18",
+                "2회",
+                "10 N"
+              ],
+              "mass": 8.0,
+              "time": 3.0
+            },
+            {
+              "cells": [
+                "놓침",
+                "78",
+                "45",
+                "27",
+                "0회",
+                "15 N"
+              ],
+              "mass": 8.0,
+              "time": 3.86
+            }
+          ],
+          "control": {
+            "0.0": [
+              "2.09",
+              "4.05",
+              "0.0",
+              "9.0",
+              "4.8",
+              "0",
+              "0",
+              "1",
+              "0",
+              "정상"
+            ],
+            "4.0": [
+              "2.34",
+              "4.42",
+              "0.0",
+              "9.0",
+              "6.1",
+              "41",
+              "0",
+              "0",
+              "0",
+              "정상"
+            ],
+            "8.0": [
+              "3.26",
+              "8.44",
+              "0.0",
+              "9.0",
+              "9.4",
+              "82",
+              "0",
+              "0",
+              "0",
+              "정상"
+            ]
+          }
+        },
+        "counts": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 17,
+            "indistinguishable": 4,
+            "missed": 3
+          },
+          "no_impact_false_rises": 1,
+          "worst_false_count_in_an_impact_run": 2
+        },
+        "detector": "experiments.r28_contact_memory.candidate",
+        "episodes": 29
+      },
+      "v3": {
+        "cells": {
+          "collisions": [
+            {
+              "cells": [
+                "놓침",
+                "39",
+                "27",
+                "20",
+                "2회",
+                "15 N"
+              ],
+              "mass": 0.0,
+              "time": 1.42
+            },
+            {
+              "cells": [
+                "57",
+                "42",
+                "26",
+                "19",
+                "1회",
+                "10 N"
+              ],
+              "mass": 0.0,
+              "time": 3.0
+            },
+            {
+              "cells": [
+                "구분 불가",
+                "구분 불가",
+                "구분 불가",
+                "구분 불가",
+                "0회",
+                "—"
+              ],
+              "mass": 0.0,
+              "time": 3.86
+            },
+            {
+              "cells": [
+                "놓침",
+                "39",
+                "28",
+                "21",
+                "0회",
+                "15 N"
+              ],
+              "mass": 8.0,
+              "time": 1.42
+            },
+            {
+              "cells": [
+                "56",
+                "43",
+                "26",
+                "18",
+                "2회",
+                "10 N"
+              ],
+              "mass": 8.0,
+              "time": 3.0
+            },
+            {
+              "cells": [
+                "놓침",
+                "78",
+                "45",
+                "25",
+                "0회",
+                "15 N"
+              ],
+              "mass": 8.0,
+              "time": 3.86
+            }
+          ],
+          "control": {
+            "0.0": [
+              "2.09",
+              "4.05",
+              "0.0",
+              "9.0",
+              "4.8",
+              "0",
+              "0",
+              "1",
+              "0",
+              "정상"
+            ],
+            "4.0": [
+              "2.34",
+              "4.42",
+              "0.0",
+              "9.0",
+              "6.1",
+              "41",
+              "0",
+              "0",
+              "0",
+              "정상"
+            ],
+            "8.0": [
+              "3.26",
+              "8.44",
+              "0.0",
+              "9.0",
+              "9.4",
+              "82",
+              "0",
+              "0",
+              "0",
+              "정상"
+            ]
+          }
+        },
+        "counts": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 17,
+            "indistinguishable": 4,
+            "missed": 3
+          },
+          "no_impact_false_rises": 1,
+          "worst_false_count_in_an_impact_run": 2
+        },
+        "detector": "experiments.r27_landing_integration.unloaded_aware",
+        "episodes": 29
+      }
+    },
+    "same_control_cells": true,
+    "science_cells_identical_v3_vs_memory": false
+  },
+  "registered_finite_candidate": {
+    "candidate_sha256": "9402c6de58a8948dd0461bea65c2300bcf8b872ba7c96b98cf5dcff8e7e6202b",
+    "causal_diagnostic": {
+      "receipt_sha256": "092312bad34a13e9aeed8ccecd4822e238c85c22873717fd00ab059bec24e8f0",
+      "ticks": {
+        "1455": {
+          "r28": {
+            "grip": true,
+            "horizontal_N": 10.194701973681811,
+            "lambda_support": 1.0,
+            "lambda_valid": true,
+            "onset_bound_N": 14.78106064144941,
+            "optional": false,
+            "owned": true,
+            "post": {
+              "active": false,
+              "armed": true,
+              "over": 0,
+              "pulse": 0
+            },
+            "pre": {
+              "active": false,
+              "armed": false,
+              "over": 0,
+              "pulse": 0
+            },
+            "release_bound_N": 11.824848513159528,
+            "reported": false,
+            "table_allowed": true,
+            "table_normal_N": 0.0
+          },
+          "v3": {
+            "grip": true,
+            "horizontal_N": 10.194701973681811,
+            "lambda_support": 1.0,
+            "lambda_valid": true,
+            "onset_bound_N": 14.78106064144941,
+            "optional": false,
+            "owned": true,
+            "post": {
+              "active": false,
+              "armed": true,
+              "over": 0,
+              "pulse": 0
+            },
+            "pre": {
+              "active": false,
+              "armed": true,
+              "over": 0,
+              "pulse": 0
+            },
+            "release_bound_N": 11.824848513159528,
+            "reported": false,
+            "table_allowed": true,
+            "table_normal_N": 0.0
+          }
+        },
+        "1456": {
+          "r28": {
+            "grip": true,
+            "horizontal_N": 11.150413104942514,
+            "lambda_support": 0.9793618084596385,
+            "lambda_valid": true,
+            "onset_bound_N": 14.78106064144941,
+            "optional": false,
+            "owned": false,
+            "post": {
+              "active": false,
+              "armed": false,
+              "over": 0,
+              "pulse": 0
+            },
+            "pre": {
+              "active": false,
+              "armed": true,
+              "over": 0,
+              "pulse": 0
+            },
+            "release_bound_N": 11.824848513159528,
+            "reported": false,
+            "table_allowed": true,
+            "table_normal_N": 1.61968527208757
+          },
+          "v3": {
+            "grip": true,
+            "horizontal_N": 11.150413104942514,
+            "lambda_support": 0.9793618084596385,
+            "lambda_valid": true,
+            "onset_bound_N": 14.78106064144941,
+            "optional": false,
+            "owned": true,
+            "post": {
+              "active": false,
+              "armed": true,
+              "over": 0,
+              "pulse": 0
+            },
+            "pre": {
+              "active": false,
+              "armed": true,
+              "over": 0,
+              "pulse": 0
+            },
+            "release_bound_N": 11.824848513159528,
+            "reported": false,
+            "table_allowed": true,
+            "table_normal_N": 1.61968527208757
+          }
+        },
+        "1457": {
+          "r28": {
+            "grip": true,
+            "horizontal_N": 12.113424021977027,
+            "lambda_support": 1.0,
+            "lambda_valid": true,
+            "onset_bound_N": 14.78106064144941,
+            "optional": false,
+            "owned": true,
+            "post": {
+              "active": false,
+              "armed": false,
+              "over": 0,
+              "pulse": 0
+            },
+            "pre": {
+              "active": false,
+              "armed": false,
+              "over": 0,
+              "pulse": 0
+            },
+            "release_bound_N": 11.824848513159528,
+            "reported": false,
+            "table_allowed": true,
+            "table_normal_N": 0.0
+          },
+          "v3": {
+            "grip": true,
+            "horizontal_N": 12.113424021977027,
+            "lambda_support": 1.0,
+            "lambda_valid": true,
+            "onset_bound_N": 14.78106064144941,
+            "optional": false,
+            "owned": true,
+            "post": {
+              "active": false,
+              "armed": true,
+              "over": 0,
+              "pulse": 0
+            },
+            "pre": {
+              "active": false,
+              "armed": true,
+              "over": 0,
+              "pulse": 0
+            },
+            "release_bound_N": 11.824848513159528,
+            "reported": false,
+            "table_allowed": true,
+            "table_normal_N": 0.0
+          }
+        },
+        "1463": {
+          "r28": {
+            "grip": true,
+            "horizontal_N": 15.190975184205639,
+            "lambda_support": 1.0,
+            "lambda_valid": true,
+            "onset_bound_N": 14.78106064144941,
+            "optional": false,
+            "owned": true,
+            "post": {
+              "active": false,
+              "armed": false,
+              "over": 0,
+              "pulse": 0
+            },
+            "pre": {
+              "active": false,
+              "armed": false,
+              "over": 0,
+              "pulse": 0
+            },
+            "release_bound_N": 11.824848513159528,
+            "reported": false,
+            "table_allowed": true,
+            "table_normal_N": 0.0
+          },
+          "v3": {
+            "grip": true,
+            "horizontal_N": 15.190975184205639,
+            "lambda_support": 1.0,
+            "lambda_valid": true,
+            "onset_bound_N": 14.78106064144941,
+            "optional": false,
+            "owned": true,
+            "post": {
+              "active": false,
+              "armed": true,
+              "over": 1,
+              "pulse": 0
+            },
+            "pre": {
+              "active": false,
+              "armed": true,
+              "over": 0,
+              "pulse": 0
+            },
+            "release_bound_N": 11.824848513159528,
+            "reported": false,
+            "table_allowed": true,
+            "table_normal_N": 0.0
+          }
+        },
+        "1464": {
+          "r28": {
+            "grip": true,
+            "horizontal_N": 15.145796547667162,
+            "lambda_support": 1.0,
+            "lambda_valid": true,
+            "onset_bound_N": 14.78106064144941,
+            "optional": false,
+            "owned": true,
+            "post": {
+              "active": false,
+              "armed": false,
+              "over": 0,
+              "pulse": 0
+            },
+            "pre": {
+              "active": false,
+              "armed": false,
+              "over": 0,
+              "pulse": 0
+            },
+            "release_bound_N": 11.824848513159528,
+            "reported": false,
+            "table_allowed": true,
+            "table_normal_N": 0.0
+          },
+          "v3": {
+            "grip": true,
+            "horizontal_N": 15.145796547667162,
+            "lambda_support": 1.0,
+            "lambda_valid": true,
+            "onset_bound_N": 14.78106064144941,
+            "optional": true,
+            "owned": true,
+            "post": {
+              "active": true,
+              "armed": false,
+              "over": 2,
+              "pulse": 7
+            },
+            "pre": {
+              "active": false,
+              "armed": true,
+              "over": 1,
+              "pulse": 0
+            },
+            "release_bound_N": 11.824848513159528,
+            "reported": true,
+            "table_allowed": true,
+            "table_normal_N": 0.0
+          }
+        }
+      }
+    },
+    "finite_known_diagnostics_sha256": "837955e08af2c058ed96b2d2bb7a88b91027e244903fde1d2f1aaec365a32ee9",
+    "numerical_erratum_parity_episodes": 12,
+    "previous_finite_source_sha256": "f764e6ebd13cfb67d41dad869e963ee56ccfd571d40efa58fa17f995e0daf4f7",
+    "previous_v3_rises": [
+      1464
+    ],
+    "relative_prior_holdback_benefit": {
+      "added_flags_vs_v3": 0,
+      "duration_delta_samples_vs_v3": 0,
+      "false_rise_delta_vs_v3": -4,
+      "holdback_episodes": 36,
+      "known_loaded_tool_and_twin_passed": true,
+      "strict_events_candidate": 6,
+      "strict_events_v3": 6
+    },
+    "result_sha256": "3666def21b162efc0445a366c448c2d0df9833f84c22854bd5792df72e04eea5",
+    "true_8kg_impact_candidate_rises": [],
+    "verdict": "rejected, frozen true 8 kg loss"
+  },
+  "schema": "r28-landing-observation-memory-report.v1"
+}

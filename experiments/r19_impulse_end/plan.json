@@ -1,0 +1,9 @@
+{
+  "schema": "r19-impulse-end-plan.v1",
+  "frozen_before_replay": true,
+  "identity": "A separately labelled event-end measurement, not a V2 retune.",
+  "onset": "Use the exact R18 recovery onset and unchanged Coupled/learned branches.",
+  "end": "After an onset, retain at least eight measured frames. On a frame where raw R18 is low, end only if for every axis the sum over the latest eight frames of abs(corrected innovation) divided by that sample's original sign-specific physical floor is <=8. Opposite signs never cancel. No fitted value, force truth, case clock, floor change, mute or refractory interval.",
+  "screen": "Before replay, unit-test reset, minimum history, raw-R18-high blocking, sustained strong and sign-alternating loading, valid low accumulated loading, and nonloaded fallback. Then freeze source hashes. Replay only already-exposed pair_return_opposed, diag_known_late_fz, diag_known_late_fx and gap80_weak four twins. Preserve exact R18 returned residual and physical arrays. Stop without adjustment on any split, miss, added false rise, stuck tail or protected response loss.",
+  "scope": "Research-only; no independent stimuli, submission, original kit, remote, hardware or dependency changes."
+}

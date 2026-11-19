@@ -1,0 +1,18 @@
+{
+  "schema":"r14-empty-reference-plan.v1",
+  "mode":"torque",
+  "objective":"Predict the counterfactual normal-grasp absolute-bottom baseline from public empty approach motion before 1.253s, while retaining the latch-derived displaced-box signal only in the case absolute-bottom estimate.",
+  "feature":"Fixed five-column linear reference: intercept, known mass, 1.22-1.25s vertical link tracking error, physics-fitted elastic-compliance coordinate over 1.18-1.25s, and initial 0.04-0.08s elastic spring-deflection norm. Public encoder/JTS and nominal reference/model only; no grip/latch pose, geometry label, force, seed, perturbation, or case ID.",
+  "fit":"Twelve frozen passive torque normal public recordings n00-n11. Recompute the original sensor physics model and empty-reference regression inside each leave-one-normal-out fold. Fixed standardized ridge alpha 0.25; no feature/threshold selection after LOO or held truth.",
+  "uncertainty":"0.75mm finite geometry margin + maximum absolute revised leave-one-normal-out residual + largest five-block deletion change. Retain width<=2.5mm, sign-excluding interval, original mass/displacement/information domain, and unchanged strict/functional gates.",
+  "held":[
+    {"id":"p","mass":3.25,"com":[0.019,-0.022,0.016],"perturb":{"seed":151201,"stiffness_scale":0.94,"viscous_scale":1.06,"coulomb_scale":0.96},"shift":[0.006,-0.004,0.0045]},
+    {"id":"q","mass":4.75,"com":[-0.018,0.015,-0.023],"perturb":{"seed":151202,"stiffness_scale":1.055,"viscous_scale":0.95,"coulomb_scale":1.04},"shift":[-0.007,0.005,0.0058]},
+    {"id":"r","mass":6.35,"com":[0.022,0.018,0.024],"perturb":{"seed":151203,"stiffness_scale":0.965,"viscous_scale":1.045,"coulomb_scale":1.06},"shift":[0.008,-0.006,0.0040]},
+    {"id":"s","mass":7.55,"com":[-0.024,-0.011,-0.017],"perturb":{"seed":151204,"stiffness_scale":1.04,"viscous_scale":0.94,"coulomb_scale":0.95},"shift":[-0.006,-0.007,0.0052]}
+  ],
+  "variants":["zero","xy","up","down"],
+  "gates":{"strict":"8/8 vertical accepted correct sign, vertical point RMSE<=2mm, control max<=2mm, no accepted interval miss","functional":"16-point RMSE<=2mm, max applied error<=2mm, no accepted interval miss, no action for |truth|<1mm, >=75% of |truth|>=2.5mm signed action with each error<=2mm","width_mm_max":2.5},
+  "official":false,
+  "collisions":false
+}

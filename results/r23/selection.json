@@ -1,0 +1,67 @@
+{
+  "archive_scope": "optional research only",
+  "candidate_entrypoint": "experiments.r23_detached.candidate:Free",
+  "candidate_sources": {
+    "experiments/r23_detached/candidate.py": "49d283f94225b911476a3bc20c567ddab83afe8552a2817887c029e5f38c4912",
+    "experiments/r23_detached/plan.json": "c51bdaa5cc9949ca6571311d32ca2538146bb62e4f7cb509685c65d6489de085",
+    "experiments/r23_detached/state.py": "b6175b317a05b231455ebd54e77705289ff56ddb491cba33872143e2be5539f7"
+  },
+  "default_promoted": false,
+  "independent_result": {
+    "episodes": 216,
+    "failed_rows": 15,
+    "lock_sha256": "bcfdeace274ae7f24a11d2d8d63824304c312b7a0dd447c55953995fe7ea22d8",
+    "original_result_sha256": "8b55ed07f64128d5b957630019576b8477b47f57447989668fd284bee7abd022",
+    "public_summary_sha256": "7f643759dd88f8a1ec0a3a7e5208e39d6e387fee1ce53bfad0c659c6619f8a46",
+    "remaining_false": 17,
+    "remaining_false_definition": "rises outside the actual impact/tool windows over all 108 candidate episodes",
+    "remaining_misses": 7,
+    "remaining_misses_definition": "of 78 intended scored event slots, no attributable rising edge; not the same as every failed strict slot",
+    "rows": 45,
+    "safety_qualification": false,
+    "scoped_detection_pass": false,
+    "strict_failed_slots": 18,
+    "strict_gain_vs_r22": 12,
+    "strict_loss_vs_r22": 0,
+    "strict_safety_floor_pass": false,
+    "strict_totals": {
+      "r22_light": {
+        "all_episode_false_rises": 17,
+        "events_with_no_attributable_rise": 19,
+        "negative_actual_tool_detected": 3,
+        "negative_false_rises": 1,
+        "negative_rows": 12,
+        "negatives_with_actual_tool": 6,
+        "pair_rows": 15,
+        "pair_slots": 60,
+        "single_total": 18,
+        "slots_with_multiple_rises": 6,
+        "strict_complete_pair_rows": 5,
+        "strict_failed_slots": 30,
+        "strict_pair_slots": 33,
+        "strict_singles": 15
+      },
+      "r23": {
+        "all_episode_false_rises": 17,
+        "events_with_no_attributable_rise": 7,
+        "negative_actual_tool_detected": 3,
+        "negative_false_rises": 1,
+        "negative_rows": 12,
+        "negatives_with_actual_tool": 6,
+        "pair_rows": 15,
+        "pair_slots": 60,
+        "single_total": 18,
+        "slots_with_multiple_rises": 6,
+        "strict_complete_pair_rows": 8,
+        "strict_failed_slots": 18,
+        "strict_pair_slots": 45,
+        "strict_singles": 15
+      }
+    },
+    "verdict": "FAIL"
+  },
+  "pre_outcome_choice_sha256": "b69e57718ba1f14c84f7249a7423d11f229247dfbc88c5cd65264fcc43814748",
+  "schema": "r23-selection-and-independent-result.v1",
+  "selected_for_independent_evaluation": true,
+  "status": "independent_qualification_failed"
+}

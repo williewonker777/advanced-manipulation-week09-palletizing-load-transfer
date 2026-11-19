@@ -1,0 +1,69 @@
+{
+  "schema": "r10-capture-decision.v1",
+  "decision": "REJECT_NO_INTEGRATION",
+  "reason": "independent stress event delay increased by 11 ms; gate allows at most 5 ms",
+  "development": {
+    "passed": true,
+    "rows": 12,
+    "worst_capture_tail_deg": 0.01901676546460067,
+    "worst_tail_ratio_to_R1": 0.12340216505178617,
+    "worst_capture_p99_us": 253.87090000000003,
+    "worst_normal_rms_ratio": 0.9908670759951707,
+    "worst_normal_max_ratio": 1.0,
+    "worst_capture_final_joint_abs_deg": 0.035502803972035674,
+    "worst_capture_final_tcp_mm": 0.63000774906746,
+    "new_saturated_rows": 0
+  },
+  "independent_stress": {
+    "passed": false,
+    "rows": 16,
+    "worst_capture_tail_deg": 0.04105295207012325,
+    "worst_tail_ratio_to_R1": 0.1401409532811621,
+    "worst_capture_p99_us": 279.99080000000004,
+    "worst_normal_rms_ratio": 0.9886126844449767,
+    "worst_normal_max_ratio": 1.0,
+    "worst_capture_final_joint_abs_deg": 0.05280118033469344,
+    "worst_capture_final_tcp_mm": 0.8785561361136376,
+    "new_saturated_rows": 0,
+    "failures": [
+      {
+        "group": "r3",
+        "case": "after_pulse",
+        "failed_gates": [
+          "event_delay"
+        ]
+      }
+    ]
+  },
+  "first_counterexample": {
+    "group": "r3",
+    "case": "after_pulse",
+    "R1_delay_ms": 30.999999999999694,
+    "capture_delay_ms": 41.999999999999815,
+    "delay_increase_ms": 11.00000000000012,
+    "capture_tail_deg": 0.025954028949298998,
+    "capture_final_joint_abs_deg": 0.024892781648403896,
+    "capture_final_tcp_mm": 0.3029025498838909,
+    "mechanism": "The capture trajectory altered the empty-hand observer innovation during the pulse. R1 accumulated eight consecutive fast-alarm samples from 5.370 through 5.377 s; capture streaks reset before the first complete eight-sample run from 5.381 through 5.388 s."
+  },
+  "scope": {
+    "development_pairs": 12,
+    "independent_stress_pairs": 16,
+    "qualified_matrix_episodes": 56,
+    "diagnostic_and_failed_harness_episodes": 13,
+    "total_simulator_episodes": 69,
+    "further_matrices": 0,
+    "freshness_qualification": "Exact seeds, masses and COM triples were checked against available prior JSON only; not an exhaustive audit of Python-declared or unavailable values."
+  },
+  "pins": {
+    "controller": "9fe7bf26a0555e439068c911651d9ef1f6a0aacfd788d0c5913635e78855ada8",
+    "qualification": "75692f5d229e0448613ee6f73d88177e1f18d03284f1f6eed07d04b14c770764",
+    "development_plan": "e870bcd9e5a86bf6d8c591446f03be47fb2aecd6b4e3327b16e74c9eadb62453",
+    "development_result": "3c24bf941ae513d1022121f5d0ed9935d84b24c1a4185ad02ecca28163d4b717",
+    "stress_plan": "fb5175c20a1636945e6b398d7cdb812cb551ce8414b307e9144bd9af06d3d027",
+    "stress_result": "5cbcf9eb638ef87af4beb8f4399d7dac64ef37ad6cd6cb0e6276002216fa5c70",
+    "diagnostic": "c93e9b01c4a8186e0477ed9764a0fd8bea24db79b4ced2ebaaf8173571a079f1",
+    "verify_results": "8ec6efafc90356715e059ddb7849f3f60cdb4107a9f9be7ba3dc95af744c3924"
+  },
+  "official": false
+}

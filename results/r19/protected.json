@@ -1,0 +1,184 @@
+{
+  "schema": "r19-combined-final-evidence.v1",
+  "research_only": true,
+  "independent_claim": false,
+  "stages": {
+    "known-normal": {
+      "rows": 37,
+      "passed": true
+    },
+    "exposed-impact": {
+      "rows": 7,
+      "passed": true
+    },
+    "fresh-normal": {
+      "rows": 6,
+      "passed": true
+    },
+    "fresh-impact": {
+      "rows": 8,
+      "passed": true
+    }
+  },
+  "forced_detected_counts": {
+    "exposed-impact": {
+      "r10": 3,
+      "r15": 1,
+      "d": 2,
+      "candidate": 3
+    },
+    "fresh-impact": {
+      "r10": 3,
+      "r15": 3,
+      "d": 3,
+      "candidate": 3
+    }
+  },
+  "candidate_false_rises_all_73_condition_records": 0,
+  "baseline_false_rises_all_condition_records": {
+    "r10": 0,
+    "r15": 1,
+    "d": 0
+  },
+  "candidate_rising_times_exact_R18_on_protected_impacts": true,
+  "timing_by_phase": {
+    "normal": {
+      "records": 58,
+      "cycles": 348000,
+      "over_1ms": 38,
+      "p99_max_us": 803.9317136819201,
+      "max_us": 6114.627998261802
+    },
+    "forced": {
+      "records": 15,
+      "cycles": 90000,
+      "over_1ms": 15,
+      "p99_max_us": 751.5115048957881,
+      "max_us": 8986.470993104593
+    }
+  },
+  "hard_deadline_passed": false,
+  "fallback_parity": {
+    "schema": "r19-plain-servo-zero-parity.v1",
+    "plain": {
+      "schema": "r19-fallback-controller-parity.v1",
+      "controller_module": "r1_torque",
+      "controller_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "baseline_detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "wrapper_sha256": "ee25b55d34f463acc771cbffb65e139795024b9f8d8d92230d8a97fb6465c99c",
+      "records": [
+        {
+          "phase": "normal",
+          "fields": {
+            "t": true,
+            "e_mm": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "r": true,
+            "detect": true,
+            "f_ext": true
+          },
+          "metrics_nonclock": true,
+          "passed": true
+        },
+        {
+          "phase": "forced",
+          "fields": {
+            "t": true,
+            "e_mm": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "r": true,
+            "detect": true,
+            "f_ext": true
+          },
+          "metrics_nonclock": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "servo": {
+      "schema": "r19-fallback-controller-parity.v1",
+      "controller_module": "servo_controller",
+      "controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "baseline_detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "wrapper_sha256": "ee25b55d34f463acc771cbffb65e139795024b9f8d8d92230d8a97fb6465c99c",
+      "records": [
+        {
+          "phase": "normal",
+          "fields": {
+            "t": true,
+            "e_mm": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "r": true,
+            "detect": true,
+            "f_ext": true
+          },
+          "metrics_nonclock": true,
+          "passed": true
+        },
+        {
+          "phase": "forced",
+          "fields": {
+            "t": true,
+            "e_mm": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "r": true,
+            "detect": true,
+            "f_ext": true
+          },
+          "metrics_nonclock": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "zero_registered_staged": {
+      "id": "r17fb_empty",
+      "passed": true,
+      "parity": {
+        "fields": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        },
+        "metrics": true,
+        "passed": true
+      },
+      "gates": {
+        "status": true,
+        "exact_r10_nonclock_and_logs": true,
+        "runtime": true
+      }
+    },
+    "timing_excluded": "ctrl_time_us is host scheduling, matching R17 nonclock contract",
+    "passed": true
+  },
+  "source_record_sha256": "b76c23d44c6b3fa71c3eaea837a746a03a6f91233c9d5ca3774e95a55150bc1b"
+}

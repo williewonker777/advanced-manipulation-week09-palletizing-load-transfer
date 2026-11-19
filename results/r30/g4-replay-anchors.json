@@ -1,0 +1,245 @@
+{
+  "actual_full_physical_hashes_present": true,
+  "checks": [
+    {
+      "actual": [],
+      "id": "weak-memory-tool",
+      "passed": true,
+      "released": []
+    },
+    {
+      "actual": [],
+      "id": "weak-memory-pick",
+      "passed": true,
+      "released": []
+    },
+    {
+      "actual": [],
+      "id": "weak-memory-unload",
+      "passed": true,
+      "released": []
+    },
+    {
+      "actual": [
+        1318
+      ],
+      "id": "weak-early-rises",
+      "passed": true,
+      "released": [
+        1318
+      ]
+    },
+    {
+      "actual": [
+        1318
+      ],
+      "id": "weak-rising-owner-rises",
+      "passed": true,
+      "released": [
+        1318
+      ]
+    },
+    {
+      "actual": [
+        1353
+      ],
+      "id": "weak-unload-rises",
+      "passed": true,
+      "released": [
+        1353
+      ]
+    },
+    {
+      "actual": [
+        [
+          1303,
+          1346
+        ]
+      ],
+      "id": "weak-true-bounds",
+      "passed": true,
+      "released": [
+        [
+          1303,
+          1346
+        ]
+      ]
+    },
+    {
+      "actual": 24.319640971235213,
+      "id": "weak-early_onset_rejected-peak",
+      "passed": true,
+      "released": 24.319640971235213
+    },
+    {
+      "actual": 24.319640971235213,
+      "id": "weak-rising_owner_rejected-peak",
+      "passed": true,
+      "released": 24.319640971235213
+    },
+    {
+      "actual": 24.319640971235213,
+      "id": "weak-unload_notice-peak",
+      "passed": true,
+      "released": 24.319640971235213
+    },
+    {
+      "actual": [],
+      "id": "zero-early_onset_rejected-rises",
+      "passed": true,
+      "released": []
+    },
+    {
+      "actual": [],
+      "id": "zero-rising_owner_rejected-rises",
+      "passed": true,
+      "released": []
+    },
+    {
+      "actual": [],
+      "id": "zero-unload_notice-rises",
+      "passed": true,
+      "released": []
+    },
+    {
+      "actual": [],
+      "id": "zero-memory-rises",
+      "passed": true,
+      "released": []
+    },
+    {
+      "actual": [],
+      "id": "r30_offset_low-memory-rises",
+      "passed": true,
+      "released": []
+    },
+    {
+      "actual": [
+        1324
+      ],
+      "id": "r30_offset_low-early-rises",
+      "passed": true,
+      "released": [
+        1324
+      ]
+    },
+    {
+      "actual": [
+        1324
+      ],
+      "id": "r30_offset_low-rising-rises",
+      "passed": true,
+      "released": [
+        1324
+      ]
+    },
+    {
+      "actual": [
+        1357
+      ],
+      "id": "r30_offset_low-unload-rises",
+      "passed": true,
+      "released": [
+        1357
+      ]
+    },
+    {
+      "actual": [
+        [
+          1307,
+          1347
+        ]
+      ],
+      "id": "r30_offset_low-true-bounds",
+      "passed": true,
+      "released": [
+        [
+          1307,
+          1347
+        ]
+      ]
+    },
+    {
+      "actual": 21.542833918069583,
+      "id": "r30_offset_low-peak",
+      "passed": true,
+      "released": 21.542833918069583
+    },
+    {
+      "actual": [
+        1323
+      ],
+      "id": "r30_offset_high-memory-rises",
+      "passed": true,
+      "released": [
+        1323
+      ]
+    },
+    {
+      "actual": [
+        1315
+      ],
+      "id": "r30_offset_high-early-rises",
+      "passed": true,
+      "released": [
+        1315
+      ]
+    },
+    {
+      "actual": [
+        1315
+      ],
+      "id": "r30_offset_high-rising-rises",
+      "passed": true,
+      "released": [
+        1315
+      ]
+    },
+    {
+      "actual": [
+        1323
+      ],
+      "id": "r30_offset_high-unload-rises",
+      "passed": true,
+      "released": [
+        1323
+      ]
+    },
+    {
+      "actual": [
+        [
+          1299,
+          1347
+        ]
+      ],
+      "id": "r30_offset_high-true-bounds",
+      "passed": true,
+      "released": [
+        [
+          1299,
+          1347
+        ]
+      ]
+    },
+    {
+      "actual": 28.69620172315571,
+      "id": "r30_offset_high-peak",
+      "passed": true,
+      "released": 28.69620172315571
+    }
+  ],
+  "gap": "Released R30 records retained exact-physics booleans but not a full physical SHA for every low/high/zero arm; this replay supplies full hashes and proves all four passive arms identical, while event/bounds/peak fields are directly anchored.",
+  "passed": true,
+  "prior_full_physical_hash_available_for_all_four_cases": false,
+  "released_comparison_physical_exact_all": true,
+  "released_comparison_physical_exact_flags": 29,
+  "released_inputs": {
+    "r30/g4_attempt/independent.json": "019d1f1947f68f9c9592657e32bd827dad879da1a17570d3d4909f96a2d99f10",
+    "r30/g4_attempt/known.json": "b733e51fde416f25242657f9df4580ed6c29b35ac7ef4f3cf89d9454492be05d",
+    "r30/g4_tool/known.json": "c78581443f1c67cb91b15d2ed0a55610522b92ac0f81c1cfff0438314ad68a71",
+    "r30/g4_unload/diagnosis.json": "d56a596b60b065349266e5a27553ed27be1635ce60acffa034c1e54b151e3acd",
+    "r30/g4_unload/known-offsets.json": "26da557140a98980d73b868be63a252947341ecc5205d8116921815a58464358",
+    "r30/g4_unload/known.json": "cefc33a0539dd987414dca421dd6f7d4a263283dfc2222875f50f7ce74c216e8"
+  },
+  "schema": "r30-g4-disclosed-released-anchor.v1"
+}

@@ -1,0 +1,165 @@
+{
+  "schema": "r24-disclosed-repeat-result.v1",
+  "classification": "Publicly disclosed development/protection suites only; no R24 private suite, deployment, hardware, hard-real-time, or safety claim",
+  "published_candidate": false,
+  "frozen_research_component": "experiments.r24_repeat.trial:Detector",
+  "root_cause": "The first 120 ms physical impulse crosses the actual grip/model transition. The inherited yaw state resets at pickup and re-accumulates the still-present same force, producing two rises. The true second impulse is a later R10-baseline route in stock/contact and is already missed under actuator skew.",
+  "correction": "When yaw was active on the immediately preceding sensor report, compensate the modeled incoming payload momentum and preserve that one pickup event. End it only after the existing R10 suspicion evidence and existing eight-sample release persistence are both quiet. No nominal time, case, mass, COM, mechanics, programmed force, threshold change, or global cooldown is used.",
+  "target": {
+    "episodes": 24,
+    "duplicate_slots_before": 6,
+    "duplicate_slots_after": 0,
+    "first_rises_after": {
+      "stock": {
+        "isolated_first": [
+          1389
+        ],
+        "both_first": [
+          1389
+        ]
+      },
+      "contact_surface": {
+        "isolated_first": [
+          1389
+        ],
+        "both_first": [
+          1389
+        ]
+      },
+      "actuator_skew": {
+        "isolated_first": [
+          1392
+        ],
+        "both_first": [
+          1392
+        ]
+      }
+    },
+    "true_second_after": {
+      "stock": {
+        "isolated_second": [
+          1597
+        ],
+        "both_second": [
+          1598
+        ]
+      },
+      "contact_surface": {
+        "isolated_second": [
+          1598
+        ],
+        "both_second": [
+          1597
+        ]
+      },
+      "actuator_skew": {
+        "isolated_second": [],
+        "both_second": []
+      }
+    },
+    "new_false_or_safety_floor_failure": false
+  },
+  "protection": {
+    "r23_disclosed_rows": 45,
+    "r23_disclosed_episodes": 216,
+    "r23_changed_rows": [
+      {
+        "mechanics": "stock",
+        "id": "p23_transfer_close_diagonals",
+        "kind": "paired",
+        "base_rises": 6,
+        "trial_rises": 4,
+        "safety_failures": []
+      },
+      {
+        "mechanics": "contact_surface",
+        "id": "p23_transfer_close_diagonals",
+        "kind": "paired",
+        "base_rises": 6,
+        "trial_rises": 4,
+        "safety_failures": []
+      },
+      {
+        "mechanics": "actuator_skew",
+        "id": "p23_transfer_close_diagonals",
+        "kind": "paired",
+        "base_rises": 4,
+        "trial_rises": 2,
+        "safety_failures": []
+      }
+    ],
+    "strict_slots_before_after": [
+      60,
+      66
+    ],
+    "d4_episodes": 770,
+    "d4_summary": {
+      "base": {
+        "strict": 146,
+        "false": 9,
+        "duplicate": 2,
+        "tool_detected": 6
+      },
+      "trial": {
+        "strict": 146,
+        "false": 9,
+        "duplicate": 2,
+        "tool_detected": 6
+      }
+    },
+    "weak_episodes": 90,
+    "weak_strict": {
+      "base": 15,
+      "trial": 15
+    },
+    "repeat_episodes": 224,
+    "repeat_strict": {
+      "base": 12,
+      "trial": 12
+    },
+    "official_episodes": 58,
+    "official_equal": true
+  },
+  "qualification_limit": {
+    "reason_no_candidate": "The predeclared two-real-impact gate remains unmet: actuator-skew misses the second impact in both isolated and paired twins, as the selected R23 base already did. The paired stock/contact second rise also cannot have a 24 ms quiet prefix because the fixed physical pulses provide only 21 force-free samples.",
+    "physical_force_spans": [
+      {
+        "first_nonzero": 1353,
+        "last_nonzero": 1472,
+        "samples": 120
+      },
+      {
+        "first_nonzero": 1494,
+        "last_nonzero": 1613,
+        "samples": 120
+      }
+    ],
+    "force_free_between_samples": 21,
+    "quiet_contract_samples": 24,
+    "gap_meets_quiet_contract": false,
+    "actuator_skew_second_rises": [],
+    "stock_contact_both_second_quiet": {
+      "stock": false,
+      "contact_surface": false
+    },
+    "preexisting_r23_absolute_safety_failures": [
+      "actuator_skew:n23_detached_heavy_interp",
+      "actuator_skew:s23_transfer_late_tangent",
+      "actuator_skew:s23_post_detach_radial",
+      "actuator_skew:p23_transfer_to_carry",
+      "actuator_skew:p23_post_detach_diagonal_pair",
+      "actuator_skew:p23_transfer_to_post_detach"
+    ]
+  },
+  "evidence_sha256": {
+    "reproduction": "8fc1dabc0d45edd0da0338e201c7cd21bd00a3a00373f8af6adffb83bff20976",
+    "channels": "241b7e75bb58a1a21e1d81c54d9a00d5c27914835bfebf0fba61167ef50a3e1a",
+    "force_boundaries": "072ba0f0effaf4a540f91fecf1b9de0a678eaefca3f9f537b9534b26767f9a39",
+    "target": "3b99c4dc97483b7193737d8609a29dc4d140201d5e33b110069cfb350eaaf605",
+    "r23_full": "15304c42609a51c6d2bef84931b2ac53f3bbf9b29d42be2a52aa9cc74df60e88",
+    "d4": "63e663cece27407184c7cf1bb542f8fb35b9835de964d2d4a317c7e4c4d52f53",
+    "weak": "0d622d8ed1fbc4cba770396f2b62077899b5079a31a7c69b668466bd708f2f26",
+    "pairs": "c55f86a9b0e6fa137949fa534049ad8eedf8cea43380f39e99bc893b8357f8ff",
+    "official": "c29c3d99c53e8717aa1a3f274d7e943895b6891a8df9aa0f1b301774905683ea"
+  }
+}

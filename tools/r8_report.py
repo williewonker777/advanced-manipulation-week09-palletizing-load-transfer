@@ -38,7 +38,7 @@ def validate_restoration(c):
     assert hashlib.sha256(json.dumps(historical,sort_keys=True,ensure_ascii=False).encode()).hexdigest()==r['historical_stage_B_fields_sha256']
     assert not historical['adopted'] and historical['final_selection']=='fallback'
     assert r['effective_adopted'] and r['effective_final_selection']=='C1'
-    assert r['effective_detector_sha256']==a['candidate_sha256']==sha(c['root']/'my_detector.py')==sha(c['root']/'experiments/r8_final/C1.py')
+    assert r['effective_detector_sha256']==a['candidate_sha256']==sha(c['root']/'experiments/r8_final/C1.py')
     assert r['post_result_exception'] and r['candidate_bytes_unchanged'] and r['models_thresholds_numeric_gates_unchanged']
     for name,digest in r['source_sha256'].items():assert sha(c['root']/(D+name))==digest
     for name in ('new_physical_evaluations','new_holdout_batches','new_official_batches','remote_operations'):
@@ -258,13 +258,23 @@ def make_pdf(path,c):
 def generate(root,check=False):
     c=context(root);texts=render(c);pins={D+n:sha(root/(D+n)) for n in INPUTS};pins['docs/R7_README.md']=sha(root/'docs/R7_README.md')
     record={'schema':'R8_REPORT_CURATION.v1','sources':pins,'outputs':OUTPUTS,'measurements_changed':False}
+    # Preserve the original logical output list in the immutable curation
+    # record, but never compare to or overwrite a later round's live README.
+    relocation = read_json(root / 'results/r9/r8_archive.json')
+    assert relocation['historical_curation'] == D+'R8_REPORT_CURATION.json'
+    expected = {'README.md': 'README_R8.md', 'my_detector.py': 'experiments/r8_final/C1.py'}
+    assert set(relocation['relocated']) == set(expected)
+    for old, archive in expected.items():
+        item = relocation['relocated'][old]
+        assert item == {'now': archive, 'sha256': sha(root/archive)}
+    destinations = [relocation['relocated']['README.md']['now'], *OUTPUTS[1:]]
     if check:
         assert read_json(root/(D+'R8_REPORT_CURATION.json'))==record
-        assert all((root/p).read_text()==s for p,s in zip(OUTPUTS[:4],texts))
+        assert all((root/p).read_text()==s for p,s in zip(destinations[:4],texts))
         with tempfile.TemporaryDirectory() as temp:
             p=Path(temp)/'p.pdf';make_pdf(p,c);assert p.read_bytes()==(root/OUTPUTS[4]).read_bytes()
     else:
-        for p,s in zip(OUTPUTS[:4],texts):(root/p).parent.mkdir(parents=True,exist_ok=True);(root/p).write_text(s)
+        for p,s in zip(destinations[:4],texts):(root/p).parent.mkdir(parents=True,exist_ok=True);(root/p).write_text(s)
         make_pdf(root/OUTPUTS[4],c)
         target=root/(D+'R8_REPORT_CURATION.json')
         (replace_json if target.exists() else write_json)(target,record)

@@ -1,0 +1,51 @@
+{
+  "schema": "r30-g4-unload-notice-preregistration.v1",
+  "status": "FROZEN_BEFORE_CANDIDATE_SCORING",
+  "classification": "post-disclosure physical trailing-edge ownership study",
+  "diagnostic_source": "E/r30/g4_unload/diagnosis.json",
+  "measured_basis": {
+    "published_weak": "fixed witness 1316..1351, no native edge; release qualifies 1353",
+    "low_offset": "fixed witness 1322..1355, no native edge; release qualifies 1357",
+    "high_offset_counterexample": "fixed witness 1313..1350 contains native edge 1323; optional onset at 1315 must not count as a new contact",
+    "strong_a_b": "native edge occurs inside the active witness or earlier in the same uninterrupted initial pickup lifecycle"
+  },
+  "unchanged_signal": {
+    "source": "causal NormalForce encoder/JTS estimate opposed to commanded TCP velocity",
+    "minimum_command_speed_m_s": 0.01,
+    "onset_force_N": 5.0,
+    "release_force_N": 2.5,
+    "persistence_samples": 3,
+    "report_samples": 8,
+    "note": "identical thresholds to both earlier R30 studies; no force fitting or fixed delay"
+  },
+  "mechanism": {
+    "owner": "first uninterrupted open-gripper commanded pickup lifecycle only",
+    "pending": "onset opens a pending physical pulse but emits nothing",
+    "consume": "any native/base alarm during the pending pulse or earlier in the same pickup lifecycle consumes the optional source",
+    "release": "three consecutive samples at or below the existing 2.5 N unloading boundary close the physical pulse",
+    "report": "at physical release only, emit once iff pickup remains live and no native owner was observed",
+    "retire": "grip closure, command stop after pickup starts, sustained measured reversal, invalid kinematics, or first report permanently retires the optional source",
+    "native": "base output is returned unchanged and is never delayed, masked, or shortened"
+  },
+  "known_gates": {
+    "weak": "published weak and prior low-offset miss get exactly one rescue after release, within the registered tool tail and without prealarm",
+    "native_counterexample": "prior high-offset native edge remains 1323 within 2 ms and gets no optional edge",
+    "strong": "A/B/C and late signed rows exactly retain native edges and active duration within +5",
+    "negative": "zero-offset and normal twins stay silent",
+    "signed": "later oblique and negative-Z native inputs remain present with no delay over +5",
+    "physics": "force and physical hashes exact"
+  },
+  "prelocked_fresh_matrix_if_known_passes": {
+    "offsets_m": [[0.00175, 0.00130, 0.00105], [0.00200, 0.00150, 0.00115], [0.00225, 0.00170, 0.00125]],
+    "zero_offset_normals": [
+      {"mass": 5.9, "com": [0.027, 0.021, 0.042]},
+      {"mass": 6.3, "com": [0.030, 0.024, 0.045]}
+    ],
+    "later_external": [
+      {"onset_s": 1.665, "vector_N": [11.0, -9.0, 0.0]},
+      {"onset_s": 1.645, "vector_N": [0.0, 0.0, -15.0]}
+    ],
+    "rule": "execute once after source freeze and known admission; do not alter source from outcomes"
+  },
+  "falsifier": "reject on any existing native onset advance/loss, optional notice before physical release, negative false edge, or independent ownership ambiguity; no fourth mechanism"
+}

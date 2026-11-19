@@ -1,0 +1,82 @@
+{
+  "candidate_seen": false,
+  "classification": "Disclosed production comparison only; no R30 candidate, independent score, or promotion.",
+  "default_changed": false,
+  "evidence_sha256": "4cb58b3226507525c08364ca7d88f26cfd9a39ea2d32375f3f509b578ef8b027",
+  "known_physical": {
+    "all_physical_force_prefix_exact": true,
+    "counts": {
+      "production_r10": {
+        "duplicates": 0,
+        "event_slots": 15,
+        "false_rises": 0,
+        "free_motion_zero_rises": 0,
+        "strict": 0
+      },
+      "r29_composed": {
+        "duplicates": 0,
+        "event_slots": 15,
+        "false_rises": 0,
+        "free_motion_zero_rises": 0,
+        "strict": 15
+      }
+    },
+    "episodes": 30,
+    "sha256": "f51a2b03840031ceb7db286dc90881fdbb0dbb0f9e91b195ea18478d8bd44126"
+  },
+  "official": {
+    "episodes": 58,
+    "production_gap": {
+      "composed_detected": 24,
+      "composed_false_rises": 0,
+      "detected_difference": 6,
+      "production_detected": 18,
+      "production_false_rises": 0
+    },
+    "sha256": "883b2f56c6db65e5710b6700a3c7ec0c08843c41b282232f817c3dbc25ac8959"
+  },
+  "original": {
+    "command": [
+      "run.py",
+      "--box",
+      "8"
+    ],
+    "controller": "servo_controller",
+    "detector": "collision_detector",
+    "original_render_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+    "unmodified_and_byte_identical_to_guide": true
+  },
+  "original_r10_release_regression": {
+    "episodes_per_mode": {
+      "servo": 29,
+      "torque": 29
+    },
+    "release_check": "passed; 132 displayed non-timing cells already matched by validate_submission --check-release",
+    "report_sha256": "5abef9110e707884b0ed46ec6e329351b293ede8beb82c007ce42f66ad993a5c"
+  },
+  "runtime": {
+    "aggregate": {
+      "production_r10": {
+        "median_update_us": 83.01400000000001,
+        "p95_update_us": 162.661275,
+        "p99_update_us": 216.83050000000006
+      },
+      "r29_composed": {
+        "median_update_us": 169.7265,
+        "p95_update_us": 306.3605,
+        "p99_update_us": 418.34810500000015
+      }
+    },
+    "episodes": 8,
+    "limitations": [
+      "one local process",
+      "sequential arms",
+      "Python perf_counter_ns wrapper overhead",
+      "no CPU isolation or hard real-time guarantee",
+      "controller timing reported separately"
+    ],
+    "sha256": "1902c380ff733a789c28cf32cdeeaa9a46d58f69a0376df8cb50edf9c4c5266a"
+  },
+  "schema": "r30-production-gap-baseline.v1",
+  "total_fresh_episodes": 96
+}

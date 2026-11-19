@@ -1,0 +1,1018 @@
+{
+  "schema": "r24-known-evaluation-table.v1",
+  "new_independent_test": false,
+  "scenarios": 20,
+  "original_R23_records_and_physics_exact_if_disclosed": false,
+  "label": "R24 exposed matched late positive/negative horizontal and downward impulses",
+  "arms": {
+    "r23_free": {
+      "summary": {
+        "singles": 10,
+        "single_n": 20,
+        "pair_slots": 0,
+        "pair_n": 0,
+        "complete": 0,
+        "false": 10,
+        "duplicate_slots": 3,
+        "tool_hits": 0,
+        "tool_n": 0
+      },
+      "failed_rows": [
+        {
+          "case": "3.837:[14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3859
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[-14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, -14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3859
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3860
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3860
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[-14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                45
+              ],
+              "rises_ms": [
+                3867,
+                3893
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                90
+              ],
+              "rises_ms": [
+                3867,
+                3938
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, -14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3861
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 0, -18]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                150
+              ],
+              "rises_ms": [
+                3860,
+                3998
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 120,
+      "raw_comparison_sha256": "b9146f9218ba5b794c6a1e7fd8efaeb6f21fa62f516df2a3e3e7c3891899b80f"
+    },
+    "experiments.r24_loaded.memory:Cone": {
+      "summary": {
+        "singles": 17,
+        "single_n": 20,
+        "pair_slots": 0,
+        "pair_n": 0,
+        "complete": 0,
+        "false": 0,
+        "duplicate_slots": 0,
+        "tool_hits": 0,
+        "tool_n": 0
+      },
+      "failed_rows": [
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [
+        {
+          "id": "3.837:[14, 0, 0]",
+          "variant": "stock",
+          "failures": [
+            "single:no_loss_or_delay"
+          ]
+        },
+        {
+          "id": "3.837:[-14, 0, 0]",
+          "variant": "actuator_skew",
+          "failures": [
+            "single:no_loss_or_delay"
+          ]
+        },
+        {
+          "id": "3.837:[0, -14, 0]",
+          "variant": "stock",
+          "failures": [
+            "single:no_loss_or_delay"
+          ]
+        },
+        {
+          "id": "3.847:[0, -14, 0]",
+          "variant": "stock",
+          "failures": [
+            "single:no_loss_or_delay"
+          ]
+        }
+      ],
+      "episodes_in_authentic_comparison": 120,
+      "raw_comparison_sha256": "b9146f9218ba5b794c6a1e7fd8efaeb6f21fa62f516df2a3e3e7c3891899b80f"
+    },
+    "experiments.r24_loaded.memory:Response": {
+      "summary": {
+        "singles": 17,
+        "single_n": 20,
+        "pair_slots": 0,
+        "pair_n": 0,
+        "complete": 0,
+        "false": 0,
+        "duplicate_slots": 0,
+        "tool_hits": 0,
+        "tool_n": 0
+      },
+      "failed_rows": [
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [
+        {
+          "id": "3.837:[14, 0, 0]",
+          "variant": "stock",
+          "failures": [
+            "single:no_loss_or_delay"
+          ]
+        },
+        {
+          "id": "3.837:[0, -14, 0]",
+          "variant": "stock",
+          "failures": [
+            "single:no_loss_or_delay"
+          ]
+        },
+        {
+          "id": "3.847:[14, 0, 0]",
+          "variant": "stock",
+          "failures": [
+            "single:no_loss_or_delay"
+          ]
+        },
+        {
+          "id": "3.847:[0, -14, 0]",
+          "variant": "stock",
+          "failures": [
+            "single:no_loss_or_delay"
+          ]
+        }
+      ],
+      "episodes_in_authentic_comparison": 120,
+      "raw_comparison_sha256": "b9146f9218ba5b794c6a1e7fd8efaeb6f21fa62f516df2a3e3e7c3891899b80f"
+    },
+    "experiments.r24_loaded.gated:Detector": {
+      "summary": {
+        "singles": 10,
+        "single_n": 20,
+        "pair_slots": 0,
+        "pair_n": 0,
+        "complete": 0,
+        "false": 10,
+        "duplicate_slots": 3,
+        "tool_hits": 0,
+        "tool_n": 0
+      },
+      "failed_rows": [
+        {
+          "case": "3.837:[14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3859
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[-14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, -14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3859
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3860
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3860
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[-14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                45
+              ],
+              "rises_ms": [
+                3867,
+                3893
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                90
+              ],
+              "rises_ms": [
+                3867,
+                3938
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, -14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3861
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 0, -18]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                150
+              ],
+              "rises_ms": [
+                3860,
+                3998
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 80,
+      "raw_comparison_sha256": "1483cd8b5ac26b93b498d27dc45fbb9ccc9bf7348b57eef3c9363b7528a6ba17"
+    },
+    "experiments.r24_loaded.coherence:Detector": {
+      "summary": {
+        "singles": 10,
+        "single_n": 20,
+        "pair_slots": 0,
+        "pair_n": 0,
+        "complete": 0,
+        "false": 10,
+        "duplicate_slots": 3,
+        "tool_hits": 0,
+        "tool_n": 0
+      },
+      "failed_rows": [
+        {
+          "case": "3.837:[14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3859
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[-14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, -14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3859
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3860
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3860
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[-14, 0, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                45
+              ],
+              "rises_ms": [
+                3867,
+                3893
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                90
+              ],
+              "rises_ms": [
+                3867,
+                3938
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, -14, 0]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": [
+                3861
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 0, -18]",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                150
+              ],
+              "rises_ms": [
+                3860,
+                3998
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 80,
+      "raw_comparison_sha256": "d5e940875e02b42e3b745a8ec7baabfd430e8562e8bbde8c16222fb56b1cbc0c"
+    },
+    "experiments.r24_loaded.dc:Detector": {
+      "summary": {
+        "singles": 17,
+        "single_n": 20,
+        "pair_slots": 0,
+        "pair_n": 0,
+        "complete": 0,
+        "false": 0,
+        "duplicate_slots": 0,
+        "tool_hits": 0,
+        "tool_n": 0
+      },
+      "failed_rows": [
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 80,
+      "raw_comparison_sha256": "f84fdae0c098d0d0194ec9ee266042082668bf467b00f9b232a2c7a15349256a"
+    },
+    "experiments.r24_composed.detector:Detector": {
+      "summary": {
+        "singles": 17,
+        "single_n": 20,
+        "pair_slots": 0,
+        "pair_n": 0,
+        "complete": 0,
+        "false": 0,
+        "duplicate_slots": 0,
+        "tool_hits": 0,
+        "tool_n": 0
+      },
+      "failed_rows": [
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.837:[0, 0, -18]",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "3.847:[0, 0, -18]",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 80,
+      "raw_comparison_sha256": "e76360d53f1f8d37519d2ecceab24cddb9500a311913a28a723d3f6112dbd3f9"
+    }
+  }
+}

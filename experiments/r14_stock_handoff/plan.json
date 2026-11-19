@@ -1,0 +1,49 @@
+{
+  "schema": "r14-stock-handoff-plan.v1",
+  "status": "FROZEN_BEFORE_STOCK_EPISODES",
+  "created_before_any_stock_handoff_episode": true,
+  "scope": "unchanged stock sim.runner.run_episode only; no private perturbation fixture",
+  "calibration": {
+    "kind": "R14 stock torque registered calibration only",
+    "sha256": "cfd91f8b53e71088cad01f1fba0dedfa7e778f85fd84dd1431f5c80e3d3c59e4",
+    "prohibited": "research-perturbed calibration or collision-positive fitting"
+  },
+  "composition": {
+    "controller": "frozen R12 hybrid physical law with only its reference replaced by causal registered fixed-orientation world-z full-pose IK",
+    "detector": "frozen R12 normal-only counterfactual decision replay with transparent public JSON coefficients",
+    "comparators": ["R10 r1_torque + R10 detector", "frozen R12 hybrid + R12 coupled detector", "registered full-pose hybrid + R12 coupled detector"],
+    "reason": "hybrid supplies the previously measured G4 support mechanism; its matching counterfactual detector removes the documented natural-release false alarm without muting or a grace window"
+  },
+  "law": {
+    "decision_s": 3.55,
+    "sign": "command world-z = - registration extra_height_mm",
+    "clamp_mm": 8.0,
+    "profile": "C2 ramp 3.55-3.79, flat through release+0.025, C2 taper to zero by 4.24",
+    "pose": "iterative 6x6 MuJoCo flange Jacobian IK targets original flange orientation exactly and original flange position plus world-z command",
+    "derivatives": "central differences of the corrected joint reference on the public 1ms grid",
+    "fallback": "box_mass<=0 skips Stream and exactly reproduces R12 hybrid; rejected registration has zero correction and exactly reproduces R12 hybrid"
+  },
+  "normal_cases": [
+    {"id":"sh0","mass":3.15,"com":[0.013,-0.021,0.018],"offset":null},
+    {"id":"sh1","mass":4.40,"com":[-0.022,0.011,-0.017],"offset":[0.006,-0.007,-0.0052]},
+    {"id":"sh2","mass":5.75,"com":[0.019,0.024,-0.012],"offset":[-0.007,0.005,-0.0046]},
+    {"id":"sh3","mass":7.10,"com":[-0.016,-0.019,0.027],"offset":[0.005,0.007,0.0]},
+    {"id":"sh4","mass":7.90,"com":[0.024,-0.014,0.015],"offset":[-0.006,-0.005,-0.0058]},
+    {"id":"sh5","mass":6.65,"com":[-0.025,0.018,-0.020],"offset":[0.004,-0.006,0.0048]}
+  ],
+  "impact_cases": [
+    {"id":"sh0","mass":3.15,"com":[0.013,-0.021,0.018],"offset":null,"collision":[3.887,[0,15,0]]},
+    {"id":"sh1","mass":4.40,"com":[-0.022,0.011,-0.017],"offset":[0.006,-0.007,-0.0052],"collision":[3.904,[8,-6,-13]]},
+    {"id":"sh2","mass":5.75,"com":[0.019,0.024,-0.012],"offset":[-0.007,0.005,-0.0046],"collision":[3.884,[-14,0,0]]},
+    {"id":"sh3","mass":7.10,"com":[-0.016,-0.019,0.027],"offset":[0.005,0.007,0.0],"collision":[3.907,[0,0,-22]]},
+    {"id":"sh4","mass":7.90,"com":[0.024,-0.014,0.015],"offset":[-0.006,-0.005,-0.0058],"collision":[3.891,[13,0,0]]},
+    {"id":"sh5","mass":6.65,"com":[-0.025,0.018,-0.020],"offset":[0.004,-0.006,0.0048],"collision":[3.902,[-7,8,-12]]}
+  ],
+  "gates": {
+    "manufactured": "+/-8mm flange target error <=5nm and orientation error <=5nrad; all rigid box corners follow the same translation",
+    "normal": "unloaded exact parity; rejected exact full parity; pre-3.55 exact hybrid parity; all six status, G4 mean>=.5/min>=.25/gain>=.25/peak<=1.10, every cost <=1.05 vs R10 and hybrid, no added FA/tool loss/saturation, controller p99<=800us",
+    "impact_open": "only if the entire pinned normal result passes",
+    "impact": "no R10 event loss, no delay >5ms vs R10, no new prealarm/FA, exact pre-3.55 hybrid prefix"
+  },
+  "stop": "first failed normal gate stops; no impact stage and no retuning. A passed stock study does not authorize perturbed/global promotion."
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "r17-realtime-plan.v1",
+  "candidate": "Semantic integer-tick rolling cache below frozen balanced C. During active registered height only, canonicalize runner-grid _reference_at arguments to k*DT and reuse exact scheduled nodes. Compute one new preview node per cycle after the first. Bypass no-height, zero schedule, empty, and off-grid calls. Skip only a sub-2e-11m full-pose correction for which the frozen IK convergence test returns the unchanged base q.",
+  "causality": "No registered node exists before the public 3.55s height decision. Reset clears all nodes. No height value, future sensor, detector, force, hidden state, case ID or impact is read ahead. The cache is bounded to six scheduled nodes.",
+  "approximation": "The current position node is evaluated at the exact runner k*DT. Only finite-difference neighbor times are canonicalized from floating t+/-DT to their identical scheduled ticks. Predeclared local tolerances: max |q| 2e-10 rad, |qd| 2e-9 rad/s, |qdd| 2e-6 rad/s2, controller torque 2e-5Nm. Physical paired tolerances: q/qpos 2e-7, tau/r 2e-5, force 2e-4N, scalar costs within 1.0001, identical FA/detect/saturation/divergence/tool outcomes.",
+  "timing_gate": "CPU4, one BLAS thread, ABBA per case. Every timed wrapper must match its wrapper-free arm under the same physical tolerances. Target controller p99 <=800us, combined controller+detector p99 and max <=1000us, zero combined >1ms samples across repeats. Reset and 2.463/3.550 decision samples remain separately reported and are not excluded from all-cycle max.",
+  "progression": "Run local reference calculus tests first, then one active development pair. If physics/timing gates pass, freeze and run all four cases. No impacts in this lane and no threshold/control retuning after results.",
+  "cases": [
+    {"id": "ec1_down_active", "mass": 3.45, "com": [0.019, -0.014, 0.021], "offset": [0.0058, -0.0065, -0.0044]},
+    {"id": "sh4_heavy_active", "mass": 7.90, "com": [0.024, -0.014, 0.015], "offset": [-0.006, -0.005, -0.0058]},
+    {"id": "ec1_up_no_height", "mass": 3.45, "com": [0.019, -0.014, 0.021], "offset": [0.0058, -0.0065, 0.0044]},
+    {"id": "empty", "mass": 0.0, "com": [0.0, 0.0, 0.0], "offset": null}
+  ],
+  "scope": "New experimental subclass and private evidence only; frozen C/R15/R10/detectors/runner/kit/default remain unchanged. Simulation normals only."
+}

@@ -1,0 +1,715 @@
+{
+  "default_changed": false,
+  "methods": {
+    "joint": {
+      "actual_d4_conditions": 385,
+      "c3_primary_width_failures": [
+        316
+      ],
+      "candidate": "experiments.r32_joint_state.candidate:Detector",
+      "candidate_sha256": "633b1d49229ed07764d925bb84a5248d7db183aef2a2e4e4d835512752033d1a",
+      "changes": [
+        {
+          "extra_ticks": [
+            3993,
+            3994
+          ],
+          "id": 311,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3966,
+            3967
+          ],
+          "id": 315,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3963
+          ],
+          "id": 316,
+          "inside_signed_force": 1
+        },
+        {
+          "extra_ticks": [
+            4019,
+            4020
+          ],
+          "id": 317,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3965,
+            3966
+          ],
+          "id": 320,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4000,
+            4001
+          ],
+          "id": 321,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3969,
+            3970
+          ],
+          "id": 325,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3995,
+            3996
+          ],
+          "id": 326,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4028,
+            4029
+          ],
+          "id": 327,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4052,
+            4053
+          ],
+          "id": 328,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3971,
+            3972
+          ],
+          "id": 330,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4002,
+            4003
+          ],
+          "id": 331,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3974,
+            3975
+          ],
+          "id": 335,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3999,
+            4000
+          ],
+          "id": 336,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4031,
+            4032
+          ],
+          "id": 337,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4057,
+            4058
+          ],
+          "id": 338,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3976,
+            3977
+          ],
+          "id": 340,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4005,
+            4006
+          ],
+          "id": 341,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3975,
+            3976
+          ],
+          "id": 345,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4002,
+            4003
+          ],
+          "id": 346,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4034,
+            4035
+          ],
+          "id": 347,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3979,
+            3980
+          ],
+          "id": 355,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4036,
+            4037
+          ],
+          "id": 357,
+          "inside_signed_force": 0
+        }
+      ],
+      "cross": {
+        "counts": {
+          "composed": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 12
+          },
+          "new": {
+            "all_four": 2,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 11
+          }
+        },
+        "losses": [
+          [
+            "cross_stress_0",
+            "stock",
+            [
+              "isolated_first:cost",
+              "isolated_second:cost",
+              "both_first:cost",
+              "both_second:time",
+              "both_second:cost",
+              "both_second:new_prealarm"
+            ]
+          ],
+          [
+            "cross_stress_1",
+            "stock",
+            [
+              "isolated_first:cost",
+              "both_first:cost"
+            ]
+          ],
+          [
+            "cross_stress_2",
+            "stock",
+            [
+              "isolated_first:cost",
+              "both_first:cost"
+            ]
+          ]
+        ]
+      },
+      "d4_difference_reference": "C2 without detached readback",
+      "extension_outside_injected_force": 44,
+      "extension_same_native_inside_force": 1,
+      "hashes": {
+        "cross": "6421448ce206ad0fe145f5cf656c43a03edba4c790c226969374284d14860b68",
+        "d4": "c332cb7a3bd8ead50de39f57483d2f713f3b274d70e56f5370f1a6adf7c52b98",
+        "official": "111135f1f2214ee6bf64dd98a355f32ce352c42aef6e9e569d23b4e976e2f9ca",
+        "r26": "e330dbda5bab9e7b74574e2f1e91f31ed233db16db2e590c687490fc5fabb746"
+      },
+      "number_of_changed_rows": 23,
+      "official": {
+        "episodes": 29,
+        "same_as_c3_66": true,
+        "summary": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 24,
+            "indistinguishable": 0,
+            "missed": 0
+          },
+          "no_impact_false_rises": 0,
+          "worst_false_count_in_an_impact_run": 1
+        }
+      },
+      "old_occupancy_or_guard_failures": {
+        "c3": 17,
+        "headroom": 21,
+        "identity": 29
+      },
+      "r26": {
+        "both_second": 5,
+        "counts": {
+          "all_four": 5,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 50
+        },
+        "detached_reverse_deadzone": {
+          "active_samples_in_slot": 73,
+          "attributable_rise_indices": [
+            4518
+          ],
+          "delays_ms": [
+            26
+          ],
+          "duplicate_rises": 0,
+          "exactly_one": true,
+          "high_before": false,
+          "quiet_before": false,
+          "raw_rise_indices": [
+            4518
+          ],
+          "strict": false
+        },
+        "episodes": 156,
+        "guard_losses_against_identity": [
+          [
+            "s26_long_carry_signed",
+            "stock",
+            [
+              "single:cost"
+            ]
+          ],
+          [
+            "s26_long_carry_signed",
+            "actuator_deadzone",
+            [
+              "single:cost"
+            ]
+          ],
+          [
+            "s26_long_carry_signed",
+            "place_surface_shift",
+            [
+              "single:cost"
+            ]
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            [
+              "single:cost"
+            ]
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            [
+              "single:cost"
+            ]
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            [
+              "single:cost"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "stock",
+            [
+              "both_first:cost",
+              "both_second:cost",
+              "isolated_first:cost",
+              "long_single:cost"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "actuator_deadzone",
+            [
+              "both_first:cost",
+              "both_second:cost",
+              "isolated_first:cost",
+              "long_single:cost"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "place_surface_shift",
+            [
+              "both_first:cost",
+              "both_second:cost",
+              "isolated_first:cost",
+              "long_single:cost"
+            ]
+          ],
+          [
+            "p26_close_detached_reverse",
+            "actuator_deadzone",
+            [
+              "both_second:time",
+              "both_second:new_prealarm"
+            ]
+          ]
+        ]
+      },
+      "removed_alarm_samples": 0,
+      "retained_r31_event_output_conditions": 385,
+      "totals": {
+        "duplicates": 2,
+        "false_rises": 9,
+        "four_ms": 0,
+        "physically_overlapping_samples": 12426,
+        "raw_duplicate": 2,
+        "strict": 154
+      },
+      "unchanged_rising_indices_all_385": true
+    },
+    "readback": {
+      "actual_d4_conditions": 385,
+      "c3_primary_width_failures": [
+        259,
+        260,
+        266,
+        267,
+        268,
+        269,
+        270,
+        276,
+        277,
+        278,
+        279,
+        280,
+        286,
+        287,
+        288,
+        289,
+        290,
+        297,
+        298,
+        307,
+        308,
+        316
+      ],
+      "candidate": "experiments.r32_detached_readback.candidate:Detector",
+      "candidate_sha256": "a417c78fff0a2da124038921172b102ec426678e9b9a4a43a6a738fbdccbd4b1",
+      "changes": [
+        {
+          "extra_ticks": [
+            3993,
+            3994
+          ],
+          "id": 311,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3966,
+            3967
+          ],
+          "id": 315,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3963
+          ],
+          "id": 316,
+          "inside_signed_force": 1
+        },
+        {
+          "extra_ticks": [
+            4019,
+            4020
+          ],
+          "id": 317,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3965,
+            3966
+          ],
+          "id": 320,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4000,
+            4001
+          ],
+          "id": 321,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3969,
+            3970
+          ],
+          "id": 325,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3995,
+            3996
+          ],
+          "id": 326,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4028,
+            4029
+          ],
+          "id": 327,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4052,
+            4053
+          ],
+          "id": 328,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3971,
+            3972
+          ],
+          "id": 330,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4002,
+            4003
+          ],
+          "id": 331,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3974,
+            3975
+          ],
+          "id": 335,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3999,
+            4000
+          ],
+          "id": 336,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4031,
+            4032
+          ],
+          "id": 337,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4057,
+            4058
+          ],
+          "id": 338,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3976,
+            3977
+          ],
+          "id": 340,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4005,
+            4006
+          ],
+          "id": 341,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3975,
+            3976
+          ],
+          "id": 345,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4002,
+            4003
+          ],
+          "id": 346,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4034,
+            4035
+          ],
+          "id": 347,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            3979,
+            3980
+          ],
+          "id": 355,
+          "inside_signed_force": 0
+        },
+        {
+          "extra_ticks": [
+            4036,
+            4037
+          ],
+          "id": 357,
+          "inside_signed_force": 0
+        }
+      ],
+      "cross": {
+        "counts": {
+          "composed": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 12
+          },
+          "new": {
+            "all_four": 3,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "slots": 12,
+            "strict": 12
+          }
+        },
+        "losses": []
+      },
+      "d4_difference_reference": "R31",
+      "extension_outside_injected_force": 44,
+      "extension_same_native_inside_force": 1,
+      "hashes": {
+        "cross": "9189649073c905b7b4f88d0a5094c74d763c214b54152ab1f65655a75a548f49",
+        "d4": "85abc1c3c44cd948379e07946c2f251d67db7c6fa6f019cffe149244defa9b9e",
+        "official": "fe6747eafb5a6d851edd782eb0d9dc0ac85e3f66e9af2a524a83d2816709ce9e",
+        "r26": "e00cd6a719aa2ea45081576d1a920409c24d14e6165eb8dd2622de2228933b6e"
+      },
+      "number_of_changed_rows": 23,
+      "official": {
+        "episodes": 29,
+        "same_as_c3_66": true,
+        "summary": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 24,
+            "indistinguishable": 0,
+            "missed": 0
+          },
+          "no_impact_false_rises": 0,
+          "worst_false_count_in_an_impact_run": 1
+        }
+      },
+      "old_occupancy_or_guard_failures": {
+        "c3": 0,
+        "headroom": 0,
+        "identity": 0
+      },
+      "r26": {
+        "both_second": 5,
+        "counts": {
+          "all_four": 5,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 50
+        },
+        "detached_reverse_deadzone": {
+          "active_samples_in_slot": 73,
+          "attributable_rise_indices": [
+            4518
+          ],
+          "delays_ms": [
+            26
+          ],
+          "duplicate_rises": 0,
+          "exactly_one": true,
+          "high_before": false,
+          "quiet_before": false,
+          "raw_rise_indices": [
+            4518
+          ],
+          "strict": false
+        },
+        "episodes": 156,
+        "guard_losses_against_identity": [
+          [
+            "p26_close_detached_reverse",
+            "actuator_deadzone",
+            [
+              "both_second:time",
+              "both_second:new_prealarm"
+            ]
+          ]
+        ]
+      },
+      "removed_alarm_samples": 0,
+      "retained_r31_event_output_conditions": null,
+      "totals": {
+        "duplicates": 2,
+        "false_rises": 9,
+        "four_ms": 29,
+        "physically_overlapping_samples": 10103,
+        "raw_duplicate": 2,
+        "strict": 154
+      },
+      "unchanged_rising_indices_all_385": true
+    }
+  },
+  "schema": "r32-published-handoff-and-bounded-native-readback.v1",
+  "summary": "Negative promotion verdict; a reader can consume the historical R31 event and the sustained joint state separately. Neither extra native response nor total alert width is a newly detected contact."
+}

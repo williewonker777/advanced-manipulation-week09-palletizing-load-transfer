@@ -1,0 +1,12 @@
+{
+  "schema": "R11_PUBLIC_PLACEMENT_PLAN.v1",
+  "purpose": "Finite paired comparison of measured support on the taught placing table. Not an official grader, hidden-set surrogate, hardware bound or complete controller selection gate.",
+  "cases": [
+    {"id":"mid","mass":4.42,"com":[0.014,-0.021,0.016]},
+    {"id":"heavy","mass":7.58,"com":[-0.018,0.025,-0.017]},
+    {"id":"pickup_offset","mass":5.69,"com":[0.022,0.007,0.029],"offset":[0.008,-0.009,0.003]}
+  ],
+  "relative_reference": "R1 control with archived FAST2 for the same mode/mass/COM/offset; reporting zero improvement for the reference is expected.",
+  "windows": "Final 20 one-millisecond pre-release force samples mean and minimum; peak from 300ms before through 200ms after release. Normalize by known box weight m*9.81N. At least +0.25 mean improvement, absolute mean >=0.50, minimum >=0.25, peak <=1.10. Exact endpoint excluded.",
+  "geometry": "Lowest of four lower-face corners relative to the fixed level placing-table top, from the box freejoint pose; sorted heights, tilt and finite-window velocity are offline diagnostics, not contact-force estimators. The log's force is a solver-step quantity and qpos is post-step; for pre-step pose relate force[k] to saved pose[k-1]."
+}

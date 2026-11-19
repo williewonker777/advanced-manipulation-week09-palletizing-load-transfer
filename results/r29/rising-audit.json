@@ -1,0 +1,287 @@
+{
+  "default_changed": false,
+  "disposition": "rejected_on_directional_controls",
+  "first_target_frozen_failures": [
+    {
+      "gates": [
+        "native_long_link_preserved"
+      ],
+      "variant": "actuator_deadzone"
+    }
+  ],
+  "first_target_frozen_pass": false,
+  "r26_counts": {
+    "experiments.r26_yaw_acquisition.candidate:Detector": {
+      "all_four": 0,
+      "duplicate_edges": 0,
+      "duplicate_slots": 0,
+      "false_rises": 0,
+      "slots": 57,
+      "strict": 29
+    },
+    "experiments.r29_loaded_rising_certificate.candidate:Detector": {
+      "all_four": 6,
+      "duplicate_edges": 0,
+      "duplicate_slots": 0,
+      "false_rises": 0,
+      "slots": 57,
+      "strict": 51
+    }
+  },
+  "r26_paired_strict": {
+    "both_first": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 6,
+      "experiments.r29_loaded_rising_certificate.candidate:Detector": 9
+    },
+    "both_second": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 0,
+      "experiments.r29_loaded_rising_certificate.candidate:Detector": 6
+    },
+    "isolated_first": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 6,
+      "experiments.r29_loaded_rising_certificate.candidate:Detector": 9
+    },
+    "isolated_second": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 3,
+      "experiments.r29_loaded_rising_certificate.candidate:Detector": 6
+    },
+    "long_single": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 8,
+      "experiments.r29_loaded_rising_certificate.candidate:Detector": 9
+    }
+  },
+  "r26_relative_losses": [],
+  "schema": "r29-rising-audit-only-on-disclosed-cases.v1",
+  "signed_directions_previous": 21,
+  "signed_directions_rising": 17,
+  "signed_lost_events": [
+    {
+      "case": "s26_long_carry_signed",
+      "direction": "perpendicular_xy",
+      "mechanics": "stock",
+      "new_alarms": [
+        2702,
+        2708
+      ],
+      "new_delays_ms": [
+        29,
+        35
+      ],
+      "old_alarms": [
+        2708
+      ],
+      "old_delays_ms": [
+        35
+      ]
+    },
+    {
+      "case": "s26_long_place_lateral",
+      "direction": "perpendicular_xy",
+      "mechanics": "stock",
+      "new_alarms": [
+        3494,
+        3508
+      ],
+      "new_delays_ms": [
+        32,
+        46
+      ],
+      "old_alarms": [
+        3508
+      ],
+      "old_delays_ms": [
+        46
+      ]
+    },
+    {
+      "case": "s26_long_place_lateral",
+      "direction": "perpendicular_xy",
+      "mechanics": "actuator_deadzone",
+      "new_alarms": [
+        3492,
+        3515
+      ],
+      "new_delays_ms": [
+        30,
+        53
+      ],
+      "old_alarms": [
+        3515
+      ],
+      "old_delays_ms": [
+        53
+      ]
+    },
+    {
+      "case": "s26_long_place_lateral",
+      "direction": "perpendicular_xy",
+      "mechanics": "place_surface_shift",
+      "new_alarms": [
+        3494,
+        3515
+      ],
+      "new_delays_ms": [
+        32,
+        53
+      ],
+      "old_alarms": [
+        3515
+      ],
+      "old_delays_ms": [
+        53
+      ]
+    }
+  ],
+  "signed_slots": 24,
+  "source_hashes": {
+    "directions.json": "7039ff72aaacb66026d697da1f94591b2629292429ab7f83a80ce567b2cee90e",
+    "first_interpretation.json": "6691f5acf82118bf67829e8e874e87dc3eb80442337751b5ba7cd0fd81ba7d46",
+    "full_r26.json": "cb88fb4e9dd160c753931aadef4e0576f9023a8d81d7e2cf1f57da689038561a",
+    "target.json": "74cb4f044aab085524b2160b2381d292744cbc1ab6ad08d287bf4338b6d558ff"
+  },
+  "target_interpretation": {
+    "candidate_or_evaluator_changed": false,
+    "candidate_sha256": "be3f89fa9508fd4a431255ea8a1678ed3705e320d5f91f78c4fbd4c6b17f1402",
+    "classification": "Bounded post-result gate diagnosis; immutable target result and raw FAIL preserved.",
+    "frozen_result_passed": false,
+    "immutable_target_sha256": "74cb4f044aab085524b2160b2381d292744cbc1ab6ad08d287bf4338b6d558ff",
+    "permission_to_followup": "The registered followup may run because every physical/detection gate passed and the sole raw failure asks to preserve a nonexistent reference event; the raw FAIL remains authoritative as raw evaluator output.",
+    "raw_failed": [
+      {
+        "gates": [
+          "native_long_link_preserved"
+        ],
+        "variant": "actuator_deadzone"
+      }
+    ],
+    "root_cause": "target_panel.py unconditionally requires one long native link even when the C3 reference has no native long rise; preservation must be conditional on a native event existing.",
+    "rows": [
+      {
+        "all_other_frozen_gates": true,
+        "c3_long_rises": [
+          3504
+        ],
+        "c3_long_strict": true,
+        "candidate_native_links": 1,
+        "candidate_native_samples_consumed": 68,
+        "conditional_native_preservation": true,
+        "frozen_failed_gates": [],
+        "variant": "stock"
+      },
+      {
+        "all_other_frozen_gates": true,
+        "c3_long_rises": [],
+        "c3_long_strict": false,
+        "candidate_native_links": 0,
+        "candidate_native_samples_consumed": 0,
+        "conditional_native_preservation": true,
+        "frozen_failed_gates": [
+          "native_long_link_preserved"
+        ],
+        "variant": "actuator_deadzone"
+      },
+      {
+        "all_other_frozen_gates": true,
+        "c3_long_rises": [
+          3512
+        ],
+        "c3_long_strict": true,
+        "candidate_native_links": 1,
+        "candidate_native_samples_consumed": 65,
+        "conditional_native_preservation": true,
+        "frozen_failed_gates": [],
+        "variant": "place_surface_shift"
+      }
+    ],
+    "schema": "r29-loaded-rising-first-interpretation.v1",
+    "semantic_first_panel_passed": true
+  },
+  "target_rows": [
+    {
+      "mechanics": "stock",
+      "new_delays_ms": {
+        "both_first": [
+          33
+        ],
+        "both_second": [
+          33
+        ],
+        "isolated_first": [
+          33
+        ],
+        "isolated_second": [
+          30
+        ],
+        "long_single": [
+          33
+        ]
+      },
+      "strict": {
+        "both_first": true,
+        "both_second": true,
+        "isolated_first": true,
+        "isolated_second": true,
+        "long_single": true
+      }
+    },
+    {
+      "mechanics": "actuator_deadzone",
+      "new_delays_ms": {
+        "both_first": [
+          33
+        ],
+        "both_second": [
+          31
+        ],
+        "isolated_first": [
+          33
+        ],
+        "isolated_second": [
+          25
+        ],
+        "long_single": [
+          33
+        ]
+      },
+      "strict": {
+        "both_first": true,
+        "both_second": true,
+        "isolated_first": true,
+        "isolated_second": true,
+        "long_single": true
+      }
+    },
+    {
+      "mechanics": "place_surface_shift",
+      "new_delays_ms": {
+        "both_first": [
+          34
+        ],
+        "both_second": [
+          34
+        ],
+        "isolated_first": [
+          34
+        ],
+        "isolated_second": [
+          30
+        ],
+        "long_single": [
+          34
+        ]
+      },
+      "strict": {
+        "both_first": true,
+        "both_second": true,
+        "isolated_first": true,
+        "isolated_second": true,
+        "long_single": true
+      }
+    }
+  ],
+  "unforced": {
+    "distinct_inputs": 33,
+    "episodes": 66,
+    "relative_losses": []
+  }
+}

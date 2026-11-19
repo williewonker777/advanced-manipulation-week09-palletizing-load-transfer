@@ -1,0 +1,28 @@
+{
+  "schema": "r29-loaded-rising-certificate-registration.v1",
+  "status": "FROZEN_BEFORE_CANDIDATE_FORCED_RESULTS",
+  "classification": "Post-disclosure R26/R27 mechanism study only; not independent, enrollment, default, deployment, hardware or safety evidence.",
+  "entrypoint": "experiments.r29_loaded_rising_certificate.candidate:Detector",
+  "mechanism": {
+    "single_proposal": "During the already-owned Settled.rising excursion, publish the inherited four-sample notice once when both existing signed 40-sample changes remain positive and both current measured means exceed the frozen pose-conditioned FeasibleNormals.",
+    "composition": "Subclass experiments.r29_disjoint_events.candidate:Detector; call its update exactly once; preserve its linked native event and detached endpoint.",
+    "same_event": "Start the existing ContinuousForceLink with the same Settled axis/reference/peak. Suppress only the later optional plateau pulse for an excursion already announced; never suppress an active native route.",
+    "fail_closed": ["missing or nonfinite pair", "unknown/extrapolated pose or speed", "grip open", "stale or current native overlap", "incomplete native route provenance", "not currently rising", "either signed change nonpositive", "either signed level within FeasibleNormals"],
+    "unchanged": ["C3", "two 40-sample observers", "FeasibleNormals model", "native four-sample width", "native link", "detached endpoint", "controller", "force schedule", "scoring"]
+  },
+  "forbidden": ["parameter sweep", "candidate retune after result", "new elapsed/clock/duration threshold", "case/mass/time branch", "true force or label at runtime", "R27 loaded holdout", "R28 sealed cases", "R29 G4 prospect", "future held long or fresh directions for enrollment"],
+  "first_panel": {
+    "case": "p26_close_place_cross",
+    "mechanics": ["stock", "actuator_deadzone", "place_surface_shift"],
+    "twins": ["none", "long", "first", "second", "both"],
+    "arms": ["C3", "rising-certificate"],
+    "episodes": 30,
+    "gates": ["all five attributable slots strict/exact-one/zero-duplicate", "both_second quiet floor restored", "all strict C3 and earlier composed events preserved within +5 ms and +5 active samples", "zero new false/tool-prealarm/stuck", "exact force/prefix/physics", "one rising notice per physical excursion", "later optional plateau pulse removed", "long native link preserved"]
+  },
+  "followup_only_if_first_passes": {
+    "panels": ["full disclosed R26", "previously disclosed signed directions", "normal and additional guards"],
+    "references": ["C3", "earlier frozen R29 composed"],
+    "rule": "No alternate mechanism or source change after first forced result. Report failures without retuning."
+  },
+  "workers": 1
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "r32-servo-verdict.v1",
+  "status": "REJECTED_NO_ENROLLMENT",
+  "candidate_sha256": "6c5cfca6b6f8d387a6b2c22a1ca41bf20c3f6df6f238add21f01a8f2b4c88d7f",
+  "known": {
+    "episodes": 16,
+    "passed": true
+  },
+  "official": {
+    "episodes": 58,
+    "passed": true,
+    "r10_detected": 23,
+    "r32_detected": 24,
+    "false": 0
+  },
+  "validation": {
+    "episodes": 64,
+    "singles_strict_r10": 8,
+    "singles_strict_r32": 8,
+    "candidate_only_gains": 0,
+    "losses": [],
+    "quiet_edges": 0,
+    "both_second_retained": 4,
+    "pairs": 4
+  },
+  "reason": "disjoint validation had zero candidate-only gains; preregistered eligibility gate failed",
+  "no_retune": true
+}

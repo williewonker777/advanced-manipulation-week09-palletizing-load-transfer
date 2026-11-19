@@ -1,0 +1,259 @@
+{
+  "carry": {
+    "collisions": 60,
+    "counts": {
+      "candidate": {
+        "duplicate": 11,
+        "false": 3,
+        "raw_duplicate": 11,
+        "strict": 60
+      },
+      "parent": {
+        "duplicate": 1,
+        "false": 3,
+        "raw_duplicate": 1,
+        "strict": 53
+      }
+    },
+    "episodes": 120,
+    "gains": [
+      253,
+      254,
+      263,
+      264,
+      273,
+      274,
+      283
+    ],
+    "losses": [],
+    "new_duplicates": [
+      267,
+      268,
+      277,
+      278,
+      287,
+      288,
+      297,
+      298,
+      307,
+      308
+    ],
+    "new_false": [],
+    "physics_failures": [],
+    "raw_sha256": "53b7b3b7e853036cf12c67e8654094b2c353117653d18dc9d7039a2c3d0f04f5"
+  },
+  "design": "Historical development, no one-shot results",
+  "early_carry_full": {
+    "cases_with_new_false_rises": [],
+    "duplicates": [
+      2,
+      17
+    ],
+    "episodes": 385,
+    "new_duplicate_ids": [
+      223,
+      233,
+      238,
+      243,
+      247,
+      267,
+      268,
+      277,
+      278,
+      287,
+      288,
+      297,
+      298,
+      307,
+      308
+    ],
+    "receipt_sha256": "e67172c6f27173c4432f8a87a94c9e58ce22651f6004a47724bd4bf81312e31d",
+    "strict": [
+      154,
+      164
+    ]
+  },
+  "initial_release_glr": {
+    "candidate_scored_on_impact": false,
+    "protection_max": [
+      56.14755173502957,
+      0.0,
+      30.602078667954615,
+      10.795317268202524
+    ],
+    "protection_pass": false,
+    "split": {
+      "calibration": 61,
+      "fit": 61,
+      "protection": 61
+    },
+    "thresholds": [
+      63.98233483918624,
+      1e-09,
+      29.974190442343996,
+      10.49961331671941
+    ]
+  },
+  "normal_calibration": "fc2e4054e58e442d1cc2c3c872bcd8d05a590bdf55e3377c2c120683687b088f",
+  "pickup": [
+    {
+      "counts": {
+        "new": {
+          "duplicates": 9,
+          "false_rises": 6,
+          "strict": 56
+        },
+        "old": {
+          "duplicates": 1,
+          "false_rises": 6,
+          "strict": 50
+        }
+      },
+      "episodes": 154,
+      "gained_outside_actual_force": [],
+      "gains": [
+        193,
+        194,
+        203,
+        204,
+        213,
+        214
+      ],
+      "guard_failures": [
+        [
+          198,
+          [
+            "no_new_duplicate"
+          ]
+        ],
+        [
+          207,
+          [
+            "no_new_duplicate"
+          ]
+        ],
+        [
+          217,
+          [
+            "no_new_duplicate"
+          ]
+        ],
+        [
+          223,
+          [
+            "no_new_duplicate"
+          ]
+        ],
+        [
+          227,
+          [
+            "no_new_duplicate"
+          ]
+        ],
+        [
+          233,
+          [
+            "no_new_duplicate"
+          ]
+        ],
+        [
+          237,
+          [
+            "no_new_duplicate"
+          ]
+        ],
+        [
+          243,
+          [
+            "no_new_duplicate"
+          ]
+        ]
+      ],
+      "name": "pick-run",
+      "sha256": "04629964d6159eeca457350065ae3265d40aa3c199ad17ef1eb152b3591cafd9"
+    },
+    {
+      "counts": {
+        "new": {
+          "duplicates": 2,
+          "false_rises": 6,
+          "strict": 55
+        },
+        "old": {
+          "duplicates": 1,
+          "false_rises": 6,
+          "strict": 50
+        }
+      },
+      "episodes": 154,
+      "gained_outside_actual_force": [
+        194
+      ],
+      "gains": [
+        193,
+        194,
+        204,
+        213,
+        214
+      ],
+      "guard_failures": [
+        [
+          198,
+          [
+            "no_new_duplicate"
+          ]
+        ]
+      ],
+      "name": "pick-settled",
+      "sha256": "96cc3cd85442f83f8887b6f0b50b6b536914ef0ee6d1a09d85bc8034f7b0c902"
+    },
+    {
+      "counts": {
+        "new": {
+          "duplicates": 2,
+          "false_rises": 6,
+          "strict": 57
+        },
+        "old": {
+          "duplicates": 1,
+          "false_rises": 6,
+          "strict": 50
+        }
+      },
+      "episodes": 154,
+      "gained_outside_actual_force": [],
+      "gains": [
+        193,
+        194,
+        197,
+        203,
+        204,
+        213,
+        214
+      ],
+      "guard_failures": [
+        [
+          248,
+          [
+            "no_new_duplicate"
+          ]
+        ]
+      ],
+      "name": "pick-clearance",
+      "sha256": "f11d128a6eb102224aa46e35a1af448f13a7932802f9c00fd1a39ffede3705fb"
+    }
+  ],
+  "rebound_248": {
+    "native": [
+      1516,
+      1660
+    ],
+    "raw_sha256": "2d4a263074704df3224b702fb67256cc4c03e45e697509ddc5ff876a2a403ac9",
+    "table_N_at_1772": 0,
+    "tool_N_at_1772": 0,
+    "withdrawn_supplementary": [
+      1772,
+      1774
+    ]
+  }
+}

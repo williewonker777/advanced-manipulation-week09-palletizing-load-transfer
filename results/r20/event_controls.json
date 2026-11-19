@@ -1,0 +1,1038 @@
+{
+  "schema": "r20-exposed-source-separation.v1",
+  "previously_exposed": true,
+  "strict_definition": "all original R18 gates and exactly one raw and credited rise in each of all four contexts",
+  "episodes_slow_r19_direct_side_by_side": 144,
+  "episodes_broad_vs_stored_r19": 72,
+  "summary": {
+    "strict_r19": 8,
+    "strict_slow": 9,
+    "denominator": 18,
+    "retained_slow": 18,
+    "retained_broad": 17
+  },
+  "i55_delay_ms_from_second": {
+    "41": "auxiliary recovery only; Fx overlap",
+    "59": "counterfactual slow route only; four consecutive samples"
+  },
+  "gap80": {
+    "r19_first_alarm_interval_ms": [
+      3999,
+      4031
+    ],
+    "broad_first_alarm_interval_ms": [
+      3999,
+      4068
+    ],
+    "second_applied_onset_ms": 4066,
+    "r19_and_slow_raw_and_credited_ms": [
+      24
+    ],
+    "broad_raw_only_ms": [
+      24
+    ],
+    "broad_active_samples_in_20ms_before_second": 20
+  },
+  "rows": [
+    {
+      "id": "i55",
+      "strict_r19": false,
+      "one_per_slot_broad": true,
+      "broad_retained": true,
+      "strict_slow": true,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [],
+      "slow_failed_gates": [],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            35
+          ],
+          "broad": [
+            35
+          ],
+          "slow": [
+            35
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            63
+          ],
+          "broad": [
+            63
+          ],
+          "slow": [
+            63
+          ]
+        },
+        "both_first": {
+          "r19": [
+            35
+          ],
+          "broad": [
+            35
+          ],
+          "slow": [
+            35
+          ]
+        },
+        "both_second": {
+          "r19": [
+            41,
+            59
+          ],
+          "broad": [
+            41
+          ],
+          "slow": [
+            41
+          ]
+        }
+      }
+    },
+    {
+      "id": "gap80_weak",
+      "strict_r19": true,
+      "one_per_slot_broad": false,
+      "broad_retained": false,
+      "strict_slow": true,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [],
+      "slow_failed_gates": [],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            133
+          ],
+          "broad": [
+            133
+          ],
+          "slow": [
+            133
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            24
+          ],
+          "broad": [
+            24
+          ],
+          "slow": [
+            24
+          ]
+        },
+        "both_first": {
+          "r19": [
+            133
+          ],
+          "broad": [
+            133
+          ],
+          "slow": [
+            133
+          ]
+        },
+        "both_second": {
+          "r19": [
+            24
+          ],
+          "broad": [],
+          "slow": [
+            24
+          ]
+        }
+      }
+    },
+    {
+      "id": "pair_return_opposed",
+      "strict_r19": false,
+      "one_per_slot_broad": false,
+      "broad_retained": true,
+      "strict_slow": false,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [
+        "isolated_first_genuine",
+        "both_first_genuine"
+      ],
+      "slow_failed_gates": [
+        "isolated_first_genuine",
+        "both_first_genuine"
+      ],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        },
+        "isolated_second": {
+          "r19": [
+            32
+          ],
+          "broad": [
+            32
+          ],
+          "slow": [
+            32
+          ]
+        },
+        "both_first": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        },
+        "both_second": {
+          "r19": [
+            33
+          ],
+          "broad": [
+            33
+          ],
+          "slow": [
+            33
+          ]
+        }
+      }
+    },
+    {
+      "id": "pair_before_opposed",
+      "strict_r19": false,
+      "one_per_slot_broad": false,
+      "broad_retained": true,
+      "strict_slow": false,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [
+        "signed_profiles_exact",
+        "isolated_second_genuine"
+      ],
+      "slow_failed_gates": [
+        "signed_profiles_exact",
+        "isolated_second_genuine"
+      ],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            59,
+            274
+          ],
+          "broad": [
+            59,
+            274
+          ],
+          "slow": [
+            59,
+            274
+          ]
+        },
+        "isolated_second": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        },
+        "both_first": {
+          "r19": [
+            59
+          ],
+          "broad": [
+            59
+          ],
+          "slow": [
+            59
+          ]
+        },
+        "both_second": {
+          "r19": [
+            83
+          ],
+          "broad": [
+            83
+          ],
+          "slow": [
+            83
+          ]
+        }
+      }
+    },
+    {
+      "id": "pair_cross_axis_before",
+      "strict_r19": false,
+      "one_per_slot_broad": false,
+      "broad_retained": true,
+      "strict_slow": false,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [
+        "signed_profiles_exact",
+        "isolated_second_genuine",
+        "both_second_genuine"
+      ],
+      "slow_failed_gates": [
+        "signed_profiles_exact",
+        "isolated_second_genuine",
+        "both_second_genuine"
+      ],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            58
+          ],
+          "broad": [
+            58
+          ],
+          "slow": [
+            58
+          ]
+        },
+        "isolated_second": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        },
+        "both_first": {
+          "r19": [
+            58
+          ],
+          "broad": [
+            58
+          ],
+          "slow": [
+            58
+          ]
+        },
+        "both_second": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        }
+      }
+    },
+    {
+      "id": "pair_cross_axis_return",
+      "strict_r19": false,
+      "one_per_slot_broad": false,
+      "broad_retained": true,
+      "strict_slow": false,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [
+        "signed_profiles_exact",
+        "isolated_first_genuine",
+        "isolated_second_genuine",
+        "both_first_genuine",
+        "both_second_genuine"
+      ],
+      "slow_failed_gates": [
+        "signed_profiles_exact",
+        "isolated_first_genuine",
+        "isolated_second_genuine",
+        "both_first_genuine",
+        "both_second_genuine"
+      ],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        },
+        "isolated_second": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        },
+        "both_first": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        },
+        "both_second": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        }
+      }
+    },
+    {
+      "id": "diag_known_late_fz",
+      "strict_r19": true,
+      "one_per_slot_broad": true,
+      "broad_retained": true,
+      "strict_slow": true,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [],
+      "slow_failed_gates": [],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            33
+          ],
+          "broad": [
+            33
+          ],
+          "slow": [
+            33
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            22
+          ],
+          "broad": [
+            22
+          ],
+          "slow": [
+            22
+          ]
+        },
+        "both_first": {
+          "r19": [
+            33
+          ],
+          "broad": [
+            33
+          ],
+          "slow": [
+            33
+          ]
+        },
+        "both_second": {
+          "r19": [
+            21
+          ],
+          "broad": [
+            21
+          ],
+          "slow": [
+            21
+          ]
+        }
+      }
+    },
+    {
+      "id": "diag_known_late_fx",
+      "strict_r19": true,
+      "one_per_slot_broad": true,
+      "broad_retained": true,
+      "strict_slow": true,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [],
+      "slow_failed_gates": [],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            33
+          ],
+          "broad": [
+            33
+          ],
+          "slow": [
+            33
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            28
+          ],
+          "broad": [
+            28
+          ],
+          "slow": [
+            28
+          ]
+        },
+        "both_first": {
+          "r19": [
+            33
+          ],
+          "broad": [
+            33
+          ],
+          "slow": [
+            33
+          ]
+        },
+        "both_second": {
+          "r19": [
+            28
+          ],
+          "broad": [
+            28
+          ],
+          "slow": [
+            28
+          ]
+        }
+      }
+    },
+    {
+      "id": "gap12_aligned",
+      "strict_r19": true,
+      "one_per_slot_broad": true,
+      "broad_retained": true,
+      "strict_slow": true,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [],
+      "slow_failed_gates": [],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            31
+          ],
+          "broad": [
+            31
+          ],
+          "slow": [
+            31
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            27
+          ],
+          "broad": [
+            27
+          ],
+          "slow": [
+            27
+          ]
+        },
+        "both_first": {
+          "r19": [
+            31
+          ],
+          "broad": [
+            31
+          ],
+          "slow": [
+            31
+          ]
+        },
+        "both_second": {
+          "r19": [
+            38
+          ],
+          "broad": [
+            38
+          ],
+          "slow": [
+            38
+          ]
+        }
+      }
+    },
+    {
+      "id": "gap24_reverse",
+      "strict_r19": true,
+      "one_per_slot_broad": true,
+      "broad_retained": true,
+      "strict_slow": true,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [],
+      "slow_failed_gates": [],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            22
+          ],
+          "broad": [
+            22
+          ],
+          "slow": [
+            22
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            49
+          ],
+          "broad": [
+            49
+          ],
+          "slow": [
+            49
+          ]
+        },
+        "both_first": {
+          "r19": [
+            22
+          ],
+          "broad": [
+            22
+          ],
+          "slow": [
+            22
+          ]
+        },
+        "both_second": {
+          "r19": [
+            49
+          ],
+          "broad": [
+            49
+          ],
+          "slow": [
+            49
+          ]
+        }
+      }
+    },
+    {
+      "id": "gap40_cross",
+      "strict_r19": false,
+      "one_per_slot_broad": false,
+      "broad_retained": true,
+      "strict_slow": false,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [
+        "quiet_before_second"
+      ],
+      "slow_failed_gates": [
+        "quiet_before_second"
+      ],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            30
+          ],
+          "broad": [
+            30
+          ],
+          "slow": [
+            30
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            21
+          ],
+          "broad": [
+            21
+          ],
+          "slow": [
+            21
+          ]
+        },
+        "both_first": {
+          "r19": [
+            30
+          ],
+          "broad": [
+            30
+          ],
+          "slow": [
+            30
+          ]
+        },
+        "both_second": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        }
+      }
+    },
+    {
+      "id": "gap160_lateral",
+      "strict_r19": true,
+      "one_per_slot_broad": true,
+      "broad_retained": true,
+      "strict_slow": true,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [],
+      "slow_failed_gates": [],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            49
+          ],
+          "broad": [
+            49
+          ],
+          "slow": [
+            49
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            33
+          ],
+          "broad": [
+            33
+          ],
+          "slow": [
+            33
+          ]
+        },
+        "both_first": {
+          "r19": [
+            49
+          ],
+          "broad": [
+            49
+          ],
+          "slow": [
+            49
+          ]
+        },
+        "both_second": {
+          "r19": [
+            33
+          ],
+          "broad": [
+            33
+          ],
+          "slow": [
+            33
+          ]
+        }
+      }
+    },
+    {
+      "id": "gap24_late_aligned",
+      "strict_r19": false,
+      "one_per_slot_broad": false,
+      "broad_retained": true,
+      "strict_slow": false,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [
+        "quiet_before_second"
+      ],
+      "slow_failed_gates": [
+        "quiet_before_second"
+      ],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            36
+          ],
+          "broad": [
+            36
+          ],
+          "slow": [
+            36
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            30
+          ],
+          "broad": [
+            30
+          ],
+          "slow": [
+            30
+          ]
+        },
+        "both_first": {
+          "r19": [
+            36
+          ],
+          "broad": [
+            36
+          ],
+          "slow": [
+            36
+          ]
+        },
+        "both_second": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        }
+      }
+    },
+    {
+      "id": "i18",
+      "strict_r19": true,
+      "one_per_slot_broad": true,
+      "broad_retained": true,
+      "strict_slow": true,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [],
+      "slow_failed_gates": [],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            23
+          ],
+          "broad": [
+            23
+          ],
+          "slow": [
+            23
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            23
+          ],
+          "broad": [
+            23
+          ],
+          "slow": [
+            23
+          ]
+        },
+        "both_first": {
+          "r19": [
+            23
+          ],
+          "broad": [
+            23
+          ],
+          "slow": [
+            23
+          ]
+        },
+        "both_second": {
+          "r19": [
+            32
+          ],
+          "broad": [
+            32
+          ],
+          "slow": [
+            32
+          ]
+        }
+      }
+    },
+    {
+      "id": "i35",
+      "strict_r19": false,
+      "one_per_slot_broad": false,
+      "broad_retained": true,
+      "strict_slow": false,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [
+        "both_first_genuine",
+        "both_second_genuine"
+      ],
+      "slow_failed_gates": [
+        "both_first_genuine",
+        "both_second_genuine"
+      ],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            156
+          ],
+          "broad": [
+            156
+          ],
+          "slow": [
+            156
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            25
+          ],
+          "broad": [
+            25
+          ],
+          "slow": [
+            25
+          ]
+        },
+        "both_first": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        },
+        "both_second": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        }
+      }
+    },
+    {
+      "id": "i65",
+      "strict_r19": false,
+      "one_per_slot_broad": false,
+      "broad_retained": true,
+      "strict_slow": false,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [
+        "both_second_genuine",
+        "quiet_before_second"
+      ],
+      "slow_failed_gates": [
+        "both_second_genuine",
+        "quiet_before_second"
+      ],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            82,
+            131
+          ],
+          "broad": [
+            82,
+            131
+          ],
+          "slow": [
+            82,
+            131
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            25
+          ],
+          "broad": [
+            25
+          ],
+          "slow": [
+            25
+          ]
+        },
+        "both_first": {
+          "r19": [
+            82,
+            131
+          ],
+          "broad": [
+            82,
+            131
+          ],
+          "slow": [
+            82,
+            131
+          ]
+        },
+        "both_second": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        }
+      }
+    },
+    {
+      "id": "i100",
+      "strict_r19": true,
+      "one_per_slot_broad": true,
+      "broad_retained": true,
+      "strict_slow": true,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [],
+      "slow_failed_gates": [],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            65
+          ],
+          "broad": [
+            65
+          ],
+          "slow": [
+            65
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            20
+          ],
+          "broad": [
+            20
+          ],
+          "slow": [
+            20
+          ]
+        },
+        "both_first": {
+          "r19": [
+            65
+          ],
+          "broad": [
+            65
+          ],
+          "slow": [
+            65
+          ]
+        },
+        "both_second": {
+          "r19": [
+            20
+          ],
+          "broad": [
+            20
+          ],
+          "slow": [
+            20
+          ]
+        }
+      }
+    },
+    {
+      "id": "i10",
+      "strict_r19": false,
+      "one_per_slot_broad": false,
+      "broad_retained": true,
+      "strict_slow": false,
+      "slow_retained_interval_and_event_gates": true,
+      "r19_vs_slow_all_observed_physics_and_residual_bit_equal": true,
+      "r19_failed_gates": [
+        "quiet_before_second"
+      ],
+      "slow_failed_gates": [
+        "quiet_before_second"
+      ],
+      "attributed_ms": {
+        "isolated_first": {
+          "r19": [
+            78
+          ],
+          "broad": [
+            78
+          ],
+          "slow": [
+            78
+          ]
+        },
+        "isolated_second": {
+          "r19": [
+            42
+          ],
+          "broad": [
+            42
+          ],
+          "slow": [
+            42
+          ]
+        },
+        "both_first": {
+          "r19": [
+            78
+          ],
+          "broad": [
+            78
+          ],
+          "slow": [
+            78
+          ]
+        },
+        "both_second": {
+          "r19": [],
+          "broad": [],
+          "slow": []
+        }
+      }
+    }
+  ]
+}

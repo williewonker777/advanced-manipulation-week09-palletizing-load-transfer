@@ -1,0 +1,7 @@
+{
+  "schema": "r22-selection-before-integration-outcomes.v1",
+  "core": "Same R10 fallback, R20 single-point threshold replaced by causal signed median-of-three, R21 yaw estimator replaced by outgoing momentum continuity with its existing normal-only bounds.",
+  "augmented": "Unchanged core plus the separately frozen 18 ms delayed world-planar wrench channel; whole-task bound by load class, 12-sample mean; no tuning using forced outcomes.",
+  "primary_before_holdout": "Try the augmented option that addresses both old weak misses. It must close the 4 prior D4 failure IDs without new failed controls/duplicate/true losses in the full fixed grid, retain official positives and performance on old surface pairs. If it fails these exposed protection criteria, the separately frozen core is the deliverable candidate for the independent holdout, provided it passes the same protection. Do not switch after opening independent results. If neither passes, still report strongest qualified subsets and failed gates without default promotion.",
+  "hard_limit": "R10 remains the submission pending complete official, full exposed protection, unexposed controls, physical conservation, full application profile and time-budget evidence. Surface/toolbar weaknesses and any hidden failure remain visible."
+}

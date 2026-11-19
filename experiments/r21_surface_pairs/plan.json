@@ -1,0 +1,15 @@
+{
+ "schema":"r21-surface-pair-plan.v1",
+ "role":"Post-policy-freeze independent research, not course demo/official table.",
+ "arms":["r10","r20","pick","yaw"],
+ "cases":[
+  {"id":"prior_x_late_positive_y","mass":4.7,"com":[0.011,-0.007,0.018],"offset":null,"impacts":[[2.41,[12,0,0]],[3.844,[0,10.5,0]]],"modified":{"friction":0.65,"time_constant":1}},
+  {"id":"early_negative_late_negative","mass":6.25,"com":[-0.012,0.023,0.024],"offset":null,"impacts":[[1.48,[0,-12,0]],[3.887,[0,-11,0]]],"modified":{"friction":1,"time_constant":1.30}},
+  {"id":"carry_x_late_x","mass":2.7,"com":[0.018,-0.015,-0.008],"offset":null,"impacts":[[2.62,[9,0,0]],[3.817,[10,0,0]]],"modified":{"friction":1.30,"time_constant":1}},
+  {"id":"early_y_late_oblique","mass":7.2,"com":[0.006,0.018,0.012],"offset":null,"impacts":[[1.50,[0,11,0]],[3.830,[6,-8,0]]],"modified":{"friction":0.80,"time_constant":0.80}}
+ ],
+ "ordering":"No policy or threshold changes on these outcomes. Every preregistered condition is run both with stock contact materials and with its listed change; same settled state at t=0, all other plant parameters, encoders, JTS seed and reference unchanged.",
+ "measurement":"Actual applied 3-axis force and native scalar checked exactly at every sample using the stock per-sample norm. Four twins: no force, first only, second only, both. The original R18 diagnostics (including any batched-norm failure) remain visible. First-only post-force false rises are explicitly compared through the following placement.",
+ "attribution":"20 ms prequiet, no-target twin +/-20 ms, new edge by 320 ms. Strict case: exactly one raw and attributable rise per slot AND all originally required gates, substituting ONLY a separate exact samplewise signed/scalar proof for the old batched signed-profile gate in the separately named physical score. Report both.",
+ "retention":"Any lost genuine (+5 ms allowance), extra unmatched or tool alarm loss is a regression; original R10 and actual R20 references tested. No contact-policy reactions."
+}

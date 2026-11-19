@@ -1,0 +1,97 @@
+{
+  "schema": "r24-chronological-development.v1",
+  "direct_target_normal_alarm_seconds": {
+    "projected": {
+      "r23_free": [
+        3.861
+      ],
+      "candidate": [
+        3.867
+      ]
+    },
+    "sliding": {
+      "r23_free": [
+        3.861
+      ],
+      "candidate": [
+        3.867
+      ]
+    },
+    "cone": {
+      "r23_free": [
+        3.861
+      ],
+      "candidate": []
+    },
+    "response": {
+      "r23_free": [
+        3.861
+      ],
+      "candidate": []
+    },
+    "gated": {
+      "r23_free": [
+        3.861
+      ],
+      "Detector": [
+        3.861
+      ]
+    },
+    "split": {
+      "r23_free": [
+        3.861
+      ],
+      "Detector": [
+        3.861
+      ]
+    },
+    "dc": {
+      "r23_free": [
+        3.861
+      ],
+      "Detector": []
+    }
+  },
+  "drive_commissioning": {
+    "fit_nominal_seeds": 29,
+    "fit_trajectory_count": 1,
+    "held_out_noise_check": {
+      "stock": 0,
+      "skew": 8,
+      "axis_1_-0.02": 1,
+      "axis_1_+0.02": 1,
+      "axis_2_-0.02": 8,
+      "axis_2_+0.02": 8,
+      "axis_3_-0.02": 0,
+      "axis_3_+0.02": 0
+    },
+    "noise_seeds_per_mechanic": 8,
+    "previous_two_joint_port": {
+      "classification": "unused sensor seeds; this is a drive-port check not a collision holdout",
+      "nominal_departures": 0,
+      "actuator_departures": 3
+    },
+    "split_drive_stress": "one characterization run stopped for insufficient split excitation; it is not counted as a passed test"
+  },
+  "pressure_model": {
+    "force_free_episodes": 24,
+    "sensor_rows": 1283,
+    "weights_Nm_per_N": [
+      -0.20407491043242484,
+      0.008739510645516974,
+      -0.0095460084529884,
+      0.03727150600946697,
+      0.04008027147389957
+    ]
+  },
+  "unused_import_cleanup_before_independent": {
+    "schema": "r24-transitive-import-cleanup.v1",
+    "scope": "before independent selection; exposed research records straddle removal of unused numpy import, no scientific body changed",
+    "path": "experiments/r24_loaded/control.py",
+    "before": "c9888c010f047ae456032d6472c5d7ef95959242c557dad6e89e013b1c4935be",
+    "after": "0eef6000f5f2340c8fbd6830fa9dc61e13ecb570b2f71a426f15d9591968e873",
+    "change": "unused import removed with line locations preserved",
+    "compiled_function_and_class_bodies_byte_identical": true,
+    "checked_top_level_code_objects": 4
+  }
+}

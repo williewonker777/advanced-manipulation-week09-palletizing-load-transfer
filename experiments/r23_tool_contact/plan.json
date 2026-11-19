@@ -1,0 +1,40 @@
+{
+  "schema": "r23-tool-contact-plan.v1",
+  "frozen_before_sensor_trace_analysis": true,
+  "classification": "finite CPU study of sensor-visible tool contact; not hidden, hardware, real-time, or safety proof",
+  "runtime_inputs": ["t", "encoder", "encoder_velocity", "commanded_torque_previous_tick", "joint_torque_sensor", "grip_command", "known_payload"],
+  "ground_truth_policy": "f_tool is offline scoring only; a pick offset without f_tool > 1 N is a nuisance negative, not a contact",
+  "fit_policy": "thresholds may use calibration_normal only; no offset/contact/external-force outcomes enter fitting",
+  "contact_contract": {"force_threshold_N": 1.0, "post_contact_window_ms": 300, "max_detection_delay_ms": 120},
+  "mechanics": ["stock", "contact_suction", "actuator_gain"],
+  "calibration_normal": [
+    {"id":"cal_empty","mass":0.0,"com":[0.011,-0.019,0.006],"offset":null},
+    {"id":"cal_light","mass":0.73,"com":[-0.013,0.021,-0.008],"offset":null},
+    {"id":"cal_mid","mass":3.37,"com":[0.026,-0.017,0.009],"offset":null},
+    {"id":"cal_heavy","mass":7.63,"com":[-0.018,0.009,-0.023],"offset":null}
+  ],
+  "development": [
+    {"id":"old_xy","mass":2.86,"com":[0.007,-0.011,0.024],"offset":[0.0047,-0.0036,0.0]},
+    {"id":"old_xyz","mass":5.42,"com":[-0.009,0.022,-0.014],"offset":[-0.0042,0.0033,0.0012]}
+  ],
+  "fresh": [
+    {"id":"fresh_xyz_a","mass":5.42,"com":[-0.009,0.022,-0.014],"offset":[-0.0060,0.0045,0.0018]},
+    {"id":"fresh_xyz_b","mass":5.42,"com":[-0.009,0.022,-0.014],"offset":[-0.0080,0.0060,0.0025]},
+    {"id":"fresh_xyz_c","mass":3.37,"com":[0.026,-0.017,0.009],"offset":[-0.0055,0.0040,0.0015]},
+    {"id":"fresh_xy_nuisance","mass":2.86,"com":[0.007,-0.011,0.024],"offset":[0.0030,-0.0020,0.0]}
+  ],
+  "external_force_checks": [
+    {"id":"pick_10N","mass":0.0,"com":[0.0,0.0,0.0],"offset":null,"impact":[1.42,[0.0,10.0,0.0]]},
+    {"id":"carry_15N","mass":5.42,"com":[-0.009,0.022,-0.014],"offset":null,"impact":[2.50,[15.0,0.0,0.0]]},
+    {"id":"place_15N","mass":8.0,"com":[0.0,0.0,0.0],"offset":null,"impact":[3.86,[0.0,15.0,0.0]]}
+  ],
+  "gates": [
+    "candidate uses no f_tool, offset, external-force schedule, or future sample at runtime",
+    "all calibration normals and all genuine no-contact offset nuisances add zero false rises",
+    "every old genuine contact is detected without prealarm within 120 ms",
+    "fresh cases are scored by actual f_tool: genuine contacts must be detected; no-contact offsets must remain quiet",
+    "all base R22 detections on strong external-force checks are preserved with no extra attributable rise",
+    "unsupported/servo behavior is unchanged because the extension is torque-only"
+  ],
+  "stop_rule": "If normal-only sensor features do not separate genuine contacts from no-contact nuisance mechanics with the gates above, publish counterexamples and no candidate."
+}

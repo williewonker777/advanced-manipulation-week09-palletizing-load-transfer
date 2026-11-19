@@ -1,0 +1,292 @@
+{
+  "schema": "r15-sh3-contact-timing-report.v1",
+  "scope": "exposed sh3 normal diagnostic only; post-hoc physical oracle; no controller, detector, threshold, or candidate change",
+  "definition": {
+    "dt_s": 0.001,
+    "release_s": 3.9,
+    "landing_search_start_s": 3.6,
+    "contact_free_guard_s": [
+      3.6,
+      3.7
+    ],
+    "contact_force_epsilon_n_strict": 1e-06,
+    "support_threshold_mg_inclusive": 0.01,
+    "support_persistence_samples": 3,
+    "pre_release_window_s": [
+      3.88,
+      3.9
+    ],
+    "official_g4_peak_window_s": [
+      3.6,
+      4.1
+    ]
+  },
+  "arms": {
+    "r14": {
+      "support": {
+        "mean_mg": 0.4391747778992424,
+        "min_mg": 0.33088362025763995,
+        "peak_mg": 1.3256918000369284,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": true,
+        "peak_le_110": false
+      },
+      "measured_intervention_s": 3.846,
+      "force_clocks": {
+        "time_origin": "runner t=0; release is public trajectory T_RELEASE=3.900 s",
+        "table_force_semantics": "f_table sums pickup and placement table contacts; landing search starts at 3.600 s after the verified zero-force guard, excluding initial pickup support",
+        "initial_pickup_support_mg": 1.0000000849254451,
+        "contact_free_guard": {
+          "window_s": [
+            3.6,
+            3.7
+          ],
+          "max_force_n": 0.0
+        },
+        "first_numerical_landing_contact": {
+          "threshold_n_strict": 1e-06,
+          "time_s": 3.837,
+          "index": 3837
+        },
+        "first_sustained_landing_support": {
+          "threshold_mg_inclusive": 0.01,
+          "persistence_samples": 3,
+          "time_s": 3.837,
+          "relative_release_ms": -62.99999999999972,
+          "index": 3837
+        },
+        "approach_peak": {
+          "window_s": [
+            3.6,
+            3.9
+          ],
+          "force_n": 92.3357595643721,
+          "mg": 1.3256918000369284,
+          "time_s": 3.843,
+          "relative_release_ms": -56.99999999999994,
+          "vs_hybrid": {
+            "correction_time_s": 3.846,
+            "delta_event_minus_correction_ms": -3.0000000000001137,
+            "relation": "before_nonzero_correction"
+          }
+        },
+        "pre_release_20ms_peak": {
+          "window_s": [
+            3.88,
+            3.9
+          ],
+          "force_n": 48.52225071738428,
+          "mg": 0.6966482996279204,
+          "time_s": 3.899,
+          "relative_release_ms": -0.9999999999998899,
+          "vs_hybrid": {
+            "correction_time_s": 3.846,
+            "delta_event_minus_correction_ms": 52.999999999999936,
+            "relation": "at_or_after_nonzero_correction"
+          }
+        },
+        "official_g4_peak": {
+          "window_s": [
+            3.6,
+            4.1
+          ],
+          "force_n": 92.3357595643721,
+          "mg": 1.3256918000369284,
+          "time_s": 3.843,
+          "relative_release_ms": -56.99999999999994,
+          "vs_hybrid": {
+            "correction_time_s": 3.846,
+            "delta_event_minus_correction_ms": -3.0000000000001137,
+            "relation": "before_nonzero_correction"
+          }
+        }
+      },
+      "precontact_actual_corner_velocity_mm_s": -276.6109335109318,
+      "precontact_taught_corner_velocity_mm_s": -280.7608089136632,
+      "physical_and_alarm_arrays_matched": 11
+    },
+    "late_r15_xy": {
+      "support": {
+        "mean_mg": 0.5226085813522808,
+        "min_mg": 0.44013159480921266,
+        "peak_mg": 1.162138096879924,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": false
+      },
+      "measured_intervention_s": 3.849,
+      "force_clocks": {
+        "time_origin": "runner t=0; release is public trajectory T_RELEASE=3.900 s",
+        "table_force_semantics": "f_table sums pickup and placement table contacts; landing search starts at 3.600 s after the verified zero-force guard, excluding initial pickup support",
+        "initial_pickup_support_mg": 1.0000000849254451,
+        "contact_free_guard": {
+          "window_s": [
+            3.6,
+            3.7
+          ],
+          "max_force_n": 0.0
+        },
+        "first_numerical_landing_contact": {
+          "threshold_n_strict": 1e-06,
+          "time_s": 3.84,
+          "index": 3840
+        },
+        "first_sustained_landing_support": {
+          "threshold_mg_inclusive": 0.01,
+          "persistence_samples": 3,
+          "time_s": 3.84,
+          "relative_release_ms": -60.00000000000006,
+          "index": 3840
+        },
+        "approach_peak": {
+          "window_s": [
+            3.6,
+            3.9
+          ],
+          "force_n": 80.94408058578358,
+          "mg": 1.162138096879924,
+          "time_s": 3.844,
+          "relative_release_ms": -56.00000000000005,
+          "vs_hybrid": {
+            "correction_time_s": 3.849,
+            "delta_event_minus_correction_ms": -5.0000000000003375,
+            "relation": "before_nonzero_correction"
+          }
+        },
+        "pre_release_20ms_peak": {
+          "window_s": [
+            3.88,
+            3.9
+          ],
+          "force_n": 47.324248438596065,
+          "mg": 0.6794482267102564,
+          "time_s": 3.899,
+          "relative_release_ms": -0.9999999999998899,
+          "vs_hybrid": {
+            "correction_time_s": 3.849,
+            "delta_event_minus_correction_ms": 49.99999999999982,
+            "relation": "at_or_after_nonzero_correction"
+          }
+        },
+        "official_g4_peak": {
+          "window_s": [
+            3.6,
+            4.1
+          ],
+          "force_n": 80.94408058578358,
+          "mg": 1.162138096879924,
+          "time_s": 3.844,
+          "relative_release_ms": -56.00000000000005,
+          "vs_hybrid": {
+            "correction_time_s": 3.849,
+            "delta_event_minus_correction_ms": -5.0000000000003375,
+            "relation": "before_nonzero_correction"
+          }
+        }
+      },
+      "precontact_actual_corner_velocity_mm_s": -252.24705348379783,
+      "precontact_taught_corner_velocity_mm_s": -261.97478233302985,
+      "physical_and_alarm_arrays_matched": 11
+    },
+    "early_r15_xy": {
+      "support": {
+        "mean_mg": 0.8007146289854074,
+        "min_mg": 0.7186339299945809,
+        "peak_mg": 1.047261000632733,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "measured_intervention_s": 3.858,
+      "force_clocks": {
+        "time_origin": "runner t=0; release is public trajectory T_RELEASE=3.900 s",
+        "table_force_semantics": "f_table sums pickup and placement table contacts; landing search starts at 3.600 s after the verified zero-force guard, excluding initial pickup support",
+        "initial_pickup_support_mg": 1.0000000849254451,
+        "contact_free_guard": {
+          "window_s": [
+            3.6,
+            3.7
+          ],
+          "max_force_n": 0.0
+        },
+        "first_numerical_landing_contact": {
+          "threshold_n_strict": 1e-06,
+          "time_s": 3.847,
+          "index": 3847
+        },
+        "first_sustained_landing_support": {
+          "threshold_mg_inclusive": 0.01,
+          "persistence_samples": 3,
+          "time_s": 3.847,
+          "relative_release_ms": -52.999999999999936,
+          "index": 3847
+        },
+        "approach_peak": {
+          "window_s": [
+            3.6,
+            3.9
+          ],
+          "force_n": 63.35172308165388,
+          "mg": 0.909559418840417,
+          "time_s": 3.884,
+          "relative_release_ms": -16.000000000000014,
+          "vs_hybrid": {
+            "correction_time_s": 3.858,
+            "delta_event_minus_correction_ms": 25.9999999999998,
+            "relation": "at_or_after_nonzero_correction"
+          }
+        },
+        "pre_release_20ms_peak": {
+          "window_s": [
+            3.88,
+            3.9
+          ],
+          "force_n": 63.35172308165388,
+          "mg": 0.909559418840417,
+          "time_s": 3.884,
+          "relative_release_ms": -16.000000000000014,
+          "vs_hybrid": {
+            "correction_time_s": 3.858,
+            "delta_event_minus_correction_ms": 25.9999999999998,
+            "relation": "at_or_after_nonzero_correction"
+          }
+        },
+        "official_g4_peak": {
+          "window_s": [
+            3.6,
+            4.1
+          ],
+          "force_n": 72.94277595507047,
+          "mg": 1.047261000632733,
+          "time_s": 3.9,
+          "relative_release_ms": 0.0,
+          "vs_hybrid": {
+            "correction_time_s": 3.858,
+            "delta_event_minus_correction_ms": 41.999999999999815,
+            "relation": "at_or_after_nonzero_correction"
+          }
+        }
+      },
+      "precontact_actual_corner_velocity_mm_s": -207.02063793788528,
+      "precontact_taught_corner_velocity_mm_s": -218.29316154214905,
+      "physical_and_alarm_arrays_matched": 11
+    }
+  },
+  "finding": {
+    "late_r15_reduced_official_peak_mg": 0.16355370315700446,
+    "late_r15_peak_relation_to_actual_hybrid_correction": {
+      "correction_time_s": 3.849,
+      "delta_event_minus_correction_ms": -5.0000000000003375,
+      "relation": "before_nonzero_correction"
+    },
+    "early_r15_peak_relation_to_actual_hybrid_correction": {
+      "correction_time_s": 3.858,
+      "delta_event_minus_correction_ms": 41.999999999999815,
+      "relation": "at_or_after_nonzero_correction"
+    },
+    "conclusion": "late R15 reduces sh3 peak magnitude but the official peak remains before the first nonzero hybrid correction; early R15 moves the official maximum to release, after arming"
+  }
+}

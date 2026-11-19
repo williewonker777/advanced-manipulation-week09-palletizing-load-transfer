@@ -1,0 +1,39 @@
+{
+  "schema": "r24-disclosed-repeat-plan.v1",
+  "status": "FIXED_AFTER_EXACT_R23_REPRODUCTION_AND_BEFORE_CHANNEL_INSTRUMENTATION_OR_CANDIDATE",
+  "classification": "Research on the disclosed R23 p23_transfer_close_diagonals counterexample only; excludes every independent R24 private input and is not deployment or safety evidence.",
+  "frozen_base": "experiments.r23_detached.free:Detector",
+  "target": {
+    "case": "p23_transfer_close_diagonals",
+    "mechanics": ["stock", "contact_surface", "actuator_skew"],
+    "matched_twins": ["none", "first", "second", "both"],
+    "physical_impacts": [[1.352, [5.9, 5.7, 0.0]], [1.493, [-6.1, 5.8, 0.0]]],
+    "known_duplicate_slots": ["isolated_first", "both_first"],
+    "known_duplicate_slot_count": 6
+  },
+  "diagnostic": {
+    "record_each_output_edge": true,
+    "channels": ["r10_baseline", "median_horizontal", "yaw_balance", "light_lift", "released_force"],
+    "state": ["active", "score_or_value", "bound", "above_count", "quiet_count", "grip", "force_input"],
+    "causal_question": "Do two detector routes re-announce one measured mechanical response after the combined Boolean output temporarily falls, before any second physical input?",
+    "matched_twin_rule": "An edge belonging to the first force must occur in first and both but not none or second; an edge belonging to the second force must occur in second and both but not none or first."
+  },
+  "allowed_correction": "Only a sensor-state correction justified by channel attribution, such as fusing routes while measured evidence remains one continuous response. It may not key on case, mass, COM, mechanics, nominal force time, trajectory time, or a fixed cooldown/window.",
+  "forbidden": [
+    "preprogrammed ignore interval or force schedule",
+    "case, mass, COM, mechanics, or nominal-time blacklist",
+    "broad cooldown or relaxed scoring",
+    "raising or lowering existing thresholds",
+    "turning off R10, horizontal, yaw, light, or released-force alarms",
+    "using an independent R24 private result"
+  ],
+  "candidate_gates": {
+    "target_six": "Exactly one rise for the first real impact in isolated-first and both-first across all mechanics; no rise before actual input.",
+    "two_real_impacts": "In both twins retain one attributable rise for each of the two physical inputs; in isolated second retain its one attributable rise whenever the base has one, with no new false edge.",
+    "matched_twins": "None remains edge-free; first and second retain only their corresponding causal event; both is the causal union.",
+    "base_preservation": "No lost base strict slot, no new false/prealarm/stuck-tail event, and no later preserved event beyond the R23 5 ms allowance on the entire disclosed 45-row R23 suite.",
+    "development_preservation": "Protect the disclosed R23 D4 gains/cases, official result, weak cohort, legacy pairs, and prior 66-row cohort without claiming them independent.",
+    "wider_repeat": "Run pre-existing disclosed repeat/close-pair cohorts and report successes, losses, duplicates, false rises, and delay changes rather than aggregate count alone.",
+    "candidate_or_counterexample": "Publish candidate only if every protection gate passes; otherwise retain exact failing input and channel trace and publish no candidate."
+  }
+}

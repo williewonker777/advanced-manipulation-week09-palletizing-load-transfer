@@ -1,0 +1,59 @@
+{
+  "schema": "r10-hold-monitor-decision.v1",
+  "decision": "REJECT_NO_INTEGRATION",
+  "capture_rejection_unchanged": true,
+  "reason": "The frozen hold monitor passed new development but did not alarm on the exposed historical r3 regression, leaving the known +11 ms delay unchanged.",
+  "calibration": {
+    "fit_negative_episodes": 12,
+    "validation_negative_episodes": 6,
+    "validation_worst_ratio": 0.7996586194410911,
+    "thresholds": [
+      7.709590732833433,
+      4.850256482301485,
+      5.059217461951979,
+      1.9484602307235837,
+      3.4024631198721367,
+      0.03040083749355712
+    ]
+  },
+  "development": {
+    "passed": true,
+    "rows": 15,
+    "monitor_effective": true,
+    "worst_tail_deg": 0.0364384884843952,
+    "worst_tail_ratio": 0.12972187917938938,
+    "worst_p99_us": 294.5466100000002,
+    "worst_normal_rms_ratio": 0.9855662529036036,
+    "worst_normal_max_ratio": 1.0
+  },
+  "first_failed_regression": {
+    "case": "historical capture r3 after-entry pulse (exposed; not acceptance)",
+    "R1_delay_ms": 30.999999999999694,
+    "capture_delay_ms": 41.999999999999815,
+    "combined_delay_ms": 41.999999999999815,
+    "monitor_max_ratio": 1.304520109093391,
+    "monitor_max_consecutive_crossings": 2,
+    "monitor_required_crossings": 3,
+    "mechanism": "Innovation crossed the fixed envelope only in isolated samples and one two-sample run, so the locked three-sample causal persistence never fired."
+  },
+  "scope": {
+    "calibration_episodes": 18,
+    "development_episodes": 45,
+    "exposed_regression_episodes": 6,
+    "diagnostic_episodes": 1,
+    "total_episodes": 70,
+    "holdout_opened": false,
+    "threshold_retunes": 0
+  },
+  "pins": {
+    "controller": "9fe7bf26a0555e439068c911651d9ef1f6a0aacfd788d0c5913635e78855ada8",
+    "detector": "1e21ff6da40edbc05da4cf45116f484a679687c63e2f0fdff8e8477cace56b8e",
+    "qualification": "6a12689d986aa3e7f83c783fe2908d767b4fd672b37d89011fd3d701cfc3db32",
+    "calibration": "6874b3765cbe4a4e6086ae4b1eb341dc5df8c4c9f7096d412e5b78fda214fa04",
+    "development": "e2a1722774916b64935e1e79b59ff3ed82873448e34db3c3685088fdc5d623e1",
+    "regression": "8223bfec704c1c777756ed6e4634d69f8fa6a3a404ab8dd7840c69c8c463b5b4",
+    "diagnostic": "635cb6f1a8c0fadbf57a26402de10151a3ee21d309ad5dfcd3d7f8fa9bd6ccc4",
+    "verify_results": "1b94f95363c9d6d1e59b784bfd93c707637e6ed98cbce3bca20592225975b6e0"
+  },
+  "official": false
+}

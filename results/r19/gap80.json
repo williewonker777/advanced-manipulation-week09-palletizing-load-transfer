@@ -1,0 +1,174 @@
+{
+  "schema": "r19-gap80-diagnosis.v1",
+  "status": "bounded_diagnosis_no_algorithm_change",
+  "case": {
+    "id": "gap80_weak",
+    "mass": 6.84,
+    "com": [
+      -0.015,
+      0.008,
+      0.023
+    ],
+    "offset": null,
+    "gap_ms": 80,
+    "impacts": [
+      [
+        3.866,
+        [
+          0,
+          0,
+          -14
+        ]
+      ],
+      [
+        4.066,
+        [
+          0,
+          0,
+          16
+        ]
+      ]
+    ]
+  },
+  "intervals_s": {
+    "first": {
+      "V2": [
+        [
+          3.999,
+          4.0680000000000005
+        ]
+      ],
+      "R18": [
+        [
+          3.999,
+          4.0120000000000005
+        ],
+        [
+          4.022,
+          4.024
+        ],
+        [
+          4.026,
+          4.0280000000000005
+        ]
+      ],
+      "Coupled": []
+    },
+    "second": {
+      "V2": [
+        [
+          4.09,
+          4.175000000000001
+        ]
+      ],
+      "R18": [
+        [
+          4.09,
+          4.128
+        ]
+      ],
+      "Coupled": [
+        [
+          4.102,
+          4.175000000000001
+        ]
+      ]
+    },
+    "both": {
+      "V2": [
+        [
+          3.999,
+          4.0680000000000005
+        ],
+        [
+          4.09,
+          4.171
+        ]
+      ],
+      "R18": [
+        [
+          3.999,
+          4.0120000000000005
+        ],
+        [
+          4.022,
+          4.024
+        ],
+        [
+          4.026,
+          4.0280000000000005
+        ],
+        [
+          4.09,
+          4.128
+        ]
+      ],
+      "Coupled": [
+        [
+          4.101,
+          4.171
+        ]
+      ]
+    }
+  },
+  "gap": {
+    "certified_zero_force_samples": 81,
+    "physical_force_end_s": 3.986,
+    "second_onset_s": 4.066,
+    "latest_clear_for_20ms_quiet_s": 4.046,
+    "R18_low_start_s": 4.028,
+    "R18_low_before_second_ms": 38
+  },
+  "initial_tag": {
+    "axis": "fz",
+    "sign": "positive detector innovation from a programmed -z first load",
+    "R18_first_rise_s": 3.999,
+    "corrected_at_rise": 4.820334648584944,
+    "physical_ratio_at_rise": 1.7138322314115033
+  },
+  "floor_duty_in_certified_gap": {
+    "fx": 0,
+    "fy": 0,
+    "fz": 37,
+    "mx": 0,
+    "my": 0,
+    "mz": 0
+  },
+  "second_onset": {
+    "physical_ratio": {
+      "fx": 0.13640302604963167,
+      "fy": 0.08747766365157016,
+      "fz": 0.49696416510371466,
+      "mx": 0.09156682917511429,
+      "my": 0.1290522234722416,
+      "mz": 0.03725673456533426
+    },
+    "corrected": {
+      "fx": 1.519717572734584,
+      "fy": -0.9746216526360963,
+      "fz": 1.3977643437021694,
+      "mx": 0.44736348618705885,
+      "my": 0.6305040057936606,
+      "mz": -0.015122311035854572
+    },
+    "unload_samples_of_8": 7,
+    "R18": false,
+    "V2": true,
+    "Coupled": false,
+    "above_floor_axes": []
+  },
+  "sham_prefix_exact_at_second_onset": {
+    "physical_ratio": true,
+    "mismatch_ratio": true,
+    "corrected": true,
+    "channels": true,
+    "r18": true,
+    "event": true,
+    "unload_samples": true,
+    "coupled": true,
+    "detect": true
+  },
+  "cause": "Only the initial positive-fz detector direction remained intermittently above its physical floor (37/80 gap samples); every other axis was below floor throughout. The last fz excursion was 4.060 s, leaving 7/8 unloaded samples at 4.066. Thus direction selection alone cannot advance the same 8-sample V2 rule; it completes at 4.068. R18 itself had been low for 38 ms and later rose at 4.090. A four-sample initial-direction criterion would have completed at 4.033, before the 4.046 quiet deadline, but is an unvalidated new rule, not a result or recommendation.",
+  "limits": "The programmed case and already-exposed four twins were replayed only for detector-owned state. No new force, threshold, state law, candidate, or independent claim.",
+  "source_record_sha256": "99c0210649fb828befaeab78be519f3916ecfb2e422118028212c52ff1791853"
+}

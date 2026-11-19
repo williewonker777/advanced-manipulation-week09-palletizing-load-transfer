@@ -1,0 +1,4347 @@
+{
+  "schema": "r18-prospective-paired-outcomes.v1",
+  "frozen_phase": {
+    "schema": "r18-paired-impulse-plan.v1",
+    "status": "FROZEN_BEFORE_ANY_FRESH_SECOND_IMPACT",
+    "single_equivalence": {
+      "id": "prior_single_surface_normal",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision": [
+        3.94,
+        [
+          0.0,
+          0.0,
+          16.0
+        ]
+      ],
+      "claim": "previously_exposed_single_only"
+    },
+    "quiet_ms": 20.0,
+    "event_window_ms": 320.0,
+    "fresh_paired_cases": [
+      {
+        "id": "pair_before_opposed",
+        "mass": 4.26,
+        "com": [
+          0.018,
+          -0.023,
+          0.012
+        ],
+        "offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "impacts": [
+          [
+            3.58,
+            [
+              7.0,
+              -6.0,
+              -8.0
+            ]
+          ],
+          [
+            3.82,
+            [
+              -7.0,
+              6.0,
+              8.0
+            ]
+          ]
+        ],
+        "phase": "both_before_release",
+        "claim": "fresh_sealed"
+      },
+      {
+        "id": "pair_return_opposed",
+        "mass": 5.71,
+        "com": [
+          -0.022,
+          0.014,
+          0.019
+        ],
+        "offset": null,
+        "impacts": [
+          [
+            3.82,
+            [
+              0.0,
+              0.0,
+              -13.0
+            ]
+          ],
+          [
+            4.18,
+            [
+              0.0,
+              0.0,
+              13.0
+            ]
+          ]
+        ],
+        "phase": "second_on_return",
+        "claim": "fresh_sealed"
+      },
+      {
+        "id": "pair_cross_axis_before",
+        "mass": 3.34,
+        "com": [
+          0.011,
+          0.025,
+          -0.017
+        ],
+        "offset": [
+          -0.002,
+          0.003,
+          0.0
+        ],
+        "impacts": [
+          [
+            3.61,
+            [
+              10.0,
+              0.0,
+              -4.0
+            ]
+          ],
+          [
+            3.84,
+            [
+              0.0,
+              -10.0,
+              4.0
+            ]
+          ]
+        ],
+        "phase": "both_before_release",
+        "claim": "fresh_sealed"
+      },
+      {
+        "id": "pair_cross_axis_return",
+        "mass": 7.22,
+        "com": [
+          -0.019,
+          -0.016,
+          0.024
+        ],
+        "offset": [
+          0.002,
+          -0.002,
+          0.0
+        ],
+        "impacts": [
+          [
+            3.79,
+            [
+              -9.0,
+              5.0,
+              -6.0
+            ]
+          ],
+          [
+            4.22,
+            [
+              9.0,
+              -5.0,
+              6.0
+            ]
+          ]
+        ],
+        "phase": "second_on_return",
+        "claim": "fresh_sealed"
+      }
+    ],
+    "candidate_pins": {
+      "recovery_detector_sha256": "92d7df88382f40d2f839a8d7f635db245ed21675a1c7514e9e9485fb0177e76c",
+      "recovery_plan_sha256": "d23c2cee0473f60ad10b0f15fd601b36958ed1685e3245e3a4ae6beb33b49496",
+      "r17c_model_sha256": "42ee9d2eebc85a424f67d2ab3e45431d4a42ea3cbd89b9e78532fa000aba4b81",
+      "known_result_sha256": "a397f697c9629eb9d5c19735583bb690ff8b23c1325bb251f02b817ea4ac64f1"
+    },
+    "diagnostic_sequences": [
+      {
+        "id": "diag_known_late_fz",
+        "mass": 5.38,
+        "com": [
+          0.021,
+          -0.016,
+          0.011
+        ],
+        "offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "impacts": [
+          [
+            3.94,
+            [
+              0.0,
+              0.0,
+              16.0
+            ]
+          ],
+          [
+            5.415,
+            [
+              0.0,
+              0.0,
+              18.0
+            ]
+          ]
+        ],
+        "phase": "tagged_known_anchor_late_post_return",
+        "claim": "diagnostic_not_heldout"
+      },
+      {
+        "id": "diag_known_late_fx",
+        "mass": 5.38,
+        "com": [
+          0.021,
+          -0.016,
+          0.011
+        ],
+        "offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "impacts": [
+          [
+            3.94,
+            [
+              0.0,
+              0.0,
+              16.0
+            ]
+          ],
+          [
+            5.505,
+            [
+              25.0,
+              0.0,
+              0.0
+            ]
+          ]
+        ],
+        "phase": "tagged_known_anchor_disjoint_direction",
+        "claim": "diagnostic_not_heldout"
+      }
+    ]
+  },
+  "strict_all_arms_passed": false,
+  "normal_controls_passed": true,
+  "fresh": [
+    {
+      "id": "pair_before_opposed",
+      "role": "fresh_sealed",
+      "passed": false,
+      "gates": {
+        "all_arm_assessments": false,
+        "D_physics_all_twins": true,
+        "retain_R10_5ms": true,
+        "retain_raw_R15_5ms": true,
+        "retain_D_5ms": true,
+        "no_added_false_R10": true,
+        "no_added_false_raw_R15": true,
+        "no_added_false_D": true,
+        "no_lost_tool_R10": true,
+        "no_lost_tool_raw_R15": true,
+        "no_lost_tool_D": true
+      },
+      "comparison_deltas_ms": {
+        "r10": {
+          "isolated_first": {
+            "candidate_delay_ms": 59.00000000000016,
+            "reference_delay_ms": 59.00000000000016,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 59.00000000000016,
+            "reference_delay_ms": 59.00000000000016,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 83.00000000000018,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          }
+        },
+        "raw_r15": {
+          "isolated_first": {
+            "candidate_delay_ms": 59.00000000000016,
+            "reference_delay_ms": 59.00000000000016,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 59.00000000000016,
+            "reference_delay_ms": 59.00000000000016,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 83.00000000000018,
+            "reference_delay_ms": 83.00000000000018,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          }
+        },
+        "D_coupled": {
+          "isolated_first": {
+            "candidate_delay_ms": 59.00000000000016,
+            "reference_delay_ms": 59.00000000000016,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 59.00000000000016,
+            "reference_delay_ms": 59.00000000000016,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 83.00000000000018,
+            "reference_delay_ms": 83.00000000000018,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          }
+        }
+      },
+      "detectors": {
+        "r10": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": false,
+            "both_first_genuine": true,
+            "both_second_genuine": false,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.6390000000000002
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.6390000000000002
+            ],
+            "both_second": []
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.6390000000000002
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.6390000000000002
+            ],
+            "both_second": []
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              59.00000000000016
+            ],
+            "isolated_second": [],
+            "both_first": [
+              59.00000000000016
+            ],
+            "both_second": []
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.6390000000000002
+            ],
+            "second": [],
+            "both": [
+              3.6390000000000002
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                7.0,
+                -6.0,
+                -8.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -7.0,
+                6.0,
+                8.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 120,
+              "combined_active_samples": 120
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                7.0,
+                -6.0,
+                -8.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 120,
+              "combined_active_samples": 239
+            }
+          }
+        },
+        "raw_r15": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": false,
+            "both_first_genuine": true,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.6390000000000002
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.6390000000000002
+            ],
+            "both_second": [
+              3.903
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.6390000000000002
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.6390000000000002
+            ],
+            "both_second": [
+              3.903
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              59.00000000000016
+            ],
+            "isolated_second": [],
+            "both_first": [
+              59.00000000000016
+            ],
+            "both_second": [
+              83.00000000000018
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.6390000000000002
+            ],
+            "second": [],
+            "both": [
+              3.6390000000000002,
+              3.903
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                7.0,
+                -6.0,
+                -8.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -7.0,
+                6.0,
+                8.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 120,
+              "combined_active_samples": 120
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                7.0,
+                -6.0,
+                -8.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 120,
+              "combined_active_samples": 239
+            }
+          }
+        },
+        "D_coupled": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": false,
+            "both_first_genuine": true,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.6390000000000002,
+              3.854
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.6390000000000002
+            ],
+            "both_second": [
+              3.903
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.6390000000000002,
+              3.854
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.6390000000000002
+            ],
+            "both_second": [
+              3.903
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              59.00000000000016,
+              274.0
+            ],
+            "isolated_second": [],
+            "both_first": [
+              59.00000000000016
+            ],
+            "both_second": [
+              83.00000000000018
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.6390000000000002,
+              3.854
+            ],
+            "second": [],
+            "both": [
+              3.6390000000000002,
+              3.903
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                7.0,
+                -6.0,
+                -8.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -7.0,
+                6.0,
+                8.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 120,
+              "combined_active_samples": 120
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                7.0,
+                -6.0,
+                -8.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 120,
+              "combined_active_samples": 239
+            }
+          }
+        },
+        "R18_recovery": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": false,
+            "both_first_genuine": true,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.6390000000000002,
+              3.854
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.6390000000000002
+            ],
+            "both_second": [
+              3.903
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.6390000000000002,
+              3.854
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.6390000000000002
+            ],
+            "both_second": [
+              3.903
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              59.00000000000016,
+              274.0
+            ],
+            "isolated_second": [],
+            "both_first": [
+              59.00000000000016
+            ],
+            "both_second": [
+              83.00000000000018
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.6390000000000002,
+              3.854
+            ],
+            "second": [],
+            "both": [
+              3.6390000000000002,
+              3.903
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                7.0,
+                -6.0,
+                -8.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -7.0,
+                6.0,
+                8.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 120,
+              "combined_active_samples": 120
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                7.0,
+                -6.0,
+                -8.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 120,
+              "combined_active_samples": 239
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "pair_return_opposed",
+      "role": "fresh_sealed",
+      "passed": false,
+      "gates": {
+        "all_arm_assessments": false,
+        "D_physics_all_twins": true,
+        "retain_R10_5ms": true,
+        "retain_raw_R15_5ms": true,
+        "retain_D_5ms": true,
+        "no_added_false_R10": true,
+        "no_added_false_raw_R15": true,
+        "no_added_false_D": true,
+        "no_lost_tool_R10": true,
+        "no_lost_tool_raw_R15": true,
+        "no_lost_tool_D": true
+      },
+      "comparison_deltas_ms": {
+        "r10": {
+          "isolated_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": 32.00000000000003,
+            "reference_delay_ms": 38.000000000000256,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -6.000000000000227,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 33.00000000000036,
+            "reference_delay_ms": 38.000000000000256,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -4.999999999999893,
+            "retained_within_5ms": true
+          }
+        },
+        "raw_r15": {
+          "isolated_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": 32.00000000000003,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 33.00000000000036,
+            "reference_delay_ms": 38.000000000000256,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -4.999999999999893,
+            "retained_within_5ms": true
+          }
+        },
+        "D_coupled": {
+          "isolated_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": 32.00000000000003,
+            "reference_delay_ms": 38.000000000000256,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -6.000000000000227,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 33.00000000000036,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          }
+        }
+      },
+      "detectors": {
+        "r10": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": true,
+            "both_first_genuine": false,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              4.218
+            ],
+            "both_first": [],
+            "both_second": [
+              4.218
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              4.218
+            ],
+            "both_first": [],
+            "both_second": [
+              4.218
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [
+              38.000000000000256
+            ],
+            "both_first": [],
+            "both_second": [
+              38.000000000000256
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [
+              4.218
+            ],
+            "both": [
+              4.218
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                -13.0
+              ],
+              "native_active_samples": 120,
+              "second_active_samples": 0,
+              "combined_active_samples": 120
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                13.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                -13.0
+              ],
+              "native_active_samples": 120,
+              "second_active_samples": 119,
+              "combined_active_samples": 239
+            }
+          }
+        },
+        "raw_r15": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": false,
+            "both_first_genuine": false,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": [
+              4.218
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": [
+              4.218
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": [
+              38.000000000000256
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": [
+              4.218
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                -13.0
+              ],
+              "native_active_samples": 120,
+              "second_active_samples": 0,
+              "combined_active_samples": 120
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                13.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                -13.0
+              ],
+              "native_active_samples": 120,
+              "second_active_samples": 119,
+              "combined_active_samples": 239
+            }
+          }
+        },
+        "D_coupled": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": true,
+            "both_first_genuine": false,
+            "both_second_genuine": false,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              4.218
+            ],
+            "both_first": [],
+            "both_second": []
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              4.218
+            ],
+            "both_first": [],
+            "both_second": []
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [
+              38.000000000000256
+            ],
+            "both_first": [],
+            "both_second": []
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [
+              4.218
+            ],
+            "both": []
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                -13.0
+              ],
+              "native_active_samples": 120,
+              "second_active_samples": 0,
+              "combined_active_samples": 120
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                13.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                -13.0
+              ],
+              "native_active_samples": 120,
+              "second_active_samples": 119,
+              "combined_active_samples": 239
+            }
+          }
+        },
+        "R18_recovery": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": true,
+            "both_first_genuine": false,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              4.212
+            ],
+            "both_first": [],
+            "both_second": [
+              4.213,
+              4.224,
+              4.237
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              4.212
+            ],
+            "both_first": [],
+            "both_second": [
+              4.213,
+              4.224,
+              4.237
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [
+              32.00000000000003
+            ],
+            "both_first": [],
+            "both_second": [
+              33.00000000000036,
+              44.00000000000048,
+              57.000000000000384
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [
+              4.212
+            ],
+            "both": [
+              4.213,
+              4.224,
+              4.237
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                -13.0
+              ],
+              "native_active_samples": 120,
+              "second_active_samples": 0,
+              "combined_active_samples": 120
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                13.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                -13.0
+              ],
+              "native_active_samples": 120,
+              "second_active_samples": 119,
+              "combined_active_samples": 239
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "pair_cross_axis_before",
+      "role": "fresh_sealed",
+      "passed": false,
+      "gates": {
+        "all_arm_assessments": false,
+        "D_physics_all_twins": true,
+        "retain_R10_5ms": true,
+        "retain_raw_R15_5ms": true,
+        "retain_D_5ms": true,
+        "no_added_false_R10": true,
+        "no_added_false_raw_R15": true,
+        "no_added_false_D": true,
+        "no_lost_tool_R10": true,
+        "no_lost_tool_raw_R15": true,
+        "no_lost_tool_D": true
+      },
+      "comparison_deltas_ms": {
+        "r10": {
+          "isolated_first": {
+            "candidate_delay_ms": 58.00000000000027,
+            "reference_delay_ms": 58.00000000000027,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 58.00000000000027,
+            "reference_delay_ms": 58.00000000000027,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          }
+        },
+        "raw_r15": {
+          "isolated_first": {
+            "candidate_delay_ms": 58.00000000000027,
+            "reference_delay_ms": 58.00000000000027,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 58.00000000000027,
+            "reference_delay_ms": 58.00000000000027,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          }
+        },
+        "D_coupled": {
+          "isolated_first": {
+            "candidate_delay_ms": 58.00000000000027,
+            "reference_delay_ms": 58.00000000000027,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 58.00000000000027,
+            "reference_delay_ms": 58.00000000000027,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          }
+        }
+      },
+      "detectors": {
+        "r10": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": false,
+            "both_first_genuine": true,
+            "both_second_genuine": false,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.668
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.668
+            ],
+            "both_second": []
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.668
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.668
+            ],
+            "both_second": []
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              58.00000000000027
+            ],
+            "isolated_second": [],
+            "both_first": [
+              58.00000000000027
+            ],
+            "both_second": []
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.668
+            ],
+            "second": [],
+            "both": [
+              3.668
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                10.0,
+                0.0,
+                -4.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                -10.0,
+                4.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                10.0,
+                0.0,
+                -4.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "raw_r15": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": false,
+            "both_first_genuine": true,
+            "both_second_genuine": false,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.668
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.668
+            ],
+            "both_second": []
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.668
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.668
+            ],
+            "both_second": []
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              58.00000000000027
+            ],
+            "isolated_second": [],
+            "both_first": [
+              58.00000000000027
+            ],
+            "both_second": []
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.668
+            ],
+            "second": [],
+            "both": [
+              3.668
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                10.0,
+                0.0,
+                -4.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                -10.0,
+                4.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                10.0,
+                0.0,
+                -4.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "D_coupled": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": false,
+            "both_first_genuine": true,
+            "both_second_genuine": false,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.668
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.668
+            ],
+            "both_second": []
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.668
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.668
+            ],
+            "both_second": []
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              58.00000000000027
+            ],
+            "isolated_second": [],
+            "both_first": [
+              58.00000000000027
+            ],
+            "both_second": []
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.668
+            ],
+            "second": [],
+            "both": [
+              3.668
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                10.0,
+                0.0,
+                -4.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                -10.0,
+                4.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                10.0,
+                0.0,
+                -4.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "R18_recovery": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": false,
+            "both_first_genuine": true,
+            "both_second_genuine": false,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.668
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.668
+            ],
+            "both_second": []
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.668
+            ],
+            "isolated_second": [],
+            "both_first": [
+              3.668
+            ],
+            "both_second": []
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              58.00000000000027
+            ],
+            "isolated_second": [],
+            "both_first": [
+              58.00000000000027
+            ],
+            "both_second": []
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.668
+            ],
+            "second": [],
+            "both": [
+              3.668
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                10.0,
+                0.0,
+                -4.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                -10.0,
+                4.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                10.0,
+                0.0,
+                -4.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "pair_cross_axis_return",
+      "role": "fresh_sealed",
+      "passed": false,
+      "gates": {
+        "all_arm_assessments": false,
+        "D_physics_all_twins": true,
+        "retain_R10_5ms": true,
+        "retain_raw_R15_5ms": true,
+        "retain_D_5ms": true,
+        "no_added_false_R10": true,
+        "no_added_false_raw_R15": true,
+        "no_added_false_D": true,
+        "no_lost_tool_R10": true,
+        "no_lost_tool_raw_R15": true,
+        "no_lost_tool_D": true
+      },
+      "comparison_deltas_ms": {
+        "r10": {
+          "isolated_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          }
+        },
+        "raw_r15": {
+          "isolated_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          }
+        },
+        "D_coupled": {
+          "isolated_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": null,
+            "reference_delay_ms": null,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          }
+        }
+      },
+      "detectors": {
+        "r10": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": false,
+            "both_first_genuine": false,
+            "both_second_genuine": false,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -9.0,
+                5.0,
+                -6.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                9.0,
+                -5.0,
+                6.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -9.0,
+                5.0,
+                -6.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "raw_r15": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": false,
+            "both_first_genuine": false,
+            "both_second_genuine": false,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -9.0,
+                5.0,
+                -6.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                9.0,
+                -5.0,
+                6.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -9.0,
+                5.0,
+                -6.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "D_coupled": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": false,
+            "both_first_genuine": false,
+            "both_second_genuine": false,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -9.0,
+                5.0,
+                -6.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                9.0,
+                -5.0,
+                6.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -9.0,
+                5.0,
+                -6.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "R18_recovery": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": false,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": false,
+            "both_first_genuine": false,
+            "both_second_genuine": false,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [],
+            "both_first": [],
+            "both_second": []
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -9.0,
+                5.0,
+                -6.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                9.0,
+                -5.0,
+                6.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": false,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": false,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                -9.0,
+                5.0,
+                -6.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        }
+      }
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "diag_known_late_fz",
+      "role": "diagnostic_not_heldout",
+      "passed": false,
+      "gates": {
+        "all_arm_assessments": false,
+        "D_physics_all_twins": true,
+        "retain_R10_5ms": true,
+        "retain_raw_R15_5ms": true,
+        "retain_D_5ms": true,
+        "no_added_false_R10": true,
+        "no_added_false_raw_R15": true,
+        "no_added_false_D": true,
+        "no_lost_tool_R10": true,
+        "no_lost_tool_raw_R15": true,
+        "no_lost_tool_D": true
+      },
+      "comparison_deltas_ms": {
+        "r10": {
+          "isolated_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": 40.000000000000036,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -7.000000000000121,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": 22.00000000000024,
+            "reference_delay_ms": 25.000000000000355,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -3.0000000000001137,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": 40.000000000000036,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -7.000000000000121,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 20.999999999999908,
+            "reference_delay_ms": 28.00000000000047,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -7.000000000000561,
+            "retained_within_5ms": true
+          }
+        },
+        "raw_r15": {
+          "isolated_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": 22.00000000000024,
+            "reference_delay_ms": 28.999999999999915,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -6.999999999999673,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 20.999999999999908,
+            "reference_delay_ms": 30.00000000000025,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -9.000000000000341,
+            "retained_within_5ms": true
+          }
+        },
+        "D_coupled": {
+          "isolated_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": 22.00000000000024,
+            "reference_delay_ms": 25.9999999999998,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -3.9999999999995595,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 20.999999999999908,
+            "reference_delay_ms": 25.000000000000355,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -4.000000000000448,
+            "retained_within_5ms": true
+          }
+        }
+      },
+      "detectors": {
+        "r10": {
+          "passed": true,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": true,
+            "both_first_genuine": true,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.98
+            ],
+            "isolated_second": [
+              5.44
+            ],
+            "both_first": [
+              3.98
+            ],
+            "both_second": [
+              5.4430000000000005
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.98
+            ],
+            "isolated_second": [
+              5.44
+            ],
+            "both_first": [
+              3.98
+            ],
+            "both_second": [
+              5.4430000000000005
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              40.000000000000036
+            ],
+            "isolated_second": [
+              25.000000000000355
+            ],
+            "both_first": [
+              40.000000000000036
+            ],
+            "both_second": [
+              28.00000000000047
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.98
+            ],
+            "second": [
+              5.44
+            ],
+            "both": [
+              3.98,
+              5.4430000000000005
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                16.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                18.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                18.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "raw_r15": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": true,
+            "both_first_genuine": false,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              5.444
+            ],
+            "both_first": [],
+            "both_second": [
+              5.445
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              5.444
+            ],
+            "both_first": [],
+            "both_second": [
+              5.445
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [
+              28.999999999999915
+            ],
+            "both_first": [],
+            "both_second": [
+              30.00000000000025
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [
+              5.444
+            ],
+            "both": [
+              5.445
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                16.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                18.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                18.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "D_coupled": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": true,
+            "both_first_genuine": false,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              5.441
+            ],
+            "both_first": [],
+            "both_second": [
+              5.44
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              5.441
+            ],
+            "both_first": [],
+            "both_second": [
+              5.44
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [
+              25.9999999999998
+            ],
+            "both_first": [],
+            "both_second": [
+              25.000000000000355
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [
+              5.441
+            ],
+            "both": [
+              5.44
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                16.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                18.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                18.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "R18_recovery": {
+          "passed": true,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": true,
+            "both_first_genuine": true,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.973
+            ],
+            "isolated_second": [
+              5.437
+            ],
+            "both_first": [
+              3.973
+            ],
+            "both_second": [
+              5.436
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.973
+            ],
+            "isolated_second": [
+              5.437
+            ],
+            "both_first": [
+              3.973
+            ],
+            "both_second": [
+              5.436
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              32.999999999999915
+            ],
+            "isolated_second": [
+              22.00000000000024
+            ],
+            "both_first": [
+              32.999999999999915
+            ],
+            "both_second": [
+              20.999999999999908
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.973
+            ],
+            "second": [
+              5.437
+            ],
+            "both": [
+              3.973,
+              5.436
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                16.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                18.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                18.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "diag_known_late_fx",
+      "role": "diagnostic_not_heldout",
+      "passed": false,
+      "gates": {
+        "all_arm_assessments": false,
+        "D_physics_all_twins": true,
+        "retain_R10_5ms": true,
+        "retain_raw_R15_5ms": true,
+        "retain_D_5ms": true,
+        "no_added_false_R10": true,
+        "no_added_false_raw_R15": true,
+        "no_added_false_D": true,
+        "no_lost_tool_R10": true,
+        "no_lost_tool_raw_R15": true,
+        "no_lost_tool_D": true
+      },
+      "comparison_deltas_ms": {
+        "r10": {
+          "isolated_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": 40.000000000000036,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -7.000000000000121,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": 28.00000000000047,
+            "reference_delay_ms": 33.00000000000036,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -4.999999999999893,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": 40.000000000000036,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -7.000000000000121,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 28.00000000000047,
+            "reference_delay_ms": 33.00000000000036,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -4.999999999999893,
+            "retained_within_5ms": true
+          }
+        },
+        "raw_r15": {
+          "isolated_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": 28.00000000000047,
+            "reference_delay_ms": 33.00000000000036,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -4.999999999999893,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 28.00000000000047,
+            "reference_delay_ms": 33.00000000000036,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": -4.999999999999893,
+            "retained_within_5ms": true
+          }
+        },
+        "D_coupled": {
+          "isolated_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "isolated_second": {
+            "candidate_delay_ms": 28.00000000000047,
+            "reference_delay_ms": 28.00000000000047,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          },
+          "both_first": {
+            "candidate_delay_ms": 32.999999999999915,
+            "reference_delay_ms": null,
+            "added_genuine": true,
+            "lost_genuine": false,
+            "delay_delta_ms": null,
+            "retained_within_5ms": true
+          },
+          "both_second": {
+            "candidate_delay_ms": 28.00000000000047,
+            "reference_delay_ms": 28.00000000000047,
+            "added_genuine": false,
+            "lost_genuine": false,
+            "delay_delta_ms": 0.0,
+            "retained_within_5ms": true
+          }
+        }
+      },
+      "detectors": {
+        "r10": {
+          "passed": true,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": true,
+            "both_first_genuine": true,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.98
+            ],
+            "isolated_second": [
+              5.538
+            ],
+            "both_first": [
+              3.98
+            ],
+            "both_second": [
+              5.538
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.98
+            ],
+            "isolated_second": [
+              5.538
+            ],
+            "both_first": [
+              3.98
+            ],
+            "both_second": [
+              5.538
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              40.000000000000036
+            ],
+            "isolated_second": [
+              33.00000000000036
+            ],
+            "both_first": [
+              40.000000000000036
+            ],
+            "both_second": [
+              33.00000000000036
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.98
+            ],
+            "second": [
+              5.538
+            ],
+            "both": [
+              3.98,
+              5.538
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                16.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                25.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                25.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "raw_r15": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": true,
+            "both_first_genuine": false,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              5.538
+            ],
+            "both_first": [],
+            "both_second": [
+              5.538
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              5.538
+            ],
+            "both_first": [],
+            "both_second": [
+              5.538
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [
+              33.00000000000036
+            ],
+            "both_first": [],
+            "both_second": [
+              33.00000000000036
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [
+              5.538
+            ],
+            "both": [
+              5.538
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                16.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                25.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                25.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "D_coupled": {
+          "passed": false,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": false,
+            "isolated_second_genuine": true,
+            "both_first_genuine": false,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              5.533
+            ],
+            "both_first": [],
+            "both_second": [
+              5.533
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [],
+            "isolated_second": [
+              5.533
+            ],
+            "both_first": [],
+            "both_second": [
+              5.533
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [],
+            "isolated_second": [
+              28.00000000000047
+            ],
+            "both_first": [],
+            "both_second": [
+              28.00000000000047
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [],
+            "second": [
+              5.533
+            ],
+            "both": [
+              5.533
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                16.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                25.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                25.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        },
+        "R18_recovery": {
+          "passed": true,
+          "gates": {
+            "complete_finite_strict_grid": true,
+            "signed_profiles_exact": true,
+            "force_free_prefixes": true,
+            "all_required_prefixes_exact": true,
+            "isolated_first_genuine": true,
+            "isolated_second_genuine": true,
+            "both_first_genuine": true,
+            "both_second_genuine": true,
+            "quiet_before_first": true,
+            "quiet_before_second": true,
+            "distinct_non_noop_impacts": true,
+            "no_programmed_normal_event_overlap": true,
+            "no_sign_inversion": true,
+            "no_added_unmatched_rise": true
+          },
+          "raw_event_times_s": {
+            "isolated_first": [
+              3.973
+            ],
+            "isolated_second": [
+              5.533
+            ],
+            "both_first": [
+              3.973
+            ],
+            "both_second": [
+              5.533
+            ]
+          },
+          "valid_genuine_times_s": {
+            "isolated_first": [
+              3.973
+            ],
+            "isolated_second": [
+              5.533
+            ],
+            "both_first": [
+              3.973
+            ],
+            "both_second": [
+              5.533
+            ]
+          },
+          "absolute_delays_ms": {
+            "isolated_first": [
+              32.999999999999915
+            ],
+            "isolated_second": [
+              28.00000000000047
+            ],
+            "both_first": [
+              32.999999999999915
+            ],
+            "both_second": [
+              28.00000000000047
+            ]
+          },
+          "false_times_s": {
+            "none": [],
+            "first": [],
+            "second": [],
+            "both": []
+          },
+          "rises_s": {
+            "none": [],
+            "first": [
+              3.973
+            ],
+            "second": [
+              5.533
+            ],
+            "both": [
+              3.973,
+              5.533
+            ]
+          },
+          "profiles": {
+            "none": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 0,
+              "combined_active_samples": 0
+            },
+            "first": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                0.0,
+                0.0,
+                16.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 0,
+              "combined_active_samples": 119
+            },
+            "second": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                25.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 0,
+              "second_active_samples": 119,
+              "combined_active_samples": 119
+            },
+            "both": {
+              "passed": true,
+              "gates": {
+                "committed_signed_exact": true,
+                "native_first_exact": true,
+                "hook_second_exact": true,
+                "stock_native_magnitude_exact": true,
+                "combined_magnitude_exact": true
+              },
+              "peak_committed_xyz_N": [
+                25.0,
+                0.0,
+                0.0
+              ],
+              "native_active_samples": 119,
+              "second_active_samples": 119,
+              "combined_active_samples": 238
+            }
+          }
+        }
+      }
+    }
+  ],
+  "sha256": "de1a40f3837adc91791811ea586eb7b06433323b0384c39169d45fa6bf43587a",
+  "recovery": "The first process terminated before a row result was saved. The exact same predefined cases and source pins were recovered as atomic per-row checkpoints; one dataset, not two."
+}

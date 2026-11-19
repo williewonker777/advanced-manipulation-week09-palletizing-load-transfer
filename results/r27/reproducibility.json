@@ -1,0 +1,129 @@
+{
+  "default_submission": {
+    "episodes": 58,
+    "exact_non_time_cells": 132,
+    "fresh_receipt_sha256": "29c9cc4240322f933d44df95513a51fcefdc415badddb9b2e5e0878b0477e8c4",
+    "prior_release_receipt_sha256": "73c40906d314fc2fcb5236981e8071e806693acf4b2caf3faae8b4d1239671c3",
+    "records": {
+      "servo": {
+        "counts": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 23,
+            "indistinguishable": 0,
+            "missed": 1
+          },
+          "no_impact_false_rises": 0,
+          "worst_false_count_in_an_impact_run": 0
+        },
+        "displayed_non_runtime_cells": 66,
+        "episodes": 29,
+        "exact_vs_authenticated_R26": true,
+        "modules": [
+          "my_servo",
+          "my_detector"
+        ],
+        "table_sha256": "046b89220f40047dd3c60605417123f6844241bb12118bc239963bd2db400820"
+      },
+      "torque": {
+        "counts": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 18,
+            "indistinguishable": 0,
+            "missed": 6
+          },
+          "no_impact_false_rises": 0,
+          "worst_false_count_in_an_impact_run": 1
+        },
+        "displayed_non_runtime_cells": 66,
+        "episodes": 29,
+        "exact_vs_authenticated_R26": true,
+        "modules": [
+          "my_torque",
+          "my_detector"
+        ],
+        "table_sha256": "5758d4323cbf2077772baa887c00598e5cb81ecc46ff0a849224c7e3f90e7de3"
+      }
+    },
+    "source_sha256": {
+      "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    }
+  },
+  "hardware_trials": 0,
+  "landing_research": {
+    "course_kit_included": false,
+    "entries": 100,
+    "filename": "week09-r27-g4.zip",
+    "new_results_included": false,
+    "official": {
+      "clean_receipt_sha256": "422120b433f2e341cbe0f96a3006f83d08c51625646a34a947e7d7181e47b1e2",
+      "closure_sha256": "94513c903f47e81380e12a28d056166199fa013d343ad623a65b7932a09e6a4c",
+      "comparison": {
+        "all_non_time_cells_exact": true,
+        "byte_exact": false,
+        "difference_paths": [
+          "/records/c1/stdout_sha256",
+          "/records/r27/stdout_sha256"
+        ],
+        "scientific_difference_paths": [],
+        "semantic_exact": true,
+        "stdout_hash_only_difference": true
+      },
+      "episodes": 58,
+      "expected_sha256": "838047519123ec4bd36aab8007503b9686bd5e3a889325e9de7b4a2be8516399",
+      "non_time_cells": 132,
+      "result_sha256": "1a80bbe1a52b576003f39ea51c03fe1709e788df0284b8e2d48f15b426794291"
+    },
+    "research_public_extracted_archives_identical": true,
+    "sealed_loaded_conditions_included": false,
+    "sha256": "6dc1cbcb2cea647e743641a2c14c22666610a4006bf7c7bd1a59c3ed18af4064"
+  },
+  "loaded_research": {
+    "course_kit_included": false,
+    "entries": 185,
+    "filename": "week09-r27-loaded.zip",
+    "new_results_included": false,
+    "pose-certified": {
+      "byte_exact": true,
+      "closure_sha256": "e1d491bb9bd41b3b9aecd419cdff622cdb8c939b1e06d30d5a9a260dfdb775f8",
+      "episodes": 60,
+      "result_sha256": "3cc7cb480820e050710e069b4fe9009bb189e33b7759d398c5439053015040d7"
+    },
+    "research_public_extracted_archives_identical": true,
+    "sealed_loaded_conditions_included": false,
+    "sha256": "21219b9c1ff7ac9d79c67225ae9abdc35553f802d1fad632b20ce4fca26d9274",
+    "signed-change": {
+      "byte_exact": true,
+      "closure_sha256": "e1d491bb9bd41b3b9aecd419cdff622cdb8c939b1e06d30d5a9a260dfdb775f8",
+      "episodes": 8,
+      "result_sha256": "7d849a9b4b4001a974e24ac7f95208ffd1783462d98f6948bfa77e094e54b150"
+    }
+  },
+  "original_demo": {
+    "args": [
+      "run.py",
+      "--box",
+      "8"
+    ],
+    "controller": "servo_controller",
+    "detector": "collision_detector",
+    "guide_revision_sha256": "6b1ae2d0e38b8914ee0b4b3b27d82c9c72f2e15c00d8fb7ea698cfa3330de187",
+    "kit_files_unchanged": 28,
+    "receipt_sha256": "8423df3c57a32c4f437efc5403b231a8f560ef5c2c385259f0966ab40c7d03e0",
+    "render": {
+      "byte_identical_to_expected_reference": true,
+      "byte_identical_to_guide": true,
+      "expected_reference_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+      "generated_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+      "guide_embedded_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+      "status": "byte_identical"
+    }
+  },
+  "remote_changes": false,
+  "research_default_promotions": 0,
+  "runtime": "MuJoCo 3.17.0; local physics only",
+  "schema": "r27-reproducible-known-research-and-authentic-demo.v1"
+}

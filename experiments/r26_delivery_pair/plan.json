@@ -1,0 +1,15 @@
+{
+ "schema":"week09-r26-combined-placement-declaration.v1",
+ "purpose":"Make the actual R24 G4 torque controller and causal post-release contact detector work together. Compare complete physically simulated systems, not sums of separate papers. Never change R10 or the original.",
+ "incumbent":"r24 support-deadband controller plus its actual R14 coupled detector, and R10/R19 as secondary control floors",
+ "primary_known_input":"R24 landing late force cohorts (4 matched +/-X or +/-Z forces; three old normal controls and three additional previously disclosed normals).",
+ "calibration_fit_existing_normals":["sh5","heavy8_offset","ec3:up"],"normal_audit_existing":["interp_mass","interp_com","soft_table_10pct"],
+ "additional_force_free_fit":[[3.25,[0.009,-0.013,0.018],[0.003,-0.002,0.002],0.94],[4.80,[-0.010,0.017,0.012],[-0.002,0.001,0.002],0.98],[6.85,[0.019,-0.016,0.022],[0.001,-0.004,0.003],1.06],[7.72,[-0.019,0.010,-0.014],[-0.003,0.003,0.0035],1.02]],
+ "additional_force_free_audit":[[3.81,[-0.013,0.008,0.022],[-0.001,0.003,0.004],0.96],[5.31,[0.014,-0.019,0.016],[0.002,-0.002,0.003],1.03],[7.13,[-0.021,0.012,-0.012],[-0.001,0.002,0.0022],1.08]],
+ "first_hypotheses":["same controller plus entire unmodified R25 detector","coupled base plus actual detach-only horizontal R23 sensor","coupled plus signed 3-D unloaded reaction using normal-only bound and physical ownership"],
+ "normal_bound":"First assess whole detached force vector. Frozen signed vertical excursions relative to zero under all fit normals; use each signed normal maximum * 1.2 + 0.5 N (and symmetric R23 horizontal threshold). Must exceed all audit normals without retuning. If absolute z never separates the positives, compare physics-motivated common-mode/short horizon normal calibration as a separate registered attempt, not adjudicating it with the same blind panel.",
+ "qualifying":"Unchanged G4 (all four relative to R10 wherever R24 passes), no new cost/saturation/tool failure, identical controller trajectory vs R24 original for same case, no added false or extra duplicate, no old strict alarm lost or >5ms later or >5 active samples longer. Need a strict attributable gain for X and no inherited late Z regression vs both R19/R10, not merely ORing their scores.",
+ "event_contract":"Same source at two close times must be separated by physical unload/reversal; no fixed clock blackout, labels, case-specific branches, actual external force, or altered inputs in detector.",
+ "separate_generalization":{"mechanics":"fresh combos not used to choose the combined system; run only after signed detector code+parameter freeze, with same R24 and R19 comparator; do not use for retuning and still call it independent","cases":[[4.41,[-0.012,0.016,0.019],[-0.001,0.0025,0.003],0.97,4.121],[6.73,[0.016,-0.014,-0.009],[0.003,-0.0015,0.0035],1.07,4.317]],"forces":[[10.7,0,0],[-10.7,0,0],[0,11.2,0],[0,-11.2,0],[0,0,13.6],[0,0,-13.6],[7.8,-7.1,3.0],[-7.8,7.1,-3.0]],"per_row":"matched no-force and signed-actual-force per arm; same gates without replacing failures"},
+ "scope":"finite torque laboratory study, no real robot, remote, official qualification or new safety claims"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "r19-physical-unloading-plan.v1",
+  "status": "SECOND_DESIGN_FIXED_AFTER_DUAL_NORMAL_EXIT_REJECTED_AND_BEFORE_PHYSICAL_CANDIDATE_REPLAY",
+  "research_only": true,
+  "predecessor_rejection": "requiring the prediction mismatch to become normal extended exposed alarms by 553-621 ms; the learned release transient is not a direct unloading observation",
+  "candidate": {
+    "onset": "unchanged R18-fast 4-of-8 physical-plus-mismatch coincidence or unchanged Coupled baseline",
+    "continuity": "after an R18-fast onset, keep the recovery event active",
+    "unloading": "all six current corrected wrench magnitudes are at or below their frozen direction/sign physical floors",
+    "release": "all samples in the existing R18 eight-sample window satisfy physical unloading",
+    "rearm": "immediate after observable release; no refractory interval",
+    "unsupported": "abstain exactly as R18; unchanged Coupled baseline remains live"
+  },
+  "known_case_ids": ["pair_return_opposed", "diag_known_late_fz", "diag_known_late_fx"],
+  "comparators": ["r10", "R18_fast", "R19_event"],
+  "twins": ["none", "first", "second", "both"],
+  "event_window_ms": 320.0,
+  "quiet_ms": 20.0,
+  "prohibitions": [
+    "no programmed-force input to classifier",
+    "no simulation truth input to classifier",
+    "no time or refractory hold",
+    "no threshold or frozen predictor change",
+    "known replay cannot make a fresh or independent claim"
+  ]
+}

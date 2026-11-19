@@ -1,0 +1,27 @@
+{
+  "schema": "R10_INIT_PORTABLE_SUMMARY.v1",
+  "decision": "NOT_ELIGIBLE_KEEP_FAST2",
+  "candidate_sha256": "3120975104f92deb267a0e18c97029d1d6e9596ee4b36879aa806d3f719ec5b2",
+  "plan_sha256": "1aa15063927dd784dbfb17c0590fb1317479ebd2d4df632c10de77de4ba10524",
+  "baseline_sha256": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+  "functional": {
+    "three_payload_6000_row_both_grip_grid_parity": true,
+    "clone_isolation_and_fresh_data": true,
+    "analytic_and_nonvertical_fallback_parity": true,
+    "fresh_full_loop_digest_pairs_equal": "6/6",
+    "torque_path_unchanged": true
+  },
+  "performance": {
+    "cold_import_plus_first_reset_speedup_conservative": 1.9175875353791496,
+    "cold_baseline_ms_range": [264.197663, 268.096639],
+    "cold_candidate_ms_range": [133.582212, 137.776064],
+    "cold_import_overhead_conservative_ms": 1.5370339999999914,
+    "torque_reset_overhead_max_ms": -0.0069190000000000085,
+    "candidate_worst_p99_us": 330.97010000000023,
+    "servo_worst_p99_regression": -0.008723126032922468,
+    "wall_or_cpu_ge_1ms": 0
+  },
+  "failed_gates": ["cold_import_plus_first_reset_speedup_min_2x"],
+  "holdout_opened": false,
+  "live_source_changed": false
+}

@@ -1,0 +1,39 @@
+{
+  "actual_robot": false,
+  "arms": {
+    "inverse-lateral": {
+      "entrypoint": "experiments.r27_loaded_observer.candidate:Detector",
+      "meaning": "Horizontal force unexplained by the fitted vertical coupling.",
+      "source_sha256": "6c24a8d1944e3c5c23fd2c6a24f1b2afce1054c4817ec443cf5513bb21f87d4b"
+    },
+    "pose-certified": {
+      "entrypoint": "experiments.r27_load_change.manifold:Detector",
+      "meaning": "Settled plateau outside a measured pose and speed normal envelope.",
+      "source_sha256": "0b1979344956a1c8400f3f9d6039d56147392e498ad7af3d5050c2bd2f8bdadf"
+    },
+    "settled": {
+      "entrypoint": "experiments.r27_load_change.settled:Detector",
+      "meaning": "Two independent sensors plus a settled plateau, optional event notification.",
+      "source_sha256": "8970051b731531c48ec9846cd0fb68dcee36caea8bec77892ce982780ed67df1"
+    },
+    "signed-change": {
+      "entrypoint": "experiments.r27_load_change.candidate:Detector",
+      "meaning": "Adjacent-block signed torque residual. Disclosed early gains and protection losses; not a safe default.",
+      "source_sha256": "cb1cb1373f1b3415999bb3c9442c37967fba71ff561fa292237dbf1ac8e2116e"
+    }
+  },
+  "cases": [
+    "s26_long_carry_signed",
+    "s26_long_place_lateral"
+  ],
+  "default_promoted": false,
+  "incumbent": "experiments.r26_yaw_acquisition.candidate:Detector",
+  "mechanics": [
+    "stock",
+    "actuator_deadzone",
+    "place_surface_shift"
+  ],
+  "r26_first_sha256": "854459ef3292f3c20eae7bc8ba829a83eae70e6ce2b5e66f5b89abeb6836489a",
+  "reference_is_original_servo_demo": false,
+  "schema": "r27-disclosed-replay-names.v1"
+}

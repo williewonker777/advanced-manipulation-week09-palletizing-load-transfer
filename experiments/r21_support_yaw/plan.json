@@ -1,0 +1,193 @@
+{
+  "schema": "r21-support-yaw-plan.v1",
+  "status": "FROZEN_BEFORE_ANY_FORCE_OUTCOME",
+  "mechanism": {
+    "support_condition": "grip and R10 last_table_allowed and projected Fz > 0",
+    "rho_m": "norm(projected nominal point xy)+box planar half-diagonal",
+    "ambiguity_Nm": "Fz*(friction_mu*rho+torsion_radius)",
+    "decision": "abs(sign(yaw)*max(abs(yaw)-ambiguity,0)) > unchanged servo normal bin; 3 set, 8 clear",
+    "base": "plain R10 detector; alarms ORed; no prior-hit timer, refractory, mass threshold, or force label"
+  },
+  "pins": {
+    "detector.py": "6fb65a195d0af1bf8e520262ae4d36dd70efa2db221b0231449ae256ec2a5fb4",
+    "support.py": "3c6242d8e6cf813d0accfd61cca6ede14a8527336efd4547c19e84ce3e21a3f9",
+    "candidate.py": "005d0d3b4532ee5ee2b5336002ca080cb1a5d6f6306f1bc5e6886df9623cc7a6",
+    "normal_bins.json": "32c8144f0768f199f98981e8b5ea3dfb3cdc3481a034aaaa940e55ab4c7d3e4e"
+  },
+  "quiet_ms": 20,
+  "event_window_ms": 320,
+  "protected_cases": [
+    {
+      "id": "exposed_prior_100_py_then_release_py",
+      "mass": 8.0,
+      "com": [
+        0.02,
+        -0.01,
+        0.03
+      ],
+      "impacts": [
+        [
+          3.0,
+          [
+            0,
+            100,
+            0
+          ]
+        ],
+        [
+          3.86,
+          [
+            0,
+            10,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "exposed_prior_40_ny_then_release_px",
+      "mass": 7.15,
+      "com": [
+        -0.011,
+        0.019,
+        0.002
+      ],
+      "impacts": [
+        [
+          3.515,
+          [
+            0,
+            -40,
+            0
+          ]
+        ],
+        [
+          3.86,
+          [
+            10,
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "strong_px_then_release_ny",
+      "mass": 1.65,
+      "com": [
+        0.018,
+        0.004,
+        0.016
+      ],
+      "impacts": [
+        [
+          2.115,
+          [
+            40,
+            0,
+            0
+          ]
+        ],
+        [
+          3.86,
+          [
+            0,
+            -10,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "early_10_py_then_release_px_zero_mass",
+      "mass": 0.0,
+      "com": [
+        0.02,
+        -0.01,
+        0.03
+      ],
+      "impacts": [
+        [
+          1.42,
+          [
+            0,
+            10,
+            0
+          ]
+        ],
+        [
+          3.86,
+          [
+            10,
+            0,
+            0
+          ]
+        ]
+      ]
+    }
+  ],
+  "reserved_cases": [
+    {
+      "id": "reserved_diag_prior_then_diag_release",
+      "mass": 4.35,
+      "com": [
+        -0.023,
+        0.011,
+        0.007
+      ],
+      "impacts": [
+        [
+          2.63,
+          [
+            28.284,
+            -28.284,
+            0
+          ]
+        ],
+        [
+          3.84,
+          [
+            7.071,
+            7.071,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "reserved_offaxis_prior_then_oblique_release",
+      "mass": 6.7,
+      "com": [
+        0.029,
+        -0.026,
+        0.024
+      ],
+      "impacts": [
+        [
+          3.22,
+          [
+            -24,
+            32,
+            0
+          ]
+        ],
+        [
+          3.88,
+          [
+            6,
+            -8,
+            0
+          ]
+        ]
+      ]
+    }
+  ],
+  "stage_gate": "reserved_cases may run only after all protected candidate pair gates pass",
+  "positive_guard": [
+    "candidate second-only and both-second genuine rise required",
+    "candidate first-only has no delayed rise near second",
+    "retain each R10 genuine event within 5 ms",
+    "exact signed forces and causal prefixes",
+    "no new unmatched false rise"
+  ]
+}

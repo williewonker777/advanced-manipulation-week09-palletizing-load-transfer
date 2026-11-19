@@ -1,0 +1,57 @@
+{
+  "schema": "r25-independent-variable-pulse-plan.v1",
+  "status": "SEALED_BEFORE_R25_CANDIDATE_SELECTION_OR_OUTPUT",
+  "classification": "Finite authenticated-plant simulation holdout fixed without R25 candidate output; not a safety, hardware, hidden-production, or original-demo qualification.",
+  "baseline_arm": "r24_joint",
+  "candidate_arm_after_lock": "r25",
+  "dt_s": 0.001,
+  "event_window_ms": 280,
+  "reference_twin_ms": 18,
+  "quiet_ms": 20,
+  "preservation_slack_ms": 5,
+  "duration_cost_slack_samples": 5,
+  "variants": {
+    "stock": {"kind": "stock"},
+    "actuator_shift": {"kind": "actuator_shift", "joint_gain": [1.017, 0.984, 1.013, 0.988, 1.016, 0.985]},
+    "contact_shift": {"kind": "contact_shift", "table_friction_scale": 0.95, "table_solref_time_scale": 1.06, "suction_solref_time_scale": 1.08}
+  },
+  "negative": [
+    {"id": "n25_handoff_empty", "role": "handoff_no_external", "mass": 0.67, "com": [0.015, -0.023, 0.009], "offset": null, "contact_probe": false},
+    {"id": "n25_handoff_tool_a", "role": "real_tool_contact_control", "mass": 3.42, "com": [-0.021, 0.017, -0.012], "offset": [-0.0045, 0.0038, 0.0014], "contact_probe": true},
+    {"id": "n25_handoff_tool_b", "role": "real_tool_contact_control", "mass": 6.86, "com": [0.022, -0.014, 0.019], "offset": [0.0043, -0.0046, 0.0015], "contact_probe": true}
+  ],
+  "single": [
+    {"id": "s25_long_transfer_diag", "phase": "handoff", "mass": 1.36, "com": [0.018, -0.019, 0.014], "offset": null, "impact": [1.371, 210, [5.5, -5.2, 1.8]]},
+    {"id": "s25_long_transfer_signed", "phase": "handoff", "mass": 3.77, "com": [-0.024, 0.013, -0.006], "offset": null, "impact": [1.623, 180, [-6.0, 0.0, 2.3]]},
+    {"id": "s25_weak_signed_carry", "phase": "carry", "mass": 5.91, "com": [0.026, 0.007, -0.021], "offset": null, "impact": [2.413, 90, [0.0, -6.2, -1.5]]},
+    {"id": "s25_long_detached_diag", "phase": "post_detachment", "mass": 2.61, "com": [-0.012, -0.026, 0.021], "offset": null, "impact": [4.083, 160, [5.8, 5.4, -1.7]]},
+    {"id": "s25_long_detached_signed", "phase": "post_detachment", "mass": 7.39, "com": [0.024, 0.019, -0.015], "offset": null, "impact": [4.361, 220, [-5.4, 6.0, 2.0]]}
+  ],
+  "paired": [
+    {"id": "p25_close_transfer_diag", "phase": "handoff", "mass": 1.92, "com": [0.013, -0.027, 0.018], "offset": null, "long": [1.352, 160, [5.7, 5.3, 1.9]], "impacts": [[1.352, 60, [5.7, 5.3, 1.9]], [1.452, 60, [-5.9, 5.6, -1.6]]]},
+    {"id": "p25_close_transfer_cross", "phase": "handoff", "mass": 5.48, "com": [-0.017, 0.012, -0.022], "offset": null, "long": [1.582, 165, [0.0, -7.4, 2.2]], "impacts": [[1.582, 70, [0.0, -7.4, 2.2]], [1.692, 55, [7.7, 0.0, -2.0]]]},
+    {"id": "p25_close_detach_boundary", "phase": "post_detachment", "mass": 3.24, "com": [0.023, 0.015, -0.009], "offset": null, "long": [4.032, 155, [6.0, -5.7, 1.6]], "impacts": [[4.032, 55, [6.0, -5.7, 1.6]], [4.122, 65, [-6.8, 0.0, -2.1]]]},
+    {"id": "p25_close_detached_opposed", "phase": "post_detachment", "mass": 7.12, "com": [-0.015, 0.028, 0.012], "offset": null, "long": [4.252, 170, [-5.5, -6.0, 1.8]], "impacts": [[4.252, 80, [-5.5, -6.0, 1.8]], [4.372, 50, [6.3, 5.7, -1.5]]]}
+  ],
+  "required_episodes": {"per_arm": 99, "both_arms": 198},
+  "contact_evidence": {"minimum_probe_variant_rows_with_real_contact": 2, "contact_threshold_N": 1.0},
+  "qualification": {
+    "safety_qualification": false,
+    "incumbent_safety_floor": "Preserve every strict R24 event and protected real-tool detection within five milliseconds, with no new false rise, duplicate, tail, or strict-duration cost.",
+    "positive_qualification": "Long-single twins require exactly one quiet rise; actual double twins require two separately attributable quiet rises including the quick second; absolute misses remain reported even when the incumbent also misses.",
+    "real_contact": "Verified tool contact is a protected true event and excluded from spurious-alarm accounting."
+  },
+  "gates": [
+    "executable plan, variable-force runner, evaluator, and protocol compiled and dry-validated before R25 candidate output",
+    "exactly 198 complete episodes across three mechanically distinct authentic-plant variants",
+    "force-free, long-single, only-first, only-second, and both twins are matched for every double case",
+    "signed per-tick first, second, committed, and scalar force records equal the registered variable-duration profiles",
+    "physical traces are bit-exact across arms within every twin",
+    "real tool contact is protected rather than counted as spurious",
+    "no candidate false rise, duplicate event rise, stuck tail, strict-duration cost regression, or incumbent strict loss",
+    "one quiet rise for every long single and each actual double impulse, including the quick second",
+    "all absolute misses and positive gains are reported separately from incumbent safety preservation",
+    "no tuning, fallback, threshold, cohort, force, mechanics, scoring, or gate change after outcomes"
+  ],
+  "tuning_after_outcome": "forbidden"
+}

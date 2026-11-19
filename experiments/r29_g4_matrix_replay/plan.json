@@ -1,0 +1,53 @@
+{
+  "schema": "r29-g4-prospect-preregistration.v1",
+  "status": "FROZEN_BEFORE_ANY_R29_SIMULATOR_OUTCOME",
+  "classification": "Prospective new passive G4 laboratory matrix. Not R28 fresh, not R27 loaded holdout, not grade, default, hardware, deployment or safety evidence.",
+  "arms": {
+    "c1": "experiments.r26_delivery_pair.candidate:Detector",
+    "v3": "experiments.r27_landing_integration.unloaded_aware:Detector",
+    "memory": "experiments.r28_contact_memory.candidate:Detector",
+    "controller": "experiments.r26_delivery_pair.controller:Controller"
+  },
+  "candidate": {
+    "fixed_source_sha256": "85c4107c3939c7624dd77040ad322a99595c8e6941c7b75751c516a33be7a07b",
+    "fixed_protocol_sha256": "bcfb4ed23173b67333caecc7e398ab35817142c81ba34057eb1f8c585b9bc996",
+    "rule": "Execute only this frozen source. No tuning, substitution, threshold/model change, or alternate candidate regardless of result."
+  },
+  "runtime": {"mujoco": "3.17.0", "workers": 1, "samples_per_episode": 6000, "dt_s": 0.001},
+  "scoring": {"event_window_ms": 320, "quiet_ms": 20, "reference_twin_ms": 20, "edge_match_ms": 2, "preservation_slack_ms": 5, "duration_slack_samples": 5, "post_place_search_start_s": 3.55, "table_contact_threshold_N": 1.0},
+  "negative": [
+    {"id":"r29_tool_a_high","pair":"tool_a","role":"high-offset","mass":1.6,"com":[-0.013,0.019,0.025],"offset":[0.004,-0.003,0.0225],"mechanics":{"table_friction_scale":0.92,"table_solref_time_scale":1.055,"suction_solref_time_scale":0.965,"dof_damping_scale":1.035,"torque_deadband_nm":0.015}},
+    {"id":"r29_tool_a_zero","pair":"tool_a","role":"zero-offset twin","mass":1.6,"com":[-0.013,0.019,0.025],"offset":[0.0,0.0,0.0],"mechanics":{"table_friction_scale":0.92,"table_solref_time_scale":1.055,"suction_solref_time_scale":0.965,"dof_damping_scale":1.035,"torque_deadband_nm":0.015}},
+    {"id":"r29_tool_b_high","pair":"tool_b","role":"high-offset","mass":3.7,"com":[0.023,0.015,0.033],"offset":[-0.003,0.005,0.0285],"mechanics":{"table_friction_scale":1.075,"table_solref_time_scale":0.945,"suction_solref_time_scale":1.035,"dof_damping_scale":0.955,"torque_deadband_nm":0.02}},
+    {"id":"r29_tool_b_zero","pair":"tool_b","role":"zero-offset twin","mass":3.7,"com":[0.023,0.015,0.033],"offset":[0.0,0.0,0.0],"mechanics":{"table_friction_scale":1.075,"table_solref_time_scale":0.945,"suction_solref_time_scale":1.035,"dof_damping_scale":0.955,"torque_deadband_nm":0.02}},
+    {"id":"r29_tool_c_high","pair":"tool_c","role":"high-offset","mass":6.7,"com":[-0.028,0.021,0.046],"offset":[0.005,0.003,0.0345],"mechanics":{"table_friction_scale":0.955,"table_solref_time_scale":1.025,"suction_solref_time_scale":0.945,"dof_damping_scale":1.065,"torque_deadband_nm":0.025}},
+    {"id":"r29_tool_c_zero","pair":"tool_c","role":"zero-offset twin","mass":6.7,"com":[-0.028,0.021,0.046],"offset":[0.0,0.0,0.0],"mechanics":{"table_friction_scale":0.955,"table_solref_time_scale":1.025,"suction_solref_time_scale":0.945,"dof_damping_scale":1.065,"torque_deadband_nm":0.025}},
+    {"id":"r29_light_normal","pair":null,"role":"light force-free","mass":0.42,"com":[0.009,-0.014,0.014],"offset":[-0.0008,0.0012,0.0004],"mechanics":{"table_friction_scale":1.015,"table_solref_time_scale":0.985,"suction_solref_time_scale":1.025,"dof_damping_scale":0.975,"torque_deadband_nm":0.01}},
+    {"id":"r29_resolved_normal","pair":null,"role":"resolved loaded zero-offset","mass":4.9,"com":[0.017,-0.024,0.038],"offset":[0.0,0.0,0.0],"mechanics":{"table_friction_scale":1.045,"table_solref_time_scale":1.065,"suction_solref_time_scale":0.975,"dof_damping_scale":1.015,"torque_deadband_nm":0.018}}
+  ],
+  "single": [
+    {"id":"r29_pick_center_ypos","phase":"pickup","mass":2.6,"com":[0.0,0.0,0.027],"offset":[0.0004,-0.0006,0.0002],"mechanics":{"table_friction_scale":0.935,"table_solref_time_scale":1.035,"suction_solref_time_scale":1.045,"dof_damping_scale":0.965,"torque_deadband_nm":0.012},"impact":[1.485,[0.0,13.0,0.0]]},
+    {"id":"r29_pick_center_yneg","phase":"pickup","mass":4.1,"com":[0.0,0.0,0.035],"offset":[-0.0005,0.0003,0.0006],"mechanics":{"table_friction_scale":1.065,"table_solref_time_scale":0.955,"suction_solref_time_scale":0.955,"dof_damping_scale":1.045,"torque_deadband_nm":0.022},"impact":[1.545,[0.0,-16.5,0.0]]},
+    {"id":"r29_pick_noncenter_oblique","phase":"pickup","mass":3.2,"com":[0.026,-0.022,0.03],"offset":[0.0017,-0.0013,0.0009],"mechanics":{"table_friction_scale":0.975,"table_solref_time_scale":1.075,"suction_solref_time_scale":0.935,"dof_damping_scale":1.025,"torque_deadband_nm":0.017},"impact":[1.615,[12.0,-8.0,0.0]]},
+    {"id":"r29_pick_light_ypos","phase":"pickup","mass":0.62,"com":[-0.01,0.014,0.016],"offset":[-0.0011,0.0007,-0.0003],"mechanics":{"table_friction_scale":1.025,"table_solref_time_scale":0.965,"suction_solref_time_scale":1.015,"dof_damping_scale":0.985,"torque_deadband_nm":0.008},"impact":[1.455,[0.0,12.5,0.0]]},
+    {"id":"r29_pick_heavy_opposite","phase":"pickup","mass":6.1,"com":[0.029,0.023,0.044],"offset":[0.0019,0.0014,0.0011],"mechanics":{"table_friction_scale":0.945,"table_solref_time_scale":1.015,"suction_solref_time_scale":1.055,"dof_damping_scale":0.945,"torque_deadband_nm":0.028},"impact":[1.675,[-10.0,11.0,0.0]]},
+    {"id":"r29_late_support_xpos","phase":"late_box_support","mass":2.85,"com":[-0.021,0.018,0.029],"offset":[0.0,0.0,0.0],"mechanics":{"table_friction_scale":1.055,"table_solref_time_scale":0.925,"suction_solref_time_scale":1.065,"dof_damping_scale":1.055,"torque_deadband_nm":0.019},"impact":[3.925,[15.0,0.0,0.0]]},
+    {"id":"r29_late_support_oblique","phase":"late_box_support","mass":5.45,"com":[0.024,-0.026,0.041],"offset":[0.0,0.0,0.0],"mechanics":{"table_friction_scale":0.925,"table_solref_time_scale":1.045,"suction_solref_time_scale":0.925,"dof_damping_scale":1.075,"torque_deadband_nm":0.024},"impact":[3.975,[-12.0,9.0,0.0]]}
+  ],
+  "paired": [
+    {"id":"r29_pair_light_opposed","phase":"pickup","mass":1.95,"com":[0.004,-0.006,0.023],"offset":[0.0009,-0.0014,0.0005],"mechanics":{"table_friction_scale":1.035,"table_solref_time_scale":0.935,"suction_solref_time_scale":1.025,"dof_damping_scale":0.955,"torque_deadband_nm":0.013},"impacts":[[1.525,[0.0,13.0,0.0]],[1.675,[0.0,-13.5,0.0]]]},
+    {"id":"r29_pair_heavy_oblique","phase":"pickup","mass":5.6,"com":[-0.027,0.025,0.042],"offset":[-0.0018,0.0016,0.001],"mechanics":{"table_friction_scale":0.965,"table_solref_time_scale":1.085,"suction_solref_time_scale":0.955,"dof_damping_scale":1.035,"torque_deadband_nm":0.026},"impacts":[[1.46,[10.0,8.0,0.0]],[1.625,[-11.0,-7.0,0.0]]]}
+  ],
+  "episode_accounting": {"distinct_inputs_per_arm":30,"negative_per_arm":8,"single_none_force_per_arm":14,"paired_four_twins_per_arm":8,"arms":3,"total_actual":90},
+  "gates": {
+    "integrity":"All arms have exact 6000 finite samples, authentic native/second/combined input, identical physics and exact pre-force sensed prefixes.",
+    "preservation":"For every strict C1 or V3 event, memory remains quiet-before/exact-one within +5 ms and +5 active event samples. C1 is never muted; stuck tails, duplicate increases and added false rises are forbidden.",
+    "gain":"A novel gain requires memory strict exact-one, real nonzero input in the attributed interval, exact pre-force prefix, matched twin separation and no tool/table-only or inherited explanation.",
+    "tool":"Real early tool contacts are recorded independently. Memory may not add pretool/late false or lose/delay a comparator tool detection by >5 ms. High-offset and zero-offset twins are reported pairwise.",
+    "late_support":"A measured place-table contact >1 N after 3.55 s must precede input. External perturbation attribution is kept separate from table contact; candidate cannot claim absorption or mute comparator edges.",
+    "physical_support":"G4 status, support summary, costs, saturation and ending table support are recorded for every trace and must match across passive detector arms.",
+    "old_limits":"Comparator non-strict, duplicate or false behavior is listed separately and is a memory regression only if memory worsens it."
+  },
+  "stop_rule":"Run this one fixed candidate to completion once. Preserve every failure; no retune, substitution, selection or second proposal.",
+  "forbidden":["R28 fresh source/results","R27 loaded holdout","other lanes","product source edits","remote","hardware"]
+}

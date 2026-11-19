@@ -1,0 +1,37 @@
+{
+  "schema": "r31-servo-release-preregistration.v1",
+  "status": "FROZEN_BEFORE_CANDIDATE_SCORING",
+  "classification": "post-disclosure repair of shipped R10 servo solitary official miss",
+  "diagnostic_sources": ["E/r31/servo/diagnosis.json", "E/r31/servo/episodes.json"],
+  "mechanism": {
+    "base": "my_detector:Detector unchanged pass-through",
+    "independent_channels": "existing causal delayed NormalForce horizontal vector and shared-estimator horizontal wrench",
+    "physical_gate": "table support must not be admissible; both horizontal magnitudes exceed 5 N and direction cosine is at least 0.8",
+    "threshold_rationale": "5 N is ten times the previously frozen 0.5 N measured resolution; the source requires two different observers and direction agreement, not a lowered R10/yaw scalar",
+    "onset_persistence": 3,
+    "release": "three valid samples without the complete coherent evidence; observer-invalid grip-model transition neither reports nor releases",
+    "ownership": "native/base alarm during the pending physical episode consumes the optional report, including across the grip-model observer reset",
+    "report_samples": 8,
+    "native_contract": "never mask, delay, shorten or clear base output; task clock, true force and outcome are not inputs"
+  },
+  "measured_support": {
+    "target_py10": "coherent episode 3933..3988, no native edge",
+    "target_py15": "coherent 3888..3899 and 3933..3992 with native 3938",
+    "target_py40": "coherent 3877..3899 and 3933..3998 with native 3891",
+    "official_prior_py100_false": "native 3018; no coherent release episode near historical yaw false 3862",
+    "fresh_prior_ny40_false": "native 3540; no coherent release episode near historical yaw false 3861",
+    "no_force": "no coherent release episode"
+  },
+  "known_gates": {
+    "target": "0kg/3.86/+Y10 exactly one candidate-only notice, no reference-twin rise",
+    "strong": "+Y15/+Y40/+Y100 native first identities retained within +5 ms, no added edge",
+    "historical_false": "the disclosed 8kg prior +Y100 and 7.15kg prior -Y40 traces have no 3.861/3.862 release edge",
+    "physics": "all public physical arrays exact",
+    "official": "authentic stock 29 improves 23/24 to 24/24 with identical controls and no added false count"
+  },
+  "prospective_after_known": {
+    "requirement": "prelock load/COM/direction/no-force twins before execution; no source change",
+    "minimum": "at least one genuinely missed late contact recovered, no native loss/advance, no added no-force/recoil edge"
+  },
+  "falsifier": "reject without another mechanism if any known/official protection fails"
+}

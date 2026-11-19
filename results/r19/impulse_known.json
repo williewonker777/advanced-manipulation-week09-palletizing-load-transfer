@@ -1,0 +1,88 @@
+{
+  "schema": "r19-impulse-end-summary.v1",
+  "scope": {
+    "previously_exposed_rows_only": true,
+    "new_independent_stimuli_read": false,
+    "promotion_eligible": false,
+    "submission_changed": false
+  },
+  "episodes": 80,
+  "decision": "passes_four_previously_exposed_rows_not_independent_not_promoted",
+  "both_intervals_ms": {
+    "pair_return_opposed": [
+      [
+        4213,
+        4246
+      ]
+    ],
+    "diag_known_late_fz": [
+      [
+        3973,
+        4007
+      ],
+      [
+        5436,
+        5498
+      ]
+    ],
+    "diag_known_late_fx": [
+      [
+        3973,
+        4007
+      ],
+      [
+        5533,
+        5642
+      ]
+    ],
+    "gap80_weak": [
+      [
+        3999,
+        4031
+      ],
+      [
+        4090,
+        4171
+      ]
+    ]
+  },
+  "exact_R18_onsets": {
+    "pair_return_opposed_both_second_ms": [
+      33
+    ],
+    "anchor_fz_both_ms": [
+      [
+        33
+      ],
+      [
+        21
+      ]
+    ],
+    "anchor_fx_both_ms": [
+      [
+        33
+      ],
+      [
+        28
+      ]
+    ],
+    "gap80_both_ms": [
+      [
+        133
+      ],
+      [
+        24
+      ]
+    ]
+  },
+  "protected": {
+    "all_force_prefix_and_physics_gates": true,
+    "exact_D_R18_physics_and_R18_residual": true,
+    "no_added_false": true,
+    "no_lost_tool": true,
+    "no_stuck_tail": true,
+    "quiet_at_each_credited_onset": true
+  },
+  "limitations": "The boundary passed 80 replays over four already-exposed rows. This is a development result only; independent normals, strong/alternating physical pulses, other axes/gaps and timing remain unopened by this lane.",
+  "source_record_sha256": "4d536f7a2aeb3dca07bc75ed7298074d5ce4ecca2bfd7b6c1d0172da1247aa02"
+}

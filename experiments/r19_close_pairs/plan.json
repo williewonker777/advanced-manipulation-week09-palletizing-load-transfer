@@ -1,0 +1,24 @@
+{
+  "schema": "r19-separation-plan.v1",
+  "prior_protocol": "experiments/r18_paired_impulses/plan.json",
+  "prior_plan_sha256": "9b8f7d7aaeb6bf97e0b3095646e53088a682483d2b8e74dd28e38a1e10d9f789",
+  "purpose": "Determine whether a causal event termination fixes fragmented rises without holding across a second load. First-exposure rows below are not fitter input. Timestamp and applied force are available only to the scorer, never the detector.",
+  "known_rows": "Four previously exposed R18 stress rows and two previously exposed anchored diagnostic pairs; never independent evidence.",
+  "sequence": ["screen six previously exposed normal and four-twin cases", "new normals only", "new forced twins only if both screens pass"],
+  "known_screen": ["match the sealed R18 per-arm scores before interpreting the new arm", "5.71 kg pulse in both: exactly one attributable rise rather than three", "preserve first genuine response to each retained impact within 5 ms of R18 in all four contexts, ignoring duplicate rises", "no added false rise vs R18 in any twin", "no loss of the old 20 ms quiet before onset", "do not newly latch to the end of either isolated 320 ms credit window, or of the episode", "no lost tool response", "D/R18/R19 physical logs and returned R18/R19 residuals identical"],
+  "normal_screen": ["all six new no-impact traces complete", "no candidate false rise in excess of R10, raw R15, D-Coupled or R18; preserve tool events", "R18 and R19 normal alarm bits equal; exact physical & residual parity under the same D controller"],
+  "genuine_attribution": "Use the frozen R18 four-twin v3 causal scoring including exact applied signed force, finite strict grid, 20 ms quiet and +/-20 ms background comparison. Also verify the exact scalar stock force report. At onset the pulse still has zero weight; do not award a rise at onset. Explicitly reject a missing interval between the two actual applied pulses.",
+  "fresh_success": "Per-case: all four targeted contexts have exactly ONE raw and genuine rise; the frozen four-twin candidate gates must pass. No added false rises or tool losses for each twin vs any arm. Preserve each available genuine first response within 5 ms vs R10, raw R15, D-Coupled and R18. No newly masked second or newly latched isolated tail vs incumbent. Successful cases are not a general hardware claim.",
+  "window_ms": 320,
+  "quiet_ms": 20,
+  "extra_timing": "Report all detector-on components start/end [start,end) in ms, active samples, physical off samples, rises after the first within each force window, masked onsets, and sustained activity at 320 ms and 6 s. A high bit carried into a second onset is never a second hit. A missed pulse is not deduplication.",
+  "new": [
+    {"id":"gap12_aligned","mass":5.24,"com":[-0.013,0.016,0.018],"offset":null,"gap_ms":12,"impacts":[[4.200,[0,0,22]],[4.332,[0,0,26]]]},
+    {"id":"gap24_reverse","mass":5.89,"com":[0.017,-0.009,0.021],"offset":[0,0,0],"gap_ms":24,"impacts":[[4.010,[0,0,25]],[4.154,[0,0,-23]]]},
+    {"id":"gap40_cross","mass":4.68,"com":[0.008,0.019,-0.013],"offset":[0.001,-0.001,0],"gap_ms":40,"impacts":[[4.760,[28,0,0]],[4.920,[0,0,22]]]},
+    {"id":"gap80_weak","mass":6.84,"com":[-0.015,0.008,0.023],"offset":null,"gap_ms":80,"impacts":[[3.866,[0,0,-14]],[4.066,[0,0,16]]]},
+    {"id":"gap160_lateral","mass":7.06,"com":[0.018,0.012,-0.009],"offset":[-0.001,0.001,0],"gap_ms":160,"impacts":[[4.910,[0,-20,0]],[5.190,[26,0,0]]]},
+    {"id":"gap24_late_aligned","mass":3.57,"com":[-0.019,-0.012,0.014],"offset":null,"gap_ms":24,"impacts":[[5.180,[22,0,0]],[5.324,[27,0,0]]]}
+  ],
+  "disposition": "Seal the compiler/source hashes before exposing new forces. Publish failures and unopened stages as well as passes. Never adjust these rows to make the gate pass; no submission change."
+}

@@ -1,0 +1,502 @@
+{
+  "schema": "r12-virtual-load-audit.v2",
+  "solver_step_lag_ms": 18,
+  "state_time_lag_ms": 17,
+  "scope": "Three unforced original-kit cases per mode; net vertical external force, not a contact classifier.",
+  "pins": {
+    "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "design": "ca40ba6654f0c8c2ae51ab7fd27a3dd908ddcc3b4cdbae334bbaf07036f54fcd",
+    "sensor": "16171dd512d77fba3a6ab9611c856580ac98225c452047c8b7d3935c98049a2e",
+    "geometry": "8c841e53826409a0f0c336b7b3c6f1335172ffb205ab386f1a60c93012f19db0",
+    "scoring": "b12c49ac0695b36e4f790edc3f7c6ab2905079f2b33576acb63082ecd5d119d0",
+    "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "modes": {
+    "servo": [
+      {
+        "id": "mid",
+        "status": "measured",
+        "score": {
+          "id_window_s": [
+            3.77,
+            3.9
+          ],
+          "n": 130,
+          "matched_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.0012026405015460597,
+            "rmse": 0.03268711290229145,
+            "mae": 0.0272575215823773
+          },
+          "matched_legacy_at_availability": {
+            "available": 129,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_legacy_at_effective_time": {
+            "available": 111,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_zero": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.0556994026612035,
+            "rmse": 0.12611982147893377,
+            "mae": 0.0556994026612035
+          },
+          "adjacent_state_clock_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.0012026405015460597,
+            "rmse": 0.03424337189771882,
+            "mae": 0.028942478701079744
+          },
+          "current_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.0012026405015460686,
+            "rmse": 0.2119113002668526,
+            "mae": 0.11494329752794435
+          },
+          "current_legacy": {
+            "available": 129,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "current_last20": {
+            "available": 20,
+            "required": 20,
+            "bias": 0.01710185695126657,
+            "rmse": 0.029016586544703165,
+            "mae": 0.018423755242686336
+          },
+          "true_support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 1.007673777412152,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "current_last20_estimated_mean": 0.01710185695126657,
+          "current_false_confidence_samples": 0,
+          "lag_samples": 18,
+          "state_lag_samples": 17
+        }
+      },
+      {
+        "id": "heavy",
+        "status": "measured",
+        "score": {
+          "id_window_s": [
+            3.77,
+            3.9
+          ],
+          "n": 130,
+          "matched_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -1.8120263772268126e-05,
+            "rmse": 0.02429446097466913,
+            "mae": 0.018156532101701064
+          },
+          "matched_legacy_at_availability": {
+            "available": 129,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_legacy_at_effective_time": {
+            "available": 111,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_zero": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.050518699645089475,
+            "rmse": 0.11202445530089353,
+            "mae": 0.050518699645089475
+          },
+          "adjacent_state_clock_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -1.8199167416649954e-05,
+            "rmse": 0.0267607740064822,
+            "mae": 0.020642717167810954
+          },
+          "current_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -3.496333610933412e-05,
+            "rmse": 0.18428638049141421,
+            "mae": 0.10013280730088268
+          },
+          "current_legacy": {
+            "available": 129,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "current_last20": {
+            "available": 20,
+            "required": 20,
+            "bias": 0.0206872524107401,
+            "rmse": 0.03710630408087064,
+            "mae": 0.024068039975457683
+          },
+          "true_support": {
+            "mean_mg": 0.00010895335701065295,
+            "min_mg": 0.0,
+            "peak_mg": 1.0057913312414402,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "current_last20_estimated_mean": 0.020796205767750753,
+          "current_false_confidence_samples": 0,
+          "lag_samples": 18,
+          "state_lag_samples": 17
+        }
+      },
+      {
+        "id": "pickup_offset",
+        "status": "measured",
+        "score": {
+          "id_window_s": [
+            3.77,
+            3.9
+          ],
+          "n": 130,
+          "matched_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.0027701375135460895,
+            "rmse": 0.03350426304194607,
+            "mae": 0.026400413124625738
+          },
+          "matched_legacy_at_availability": {
+            "available": 129,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_legacy_at_effective_time": {
+            "available": 111,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_zero": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.022154019907580345,
+            "rmse": 0.049103831838191794,
+            "mae": 0.022154019907580345
+          },
+          "adjacent_state_clock_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.0027708815146110124,
+            "rmse": 0.03289851812324588,
+            "mae": 0.025024383662824938
+          },
+          "current_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.0027711217990598813,
+            "rmse": 0.08846249115818573,
+            "mae": 0.057268607382267356
+          },
+          "current_legacy": {
+            "available": 129,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "current_last20": {
+            "available": 20,
+            "required": 20,
+            "bias": 0.014192216381080928,
+            "rmse": 0.027053343043116528,
+            "mae": 0.019221482628779128
+          },
+          "true_support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 1.0096868081744381,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "current_last20_estimated_mean": 0.014192216381080928,
+          "current_false_confidence_samples": 0,
+          "lag_samples": 18,
+          "state_lag_samples": 17
+        }
+      }
+    ],
+    "torque": [
+      {
+        "id": "mid",
+        "status": "measured",
+        "score": {
+          "id_window_s": [
+            3.77,
+            3.9
+          ],
+          "n": 130,
+          "matched_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": 0.00016911006308143419,
+            "rmse": 0.0327192547652261,
+            "mae": 0.02749618001514277
+          },
+          "matched_legacy_at_availability": {
+            "available": 128,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_legacy_at_effective_time": {
+            "available": 110,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_zero": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.06794239290073174,
+            "rmse": 0.13978661319029023,
+            "mae": 0.06794239290073174
+          },
+          "adjacent_state_clock_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -4.9948323365110415e-05,
+            "rmse": 0.033669316508629116,
+            "mae": 0.027739542790294364
+          },
+          "current_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.016507068309989575,
+            "rmse": 0.1961090922694773,
+            "mae": 0.1204204184546957
+          },
+          "current_legacy": {
+            "available": 128,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "current_last20": {
+            "available": 20,
+            "required": 20,
+            "bias": 0.04481248032276408,
+            "rmse": 0.19462927792805562,
+            "mae": 0.17522717103750496
+          },
+          "true_support": {
+            "mean_mg": 0.10766176803823857,
+            "min_mg": 0.0008805925068927129,
+            "peak_mg": 1.0077935682992976,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "current_last20_estimated_mean": 0.1524742483610027,
+          "current_false_confidence_samples": 0,
+          "lag_samples": 18,
+          "state_lag_samples": 17
+        }
+      },
+      {
+        "id": "heavy",
+        "status": "measured",
+        "score": {
+          "id_window_s": [
+            3.77,
+            3.9
+          ],
+          "n": 130,
+          "matched_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.0021823871767127257,
+            "rmse": 0.025446395514399162,
+            "mae": 0.020913900737179438
+          },
+          "matched_legacy_at_availability": {
+            "available": 129,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_legacy_at_effective_time": {
+            "available": 111,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_zero": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.06054774260635826,
+            "rmse": 0.13001360366807035,
+            "mae": 0.06054774260635826
+          },
+          "adjacent_state_clock_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.002398470700340011,
+            "rmse": 0.02677010236005158,
+            "mae": 0.0224104848186558
+          },
+          "current_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.019313620087261753,
+            "rmse": 0.20398451329598158,
+            "mae": 0.12082465703479715
+          },
+          "current_legacy": {
+            "available": 129,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "current_last20": {
+            "available": 20,
+            "required": 20,
+            "bias": -0.042270263793738806,
+            "rmse": 0.1563441621813274,
+            "mae": 0.12686523951261075
+          },
+          "true_support": {
+            "mean_mg": 0.11483101963804873,
+            "min_mg": 0.0,
+            "peak_mg": 1.0060789742269758,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "current_last20_estimated_mean": 0.07256075584430993,
+          "current_false_confidence_samples": 0,
+          "lag_samples": 18,
+          "state_lag_samples": 17
+        }
+      },
+      {
+        "id": "pickup_offset",
+        "status": "measured",
+        "score": {
+          "id_window_s": [
+            3.77,
+            3.9
+          ],
+          "n": 130,
+          "matched_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.001815958543837434,
+            "rmse": 0.031398959222597805,
+            "mae": 0.025273358130165475
+          },
+          "matched_legacy_at_availability": {
+            "available": 126,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_legacy_at_effective_time": {
+            "available": 108,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "matched_zero": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.019235005136664325,
+            "rmse": 0.040124776900561744,
+            "mae": 0.019235005136664325
+          },
+          "adjacent_state_clock_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.0021612047137933906,
+            "rmse": 0.03163550979644743,
+            "mae": 0.025532151567739737
+          },
+          "current_sensor": {
+            "available": 130,
+            "required": 130,
+            "bias": -0.021561739628491637,
+            "rmse": 0.07371646714215796,
+            "mae": 0.051577420977570135
+          },
+          "current_legacy": {
+            "available": 126,
+            "required": 130,
+            "bias": null,
+            "rmse": null,
+            "mae": null
+          },
+          "current_last20": {
+            "available": 20,
+            "required": 20,
+            "bias": -0.0677697155979323,
+            "rmse": 0.13644888950463702,
+            "mae": 0.10562602500165683
+          },
+          "true_support": {
+            "mean_mg": 0.1331510361177224,
+            "min_mg": 0.01590019549660179,
+            "peak_mg": 1.0113154958612793,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "current_last20_estimated_mean": 0.06538132051979009,
+          "current_false_confidence_samples": 0,
+          "lag_samples": 18,
+          "state_lag_samples": 17
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "r23-independent-measurement-provenance.v1",
+  "candidate_tuned_after_holdout": false,
+  "cohort_and_gate_plan_sha256_before_candidate_outcomes": "5414441771b006dfe0fb23c073b7a5f640964a87dd48dd7f6df87df668fc332b",
+  "cohort_and_gate_plan_unchanged": true,
+  "early_evaluator_sha256": "e12dc8f27564289e715fee981c3dc1ad30e835ce15f30527befda114e5a8f8df",
+  "early_evaluator_executable": false,
+  "locked_executable_sha256": "85b8b0279b8bd18064d3ca180358dcc13ce6fde5d94dd42cbd0f327db7ad4f24",
+  "executable_difference": "One missing closing parenthesis was added. Reconstructed early bytes match the independently captured checksum; the executable was fixed before any independent outcome.",
+  "early_protocol_sha256": "10fdbfeaa629954f8ab02b20931de9c043f467ed7149a378ff9a7b9daff7a798",
+  "locked_protocol_sha256": "1652512b6267e8984f30f35ee62d6b540b0af389253d875fa2ecd627af2d850c",
+  "changed_protocol_fields": [
+    "selection_pin/path",
+    "selection_pin/selected_entrypoint",
+    "selection_pin/selection_basis",
+    "selection_pin/sha256",
+    "source_pins/results/r23/exposed_choice.json",
+    "source_pins/sim/__init__.py"
+  ],
+  "protocol_note": "Kit/source classification and final exposed-choice/adapter provenance were completed before the locked run, not all runtime packaging was fixed at the early timestamp.",
+  "lock_sha256": "bcfdeace274ae7f24a11d2d8d63824304c312b7a0dd447c55953995fe7ea22d8",
+  "exposed_choice_sha256": "b69e57718ba1f14c84f7249a7423d11f229247dfbc88c5cd65264fcc43814748"
+}

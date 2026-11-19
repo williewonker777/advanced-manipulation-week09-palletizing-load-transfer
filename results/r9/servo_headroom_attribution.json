@@ -1,0 +1,255 @@
+{
+  "schema": "R9_SATURATION_RELEASE_FAILURE_DIAGNOSIS.v1",
+  "pins": {
+    "design": "325afc14c0f296bf5aa4415c458bfcac07b12757676e708607e3af262b4cab7b",
+    "HEADROOM1.py": "ccaaf08dfe1d62dad7b88bc61a93e127285f61c582aa3904f755a88e90043908",
+    "FAST2.py": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+    "C1.py": "3e3a67f75fcf795ec49d847b54ac72514d69bb17bc750f92478f1785e6d308e0"
+  },
+  "frozen_condition": "H0",
+  "rows": {
+    "R1_C1": {
+      "reference_metrics": {
+        "rms_mm": 1.555871080108239,
+        "max_mm": 4.758106909743222,
+        "saturation_pct": 0.0,
+        "diverged": false,
+        "torque_step_pick_nm": 9.034262653143216,
+        "torque_step_place_nm": 16.78407511573087,
+        "table_force_place_max_n": 78.86151137250654,
+        "false_alarms_pick": 0,
+        "false_alarms_place": 0,
+        "false_alarms_other": 1,
+        "false_alarms": 1,
+        "tool_contact_peak_n": 0.0,
+        "selected_endpoint_delay": null,
+        "endpoint_advance_guarded": false
+      },
+      "reference_r5": {
+        "outcome": "reference",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 1,
+        "false_alarm_times": [
+          1.724
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "collision_metrics": {
+        "rms_mm": 1.583416826646207,
+        "max_mm": 4.758106909743222,
+        "saturation_pct": 0.0,
+        "diverged": false,
+        "torque_step_pick_nm": 9.034262653143216,
+        "torque_step_place_nm": 16.4354596255466,
+        "table_force_place_max_n": 78.85324415744309,
+        "false_alarms_pick": 0,
+        "false_alarms_place": 0,
+        "false_alarms_other": 1,
+        "false_alarms": 1,
+        "tool_contact_peak_n": 0.0,
+        "selected_endpoint_delay": null,
+        "endpoint_advance_guarded": false
+      },
+      "collision_r5": {
+        "outcome": "detected",
+        "delay_ms": 79.00000000000018,
+        "prealarm": false,
+        "false_alarms": 1,
+        "false_alarm_times": [
+          1.724
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      }
+    },
+    "R1_FAST2": {
+      "reference_metrics": {
+        "rms_mm": 1.555871080108239,
+        "max_mm": 4.758106909743222,
+        "saturation_pct": 0.0,
+        "diverged": false,
+        "torque_step_pick_nm": 9.034262653143216,
+        "torque_step_place_nm": 16.78407511573087,
+        "table_force_place_max_n": 78.86151137250654,
+        "false_alarms_pick": 0,
+        "false_alarms_place": 0,
+        "false_alarms_other": 1,
+        "false_alarms": 1,
+        "tool_contact_peak_n": 0.0,
+        "selected_endpoint_delay": null,
+        "endpoint_advance_guarded": false
+      },
+      "reference_r5": {
+        "outcome": "reference",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 1,
+        "false_alarm_times": [
+          1.724
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "collision_metrics": {
+        "rms_mm": 1.583416826646207,
+        "max_mm": 4.758106909743222,
+        "saturation_pct": 0.0,
+        "diverged": false,
+        "torque_step_pick_nm": 9.034262653143216,
+        "torque_step_place_nm": 16.4354596255466,
+        "table_force_place_max_n": 78.85324415744309,
+        "false_alarms_pick": 0,
+        "false_alarms_place": 0,
+        "false_alarms_other": 1,
+        "false_alarms": 1,
+        "tool_contact_peak_n": 0.0,
+        "selected_endpoint_delay": null,
+        "endpoint_advance_guarded": false
+      },
+      "collision_r5": {
+        "outcome": "detected",
+        "delay_ms": 79.00000000000018,
+        "prealarm": false,
+        "false_alarms": 1,
+        "false_alarm_times": [
+          1.724
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      }
+    },
+    "HEADROOM1_C1": {
+      "reference_metrics": {
+        "rms_mm": 1.550905265057641,
+        "max_mm": 4.5657708572751625,
+        "saturation_pct": 0.0,
+        "diverged": false,
+        "torque_step_pick_nm": 9.034262653143216,
+        "torque_step_place_nm": 16.56393651793863,
+        "table_force_place_max_n": 78.8580187552926,
+        "false_alarms_pick": 0,
+        "false_alarms_place": 1,
+        "false_alarms_other": 1,
+        "false_alarms": 2,
+        "tool_contact_peak_n": 0.0,
+        "selected_endpoint_delay": -0.004,
+        "endpoint_advance_guarded": true
+      },
+      "reference_r5": {
+        "outcome": "reference",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 2,
+        "false_alarm_times": [
+          1.724,
+          3.926
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "collision_metrics": {
+        "rms_mm": 1.5773911158201073,
+        "max_mm": 4.5657708572751625,
+        "saturation_pct": 0.0,
+        "diverged": false,
+        "torque_step_pick_nm": 9.034262653143216,
+        "torque_step_place_nm": 16.235477754062543,
+        "table_force_place_max_n": 78.84433882911911,
+        "false_alarms_pick": 0,
+        "false_alarms_place": 0,
+        "false_alarms_other": 1,
+        "false_alarms": 1,
+        "tool_contact_peak_n": 0.0,
+        "selected_endpoint_delay": -0.004,
+        "endpoint_advance_guarded": true
+      },
+      "collision_r5": {
+        "outcome": "indistinguishable",
+        "delay_ms": 80.00000000000007,
+        "prealarm": false,
+        "false_alarms": 1,
+        "false_alarm_times": [
+          1.724
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      }
+    },
+    "HEADROOM1_FAST2": {
+      "reference_metrics": {
+        "rms_mm": 1.550905265057641,
+        "max_mm": 4.5657708572751625,
+        "saturation_pct": 0.0,
+        "diverged": false,
+        "torque_step_pick_nm": 9.034262653143216,
+        "torque_step_place_nm": 16.56393651793863,
+        "table_force_place_max_n": 78.8580187552926,
+        "false_alarms_pick": 0,
+        "false_alarms_place": 1,
+        "false_alarms_other": 1,
+        "false_alarms": 2,
+        "tool_contact_peak_n": 0.0,
+        "selected_endpoint_delay": -0.004,
+        "endpoint_advance_guarded": true
+      },
+      "reference_r5": {
+        "outcome": "reference",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 2,
+        "false_alarm_times": [
+          1.724,
+          3.926
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "collision_metrics": {
+        "rms_mm": 1.5773911158201073,
+        "max_mm": 4.5657708572751625,
+        "saturation_pct": 0.0,
+        "diverged": false,
+        "torque_step_pick_nm": 9.034262653143216,
+        "torque_step_place_nm": 16.235477754062543,
+        "table_force_place_max_n": 78.84433882911911,
+        "false_alarms_pick": 0,
+        "false_alarms_place": 0,
+        "false_alarms_other": 1,
+        "false_alarms": 1,
+        "tool_contact_peak_n": 0.0,
+        "selected_endpoint_delay": -0.004,
+        "endpoint_advance_guarded": true
+      },
+      "collision_r5": {
+        "outcome": "indistinguishable",
+        "delay_ms": 80.00000000000007,
+        "prealarm": false,
+        "false_alarms": 1,
+        "false_alarm_times": [
+          1.724
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      }
+    }
+  },
+  "interpretation_rule": "compare controller-only HEADROOM1_C1 and detector-only R1_FAST2 crosses against R1_C1; this diagnosis cannot change the failed adoption gate"
+}

@@ -1,0 +1,404 @@
+{
+  "schema": "r24-transfer-final-summary.v1",
+  "decision": "accepted_bounded_experiment_not_promoted",
+  "candidate": "experiments.r24_transfer.deadband:Controller",
+  "candidate_sha256": "73bd939b7d3a1ca24e8db4535f9d8193755ea8e0af21cf4f7e672dccf33241d5",
+  "mechanism": {
+    "support_deadband_mg": [
+      0.25,
+      0.5
+    ],
+    "blend": "C2 smoothstep",
+    "handoff_multiplier": true,
+    "moment_hard_cap": "0.03*m*g*0.10m",
+    "instantaneous_normal_projection": true
+  },
+  "diagnosis": {
+    "heavy_onset_window_s": [
+      3.87,
+      3.876
+    ],
+    "max_abs_actual_table_fz_delta_n": 0.30475751827123965,
+    "max_abs_public_corrected_fz_delta_n": 4.033182793117064,
+    "max_abs_public_point_vz_delta_mm_s": 4.56832292420295,
+    "interpretation": "time-extended elastic/observer response dominates the rigid instantaneous projection residual"
+  },
+  "rejected_phase_one": {
+    "candidate": "experiments.r24_transfer.controller:Controller",
+    "candidate_sha256": "86e154b7411f1421f93d26279b410abe8aa954ca878b4078b7b8103ed2233c81",
+    "failed_gate": "sh5_false_removed",
+    "candidate_false_alarm_times": [
+      3.903
+    ],
+    "validation_opened": false
+  },
+  "development": {
+    "passed": true,
+    "rows": [
+      {
+        "id": "sh5",
+        "passed": true,
+        "gates": {
+          "status": true,
+          "plant_changed": true,
+          "g4": true,
+          "cost_r10": true,
+          "cost_r19": true,
+          "peak": true,
+          "saturation": true,
+          "tool": true,
+          "no_additional_false": true,
+          "sh5_false_removed": true
+        },
+        "false_alarm_times": {
+          "r10": [],
+          "r19": [
+            3.903
+          ],
+          "candidate": []
+        },
+        "support": {
+          "mean_mg": 0.619476538329388,
+          "min_mg": 0.47989254717574903,
+          "peak_mg": 1.0388985042793473,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "saturation_pct": 0.0,
+        "tool_delay_ms": 11.0,
+        "intervention": {
+          "samples": 46,
+          "impulse_nms": 0.004657216269586625,
+          "max_moment_nm": 0.19570950000000004,
+          "max_joint_delta_nm": 0.14710723781154433,
+          "max_normal_acceleration_after_m_s2": 6.0279775774798135e-18,
+          "support_weight_range": [
+            0.0,
+            1.0
+          ]
+        },
+        "max_cost_ratio": {
+          "r10": 1.0076578973653214,
+          "r19": 1.0
+        },
+        "g4_all_four": true
+      },
+      {
+        "id": "heavy8_offset",
+        "passed": true,
+        "gates": {
+          "status": true,
+          "plant_changed": true,
+          "g4": true,
+          "cost_r10": true,
+          "cost_r19": true,
+          "peak": true,
+          "saturation": true,
+          "tool": true,
+          "no_additional_false": true,
+          "heavy_no_new_alarm": true
+        },
+        "false_alarm_times": {
+          "r10": [],
+          "r19": [
+            3.9170000000000003
+          ],
+          "candidate": [
+            3.9170000000000003
+          ]
+        },
+        "support": {
+          "mean_mg": 0.7714279100668306,
+          "min_mg": 0.6558791477782302,
+          "peak_mg": 1.0537362022706276,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "saturation_pct": 0.0,
+        "tool_delay_ms": 12.0,
+        "intervention": {
+          "samples": 39,
+          "impulse_nms": 0.0028153799509970916,
+          "max_moment_nm": 0.23544,
+          "max_joint_delta_nm": 0.1745338603069431,
+          "max_normal_acceleration_after_m_s2": 5.778159276498812e-18,
+          "support_weight_range": [
+            0.0,
+            1.0
+          ]
+        },
+        "max_cost_ratio": {
+          "r10": 1.0497592511690954,
+          "r19": 1.0
+        },
+        "g4_all_four": true
+      },
+      {
+        "id": "sh3",
+        "passed": true,
+        "gates": {
+          "status": true,
+          "plant_changed": true,
+          "g4": true,
+          "cost_r10": true,
+          "cost_r19": true,
+          "peak": true,
+          "saturation": true,
+          "tool": true,
+          "no_additional_false": true
+        },
+        "false_alarm_times": {
+          "r10": [],
+          "r19": [],
+          "candidate": []
+        },
+        "support": {
+          "mean_mg": 0.6378570678947155,
+          "min_mg": 0.5023993769759024,
+          "peak_mg": 1.0360820792423622,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "saturation_pct": 0.0,
+        "tool_delay_ms": null,
+        "intervention": {
+          "samples": 48,
+          "impulse_nms": 0.005203621855713483,
+          "max_moment_nm": 0.208953,
+          "max_joint_delta_nm": 0.15814410599606898,
+          "max_normal_acceleration_after_m_s2": 4.688583527368905e-18,
+          "support_weight_range": [
+            0.0,
+            1.0
+          ]
+        },
+        "max_cost_ratio": {
+          "r10": 1.0,
+          "r19": 1.0001673641541666
+        },
+        "g4_all_four": true
+      },
+      {
+        "id": "unloaded",
+        "passed": true,
+        "gates": {
+          "physical_parity": true,
+          "zero_samples": true
+        },
+        "false_alarm_times": {
+          "r19": [
+            3.873
+          ],
+          "candidate": [
+            3.873
+          ]
+        },
+        "support": null,
+        "saturation_pct": 0.0,
+        "tool_delay_ms": null,
+        "intervention": {
+          "samples": 0,
+          "impulse_nms": 0.0,
+          "max_moment_nm": 0.0,
+          "max_joint_delta_nm": 0.0,
+          "max_normal_acceleration_after_m_s2": 0.0,
+          "support_weight_range": null
+        }
+      }
+    ]
+  },
+  "validation": {
+    "passed": true,
+    "rows": [
+      {
+        "id": "rp1:up",
+        "passed": true,
+        "gates": {
+          "status": true,
+          "plant_changed": true,
+          "g4": true,
+          "cost_r10": true,
+          "cost_r19": true,
+          "peak": true,
+          "saturation": true,
+          "tool": true,
+          "no_additional_false": true
+        },
+        "false_alarm_times": {
+          "r10": [],
+          "r19": [],
+          "candidate": []
+        },
+        "support": {
+          "mean_mg": 0.6369030744991512,
+          "min_mg": 0.42560689701542187,
+          "peak_mg": 1.0473328206306183,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "saturation_pct": 0.0,
+        "tool_delay_ms": 12.0,
+        "intervention": {
+          "samples": 39,
+          "impulse_nms": 0.0010098411058217138,
+          "max_moment_nm": 0.0928485181332239,
+          "max_joint_delta_nm": 0.0726378706105903,
+          "max_normal_acceleration_after_m_s2": 3.534253306119158e-18,
+          "support_weight_range": [
+            0.0,
+            0.9618577995452613
+          ]
+        },
+        "max_cost_ratio": {
+          "r10": 1.0448874535037742,
+          "r19": 1.0000352212109949
+        },
+        "g4_all_four": true
+      },
+      {
+        "id": "ec1:up",
+        "passed": true,
+        "gates": {
+          "status": true,
+          "plant_changed": true,
+          "g4": true,
+          "cost_r10": true,
+          "cost_r19": true,
+          "peak": true,
+          "saturation": true,
+          "tool": true,
+          "no_additional_false": true
+        },
+        "false_alarm_times": {
+          "r10": [],
+          "r19": [],
+          "candidate": []
+        },
+        "support": {
+          "mean_mg": 0.6504714194240897,
+          "min_mg": 0.3553446465064702,
+          "peak_mg": 1.047997192811057,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "saturation_pct": 0.0,
+        "tool_delay_ms": 12.0,
+        "intervention": {
+          "samples": 37,
+          "impulse_nms": 0.0009277997699697676,
+          "max_moment_nm": 0.10101821124473517,
+          "max_joint_delta_nm": 0.0792109744387905,
+          "max_normal_acceleration_after_m_s2": 2.8587289739888414e-18,
+          "support_weight_range": [
+            0.0,
+            0.9949249385152207
+          ]
+        },
+        "max_cost_ratio": {
+          "r10": 1.0439784399541772,
+          "r19": 1.0000168210806077
+        },
+        "g4_all_four": true
+      },
+      {
+        "id": "ec3:up",
+        "passed": true,
+        "gates": {
+          "status": true,
+          "plant_changed": true,
+          "g4": true,
+          "cost_r10": true,
+          "cost_r19": true,
+          "peak": true,
+          "saturation": true,
+          "tool": true,
+          "no_additional_false": true
+        },
+        "false_alarm_times": {
+          "r10": [],
+          "r19": [
+            3.919
+          ],
+          "candidate": [
+            3.919
+          ]
+        },
+        "support": {
+          "mean_mg": 0.7794591862606497,
+          "min_mg": 0.6668987613279692,
+          "peak_mg": 1.0498576446864287,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "saturation_pct": 0.0,
+        "tool_delay_ms": 12.0,
+        "intervention": {
+          "samples": 39,
+          "impulse_nms": 0.002524008418203117,
+          "max_moment_nm": 0.1927665,
+          "max_joint_delta_nm": 0.1452385983177013,
+          "max_normal_acceleration_after_m_s2": 8.025293141177887e-18,
+          "support_weight_range": [
+            0.0,
+            1.0
+          ]
+        },
+        "max_cost_ratio": {
+          "r10": 1.0464878195177154,
+          "r19": 1.0
+        },
+        "g4_all_four": true
+      }
+    ]
+  },
+  "aggregate": {
+    "positive_rows": 6,
+    "all_positive_g4": true,
+    "max_cost_ratio_r10": 1.0497592511690954,
+    "max_cost_ratio_r19": 1.0001673641541666,
+    "max_saturation_pct": 0,
+    "tool_rows": {
+      "sh5": 11.0,
+      "heavy8_offset": 12.0,
+      "rp1:up": 12.0,
+      "ec1:up": 12.0,
+      "ec3:up": 12.0
+    },
+    "sh5_improvement_retained": true,
+    "heavy_no_new_alarm": true,
+    "unloaded_physical_parity": true
+  },
+  "reproducibility": {
+    "development_scientific_sha256": "81f1b68ec88d77e7743601f2dfdc04be6ca96de060e85e09a40de8a6034ca3c3",
+    "validation_scientific_sha256": "d38969311060f1aa0144bc862e0202503b316e628e124d24822a73767a5f952b",
+    "excluded_wall_clock_only": [
+      "ctrl_p99_us",
+      "stream_timing_us"
+    ]
+  },
+  "source_sha256": {
+    "experiments/r24_transfer/deadband.py": "73bd939b7d3a1ca24e8db4535f9d8193755ea8e0af21cf4f7e672dccf33241d5",
+    "experiments/r24_transfer/deadband_plan.json": "cdd4d5aa01f65d4f1e860231722c6e7f40d23bf2b017282f467ba03c603b994b",
+    "experiments/r24_transfer/deadband_study.py": "5d0405efcf6002b45ca1fa325a6f11a37b41da94b9641c206d4598648821ca0c",
+    "experiments/r24_transfer/test_deadband.py": "0af34f8616188ae678489d5b35bd47575f71d47ecdec0a163a7c932b8a04ae60"
+  },
+  "evidence_sha256": {
+    "r24/transfer/time_response.json": "0ceff7b923c491dd8a0bcb40c2a5f889ed83650bb3b3c039960dffe128eee52c",
+    "r24/transfer/development.json": "938fb937035479ec3dc3e5113d4104479d18e305463dd196b60d66b6ebc80f94",
+    "r24/transfer/deadband_development.json": "ce5aae4a9dc97ea72805a0449fa16a83ae0bbdad12619d5a4f31367220047fc0",
+    "r24/transfer/deadband_validation.json": "5fccee55bf807e9a5854e9e327288812cd36402ed33b2bc6dc063b51cdbebed5"
+  },
+  "scope": "bounded experiment only; no detector, old source, default, kit, public package, hardware, or remote change"
+}

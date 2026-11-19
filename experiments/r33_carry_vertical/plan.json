@@ -1,0 +1,24 @@
+{
+  "schema": "r33-carry-vertical-plan.v1",
+  "status": "registered-before-candidate-output",
+  "parent": "experiments.r31_held_identity.candidate:Detector",
+  "problem": "Seven disclosed pure-Z transport collisions have no R31 strict event.",
+  "mechanism": "A causal adjacent-window vertical innovation must agree in sign in the existing spatial projection and independent shared inverse-wrench estimate while the gripper is closed and measured table support is absent.",
+  "inference_prohibitions": [
+    "task clock or absolute time",
+    "case identity",
+    "payload mass or COM truth",
+    "programmed or simulator external force",
+    "desired trajectory"
+  ],
+  "window_samples": 40,
+  "persistence_samples": 2,
+  "fit_reference_ids": [0, 6, 17, 29, 34, 44, 51, 67, 68, 85, 89, 102, 112, 119, 136, 150, 153, 170, 187],
+  "audit_reference_ids": [8, 16, 25, 33, 42, 50, 59, 75, 83, 92, 100, 109, 117, 126, 134, 143, 159, 176, 184],
+  "fit_rule": "threshold = 1.25 * maximum eligible signed-concurrence innovation on fit normals + 0.10 N",
+  "normal_gate": "audit maximum must not exceed threshold; otherwise stop before positive candidate scoring",
+  "event_rule": "One owned physical excursion; incumbent activity consumes the optional notice, and rearm requires measured concurrence to settle below half threshold.",
+  "positive_gate": "Recover at least 6/7 disclosed transport misses with force-overlapping Boolean output and no R31 strict loss.",
+  "protection_gate": "No new edge on matched no-force twins; no loss, duplicate, or first-rise delay on the complete 19 disclosed pure-Z R31 misses and protected pure-Z rows.",
+  "stop_rule": "No threshold or lifecycle changes after candidate freeze. A failed gate rejects the only candidate."
+}

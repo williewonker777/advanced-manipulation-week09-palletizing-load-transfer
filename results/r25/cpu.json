@@ -1,0 +1,647 @@
+{
+  "schema": "r25-shared-cpu-profile.v1",
+  "cpu_simulation_only": true,
+  "hard_realtime_proven": false,
+  "measured": "Controller.compute and detector.update on the same 6000 ticks; detector reset separate; solver, IO and end-to-end latency not included.",
+  "new_episodes": 16,
+  "summary": {
+    "r24_joint": {
+      "samples": 48000,
+      "max_detector_reset_wall_us": 4973.748,
+      "sum_wall": {
+        "worst_episode_p99_us": 374.8807000000003,
+        "max_us": 4034.191,
+        "at_least_1ms": 2
+      },
+      "sum_cpu": {
+        "worst_episode_p99_us": 370.7542000000003,
+        "max_us": 4030.797,
+        "at_least_1ms": 2
+      }
+    },
+    "experiments.r25_composed.detector:Detector": {
+      "samples": 48000,
+      "max_detector_reset_wall_us": 4168.21,
+      "sum_wall": {
+        "worst_episode_p99_us": 354.23700000000014,
+        "max_us": 524.479,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "worst_episode_p99_us": 350.4148000000001,
+        "max_us": 520.388,
+        "at_least_1ms": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "repeat": 0,
+      "arm": "r24_joint",
+      "twin": "none",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 196.84,
+        "p99_us": 347.3011,
+        "max_us": 4034.191,
+        "at_least_1ms": 2
+      },
+      "sum_cpu": {
+        "p50_us": 194.065,
+        "p99_us": 343.0016100000001,
+        "max_us": 4030.797,
+        "at_least_1ms": 2
+      },
+      "max_wall_tick": 442,
+      "max_cpu_tick": 442,
+      "detector_reset_wall_us": 1051.407,
+      "detector_reset_cpu_us": 1047.917,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "83e5c198733884d5f0b65e022404c780f9e08c1973e5e3c33ba107d6e08a0fd5",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "e1e1895143e0974e9aae8987a745e81be36581c378b6cac036c8d02ae4188554",
+        "e_mm": "77728bcf6366d619b5256f93a83d36a9b72204dd6028b5d165d56ff22a7086d9",
+        "f_table": "5917801c970bbe533421be73a0b53e535f24e3d68effcd020ad089a21df6d8f3",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "9203794fbda5369a119a5d5de21ce2ec6f5de3b699f70d19b5f73fb1df6521ce",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      },
+      "residual": "ef99665072e585b9a978991c78fd7c15fe5f402932b31de594bb2f308f780c12",
+      "alarm": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+    },
+    {
+      "repeat": 0,
+      "arm": "experiments.r25_composed.detector:Detector",
+      "twin": "none",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 208.4345,
+        "p99_us": 354.23700000000014,
+        "max_us": 444.359,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 205.4795,
+        "p99_us": 350.4148000000001,
+        "max_us": 437.688,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 0,
+      "max_cpu_tick": 0,
+      "detector_reset_wall_us": 836.948,
+      "detector_reset_cpu_us": 833.577,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "83e5c198733884d5f0b65e022404c780f9e08c1973e5e3c33ba107d6e08a0fd5",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "e1e1895143e0974e9aae8987a745e81be36581c378b6cac036c8d02ae4188554",
+        "e_mm": "77728bcf6366d619b5256f93a83d36a9b72204dd6028b5d165d56ff22a7086d9",
+        "f_table": "5917801c970bbe533421be73a0b53e535f24e3d68effcd020ad089a21df6d8f3",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "9203794fbda5369a119a5d5de21ce2ec6f5de3b699f70d19b5f73fb1df6521ce",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      },
+      "residual": "ef99665072e585b9a978991c78fd7c15fe5f402932b31de594bb2f308f780c12",
+      "alarm": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+    },
+    {
+      "repeat": 0,
+      "arm": "r24_joint",
+      "twin": "first",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 195.2645,
+        "p99_us": 284.85300000000007,
+        "max_us": 407.049,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 192.514,
+        "p99_us": 281.6191,
+        "max_us": 403.249,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 1474,
+      "max_cpu_tick": 1474,
+      "detector_reset_wall_us": 1550.497,
+      "detector_reset_cpu_us": 1547.275,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "96464c41237a39edf3dbd161e857d1ee01878a75986eff73ef741e4bf38727ef",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "7fe9abdef2c590d536d3130b8d36d4f3c2a79c1d5a0dcb72eee78b0ba4bbb689",
+        "e_mm": "2f41d83f452e85eed3319dadffcb61f4df349cadc31f7f352452f6822766d7e7",
+        "f_table": "c119cd8edaba19b06cfa3cc6104d2944d29b66cc5aaf4cc1dd86b03c60cda35d",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "f67ec9776c635aa669442c271532dfecc04fab225edcb8286dfe5fb69471f9f7",
+        "f_ext": "ef9af872c78ffba466ed4f4c35021f9f5a1e6143b2ddf46f229708350190ba94",
+        "f_ext_xyz_native": "c5085bbda3140f0f74b69846ba98b7d777a69fb99e46e671ff54732d76ac2a1f",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "9fdc76e558c06b97165dd51daee6ef21bd953fa9f916aea1b64d7db638d0aa80"
+      },
+      "residual": "c38497c33fc84b1bceb423147e5ccc2ad3ba91d125f760e399ed0dd517141e44",
+      "alarm": "0063edc5af832dbdeeb6aaa56e20ce810d2c473496d207ef9eb24391fcf83c98"
+    },
+    {
+      "repeat": 0,
+      "arm": "experiments.r25_composed.detector:Detector",
+      "twin": "first",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 203.184,
+        "p99_us": 319.4138000000001,
+        "max_us": 428.339,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 200.35000000000002,
+        "p99_us": 315.9494,
+        "max_us": 424.709,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 2918,
+      "max_cpu_tick": 2918,
+      "detector_reset_wall_us": 826.218,
+      "detector_reset_cpu_us": 822.918,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "96464c41237a39edf3dbd161e857d1ee01878a75986eff73ef741e4bf38727ef",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "7fe9abdef2c590d536d3130b8d36d4f3c2a79c1d5a0dcb72eee78b0ba4bbb689",
+        "e_mm": "2f41d83f452e85eed3319dadffcb61f4df349cadc31f7f352452f6822766d7e7",
+        "f_table": "c119cd8edaba19b06cfa3cc6104d2944d29b66cc5aaf4cc1dd86b03c60cda35d",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "f67ec9776c635aa669442c271532dfecc04fab225edcb8286dfe5fb69471f9f7",
+        "f_ext": "ef9af872c78ffba466ed4f4c35021f9f5a1e6143b2ddf46f229708350190ba94",
+        "f_ext_xyz_native": "c5085bbda3140f0f74b69846ba98b7d777a69fb99e46e671ff54732d76ac2a1f",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "9fdc76e558c06b97165dd51daee6ef21bd953fa9f916aea1b64d7db638d0aa80"
+      },
+      "residual": "c38497c33fc84b1bceb423147e5ccc2ad3ba91d125f760e399ed0dd517141e44",
+      "alarm": "0063edc5af832dbdeeb6aaa56e20ce810d2c473496d207ef9eb24391fcf83c98"
+    },
+    {
+      "repeat": 0,
+      "arm": "r24_joint",
+      "twin": "second",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 195.93,
+        "p99_us": 374.8807000000003,
+        "max_us": 428.639,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 193.19,
+        "p99_us": 370.7542000000003,
+        "max_us": 424.348,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 1638,
+      "max_cpu_tick": 1638,
+      "detector_reset_wall_us": 802.908,
+      "detector_reset_cpu_us": 799.148,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "a88a82db4e7295a213123604675a16d1b99ed5ff337f0656548cfbe4c8c7db4a",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "eaae1acf75fce79c3557cdea9e58c4d67ecad3d7f64f9883e4a124ef6f076a6c",
+        "e_mm": "d6f9a83e85f7af031aae215bc36cc5fc52db7f851b866bcd66319b0908174bd2",
+        "f_table": "21cca3d44173d2ebbdde18dc729afe5c5aa8c35fd37a4c6b2036ce2d3f65d1f6",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "bc24c63c9b4f9ffcc62fc70449e4a4c8bda02f683b7ffae6b9bb6f03d3d860b6",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "f113b8084f49c5e5a125a2221e36e4c958d4f131d7bbb8c15a0fe2e217c2faa9",
+        "f_ext_xyz_committed": "64fe96db39d69e45a35a9e788b7f111c29e5a2f60d6d8b491325569dada30c40"
+      },
+      "residual": "3658e9ab0c21681f862c23622febf6530f4239aeab4228e32b35e8e6f54d67f1",
+      "alarm": "74965fe70ed44923283cfbb70ad6cdd28dbc7080e1c90ae97d390061923ff70a"
+    },
+    {
+      "repeat": 0,
+      "arm": "experiments.r25_composed.detector:Detector",
+      "twin": "second",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 207.0495,
+        "p99_us": 327.91059,
+        "max_us": 524.479,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 204.02949999999998,
+        "p99_us": 324.03251000000006,
+        "max_us": 520.388,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 1630,
+      "max_cpu_tick": 1630,
+      "detector_reset_wall_us": 845.538,
+      "detector_reset_cpu_us": 842.447,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "a88a82db4e7295a213123604675a16d1b99ed5ff337f0656548cfbe4c8c7db4a",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "eaae1acf75fce79c3557cdea9e58c4d67ecad3d7f64f9883e4a124ef6f076a6c",
+        "e_mm": "d6f9a83e85f7af031aae215bc36cc5fc52db7f851b866bcd66319b0908174bd2",
+        "f_table": "21cca3d44173d2ebbdde18dc729afe5c5aa8c35fd37a4c6b2036ce2d3f65d1f6",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "bc24c63c9b4f9ffcc62fc70449e4a4c8bda02f683b7ffae6b9bb6f03d3d860b6",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "f113b8084f49c5e5a125a2221e36e4c958d4f131d7bbb8c15a0fe2e217c2faa9",
+        "f_ext_xyz_committed": "64fe96db39d69e45a35a9e788b7f111c29e5a2f60d6d8b491325569dada30c40"
+      },
+      "residual": "3658e9ab0c21681f862c23622febf6530f4239aeab4228e32b35e8e6f54d67f1",
+      "alarm": "eae0e67527b7a2c646eb8184c4bc084ec57244de40057defc16ab1c0ed99eaeb"
+    },
+    {
+      "repeat": 0,
+      "arm": "r24_joint",
+      "twin": "both",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 197.9595,
+        "p99_us": 364.92049000000003,
+        "max_us": 389.499,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 195.15949999999998,
+        "p99_us": 360.1347000000001,
+        "max_us": 384.769,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 5779,
+      "max_cpu_tick": 5779,
+      "detector_reset_wall_us": 833.038,
+      "detector_reset_cpu_us": 817.898,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "257e4762b9a2102b7574e4a4862b3a0b8a375d4eda1ff4bf2d224b88eca8c5b4",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "8e037c96d530f0c62cb6481e8f657a9efd2aaec78d111ecebc18b3c195a665e1",
+        "e_mm": "85b67af45f437209120a8c2da9c7a1fb3b885b598ad7950b9bbb6a1536098886",
+        "f_table": "916950d4b13ba2777159e6dbb9935e14219e86ca7e0caa509a7f2b57ba172119",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "72bab3f1094112c4c8a05418f30ed7f09e6afe33075b7c73ee1729039876ae83",
+        "f_ext": "ef9af872c78ffba466ed4f4c35021f9f5a1e6143b2ddf46f229708350190ba94",
+        "f_ext_xyz_native": "c5085bbda3140f0f74b69846ba98b7d777a69fb99e46e671ff54732d76ac2a1f",
+        "f_ext_xyz_second": "f113b8084f49c5e5a125a2221e36e4c958d4f131d7bbb8c15a0fe2e217c2faa9",
+        "f_ext_xyz_committed": "2ecffbc10e6e6e54fae98fcce49aa18cade054204bf6ad99d9899990850b38d7"
+      },
+      "residual": "cd5f4a36e2065bdca9dc81e143c7158ca756e73750191285693478dc8a2c18c7",
+      "alarm": "cc896a530ec2cbec0f71532fea8f9f0e061eb6fd0e8a9236d01213a215be5097"
+    },
+    {
+      "repeat": 0,
+      "arm": "experiments.r25_composed.detector:Detector",
+      "twin": "both",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 204.52949999999998,
+        "p99_us": 335.54239000000024,
+        "max_us": 475.299,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 201.65949999999998,
+        "p99_us": 331.5077000000004,
+        "max_us": 470.848,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 1673,
+      "max_cpu_tick": 1673,
+      "detector_reset_wall_us": 932.468,
+      "detector_reset_cpu_us": 928.287,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "257e4762b9a2102b7574e4a4862b3a0b8a375d4eda1ff4bf2d224b88eca8c5b4",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "8e037c96d530f0c62cb6481e8f657a9efd2aaec78d111ecebc18b3c195a665e1",
+        "e_mm": "85b67af45f437209120a8c2da9c7a1fb3b885b598ad7950b9bbb6a1536098886",
+        "f_table": "916950d4b13ba2777159e6dbb9935e14219e86ca7e0caa509a7f2b57ba172119",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "72bab3f1094112c4c8a05418f30ed7f09e6afe33075b7c73ee1729039876ae83",
+        "f_ext": "ef9af872c78ffba466ed4f4c35021f9f5a1e6143b2ddf46f229708350190ba94",
+        "f_ext_xyz_native": "c5085bbda3140f0f74b69846ba98b7d777a69fb99e46e671ff54732d76ac2a1f",
+        "f_ext_xyz_second": "f113b8084f49c5e5a125a2221e36e4c958d4f131d7bbb8c15a0fe2e217c2faa9",
+        "f_ext_xyz_committed": "2ecffbc10e6e6e54fae98fcce49aa18cade054204bf6ad99d9899990850b38d7"
+      },
+      "residual": "cd5f4a36e2065bdca9dc81e143c7158ca756e73750191285693478dc8a2c18c7",
+      "alarm": "15c77a079309b602acfe877808bb632ac2e2ee81ec8a1a637de1cf08a6ef17c5"
+    },
+    {
+      "repeat": 1,
+      "arm": "experiments.r25_composed.detector:Detector",
+      "twin": "none",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 204.274,
+        "p99_us": 319.919,
+        "max_us": 433.249,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 201.34449999999998,
+        "p99_us": 316.04630000000014,
+        "max_us": 428.859,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 2407,
+      "max_cpu_tick": 2407,
+      "detector_reset_wall_us": 4168.21,
+      "detector_reset_cpu_us": 4165.037,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "83e5c198733884d5f0b65e022404c780f9e08c1973e5e3c33ba107d6e08a0fd5",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "e1e1895143e0974e9aae8987a745e81be36581c378b6cac036c8d02ae4188554",
+        "e_mm": "77728bcf6366d619b5256f93a83d36a9b72204dd6028b5d165d56ff22a7086d9",
+        "f_table": "5917801c970bbe533421be73a0b53e535f24e3d68effcd020ad089a21df6d8f3",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "9203794fbda5369a119a5d5de21ce2ec6f5de3b699f70d19b5f73fb1df6521ce",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      },
+      "residual": "ef99665072e585b9a978991c78fd7c15fe5f402932b31de594bb2f308f780c12",
+      "alarm": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+    },
+    {
+      "repeat": 1,
+      "arm": "r24_joint",
+      "twin": "none",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 194.0845,
+        "p99_us": 283.52080000000007,
+        "max_us": 382.239,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 191.3295,
+        "p99_us": 280.22929999999997,
+        "max_us": 378.459,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 1537,
+      "max_cpu_tick": 1537,
+      "detector_reset_wall_us": 828.868,
+      "detector_reset_cpu_us": 825.558,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "83e5c198733884d5f0b65e022404c780f9e08c1973e5e3c33ba107d6e08a0fd5",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "e1e1895143e0974e9aae8987a745e81be36581c378b6cac036c8d02ae4188554",
+        "e_mm": "77728bcf6366d619b5256f93a83d36a9b72204dd6028b5d165d56ff22a7086d9",
+        "f_table": "5917801c970bbe533421be73a0b53e535f24e3d68effcd020ad089a21df6d8f3",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "9203794fbda5369a119a5d5de21ce2ec6f5de3b699f70d19b5f73fb1df6521ce",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      },
+      "residual": "ef99665072e585b9a978991c78fd7c15fe5f402932b31de594bb2f308f780c12",
+      "alarm": "591b472efbb1346f4d39a8c81f9627ab11df1633b59a367a2137d3568da0ca50"
+    },
+    {
+      "repeat": 1,
+      "arm": "experiments.r25_composed.detector:Detector",
+      "twin": "first",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 200.2995,
+        "p99_us": 352.63389000000006,
+        "max_us": 436.649,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 197.3295,
+        "p99_us": 349.25310000000013,
+        "max_us": 430.239,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 2029,
+      "max_cpu_tick": 2029,
+      "detector_reset_wall_us": 865.078,
+      "detector_reset_cpu_us": 856.618,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "96464c41237a39edf3dbd161e857d1ee01878a75986eff73ef741e4bf38727ef",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "7fe9abdef2c590d536d3130b8d36d4f3c2a79c1d5a0dcb72eee78b0ba4bbb689",
+        "e_mm": "2f41d83f452e85eed3319dadffcb61f4df349cadc31f7f352452f6822766d7e7",
+        "f_table": "c119cd8edaba19b06cfa3cc6104d2944d29b66cc5aaf4cc1dd86b03c60cda35d",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "f67ec9776c635aa669442c271532dfecc04fab225edcb8286dfe5fb69471f9f7",
+        "f_ext": "ef9af872c78ffba466ed4f4c35021f9f5a1e6143b2ddf46f229708350190ba94",
+        "f_ext_xyz_native": "c5085bbda3140f0f74b69846ba98b7d777a69fb99e46e671ff54732d76ac2a1f",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "9fdc76e558c06b97165dd51daee6ef21bd953fa9f916aea1b64d7db638d0aa80"
+      },
+      "residual": "c38497c33fc84b1bceb423147e5ccc2ad3ba91d125f760e399ed0dd517141e44",
+      "alarm": "0063edc5af832dbdeeb6aaa56e20ce810d2c473496d207ef9eb24391fcf83c98"
+    },
+    {
+      "repeat": 1,
+      "arm": "r24_joint",
+      "twin": "first",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 193.6895,
+        "p99_us": 324.22459000000015,
+        "max_us": 419.119,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 190.95,
+        "p99_us": 320.26329000000004,
+        "max_us": 416.038,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 1460,
+      "max_cpu_tick": 1460,
+      "detector_reset_wall_us": 790.658,
+      "detector_reset_cpu_us": 787.147,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "96464c41237a39edf3dbd161e857d1ee01878a75986eff73ef741e4bf38727ef",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "7fe9abdef2c590d536d3130b8d36d4f3c2a79c1d5a0dcb72eee78b0ba4bbb689",
+        "e_mm": "2f41d83f452e85eed3319dadffcb61f4df349cadc31f7f352452f6822766d7e7",
+        "f_table": "c119cd8edaba19b06cfa3cc6104d2944d29b66cc5aaf4cc1dd86b03c60cda35d",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "f67ec9776c635aa669442c271532dfecc04fab225edcb8286dfe5fb69471f9f7",
+        "f_ext": "ef9af872c78ffba466ed4f4c35021f9f5a1e6143b2ddf46f229708350190ba94",
+        "f_ext_xyz_native": "c5085bbda3140f0f74b69846ba98b7d777a69fb99e46e671ff54732d76ac2a1f",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "9fdc76e558c06b97165dd51daee6ef21bd953fa9f916aea1b64d7db638d0aa80"
+      },
+      "residual": "c38497c33fc84b1bceb423147e5ccc2ad3ba91d125f760e399ed0dd517141e44",
+      "alarm": "0063edc5af832dbdeeb6aaa56e20ce810d2c473496d207ef9eb24391fcf83c98"
+    },
+    {
+      "repeat": 1,
+      "arm": "experiments.r25_composed.detector:Detector",
+      "twin": "second",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 201.139,
+        "p99_us": 338.64041000000003,
+        "max_us": 481.228,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 198.20499999999998,
+        "p99_us": 334.6857900000001,
+        "max_us": 476.899,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 1738,
+      "max_cpu_tick": 1738,
+      "detector_reset_wall_us": 1154.208,
+      "detector_reset_cpu_us": 1138.466,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "a88a82db4e7295a213123604675a16d1b99ed5ff337f0656548cfbe4c8c7db4a",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "eaae1acf75fce79c3557cdea9e58c4d67ecad3d7f64f9883e4a124ef6f076a6c",
+        "e_mm": "d6f9a83e85f7af031aae215bc36cc5fc52db7f851b866bcd66319b0908174bd2",
+        "f_table": "21cca3d44173d2ebbdde18dc729afe5c5aa8c35fd37a4c6b2036ce2d3f65d1f6",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "bc24c63c9b4f9ffcc62fc70449e4a4c8bda02f683b7ffae6b9bb6f03d3d860b6",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "f113b8084f49c5e5a125a2221e36e4c958d4f131d7bbb8c15a0fe2e217c2faa9",
+        "f_ext_xyz_committed": "64fe96db39d69e45a35a9e788b7f111c29e5a2f60d6d8b491325569dada30c40"
+      },
+      "residual": "3658e9ab0c21681f862c23622febf6530f4239aeab4228e32b35e8e6f54d67f1",
+      "alarm": "eae0e67527b7a2c646eb8184c4bc084ec57244de40057defc16ab1c0ed99eaeb"
+    },
+    {
+      "repeat": 1,
+      "arm": "r24_joint",
+      "twin": "second",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 192.49,
+        "p99_us": 330.1818,
+        "max_us": 415.429,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 189.7695,
+        "p99_us": 326.62770000000023,
+        "max_us": 411.669,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 1504,
+      "max_cpu_tick": 1504,
+      "detector_reset_wall_us": 888.928,
+      "detector_reset_cpu_us": 872.709,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "a88a82db4e7295a213123604675a16d1b99ed5ff337f0656548cfbe4c8c7db4a",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "eaae1acf75fce79c3557cdea9e58c4d67ecad3d7f64f9883e4a124ef6f076a6c",
+        "e_mm": "d6f9a83e85f7af031aae215bc36cc5fc52db7f851b866bcd66319b0908174bd2",
+        "f_table": "21cca3d44173d2ebbdde18dc729afe5c5aa8c35fd37a4c6b2036ce2d3f65d1f6",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "bc24c63c9b4f9ffcc62fc70449e4a4c8bda02f683b7ffae6b9bb6f03d3d860b6",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "f113b8084f49c5e5a125a2221e36e4c958d4f131d7bbb8c15a0fe2e217c2faa9",
+        "f_ext_xyz_committed": "64fe96db39d69e45a35a9e788b7f111c29e5a2f60d6d8b491325569dada30c40"
+      },
+      "residual": "3658e9ab0c21681f862c23622febf6530f4239aeab4228e32b35e8e6f54d67f1",
+      "alarm": "74965fe70ed44923283cfbb70ad6cdd28dbc7080e1c90ae97d390061923ff70a"
+    },
+    {
+      "repeat": 1,
+      "arm": "experiments.r25_composed.detector:Detector",
+      "twin": "both",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 198.374,
+        "p99_us": 310.26541000000014,
+        "max_us": 414.199,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 195.529,
+        "p99_us": 307.2662000000002,
+        "max_us": 410.349,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 1440,
+      "max_cpu_tick": 1440,
+      "detector_reset_wall_us": 819.478,
+      "detector_reset_cpu_us": 816.278,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "257e4762b9a2102b7574e4a4862b3a0b8a375d4eda1ff4bf2d224b88eca8c5b4",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "8e037c96d530f0c62cb6481e8f657a9efd2aaec78d111ecebc18b3c195a665e1",
+        "e_mm": "85b67af45f437209120a8c2da9c7a1fb3b885b598ad7950b9bbb6a1536098886",
+        "f_table": "916950d4b13ba2777159e6dbb9935e14219e86ca7e0caa509a7f2b57ba172119",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "72bab3f1094112c4c8a05418f30ed7f09e6afe33075b7c73ee1729039876ae83",
+        "f_ext": "ef9af872c78ffba466ed4f4c35021f9f5a1e6143b2ddf46f229708350190ba94",
+        "f_ext_xyz_native": "c5085bbda3140f0f74b69846ba98b7d777a69fb99e46e671ff54732d76ac2a1f",
+        "f_ext_xyz_second": "f113b8084f49c5e5a125a2221e36e4c958d4f131d7bbb8c15a0fe2e217c2faa9",
+        "f_ext_xyz_committed": "2ecffbc10e6e6e54fae98fcce49aa18cade054204bf6ad99d9899990850b38d7"
+      },
+      "residual": "cd5f4a36e2065bdca9dc81e143c7158ca756e73750191285693478dc8a2c18c7",
+      "alarm": "15c77a079309b602acfe877808bb632ac2e2ee81ec8a1a637de1cf08a6ef17c5"
+    },
+    {
+      "repeat": 1,
+      "arm": "r24_joint",
+      "twin": "both",
+      "samples": 6000,
+      "sum_wall": {
+        "p50_us": 194.339,
+        "p99_us": 314.45240000000007,
+        "max_us": 401.179,
+        "at_least_1ms": 0
+      },
+      "sum_cpu": {
+        "p50_us": 191.6245,
+        "p99_us": 310.75590000000017,
+        "max_us": 396.889,
+        "at_least_1ms": 0
+      },
+      "max_wall_tick": 3870,
+      "max_cpu_tick": 3870,
+      "detector_reset_wall_us": 4973.748,
+      "detector_reset_cpu_us": 4969.805,
+      "physics": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "257e4762b9a2102b7574e4a4862b3a0b8a375d4eda1ff4bf2d224b88eca8c5b4",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "8e037c96d530f0c62cb6481e8f657a9efd2aaec78d111ecebc18b3c195a665e1",
+        "e_mm": "85b67af45f437209120a8c2da9c7a1fb3b885b598ad7950b9bbb6a1536098886",
+        "f_table": "916950d4b13ba2777159e6dbb9935e14219e86ca7e0caa509a7f2b57ba172119",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "72bab3f1094112c4c8a05418f30ed7f09e6afe33075b7c73ee1729039876ae83",
+        "f_ext": "ef9af872c78ffba466ed4f4c35021f9f5a1e6143b2ddf46f229708350190ba94",
+        "f_ext_xyz_native": "c5085bbda3140f0f74b69846ba98b7d777a69fb99e46e671ff54732d76ac2a1f",
+        "f_ext_xyz_second": "f113b8084f49c5e5a125a2221e36e4c958d4f131d7bbb8c15a0fe2e217c2faa9",
+        "f_ext_xyz_committed": "2ecffbc10e6e6e54fae98fcce49aa18cade054204bf6ad99d9899990850b38d7"
+      },
+      "residual": "cd5f4a36e2065bdca9dc81e143c7158ca756e73750191285693478dc8a2c18c7",
+      "alarm": "cc896a530ec2cbec0f71532fea8f9f0e061eb6fd0e8a9236d01213a215be5097"
+    }
+  ]
+}

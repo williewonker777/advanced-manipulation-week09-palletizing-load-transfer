@@ -1,0 +1,184 @@
+{
+  "schema": "r14-support-control-summary.v1",
+  "official": false,
+  "status": "STOP_DEVELOPMENT_FAILED_NO_HELD",
+  "development_passed": false,
+  "held_run": false,
+  "pins": {
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "experiments/r12_hybrid/controller.py": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+    "experiments/r14_support_control/controller.py": "e2907529c4a1d68d88c5097995acb037c26f33a01952332e93d913292e2fa784",
+    "experiments/r14_support_control/plan.py": "e220aeaf5f0ac3770d1efa4eea539fe9e0f489893316f57182f11faac0c40a57",
+    "experiments/r14_support_control/run.py": "0adce8f17e240e3a6c17429457d15b7ca30643d45feb9db76e5f530b5fa7aa07",
+    "experiments/r14_support_control/test_controller.py": "259ebbbc33486765fa0f777e6c11be46372325d7ca2c0bf598ed040f235ce288"
+  },
+  "exact_unarmed_trace_parity": true,
+  "rows": [
+    {
+      "id": "light_neg",
+      "offset_mm": [
+        2.0,
+        -2.0,
+        -2.0
+      ],
+      "arm_s": 3.851,
+      "remaining_ms": 48.99999999999993,
+      "maximum_rate_limited_load_reduction": 0.7919999999999987,
+      "R1": {
+        "mean_mg": 0.03130138067768186,
+        "min_mg": 0.0,
+        "peak_mg": 1.8195349820635587
+      },
+      "R12": {
+        "mean_mg": 0.6027213427492718,
+        "min_mg": 0.5073833453183845,
+        "peak_mg": 1.819534982021966,
+        "false_alarms": 0
+      },
+      "candidate": {
+        "mean_mg": 0.38376634239061025,
+        "min_mg": 0.10315762839298136,
+        "peak_mg": 1.8195349820635587,
+        "false_alarms": 0,
+        "maximum_normal_modification_mg": 0.5914990603445314
+      },
+      "peak_time_s": 3.845,
+      "peak_precedes_arm": true,
+      "maximum_cost_ratio": 1.0,
+      "gates": {
+        "activated": true,
+        "G4": false,
+        "cost": true,
+        "saturation": true,
+        "false_alarms": true,
+        "exact_prefix": true,
+        "no_divergence": true
+      }
+    },
+    {
+      "id": "mid_zero",
+      "offset_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "arm_s": 3.859,
+      "remaining_ms": 40.99999999999993,
+      "maximum_rate_limited_load_reduction": 0.6479999999999986,
+      "R1": {
+        "mean_mg": 0.13736617384820599,
+        "min_mg": 0.003999867501009096,
+        "peak_mg": 1.0127559844867273
+      },
+      "R12": {
+        "mean_mg": 0.8413850683635429,
+        "min_mg": 0.7809255491912617,
+        "peak_mg": 1.0522288242721198,
+        "false_alarms": 1
+      },
+      "candidate": {
+        "mean_mg": 0.37232480978580684,
+        "min_mg": 0.06680823241008578,
+        "peak_mg": 1.0293074587066722,
+        "false_alarms": 0,
+        "maximum_normal_modification_mg": 0.3678532531008459
+      },
+      "peak_time_s": 3.9,
+      "peak_precedes_arm": false,
+      "maximum_cost_ratio": 1.0163430031256082,
+      "gates": {
+        "activated": true,
+        "G4": false,
+        "cost": true,
+        "saturation": true,
+        "false_alarms": true,
+        "exact_prefix": true,
+        "no_divergence": true
+      }
+    },
+    {
+      "id": "boundary_pos",
+      "offset_mm": [
+        -2.0,
+        2.0,
+        2.5
+      ],
+      "arm_s": 3.866,
+      "remaining_ms": 33.99999999999981,
+      "maximum_rate_limited_load_reduction": 0.5219999999999965,
+      "R1": {
+        "mean_mg": 0.1281185939656817,
+        "min_mg": 0.003232829452800975,
+        "peak_mg": 1.0184714069294616
+      },
+      "R12": {
+        "mean_mg": 0.850118807217368,
+        "min_mg": 0.4544145713885734,
+        "peak_mg": 1.0517713681539664,
+        "false_alarms": 1
+      },
+      "candidate": {
+        "mean_mg": 0.262117341836554,
+        "min_mg": 0.012383543602010504,
+        "peak_mg": 1.0285081385735844,
+        "false_alarms": 0,
+        "maximum_normal_modification_mg": 0.24095228274702526
+      },
+      "peak_time_s": 3.9,
+      "peak_precedes_arm": false,
+      "maximum_cost_ratio": 1.0098547014435901,
+      "gates": {
+        "activated": true,
+        "G4": false,
+        "cost": true,
+        "saturation": true,
+        "false_alarms": true,
+        "exact_prefix": true,
+        "no_divergence": true
+      }
+    },
+    {
+      "id": "heavy_neg",
+      "offset_mm": [
+        3.0,
+        -1.0,
+        -1.5
+      ],
+      "arm_s": 3.849,
+      "remaining_ms": 50.999999999999716,
+      "maximum_rate_limited_load_reduction": 0.8279999999999947,
+      "R1": {
+        "mean_mg": 0.02641509365039712,
+        "min_mg": 0.0,
+        "peak_mg": 1.2797286607036942
+      },
+      "R12": {
+        "mean_mg": 0.5437886972972674,
+        "min_mg": 0.48246516575386444,
+        "peak_mg": 1.2797286606661076,
+        "false_alarms": 1
+      },
+      "candidate": {
+        "mean_mg": 0.27002803410224985,
+        "min_mg": 0.043815306211012046,
+        "peak_mg": 1.2797286607036942,
+        "false_alarms": 0,
+        "maximum_normal_modification_mg": 0.30486103011927024
+      },
+      "peak_time_s": 3.842,
+      "peak_precedes_arm": true,
+      "maximum_cost_ratio": 1.1232490677184392,
+      "gates": {
+        "activated": true,
+        "G4": false,
+        "cost": false,
+        "saturation": true,
+        "false_alarms": true,
+        "exact_prefix": true,
+        "no_divergence": true
+      }
+    }
+  ],
+  "conclusion": "The height-free controller preserved exact R1 fallback and eliminated every added normal false alarm, but passed 0/4 G4 rows. Both negative-height rows exceeded the 1.1mg peak 6-7ms before causal arming, so no post-contact law can repair that gate. Zero/positive rows kept peaks and costs but safe jerk/rate-limited transfer left final minima at .067/.012mg. R12 transferred enough on those rows but added a release false alarm. No loss was used to retune and held collisions remained closed."
+}

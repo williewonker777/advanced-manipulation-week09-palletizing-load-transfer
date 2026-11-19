@@ -1,0 +1,561 @@
+{
+  "schema": "r12-guarded-handoff.v1",
+  "disposition": "simulation_only_do_not_replace_r10",
+  "mechanics": "No change to R1 when unarmed, including after release. Refuse triggers too late for the full rise; continuous convex carry-load recovery, retain orthogonal position torque and all damping.",
+  "bundle_pins": {
+    "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "mixin": "693a5bd8cf9151333bcc7eaca7e1d15ebbed9f18dd71f0ae66b87859489aeeb3"
+  },
+  "no_payload": {
+    "id": "unloaded",
+    "byte_parity": {
+      "q": true,
+      "q_d": true,
+      "tau": true,
+      "e_mm": true,
+      "f_table": true,
+      "f_tool": true,
+      "qpos": true,
+      "r": true,
+      "detect": true,
+      "f_ext": true
+    },
+    "cycles": 6000,
+    "passed": true,
+    "pins": {
+      "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "tools/r5_fixture.py": "8f637a5d67d6bfd2f9021093b08e5d8b463bd58c71fa4e7da3f752087ed72f2d",
+      "tools/r11_placement.py": "8c841e53826409a0f0c336b7b3c6f1335172ffb205ab386f1a60c93012f19db0",
+      "experiments/r12_guarded_handoff/controller.py": "693a5bd8cf9151333bcc7eaca7e1d15ebbed9f18dd71f0ae66b87859489aeeb3",
+      "experiments/r12_guarded_handoff/plan.json": "3ba42fb7e0cab9716202f57a60d7c8b307b2a200298852e0a5cdc8eae72fb4a5",
+      "experiments/r12_guarded_handoff/evaluate.py": "1e00f724531a8aa82dacc405a10b94bfcda43beb7686513947f48c053ef5374e"
+    }
+  },
+  "rows": [
+    {
+      "id": "mid",
+      "status": "measured",
+      "baseline": {
+        "status": "ok",
+        "diverged": false,
+        "support": {
+          "mean_mg": 0.10894259324976432,
+          "min_mg": 0.0020563708729875313,
+          "peak_mg": 1.0104037057318551,
+          "samples": 20,
+          "mean_ge_050": false,
+          "min_ge_025": false,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.412437827856375,
+            -2.190462318749753
+          ],
+          "mean_lowest_corner_mm": -2.33763708406371,
+          "mean_corner_spread_mm": 0.7576334052253095,
+          "mean_face_tilt_deg": 0.1257519316376939,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 13.259413659979922,
+          "free_minus_rigid_mean_mm": -1.251661907246778,
+          "first_to_last_lowest_corner_speed_mm_s": 11.36560549721973
+        },
+        "cost": {
+          "tcp_rms": 2.5760596555661306,
+          "tcp_max": 5.786114584178726,
+          "place_step": 11.188694513073472,
+          "pick_step": 8.920939709698473,
+          "place_force": 52.33567866505176
+        },
+        "sat": 0.0,
+        "arm": null,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "candidate": {
+        "status": "ok",
+        "diverged": false,
+        "support": {
+          "mean_mg": 0.7852498005720556,
+          "min_mg": 0.7181629542837638,
+          "peak_mg": 1.0538486489377497,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.4273897645754703,
+            -2.26218802606426
+          ],
+          "mean_lowest_corner_mm": -2.376017679987128,
+          "mean_corner_spread_mm": 0.5213348012544204,
+          "mean_face_tilt_deg": 0.08543539163429852,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 3.7400394489125874,
+          "free_minus_rigid_mean_mm": -1.1185648235219312,
+          "first_to_last_lowest_corner_speed_mm_s": 8.04642761584078
+        },
+        "cost": {
+          "tcp_rms": 2.629363131539114,
+          "tcp_max": 5.786114584178726,
+          "place_step": 11.188694513073472,
+          "pick_step": 8.920939709698473,
+          "place_force": 54.58598769929884
+        },
+        "sat": 0.0,
+        "arm": 3.855,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 1,
+          "false_alarm_times": [
+            3.903
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "ratios": {
+        "tcp_rms": 1.020691863970545,
+        "tcp_max": 1.0,
+        "place_step": 1.0,
+        "pick_step": 1.0,
+        "place_force": 1.042997608737417
+      },
+      "g4": {
+        "mean_gain_mg": 0.6763072073222913,
+        "all_four_g4": true
+      },
+      "gates": {
+        "g4": true,
+        "cost": true,
+        "prefix": true,
+        "saturation": true,
+        "fa": false,
+        "tool": true
+      },
+      "passed": false,
+      "pins": {
+        "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+        "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+        "tools/r5_fixture.py": "8f637a5d67d6bfd2f9021093b08e5d8b463bd58c71fa4e7da3f752087ed72f2d",
+        "tools/r11_placement.py": "8c841e53826409a0f0c336b7b3c6f1335172ffb205ab386f1a60c93012f19db0",
+        "experiments/r12_guarded_handoff/controller.py": "693a5bd8cf9151333bcc7eaca7e1d15ebbed9f18dd71f0ae66b87859489aeeb3",
+        "experiments/r12_guarded_handoff/plan.json": "3ba42fb7e0cab9716202f57a60d7c8b307b2a200298852e0a5cdc8eae72fb4a5",
+        "experiments/r12_guarded_handoff/evaluate.py": "1e00f724531a8aa82dacc405a10b94bfcda43beb7686513947f48c053ef5374e"
+      }
+    },
+    {
+      "id": "heavy",
+      "status": "measured",
+      "baseline": {
+        "status": "ok",
+        "diverged": false,
+        "support": {
+          "mean_mg": 0.06607027418700942,
+          "min_mg": 0.0,
+          "peak_mg": 1.0030112076988982,
+          "samples": 20,
+          "mean_ge_050": false,
+          "min_ge_025": false,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.7339262455917526,
+            -2.2369152864205737
+          ],
+          "mean_lowest_corner_mm": -2.5127533143153924,
+          "mean_corner_spread_mm": 0.2617024506738977,
+          "mean_face_tilt_deg": 0.0491171664354168,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 26.23365424268685,
+          "free_minus_rigid_mean_mm": -2.597615459348714,
+          "first_to_last_lowest_corner_speed_mm_s": 26.158471535325205
+        },
+        "cost": {
+          "tcp_rms": 3.4163670199227747,
+          "tcp_max": 9.083331806865232,
+          "place_step": 13.340945270247602,
+          "pick_step": 8.959179432328753,
+          "place_force": 75.9612483949022
+        },
+        "sat": 0.0,
+        "arm": null,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "candidate": {
+        "status": "ok",
+        "diverged": false,
+        "support": {
+          "mean_mg": 0.6764898475808887,
+          "min_mg": 0.5744189831978653,
+          "peak_mg": 1.034798520522384,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.796008778287657,
+            -2.482031615792028
+          ],
+          "mean_lowest_corner_mm": -2.6731436723012543,
+          "mean_corner_spread_mm": 0.18072997287623246,
+          "mean_face_tilt_deg": 0.040844807893030514,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 15.799174892478975,
+          "free_minus_rigid_mean_mm": -2.5491121211183687,
+          "first_to_last_lowest_corner_speed_mm_s": 16.525113815559415
+        },
+        "cost": {
+          "tcp_rms": 3.5461587138181065,
+          "tcp_max": 9.083331806865232,
+          "place_step": 12.631376122909415,
+          "pick_step": 8.959179432328753,
+          "place_force": 78.3686033144258
+        },
+        "sat": 0.0,
+        "arm": 3.852,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 1,
+          "false_alarm_times": [
+            3.903
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "ratios": {
+        "tcp_rms": 1.0379911447272623,
+        "tcp_max": 1.0,
+        "place_step": 0.9468126783399197,
+        "pick_step": 1.0,
+        "place_force": 1.0316918819844614
+      },
+      "g4": {
+        "mean_gain_mg": 0.6104195733938793,
+        "all_four_g4": true
+      },
+      "gates": {
+        "g4": true,
+        "cost": true,
+        "prefix": true,
+        "saturation": true,
+        "fa": false,
+        "tool": true
+      },
+      "passed": false,
+      "pins": {
+        "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+        "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+        "tools/r5_fixture.py": "8f637a5d67d6bfd2f9021093b08e5d8b463bd58c71fa4e7da3f752087ed72f2d",
+        "tools/r11_placement.py": "8c841e53826409a0f0c336b7b3c6f1335172ffb205ab386f1a60c93012f19db0",
+        "experiments/r12_guarded_handoff/controller.py": "693a5bd8cf9151333bcc7eaca7e1d15ebbed9f18dd71f0ae66b87859489aeeb3",
+        "experiments/r12_guarded_handoff/plan.json": "3ba42fb7e0cab9716202f57a60d7c8b307b2a200298852e0a5cdc8eae72fb4a5",
+        "experiments/r12_guarded_handoff/evaluate.py": "1e00f724531a8aa82dacc405a10b94bfcda43beb7686513947f48c053ef5374e"
+      }
+    },
+    {
+      "id": "light",
+      "status": "measured",
+      "baseline": {
+        "status": "ok",
+        "diverged": false,
+        "support": {
+          "mean_mg": 0.15353073158687586,
+          "min_mg": 0.002816113116357603,
+          "peak_mg": 1.0108043264379378,
+          "samples": 20,
+          "mean_ge_050": false,
+          "min_ge_025": false,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.0157828416450876,
+            -1.8480964854886577
+          ],
+          "mean_lowest_corner_mm": -1.9615228042319774,
+          "mean_corner_spread_mm": 0.6646378957301611,
+          "mean_face_tilt_deg": 0.12371070653081144,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 6.27322758893927,
+          "free_minus_rigid_mean_mm": -0.435502378403713,
+          "first_to_last_lowest_corner_speed_mm_s": 7.703409813289366
+        },
+        "cost": {
+          "tcp_rms": 2.3836721421386033,
+          "tcp_max": 4.564700659665741,
+          "place_step": 10.175285309292704,
+          "pick_step": 8.934203807616512,
+          "place_force": 28.359732665138644
+        },
+        "sat": 0.0,
+        "arm": null,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "candidate": {
+        "status": "ok",
+        "diverged": false,
+        "support": {
+          "mean_mg": 0.8767690124440826,
+          "min_mg": 0.6533598575524502,
+          "peak_mg": 1.4933396098999838,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": false
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.2052312490587758,
+            -2.1239008183755623
+          ],
+          "mean_lowest_corner_mm": -2.178341973916186,
+          "mean_corner_spread_mm": 0.3684589731136889,
+          "mean_face_tilt_deg": 0.06873740936371445,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 0.9680950866815442,
+          "free_minus_rigid_mean_mm": -0.2641636323085554,
+          "first_to_last_lowest_corner_speed_mm_s": 1.224029712211098
+        },
+        "cost": {
+          "tcp_rms": 2.4180418885901966,
+          "tcp_max": 4.566008801705959,
+          "place_step": 10.175285309292704,
+          "pick_step": 8.934203807616512,
+          "place_force": 41.89803209911989
+        },
+        "sat": 0.0,
+        "arm": 3.835,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "ratios": {
+        "tcp_rms": 1.0144188228926303,
+        "tcp_max": 1.0002865778366974,
+        "place_step": 1.0,
+        "pick_step": 1.0,
+        "place_force": 1.4773775406784166
+      },
+      "g4": {
+        "mean_gain_mg": 0.7232382808572067,
+        "all_four_g4": false
+      },
+      "gates": {
+        "g4": false,
+        "cost": false,
+        "prefix": true,
+        "saturation": true,
+        "fa": true,
+        "tool": true
+      },
+      "passed": false,
+      "pins": {
+        "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+        "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+        "tools/r5_fixture.py": "8f637a5d67d6bfd2f9021093b08e5d8b463bd58c71fa4e7da3f752087ed72f2d",
+        "tools/r11_placement.py": "8c841e53826409a0f0c336b7b3c6f1335172ffb205ab386f1a60c93012f19db0",
+        "experiments/r12_guarded_handoff/controller.py": "693a5bd8cf9151333bcc7eaca7e1d15ebbed9f18dd71f0ae66b87859489aeeb3",
+        "experiments/r12_guarded_handoff/plan.json": "3ba42fb7e0cab9716202f57a60d7c8b307b2a200298852e0a5cdc8eae72fb4a5",
+        "experiments/r12_guarded_handoff/evaluate.py": "1e00f724531a8aa82dacc405a10b94bfcda43beb7686513947f48c053ef5374e"
+      }
+    },
+    {
+      "id": "offset",
+      "status": "measured",
+      "baseline": {
+        "status": "ok",
+        "diverged": false,
+        "support": {
+          "mean_mg": 0.12212760008028031,
+          "min_mg": 0.017355838288600878,
+          "peak_mg": 1.042658584193021,
+          "samples": 20,
+          "mean_ge_050": false,
+          "min_ge_025": false,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -1.8480216751975662,
+            -1.7786017517335113
+          ],
+          "mean_lowest_corner_mm": -1.8225640457448957,
+          "mean_corner_spread_mm": 2.596381610611289,
+          "mean_face_tilt_deg": 0.4787571557833844,
+          "all_four_corners_below_plane_samples": 0,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": -0.9336854555969987,
+          "free_minus_rigid_mean_mm": -0.5464759337715771,
+          "first_to_last_lowest_corner_speed_mm_s": 0.07169704473697358
+        },
+        "cost": {
+          "tcp_rms": 3.6258429336517746,
+          "tcp_max": 8.516789626602176,
+          "place_step": 12.016849322121573,
+          "pick_step": 8.961105426866027,
+          "place_force": 67.20111827083333
+        },
+        "sat": 0.0,
+        "arm": null,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 12.9999999999999
+        }
+      },
+      "candidate": {
+        "status": "ok",
+        "diverged": false,
+        "support": {
+          "mean_mg": 0.6589363264611942,
+          "min_mg": 0.10710729718077465,
+          "peak_mg": 1.031980598668813,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": false,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -1.8656212585884007,
+            -1.782272693197492
+          ],
+          "mean_lowest_corner_mm": -1.8415574735419846,
+          "mean_corner_spread_mm": 2.5226481749566987,
+          "mean_face_tilt_deg": 0.4666754902241116,
+          "all_four_corners_below_plane_samples": 0,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": -7.421157322674764,
+          "free_minus_rigid_mean_mm": -0.5064740041610153,
+          "first_to_last_lowest_corner_speed_mm_s": -1.8244325800443708
+        },
+        "cost": {
+          "tcp_rms": 3.675024907509779,
+          "tcp_max": 8.516789626602176,
+          "place_step": 12.016849322121573,
+          "pick_step": 8.961105426866027,
+          "place_force": 66.51290395122274
+        },
+        "sat": 0.0,
+        "arm": 3.867,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 12.9999999999999
+        }
+      },
+      "ratios": {
+        "tcp_rms": 1.013564286914235,
+        "tcp_max": 1.0,
+        "place_step": 1.0,
+        "pick_step": 1.0,
+        "place_force": 0.9897588859036994
+      },
+      "g4": {
+        "mean_gain_mg": 0.5368087263809138,
+        "all_four_g4": false
+      },
+      "gates": {
+        "g4": false,
+        "cost": true,
+        "prefix": true,
+        "saturation": true,
+        "fa": true,
+        "tool": true
+      },
+      "passed": false,
+      "pins": {
+        "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+        "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+        "tools/r5_fixture.py": "8f637a5d67d6bfd2f9021093b08e5d8b463bd58c71fa4e7da3f752087ed72f2d",
+        "tools/r11_placement.py": "8c841e53826409a0f0c336b7b3c6f1335172ffb205ab386f1a60c93012f19db0",
+        "experiments/r12_guarded_handoff/controller.py": "693a5bd8cf9151333bcc7eaca7e1d15ebbed9f18dd71f0ae66b87859489aeeb3",
+        "experiments/r12_guarded_handoff/plan.json": "3ba42fb7e0cab9716202f57a60d7c8b307b2a200298852e0a5cdc8eae72fb4a5",
+        "experiments/r12_guarded_handoff/evaluate.py": "1e00f724531a8aa82dacc405a10b94bfcda43beb7686513947f48c053ef5374e"
+      }
+    }
+  ],
+  "all_combined_pass": 0,
+  "held_impacts_opened": false
+}

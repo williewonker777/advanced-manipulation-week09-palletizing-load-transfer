@@ -1,0 +1,138 @@
+{
+  "schema": "week09-r24-pre-independent-choice.v1",
+  "selection": "joint",
+  "entrypoint": "experiments.r24_composed.detector:Detector",
+  "default_promoted": false,
+  "prior_choice_policy": "667a090d1b5ee65c6828f70a98190a34938f66e2f44329a2b47ea37876e77af8",
+  "basis": "All required exposed guards passed for both eligible treatments. The integrated treatment alone removes six duplicate slots while retaining all previously protected outcomes. No independent outcome used to select. No fallback selection after the independent result.",
+  "official_87_authentic_episodes_all_reported_cells_equal": true,
+  "relative_false_gates": "For the disclosed, nearby and historical 66 panels, additionally checked that each candidate false time was already present in the same control/twin within 1 ms.",
+  "studies": {
+    "dc": {
+      "disclosed": {
+        "singles": 15,
+        "single_n": 18,
+        "pair_slots": 45,
+        "pair_n": 60,
+        "complete": 8,
+        "false": 0,
+        "duplicate_slots": 6,
+        "tool_hits": 3,
+        "tool_n": 6
+      },
+      "nearby": {
+        "singles": 17,
+        "single_n": 20,
+        "pair_slots": 0,
+        "pair_n": 0,
+        "complete": 0,
+        "false": 0,
+        "duplicate_slots": 0,
+        "tool_hits": 0,
+        "tool_n": 0
+      },
+      "weak": {
+        "rows": 15,
+        "real_episodes": 60,
+        "all_relative_checks": true
+      },
+      "legacy66": {
+        "rows": 66,
+        "real_episodes": 486,
+        "all_relative_checks": true
+      },
+      "pairs": {
+        "rows": 14,
+        "real_episodes": 112,
+        "all_relative_checks": true
+      },
+      "d4": {
+        "rows": 385,
+        "fresh_episodes": 385,
+        "strict": 146,
+        "false": 9,
+        "duplicate": 2,
+        "tool_detected": 6
+      }
+    },
+    "joint": {
+      "disclosed": {
+        "singles": 15,
+        "single_n": 18,
+        "pair_slots": 51,
+        "pair_n": 60,
+        "complete": 8,
+        "false": 0,
+        "duplicate_slots": 0,
+        "tool_hits": 3,
+        "tool_n": 6
+      },
+      "nearby": {
+        "singles": 17,
+        "single_n": 20,
+        "pair_slots": 0,
+        "pair_n": 0,
+        "complete": 0,
+        "false": 0,
+        "duplicate_slots": 0,
+        "tool_hits": 0,
+        "tool_n": 0
+      },
+      "weak": {
+        "rows": 15,
+        "real_episodes": 60,
+        "all_relative_checks": true
+      },
+      "legacy66": {
+        "rows": 66,
+        "real_episodes": 486,
+        "all_relative_checks": true
+      },
+      "pairs": {
+        "rows": 14,
+        "real_episodes": 112,
+        "all_relative_checks": true
+      },
+      "d4": {
+        "rows": 385,
+        "fresh_episodes": 385,
+        "strict": 146,
+        "false": 9,
+        "duplicate": 2,
+        "tool_detected": 6
+      }
+    }
+  },
+  "development_raw_sha256": {
+    "dc-disclosed": "cc91c68f22b36dac77448bb136f41176160c4bd026bf41977fe216007501241d",
+    "dc-nearby": "f84fdae0c098d0d0194ec9ee266042082668bf467b00f9b232a2c7a15349256a",
+    "dc-weak": "1687834500af343f57ed475f928d1375a6a32240e45611d4789682a69f412069",
+    "dc-legacy66": "6e839c6fca0983d479a668fb09d4976192106eae20dab5f0a973519618c5b326",
+    "dc-pairs": "f828690e09a41a62a6125d341b3fe113ce65b17b0bd1dc92aa179e31f6f15ebf",
+    "dc-d4": "b1f7d51db4f63df25ab7eef668c08f9a84e8b03ba86e12c3939319b06792b164",
+    "joint-disclosed": "79d6d03db43ac99402031d9f024a0d9d3cbd73d3b96a2fc2a6fb6fdd5dba66a2",
+    "joint-nearby": "e76360d53f1f8d37519d2ecceab24cddb9500a311913a28a723d3f6112dbd3f9",
+    "joint-weak": "8587f02b017e135b720abd53a3794a6c0c0856f3c9501791cdc8aa67083eba9b",
+    "joint-legacy66": "9c3123fabfeeb784e974811135394490328d65335c3ba697db0ffdd88f4fa4f4",
+    "joint-pairs": "d2d469faf5fac14e2f685ed177498d763408a81e6a86043c0c5429363df95b1a",
+    "joint-d4": "1990503fe7871a55aeea6d84cd918e7988def1cad247f88b18806c7565c828a8",
+    "official": "08b1a67fdd91198116a305fb4a79941965f7aaba45edfe6b7f0da311254cbb3b"
+  },
+  "source_sha256": {
+    "experiments/r24_composed/detector.py": "8cdc68950fbafd0065a8358f8ad5aad10519d136ef67c1b65726bc8531fb152d",
+    "experiments/r24_composed/__init__.py": "a601be2730a021d86e38941ba9f6215a98cf194a248f4e185b32ffdb09a55d8a",
+    "experiments/r24_composed/plan.json": "667a090d1b5ee65c6828f70a98190a34938f66e2f44329a2b47ea37876e77af8",
+    "experiments/r24_repeat/trial.py": "2147e2849b244f230423cad176e9ff1a2c9333cb32597b10e8002fd3a7956c13",
+    "experiments/r24_loaded/dc.py": "4835923c4a0a1b242cc633c9019abce9ad0f9c17e9c472709a6a9069ebd917e4",
+    "experiments/r24_loaded/dc_drive.json": "f39433ad8c31bcb2f433432947f144ddec967fecb6f74bdec47db05bd25b8d6b",
+    "experiments/r24_loaded/normal_response.json": "73cca4ff06b5a491796bc7ec88b942f02f319cba455f36ec605a98c5c6a2b31a",
+    "experiments/r24_loaded/memory.py": "32b92f542d13a7ba3d75ab981697cf894de9d198e89f328b18d75c09bc8995d5",
+    "experiments/r24_loaded/drive.py": "eb33088bb5c65822de0c512cc7cad82a469eb958cf35414d9a07cacaf8ae4787",
+    "experiments/r24_loaded/control.py": "0eef6000f5f2340c8fbd6830fa9dc61e13ecb570b2f71a426f15d9591968e873"
+  },
+  "independent_preregistration_sha256": {
+    "experiments/r24_holdout/plan.json": "cc84fca2bff1dda7ad8611b2e0aeb1baadecf131ec1ce2496156aa8a6bdb7280",
+    "experiments/r24_holdout/evaluator.py": "91d24a00b87ee41077daa53976fa76c67afee93ed3bbc4155e2fe3c464a29b62",
+    "experiments/r24_holdout/protocol.json": "50d03cbadb47947df68484578905289882d464112fc3db2e740b425f31926b2e"
+  }
+}

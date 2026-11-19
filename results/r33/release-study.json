@@ -1,0 +1,172 @@
+{
+  "actual_disclosed_targets": [
+    {
+      "first_on_force_delay_ms": null,
+      "first_rise_tick": null,
+      "force_nonzero_ticks": [
+        3921,
+        4039
+      ],
+      "id": 313,
+      "input": "+Z 5N",
+      "rise_count": 0,
+      "verdict": "miss; force and momentum bounds crossed at disjoint times"
+    },
+    {
+      "first_on_force_delay_ms": 67,
+      "first_rise_tick": 3987,
+      "force_nonzero_ticks": [
+        3921,
+        4039
+      ],
+      "id": 323,
+      "input": "+Z 10N",
+      "intervals": [
+        [
+          3987,
+          4073
+        ]
+      ],
+      "rise_count": 1,
+      "verdict": "one attributable rise"
+    },
+    {
+      "first_on_force_delay_ms": 51,
+      "first_rise_tick": 3971,
+      "force_nonzero_ticks": [
+        3921,
+        4039
+      ],
+      "id": 333,
+      "input": "+Z 15N",
+      "intervals": [
+        [
+          3971,
+          4056
+        ],
+        [
+          4075,
+          4147
+        ]
+      ],
+      "rise_count": 2,
+      "second_rise_after_force_end_ms": 36,
+      "verdict": "duplicate; second rise is post-force geometry-bin rebound"
+    }
+  ],
+  "candidate_sha256": "ff1064b3a016810d3e5992e153dce8189ffe9f9688c58f6614974754813bb39a",
+  "classification": "disclosed-course-physics-research-rejected",
+  "decision": "REJECTED_NOT_COMPOSED_NOT_PROMOTED",
+  "entry": "experiments.r33_place_vertical.candidate:Detector",
+  "frozen_thresholds": {
+    "force_impulse_Ns": [
+      0.0725362416475697,
+      0.011857252226064456,
+      0.015992264284756325,
+      0.012548423592917298,
+      0.009843919655115793,
+      0.009085925414939574,
+      0.008914411490138411,
+      0.017471994839457806,
+      0.01778703322943677,
+      0.01786995732253203,
+      0.01971207215928778,
+      0.01756270867184419
+    ],
+    "momentum_impulse_Ns": [
+      0.15245316211365062,
+      0.01069451106466379,
+      0.012729462225637386,
+      0.00790227879880047,
+      0.008754843243258025,
+      0.008562399306030971,
+      0.007117025420817267,
+      0.009648108488119424,
+      0.011070745430562894,
+      0.009408810648864122,
+      0.010581390596224882,
+      0.00856442180030497
+    ]
+  },
+  "matched_controls": {
+    "candidate_intervals": {
+      "126": [],
+      "149": [],
+      "43": []
+    },
+    "candidate_parent_physics_hash_equal": true,
+    "ids": [
+      43,
+      126,
+      149
+    ]
+  },
+  "method": {
+    "clear_samples": 8,
+    "consecutive_over_samples": 3,
+    "forbidden_not_used": [
+      "case ID",
+      "absolute task time",
+      "known mass/COM",
+      "true external force",
+      "matched twin at runtime"
+    ],
+    "geometry_bins": 12,
+    "impulse_window_ms": 25,
+    "normal_force_delay_ms": 18,
+    "runtime_inputs": [
+      "joint encoder",
+      "joint torque sensor",
+      "grip",
+      "public nominal models",
+      "public table/TCP geometry",
+      "R31 sensor residual"
+    ],
+    "scope": "positive world-Z after causal grip release only"
+  },
+  "model_sha256": "db4c6dae96c9d87a1b5e6cc56a742ff5e0f2fc1517a35a850e7ca2a1e3aa5a40",
+  "normal_only": {
+    "batch_stream_sample_mismatches": 0,
+    "eligible_samples": 378261,
+    "episodes": 183,
+    "exact_target_twins_excluded_from_fit_calibration_protection": [
+      43,
+      54,
+      126,
+      137,
+      149,
+      187
+    ],
+    "protection_added_rises": 0,
+    "split": {
+      "calibration": 61,
+      "fit": 61,
+      "protection": 61
+    },
+    "supported_bins": 12
+  },
+  "parent_sha256": "1e33b4698ef3678afe72cc4e286fcab5d27b2232e7bf087fdef7500ccc674764",
+  "provenance": {
+    "actual_target_result_sha256": "fc7b79fdce259e8cd6bdd3f04284ed17f4c68779a75a2aefcc6edd768d6c05a5",
+    "channel_attribution_sha256": "ea2e1ed32b9482c3f0a6c14ae2283b8a8230e6454cd9381684f30e2594852a1c",
+    "frozen_manifest_sha256": "f8d3e7d8ff6ff345780ee40c007b75e44d74436882a5970a39fedb42848dadf6",
+    "full_result_sha256": "03972ca1c184ed1f33bfeadd3bbb22e34783198b73fe673bda4554bc28b049a6",
+    "normal_model_result_sha256": "c45a3a13ce5d88fec359d4711bed19959cb7d8fc93d612fa8df9e9d30d7042f7",
+    "stream_parity_sha256": "7d22a27d2ef04528219221c2e0cce975a4820056e85b186d080fd7ce1bafb440"
+  },
+  "schema": "r33-place-vertical-public-result.v1",
+  "unresolved": {
+    "negative_Z_ids": [
+      314,
+      324,
+      334
+    ],
+    "negative_reason": "inputs begin while grip/table support is present; released-only observer abstains",
+    "positive_5N_id313": true
+  },
+  "vetoes": {
+    "candidate": "disclosed #333 duplicate and #313 miss; preregistered target gate failed",
+    "earlier_GLR": "normal-only protection maxima exceeded frozen calibration threshold in two supported modes",
+    "private_or_future_panel": "not opened, inspected, or run; no held-out private outcome used"
+  }
+}

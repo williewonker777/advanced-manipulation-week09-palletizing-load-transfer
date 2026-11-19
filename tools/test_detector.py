@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.dont_write_bytecode = True
 from tools.check_integrity import check_integrity
+from tools.production_audit import audit_text
 check_integrity(ROOT)
 
 import my_detector
@@ -35,11 +36,17 @@ def test_production_imports_and_forbidden_names():
         if isinstance(node, ast.Import):
             roots.update(alias.name.split(".")[0] for alias in node.names)
         elif isinstance(node, ast.ImportFrom):
-            roots.add((node.module or "").split(".")[0])
+            if node.module == "copy":
+                assert node.level == 0 and [(a.name, a.asname) for a in node.names] == [("copy", None)]
+            else:
+                roots.add((node.module or "").split(".")[0])
     # The guide restricts hidden plant data and changes to sim, not imports.
     # These standard modules only decode embedded model bytes and hold buffers.
     assert roots <= {"numpy", "mujoco", "sim", "io", "base64", "collections"}
     text = path.read_text(encoding="utf-8")
+    # The only new stdlib operation clones an owned public nominal model.
+    # Verify its use sites, not just its import spelling.
+    assert audit_text(text)["status"] == "pass"
     for forbidden in ("JTS_OFFSET", "JTS_DRIFT", "JTS_SEED", "Plant", "sim.runner", "table_force"):
         assert forbidden not in text
 

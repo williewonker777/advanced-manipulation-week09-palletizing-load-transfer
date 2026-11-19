@@ -1,0 +1,46 @@
+{
+  "status": "VERIFIED_NEGATIVE",
+  "adopt_release_pair": false,
+  "decision": "REJECT",
+  "first_failed_gates": [
+    "event_loss",
+    "per_case_extra_false_alarm"
+  ],
+  "failed_condition": "H0",
+  "mechanism": "HEADROOM1 intervention under the frozen combined plant perturbation adds a 3.926 s matched-reference rise; the weak-collision rise at 3.927 s is then indistinguishable under tools.r5_metrics. FAST2 and C1 cross-pairs agree.",
+  "saturation": {
+    "baseline_saturated_episodes": 3,
+    "candidate_saturated_episodes": 0,
+    "newly_saturated_episodes": [],
+    "newly_saturated_samples": {},
+    "improved_crossings": [
+      "H1-reference",
+      "H1-collision",
+      "H1-offset"
+    ]
+  },
+  "normal_cost_ratio_max": {
+    "rms_mm": 1.0,
+    "max_mm": 1.015740624909655,
+    "torque_step_place_nm": 1.0,
+    "table_force_place_max_n": 1.0004737147535028
+  },
+  "timing_candidate_combined": {
+    "samples": 12000,
+    "median_us": 140.8645,
+    "p99_us": 316.2196,
+    "max_us": 514.568
+  },
+  "pins": {
+    "design": "325afc14c0f296bf5aa4415c458bfcac07b12757676e708607e3af262b4cab7b",
+    "HEADROOM1.py": "ccaaf08dfe1d62dad7b88bc61a93e127285f61c582aa3904f755a88e90043908",
+    "FAST2.py": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d"
+  },
+  "scope": {
+    "matched_conditions": 12,
+    "episodes": 24,
+    "overlap_audit": "exact COM and seed values against available prior JSON only; not an exhaustive audit of Python-declared time/vector/offset combinations",
+    "official": false,
+    "hardware_claim": false
+  }
+}

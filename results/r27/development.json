@@ -1,0 +1,1383 @@
+{
+  "C3_protection": {
+    "closure_sha256": "d24db5140fe7f68278638807bc251e134679316a053c52ecac77e5b67e786339",
+    "d4": {
+      "all_physical_force_prefix_exact": true,
+      "all_tool_time_plus_5_gates": true,
+      "baseline": "R26 C3, not R25",
+      "delayed_false_rises": [
+        3,
+        3
+      ],
+      "duplicates": [
+        2,
+        2
+      ],
+      "episodes": 385,
+      "failure_counts": {},
+      "false_rises": [
+        9,
+        9
+      ],
+      "masked": [
+        0,
+        0
+      ],
+      "max_protected_duration_delta_samples": 0,
+      "max_protected_latency_delta_ms": 0,
+      "passed": true,
+      "raw_duplicates": [
+        2,
+        2
+      ],
+      "regressions": 0,
+      "strict": [
+        146,
+        154
+      ],
+      "strict_gains": [
+        249,
+        250,
+        251,
+        252,
+        255,
+        256,
+        257,
+        258
+      ],
+      "stuck": [
+        0,
+        0
+      ],
+      "tool_detected": [
+        6,
+        6
+      ],
+      "tool_prealarm": [
+        0,
+        0
+      ]
+    },
+    "direct_official": {
+      "all_physics_and_cost_exact": true,
+      "c3_strict": 24,
+      "candidate_strict": 24,
+      "episodes": 29,
+      "max_duration_delta_samples": 0,
+      "max_latency_delta_ms": 0.0,
+      "passed": true,
+      "regressions": 0
+    },
+    "stock_evaluate": {
+      "counts": {
+        "impact_outcomes": {
+          "already_active": 0,
+          "detected": 24,
+          "indistinguishable": 0,
+          "missed": 0
+        },
+        "no_impact_false_rises": 0,
+        "worst_false_count_in_an_impact_run": 1
+      },
+      "displayed_cells": 66,
+      "episodes": 29,
+      "evaluate_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+      "exact_c3": true,
+      "passed": true,
+      "runtime": {
+        "mujoco": "3.17.0",
+        "requirements_sha256": "05b8bb963b0a832c0a4d74e02167c1dbe6d7e0d14c20eb09a3aa69b85d27d50e"
+      }
+    }
+  },
+  "arms": {
+    "inverse-lateral": {
+      "directions": {
+        "guard_losses": [],
+        "new_gains": [],
+        "slots": 24,
+        "strict": [
+          6,
+          6
+        ],
+        "strict_in_force": [
+          6,
+          6
+        ],
+        "zero_controls": 6
+      },
+      "evidence_sha256": {
+        "inverse-additional_normals": "17f98f9ae192b6246fe90dad31ca457232d32b414bc99c070ed03b5ffc7378ab",
+        "inverse-contrasts": "987611dc6ac7ffb313184e16be679b593b482761e7c36463e9e5da32cbd333be",
+        "inverse-normal_audit": "2d9bb33339ac12f0489f20b4101e7c918c42ba303631931e26fe2ef5d65f0e4c",
+        "inverse-previous": "c4620a0e4427adb1b4f19da3bd6935088e0776fac0aa81c65b9db20a94c59553"
+      },
+      "prior_R26": {
+        "baseline": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 29
+        },
+        "candidate": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 29
+        },
+        "episodes": 156,
+        "guarded_rows_failed": [],
+        "paired_slot_strict": {
+          "both_first": {
+            "C3": [
+              6,
+              9
+            ],
+            "candidate": [
+              6,
+              9
+            ]
+          },
+          "both_second": {
+            "C3": [
+              0,
+              9
+            ],
+            "candidate": [
+              0,
+              9
+            ]
+          },
+          "isolated_second": {
+            "C3": [
+              3,
+              9
+            ],
+            "candidate": [
+              3,
+              9
+            ]
+          },
+          "long_single": {
+            "C3": [
+              8,
+              9
+            ],
+            "candidate": [
+              8,
+              9
+            ]
+          }
+        },
+        "slots": 57
+      },
+      "source": {
+        "entrypoint": "experiments.r27_loaded_observer.candidate:Detector",
+        "meaning": "Horizontal force unexplained by the fitted vertical coupling.",
+        "source_sha256": "6c24a8d1944e3c5c23fd2c6a24f1b2afce1054c4817ec443cf5513bb21f87d4b"
+      },
+      "stock_registered": {
+        "s26_long_carry_signed": {
+          "actual_force_samples": 203,
+          "delays_ms": [],
+          "during_force": false,
+          "force": [
+            2.672,
+            203,
+            [
+              -6.4,
+              -2.1,
+              1.2
+            ]
+          ],
+          "strict": false
+        },
+        "s26_long_place_lateral": {
+          "actual_force_samples": 126,
+          "delays_ms": [],
+          "during_force": false,
+          "force": [
+            3.461,
+            127,
+            [
+              1.8,
+              7.1,
+              -2.5
+            ]
+          ],
+          "strict": false
+        }
+      },
+      "unforced": {
+        "conditions": 33,
+        "failed": []
+      }
+    },
+    "pose-certified": {
+      "directions": {
+        "guard_losses": [],
+        "new_gains": [
+          [
+            "s26_long_carry_signed",
+            "stock",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_carry_signed",
+            "stock",
+            "reverse",
+            94
+          ],
+          [
+            "s26_long_carry_signed",
+            "actuator_deadzone",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_carry_signed",
+            "actuator_deadzone",
+            "reverse",
+            94
+          ],
+          [
+            "s26_long_carry_signed",
+            "place_surface_shift",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_carry_signed",
+            "place_surface_shift",
+            "reverse",
+            96
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "reverse",
+            96
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "perpendicular_tilt",
+            97
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "reverse",
+            94
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "perpendicular_tilt",
+            101
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "reverse",
+            96
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "perpendicular_tilt",
+            98
+          ]
+        ],
+        "slots": 24,
+        "strict": [
+          6,
+          21
+        ],
+        "strict_in_force": [
+          6,
+          21
+        ],
+        "zero_controls": 6
+      },
+      "evidence_sha256": {
+        "manifold-additional_normals": "e31aeeab8a00eb932b6d0cfd9eb19b50ff4b334250cac153bc51acbdc501afc5",
+        "manifold-contrasts": "e93c9f0dda63f333c4eca3a8e5e2c8b0fba4026e1cd5dda7070a5a048a53472b",
+        "manifold-normal_audit": "f4c3f124ff060830b57e13471679cf20287f359ce36172e40344860776eb536f",
+        "manifold-previous": "2102c5531634520d7d1c8a8745433c595f4b385413995b575bb3639c69495aa5"
+      },
+      "prior_R26": {
+        "baseline": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 29
+        },
+        "candidate": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 2,
+          "duplicate_slots": 2,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 43
+        },
+        "episodes": 156,
+        "guarded_rows_failed": [
+          [
+            "p26_close_place_cross",
+            "stock",
+            [
+              "long_single:time",
+              "long_single:duplicates",
+              "both_second:new_prealarm"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "actuator_deadzone",
+            [
+              "both_second:new_prealarm"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "place_surface_shift",
+            [
+              "long_single:time",
+              "long_single:duplicates",
+              "both_second:new_prealarm"
+            ]
+          ]
+        ],
+        "paired_slot_strict": {
+          "both_first": {
+            "C3": [
+              6,
+              9
+            ],
+            "candidate": [
+              9,
+              9
+            ]
+          },
+          "both_second": {
+            "C3": [
+              0,
+              9
+            ],
+            "candidate": [
+              0,
+              9
+            ]
+          },
+          "isolated_second": {
+            "C3": [
+              3,
+              9
+            ],
+            "candidate": [
+              6,
+              9
+            ]
+          },
+          "long_single": {
+            "C3": [
+              8,
+              9
+            ],
+            "candidate": [
+              7,
+              9
+            ]
+          }
+        },
+        "slots": 57
+      },
+      "source": {
+        "entrypoint": "experiments.r27_load_change.manifold:Detector",
+        "meaning": "Settled plateau outside a measured pose and speed normal envelope.",
+        "source_sha256": "0b1979344956a1c8400f3f9d6039d56147392e498ad7af3d5050c2bd2f8bdadf"
+      },
+      "stock_registered": {
+        "s26_long_carry_signed": {
+          "actual_force_samples": 203,
+          "delays_ms": [
+            97
+          ],
+          "during_force": true,
+          "force": [
+            2.672,
+            203,
+            [
+              -6.4,
+              -2.1,
+              1.2
+            ]
+          ],
+          "strict": true
+        },
+        "s26_long_place_lateral": {
+          "actual_force_samples": 126,
+          "delays_ms": [
+            97
+          ],
+          "during_force": true,
+          "force": [
+            3.461,
+            127,
+            [
+              1.8,
+              7.1,
+              -2.5
+            ]
+          ],
+          "strict": true
+        }
+      },
+      "unforced": {
+        "conditions": 33,
+        "failed": []
+      }
+    },
+    "settled": {
+      "directions": {
+        "guard_losses": [
+          [
+            "s26_long_carry_signed",
+            "stock",
+            "registered",
+            "new_false_rise"
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "reverse",
+            "duplicated"
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "perpendicular_xy",
+            "event"
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "perpendicular_xy",
+            "duration"
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "perpendicular_xy",
+            "duplicated"
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "reverse",
+            "duplicated"
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "perpendicular_xy",
+            "event"
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "perpendicular_xy",
+            "duration"
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "perpendicular_xy",
+            "duplicated"
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "reverse",
+            "duplicated"
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "perpendicular_xy",
+            "event"
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "perpendicular_xy",
+            "duration"
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "perpendicular_xy",
+            "duplicated"
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "perpendicular_tilt",
+            "duplicated"
+          ]
+        ],
+        "new_gains": [
+          [
+            "s26_long_carry_signed",
+            "stock",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_carry_signed",
+            "stock",
+            "reverse",
+            94
+          ],
+          [
+            "s26_long_carry_signed",
+            "actuator_deadzone",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_carry_signed",
+            "actuator_deadzone",
+            "reverse",
+            94
+          ],
+          [
+            "s26_long_carry_signed",
+            "place_surface_shift",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_carry_signed",
+            "place_surface_shift",
+            "reverse",
+            96
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "perpendicular_tilt",
+            97
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "registered",
+            97
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "perpendicular_tilt",
+            101
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "registered",
+            97
+          ]
+        ],
+        "slots": 24,
+        "strict": [
+          6,
+          14
+        ],
+        "strict_in_force": [
+          6,
+          14
+        ],
+        "zero_controls": 6
+      },
+      "evidence_sha256": {
+        "settled-additional_normals": "0d7e4d17e2b60c972d4d1743fe20757eabbee78579c2c04e703df4ad6fb2f7f5",
+        "settled-contrasts": "713bd4931fe97d30c6795370667a1f797b717298576098307f3f4d7f1d87a129",
+        "settled-normal_audit": "0917ce7465988c64dbfd214876a69e53737368383d4b9869546f17f9fd347b67",
+        "settled-previous": "1dfac7f2a0833d171cd65d94369fce9427a78a5e4cac568bf07cb44f80efb36a"
+      },
+      "prior_R26": {
+        "baseline": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 29
+        },
+        "candidate": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 2,
+          "duplicate_slots": 2,
+          "false_rises": 3,
+          "slots": 57,
+          "strict": 43
+        },
+        "episodes": 156,
+        "guarded_rows_failed": [
+          [
+            "s26_long_carry_signed",
+            "stock",
+            [
+              "single:false"
+            ]
+          ],
+          [
+            "s26_long_detached_reverse",
+            "actuator_deadzone",
+            [
+              "none:false",
+              "single:false"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "stock",
+            [
+              "long_single:time",
+              "long_single:duplicates",
+              "both_second:new_prealarm"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "actuator_deadzone",
+            [
+              "both_second:new_prealarm"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "place_surface_shift",
+            [
+              "long_single:time",
+              "long_single:duplicates",
+              "both_second:new_prealarm"
+            ]
+          ]
+        ],
+        "paired_slot_strict": {
+          "both_first": {
+            "C3": [
+              6,
+              9
+            ],
+            "candidate": [
+              9,
+              9
+            ]
+          },
+          "both_second": {
+            "C3": [
+              0,
+              9
+            ],
+            "candidate": [
+              0,
+              9
+            ]
+          },
+          "isolated_second": {
+            "C3": [
+              3,
+              9
+            ],
+            "candidate": [
+              6,
+              9
+            ]
+          },
+          "long_single": {
+            "C3": [
+              8,
+              9
+            ],
+            "candidate": [
+              7,
+              9
+            ]
+          }
+        },
+        "slots": 57
+      },
+      "source": {
+        "entrypoint": "experiments.r27_load_change.settled:Detector",
+        "meaning": "Two independent sensors plus a settled plateau, optional event notification.",
+        "source_sha256": "8970051b731531c48ec9846cd0fb68dcee36caea8bec77892ce982780ed67df1"
+      },
+      "stock_registered": {
+        "s26_long_carry_signed": {
+          "actual_force_samples": 203,
+          "delays_ms": [
+            97
+          ],
+          "during_force": true,
+          "force": [
+            2.672,
+            203,
+            [
+              -6.4,
+              -2.1,
+              1.2
+            ]
+          ],
+          "strict": true
+        },
+        "s26_long_place_lateral": {
+          "actual_force_samples": 126,
+          "delays_ms": [
+            97
+          ],
+          "during_force": true,
+          "force": [
+            3.461,
+            127,
+            [
+              1.8,
+              7.1,
+              -2.5
+            ]
+          ],
+          "strict": true
+        }
+      },
+      "unforced": {
+        "conditions": 33,
+        "failed": []
+      }
+    },
+    "signed-change": {
+      "directions": {
+        "guard_losses": [
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "perpendicular_xy",
+            "duration"
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "perpendicular_xy",
+            "duration"
+          ]
+        ],
+        "new_gains": [
+          [
+            "s26_long_carry_signed",
+            "stock",
+            "registered",
+            36
+          ],
+          [
+            "s26_long_carry_signed",
+            "stock",
+            "reverse",
+            40
+          ],
+          [
+            "s26_long_carry_signed",
+            "actuator_deadzone",
+            "registered",
+            36
+          ],
+          [
+            "s26_long_carry_signed",
+            "actuator_deadzone",
+            "reverse",
+            39
+          ],
+          [
+            "s26_long_carry_signed",
+            "place_surface_shift",
+            "registered",
+            36
+          ],
+          [
+            "s26_long_carry_signed",
+            "place_surface_shift",
+            "reverse",
+            41
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "registered",
+            37
+          ],
+          [
+            "s26_long_place_lateral",
+            "stock",
+            "reverse",
+            35
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "registered",
+            37
+          ],
+          [
+            "s26_long_place_lateral",
+            "actuator_deadzone",
+            "reverse",
+            35
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "registered",
+            37
+          ],
+          [
+            "s26_long_place_lateral",
+            "place_surface_shift",
+            "reverse",
+            35
+          ]
+        ],
+        "slots": 24,
+        "strict": [
+          6,
+          18
+        ],
+        "strict_in_force": [
+          6,
+          18
+        ],
+        "zero_controls": 6
+      },
+      "evidence_sha256": {
+        "change-contrast": "62825b60ddb3933ebb4a55487fbdd78798aad82e0224282e907460eeab2ed4b8",
+        "change-normal": "3f32ceabd709c6cc33156fc10a779841b0c139e2c2353d8edfff762c51c0c3a9",
+        "change-r26": "c1c76ab7db2b029d0c99ed39da93e17d63a8e0613a70a9d1651d30e04b83e4ea"
+      },
+      "prior_R26": {
+        "baseline": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 29
+        },
+        "candidate": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 45
+        },
+        "episodes": 156,
+        "guarded_rows_failed": [
+          [
+            "p26_close_place_cross",
+            "stock",
+            [
+              "long_single:cost",
+              "both_second:new_prealarm"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "actuator_deadzone",
+            [
+              "both_second:new_prealarm"
+            ]
+          ],
+          [
+            "p26_close_place_cross",
+            "place_surface_shift",
+            [
+              "long_single:cost",
+              "both_second:new_prealarm"
+            ]
+          ]
+        ],
+        "paired_slot_strict": {
+          "both_first": {
+            "C3": [
+              6,
+              9
+            ],
+            "candidate": [
+              9,
+              9
+            ]
+          },
+          "both_second": {
+            "C3": [
+              0,
+              9
+            ],
+            "candidate": [
+              0,
+              9
+            ]
+          },
+          "isolated_second": {
+            "C3": [
+              3,
+              9
+            ],
+            "candidate": [
+              6,
+              9
+            ]
+          },
+          "long_single": {
+            "C3": [
+              8,
+              9
+            ],
+            "candidate": [
+              9,
+              9
+            ]
+          }
+        },
+        "slots": 57
+      },
+      "source": {
+        "entrypoint": "experiments.r27_load_change.candidate:Detector",
+        "meaning": "Adjacent-block signed torque residual. Disclosed early gains and protection losses; not a safe default.",
+        "source_sha256": "cb1cb1373f1b3415999bb3c9442c37967fba71ff561fa292237dbf1ac8e2116e"
+      },
+      "stock_registered": {
+        "s26_long_carry_signed": {
+          "actual_force_samples": 203,
+          "delays_ms": [
+            36
+          ],
+          "during_force": true,
+          "force": [
+            2.672,
+            203,
+            [
+              -6.4,
+              -2.1,
+              1.2
+            ]
+          ],
+          "strict": true
+        },
+        "s26_long_place_lateral": {
+          "actual_force_samples": 126,
+          "delays_ms": [
+            37
+          ],
+          "during_force": true,
+          "force": [
+            3.461,
+            127,
+            [
+              1.8,
+              7.1,
+              -2.5
+            ]
+          ],
+          "strict": true
+        }
+      },
+      "unforced": {
+        "conditions": 15,
+        "failed": [
+          [
+            "normal_audit_3",
+            "place_surface_shift"
+          ]
+        ]
+      }
+    }
+  },
+  "baseline": "experiments.r26_yaw_acquisition.candidate:Detector",
+  "baseline_source_sha256": "212f4e79367cb636c0143a2d1f8aa7ba5584aaaca5ecde6b412d01a4985b6784",
+  "classification": "Known physical inputs, after R26 disclosure, research-only under unchanged my_torque. Not original demo, independent performance, or default submission.",
+  "diagnostic": {
+    "active_tick_intervals_exclusive_end": {
+      "both": [
+        [
+          3481,
+          3485
+        ],
+        [
+          3573,
+          3577
+        ]
+      ],
+      "first": [
+        [
+          3481,
+          3485
+        ]
+      ],
+      "long": [
+        [
+          3492,
+          3496
+        ],
+        [
+          3504,
+          3572
+        ]
+      ],
+      "none": [],
+      "second": [
+        [
+          3574,
+          3578
+        ]
+      ]
+    },
+    "boundaries": {
+      "first": {
+        "duration_samples": 67,
+        "first_nonzero_index": 3395,
+        "last_nonzero_index": 3461,
+        "nominal_index": 3394,
+        "nominal_sample_zero": true
+      },
+      "long": {
+        "duration_samples": 176,
+        "first_nonzero_index": 3395,
+        "last_nonzero_index": 3570,
+        "nominal_index": 3394,
+        "nominal_sample_zero": true
+      },
+      "second": {
+        "duration_samples": 42,
+        "first_nonzero_index": 3500,
+        "last_nonzero_index": 3541,
+        "nominal_index": 3499,
+        "nominal_sample_zero": true
+      }
+    },
+    "case": "p26_close_place_cross",
+    "episodes": 5,
+    "events": {
+      "both_first": {
+        "active_samples_in_slot": 4,
+        "attributable_rise_indices": [
+          3481
+        ],
+        "delays_ms": [
+          86
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": true,
+        "raw_rise_indices": [
+          3481
+        ],
+        "strict": true
+      },
+      "both_second": {
+        "active_samples_in_slot": 4,
+        "attributable_rise_indices": [
+          3573
+        ],
+        "delays_ms": [
+          73
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": false,
+        "raw_rise_indices": [
+          3573
+        ],
+        "strict": false
+      },
+      "isolated_first": {
+        "active_samples_in_slot": 4,
+        "attributable_rise_indices": [
+          3481
+        ],
+        "delays_ms": [
+          86
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": true,
+        "raw_rise_indices": [
+          3481
+        ],
+        "strict": true
+      },
+      "isolated_second": {
+        "active_samples_in_slot": 4,
+        "attributable_rise_indices": [
+          3574
+        ],
+        "delays_ms": [
+          74
+        ],
+        "duplicate_rises": 0,
+        "exactly_one": true,
+        "high_before": false,
+        "quiet_before": true,
+        "raw_rise_indices": [
+          3574
+        ],
+        "strict": true
+      },
+      "long_single": {
+        "active_samples_in_slot": 72,
+        "attributable_rise_indices": [
+          3492,
+          3504
+        ],
+        "delays_ms": [
+          97,
+          109
+        ],
+        "duplicate_rises": 1,
+        "exactly_one": false,
+        "high_before": false,
+        "quiet_before": true,
+        "raw_rise_indices": [
+          3492,
+          3504
+        ],
+        "strict": false
+      }
+    },
+    "interpretation": "For long: optional +97 ms then native normal +109 ms under continuous input. For paired: +86 after 67-tick first pulse, +73 after 42-tick second, pre-second 22 ms not quiet. No strict second recovery.",
+    "post_disclosure": true,
+    "prior22ms_high_ticks_before_real_second": [
+      3481,
+      3482,
+      3483,
+      3484
+    ],
+    "raw_sha256": "9fc7a33b9d7cf5fba1a9c4381bbd634eb6491ed39358b8eed164e640587cec4f"
+  },
+  "historical_gate_receipt_sha256": "9e5ee6d8b350b052dfda68afc30a97b67945de6f6a45901d26241107b3fbf8e2",
+  "historical_replays": {
+    "grip": {
+      "counts": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": {
+          "all_registered_paired_slots": 8,
+          "duplicate_edges": 18,
+          "duplicate_slots": 18,
+          "false_rises": 0,
+          "slots": 64,
+          "strict": 42
+        },
+        "experiments.r27_load_change.manifold:Detector": {
+          "all_registered_paired_slots": 8,
+          "duplicate_edges": 18,
+          "duplicate_slots": 18,
+          "false_rises": 0,
+          "slots": 64,
+          "strict": 42
+        }
+      },
+      "episodes": 128,
+      "protection_losses": [],
+      "raw_sha256": "4f047724d7d1433d1b52ab1c6e5dbe29a6c4e5e2b9565b3052dec8eaae730bd2",
+      "reference_sha256": "3910f8916b00c961ed6b8bdc6b52199e0da087de493dfc1c0b1213e11b00ebf0"
+    },
+    "nearby": {
+      "counts": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 20,
+          "strict": 17
+        },
+        "experiments.r27_load_change.manifold:Detector": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 20,
+          "strict": 17
+        }
+      },
+      "episodes": 80,
+      "protection_losses": [],
+      "raw_sha256": "cd9a16a65268bcd3d9d0a315f6a28c38c22511c444e87d4f3ef527a3caddac73",
+      "reference_sha256": "1ec1b1a3b2f01d0ec92316841ce6b44f5ea7a5a368f45338bb28aae0ee994019"
+    },
+    "r23": {
+      "counts": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": {
+          "all_registered_paired_slots": 8,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 78,
+          "strict": 66
+        },
+        "experiments.r27_load_change.manifold:Detector": {
+          "all_registered_paired_slots": 9,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 78,
+          "strict": 68
+        }
+      },
+      "episodes": 216,
+      "protection_losses": [],
+      "raw_sha256": "fafef07772825c9a9d774dd0a5c73df0c994099be3116a9497cef0a176a0d6e2",
+      "reference_sha256": "d2c2abc7c9f0d57bd83a7ad276d264779313d4d1c3d5738f30b7a91a79dcc90d"
+    },
+    "r24": {
+      "counts": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": {
+          "all_registered_paired_slots": 1,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 2,
+          "slots": 84,
+          "strict": 53
+        },
+        "experiments.r27_load_change.manifold:Detector": {
+          "all_registered_paired_slots": 2,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 2,
+          "slots": 84,
+          "strict": 60
+        }
+      },
+      "episodes": 240,
+      "protection_losses": [],
+      "raw_sha256": "ecd3ca9905bf0ec60b710e919ed6bd6471ada23550ab3a6bb17f727566867f29",
+      "reference_sha256": "db5e27debc5a8c5c6cd7d76dc96b7418988185645ace77073e7ace58835596a4"
+    },
+    "r25": {
+      "counts": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": {
+          "all_registered_paired_slots": 3,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 75,
+          "strict": 57
+        },
+        "experiments.r27_load_change.manifold:Detector": {
+          "all_registered_paired_slots": 5,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 75,
+          "strict": 62
+        }
+      },
+      "episodes": 198,
+      "protection_losses": [],
+      "raw_sha256": "c3a4ec15e5c3e080323e5598839213088ad6bbf5b5f171b6aa39839b0e31b4e5",
+      "reference_sha256": "3e1520eeddd473117a6f7990b6664a7a0c01ccb25823c1456748a5e6b98020d3"
+    },
+    "stress": {
+      "counts": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": {
+          "all_registered_paired_slots": 6,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 48,
+          "strict": 36
+        },
+        "experiments.r27_load_change.manifold:Detector": {
+          "all_registered_paired_slots": 11,
+          "duplicate_edges": 1,
+          "duplicate_slots": 1,
+          "false_rises": 0,
+          "slots": 48,
+          "strict": 47
+        }
+      },
+      "episodes": 96,
+      "protection_losses": [
+        [
+          "cross_stress_0",
+          "stock",
+          [
+            "both_second:time",
+            "both_second:duplicates"
+          ]
+        ]
+      ],
+      "raw_sha256": "c878b0b8258e19f66f294f7700a9e60c9ca8a5f44d458dd76ea01bd30169dc47",
+      "reference_sha256": "6c720f17c66c8e6e2ac4e8bbc3c0eafe243caf607359a29bddc99cd6b286410c"
+    },
+    "weak32": {
+      "counts": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 32,
+          "strict": 16
+        },
+        "experiments.r27_load_change.manifold:Detector": {
+          "all_registered_paired_slots": 0,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 32,
+          "strict": 16
+        }
+      },
+      "episodes": 128,
+      "protection_losses": [],
+      "raw_sha256": "499a1acad131c087b1522120dd3c10e52d4a1fcf8f428849f776a5b5e143a10a",
+      "reference_sha256": "a6919c425f702fe8fab10158ea240bb56b6d3dd98bfe45b3efc35bf9f6a32c52"
+    }
+  },
+  "known_inputs_per_arm": "two trajectories x three mechanics x (one genuine no-force + four signed directions) = 30 actual episodes/arm; 24 force slots. Strict and in-force reported separately.",
+  "registered_protocol_sha256": "96bb4e6c5f777190e2e86dab1ac6677789a1cdb49e6ffb23836e0cc8f99b5765",
+  "runtime": "MuJoCo 3.17.0",
+  "schema": "r27-disclosed-loaded-physics-summary.v1"
+}

@@ -1,0 +1,100 @@
+{
+  "all_full_scores_and_counts_matched_separate_history": true,
+  "closure_sha256": "bf2cc4d8281e0256bd5a8988dd5bbdd27f11ff72a77ddee92b5a293855520c3b",
+  "course_original": false,
+  "default_changed": false,
+  "every_scope_row_same_as_full_d4": true,
+  "examples_source_and_extracted_bytes_identical": true,
+  "kit_included": false,
+  "known_v1_display_issue": "Unchanged serialized stock scalar and actual signed series are validated separately. Earlier draft additionally required a vectorized norm to be bit-identical, which failed for C3 despite correct stock per-tick scalar; no candidate changes.",
+  "occupancy_check": "Historical 320 ms collision attribution window and additional whole-episode active duration are separate. Intervals exactly reproduce both.",
+  "repeat_build_byte_identical": true,
+  "schema": "r31-source-archive-replay.v1",
+  "scopes": {
+    "all-duplicates": {
+      "conditions": 28,
+      "episodes": 84,
+      "guards_vs": {
+        "c3": [],
+        "headroom": []
+      },
+      "receipt_sha256": "901cbc0a2c78a0df7517e65ba05c882d0a56b2413e0d0c0503cddad1bfb3d48a",
+      "result_sha256": "667e27632dcb81e2d94800decf1cc6040ed0cd93c0c3994b2ea82087ec54aa4e",
+      "totals": {
+        "c3": {
+          "duplicate": 0,
+          "raw_duplicate": 0,
+          "strict": 14
+        },
+        "headroom": {
+          "duplicate": 14,
+          "raw_duplicate": 14,
+          "strict": 14
+        },
+        "identity": {
+          "duplicate": 0,
+          "raw_duplicate": 0,
+          "strict": 14
+        }
+      }
+    },
+    "examples": {
+      "conditions": 8,
+      "episodes": 24,
+      "guards_vs": {
+        "c3": [],
+        "headroom": []
+      },
+      "receipt_sha256": "f7be30d803d559f467d8e6aca6d324a7c9823f5828c79b11e046d379bd471d1b",
+      "result_sha256": "49521ce59436fb2f2728f3f07eaf317d2f77130c164cc8d1652a4ba0ab17ed1a",
+      "totals": {
+        "c3": {
+          "duplicate": 0,
+          "raw_duplicate": 0,
+          "strict": 4
+        },
+        "headroom": {
+          "duplicate": 4,
+          "raw_duplicate": 4,
+          "strict": 4
+        },
+        "identity": {
+          "duplicate": 0,
+          "raw_duplicate": 0,
+          "strict": 4
+        }
+      }
+    },
+    "full-d4": {
+      "conditions": 385,
+      "episodes": 1155,
+      "guards_vs": {
+        "c3": [],
+        "headroom": []
+      },
+      "receipt_sha256": "e6f880fea5da7f439452b3a4693e1cd2fe5024c099144eb4db9d4e6166d8552e",
+      "result_sha256": "7070f5f1651e07faa8701f28421082b7eaf32a16cb866dbf8e5d9ffa07018d43",
+      "totals": {
+        "c3": {
+          "duplicate": 2,
+          "raw_duplicate": 2,
+          "strict": 146
+        },
+        "headroom": {
+          "duplicate": 16,
+          "raw_duplicate": 16,
+          "strict": 154
+        },
+        "identity": {
+          "duplicate": 2,
+          "raw_duplicate": 2,
+          "strict": 154
+        }
+      }
+    }
+  },
+  "shipped_zip_episodes": 1263,
+  "unopened_conditions_included": false,
+  "zip_files": 232,
+  "zip_sha256": "8b6d8f921aae6ace334f3bc601111620a50fe14089c0b2e577bcc0f1b07c2a26"
+}

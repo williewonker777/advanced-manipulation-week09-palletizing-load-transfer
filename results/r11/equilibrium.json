@@ -1,0 +1,239 @@
+{
+  "schema": "r11-equilibrium-summary.v1",
+  "decision": "STOP_NO_INDEPENDENT_EVAL",
+  "analytic_feasibility": [
+    {
+      "id": "eq0",
+      "reflected_mass_kg": 9.8974898599972,
+      "equilibrium_force_n": 9.280260000000002,
+      "max_equilibrium_joint_torque_nm": 8.415947134887972,
+      "max_fraction_rated_torque": 0.02989925272317827,
+      "minimum_slew_cycles_from_zero": 1
+    },
+    {
+      "id": "eq1",
+      "reflected_mass_kg": 12.013378844502151,
+      "equilibrium_force_n": 19.315890000000003,
+      "max_equilibrium_joint_torque_nm": 17.51691322261566,
+      "max_fraction_rated_torque": 0.0622321655517315,
+      "minimum_slew_cycles_from_zero": 2
+    },
+    {
+      "id": "eq2",
+      "reflected_mass_kg": 14.696672790454832,
+      "equilibrium_force_n": 31.887405000000005,
+      "max_equilibrium_joint_torque_nm": 28.91758579487669,
+      "max_fraction_rated_torque": 0.1027352230197579,
+      "minimum_slew_cycles_from_zero": 3
+    },
+    {
+      "id": "eq3",
+      "reflected_mass_kg": 15.808386707633716,
+      "equilibrium_force_n": 40.25043000000001,
+      "max_equilibrium_joint_torque_nm": 36.50172420131643,
+      "max_fraction_rated_torque": 0.12967931704355226,
+      "minimum_slew_cycles_from_zero": 3
+    }
+  ],
+  "episodes": 32,
+  "delivered": [
+    {
+      "mode": "servo",
+      "id": "eq0",
+      "equilibrium_force_n": 9.280260000000002,
+      "mean_last20_requested_force_n": 9.9303068841474,
+      "mean_last20_delivered_force_n": 9.9303068841474,
+      "mean_last20_vertical_speed_mm_s": 9.618452846034717,
+      "last20_slew_limited_samples": 1,
+      "all_slew_limited_samples": 40,
+      "max_last20_force_fraction_mg": 0.7792633610280002,
+      "braking_work_j": 0.45036194865133666,
+      "positive_motor_work_j": 0.034168897273816584
+    },
+    {
+      "mode": "servo",
+      "id": "eq1",
+      "equilibrium_force_n": 19.315890000000003,
+      "mean_last20_requested_force_n": 31.35500237063639,
+      "mean_last20_delivered_force_n": 31.35500237063639,
+      "mean_last20_vertical_speed_mm_s": 61.26598934971658,
+      "last20_slew_limited_samples": 0,
+      "all_slew_limited_samples": 55,
+      "max_last20_force_fraction_mg": 0.8991993235685993,
+      "braking_work_j": 0.9941574624122919,
+      "positive_motor_work_j": 0.13110254185469788
+    },
+    {
+      "mode": "servo",
+      "id": "eq2",
+      "equilibrium_force_n": 31.887405000000008,
+      "mean_last20_requested_force_n": 21.24269102869873,
+      "mean_last20_delivered_force_n": 21.24269102869873,
+      "mean_last20_vertical_speed_mm_s": -13.442269103633203,
+      "last20_slew_limited_samples": 0,
+      "all_slew_limited_samples": 58,
+      "max_last20_force_fraction_mg": 0.5180986276989457,
+      "braking_work_j": 1.6123706625017467,
+      "positive_motor_work_j": 0.20754747014458683
+    },
+    {
+      "mode": "servo",
+      "id": "eq3",
+      "equilibrium_force_n": 40.25043000000001,
+      "mean_last20_requested_force_n": 47.85193663612076,
+      "mean_last20_delivered_force_n": 47.851936636120776,
+      "mean_last20_vertical_speed_mm_s": 39.28438157981326,
+      "last20_slew_limited_samples": 0,
+      "all_slew_limited_samples": 39,
+      "max_last20_force_fraction_mg": 0.7866314577032819,
+      "braking_work_j": 2.007250599798318,
+      "positive_motor_work_j": 0.38225942081202297
+    },
+    {
+      "mode": "torque",
+      "id": "eq0",
+      "equilibrium_force_n": 9.280260000000002,
+      "mean_last20_requested_force_n": 11.919802832841103,
+      "mean_last20_delivered_force_n": 11.919802832841103,
+      "mean_last20_vertical_speed_mm_s": 11.204029961339621,
+      "last20_slew_limited_samples": 3,
+      "all_slew_limited_samples": 36,
+      "max_last20_force_fraction_mg": 0.8756814654675651,
+      "braking_work_j": 0.42776754356761415,
+      "positive_motor_work_j": 0.04460556513605997
+    },
+    {
+      "mode": "torque",
+      "id": "eq1",
+      "equilibrium_force_n": 19.315890000000003,
+      "mean_last20_requested_force_n": 28.72981055387718,
+      "mean_last20_delivered_force_n": 28.72981055387718,
+      "mean_last20_vertical_speed_mm_s": 53.877667797581,
+      "last20_slew_limited_samples": 1,
+      "all_slew_limited_samples": 67,
+      "max_last20_force_fraction_mg": 0.8378985890626567,
+      "braking_work_j": 0.9089290634098262,
+      "positive_motor_work_j": 0.16613312686142753
+    },
+    {
+      "mode": "torque",
+      "id": "eq2",
+      "equilibrium_force_n": 31.887405000000008,
+      "mean_last20_requested_force_n": 49.60815205270002,
+      "mean_last20_delivered_force_n": 49.608152052700014,
+      "mean_last20_vertical_speed_mm_s": 39.42765968964805,
+      "last20_slew_limited_samples": 1,
+      "all_slew_limited_samples": 78,
+      "max_last20_force_fraction_mg": 0.899853382615901,
+      "braking_work_j": 1.498370376108771,
+      "positive_motor_work_j": 0.32262216253945875
+    },
+    {
+      "mode": "torque",
+      "id": "eq3",
+      "equilibrium_force_n": 40.25043000000001,
+      "mean_last20_requested_force_n": 42.365404219832236,
+      "mean_last20_delivered_force_n": 42.365404219832236,
+      "mean_last20_vertical_speed_mm_s": -70.84120901928736,
+      "last20_slew_limited_samples": 5,
+      "all_slew_limited_samples": 213,
+      "max_last20_force_fraction_mg": 0.6357530907479954,
+      "braking_work_j": 2.876406966685091,
+      "positive_motor_work_j": 1.505305880377625
+    }
+  ],
+  "G4_by_row": [
+    {
+      "mode": "servo",
+      "id": "eq0",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": false
+    },
+    {
+      "mode": "servo",
+      "id": "eq1",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": true,
+      "peak_le_1.10mg": false
+    },
+    {
+      "mode": "servo",
+      "id": "eq2",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": true
+    },
+    {
+      "mode": "servo",
+      "id": "eq3",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": true
+    },
+    {
+      "mode": "torque",
+      "id": "eq0",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": false
+    },
+    {
+      "mode": "torque",
+      "id": "eq1",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": true,
+      "peak_le_1.10mg": false
+    },
+    {
+      "mode": "torque",
+      "id": "eq2",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": false
+    },
+    {
+      "mode": "torque",
+      "id": "eq3",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": false
+    }
+  ],
+  "outcomes": {
+    "G4_rows_passed": 0,
+    "normal_cost_rows_passed": 0,
+    "support_mean_mg_max": 0.321458572807776,
+    "support_min_mg_max": 0.13148442931945467,
+    "support_peak_mg_max": 3.4247203848169714,
+    "normal_cost_ratio_range": [
+      1.7929079697734889,
+      15.507051391236358
+    ],
+    "new_saturation": false,
+    "normal_FA_added": [
+      "torque:eq3"
+    ],
+    "impact_FA_added": [
+      "torque:eq3"
+    ],
+    "event_failed": [
+      "torque:eq3"
+    ],
+    "delay_failed": [],
+    "tool_failed": [],
+    "worst_candidate_p99_us": 388.2973
+  },
+  "limiting_budget": "The 5%-rated torque slew bound was active for only 0–5 final20 samples and delivered mean force tracked requested mean force; it was not the steady-state limiter. The 0.90mg force cap was approached in several rows, yet continuous support still failed and peak contact/cost grew.",
+  "positive_retuning": false,
+  "independent_eval_opened": false,
+  "conclusion": "The compliant equilibrium delivered its prescribed preload, but public pose-relative impedance did not align with the unknown true support equilibrium. It generated intermittent impacts and large cost while failing continuous 0.5mg support."
+}

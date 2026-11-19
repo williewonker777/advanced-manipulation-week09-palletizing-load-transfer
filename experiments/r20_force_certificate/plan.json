@@ -1,0 +1,24 @@
+{
+  "schema": "r20-force-certificate-plan.v1",
+  "status": "DIAGNOSTIC_ONLY_DO_NOT_REPLACE_OR_RELAX_R18",
+  "case_ids": [
+    "fresh_gap90_diagonal_opposed",
+    "fresh_gap210_mixed_separated"
+  ],
+  "claim": "The signed stock force is exact; only a batched norm differs from the stock runner's one-vector-per-tick norm.",
+  "required_existing_evidence": [
+    "signed_and_scalar_exact is true for every recorded arm",
+    "stock_scalar_bit_exact is true for every four-twin trace",
+    "signed_profiles_exact is the force-profile gate under diagnosis"
+  ],
+  "negative_controls": [
+    "one active component sign is changed",
+    "one active force sample is moved by one tick",
+    "one scalar magnitude is changed by one representable float"
+  ],
+  "rules": [
+    "use exact array equality and the stock scalar np.linalg.norm call order",
+    "do not add tolerances or change the original R18 result",
+    "report a separate conditional count only"
+  ]
+}

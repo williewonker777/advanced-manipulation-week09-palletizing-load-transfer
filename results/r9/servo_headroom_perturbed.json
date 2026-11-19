@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "R1": {
+      "rows": 26,
+      "saturated_episodes": 10,
+      "diverged": 0,
+      "false_alarm_rises": 19,
+      "detected": 6,
+      "normal_peak_over_mg_max": 1.4437688760323901
+    },
+    "guard": {
+      "rows": 26,
+      "saturated_episodes": 0,
+      "diverged": 0,
+      "false_alarm_rises": 19,
+      "detected": 6,
+      "normal_peak_over_mg_max": 1.406734975139328
+    },
+    "normal_candidate_over_R1_max": {
+      "rms_mm": 1.0025653194650668,
+      "max_mm": 1.025161723260839,
+      "torque_step_place_nm": 1.0244778455048673,
+      "table_force_place_max_n": 1.0014544944224057
+    },
+    "conditions_with_increased_false_alarms": [],
+    "baseline_detected_event_losses": []
+  },
+  "complete_record_sha256": "67d10020429d33a398710e8b43817d01ab96e4e872f87494f4a285d365d292ae",
+  "status": "development only; reject after the separate release stress test",
+  "executed_detector": "experiments/r8_final/C1.py",
+  "sources": {
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "experiments/r9_saturation/headroom_guard.py": "773d1afe8da62a35c97281c22120354322121b6820a58f64044e5e64e774c228",
+    "experiments/r8_final/C1.py": "3e3a67f75fcf795ec49d847b54ac72514d69bb17bc750f92478f1785e6d308e0",
+    "tools/kit_manifest.sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+    "results/r9/servo_headroom_perturbed_design.json": "684d4a07dad0789122cb4b1092da86d1922adeb25a344a33736435cc21d8ce94"
+  },
+  "release_detector_sha256": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+  "release_decision": "servo_headroom_release.json",
+  "private_harness_sha256": {
+    "experiments/r9_saturation/evaluate_headroom_perturbed.py": "bb2ece8bc7ba9ef31242429fa2e2fc9870d142370f690d8c04d53c1f8f2b322a",
+    "experiments/r9_saturation/perturb_runner.py": "4e3d72da862f9f4e398a86ad9cd5b1f7b50b5f4cfad16c7a4ccbfe49436e4718"
+  },
+  "private_harness_note": "Owned-model perturbation harness depends on a private kit-derived test fixture; source hash and the full synthetic design are provided, not the fixture."
+}

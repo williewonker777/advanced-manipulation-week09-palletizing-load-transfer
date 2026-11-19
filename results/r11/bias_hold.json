@@ -1,0 +1,141 @@
+{
+  "schema": "r11-recovery-decision.v1",
+  "decision": "REJECT_STOP_BEFORE_R3_OR_HOLDOUT",
+  "reason": "Velocity-gated integration preserved detection transients but made the forced and matched-normal bias memories path-dependent, leaving stationary pulse tails above the fixed 0.05 degree gate.",
+  "development": {
+    "passed": false,
+    "rows": 15,
+    "failures": [
+      {
+        "group": "d0",
+        "case": "entry_pulse",
+        "failed_gates": [
+          "terminal_response"
+        ]
+      },
+      {
+        "group": "d0",
+        "case": "rest_pulse",
+        "failed_gates": [
+          "terminal_response"
+        ]
+      },
+      {
+        "group": "d1",
+        "case": "normal",
+        "failed_gates": [
+          "static_return_benefit"
+        ]
+      },
+      {
+        "group": "d1",
+        "case": "entry_pulse",
+        "failed_gates": [
+          "terminal_response"
+        ]
+      },
+      {
+        "group": "d1",
+        "case": "rest_pulse",
+        "failed_gates": [
+          "terminal_response"
+        ]
+      },
+      {
+        "group": "d2",
+        "case": "entry_pulse",
+        "failed_gates": [
+          "terminal_response",
+          "absolute_final"
+        ]
+      },
+      {
+        "group": "d2",
+        "case": "rest_pulse",
+        "failed_gates": [
+          "terminal_response",
+          "absolute_final"
+        ]
+      }
+    ],
+    "worst_tail_deg": 0.1881257523822544,
+    "worst_tail_ratio": 0.7077197361692792,
+    "worst_p99_us": 299.9817100000003,
+    "normal_final_joint_ratios": [
+      0.28193333563377837,
+      0.5562127808037057,
+      0.20899958148203945
+    ],
+    "normal_final_tcp_ratios": [
+      0.3276312660431831,
+      0.36372567881075185,
+      0.2965250219921434
+    ],
+    "transient_gates_preserved": [
+      "motion",
+      "no_new_saturation",
+      "bias_bound",
+      "event_maintained",
+      "event_delay",
+      "tool_maintained",
+      "false_alarm",
+      "time_p99"
+    ]
+  },
+  "first_counterexample": {
+    "group": "d0",
+    "case": "entry_pulse",
+    "tail_abs_deg": [
+      0.04430748501716135,
+      0.0027092787683874802,
+      0.05316347648713829,
+      0.022458100134447632,
+      0.013864637924932113,
+      0.0002764735707178463
+    ],
+    "max_tail_abs_deg": 0.05316347648713829,
+    "normal_final_bias_nm": [
+      1.440751348690941,
+      1.3369108375681615,
+      -1.0602486452342716,
+      0.09302768376518467,
+      -0.537048033209966,
+      0.3834714149995537
+    ],
+    "forced_final_bias_nm": [
+      2.6430059659701266,
+      1.0754213307170994,
+      0.31823012652133603,
+      0.20957546463236454,
+      -0.44461940236305614,
+      0.3829782141503326
+    ],
+    "bias_difference_nm": [
+      1.2022546172791857,
+      -0.2614895068510621,
+      1.3784787717556077,
+      0.11654778086717987,
+      0.09242863084690983,
+      -0.0004932008492210538
+    ],
+    "forced_frozen_axis_samples": 194,
+    "mechanism": "The pulse froze 194 axis-samples. The resulting final J3 bias differed from its matched normal by 1.378 Nm and the paired J3 tail was 0.05316 degree, despite low absolute final error."
+  },
+  "scope": {
+    "development_episodes": 30,
+    "diagnostic_episodes": 2,
+    "total_episodes": 32,
+    "historical_r3_opened": false,
+    "holdout_opened": false,
+    "retunes": 0
+  },
+  "pins": {
+    "plan": "e50ded0e539e79b08079ede45d3d4bf9737ce9d206ff9b39603d3cfb47691a64",
+    "result": "e6e89b9ea26ef5e7642f3cb91d817f163396f881d3db32bd535adbcae3c2c12c",
+    "diagnostic": "cd287affa0fe6a2cc807be23806f01d18b7513156a8a7e0f3c3e7e286f9d9a32",
+    "candidate": "38c4cd553b1392f977516e5f3ee3fa872957b94f9fc1330581bf00c5fb901558",
+    "qualification": "fcb93bee7ff46e8782ebe4bcfba838f0949e3ab699fd7feb274fd0f31315b6d1",
+    "verify_results": "abeaca837787790bb57dbc9f740d288b4cd9e510a84baa9ece2e4828fa8c7634"
+  },
+  "official": false
+}

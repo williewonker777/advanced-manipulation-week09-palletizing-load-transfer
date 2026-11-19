@@ -1,0 +1,555 @@
+{
+  "schema": "r16-progressive-handoff-plan.v1",
+  "status": "FROZEN_BEFORE_R16_CANDIDATE_OUTCOMES",
+  "scope": "ORIGINAL stock simulator; R10 vs frozen R15 early vs R16 release; no external impacts before both normal stages pass",
+  "thresholds": {
+    "g4": "candidate mean>=0.50mg, min>=0.25mg, peak<=1.10mg, mean gain vs R10>=0.25mg",
+    "cost": "each candidate TCP RMS/max, pickup/place torque step and placement peak force <=1.05 times both R10 and R15 early",
+    "false_events": "injective match to both comparators within 20ms",
+    "tool": "no lost comparator tool hit and no delay >5ms",
+    "saturation": "candidate <= maximum comparator saturation",
+    "runtime": "candidate controller p99 <=800us",
+    "impact": "exact matched prefix/input; every R10 true rise retained with <=5ms delay; no new prealarm/false event/tool loss"
+  },
+  "exposed_cases": [
+    {
+      "id": "ec1:none",
+      "mass": 3.45,
+      "com": [
+        0.019,
+        -0.014,
+        0.021
+      ],
+      "offset": null
+    },
+    {
+      "id": "ec1:explicit_zero",
+      "mass": 3.45,
+      "com": [
+        0.019,
+        -0.014,
+        0.021
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "ec1:xy",
+      "mass": 3.45,
+      "com": [
+        0.019,
+        -0.014,
+        0.021
+      ],
+      "offset": [
+        0.0058,
+        -0.0065,
+        0.0
+      ]
+    },
+    {
+      "id": "ec1:up",
+      "mass": 3.45,
+      "com": [
+        0.019,
+        -0.014,
+        0.021
+      ],
+      "offset": [
+        0.0058,
+        -0.0065,
+        0.0044
+      ]
+    },
+    {
+      "id": "ec1:down",
+      "mass": 3.45,
+      "com": [
+        0.019,
+        -0.014,
+        0.021
+      ],
+      "offset": [
+        0.0058,
+        -0.0065,
+        -0.0044
+      ]
+    },
+    {
+      "id": "ec2:none",
+      "mass": 4.9,
+      "com": [
+        -0.022,
+        0.018,
+        -0.013
+      ],
+      "offset": null
+    },
+    {
+      "id": "ec2:explicit_zero",
+      "mass": 4.9,
+      "com": [
+        -0.022,
+        0.018,
+        -0.013
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "ec2:xy",
+      "mass": 4.9,
+      "com": [
+        -0.022,
+        0.018,
+        -0.013
+      ],
+      "offset": [
+        -0.0062,
+        -0.0048,
+        0.0
+      ]
+    },
+    {
+      "id": "ec2:up",
+      "mass": 4.9,
+      "com": [
+        -0.022,
+        0.018,
+        -0.013
+      ],
+      "offset": [
+        -0.0062,
+        -0.0048,
+        0.0052
+      ]
+    },
+    {
+      "id": "ec2:down",
+      "mass": 4.9,
+      "com": [
+        -0.022,
+        0.018,
+        -0.013
+      ],
+      "offset": [
+        -0.0062,
+        -0.0048,
+        -0.0052
+      ]
+    },
+    {
+      "id": "ec3:none",
+      "mass": 6.55,
+      "com": [
+        0.016,
+        0.023,
+        -0.02
+      ],
+      "offset": null
+    },
+    {
+      "id": "ec3:explicit_zero",
+      "mass": 6.55,
+      "com": [
+        0.016,
+        0.023,
+        -0.02
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "ec3:xy",
+      "mass": 6.55,
+      "com": [
+        0.016,
+        0.023,
+        -0.02
+      ],
+      "offset": [
+        0.0072,
+        0.0054,
+        0.0
+      ]
+    },
+    {
+      "id": "ec3:up",
+      "mass": 6.55,
+      "com": [
+        0.016,
+        0.023,
+        -0.02
+      ],
+      "offset": [
+        0.0072,
+        0.0054,
+        0.0042
+      ]
+    },
+    {
+      "id": "ec3:down",
+      "mass": 6.55,
+      "com": [
+        0.016,
+        0.023,
+        -0.02
+      ],
+      "offset": [
+        0.0072,
+        0.0054,
+        -0.0042
+      ]
+    },
+    {
+      "id": "ec4:none",
+      "mass": 7.75,
+      "com": [
+        -0.015,
+        -0.02,
+        0.017
+      ],
+      "offset": null
+    },
+    {
+      "id": "ec4:explicit_zero",
+      "mass": 7.75,
+      "com": [
+        -0.015,
+        -0.02,
+        0.017
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "ec4:xy",
+      "mass": 7.75,
+      "com": [
+        -0.015,
+        -0.02,
+        0.017
+      ],
+      "offset": [
+        -0.0054,
+        0.0076,
+        0.0
+      ]
+    },
+    {
+      "id": "ec4:up",
+      "mass": 7.75,
+      "com": [
+        -0.015,
+        -0.02,
+        0.017
+      ],
+      "offset": [
+        -0.0054,
+        0.0076,
+        0.0055
+      ]
+    },
+    {
+      "id": "ec4:down",
+      "mass": 7.75,
+      "com": [
+        -0.015,
+        -0.02,
+        0.017
+      ],
+      "offset": [
+        -0.0054,
+        0.0076,
+        -0.0055
+      ]
+    },
+    {
+      "id": "sh3",
+      "mass": 7.1,
+      "com": [
+        -0.016,
+        -0.019,
+        0.027
+      ],
+      "offset": [
+        0.005,
+        0.007,
+        0.0
+      ]
+    },
+    {
+      "id": "sh5",
+      "mass": 6.65,
+      "com": [
+        -0.025,
+        0.018,
+        -0.02
+      ],
+      "offset": [
+        0.004,
+        -0.006,
+        0.0048
+      ]
+    }
+  ],
+  "fresh_cases": [
+    {
+      "id": "fr_light_zero",
+      "mass": 3.72,
+      "com": [
+        -0.017,
+        0.009,
+        0.024
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "fr_light_down",
+      "mass": 3.72,
+      "com": [
+        -0.017,
+        0.009,
+        0.024
+      ],
+      "offset": [
+        -0.0033,
+        0.0027,
+        -0.0036
+      ]
+    },
+    {
+      "id": "fr_mid_zero",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "fr_mid_up",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0028,
+        -0.0031,
+        0.0034
+      ]
+    },
+    {
+      "id": "fr_heavy_zero",
+      "mass": 7.42,
+      "com": [
+        -0.009,
+        0.026,
+        -0.014
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "fr_heavy_down",
+      "mass": 7.42,
+      "com": [
+        -0.009,
+        0.026,
+        -0.014
+      ],
+      "offset": [
+        0.0031,
+        0.0024,
+        -0.0038
+      ]
+    }
+  ],
+  "impact_cases": [
+    {
+      "id": "new_weak_oblique_pre",
+      "mass": 3.72,
+      "com": [
+        -0.017,
+        0.009,
+        0.024
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision": [
+        3.78,
+        [
+          6.0,
+          -7.0,
+          -5.0
+        ]
+      ],
+      "claim": "new"
+    },
+    {
+      "id": "new_vertical_pre",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0028,
+        -0.0031,
+        0.0034
+      ],
+      "collision": [
+        3.86,
+        [
+          0.0,
+          0.0,
+          -13.0
+        ]
+      ],
+      "claim": "new"
+    },
+    {
+      "id": "new_surface_normal_release",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision": [
+        3.94,
+        [
+          0.0,
+          0.0,
+          16.0
+        ]
+      ],
+      "claim": "new"
+    },
+    {
+      "id": "new_off_release_pre",
+      "mass": 7.42,
+      "com": [
+        -0.009,
+        0.026,
+        -0.014
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision": [
+        3.82,
+        [
+          11.0,
+          0.0,
+          -4.0
+        ]
+      ],
+      "claim": "new"
+    },
+    {
+      "id": "new_oblique_post",
+      "mass": 3.72,
+      "com": [
+        -0.017,
+        0.009,
+        0.024
+      ],
+      "offset": [
+        -0.0033,
+        0.0027,
+        -0.0036
+      ],
+      "collision": [
+        4.08,
+        [
+          -7.0,
+          9.0,
+          0.0
+        ]
+      ],
+      "claim": "new"
+    },
+    {
+      "id": "new_positive_heavy",
+      "mass": 7.42,
+      "com": [
+        -0.009,
+        0.026,
+        -0.014
+      ],
+      "offset": [
+        0.0031,
+        0.0024,
+        -0.0038
+      ],
+      "collision": [
+        4.02,
+        [
+          0.0,
+          0.0,
+          20.0
+        ]
+      ],
+      "claim": "new"
+    },
+    {
+      "id": "exposed_heavy_oblique_143ms",
+      "mass": 7.58,
+      "com": [
+        -0.018,
+        0.025,
+        -0.017
+      ],
+      "offset": null,
+      "collision": [
+        3.905,
+        [
+          8.0,
+          -5.0,
+          -15.0
+        ]
+      ],
+      "claim": "exposed_sentinel"
+    }
+  ],
+  "law": "balanced",
+  "candidate_module": "experiments.r16_balanced.controller"
+}

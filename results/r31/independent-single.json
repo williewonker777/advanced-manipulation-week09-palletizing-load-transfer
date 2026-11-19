@@ -1,0 +1,2010 @@
+{
+  "actual": {
+    "all_protection_gates": false,
+    "episodes": 72,
+    "invalid_predecessor_status": "INVALID_INFRASTRUCTURE_ZERO_RELEASED_OUTPUTS",
+    "plan_sha256": "23b99746576c8b35f9d6254655194c020f503624b0ed46389549c1c3cd5b630d",
+    "r30_duplicate_exercised": true,
+    "r30_duplicate_removed_with_detection": true,
+    "rows": [
+      {
+        "id": "s01",
+        "input": {
+          "com": [
+            0.0233,
+            0.0259,
+            0.0187
+          ],
+          "force": [
+            9.551,
+            0.0,
+            0.0
+          ],
+          "id": "s01",
+          "mass": 5.149,
+          "time": 2.498
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 67,
+          "r30_headroom": 4,
+          "r31_held": 4
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": false,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": false,
+        "scores": {
+          "c3": {
+            "delay_ms": 64,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s02",
+        "input": {
+          "com": [
+            0.0043,
+            -0.0092,
+            0.0018
+          ],
+          "force": [
+            -18.585,
+            0.0,
+            0.0
+          ],
+          "id": "s02",
+          "mass": 4.062,
+          "time": 2.159
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 117,
+          "r30_headroom": 117,
+          "r31_held": 117
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": false,
+        "scores": {
+          "c3": {
+            "delay_ms": 33,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 33,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 33,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s03",
+        "input": {
+          "com": [
+            -0.0007,
+            0.0216,
+            0.0326
+          ],
+          "force": [
+            0.0,
+            16.754,
+            0.0
+          ],
+          "id": "s03",
+          "mass": 3.65,
+          "time": 2.441
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 117,
+          "r30_headroom": 117,
+          "r31_held": 117
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": false,
+        "scores": {
+          "c3": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s04",
+        "input": {
+          "com": [
+            0.0079,
+            0.011,
+            -0.0035
+          ],
+          "force": [
+            0.0,
+            -20.127,
+            0.0
+          ],
+          "id": "s04",
+          "mass": 1.617,
+          "time": 3.181
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 122,
+          "r30_headroom": 122,
+          "r31_held": 122
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": false,
+        "scores": {
+          "c3": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s05",
+        "input": {
+          "com": [
+            0.0152,
+            0.0182,
+            0.0157
+          ],
+          "force": [
+            7.392801,
+            7.392801,
+            0.0
+          ],
+          "id": "s05",
+          "mass": 4.001,
+          "time": 2.709
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 78,
+          "r30_headroom": 4,
+          "r31_held": 4
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": false,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": false,
+        "scores": {
+          "c3": {
+            "delay_ms": 56,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 33,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 33,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s06",
+        "input": {
+          "com": [
+            -0.0158,
+            0.0083,
+            0.0126
+          ],
+          "force": [
+            13.108346,
+            -13.108346,
+            0.0
+          ],
+          "id": "s06",
+          "mass": 5.718,
+          "time": 2.217
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 112,
+          "r30_headroom": 4,
+          "r31_held": 4
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": false,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": true,
+        "scores": {
+          "c3": {
+            "delay_ms": 38,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 24,
+            "delayed_false": [],
+            "duplicate": 1,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 1,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 24,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s07",
+        "input": {
+          "com": [
+            -0.001,
+            0.0159,
+            0.0057
+          ],
+          "force": [
+            -10.915607,
+            10.915607,
+            0.0
+          ],
+          "id": "s07",
+          "mass": 2.354,
+          "time": 2.205
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 106,
+          "r30_headroom": 4,
+          "r31_held": 4
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": false,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": true,
+        "scores": {
+          "c3": {
+            "delay_ms": 41,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 26,
+            "delayed_false": [],
+            "duplicate": 1,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 1,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 26,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s08",
+        "input": {
+          "com": [
+            0.0081,
+            -0.0131,
+            0.0079
+          ],
+          "force": [
+            -13.961823,
+            -13.961823,
+            0.0
+          ],
+          "id": "s08",
+          "mass": 6.071,
+          "time": 2.508
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 124,
+          "r30_headroom": 124,
+          "r31_held": 124
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": false,
+        "scores": {
+          "c3": {
+            "delay_ms": 27,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 27,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 27,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s09",
+        "input": {
+          "com": [
+            0.027,
+            -0.0084,
+            -0.0031
+          ],
+          "force": [
+            15.976,
+            0.0,
+            0.0
+          ],
+          "id": "s09",
+          "mass": 2.044,
+          "time": 3.173
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 119,
+          "r30_headroom": 119,
+          "r31_held": 119
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": false,
+        "scores": {
+          "c3": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 30,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s10",
+        "input": {
+          "com": [
+            0.0078,
+            0.0134,
+            0.0153
+          ],
+          "force": [
+            -19.509,
+            0.0,
+            0.0
+          ],
+          "id": "s10",
+          "mass": 2.531,
+          "time": 2.59
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 116,
+          "r30_headroom": 4,
+          "r31_held": 4
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": false,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": false,
+        "scores": {
+          "c3": {
+            "delay_ms": 36,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 26,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 26,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s11",
+        "input": {
+          "com": [
+            0.0043,
+            0.0092,
+            0.0157
+          ],
+          "force": [
+            0.0,
+            17.458,
+            0.0
+          ],
+          "id": "s11",
+          "mass": 6.699,
+          "time": 2.318
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 119,
+          "r30_headroom": 119,
+          "r31_held": 119
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": false,
+        "scores": {
+          "c3": {
+            "delay_ms": 31,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 31,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 31,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      },
+      {
+        "id": "s12",
+        "input": {
+          "com": [
+            0.0021,
+            0.0053,
+            0.0151
+          ],
+          "force": [
+            0.0,
+            -10.722,
+            0.0
+          ],
+          "id": "s12",
+          "mass": 6.095,
+          "time": 2.451
+        },
+        "input_valid": true,
+        "no_force_false": {
+          "c3": [],
+          "r30_headroom": [],
+          "r31_held": []
+        },
+        "physical_exact_across_arms": {
+          "force": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          },
+          "none": {
+            "c3": true,
+            "r30_headroom": true,
+            "r31_held": true
+          }
+        },
+        "primary_duration": {
+          "c3": 117,
+          "r30_headroom": 117,
+          "r31_held": 117
+        },
+        "protection": {
+          "c3": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          },
+          "r30_headroom": {
+            "latency_no_more_than_5ms_later": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "primary_duration_no_more_than_5_samples_shorter": true,
+            "strict_positive_retained": true,
+            "tool_retained": true
+          }
+        },
+        "r30_duplicate_removed_with_detection": false,
+        "scores": {
+          "c3": {
+            "delay_ms": 32,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r30_headroom": {
+            "delay_ms": 32,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "r31_held": {
+            "delay_ms": 32,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          }
+        }
+      }
+    ],
+    "runner_sha256": "ba7d7c4c6e024fa17c8d2ab6e74fe4a4aadf417a3bdb5cd60b4fcce4d9198723",
+    "schema": "r31-single-counterfactual-result.v1",
+    "scorer_sha256": "d2a6a380d3bf8144a491ba220c0a068869ca6f5c0707b635290cefcc812f46eb",
+    "verdict": "FAIL"
+  },
+  "freeze": {
+    "cases": 12,
+    "episodes": 72,
+    "generator_sha256": "59dce36a0b74ad3e27dc84854fff13566a6f9f2f4f3a7c76850e546e49fa61fc",
+    "invalid_predecessor": "INVALID_INFRASTRUCTURE_ZERO_RELEASED_OUTPUTS",
+    "plan_sha256": "23b99746576c8b35f9d6254655194c020f503624b0ed46389549c1c3cd5b630d",
+    "preflight_sha256": "2ce24c4ae008524fc81d314e016a908b105ce11a9125220a8fe3101d585460b2",
+    "runner_sha256": "ba7d7c4c6e024fa17c8d2ab6e74fe4a4aadf417a3bdb5cd60b4fcce4d9198723",
+    "schema": "r31-single-counterfactual-freeze.v1",
+    "scorer_sha256": "d2a6a380d3bf8144a491ba220c0a068869ca6f5c0707b635290cefcc812f46eb",
+    "seed": 310031,
+    "status": "FROZEN_BEFORE_ANY_NOVEL_OUTPUT"
+  },
+  "preflight": {
+    "passed": true,
+    "published_cases": [
+      39,
+      330
+    ],
+    "rows": {
+      "c3": {
+        "generic_score": {
+          "delay_ms": 49,
+          "delayed_false": [],
+          "duplicate": 0,
+          "false": [],
+          "masked": false,
+          "raw_duplicate": 0,
+          "strict": true,
+          "stuck": false,
+          "tool": {
+            "detected": false,
+            "first_index": null,
+            "last_index": null,
+            "peak_n": 0.0,
+            "prealarm": false,
+            "present": false
+          },
+          "valid": {
+            "active_force_bounds": true,
+            "actual_signed": true,
+            "attribution_window": true,
+            "complete": true,
+            "per_tick_scalar": true,
+            "prefix": true
+          }
+        },
+        "native_score": {
+          "delay_ms": 49,
+          "delayed_false": [],
+          "duplicate": 0,
+          "false": [],
+          "masked": false,
+          "raw_duplicate": 0,
+          "strict": true,
+          "stuck": false,
+          "tool": {
+            "detected": false,
+            "first_index": null,
+            "last_index": null,
+            "peak_n": 0.0,
+            "prealarm": false,
+            "present": false
+          },
+          "valid": {
+            "active_force_bounds": true,
+            "actual_signed": true,
+            "attribution_window": true,
+            "complete": true,
+            "per_tick_scalar": true,
+            "prefix": true
+          }
+        },
+        "physics_equal": true,
+        "prefix_equal": true
+      },
+      "r30_headroom": {
+        "generic_score": {
+          "delay_ms": 49,
+          "delayed_false": [],
+          "duplicate": 0,
+          "false": [],
+          "masked": false,
+          "raw_duplicate": 0,
+          "strict": true,
+          "stuck": false,
+          "tool": {
+            "detected": false,
+            "first_index": null,
+            "last_index": null,
+            "peak_n": 0.0,
+            "prealarm": false,
+            "present": false
+          },
+          "valid": {
+            "active_force_bounds": true,
+            "actual_signed": true,
+            "attribution_window": true,
+            "complete": true,
+            "per_tick_scalar": true,
+            "prefix": true
+          }
+        },
+        "native_score": {
+          "delay_ms": 49,
+          "delayed_false": [],
+          "duplicate": 0,
+          "false": [],
+          "masked": false,
+          "raw_duplicate": 0,
+          "strict": true,
+          "stuck": false,
+          "tool": {
+            "detected": false,
+            "first_index": null,
+            "last_index": null,
+            "peak_n": 0.0,
+            "prealarm": false,
+            "present": false
+          },
+          "valid": {
+            "active_force_bounds": true,
+            "actual_signed": true,
+            "attribution_window": true,
+            "complete": true,
+            "per_tick_scalar": true,
+            "prefix": true
+          }
+        },
+        "physics_equal": true,
+        "prefix_equal": true
+      }
+    },
+    "schema": "r31-single-counterfactual-preflight.v1",
+    "scorer_sha256": "d2a6a380d3bf8144a491ba220c0a068869ca6f5c0707b635290cefcc812f46eb"
+  },
+  "schema": "r31-independent-single-result.v1",
+  "scope": "all arms; the earlier incompatible arbitrary-onset scorer attempt remains invalid and unopened for rerun",
+  "summary": {
+    "calm_false": {
+      "c3": 0,
+      "r30_headroom": 0,
+      "r31_held": 0
+    },
+    "duplicate_removed": [
+      "s06",
+      "s07"
+    ],
+    "duplicates": {
+      "c3": 0,
+      "r30_headroom": 2,
+      "r31_held": 0
+    },
+    "episodes": 72,
+    "input_invalid": [],
+    "no_retune": true,
+    "no_third_panel": true,
+    "pins": {
+      "plan": "23b99746576c8b35f9d6254655194c020f503624b0ed46389549c1c3cd5b630d",
+      "result": "e2236c93017546969a82454f0dd16eaf12740aea111af6827034231c76664013",
+      "runner": "ba7d7c4c6e024fa17c8d2ab6e74fe4a4aadf417a3bdb5cd60b4fcce4d9198723",
+      "scorer": "d2a6a380d3bf8144a491ba220c0a068869ca6f5c0707b635290cefcc812f46eb"
+    },
+    "protection_failures": [
+      {
+        "failed": [
+          "primary_duration_no_more_than_5_samples_shorter"
+        ],
+        "id": "s01",
+        "parent": "c3",
+        "parent_duration": 67,
+        "r31_duration": 4
+      },
+      {
+        "failed": [
+          "primary_duration_no_more_than_5_samples_shorter"
+        ],
+        "id": "s05",
+        "parent": "c3",
+        "parent_duration": 78,
+        "r31_duration": 4
+      },
+      {
+        "failed": [
+          "primary_duration_no_more_than_5_samples_shorter"
+        ],
+        "id": "s06",
+        "parent": "c3",
+        "parent_duration": 112,
+        "r31_duration": 4
+      },
+      {
+        "failed": [
+          "primary_duration_no_more_than_5_samples_shorter"
+        ],
+        "id": "s07",
+        "parent": "c3",
+        "parent_duration": 106,
+        "r31_duration": 4
+      },
+      {
+        "failed": [
+          "primary_duration_no_more_than_5_samples_shorter"
+        ],
+        "id": "s10",
+        "parent": "c3",
+        "parent_duration": 116,
+        "r31_duration": 4
+      }
+    ],
+    "schema": "r31-single-counterfactual-summary.v1",
+    "strict": {
+      "c3": 12,
+      "r30_headroom": 12,
+      "r31_held": 12
+    },
+    "verdict": "FAIL"
+  }
+}

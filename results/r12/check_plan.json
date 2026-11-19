@@ -1,0 +1,12 @@
+{
+  "schema":"r12-public-handoff-check.v1",
+  "scope":"Educational finite qualification using unchanged original simulator. Normal outcomes vs fixed R1+R10, not a test of hidden conditions. All normal gates must pass before paired release impacts are run. The frozen baseline itself has gain zero and does not pass the new-handoff gate.",
+  "conditions":[
+    {"id":"mid","mass":4.42,"com":[0.014,-0.021,0.016],"probe":[3.888,[0.0,18.0,0.0]]},
+    {"id":"heavy","mass":7.58,"com":[-0.018,0.025,-0.017],"probe":[3.905,[8.0,-5.0,-15.0]]},
+    {"id":"light","mass":2.95,"com":[0.011,0.004,-0.015],"probe":[3.891,[0.0,-18.0,0.0]]},
+    {"id":"pickup_offset","mass":5.69,"com":[0.022,0.007,0.029],"offset":[0.008,-0.009,0.003],"probe":[3.903,[0.0,0.0,-19.0]]}
+  ],
+  "normal_gates":"All four G4 physics gates vs R1; original-path TCP RMS/max, both torque steps and placing peak all <=1.05 times R1; no extra actuator saturation or unmatched normal FA (one-to-one within 20 ms), no lost true tool-contact hit and no additional tool pre-alarm. Missing/unscorable data cannot pass.",
+  "impact_gates":"Relative to each controller's own matched no-impact trace: distinguishable old detections may not be lost nor delayed >5ms. No unmatched false alarms (one-to-one within 20 ms), no additional prealarm or lost tool hit, identical physical input and exact pre-pulse q/tau/alarms. A normal alarm near the artificial pulse is not a detection. All probe outcomes must be distinguishable for a finite all-probe pass; retaining a miss is not solving one."
+}

@@ -1,0 +1,110 @@
+{
+  "D4_conditions": 385,
+  "D4_regressions": 0,
+  "default_promoted": false,
+  "disclosed": {
+    "grip": {
+      "actual_episodes": 128,
+      "regressions": 0,
+      "rows": 16
+    },
+    "legacy66": {
+      "actual_episodes": 486,
+      "regressions": 0,
+      "rows": 66
+    },
+    "nearby": {
+      "actual_episodes": 80,
+      "regressions": 0,
+      "rows": 20
+    },
+    "pairs": {
+      "actual_episodes": 112,
+      "regressions": 0,
+      "rows": 14
+    },
+    "r23": {
+      "actual_episodes": 216,
+      "regressions": 0,
+      "rows": 45
+    },
+    "r24": {
+      "actual_episodes": 240,
+      "regressions": 0,
+      "rows": 52
+    },
+    "r25": {
+      "actual_episodes": 198,
+      "counts": {
+        "experiments.r26_yaw_acquisition.candidate:Detector": {
+          "all_registered_pair_slots": 3,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 75,
+          "strict": 57
+        },
+        "r25_frozen": {
+          "all_registered_pair_slots": 3,
+          "duplicate_edges": 4,
+          "duplicate_slots": 3,
+          "false_rises": 0,
+          "slots": 75,
+          "strict": 54
+        }
+      },
+      "regressions": 0,
+      "rows": 36
+    },
+    "stress": {
+      "actual_episodes": 96,
+      "regressions": 0,
+      "rows": 12
+    },
+    "weak": {
+      "actual_episodes": 60,
+      "regressions": 0,
+      "rows": 15
+    },
+    "weak32": {
+      "actual_episodes": 128,
+      "regressions": 0,
+      "rows": 32
+    }
+  },
+  "eligible_count": 1,
+  "entrypoint": "experiments.r26_yaw_acquisition.candidate:Detector",
+  "holdout_closure_sha256": "ae82e92da0efe1582b4e449d9190182a1aa4c1c857aa7870f23ebefac8ba3a5d",
+  "official_relative_cells": 66,
+  "plan_sha256": "2047651eedd58b10e68bbf80b0f7cf973ab34643502a5190bffd02b4dcf62d77",
+  "policy_sha256": "72ac478b4b3c2383955f7621b5d63f608ccc9da152c35f550419fc19d981eec7",
+  "receipt_sha256": {
+    "authentic_course_official_table": "88c22308af30419f46b66d3253bcd3cee41c27b5eaa6771101e96cfe428cb214",
+    "development_grip": "3910f8916b00c961ed6b8bdc6b52199e0da087de493dfc1c0b1213e11b00ebf0",
+    "development_legacy66": "8a907645a538b27e46f785d359c29b536bba7597d80287aa9537d7c5daf2da83",
+    "development_nearby": "1ec1b1a3b2f01d0ec92316841ce6b44f5ea7a5a368f45338bb28aae0ee994019",
+    "development_pairs": "5ed3ca085874fb6343b46dd433b0b01c696b0b6ba5aaa782ad06134808267da4",
+    "development_r23": "d2c2abc7c9f0d57bd83a7ad276d264779313d4d1c3d5738f30b7a91a79dcc90d",
+    "development_r24": "db5e27debc5a8c5c6cd7d76dc96b7418988185645ace77073e7ace58835596a4",
+    "development_r25": "3e1520eeddd473117a6f7990b6664a7a0c01ccb25823c1456748a5e6b98020d3",
+    "development_stress": "6c720f17c66c8e6e2ac4e8bbc3c0eafe243caf607359a29bddc99cd6b286410c",
+    "development_weak": "ca79e67fefb56e67f928b6bbe11034902552430bdab7409c73c8ed339146ec0f",
+    "development_weak32": "a6919c425f702fe8fab10158ea240bb56b6d3dd98bfe45b3efc35bf9f6a32c52",
+    "full_D4": "353b89af576bfeeba023c5b910f9f3c53de99cb4c83fc2134e99ea8c97d73e31",
+    "new_candidate_prior_freeze": "94ae6d6d5431ffdfd2d466d42171875eda962596a096929296c2ebf7e573ebf9",
+    "official_time_and_duration": "e5f941a7aa5497b9d89a0f89d7b653d11fa1f184f9db42143c460131d8ccd9b2",
+    "rejected_signed_level_D4": "b21d169a9dbd16c827b6b25125de373b03a9ecaafcdde2411fec20dc1b11e56f",
+    "rejected_weak_source_full_disk": "f3727db98ad623ee1cfb93632b1ed62cd1e1ca31cf126827684bad81e1f1b992",
+    "target_legacy_duration_and_source": "c23657bef331c873e5e29ab9c35ffbe8ed5fe9eaa62c434fcfe9cdd3b93b68f3",
+    "target_summary": "157ae0f65de01212e56c667d782c4d5713d8e62967a8712b504caf3493e709ec"
+  },
+  "schema": "r26-finalized-exposed-choice.v1",
+  "scope": "torque event onset under default student torque controller, separate from optional R24 landing control, NOT the original or a deployment",
+  "selected_for_independent": "signed yaw acquisition with independent force identity",
+  "selected_source_pins": {
+    "experiments/r26_long/candidate.py": "a0570079ad5ce8425e9fbdc291b20401a9056b3bca35824237d157ec37a73057",
+    "experiments/r26_yaw_acquisition/candidate.py": "212f4e79367cb636c0143a2d1f8aa7ba5584aaaca5ecde6b412d01a4985b6784"
+  },
+  "source_selection": "only nonregressing proposed treatment across the disclosed per-row battery; conditional authorization to run unchanged presealed holdout. Not evidence about its future score.",
+  "status": "FINALIZED_BEFORE_INDEPENDENT_OUTPUT"
+}

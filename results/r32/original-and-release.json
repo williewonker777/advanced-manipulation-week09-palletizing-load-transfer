@@ -1,0 +1,110 @@
+{
+  "default_changes": [],
+  "hardware_used": false,
+  "original": {
+    "argv": [
+      "run.py",
+      "--box",
+      "8"
+    ],
+    "controller": "servo_controller",
+    "detector": "collision_detector",
+    "headless": true,
+    "kit": {
+      "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+      "protected_files": 20,
+      "status": "authentic_original_course",
+      "stock_source_sha256": {
+        "collision_detector.py": "fe4b1101ba41ffa46e04500f7153a0c569125b20083d8cd3a9fe6d8d69bda884",
+        "run.py": "7735f4a1d666f631abee10b28261d201786f9526e6892ac61235125d685c3d6b",
+        "servo_controller.py": "50b5d2b05a45d540615a4af4373780d86872c60c8049c8af75dd6a4c4836e416"
+      },
+      "unchanged_after_run": true
+    },
+    "render": {
+      "byte_identical_to_expected_reference": true,
+      "byte_identical_to_guide": true,
+      "expected_reference_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+      "generated_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+      "guide_embedded_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+      "status": "byte_identical"
+    },
+    "report_sha256": "8423df3c57a32c4f437efc5403b231a8f560ef5c2c385259f0966ab40c7d03e0",
+    "summary": [
+      "[servo_controller / servo 방식] 박스 8.0 kg | TCP 오차 RMS 6.14 mm, 최대 14.00 mm | 토크 포화 0.0% | 토크 떨림 0.16 | 제어 계산 6 us | 정상",
+      "충돌 감지 | 오감지 7회 (1.402s, 1.425s, 1.428s, 1.432s, 1.435s …)"
+    ]
+  },
+  "r10": {
+    "modes": {
+      "servo": {
+        "control_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+        "detected": 23,
+        "detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+        "episodes": 29,
+        "kit_integrity": {
+          "files": 20,
+          "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+          "status": "ok"
+        }
+      },
+      "torque": {
+        "control_sha256": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+        "detected": 18,
+        "detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+        "episodes": 29,
+        "kit_integrity": {
+          "files": 20,
+          "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+          "status": "ok"
+        }
+      }
+    },
+    "non_time_cells": 132,
+    "raw_sha256": "5abef9110e707884b0ed46ec6e329351b293ede8beb82c007ce42f66ad993a5c",
+    "release_check": true,
+    "same_scientific_results_as_prior": true
+  },
+  "remote_operations": false,
+  "schema": "r32-original-and-separate-research.v1",
+  "separate_research_torque": {
+    "contact": {
+      "candidate": "experiments.r32_measured_level.candidate:Detector",
+      "candidate_sha256": "e08c0622c0fb6947f80b2c535a5ef0506f58a6fe8b44c8526323e5d405ebc25c",
+      "counts": {
+        "impact_outcomes": {
+          "already_active": 0,
+          "detected": 24,
+          "indistinguishable": 0,
+          "missed": 0
+        },
+        "no_impact_false_rises": 0,
+        "worst_false_count_in_an_impact_run": 1
+      },
+      "episodes": 29,
+      "evaluate_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+      "kit_manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+      "raw_sha256": "eb05d17c815599b4cfc7ed3ebc7c45a701cfecd41b6c50362a2d5d078a49a6bd",
+      "same_as_c3_66": true
+    },
+    "handoff": {
+      "candidate": "experiments.r32_native_handoff.candidate:Detector",
+      "candidate_sha256": "d3949f6452b6d3573a9b61a63b77900d0ce78e8603dba2912a7b2e8c034dd837",
+      "counts": {
+        "impact_outcomes": {
+          "already_active": 0,
+          "detected": 24,
+          "indistinguishable": 0,
+          "missed": 0
+        },
+        "no_impact_false_rises": 0,
+        "worst_false_count_in_an_impact_run": 1
+      },
+      "episodes": 29,
+      "evaluate_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+      "kit_manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+      "raw_sha256": "e226630b23d4d56afd3b1c46e669a0cad25990a197cf8d9971e2079849e0d8a0",
+      "same_as_c3_66": true
+    }
+  }
+}

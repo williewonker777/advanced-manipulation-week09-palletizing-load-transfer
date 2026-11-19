@@ -1,0 +1,140 @@
+{
+  "archive_sha256": "4cce84715d325b0979f1078f6b074af1a4a68c94eaf83c7743de97d317b4e8f0",
+  "entries": [
+    "torque_controller.py",
+    "collision_detector.py",
+    "README.md",
+    "receipt.json"
+  ],
+  "receipt": {
+    "audit_sha256": "6555d277bf265a9499b9f0f7ef010c35c21e2cbac9c3abf31e4ef5d5a9248842",
+    "build": {
+      "base_r22_standalone_sha256": "881d5e740230d4811c4fccf622c7acc4785f06f40700885b509e622a6861e49b",
+      "frozen_r22_sources_sha256": {
+        "experiments/r15_delayed_wrench/observer.py": "eff8f0b76d8c0358bb15b020be0db6e0b55d0e666a93ee2f46a1de6190ba2483",
+        "experiments/r21_yaw_impulse/normal_bins.json": "5f22f640eb8824f764ffeec7ecbef7ba23df02a874547b93b8ddc72925e25c15",
+        "experiments/r22_combined/candidate.py": "0d69976ee4f6529cdd8ae67d6321d1d2637a60b7b27adc1b2e95c4e48a37367b",
+        "experiments/r22_combined/core.py": "bdcd186ea58db958e2d4de0a4bcfa9b2a32ea54d54b9860d8a29d249d5abd8ad",
+        "experiments/r22_combined/selection.json": "b74b3a1eac159f3836eea9b83b45b23872417573413cd416a1b3758abf6cedc0",
+        "experiments/r22_guarded/candidate.py": "23d8dc0b9747e38dd9a346872f27612b7ba67052aff4c6d604401aba387dc1f1",
+        "experiments/r22_guarded/plan.json": "56ce7cdac16699a8db591195b89260ec24fc3991638a829368612ba1b27a546c",
+        "experiments/r22_light/candidate.py": "1d6738b62af1a56e679544ed2a5f7695c920b5ecb6aa74d35c0b1952d141a5b1",
+        "experiments/r22_light/plan.json": "e29341a31bd46a2aaa43b9ba2e4b0ee1b8b3a603f47a82226e9757b904bc69e6",
+        "experiments/r22_light/selection.json": "0650647478ce28542f66753f97242046e3c7123cb469de08908b40adf59affa3",
+        "experiments/r22_light/witness.py": "430b2b2ebdda4c4cde9e9d1760a581f77628fca4ebe52e1211d80edc14153d7b",
+        "experiments/r22_normal/candidate.py": "658683de0a0db00d520ebbd4c7a28cbaa4beb11bd6e93dd8e71edded6472279d",
+        "experiments/r22_release/model.json": "fb02dd2121120ba90c64748272fe1c9f1873f174ac8ef107ba80e70b1b337340",
+        "experiments/r22_release/state.py": "30cd330f75b7bd4078ba9d20ef0e902993626c14962466305136d0138c42e215",
+        "experiments/r22_tangent/detector.py": "681c6a5d17a48efad81b4555bc2a0ff7a03f47556832ae752cc279ac0572bd4e",
+        "experiments/r22_tangent/frozen.py": "dac541250c09e0e400414441e58458121d24f4e138d99da9769d7e2d90a0746a",
+        "experiments/r22_tangent/model.json": "896ffbe13c95a24444f06541c55206a0718e6378da04fdc876c1907876fa0732",
+        "experiments/r22_tangent/state.py": "5ab5424fb795c2e2240b6cbed0f2dcdae30929d9ec543188cb570421288725a0"
+      },
+      "frozen_r23_sources_sha256": {
+        "experiments/r23_detached/candidate.py": "49d283f94225b911476a3bc20c567ddab83afe8552a2817887c029e5f38c4912",
+        "experiments/r23_detached/plan.json": "c51bdaa5cc9949ca6571311d32ca2538146bb62e4f7cb509685c65d6489de085",
+        "experiments/r23_detached/state.py": "b6175b317a05b231455ebd54e77705289ff56ddb491cba33872143e2be5539f7"
+      },
+      "lines": 2258,
+      "schema": "r23-standalone-build.v1",
+      "standalone_sha256": "f09439204535bd3d6bb5513265362452ecfb2eaceefff491f438fc785f196acb",
+      "variant": "free"
+    },
+    "default_submission_promoted": false,
+    "evaluator_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+    "files": {
+      "README.md": "d256eb9774708a0ffb315e194b2f5090526ec72e73c4ec6097ead4c1c5628b78",
+      "collision_detector.py": "f09439204535bd3d6bb5513265362452ecfb2eaceefff491f438fc785f196acb",
+      "torque_controller.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "gates": {
+      "cross_release_four_twins_exact": true,
+      "default_filename": true,
+      "modular_generated_6000_exact": true,
+      "protected_kit_unchanged": true,
+      "released_force_and_normal_exact": true,
+      "servo_R10_exact": true,
+      "torque_controller_R10": true
+    },
+    "kit_manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+    "parity_case_ids": [
+      "released_normal",
+      "released_force",
+      "cross_none",
+      "cross_first",
+      "cross_second",
+      "cross_both",
+      "servo_normal",
+      "servo_force"
+    ],
+    "recognized_collision_cells": {
+      "servo": 23,
+      "torque": 24
+    },
+    "schema": "r23-research-package.v1",
+    "selection": {
+      "default_promoted": false,
+      "independent_result": {
+        "episodes": 216,
+        "failed_rows": 15,
+        "lock_sha256": "bcfdeace274ae7f24a11d2d8d63824304c312b7a0dd447c55953995fe7ea22d8",
+        "original_result_sha256": "8b55ed07f64128d5b957630019576b8477b47f57447989668fd284bee7abd022",
+        "public_summary_sha256": "7f643759dd88f8a1ec0a3a7e5208e39d6e387fee1ce53bfad0c659c6619f8a46",
+        "remaining_false": 17,
+        "remaining_false_definition": "rises outside the actual impact/tool windows over all 108 candidate episodes",
+        "remaining_misses": 7,
+        "remaining_misses_definition": "of 78 intended scored event slots, no attributable rising edge; not the same as every failed strict slot",
+        "rows": 45,
+        "safety_qualification": false,
+        "scoped_detection_pass": false,
+        "strict_failed_slots": 18,
+        "strict_gain_vs_r22": 12,
+        "strict_loss_vs_r22": 0,
+        "strict_safety_floor_pass": false,
+        "strict_totals": {
+          "r22_light": {
+            "all_episode_false_rises": 17,
+            "events_with_no_attributable_rise": 19,
+            "negative_actual_tool_detected": 3,
+            "negative_false_rises": 1,
+            "negative_rows": 12,
+            "negatives_with_actual_tool": 6,
+            "pair_rows": 15,
+            "pair_slots": 60,
+            "single_total": 18,
+            "slots_with_multiple_rises": 6,
+            "strict_complete_pair_rows": 5,
+            "strict_failed_slots": 30,
+            "strict_pair_slots": 33,
+            "strict_singles": 15
+          },
+          "r23": {
+            "all_episode_false_rises": 17,
+            "events_with_no_attributable_rise": 7,
+            "negative_actual_tool_detected": 3,
+            "negative_false_rises": 1,
+            "negative_rows": 12,
+            "negatives_with_actual_tool": 6,
+            "pair_rows": 15,
+            "pair_slots": 60,
+            "single_total": 18,
+            "slots_with_multiple_rises": 6,
+            "strict_complete_pair_rows": 8,
+            "strict_failed_slots": 18,
+            "strict_pair_slots": 45,
+            "strict_singles": 15
+          }
+        },
+        "verdict": "FAIL"
+      },
+      "published_disclosure_sha256": "13947af1d3997e90f1e138205acd0f3bf7847cbd3a11591174e0ab6db46c9ef6",
+      "selected_for_independent_evaluation": true,
+      "status": "independent_qualification_failed"
+    },
+    "status": "research_option",
+    "stock_course_demo": false,
+    "variant": "free"
+  },
+  "reproduced_byte_identically": true,
+  "schema": "r23-free-optional-zip.v1"
+}

@@ -1,0 +1,1636 @@
+{
+  "schema": "r21-independent-weak-summary.v1",
+  "plan_sha256": "7f2e9f9659a6b56a0982b5a19b0b04b4fd0e241ca7403b7ea5c5c3cf92c74a95",
+  "result_sha256": {
+    "pick": "debe9f3d3cebabbe871afa00cd7e5ddcaad73a59bbfe0ff4e00bebfc4ebf5489",
+    "yaw": "c7a0cf8544778d4003c3ae963378b5a2c9b78b47c78c441d3cfae83eb9bb25c2"
+  },
+  "episodes": 198,
+  "policies_frozen_before_hidden_outcomes": true,
+  "comparator_repeat_exact": true,
+  "all_pairwise_gates_passed": true,
+  "pins": {
+    "pick": {
+      "detector": "30e56f7ac752c6072ef88869378147be3534484b097ee23044c328f787f50364",
+      "candidate": "1f03ed4918fb279783813c8f1f769ee3a4476b1d973a765b2c5d81ce81e9e3e8",
+      "model": "499b2577f659dff86bcc665fffc385adddadfe21824ef0e06c7d848caa49c6bf"
+    },
+    "yaw": {
+      "state": "f04d46e93c55e04aa869050fe43c895951f3a970e3729b01e8d94744532f3a9f",
+      "detector": "69e1e884f393a17751546165554f994c19b0cb127830233fba1f2329481c87cb",
+      "frozen": "71a75f131ea6d3aae94f9acf40c42abe92d9123000d86e685f8bb5f4a00a4342",
+      "coarse": "f3a8a4202e638346dfa6a7994b056cbf509be4f335fb09c76d6657d47abcafe9",
+      "normal_bins": "5f22f640eb8824f764ffeec7ecbef7ba23df02a874547b93b8ddc72925e25c15"
+    }
+  },
+  "totals": {
+    "r10": {
+      "weak_strict": 8,
+      "all_forced_strict": 11
+    },
+    "r20": {
+      "weak_strict": 8,
+      "all_forced_strict": 11
+    },
+    "r21_pick": {
+      "weak_strict": 9,
+      "all_forced_strict": 12,
+      "candidate_only_weak_vs_r20": 1
+    },
+    "r21_yaw": {
+      "weak_strict": 10,
+      "all_forced_strict": 13,
+      "candidate_only_weak_vs_r20": 2
+    }
+  },
+  "negative_only": [
+    {
+      "id": "offset_xy_negative",
+      "role": "offset_no_collision",
+      "case": {
+        "id": "offset_xy_negative",
+        "role": "offset_no_collision",
+        "mass": 2.111,
+        "com": [
+          -0.02713,
+          0.02471,
+          0.01891
+        ],
+        "pick_offset": [
+          0.004,
+          -0.003,
+          0.0
+        ]
+      },
+      "episodes": 3,
+      "arms": {
+        "r10": {
+          "false_rise_times": [],
+          "all_rise_times": [],
+          "tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false,
+            "peak_N": 0.0
+          },
+          "stuck_tail": false,
+          "physical_vs_r10": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true,
+            "f_ext_xyz_committed": true
+          }
+        },
+        "r20": {
+          "false_rise_times": [],
+          "all_rise_times": [],
+          "tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false,
+            "peak_N": 0.0
+          },
+          "stuck_tail": false,
+          "physical_vs_r10": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true,
+            "f_ext_xyz_committed": true
+          }
+        },
+        "r21_pick": {
+          "false_rise_times": [],
+          "all_rise_times": [],
+          "tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false,
+            "peak_N": 0.0
+          },
+          "stuck_tail": false,
+          "physical_vs_r10": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true,
+            "f_ext_xyz_committed": true
+          }
+        }
+      },
+      "comparisons": {
+        "r20": {
+          "checks": {
+            "no_added_false": true,
+            "preserve_tool": true,
+            "no_new_prealarm": true,
+            "no_new_stuck_tail": true,
+            "physical_equal": true
+          },
+          "passed": true
+        },
+        "r21_pick": {
+          "checks": {
+            "no_added_false": true,
+            "preserve_tool": true,
+            "no_new_prealarm": true,
+            "no_new_stuck_tail": true,
+            "physical_equal": true
+          },
+          "passed": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "offset_z_tool_negative",
+      "role": "offset_no_collision",
+      "case": {
+        "id": "offset_z_tool_negative",
+        "role": "offset_no_collision",
+        "mass": 5.555,
+        "com": [
+          0.01933,
+          -0.01221,
+          0.02717
+        ],
+        "pick_offset": [
+          0.0,
+          0.0,
+          0.018
+        ]
+      },
+      "episodes": 3,
+      "arms": {
+        "r10": {
+          "false_rise_times": [],
+          "all_rise_times": [
+            1.145
+          ],
+          "tool": {
+            "present": true,
+            "detected": true,
+            "prealarm": false,
+            "peak_N": 205.95653556456492
+          },
+          "stuck_tail": false,
+          "physical_vs_r10": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true,
+            "f_ext_xyz_committed": true
+          }
+        },
+        "r20": {
+          "false_rise_times": [],
+          "all_rise_times": [
+            1.145
+          ],
+          "tool": {
+            "present": true,
+            "detected": true,
+            "prealarm": false,
+            "peak_N": 205.95653556456492
+          },
+          "stuck_tail": false,
+          "physical_vs_r10": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true,
+            "f_ext_xyz_committed": true
+          }
+        },
+        "r21_pick": {
+          "false_rise_times": [],
+          "all_rise_times": [
+            1.145
+          ],
+          "tool": {
+            "present": true,
+            "detected": true,
+            "prealarm": false,
+            "peak_N": 205.95653556456492
+          },
+          "stuck_tail": false,
+          "physical_vs_r10": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true,
+            "f_ext_xyz_committed": true
+          }
+        }
+      },
+      "comparisons": {
+        "r20": {
+          "checks": {
+            "no_added_false": true,
+            "preserve_tool": true,
+            "no_new_prealarm": true,
+            "no_new_stuck_tail": true,
+            "physical_equal": true
+          },
+          "passed": true
+        },
+        "r21_pick": {
+          "checks": {
+            "no_added_false": true,
+            "preserve_tool": true,
+            "no_new_prealarm": true,
+            "no_new_stuck_tail": true,
+            "physical_equal": true
+          },
+          "passed": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "zero_payload_no_collision",
+      "role": "zero_payload_no_collision",
+      "case": {
+        "id": "zero_payload_no_collision",
+        "role": "zero_payload_no_collision",
+        "mass": 0.0,
+        "com": [
+          0.03121,
+          -0.02517,
+          0.01191
+        ],
+        "pick_offset": [
+          -0.003,
+          0.002,
+          0.0
+        ]
+      },
+      "episodes": 3,
+      "arms": {
+        "r10": {
+          "false_rise_times": [],
+          "all_rise_times": [],
+          "tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false,
+            "peak_N": 0.0
+          },
+          "stuck_tail": false,
+          "physical_vs_r10": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true,
+            "f_ext_xyz_committed": true
+          }
+        },
+        "r20": {
+          "false_rise_times": [],
+          "all_rise_times": [],
+          "tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false,
+            "peak_N": 0.0
+          },
+          "stuck_tail": false,
+          "physical_vs_r10": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true,
+            "f_ext_xyz_committed": true
+          }
+        },
+        "r21_pick": {
+          "false_rise_times": [],
+          "all_rise_times": [],
+          "tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false,
+            "peak_N": 0.0
+          },
+          "stuck_tail": false,
+          "physical_vs_r10": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true,
+            "f_ext_xyz_committed": true
+          }
+        }
+      },
+      "comparisons": {
+        "r20": {
+          "checks": {
+            "no_added_false": true,
+            "preserve_tool": true,
+            "no_new_prealarm": true,
+            "no_new_stuck_tail": true,
+            "physical_equal": true
+          },
+          "passed": true
+        },
+        "r21_pick": {
+          "checks": {
+            "no_added_false": true,
+            "preserve_tool": true,
+            "no_new_prealarm": true,
+            "no_new_stuck_tail": true,
+            "physical_equal": true
+          },
+          "passed": true
+        }
+      },
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "id": "weak_px6",
+      "role": "fresh_weak_early",
+      "mass": 0.0,
+      "time": 1.407,
+      "force": [
+        6.0,
+        0.0,
+        0.0
+      ],
+      "r10": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_nx7p5",
+      "role": "fresh_weak_early",
+      "mass": 4.5785,
+      "time": 1.438,
+      "force": [
+        -7.5,
+        0.0,
+        0.0
+      ],
+      "r10": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 46.00000000000004,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.484
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_py6p5",
+      "role": "fresh_weak_early",
+      "mass": 0.4563,
+      "time": 1.476,
+      "force": [
+        0.0,
+        6.5,
+        0.0
+      ],
+      "r10": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_ny8",
+      "role": "fresh_weak_early",
+      "mass": 6.7513,
+      "time": 1.505,
+      "force": [
+        0.0,
+        -8.0,
+        0.0
+      ],
+      "r10": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "missed",
+        "strict_true_positive": false,
+        "delay_ms": null,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 72.00000000000006,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.577,
+          1.594
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 37.00000000000014,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.542
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_diag_pp8p5",
+      "role": "fresh_weak_early",
+      "mass": 6.7134,
+      "time": 1.529,
+      "force": [
+        6.0,
+        6.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 86.00000000000007,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.615
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 86.00000000000007,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.615
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 86.00000000000007,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.615
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 43.00000000000015,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.572
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_diag_pn10",
+      "role": "fresh_weak_early",
+      "mass": 5.8069,
+      "time": 1.561,
+      "force": [
+        8.0,
+        -6.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 61.00000000000016,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.622
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 61.00000000000016,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.622
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 61.00000000000016,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.622
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 61.00000000000016,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.622
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_nx10p5",
+      "role": "fresh_weak_early",
+      "mass": 6.6027,
+      "time": 1.595,
+      "force": [
+        -10.5,
+        0.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 55.000000000000156,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.6500000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 55.000000000000156,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.6500000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 55.000000000000156,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.6500000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 40.000000000000036,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.635
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_py12",
+      "role": "fresh_weak_early",
+      "mass": 2.3263,
+      "time": 1.614,
+      "force": [
+        0.0,
+        12.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 48.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.663
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 48.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.663
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 48.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.663
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.00000000000004,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.6580000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_diag_nn12p7",
+      "role": "fresh_weak_early",
+      "mass": 7.595,
+      "time": 1.651,
+      "force": [
+        -9.0,
+        -9.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 46.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.698
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.696
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.696
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 28.999999999999915,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.68
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_py14",
+      "role": "fresh_weak_early",
+      "mass": 7.1775,
+      "time": 1.681,
+      "force": [
+        0.0,
+        14.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.726
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.726
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.726
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 40.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.722
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_px15",
+      "role": "fresh_weak_early",
+      "mass": 4.4812,
+      "time": 1.713,
+      "force": [
+        15.0,
+        0.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.00000000000004,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.7570000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.00000000000004,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.7570000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.00000000000004,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.7570000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 42.99999999999993,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.756
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "weak_diag_np14p1",
+      "role": "fresh_weak_early",
+      "mass": 8.0,
+      "time": 1.733,
+      "force": [
+        -10.0,
+        10.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 36.00000000000003,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.7690000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 36.00000000000003,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.7690000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 36.00000000000003,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.7690000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 36.00000000000003,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.7690000000000001
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "strong_early_ny20",
+      "role": "strong_early_control",
+      "mass": 4.333,
+      "time": 1.584,
+      "force": [
+        0.0,
+        -20.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 36.99999999999992,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.621
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 36.99999999999992,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.621
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 36.99999999999992,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.621
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 28.000000000000025,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          1.612
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "outside_carry_px10",
+      "role": "outside_phase_control",
+      "mass": 3.333,
+      "time": 2.287,
+      "force": [
+        10.0,
+        0.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 60.00000000000006,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          2.347
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 60.00000000000006,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          2.347
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 60.00000000000006,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          2.347
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 60.00000000000006,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          2.347
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    },
+    {
+      "id": "outside_release_diag15",
+      "role": "outside_phase_control",
+      "mass": 6.777,
+      "time": 3.742,
+      "force": [
+        9.0,
+        12.0,
+        0.0
+      ],
+      "r10": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.00000000000004,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          3.786
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r20": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.00000000000004,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          3.786
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_pick": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.00000000000004,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          3.786
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      },
+      "r21_yaw": {
+        "official": "detected",
+        "strict_true_positive": true,
+        "delay_ms": 44.00000000000004,
+        "alarm_before": false,
+        "reference_twin": false,
+        "false_rise_times": [],
+        "all_rise_times": [
+          3.786
+        ],
+        "tool": {
+          "present": false,
+          "detected": false,
+          "prealarm": false,
+          "peak_N": 0.0
+        },
+        "stuck_tail": false
+      }
+    }
+  ]
+}

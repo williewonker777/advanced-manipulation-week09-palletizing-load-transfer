@@ -1,0 +1,762 @@
+{
+  "schema": "week09-r24-load-response-model.v1",
+  "plan_sha256": "3a611387d7591013d6a6ae618edce3195485b82a9eab70d32077e07db7fef787",
+  "training": "normal only",
+  "tap_width_samples": 8,
+  "coefficients_Nm_per_N": [
+    -0.20407491043242484,
+    0.008739510645516974,
+    -0.0095460084529884,
+    0.03727150600946697,
+    0.04008027147389957
+  ],
+  "ridge": 4797.491069652223,
+  "records": [
+    {
+      "mass_kg": 0.8,
+      "com_m": [
+        0.014,
+        -0.02,
+        0.008
+      ],
+      "joint_gain": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "samples": 42,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "0d122947f167909af545add3d6fe7346d7cf308b47705370695e232aa29a0ef2",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "afba3add6a1cc12f9b55a00f4d32d692e82236393366f9084b71580047b1cadc",
+        "e_mm": "98bc0a1f8ed52448217db5d71fa63420e440af8d237f315e10f8ab592c2d56ad",
+        "f_table": "f5f4d74b0c55e543e5208de5c6cd9a307d72f2aac8ceb28d511dde91e2b689e0",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "0d4c8f1bf593cd4a19e53751fa5c199d77aa704f0176b83daf182102dc6c0546",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 0.8,
+      "com_m": [
+        0.014,
+        -0.02,
+        0.008
+      ],
+      "joint_gain": [
+        1.009,
+        0.99,
+        1.007,
+        0.993,
+        1.011,
+        0.989
+      ],
+      "samples": 40,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "2bd0b69df02bcfbe53b23bf5703ad6964ae584007d6988db8d63299893857ebe",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "32788b0bc527bd096d3b5db981e50ab8c63cc2cbdde0f910fd1d1938de45c79a",
+        "e_mm": "d213e029b74a3b008e7126f434257f7646905d11d7319548b4a229e2188ee58c",
+        "f_table": "f2629499cb189da89abb7dd68a12581a12e7e263d919d20ff7a943dc3e5d88f7",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "5d5c5227803dd020f66758a0f3624efc2cdc6c2fabdda97ca6d639cfa15e6623",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 0.8,
+      "com_m": [
+        0.014,
+        -0.02,
+        0.008
+      ],
+      "joint_gain": [
+        0.989,
+        1.012,
+        0.994,
+        1.009,
+        0.987,
+        1.01
+      ],
+      "samples": 40,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "5d311953832302f662aab5152e3b6bdacfa58dbf989969032e7489b291e3b3bd",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "2204c7669ee276e8f0ffa0eedc323ccfc8f7e11137b385bd5cd2d82f4129e89a",
+        "e_mm": "02c011bf649e762b45d8a630204bcf390eeb5f18062967a2d461d7dbd5bc1773",
+        "f_table": "7eb0120703bc2a027d51102a28adb88dae1eaf29ea38f6fa76ec8086f9e7a1c1",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "af50df39641d3af133c6193260c5cfd2606f75156aab1907cd0d4bf57e8d9c62",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 0.8,
+      "com_m": [
+        0.014,
+        -0.02,
+        0.008
+      ],
+      "joint_gain": [
+        1.017,
+        0.982,
+        1.013,
+        0.989,
+        1.02,
+        0.983
+      ],
+      "samples": 47,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "32e9f25ad49f7068c7f08c826d8557632c05c5e4670b406c8dbc653c73250d23",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "e6e98f85d245e6e385add436ac15ed2fc0aa0cdae43f7693924e3848206d13fa",
+        "e_mm": "a33e8e02974bb27525da083a00d564ee300317a92a91c5baed83ef8691299304",
+        "f_table": "c6c4f7e7d3a5075f60e90f79bcfc551688cda211a65c217b876a8cad3196c97f",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "8bf2e702aa4fa16cda5e8a42f17fd58f015548c13063dea53f21efd5a0ecd2e3",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 2.2,
+      "com_m": [
+        -0.018,
+        0.013,
+        -0.01
+      ],
+      "joint_gain": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "samples": 47,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "c26386cebf54604f46cab885ecb5fbd32830530fce0253481e57f784954d3d19",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "c8a9f160046c8bd996102808d72544e4b771c25c0713600bf7bbce30e0389687",
+        "e_mm": "b654913828f1fe55cacfea27714943dd466b68807d04d1af2c6114d54e5dba8e",
+        "f_table": "b170cf4d98490e795d0bfc6aa8390ded96379628753aa45af23b7df5f58f27be",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "351357de800f5f87d2cd6619ef248b97340d46d64a826b67dbde1a2afb8e9bd2",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 2.2,
+      "com_m": [
+        -0.018,
+        0.013,
+        -0.01
+      ],
+      "joint_gain": [
+        1.009,
+        0.99,
+        1.007,
+        0.993,
+        1.011,
+        0.989
+      ],
+      "samples": 55,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "bc32fc82e3e53d9949c2c64b59b7222c06c43d085ccc15287c530c400cf33619",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "4dfcbe219ed17a6f01bc90c6b18b9a2947693cb2385e6bfb084adbba8cf3f422",
+        "e_mm": "d3256121e9d6b184fa5f3b4f29f1678d6abb9f151b9fc8a9944fe5d0fc31eb09",
+        "f_table": "b8f1aac5262e8112adfd06c1e4cd7cdb64ae738f0d109d0cc0bd31d07d5b130b",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "c164e42b4e2e26d922a4ca428f1016d9fb47f43379a18942e3fab098f58ada7a",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 2.2,
+      "com_m": [
+        -0.018,
+        0.013,
+        -0.01
+      ],
+      "joint_gain": [
+        0.989,
+        1.012,
+        0.994,
+        1.009,
+        0.987,
+        1.01
+      ],
+      "samples": 42,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "33435d1a2692b9febb12406f6fb45a84e1606d2f806f4b797405d12f303eabea",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "155961dc87b84ee2257fcfa27b80c1d66bee21b15c095b4e13f46484cf7138e7",
+        "e_mm": "a9848e6b06068765340acb589dff919c8db66b94a05e766421e12b332cd2ff09",
+        "f_table": "0ec565a6d761a36a0abb6ee635bc8d1116a8214f0d99369837694dd222f74a2c",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "b92522d54efa9bc1f73a4ca8df4795a12e71eb58202ff78bd97d7bbe6f44abf2",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 2.2,
+      "com_m": [
+        -0.018,
+        0.013,
+        -0.01
+      ],
+      "joint_gain": [
+        1.017,
+        0.982,
+        1.013,
+        0.989,
+        1.02,
+        0.983
+      ],
+      "samples": 49,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "3439a832c2057aca96488c98d42f2b2935e31f19de517b233127cb3e9a091bd2",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "d055620eff6ecd3676b3bf19573c998295f01332659ddebec50283d7a3f96de2",
+        "e_mm": "9dd45c1f794d374cb619f7f9c273126fb60ab2e4cc543dc87914d8685a58370d",
+        "f_table": "6bcd9d791cb2aa0eec1c3d4b2a54617041eb9682232f42df716ff62291abbc30",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "914d40bbd530f5461ccea9ecc0bd8ee718fecacdcfe971b1d6c686d2f2798344",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 3.8,
+      "com_m": [
+        0.02,
+        0.006,
+        -0.011
+      ],
+      "joint_gain": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "samples": 47,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "aff2e0b01babc15131e7165d2263804209fb16b34ce830c843eb9d185d205d4b",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "a39768536a76a198399908bedcb87d6855ff06cbef87f3baa8103390571107d0",
+        "e_mm": "50860a5d027af924c4171c7c228ec62155e43b9f65f3eff96cc2886d37282c2d",
+        "f_table": "18623b0a2fc061e3f985257ce1d5e216842205f8355984e8d2fd2879ee0548da",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "d9044b19599efb2b96ee6d1480480e8464c89c2cf510573099d067af4867fe11",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 3.8,
+      "com_m": [
+        0.02,
+        0.006,
+        -0.011
+      ],
+      "joint_gain": [
+        1.009,
+        0.99,
+        1.007,
+        0.993,
+        1.011,
+        0.989
+      ],
+      "samples": 58,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "10e1c0da0f0a917ed9a3433c5465b34b18c4c5051e9f24f1727f1e41f80c1990",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "3868fdb6b08d283c4a8f544bcb068948ef3ba234897b57af407fdf164f629058",
+        "e_mm": "7edf4356c00d09cfea613e62193d2b5a90fade2282d52486ef65d1362ece8f41",
+        "f_table": "a09caa67464218bd310c9d99938bf75d8d72602c335373672bf38740953c284b",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "a580b23d7ebe79a86c50a2c97c20382437fae3cd6534b345eaec3a17037223b0",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 3.8,
+      "com_m": [
+        0.02,
+        0.006,
+        -0.011
+      ],
+      "joint_gain": [
+        0.989,
+        1.012,
+        0.994,
+        1.009,
+        0.987,
+        1.01
+      ],
+      "samples": 55,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "fc127ddc27a11814fce92e46dd29fa510922173201ece29101d9031249909846",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "d1b7e203429727c93f495714b1956206b94723addf3cdb9ce3d31232bee9e80b",
+        "e_mm": "beb8423a3e8b54dbd1cdd2d9534f34439f3404e884334ad5e414cd8ef1198dfd",
+        "f_table": "7acb27a46256cd9649c3095f3fd4a3748cf0c971f8418230f9915fc3f5abfc35",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "b459f2ab0f77db1aa8021f376cca5fec3293b00d8e1905f3d4c90862a3b0f6db",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 3.8,
+      "com_m": [
+        0.02,
+        0.006,
+        -0.011
+      ],
+      "joint_gain": [
+        1.017,
+        0.982,
+        1.013,
+        0.989,
+        1.02,
+        0.983
+      ],
+      "samples": 55,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "a14b2d5af9fc066f9317f74b3240ce426db57591b4ff57e870e5fa78aa2f767b",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "cbf5e755a0da620fc1e691ee8cf787ebf244d0a91687a42333ceb881c1b0d10c",
+        "e_mm": "afe29aa5051ebd7a00ac6f289f9b59f0b1f41023dc145adab048c0b3562470f6",
+        "f_table": "d81e9062bc5526e8466ba8e978c5fa3dc45cfab563102185d207a3ac59a3490f",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "f31b1738db4f37dfeaea7b63b96a84ade851e603aa5d9c8dd00ea2ce2739606f",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 5.3,
+      "com_m": [
+        -0.016,
+        -0.014,
+        0.019
+      ],
+      "joint_gain": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "samples": 58,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "d947d3764504e46dc24ac5f5844c2d2b896e536d113021eec55b5da372f73cdd",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "efa09e5b1420a93215429b7b276d14a50df50fd315a170431c15d826f4459b75",
+        "e_mm": "35330d1990a7169904e9a35887e43002232f16d9aec3f62ceedce99471a28dbb",
+        "f_table": "a5747beef8c0d72d05d2e25fefb6917dc606c7dc83b8bc485ec4134f10bae866",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "d0f4363d582295460a7a87ba47f042c6fafe05ead1415b6df3e06c51ad736634",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 5.3,
+      "com_m": [
+        -0.016,
+        -0.014,
+        0.019
+      ],
+      "joint_gain": [
+        1.009,
+        0.99,
+        1.007,
+        0.993,
+        1.011,
+        0.989
+      ],
+      "samples": 52,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "e0af32b52ac0b4f7cdbaa7b43cfae9520183eedbdeaf233844f719414d2086cd",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "1a7069e585a470333290cc1a7fcd5f6e2d62c8fe0e29289baeb39c8089860eda",
+        "e_mm": "e2c9dd1c15cef096908a428a42b25bdf1a9c52f828b392278910b952b3f67b2a",
+        "f_table": "f09d850edf5d2b072e2e4359eaf36ad295efe3893109b166bfe8feae6d075693",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "80800cfa7d2a77e3d1290062f22360072f862fb589d676cae2fcffbddb5e89e2",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 5.3,
+      "com_m": [
+        -0.016,
+        -0.014,
+        0.019
+      ],
+      "joint_gain": [
+        0.989,
+        1.012,
+        0.994,
+        1.009,
+        0.987,
+        1.01
+      ],
+      "samples": 47,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "0f13efc69acbb714b9371a9ba4cec9f7f9b9b7d3a3668cd4b67b6c211c737fae",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "56031368fb876e552daa81b800fd50173fa047a7f74dbb20f072bb331f94f806",
+        "e_mm": "54b3406d38186a53436dff0dd7cf1c8bdc36d0cb33fe2dd00cd8fb08d6b2ec02",
+        "f_table": "01133229dfc65be061da34d8c109b14cc568142a1ead1799f9bbec668c53287a",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "92a1805cb249412561618a1b0db8fcf5f12e30c730d4fc17c633cfaa24bcfaaa",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 5.3,
+      "com_m": [
+        -0.016,
+        -0.014,
+        0.019
+      ],
+      "joint_gain": [
+        1.017,
+        0.982,
+        1.013,
+        0.989,
+        1.02,
+        0.983
+      ],
+      "samples": 58,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "8a9a3651b0893ea14b7278c94ed06a9264047214a4eb8225d5c4049e7dc38501",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "f7378b8e66299df07bf3523dd60f84d748a3633a41322c1ee445bf7e27ee1f1c",
+        "e_mm": "7127a2728fa9912b2b8af4dc1e5337b74b9292c9d8a4dfc5444fcd9c7c35e08c",
+        "f_table": "db670d742f61721da415e40266399fa50c87ffbc710f4a3ea2f5f0fc5c831285",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "b91908a7aff5c6e535b8c9a2f360bd7749a8a1142fd04c842ad41f279bc5b67d",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 6.7,
+      "com_m": [
+        0.008,
+        0.021,
+        -0.013
+      ],
+      "joint_gain": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "samples": 55,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "f91833a0b51d2169a2ad3a7ab683ce151c55129c849286682be91af117d44882",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "bda0c5153d8e5f6c77b726c72cf6536df7a4f4d19d428a938e302ac329a95b44",
+        "e_mm": "b5d047ad2447da435309074bb99f10a47d906a93f62912787f4d2e357ae76bc7",
+        "f_table": "dee4c7888c90be67c98f1bcbc44e2ff598b1ec1acbd256c398b897addd5d665e",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "2415a9ed04c61c5f737d384d6b39fc03c3fcc419d3e9b5d5c9111492235dd55d",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 6.7,
+      "com_m": [
+        0.008,
+        0.021,
+        -0.013
+      ],
+      "joint_gain": [
+        1.009,
+        0.99,
+        1.007,
+        0.993,
+        1.011,
+        0.989
+      ],
+      "samples": 59,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "b9504061c3f670b9b9b8c4c7fc258283269c4ea52b5951eee4fe41892792dbad",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "63b44987dcfd94ff3b489396c895d5dae8197b7bec7a1fb31dee6d57f14d5329",
+        "e_mm": "52d1c7a96331595cd7b8569a48dfdd97116427d14bbff84ae78f0271022df2cd",
+        "f_table": "38ce254efe71f60c7f12399e580a77e39a570b07db8bc07ab7613685f6f133f3",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "7aa7ddf26c137d8a44670c3b0efa5050516859d7689cb0cea23c669dc53a2a1e",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 6.7,
+      "com_m": [
+        0.008,
+        0.021,
+        -0.013
+      ],
+      "joint_gain": [
+        0.989,
+        1.012,
+        0.994,
+        1.009,
+        0.987,
+        1.01
+      ],
+      "samples": 49,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "5d1338abf06bb28376ec088e989b18d1435d06965ea4322d736db6f6eab9de32",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "086b0d6edf2076486677eb2423f4a30eaaab414c423368a780eecdbeed42975f",
+        "e_mm": "3a04389e6072ac54c1b5080388adea5d59f705068eecac8269c5cae37b71a8a4",
+        "f_table": "273317385dad983c29d557d0c17b90d0ad1105636dc4a534a60bdfe6b33314af",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "632300f46b67628487e3c4308d039285a1a734ac6aa37c4b7f39858cbcd81904",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 6.7,
+      "com_m": [
+        0.008,
+        0.021,
+        -0.013
+      ],
+      "joint_gain": [
+        1.017,
+        0.982,
+        1.013,
+        0.989,
+        1.02,
+        0.983
+      ],
+      "samples": 64,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "abf43e915e6342d9dac737c304e2e19f5df009e564d5c28b0a337c2d59a8624d",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "3a40931add751cc241ef72296b8ff18f28db53450d3112730e684cb26f8e30a0",
+        "e_mm": "8e7ed4ad4113192f8b672e0530294041d56a473ab0dfd0b52c3abc9fc33906a6",
+        "f_table": "7e76bc6941ccbd277937e00b3809ca275575ff5bd6195a1cfa3f2f36d8b51541",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "d6b915b8f7e7b04f794a04971ec91ce56e8bdc603547d1a144c87ba6a92c5817",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 7.8,
+      "com_m": [
+        -0.023,
+        0.015,
+        0.006
+      ],
+      "joint_gain": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "samples": 49,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "f0a1d11f28f2ffba7660a826816c85f320ae583aa947ad811e530a187853b8da",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "245e5ca39c39fa501c8b4b1de6608faf68fb91c0df5d04310433163af2434dc4",
+        "e_mm": "7f915713391d66dcfeff5af93cd5b70d14924aa1dc02791dbda7bbd6a9f6308a",
+        "f_table": "4ad1e6c7905af1e8ae4033987f01392cc073f0657bf6b7c7aab8c5d35bd836e7",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "258b171a75d9abca18e0d217c6af97f9c98ceafd07e5f4489374bd903035ae63",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 7.8,
+      "com_m": [
+        -0.023,
+        0.015,
+        0.006
+      ],
+      "joint_gain": [
+        1.009,
+        0.99,
+        1.007,
+        0.993,
+        1.011,
+        0.989
+      ],
+      "samples": 104,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "b213a2b1e0e45e66e7c29692a5bfd6b5ee0cb5fe9279ff5b990692e76c18b48c",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "cc67a23d350cbc8109144d6aa90848d54a2cde9ccec7b197f54d64377b1313f3",
+        "e_mm": "5ee1d428704817bb2de9a813a6902024ae6f56cf77f89c7cd8ff9e51ccc23a19",
+        "f_table": "2bdb3e791ae24a96417fc20263fc0da6a2b2a21e24bf2e53f30c045e5dad7eda",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "4dc32dc761cd07ec199c50542a824844c47104b9c1d68367ac0af22bf2f59a0a",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 7.8,
+      "com_m": [
+        -0.023,
+        0.015,
+        0.006
+      ],
+      "joint_gain": [
+        0.989,
+        1.012,
+        0.994,
+        1.009,
+        0.987,
+        1.01
+      ],
+      "samples": 47,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "741dbd4aa640bf1ec0af83d9ec10b0d10630b481bd0b3a359c5389be45f0262b",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "849ec96271c571eee0cfab43529ae154c8324d3c675403b44fe9aaa1c2aef3a8",
+        "e_mm": "166ebda35312d240f73cd77cdc11a24336a780019a77745a0971408dfc53184e",
+        "f_table": "4749112b07be2056d50e056dd135d24bdd059f786315dcc5fce2c958f19be7e4",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "0e60bc805b72d49f9768c67f71c9ef849502c05008d0bbc1d19c7a5741ab2908",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    },
+    {
+      "mass_kg": 7.8,
+      "com_m": [
+        -0.023,
+        0.015,
+        0.006
+      ],
+      "joint_gain": [
+        1.017,
+        0.982,
+        1.013,
+        0.989,
+        1.02,
+        0.983
+      ],
+      "samples": 64,
+      "physics_sha256": {
+        "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+        "q": "5ffd40d37d86e26313fb15988ddb759df65f4cf291bbc90ce23d56978c4f029c",
+        "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+        "tau": "fb2e26e467cd3902ce1cf9dd20415fea3ceb4bddd2287b7a198bf9e1b68341b1",
+        "e_mm": "20a6f1df1b366ab78f60e424e285ef2f0a6ff2354fe45fcc2a2ea846ee49e27f",
+        "f_table": "6098ac29b222a7ae2ced2bb4e81edf1f861bcf37dc6f6d2af55de0de71777fcb",
+        "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "qpos": "c39ecd1ec9f153503ef49b9efada69c33a3a36c9b67bfbd092ab25133e2bdcc7",
+        "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+        "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+        "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+      }
+    }
+  ],
+  "sum_squared_fit_before": 12589.908863232373,
+  "sum_squared_fit_after": 1824.8474103224944
+}

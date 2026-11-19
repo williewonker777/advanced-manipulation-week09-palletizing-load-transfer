@@ -1,0 +1,43 @@
+{
+  "schema": "r27-landing-integration-preregistration.v1",
+  "classification": "Post-disclosure development against the public R26 landing result; not blind or deployment evidence.",
+  "baseline": {
+    "controller": "experiments.r26_delivery_pair.controller:Controller",
+    "detector": "experiments.r26_delivery_pair.candidate:Detector",
+    "official_result_sha256": "73c40906d314fc2fcb5236981e8071e806693acf4b2caf3faae8b4d1239671c3"
+  },
+  "failure_to_confirm": "The authentic official evaluator reports five misses and four indistinguishable slots. The repair targets only genuinely missed horizontal strata while the payload is physically gripped; detached C1 and every inherited route remain untouched.",
+  "single_proposal": {
+    "source": "Causal world-force reconstruction from encoder and joint-torque sensor using the public empty/loaded nominal models. The observer resets its differentiation stencil on measured grip transitions.",
+    "features": [
+      "measured grip Boolean",
+      "signed reconstructed world force x/y/z",
+      "horizontal magnitude hypot(x,y)",
+      "existing detector Boolean for source ownership"
+    ],
+    "admission": "Only while grip is observed true. Arm after the horizontal magnitude is below 0.8 of its frozen normal bound; start an episode after two consecutive samples above the bound.",
+    "ownership": "An episode is owned by the incumbent if the inherited detector reports at any time before the new source's first report. Otherwise emit one release_persistence-sample report and never re-report until the measured horizontal magnitude returns below 0.8 bound. Never suppress or delay the incumbent.",
+    "bound_rule_fixed_before_fit": "horizontal = 1.20 * maximum horizontal magnitude over all valid samples in the seven fit-only normal episodes + 0.50 N. No signed-positive result participates in the bound.",
+    "falsifier": "Stop before positive evaluation if any separated audit normal creates a new rise, if the bound/model artifact is invalid, or if source code/model pins change after freeze. Reject after positives for any new false/duplicate, inherited strict loss or >5 ms delay, >5 added active samples on an inherited event, tool loss, changed controller trajectory/physics, or failure to gain at least one previously missed official slot."
+  },
+  "normal_split": {
+    "fit": ["sh5", "heavy8_offset", "ec3:up", "fit-0", "fit-1", "fit-2", "fit-3"],
+    "audit": ["interp_mass", "interp_com", "soft_table_10pct", "audit-0", "audit-1", "audit-2"]
+  },
+  "positive_panels_after_freeze": {
+    "official": "Authentic stock evaluate.py, all 29 episodes per baseline/candidate arm.",
+    "mechanism": "Matched normal/force twins at official pickup, transport and pre-release phases with signed horizontal and vertical inputs, plus a prespecified two-impulse row.",
+    "optional_fresh": "At most a tiny registered mechanics/mass panel after all source and model bytes are frozen; no retuning."
+  },
+  "untouched": [
+    "R24 G4 controller",
+    "R26 C1 detached source and post-release behavior",
+    "all inherited detector routes",
+    "course evaluator and simulation"
+  ],
+  "limits": [
+    "finite MuJoCo 3.17 CPU simulation",
+    "disclosed development conditions",
+    "no R27 loaded holdout, hardware, remote, safety or production claim"
+  ]
+}

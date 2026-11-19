@@ -1,0 +1,57 @@
+{
+  "candidate": {
+    "entrypoint": "experiments.r32_measured_level.candidate:Detector",
+    "primary_lock_sha256": "4544d3e45d4ef807d1ebeda05664f71c68794e2abaae3f1179edd4e0b1b641c1",
+    "protocol_sha256": "4aa8441310b80a48e0f132aba65046c10877e42e27eb5bd6f8def1f50c03b447",
+    "sha256": "e08c0622c0fb6947f80b2c535a5ef0506f58a6fe8b44c8526323e5d405ebc25c"
+  },
+  "decision": {
+    "activation_authorized": false,
+    "enrollment_created": false,
+    "reason": "Mandatory historical width/upper/guard protections failed before prospective opening.",
+    "replacement_allowed": false,
+    "same_panel_reuse_allowed": false,
+    "substitute_allowed": false
+  },
+  "default_changed": false,
+  "fail_closed": {
+    "blocked_on_missing_enrollment": true,
+    "candidate_or_simulator_import_reached": false,
+    "local_log_sha256": "1bbcb81f6a310c3ed9bb1fd4f8c705c2ffbe667d48cc5992bf3fa6be4c846094",
+    "output_directory_created": false,
+    "runner_exit": 1,
+    "validated": true
+  },
+  "hardware_used": false,
+  "historical_gate": {
+    "duplicates": 2,
+    "failures": {
+      "c3_upper_or_guard_rows": 6,
+      "c3_width_floor_rows": 35,
+      "r31_guard_rows": 24
+    },
+    "false_rises": 9,
+    "passed": false,
+    "retained_strict": 154,
+    "source": "root final historical qualification signal; aggregate recorded without opening ongoing/private trial rows"
+  },
+  "lock_summary_sha256": "962ec08f8bd141383a85185c7f1d9015dd5b0a24c68cceadcc402e7f999d1571",
+  "preflight_summary_sha256": "831021c9c372a26c5d299171252b2f52ff2b33147f38c593e2ed35a52def187c",
+  "public_changed": false,
+  "remote_used": false,
+  "safety_or_deployment_claim": false,
+  "schema": "r32-duration-challenge-non-enrollment.v1",
+  "sealed_panel": {
+    "baseline_episodes_run": 0,
+    "candidate_episodes_run": 0,
+    "case_payload_sha256": "22d995ee562dfce5ea1bf06b6828517ecc126ef499f5b2a9d5012b9ac59afa17",
+    "index_sha256": "62e197e70dcc0889f0aba6a9d51e23333a2c434acfe6a48b2d0c4d63bcda91d3",
+    "inputs_opened_after_historical_failure": 0,
+    "paired_cases": 4,
+    "plan_sha256": "427507ceecb31026ea724aee5225efe3b17c7fdd21d5a0930bb104f2cf23d1c5",
+    "possible_episodes_if_eligible": 128,
+    "rows_scored": 0,
+    "single_cases": 6
+  },
+  "status": "HISTORICAL_GATE_FAILED_NOT_ENROLLED"
+}

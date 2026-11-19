@@ -1,0 +1,31 @@
+{
+  "candidate_lock": "lock.json must pin plan, evaluator, entrypoint, and every R22 Python/JSON dependency before any challenge execution.",
+  "execution": "python -B -m experiments.r22_challenge.evaluator --lock LOCK --out NEW.json --jobs 1|2",
+  "replay": "The same candidate lock and unchanged sources must reproduce all non-timing result fields byte-for-byte.",
+  "result_contract": [
+    "exactly 486 episodes",
+    "22 unique cases x 3 mechanics x three arms with 1/2/4 twins",
+    "every row and failed gate retained",
+    "candidate passes only with zero failed rows"
+  ],
+  "safety_scope": "finite CPU simulation, not hidden production, hard real-time, hardware or safety proof",
+  "schema": "r22-independent-protection-protocol.v1",
+  "selection_pin_note": "R22 primary/fallback decision was fixed by the owning agent before the independent challenge lock or outcomes.",
+  "source_pins": {
+    "experiments/r15_delayed_wrench/observer.py": "eff8f0b76d8c0358bb15b020be0db6e0b55d0e666a93ee2f46a1de6190ba2483",
+    "experiments/r18_paired_impulses/runner.py": "7592d38f96515392cd27d0c8593d1edebca4f54f38f88abf0fe9367984c453fa",
+    "experiments/r21_yaw_impulse/coarse.py": "f3a8a4202e638346dfa6a7994b056cbf509be4f335fb09c76d6657d47abcafe9",
+    "experiments/r21_yaw_impulse/detector.py": "69e1e884f393a17751546165554f994c19b0cb127830233fba1f2329481c87cb",
+    "experiments/r21_yaw_impulse/frozen.py": "71a75f131ea6d3aae94f9acf40c42abe92d9123000d86e685f8bb5f4a00a4342",
+    "experiments/r21_yaw_impulse/normal_bins.json": "5f22f640eb8824f764ffeec7ecbef7ba23df02a874547b93b8ddc72925e25c15",
+    "experiments/r21_yaw_impulse/state.py": "f04d46e93c55e04aa869050fe43c895951f3a970e3729b01e8d94744532f3a9f",
+    "experiments/r22_combined/selection.json": "b74b3a1eac159f3836eea9b83b45b23872417573413cd416a1b3758abf6cedc0",
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "sim/config.py": "db2f85407992c21fb3e331acef93f3d6f91e86ad72a760da76a1b93226627735",
+    "sim/plant.py": "8f4a16e1d083dc8559ac21427166c78db7261b7bedd149b8dae8f789a6245f1e",
+    "sim/runner.py": "3cf99c21b93f431cc57a0929e4d05b083fb8f35f06dc52bc2d2ddcde3e55ed1f",
+    "tools/r14_paired_events.py": "bf9efcb14e2b7e7038f70ebe8bc482f09c70c89c23fee8029db168cf671dff66"
+  },
+  "status": "FROZEN_BEFORE_R22_CANDIDATE_LOCK"
+}

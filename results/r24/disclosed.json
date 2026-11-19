@@ -1,0 +1,1693 @@
+{
+  "schema": "r24-known-evaluation-table.v1",
+  "new_independent_test": false,
+  "scenarios": 45,
+  "original_R23_records_and_physics_exact_if_disclosed": true,
+  "label": "Previously disclosed R23 cases",
+  "arms": {
+    "r23_free": {
+      "summary": {
+        "singles": 15,
+        "single_n": 18,
+        "pair_slots": 45,
+        "pair_n": 60,
+        "complete": 8,
+        "false": 17,
+        "duplicate_slots": 6,
+        "tool_hits": 3,
+        "tool_n": 6
+      },
+      "failed_rows": [
+        {
+          "case": "n23_detached_heavy_interp",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_late_tangent",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.864
+            ],
+            "force": [
+              3.862
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_post_detach_radial",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.857
+            ],
+            "force": [
+              3.857
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                98
+              ],
+              "rises_ms": [
+                1389,
+                1451
+              ]
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                98
+              ],
+              "rises_ms": [
+                1389,
+                1451
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                104
+              ],
+              "rises_ms": [
+                1598
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                97
+              ],
+              "rises_ms": [
+                1389,
+                1450
+              ]
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                97
+              ],
+              "rises_ms": [
+                1389,
+                1450
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                103
+              ],
+              "rises_ms": [
+                1597
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                39,
+                101
+              ],
+              "rises_ms": [
+                1392,
+                1454
+              ]
+            },
+            "isolated_second": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                39,
+                101
+              ],
+              "rises_ms": [
+                1392,
+                1454
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_to_carry",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ],
+            "first": [
+              3.867
+            ],
+            "second": [
+              3.866
+            ],
+            "both": [
+              3.87
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                38
+              ],
+              "rises_ms": [
+                4151
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_post_detach_diagonal_pair",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.86
+            ],
+            "first": [
+              3.86
+            ],
+            "second": [
+              3.86
+            ],
+            "both": [
+              3.86
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_to_post_detach",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.869
+            ],
+            "first": [
+              3.868
+            ],
+            "second": [
+              3.869
+            ],
+            "both": [
+              3.868
+            ]
+          },
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 324,
+      "raw_comparison_sha256": "6343fc8d3153342b702f915c9d6898bda92fd48fc881704530295786a2fd5757"
+    },
+    "experiments.r24_loaded.memory:Cone": {
+      "summary": {
+        "singles": 15,
+        "single_n": 18,
+        "pair_slots": 45,
+        "pair_n": 60,
+        "complete": 8,
+        "false": 0,
+        "duplicate_slots": 6,
+        "tool_hits": 3,
+        "tool_n": 6
+      },
+      "failed_rows": [
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                98
+              ],
+              "rises_ms": [
+                1389,
+                1451
+              ]
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                98
+              ],
+              "rises_ms": [
+                1389,
+                1451
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                104
+              ],
+              "rises_ms": [
+                1598
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                97
+              ],
+              "rises_ms": [
+                1389,
+                1450
+              ]
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                97
+              ],
+              "rises_ms": [
+                1389,
+                1450
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                103
+              ],
+              "rises_ms": [
+                1597
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                39,
+                101
+              ],
+              "rises_ms": [
+                1392,
+                1454
+              ]
+            },
+            "isolated_second": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                39,
+                101
+              ],
+              "rises_ms": [
+                1392,
+                1454
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                38
+              ],
+              "rises_ms": [
+                4151
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_to_post_detach",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 324,
+      "raw_comparison_sha256": "6343fc8d3153342b702f915c9d6898bda92fd48fc881704530295786a2fd5757"
+    },
+    "experiments.r24_loaded.memory:Response": {
+      "summary": {
+        "singles": 15,
+        "single_n": 18,
+        "pair_slots": 45,
+        "pair_n": 60,
+        "complete": 8,
+        "false": 0,
+        "duplicate_slots": 6,
+        "tool_hits": 3,
+        "tool_n": 6
+      },
+      "failed_rows": [
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                98
+              ],
+              "rises_ms": [
+                1389,
+                1451
+              ]
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                98
+              ],
+              "rises_ms": [
+                1389,
+                1451
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                104
+              ],
+              "rises_ms": [
+                1598
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                97
+              ],
+              "rises_ms": [
+                1389,
+                1450
+              ]
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                97
+              ],
+              "rises_ms": [
+                1389,
+                1450
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                103
+              ],
+              "rises_ms": [
+                1597
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                39,
+                101
+              ],
+              "rises_ms": [
+                1392,
+                1454
+              ]
+            },
+            "isolated_second": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                39,
+                101
+              ],
+              "rises_ms": [
+                1392,
+                1454
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                38
+              ],
+              "rises_ms": [
+                4151
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_to_post_detach",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 324,
+      "raw_comparison_sha256": "6343fc8d3153342b702f915c9d6898bda92fd48fc881704530295786a2fd5757"
+    },
+    "experiments.r24_loaded.gated:Detector": {
+      "summary": {
+        "singles": 15,
+        "single_n": 18,
+        "pair_slots": 45,
+        "pair_n": 60,
+        "complete": 8,
+        "false": 17,
+        "duplicate_slots": 6,
+        "tool_hits": 3,
+        "tool_n": 6
+      },
+      "failed_rows": [
+        {
+          "case": "n23_detached_heavy_interp",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_late_tangent",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.864
+            ],
+            "force": [
+              3.862
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_post_detach_radial",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.857
+            ],
+            "force": [
+              3.857
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                98
+              ],
+              "rises_ms": [
+                1389,
+                1451
+              ]
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                98
+              ],
+              "rises_ms": [
+                1389,
+                1451
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                104
+              ],
+              "rises_ms": [
+                1598
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                97
+              ],
+              "rises_ms": [
+                1389,
+                1450
+              ]
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                97
+              ],
+              "rises_ms": [
+                1389,
+                1450
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                103
+              ],
+              "rises_ms": [
+                1597
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                39,
+                101
+              ],
+              "rises_ms": [
+                1392,
+                1454
+              ]
+            },
+            "isolated_second": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                39,
+                101
+              ],
+              "rises_ms": [
+                1392,
+                1454
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_to_carry",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.861
+            ],
+            "first": [
+              3.867
+            ],
+            "second": [
+              3.866
+            ],
+            "both": [
+              3.87
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                38
+              ],
+              "rises_ms": [
+                4151
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_post_detach_diagonal_pair",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.86
+            ],
+            "first": [
+              3.86
+            ],
+            "second": [
+              3.86
+            ],
+            "both": [
+              3.86
+            ]
+          },
+          "failed_events": {},
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_to_post_detach",
+          "mechanics": "actuator_skew",
+          "false_s": {
+            "none": [
+              3.869
+            ],
+            "first": [
+              3.868
+            ],
+            "second": [
+              3.869
+            ],
+            "both": [
+              3.868
+            ]
+          },
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 216,
+      "raw_comparison_sha256": "cc27aae668487a3b2f800ab83b0299c409c7ce3a3d1ec328c5346ad45708a31e"
+    },
+    "experiments.r24_loaded.dc:Detector": {
+      "summary": {
+        "singles": 15,
+        "single_n": 18,
+        "pair_slots": 45,
+        "pair_n": 60,
+        "complete": 8,
+        "false": 0,
+        "duplicate_slots": 6,
+        "tool_hits": 3,
+        "tool_n": 6
+      },
+      "failed_rows": [
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                98
+              ],
+              "rises_ms": [
+                1389,
+                1451
+              ]
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                98
+              ],
+              "rises_ms": [
+                1389,
+                1451
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                104
+              ],
+              "rises_ms": [
+                1598
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                97
+              ],
+              "rises_ms": [
+                1389,
+                1450
+              ]
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                36,
+                97
+              ],
+              "rises_ms": [
+                1389,
+                1450
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                103
+              ],
+              "rises_ms": [
+                1597
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                39,
+                101
+              ],
+              "rises_ms": [
+                1392,
+                1454
+              ]
+            },
+            "isolated_second": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [
+                39,
+                101
+              ],
+              "rises_ms": [
+                1392,
+                1454
+              ]
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                38
+              ],
+              "rises_ms": [
+                4151
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_to_post_detach",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 216,
+      "raw_comparison_sha256": "cc91c68f22b36dac77448bb136f41176160c4bd026bf41977fe216007501241d"
+    },
+    "experiments.r24_composed.detector:Detector": {
+      "summary": {
+        "singles": 15,
+        "single_n": 18,
+        "pair_slots": 51,
+        "pair_n": 60,
+        "complete": 8,
+        "false": 0,
+        "duplicate_slots": 0,
+        "tool_hits": 3,
+        "tool_n": 6
+      },
+      "failed_rows": [
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "s23_transfer_border_diag_a",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "single": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                104
+              ],
+              "rises_ms": [
+                1598
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                103
+              ],
+              "rises_ms": [
+                1597
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_close_diagonals",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "isolated_second": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "stock",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "contact_surface",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                38
+              ],
+              "rises_ms": [
+                4151
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_detach_boundary_cross",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "both_second": {
+              "strict": false,
+              "before_quiet": false,
+              "delay_ms": [
+                37
+              ],
+              "rises_ms": [
+                4150
+              ]
+            }
+          },
+          "tool_prealarm_or_tail": false
+        },
+        {
+          "case": "p23_transfer_to_post_detach",
+          "mechanics": "actuator_skew",
+          "false_s": {},
+          "failed_events": {
+            "isolated_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            },
+            "both_first": {
+              "strict": false,
+              "before_quiet": true,
+              "delay_ms": [],
+              "rises_ms": []
+            }
+          },
+          "tool_prealarm_or_tail": false
+        }
+      ],
+      "regressions": [],
+      "episodes_in_authentic_comparison": 216,
+      "raw_comparison_sha256": "79d6d03db43ac99402031d9f024a0d9d3cbd73d3b96a2fc2a6fb6fdd5dba66a2"
+    }
+  }
+}

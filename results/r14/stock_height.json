@@ -1,0 +1,271 @@
+{
+  "schema": "r14-grasp-audit.v1",
+  "pins": {
+    "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "estimator": "79d3fe1c90e06fd89aa0b75b51097528723ce7413468a453a20bbe41421fe0d9",
+    "registration": "7da9c3e79d6dca610cff6e8048410783c3ceb03a58211f1ad30328e219944b04",
+    "plan": "c7b9ee36195e429305be27b822081f664979a75ef41a761117e7b31531e3cfeb",
+    "base_audit": "1651baab2a1d3e3ae91e8d523f10e5edab4a3568dd9f8c7b3035ae7ddba5373e",
+    "audit": "6f30501730880069c99cb1c4d12888c8be97ea95e7420dec4cb097cf10172b1b",
+    "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "scope": {
+    "episodes": 56,
+    "calibration_episodes": 24,
+    "evaluation_episodes": 32,
+    "inference_deadline_s": 3.55,
+    "runner": "authenticated stock sim.runner.run_episode",
+    "same_signal_comparison": true,
+    "control_parity": "raw and registered estimates are offline consumers of one shared run; controller, detector and physics trace are identical by construction",
+    "absolute_height_caveat": "absolute_bottom_mm is a public-model latch-to-taught estimate, not a measurement of absolute physical box height; qualification uses paired actual bottom-face change only",
+    "research_parity": false,
+    "parity_limit": "Stock runner applies authored pick_offset but does not expose the private stiffness/viscous/Coulomb/RNG perturbation fixture. Numeric parity with R14 research captures is not claimed.",
+    "ignored_research_perturbations": [
+      {
+        "split": "fit",
+        "id": "n00",
+        "research_perturb": {
+          "seed": 150800,
+          "stiffness_scale": 0.96,
+          "viscous_scale": 1.04,
+          "coulomb_scale": 0.95
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n01",
+        "research_perturb": {
+          "seed": 150801,
+          "stiffness_scale": 1.04,
+          "viscous_scale": 0.97,
+          "coulomb_scale": 1.07
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n02",
+        "research_perturb": {
+          "seed": 150802,
+          "stiffness_scale": 1.0,
+          "viscous_scale": 1.02,
+          "coulomb_scale": 0.94
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n03",
+        "research_perturb": {
+          "seed": 150803,
+          "stiffness_scale": 0.98,
+          "viscous_scale": 0.94,
+          "coulomb_scale": 1.02
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n04",
+        "research_perturb": {
+          "seed": 150804,
+          "stiffness_scale": 1.045,
+          "viscous_scale": 1.03,
+          "coulomb_scale": 0.96
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n05",
+        "research_perturb": {
+          "seed": 150805,
+          "stiffness_scale": 0.955,
+          "viscous_scale": 1.04,
+          "coulomb_scale": 1.06
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n06",
+        "research_perturb": {
+          "seed": 150806,
+          "stiffness_scale": 1.02,
+          "viscous_scale": 0.96,
+          "coulomb_scale": 0.95
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n07",
+        "research_perturb": {
+          "seed": 150807,
+          "stiffness_scale": 0.97,
+          "viscous_scale": 1.06,
+          "coulomb_scale": 1.02
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n08",
+        "research_perturb": {
+          "seed": 150808,
+          "stiffness_scale": 1.025,
+          "viscous_scale": 0.96,
+          "coulomb_scale": 1.04
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n09",
+        "research_perturb": {
+          "seed": 150809,
+          "stiffness_scale": 0.99,
+          "viscous_scale": 1.03,
+          "coulomb_scale": 0.97
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n10",
+        "research_perturb": {
+          "seed": 150810,
+          "stiffness_scale": 1.045,
+          "viscous_scale": 1.04,
+          "coulomb_scale": 0.95
+        }
+      },
+      {
+        "split": "fit",
+        "id": "n11",
+        "research_perturb": {
+          "seed": 150811,
+          "stiffness_scale": 0.955,
+          "viscous_scale": 0.96,
+          "coulomb_scale": 1.06
+        }
+      },
+      {
+        "split": "test",
+        "id": "e",
+        "research_perturb": {
+          "seed": 150920,
+          "stiffness_scale": 0.975,
+          "viscous_scale": 1.045,
+          "coulomb_scale": 0.96
+        }
+      },
+      {
+        "split": "test",
+        "id": "f",
+        "research_perturb": {
+          "seed": 150921,
+          "stiffness_scale": 1.025,
+          "viscous_scale": 0.965,
+          "coulomb_scale": 1.04
+        }
+      },
+      {
+        "split": "test",
+        "id": "g",
+        "research_perturb": {
+          "seed": 150922,
+          "stiffness_scale": 0.96,
+          "viscous_scale": 1.035,
+          "coulomb_scale": 1.07
+        }
+      },
+      {
+        "split": "test",
+        "id": "h",
+        "research_perturb": {
+          "seed": 150923,
+          "stiffness_scale": 1.04,
+          "viscous_scale": 0.945,
+          "coulomb_scale": 0.95
+        }
+      }
+    ],
+    "causal_split": "12 zero-offset stock runs fit each mode; all raw and registered held predictions are complete before free-box score geometry is evaluated",
+    "retained_data": "derived calibration/evaluation JSON only; no raw captures",
+    "decision": "validation only; no promotion or threshold change"
+  },
+  "metrics": {
+    "servo": {
+      "raw": {
+        "cases": 16,
+        "accepted": 8,
+        "accepted_interval_misses": 4,
+        "point_rmse_mm": 2.4674841016445432,
+        "vertical_point_rmse_mm": 3.482275808029429,
+        "control_max_abs_point_error_mm": 0.4071084407169702,
+        "action_rmse_mm": 2.462341547936831,
+        "max_abs_action_error_mm": 5.978153887113999,
+        "vertical_sign_correct": 8,
+        "vertical_accepted_sign_correct": 8,
+        "large_cases": 4,
+        "large_signed_accurate_actions": 4,
+        "tiny_cases": 12,
+        "tiny_nonzero_actions": 4,
+        "original_strict_gate": false,
+        "functional_gate": false
+      },
+      "registered": {
+        "cases": 16,
+        "accepted": 4,
+        "accepted_interval_misses": 0,
+        "point_rmse_mm": 0.1640871849409216,
+        "vertical_point_rmse_mm": 0.17678656889829342,
+        "control_max_abs_point_error_mm": 0.3069761397560201,
+        "action_rmse_mm": 0.2441480847472095,
+        "max_abs_action_error_mm": 0.7080512072115686,
+        "vertical_sign_correct": 8,
+        "vertical_accepted_sign_correct": 4,
+        "large_cases": 4,
+        "large_signed_accurate_actions": 4,
+        "tiny_cases": 12,
+        "tiny_nonzero_actions": 0,
+        "original_strict_gate": false,
+        "functional_gate": true
+      },
+      "registered_minus_raw_point_rmse_mm": -2.3033969167036217
+    },
+    "torque": {
+      "raw": {
+        "cases": 16,
+        "accepted": 8,
+        "accepted_interval_misses": 4,
+        "point_rmse_mm": 2.7683749184731714,
+        "vertical_point_rmse_mm": 3.9125158553080985,
+        "control_max_abs_point_error_mm": 0.20544808990319438,
+        "action_rmse_mm": 2.7665686615863936,
+        "max_abs_action_error_mm": 6.563297308526702,
+        "vertical_sign_correct": 5,
+        "vertical_accepted_sign_correct": 5,
+        "large_cases": 4,
+        "large_signed_accurate_actions": 4,
+        "tiny_cases": 12,
+        "tiny_nonzero_actions": 4,
+        "original_strict_gate": false,
+        "functional_gate": false
+      },
+      "registered": {
+        "cases": 16,
+        "accepted": 4,
+        "accepted_interval_misses": 0,
+        "point_rmse_mm": 0.1441196110235102,
+        "vertical_point_rmse_mm": 0.19475632161724285,
+        "control_max_abs_point_error_mm": 0.10109219760159538,
+        "action_rmse_mm": 0.14063876178502394,
+        "max_abs_action_error_mm": 0.41871333982182457,
+        "vertical_sign_correct": 7,
+        "vertical_accepted_sign_correct": 4,
+        "large_cases": 4,
+        "large_signed_accurate_actions": 4,
+        "tiny_cases": 12,
+        "tiny_nonzero_actions": 0,
+        "original_strict_gate": false,
+        "functional_gate": true
+      },
+      "registered_minus_raw_point_rmse_mm": -2.624255307449661
+    }
+  }
+}

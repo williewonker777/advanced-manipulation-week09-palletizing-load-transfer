@@ -1,0 +1,15 @@
+{
+ "schema":"r15-early-com-plan.v1",
+ "prefix":{"centres_s":[1.84,2.44],"step_ms":8,"finish_deadline_s":2.463,"nuisance":"calibrated affine mass bias, stiffness coordinate, six-axis DC; no drift"},
+ "uncertainty":"0.75mm physical margin + fully nested normal LOO 2D norm + largest five contiguous block-deletion 2D change; radius<=2.5mm, no action below radius, 15mm vector cap",
+ "fresh_groups":[
+  {"id":"ec1","mass":3.45,"com":[0.019,-0.014,0.021],"shift":[0.0058,-0.0065,0.0044]},
+  {"id":"ec2","mass":4.90,"com":[-0.022,0.018,-0.013],"shift":[-0.0062,-0.0048,0.0052]},
+  {"id":"ec3","mass":6.55,"com":[0.016,0.023,-0.020],"shift":[0.0072,0.0054,0.0042]},
+  {"id":"ec4","mass":7.75,"com":[-0.015,-0.020,0.017],"shift":[-0.0054,0.0076,0.0055]}
+ ],
+ "variants":["none","explicit_zero","xy","up","down"],
+ "sensing_gate":"each stock/perturbed domain: vector RMSE<=1.5mm, max zero-on-abstain action error<=2mm, no accepted interval miss, no action truth norm<1mm, every truth norm>=3mm accepted with positive dot",
+ "control_gate":"only after sensing: all fresh normals G4/FA/cost vs R14 and qualified late XY, explicit zero distinct from None; impacts only if entire normal gate passes",
+ "official":false
+}

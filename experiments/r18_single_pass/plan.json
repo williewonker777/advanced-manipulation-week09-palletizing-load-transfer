@@ -1,0 +1,16 @@
+{
+  "schema": "r18-exact-observer-schedule.v1",
+  "role": "R17D observer arithmetic scheduling only; neither a new collision classifier nor the original course demo",
+  "before_evaluation": true,
+  "reference": "frozen R17D typed distribution and original R16 D plant; controller identical within each comparison",
+  "rule": "Unchanged Coupled.update, normal release model, physical floors, margins, histories, persistence, clear, unsupported and fallback behavior. Compute time/mass correction table at reset (known mass only); materialize the six regression basis vectors once from the actually observed grip falling edge; compute each active 6-axis prediction once, never an episode-sized burst at release. No future sensor inputs, case IDs or collision truth. No changes to trained values or acceptance thresholds.",
+  "checks": "All six returned residuals, all detection bits, every physics array and non-clock metric must be bit-identical to the unmodified R17D on every run; compare supported flag, age, features, C score/state, D channels, ratios and state in a separate per-tick digest probe. Zero and servo must delegate to R10 exactly. Check previously learned, known upper/lower directional floors and hysteresis using synthetic boundary tests including end-of-horizon semantics.",
+  "timing": "Same pinned physical CPU, one BLAS thread, warmed model file cache, ABBA then BAAB over successive known loaded cases. Report reset separately, whole-cycle detector and controller+detector p99/max/number >1ms, process thread and wall, plus release phase. Never treat p99 as a hard deadline. For the schedule to count as a speed improvement, both independent loaded blocks must reduce post-release detector p99; otherwise report mixed.",
+  "cases": [
+    {"id":"known_release_16N","mass":5.38,"com":[0.021,-0.016,0.011],"offset":[0,0,0],"collision":[3.94,[0,0,16]]},
+    {"id":"known_heavy_normal","mass":7.90,"com":[0.024,-0.014,0.015],"offset":[-0.006,-0.005,-0.0058]},
+    {"id":"known_zero","mass":0.0,"com":[0,0,0],"offset":null},
+    {"id":"known_servo","mass":5.38,"com":[0.021,-0.016,0.011],"offset":[0,0,0],"mode":"servo"}
+  ],
+  "disposition": "Finite optimization study. Reproducing known R17D late false alarms is required for equivalence, not a performance pass for collision. Separate post-pulse recovery candidates are not included."
+}

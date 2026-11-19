@@ -1,0 +1,6 @@
+{
+ "schema":"week09-r24-integrated-selection.v1",
+ "upstream": {"pickup":"2147e2849b244f230423cad176e9ff1a2c9333cb32597b10e8002fd3a7956c13","after_transport":"experiments.r24_loaded.dc:Detector"},
+ "mechanism": "Use one continuous momentum history. Only an already active reported pickup can invoke the frozen momentum switch; only a separately measured pregrasp drive departure and actual support after transport can admit the frozen normal-force response. No duplicate R23 updates, no new thresholds or dwell times.",
+ "selection_before_new_holdout": "First require no event loss/over-5ms delay or new false/dup on disclosed 45, nearby 20, old R22 66, D4 385, old weak/paired and original official torque. Prefer accepted composition over DC alone if it additionally removes the measured duplicate slots without violating a protection. If composition fails, do NOT choose it for the independent challenge. Compare guards by individual rows, not just totals. If neither passes do not spend new trials as if qualified."
+}

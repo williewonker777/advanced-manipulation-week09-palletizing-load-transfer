@@ -1,0 +1,102 @@
+{
+  "schema": "r20-bridge-challenge-plan.v1",
+  "status": "FROZEN_BEFORE_ANY_CHALLENGE_OUTCOME",
+  "candidate": "experiments.r20_event_bridge.detector.Detector",
+  "comparator": "experiments.r19_impulse_end.detector.Detector",
+  "policy_pins": {
+    "experiments/r20_event_bridge/detector.py": "17186a330a99f9dab34973c513c03216a68bf341851c9d6472373392f34a7b66",
+    "experiments/r20_event_bridge/state.py": "d4d80a18d60a4ce5fe1c8516777ba2bf9060be23aab42cd27c53cde6e759f87c"
+  },
+  "quiet_ms": 20,
+  "window_ms": 320,
+  "pulse_duration_ms": 120,
+  "fresh": [
+    {
+      "id": "fresh_gap07_horizontal_reverse",
+      "mass": 4.93,
+      "com": [-0.011, 0.022, 0.015],
+      "offset": null,
+      "gap_ms": 7,
+      "impacts": [[4.247, [26, 0, 0]], [4.374, [-23, 0, 0]]]
+    },
+    {
+      "id": "fresh_gap23_vertical_aligned",
+      "mass": 6.17,
+      "com": [0.019, -0.014, 0.017],
+      "offset": [0.001, 0, -0.001],
+      "gap_ms": 23,
+      "impacts": [[3.917, [0, 0, -16]], [4.060, [0, 0, -20]]]
+    },
+    {
+      "id": "fresh_gap47_horizontal_cross",
+      "mass": 5.06,
+      "com": [-0.006, -0.021, 0.023],
+      "offset": null,
+      "gap_ms": 47,
+      "impacts": [[4.617, [0, -22, 0]], [4.784, [24, 0, 0]]]
+    },
+    {
+      "id": "fresh_gap90_diagonal_opposed",
+      "mass": 7.48,
+      "com": [0.016, 0.006, -0.018],
+      "offset": [-0.001, 0.001, 0],
+      "gap_ms": 90,
+      "impacts": [[3.742, [10, -8, -12]], [3.952, [-11, 9, 13]]]
+    },
+    {
+      "id": "fresh_gap140_vertical_reverse",
+      "mass": 3.19,
+      "com": [-0.023, 0.012, 0.008],
+      "offset": null,
+      "gap_ms": 140,
+      "impacts": [[4.863, [0, 0, 24]], [5.123, [0, 0, -22]]]
+    },
+    {
+      "id": "fresh_gap210_mixed_separated",
+      "mass": 5.63,
+      "com": [0.007, -0.017, 0.026],
+      "offset": [0, -0.001, 0.001],
+      "gap_ms": 210,
+      "impacts": [[3.694, [-20, 8, 0]], [4.024, [0, 18, -10]]]
+    }
+  ],
+  "exposed_controls": [
+    {
+      "id": "i55",
+      "mass": 4.12,
+      "com": [0.009, 0.021, -0.012],
+      "offset": [0.001, -0.001, 0],
+      "gap_ms": 55,
+      "impacts": [[4.380, [25, 0, 0]], [4.555, [-24, 0, 0]]]
+    },
+    {
+      "id": "pair_return_opposed",
+      "mass": 5.71,
+      "com": [-0.022, 0.014, 0.019],
+      "offset": null,
+      "gap_ms": 240,
+      "impacts": [[3.82, [0, 0, -13]], [4.18, [0, 0, 13]]]
+    },
+    {
+      "id": "gap80_weak",
+      "mass": 6.84,
+      "com": [-0.015, 0.008, 0.023],
+      "offset": null,
+      "gap_ms": 80,
+      "impacts": [[3.866, [0, 0, -14]], [4.066, [0, 0, 16]]]
+    }
+  ],
+  "fresh_acceptance": [
+    "exact signed/scalar force and causal prefixes",
+    "20 ms quiet and plus/minus 20 ms counterfactual attribution",
+    "exactly one raw and credited response in every target slot",
+    "no latency, false-event, tool-event, or stuck-tail loss versus R19",
+    "no apparent gain caused only by crediting an already raw R19 rise",
+    "identical physical trajectories between R19 and R20"
+  ],
+  "restrictions": [
+    "no outcome-dependent case edits, retries, threshold changes, or policy edits",
+    "fresh cases determine the challenge verdict; exposed controls never count as novelty",
+    "a failed protected gate remains diagnostic evidence, not promotion"
+  ]
+}

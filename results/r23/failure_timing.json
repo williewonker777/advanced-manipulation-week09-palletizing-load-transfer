@@ -1,0 +1,41 @@
+{
+  "schema": "week09-r23-existing-holdout-bottlenecks.v1",
+  "classification": "diagnostic on previously disclosed R23 holdout, not an independent test or a new improvement",
+  "locked_result_sha256": "8b55ed07f64128d5b957630019576b8477b47f57447989668fd284bee7abd022",
+  "arms": [
+    "r22_light",
+    "r23"
+  ],
+  "false_rise_records_exact_between_arms": true,
+  "false_rises": 17,
+  "rows_with_false": 6,
+  "false_by_mechanics": {
+    "actuator_skew": 17
+  },
+  "false_by_tick_ms": {
+    "3857": 2,
+    "3860": 4,
+    "3861": 2,
+    "3862": 1,
+    "3864": 1,
+    "3866": 1,
+    "3867": 1,
+    "3868": 2,
+    "3869": 2,
+    "3870": 1
+  },
+  "affected_cases": [
+    "n23_detached_heavy_interp",
+    "p23_post_detach_diagonal_pair",
+    "p23_transfer_to_carry",
+    "p23_transfer_to_post_detach",
+    "s23_post_detach_radial",
+    "s23_transfer_late_tangent"
+  ],
+  "duplicate_attribution_records_exact_between_arms": true,
+  "slots_with_multiple_rises": 6,
+  "duplicate_case_families": [
+    "p23_transfer_close_diagonals"
+  ],
+  "next_question": "Why does loaded transfer with the actuator-skew variant produce these same pre-release alarms? Diagnose without masking that time interval; this disclosed cohort is no longer a fresh test."
+}

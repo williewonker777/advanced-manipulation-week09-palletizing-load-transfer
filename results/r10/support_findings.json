@@ -1,0 +1,90 @@
+{
+  "schema": "R10_SUPPORT_FINDINGS.v1",
+  "status": "STOP_NO_SUPPORT_AWARE_CONTROLLER",
+  "scope": {
+    "full_simulator_runs": 14,
+    "normal_or_nuisance_runs": 10,
+    "forced_impact_or_lean_runs": 4,
+    "modes": [
+      "servo",
+      "torque"
+    ],
+    "normal_threshold_selection_runs": 6,
+    "fresh_normal_development_runs": 4
+  },
+  "timing": {
+    "release_s": 3.9,
+    "actual_table_quarter_mg_persistent_s_range": [
+      3.842,
+      3.851
+    ],
+    "zero_latency_margin_before_release_ms_range": [
+      48.99999999999993,
+      57.99999999999983
+    ],
+    "gap_to_previous_75ms_transfer_requirement_ms_range": [
+      17.000000000000348,
+      26.000000000000245
+    ],
+    "existing_observer_lag_after_quarter_support_ms_range": [
+      0.9999999999998899,
+      14.000000000000234
+    ]
+  },
+  "public_signal_candidates": {
+    "thresholds_selected_from_positive_samples": false,
+    "gravity_level_threshold": 2.147596269157167,
+    "compensated_5ms_change_threshold": 0.13088933185189233,
+    "persistence_samples": 3,
+    "admissible_pre_release_detections_in_normal_or_nuisance_runs": 0
+  },
+  "G4": {
+    "fixed_window_s": [
+      3.88,
+      3.9
+    ],
+    "normal_or_nuisance_passes": 0,
+    "normal_or_nuisance_runs": 10,
+    "servo_mean_mg_range": [
+      0.0,
+      0.0013713549166525624
+    ],
+    "servo_min_mg_range": [
+      0.0,
+      0.0
+    ],
+    "torque_mean_mg_range": [
+      0.049690456874932676,
+      0.1298647490209695
+    ],
+    "torque_min_mg_range": [
+      0.0,
+      0.025211461338061136
+    ]
+  },
+  "geometry_diagnostic": {
+    "nominal_tcp_above_release_endpoint_at_required_start_mm": 10.218,
+    "nominal_tcp_above_endpoint_at_observed_quarter_support_mm_range": [
+      3.326,
+      5.236
+    ],
+    "geometric_difference_mm_range": [
+      4.982,
+      6.892
+    ],
+    "qualification": "This is a geometric difference along the current reference, not a necessary physical table offset for every path or contact model."
+  },
+  "pins": {
+    "analysis_record": "50602fd5114c4eea4d1b4cf544ff1bf7f043e78c5636aeb4cf8bc1dbdf5487dd",
+    "probe.py": "df90b37dbdfe113664f0d1925ae3d704746b5404641353e48d73e4c86c36da63",
+    "collect.py": "8b23202182e883a80337ec70b0cca5acb2a4e44a89f95d4025097dc7d014d0d3",
+    "analyze.py": "273d0c455a8b5d6fbc21551345c1378e71761354dd65ce28583bf9e0c4b60db5",
+    "test_analysis.py": "4a6bbf01eeea52453dffc8bac646e3a9c44ae4ed76a6cfb578f17a620983e858"
+  },
+  "limits": [
+    "The quarter-mg oracle is persistent table support >=0.25 mg, not first physical contact.",
+    "The 75 ms requirement belongs to the previous 25/s quintic complete-transfer design; it is not a universal minimum for all load-transfer controllers.",
+    "Forced impact can create earlier support but is not evidence for normal placement.",
+    "These finite simulations do not establish hardware sensing limits."
+  ]
+}

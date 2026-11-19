@@ -1,0 +1,90 @@
+{
+  "schema": "r25-post-disclosure-short-second-witness.v1",
+  "qualification": false,
+  "decision": "Diagnosis only; no change to frozen R25 or any threshold.",
+  "selection": "After the primary result, inspect the disclosed stock transfer-cross named in the missed-second family.",
+  "case": "p25_close_transfer_cross",
+  "variant": "stock",
+  "registered_second": [
+    1.692,
+    55,
+    [
+      7.7,
+      0.0,
+      -2.0
+    ]
+  ],
+  "actual_second": {
+    "nominal_index": 1692,
+    "first_nonzero_index": 1693,
+    "last_nonzero_index": 1746,
+    "duration_samples": 54,
+    "nominal_sample_zero": true
+  },
+  "earlier_frozen_optional_force_threshold_N": 8.394415779390961,
+  "units": "Force in N; all maxima inside the registered 280 ms second slot. Matched-reference subtraction is offline only and unavailable to an operating detector.",
+  "episodes": 5,
+  "original_physics_signature": "96781e949c268554b07725012f57d2de7988c8828e93a8bb322eab9313476163",
+  "two_recorded_events_and_all_five_dynamics_reproduced": true,
+  "independent_result_sha256": "83987dba8ce14fb6cc0283021d6bd062ac2fedb317ceb8da67c3d4b2b8c4f4fe",
+  "comparisons": {
+    "isolated_second": {
+      "event": {
+        "raw_rise_indices": [],
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": false,
+        "duplicate_rises": 0,
+        "strict": false,
+        "active_samples_in_slot": 0
+      },
+      "twins": {
+        "second": {
+          "peak_committed_second_force_N": 7.955501241279522,
+          "peak_base_horizontal_ema_over_threshold": 0.8117402309802496,
+          "peak_optional_support_compensated_force_N": 9.972886199677655,
+          "original_directional_detector_active_samples": 0
+        },
+        "none": {
+          "peak_committed_second_force_N": 0.0,
+          "peak_base_horizontal_ema_over_threshold": 0.7028411120099911,
+          "peak_optional_support_compensated_force_N": 2.876811659273745,
+          "original_directional_detector_active_samples": 0
+        }
+      },
+      "peak_matched_horizontal_difference_along_applied_direction_N": 7.745838962170684,
+      "peak_ms_after_first_nonzero": 35
+    },
+    "both_second": {
+      "event": {
+        "raw_rise_indices": [],
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": false,
+        "duplicate_rises": 0,
+        "strict": false,
+        "active_samples_in_slot": 0
+      },
+      "twins": {
+        "both": {
+          "peak_committed_second_force_N": 7.955501241279522,
+          "peak_base_horizontal_ema_over_threshold": 0.8261577331403368,
+          "peak_optional_support_compensated_force_N": 10.33637919261756,
+          "original_directional_detector_active_samples": 0
+        },
+        "first": {
+          "peak_committed_second_force_N": 0.0,
+          "peak_base_horizontal_ema_over_threshold": 0.7162731356934644,
+          "peak_optional_support_compensated_force_N": 3.8394027113631943,
+          "original_directional_detector_active_samples": 0
+        }
+      },
+      "peak_matched_horizontal_difference_along_applied_direction_N": 8.221290563251124,
+      "peak_ms_after_first_nonzero": 43
+    }
+  }
+}

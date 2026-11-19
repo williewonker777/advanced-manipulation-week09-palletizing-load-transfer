@@ -1,0 +1,49 @@
+{
+  "schema": "r29-g4-support-release-identifiability.v1",
+  "status": "FROZEN",
+  "classification": "Disclosed R28/R29 postmortem controls only; not prospective, enrolled, default, hardware, or safety qualified.",
+  "hypothesis": "The inherited 3903/3923 counterfactual alarms may be suppressible only when an independent online public support witness attributes the same onset to physical support release. Residual or innovation values that directly generate the incumbent alarm are not independent attribution.",
+  "certificate": {
+    "table_normal_resolution_N": 0.5,
+    "eligible_if_any": [
+      "last_table_allowed is true and finite measured positive table normal exceeds 0.5 N",
+      "controller support estimate is valid and measured table-carried fraction 1-lambda_support is at least 0.5",
+      "post-release encoder/JTS observer emits a finite vector whose positive world-z component exceeds 0.5 N"
+    ],
+    "unknown_behavior": "fail open; preserve the incumbent alarm",
+    "forbidden": [
+      "absolute time, case ID, mass lookup, hidden contact, actual injected force, global post-table mask, blanking interval",
+      "using the same counterfactual residual/innovation that generated the alarm as independent support attribution"
+    ]
+  },
+  "selection_stop": "If no independent certificate is present at either known inherited onset, do not build a suppressing candidate in this cycle. Preserve both incumbent alarms and use fixed injected controls only to document the identifiability bound.",
+  "arms": {
+    "c1": "experiments.r26_delivery_pair.candidate:Detector",
+    "memory": "experiments.r28_contact_memory.candidate:Detector",
+    "controller": "experiments.r26_delivery_pair.controller:Controller"
+  },
+  "fixed_controls": {
+    "near_support_time_s": 3.88,
+    "near_quiet_time_s": 3.88,
+    "late_postrelease_time_s": 4.1,
+    "vectors_N": [
+      [15.0, 0.0, 0.0],
+      [-15.0, 0.0, 0.0],
+      [0.0, 0.0, 15.0],
+      [0.0, 0.0, -15.0]
+    ],
+    "pickup_controls": [
+      {"mass_kg": 0.0, "time_s": 1.42, "vector_N": [0.0, 15.0, 0.0]},
+      {"mass_kg": 8.0, "time_s": 1.42, "vector_N": [0.0, 15.0, 0.0]}
+    ]
+  },
+  "gates": {
+    "integrity": "exact programmed force, matched physics across arms, prefix equality through actual input start",
+    "positive": "report absolute misses, strict attributable rise, duplicate rises, first delay, active duration, and independent-certificate availability",
+    "candidate_admission": "requires independent support certificate at both known false onsets and no loss/delay over +5 ms/duration growth over +5 samples on every fixed genuine control"
+  },
+  "limits": [
+    "No R29 prospect, old unexecuted R28 matrix, sealed R27 challenge, default, remote, or hardware access.",
+    "Actual tool/table/input values are offline verification only and never detector inputs."
+  ]
+}

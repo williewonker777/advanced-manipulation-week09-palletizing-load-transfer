@@ -1,0 +1,108 @@
+{
+  "schema": "r12-demo-cycle-observations.v1",
+  "order": [
+    "R10",
+    "coupled",
+    "coupled",
+    "R10"
+  ],
+  "records": [
+    {
+      "variant": "R10",
+      "cycles": 6000,
+      "samples": [
+        {
+          "p99_wall_us": 208.6303,
+          "max_wall_us": 381.49,
+          "max_cpu_us": 375.309,
+          "wall_ge_1ms": 0,
+          "cpu_ge_1ms": 0,
+          "gc_starts_during_calls": [
+            3,
+            0,
+            0
+          ]
+        }
+      ],
+      "pins": {
+        "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+        "controller": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+        "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+        "probe": "7f00af52803ee7eabc4c5228a0b91a117c74812a7239ea52ca21659709551975"
+      }
+    },
+    {
+      "variant": "coupled",
+      "cycles": 6000,
+      "samples": [
+        {
+          "p99_wall_us": 249.74029000000002,
+          "max_wall_us": 908.529,
+          "max_cpu_us": 905.717,
+          "wall_ge_1ms": 0,
+          "cpu_ge_1ms": 0,
+          "gc_starts_during_calls": [
+            1,
+            1,
+            0
+          ]
+        }
+      ],
+      "pins": {
+        "detector": "fb709c67d36e168af638b57490b16996525be996e65759fccbb9caf57adac4e7",
+        "controller": "682ae8eef25021eaebc34551bbe694185055ede5fe661ae2ba0f5968adfa1f5c",
+        "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+        "probe": "7f00af52803ee7eabc4c5228a0b91a117c74812a7239ea52ca21659709551975"
+      }
+    },
+    {
+      "variant": "coupled",
+      "cycles": 6000,
+      "samples": [
+        {
+          "p99_wall_us": 248.03911000000002,
+          "max_wall_us": 906.078,
+          "max_cpu_us": 903.3770000000001,
+          "wall_ge_1ms": 0,
+          "cpu_ge_1ms": 0,
+          "gc_starts_during_calls": [
+            1,
+            1,
+            0
+          ]
+        }
+      ],
+      "pins": {
+        "detector": "fb709c67d36e168af638b57490b16996525be996e65759fccbb9caf57adac4e7",
+        "controller": "682ae8eef25021eaebc34551bbe694185055ede5fe661ae2ba0f5968adfa1f5c",
+        "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+        "probe": "7f00af52803ee7eabc4c5228a0b91a117c74812a7239ea52ca21659709551975"
+      }
+    },
+    {
+      "variant": "R10",
+      "cycles": 6000,
+      "samples": [
+        {
+          "p99_wall_us": 211.96270000000007,
+          "max_wall_us": 334.67,
+          "max_cpu_us": 331.959,
+          "wall_ge_1ms": 0,
+          "cpu_ge_1ms": 0,
+          "gc_starts_during_calls": [
+            3,
+            0,
+            0
+          ]
+        }
+      ],
+      "pins": {
+        "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+        "controller": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+        "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+        "probe": "7f00af52803ee7eabc4c5228a0b91a117c74812a7239ea52ca21659709551975"
+      }
+    }
+  ],
+  "scope": "Two torque 3.037 kg, no-impact episodes per configuration. Existing bounded probe, unchanged GC, same CPU affinity. Not hard-real-time or whole-application timing."
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "r25-weak-plan.v1",
+  "classification": "development only; no R25 hidden inputs",
+  "family": "loaded, fully transferred, off-axis weak single impacts represented by disclosed s24_transfer_offaxis_mid",
+  "mechanism": "Predict causal JTS increments from command, encoder velocity and prior JTS increments. Whiten prediction innovations and require signed multi-sample vector coherence, so opposite forces reverse the witness rather than sharing a magnitude-only template.",
+  "runtime_gates": ["measured grip true", "estimated load fraction at least 0.8", "estimated table support at most 2 N"],
+  "forbidden_gates": ["absolute schedule", "case ID", "mass", "COM", "collision label", "force truth"],
+  "normal_fit": "R24 independent force-free twins: stock and damping_coupled mechanics",
+  "normal_audit": "R24 independent force-free twins: actuator_delay_gain and contact_armature mechanics",
+  "threshold": "maximum audit statistic times 1.15 plus 0.5; no positive label selects it",
+  "history_samples": 6,
+  "persistence_samples": 2,
+  "extra_hold_samples": 8,
+  "rearm_quiet_samples": 25,
+  "disclosed_positive_for_observability_only": "s24_transfer_offaxis_mid stock",
+  "heldback_development": {
+    "times_s": [1.43, 1.55],
+    "force_vectors_N": [[-6.3,5.7,-1.8],[6.3,-5.7,1.8],[-7.2,6.5,-2.1],[7.2,-6.5,2.1]],
+    "payloads": [[2.73,[0.018,-0.016,0.012]],[5.17,[-0.017,0.021,-0.016]]],
+    "mechanics": ["stock","damping_coupled"],
+    "force_free_twins_required": true
+  },
+  "candidate_gate": {
+    "disclosed_target_strict": true,
+    "heldback_signs_each_have_at_least_one_strict_detection": true,
+    "zero_candidate_false_rises_in_force_free_twins": true,
+    "zero_new_false_rises_on_previously_disclosed_R23_cohort": true,
+    "preserve_all_R24_strict_events_with_at_most_5_ms_delay": true,
+    "preserve_alarm_samples_with_at_most_5_extra_samples": true,
+    "preserve_genuine_tool_detection": true,
+    "no_duplicate_or_stuck_alarm": true,
+    "worst_combined_episode_p99_us_max": 800
+  },
+  "negative_result": "Freeze and expose the witness API plus failure evidence if the audit has no threshold separation or any protected/heldback gate fails.",
+  "created_before_normal_fit_or_heldback_evaluation": true
+}

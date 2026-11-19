@@ -1,0 +1,152 @@
+{
+  "schema": "r13-tactile-datum-summary.v1",
+  "official": false,
+  "status": "STOP_DEVELOPMENT_FAILED_NO_HELD_COLLISIONS",
+  "development_passed": false,
+  "held_run": false,
+  "pins": {
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "experiments/r12_hybrid/controller.py": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+    "experiments/r13_tactile_datum/controller.py": "53744fdacbca2e2a5de0fdb05651c3cdb59c45f407294ec41a46c5c7b6fb9261",
+    "experiments/r13_tactile_datum/plan.py": "d39dc3a5b7a17c82d73a9adfa93bd007ee478edcb643aebe589ed210b6a6f9db",
+    "experiments/r13_tactile_datum/run.py": "dafef832c14e367ce2d645d3627c4e91ffc47a405e063e400cdec87a402205ed",
+    "experiments/r13_tactile_datum/test_controller.py": "d3daf0ff2f422da2846e72cb29966e08975d6a95cf0d551e68cf292ad48a2b2e"
+  },
+  "method": "Two causal support thresholds bracket first placement contact. Only a qualified <=1 mm bracket enables geometric correction and R12 hybrid. The intended no-actuation fallback leaves alpha zero, but the frozen implementation still inherits the hybrid grip-off zero-load branch and is therefore not byte-equivalent to R1.",
+  "rows": [
+    {
+      "id": "neg_340",
+      "actual_offset_mm_offline_only": -4.0,
+      "provisional_estimated_offset_mm_offline_only": -3.802933089247451,
+      "signed_error_mm_offline_only": 0.19706691075254898,
+      "low_high_times_s": [
+        3.839,
+        3.84
+      ],
+      "uncertainty_mm": 0.4482077475828903,
+      "qualified": true,
+      "fallback": false,
+      "reason": "qualified",
+      "remaining_after_high_ms": 60.00000000000006,
+      "minimum_full_remaining_quintic_for_true_offset": {
+        "peak_speed_mm_s": 124.99999999999989,
+        "peak_acceleration_m_s2": 6.415002990999989
+      },
+      "candidate_support_mg": {
+        "mean_mg": 0.007302580853105189,
+        "min_mg": 0.0,
+        "peak_mg": 13.599551827720154
+      },
+      "raw_hybrid_support_mg": {
+        "mean_mg": 0.3720470229327984,
+        "min_mg": 0.26349590323367084,
+        "peak_mg": 2.8810830174366964
+      },
+      "candidate_false_alarms": 2,
+      "candidate_saturation_pct": 0.21666666666666667,
+      "maximum_cost_ratio": 61.75962620782375,
+      "gates": {
+        "datum_qualified": true,
+        "uncertainty": true,
+        "signed_estimation_error": true,
+        "G4": false,
+        "cost": false,
+        "saturation": false,
+        "false_alarms": false,
+        "no_divergence": true
+      }
+    },
+    {
+      "id": "zero_570",
+      "actual_offset_mm_offline_only": 0.0,
+      "provisional_estimated_offset_mm_offline_only": -1.0609658575055914,
+      "signed_error_mm_offline_only": -1.0609658575055914,
+      "low_high_times_s": [
+        3.849,
+        3.854
+      ],
+      "uncertainty_mm": 1.0738692717376095,
+      "qualified": false,
+      "fallback": true,
+      "reason": "crossing_uncertain",
+      "remaining_after_high_ms": 45.999999999999815,
+      "minimum_full_remaining_quintic_for_true_offset": {
+        "peak_speed_mm_s": 0.0,
+        "peak_acceleration_m_s2": 0.0
+      },
+      "candidate_support_mg": {
+        "mean_mg": 0.12059004097576993,
+        "min_mg": 0.002016291548358308,
+        "peak_mg": 1.0058270615393134
+      },
+      "raw_hybrid_support_mg": {
+        "mean_mg": 0.7291867894887147,
+        "min_mg": 0.6322966876551478,
+        "peak_mg": 1.0491284112411772
+      },
+      "candidate_false_alarms": 0,
+      "candidate_saturation_pct": 0.0,
+      "maximum_cost_ratio": 7.143510455196576,
+      "gates": {
+        "datum_qualified": false,
+        "uncertainty": false,
+        "signed_estimation_error": false,
+        "G4": false,
+        "cost": false,
+        "saturation": true,
+        "false_alarms": true,
+        "no_divergence": true
+      }
+    },
+    {
+      "id": "pos_760",
+      "actual_offset_mm_offline_only": 4.0,
+      "provisional_estimated_offset_mm_offline_only": -0.6238168763470497,
+      "signed_error_mm_offline_only": -4.62381687634705,
+      "low_high_times_s": [
+        3.859,
+        3.868
+      ],
+      "uncertainty_mm": 1.032350724406411,
+      "qualified": false,
+      "fallback": true,
+      "reason": "crossing_uncertain",
+      "remaining_after_high_ms": 32.00000000000003,
+      "minimum_full_remaining_quintic_for_true_offset": {
+        "peak_speed_mm_s": 234.3749999999998,
+        "peak_acceleration_m_s2": 22.552744890234337
+      },
+      "candidate_support_mg": {
+        "mean_mg": 0.12492559441740156,
+        "min_mg": 0.0,
+        "peak_mg": 1.0186198871840895
+      },
+      "raw_hybrid_support_mg": {
+        "mean_mg": 0.8592513635673977,
+        "min_mg": 0.5731234520215421,
+        "peak_mg": 1.052559614818746
+      },
+      "candidate_false_alarms": 1,
+      "candidate_saturation_pct": 0.0,
+      "maximum_cost_ratio": 7.483874224060337,
+      "gates": {
+        "datum_qualified": false,
+        "uncertainty": false,
+        "signed_estimation_error": false,
+        "G4": false,
+        "cost": false,
+        "saturation": true,
+        "false_alarms": false,
+        "no_divergence": true
+      }
+    }
+  ],
+  "negative_case_frozen_blend_bound": {
+    "correction_mm": 3.802933089247451,
+    "blend_ms": 16.0,
+    "quintic_peak_speed_mm_s": 445.65622139618563,
+    "quintic_peak_acceleration_m_s2": 85.76657979642869
+  },
+  "conclusion": "The tactile observation is not uniformly identifiable: only the negative offset qualifies; zero and positive offsets exceed the uncertainty gate, and the positive provisional estimate has the wrong sign. The one qualified correction is accurate but too abrupt, causing 13.60 mg peak, 0.217% saturation, two false alarms, and 61.76x maximum cost. The two fallback rows also expose an implementation limitation: zero hybrid alpha does not restore R1's filtered release load, producing 7.14x and 7.48x placement torque-step ratios. No held collision evidence was opened and no coefficient was retuned."
+}

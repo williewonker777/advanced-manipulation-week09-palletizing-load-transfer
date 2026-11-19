@@ -1,0 +1,192 @@
+{
+  "schema": "r14-paired-comparator-tool-validation.v1",
+  "scope": "tool validation only on already-exposed R12 heavy stock condition; not R14 candidate validation",
+  "held_r14_impacts_opened": 0,
+  "case_source": "results/r12/check_plan.json heavy",
+  "case": {
+    "id": "r12-exposed-heavy",
+    "mass": 7.58,
+    "com": [
+      -0.018,
+      0.025,
+      -0.017
+    ],
+    "offset": null,
+    "collision": [
+      3.905,
+      [
+        8.0,
+        -5.0,
+        -15.0
+      ]
+    ]
+  },
+  "calibration_sha256": "cfd91f8b53e71088cad01f1fba0dedfa7e778f85fd84dd1431f5c80e3d3c59e4",
+  "pins": {
+    "tools/r14_paired_events.py": "bf9efcb14e2b7e7038f70ebe8bc482f09c70c89c23fee8029db168cf671dff66",
+    "tools/r5_metrics.py": "452dd27c97492c2e3ce9c002457e09180a444fd0b21531a0847dcfa28f0b2ff4",
+    "experiments/r14_stock_handoff/qualification.py": "14c4bea1ae2cb5531d0e7329168997e67fede9a0fe7790d8609bc917836e9161",
+    "experiments/r14_stock_handoff/controller.py": "10f6657d255b52b4e9f802200bb6275b9db5b7499d2de21a36ee9f5260e67d61",
+    "experiments/r14_stock_handoff/detector.py": "9fecfee47778a370e743497a8370ad7465c68ab126ae06b9f17c1bbf3fd8a0e9",
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "experiments/r12_hybrid/controller.py": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+    "sim/runner.py": "3cf99c21b93f431cc57a0929e4d05b083fb8f35f06dc52bc2d2ddcde3e55ed1f"
+  },
+  "result": {
+    "id": "r12-exposed-heavy",
+    "collision": [
+      3.905,
+      [
+        8.0,
+        -5.0,
+        -15.0
+      ]
+    ],
+    "arms": {
+      "r10": {
+        "outcome": "detected",
+        "delay_ms": 143.00000000000023,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "hybrid": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "registered": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      }
+    },
+    "prefix": {
+      "r10": {
+        "passed": true,
+        "samples_through_onset": 3905,
+        "fields": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        }
+      },
+      "hybrid": {
+        "passed": true,
+        "samples_through_onset": 3905,
+        "fields": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        }
+      },
+      "registered": {
+        "passed": true,
+        "samples_through_onset": 3905,
+        "fields": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        }
+      }
+    },
+    "force": {
+      "r10": {
+        "passed": true,
+        "exact_trapezoid": true,
+        "requested_peak_N": 17.72004514666935,
+        "observed_peak_N": 17.72004514666935,
+        "zero_through_onset": true,
+        "active_first_s": 3.9050000000000002,
+        "active_last_s": 4.024
+      },
+      "hybrid": {
+        "passed": true,
+        "exact_trapezoid": true,
+        "requested_peak_N": 17.72004514666935,
+        "observed_peak_N": 17.72004514666935,
+        "zero_through_onset": true,
+        "active_first_s": 3.9050000000000002,
+        "active_last_s": 4.024
+      },
+      "registered": {
+        "passed": true,
+        "exact_trapezoid": true,
+        "requested_peak_N": 17.72004514666935,
+        "observed_peak_N": 17.72004514666935,
+        "zero_through_onset": true,
+        "active_first_s": 3.9050000000000002,
+        "active_last_s": 4.024
+      }
+    },
+    "status": {
+      "r10": "ok",
+      "hybrid": "ok",
+      "registered": "ok"
+    },
+    "gates": {
+      "status": true,
+      "force_realized": true,
+      "matched_prefix": true,
+      "r10_detected": true,
+      "registered_detected": false,
+      "delay_r10_5ms": false,
+      "no_active_prealarm": true,
+      "FA_r10_20ms": true,
+      "FA_hybrid_20ms": true,
+      "tool_r10": true,
+      "tool_hybrid": true
+    },
+    "FA_r10": {
+      "passed": true,
+      "pairs": [],
+      "unmatched_candidate": null,
+      "tolerance_ms": 20.0
+    },
+    "FA_hybrid": {
+      "passed": true,
+      "pairs": [],
+      "unmatched_candidate": null,
+      "tolerance_ms": 20.0
+    },
+    "passed": false
+  }
+}

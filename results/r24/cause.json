@@ -1,0 +1,522 @@
+{
+  "schema": "r24-loaded-yaw-cause.v1",
+  "previously_disclosed": true,
+  "newly_simulated_affected_episodes": 17,
+  "attribution": {
+    "schema": "r24-inherited-false-port-attribution.v1",
+    "previous_result_sha256": "8b55ed07f64128d5b957630019576b8477b47f57447989668fd284bee7abd022",
+    "episodes": 17,
+    "rises": [
+      {
+        "id": "n23_detached_heavy_interp",
+        "mechanics": "actuator_skew",
+        "twin": "none",
+        "t": 3.861,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.1781383011682622,
+        "largest_R10_directional_ratio": 0.2607841139302051,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "93ac839144eca5f5a83f168a4f3f591ef02273885a5fa0102aca26ca6b95c640",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "f6f33a2385a4e39ce013cd7fb13f32fa8cd860cab18b0b2272fc5b78663b5c0c",
+          "e_mm": "05ee52373eef062421beb48f5e2e4d0b8b8ad864c5c452ae95b4222f6eebd168",
+          "f_table": "02e67f92e79f80fe45e722bc24bcbb756ae50b32123783385a6c21746006fb6e",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "37952b462695b72c1e668228c7677acc679291c6b1d950031468018e54c4b876",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        }
+      },
+      {
+        "id": "s23_transfer_late_tangent",
+        "mechanics": "actuator_skew",
+        "twin": "none",
+        "t": 3.864,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.080684600305666,
+        "largest_R10_directional_ratio": 0.08478929770319252,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "145b8f26aff1658dc78e2ed87510e0fd6824c8d1b6eacf663bb011a161e77254",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "2f8332c5311933e94ef371161f4b6f3a5d6b804292f81be20db6885d1be03bf0",
+          "e_mm": "eec188b9e5ad2448e0884ebd6446218cb54ca29a2fa832148ae3adda456e03c1",
+          "f_table": "0eab2f4abcac54285f2085bbcc0931e5b6052270010ec483de8a592c53e35998",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "0005a5e3ef7f15cad1cdb458885723e250a4ac024ffc06a6b19698c171438caf",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        }
+      },
+      {
+        "id": "s23_transfer_late_tangent",
+        "mechanics": "actuator_skew",
+        "twin": "force",
+        "t": 3.862,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.092782279885497,
+        "largest_R10_directional_ratio": 0.20219985441631946,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "5cc6c34fe9b851e92f26884ce3ff3203776e154bd111f38067353da9a520efef",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "5acd48c22654ce7a96e9428e49f20ff9d38b701b265a49c8dce268c56d26bb79",
+          "e_mm": "167942c38c15e1081eed67c02f640161892023adef0549368126193d2fe636dd",
+          "f_table": "ab08b0c0a8b75f0d873a84d33dba76379ed5ff3de670bf10941196baca568640",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "5afb1c1f9ea378398f643cb88514a7ac1a6042437292483194d79bd8aac0ac7f",
+          "f_ext": "3b6722070a5983c072760131d9be3cb1e9751c15c478a3a3fc4db2a1e3cb7f00",
+          "f_ext_xyz_native": "9f382c9434df23e25dd6b123187407c74e26010b330c509401713c8937ae5563",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "9f382c9434df23e25dd6b123187407c74e26010b330c509401713c8937ae5563"
+        }
+      },
+      {
+        "id": "s23_post_detach_radial",
+        "mechanics": "actuator_skew",
+        "twin": "none",
+        "t": 3.857,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.0550662651963707,
+        "largest_R10_directional_ratio": 0.360882307310682,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "14d68bf945ea3b88fe1da3d601223d4ea252a7b1a340b3777c438b94e610f2d7",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "4793726cab7278b9dcb55fa89004ceb6fdeb68a64ebd28004ecef80f1b2e42b6",
+          "e_mm": "d78a1c9baef2583d63a543a44df4b7db7cdf187563f2040bcf5daf075baded60",
+          "f_table": "dd1d1a6eb8d1f770920328f41c4e6b3a53f83fb10097124f901d32f4f4c69c2a",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "638748f371b386a69e71b64af923e6dea74b84bffbfd36d9708efb9cc3dd7cdb",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        }
+      },
+      {
+        "id": "s23_post_detach_radial",
+        "mechanics": "actuator_skew",
+        "twin": "force",
+        "t": 3.857,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.0550662651963707,
+        "largest_R10_directional_ratio": 0.360882307310682,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "27ad1e91cdb336e68db417b1461fcd3f03cf8563daa4f20eebc581512128fc40",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "931151c020f25a394d34a963f5e484d21ed0de23c912f6106c514c44170687d0",
+          "e_mm": "9927aa36b50ff72c1df3972dae5dfbc7cc02f58c0b2287e6396b1f8679d02f24",
+          "f_table": "dd1d1a6eb8d1f770920328f41c4e6b3a53f83fb10097124f901d32f4f4c69c2a",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "1edcbb902476d5f24b640a6196565cde944623d67b412a151178081482cbf7d7",
+          "f_ext": "6a36943f88b66eff0c78f4a6f42e4b971d6e01d843edbe6926f2e50b945562d6",
+          "f_ext_xyz_native": "9da8423ec7f5f1b18fb4b249871b620da53e2c009947a7a2019f8c00242f66c3",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "94326e2d082c0646428b7b60f1d35c5f6add16bc7b04f8c9146df183b4522beb"
+        }
+      },
+      {
+        "id": "p23_transfer_to_carry",
+        "mechanics": "actuator_skew",
+        "twin": "none",
+        "t": 3.861,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.0823846525525085,
+        "largest_R10_directional_ratio": 0.14989399235694933,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "b4a45f3af692ae103106073d7f8c1127d93308e2f912fcb99f79dd1b597f9d68",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "add4a20a315bffed99e5b7c5ceedb5f0af8be576446d6923d2eb2e9014b217ef",
+          "e_mm": "b0f9c3f9551d309c59cd8ceb1879be6c27fd17d6b69bd3d78c0874ae3704fb3a",
+          "f_table": "2fab461edae6fd4d220ce43d1efab0db558511af1b246ab8b46973c1bfb4090e",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "f4d6b2933ec4e570558b80063b50efeb44b66ac3202f2849184337114865efaa",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        }
+      },
+      {
+        "id": "p23_transfer_to_carry",
+        "mechanics": "actuator_skew",
+        "twin": "first",
+        "t": 3.867,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.2346882996190927,
+        "largest_R10_directional_ratio": 0.2817359458698216,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "cdb39aee979fbee90e146fee8b1d2c9b26a34c7d7d2987c8b7d733fd9ce43a6c",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "ec6feae9882cb46f85da8ba11ccb380d87a20c44e22ce314d67f37fb2019733e",
+          "e_mm": "48605bcbc92554434d8e32e41afd8aa2b6f523cb04fdb57abfc315e32049850d",
+          "f_table": "aeb6bc185767b54b0fb30c47410d0155d9eb80357f5f3fdf578026bd9dbbea69",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "60aa537e18a0707340cf19f0910adb743ede42d05ace3ef8cd986844789a4f38",
+          "f_ext": "65575cff8828d0f2448ddb17412e9d34da0ee20e9ecc1e11d51aae2d86b9581d",
+          "f_ext_xyz_native": "52587f2df80ca67d795871ceb044152e182a98431f99f8dc45dcf1dc08738f0d",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "a2506837a29498921998c479da9643f5e4b6142b430715d5c91fb179fd0951a7"
+        }
+      },
+      {
+        "id": "p23_transfer_to_carry",
+        "mechanics": "actuator_skew",
+        "twin": "second",
+        "t": 3.866,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.1565003434591312,
+        "largest_R10_directional_ratio": 0.10899463586230022,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "728fb3e9229a3ade4f4af925c79424105bd2f540b2a31136180b7d93443a873e",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "37a7bf61c9841046f7c7e142101a810456dace1ff0466ea23d03cf607d63d1ed",
+          "e_mm": "6ba5a4fbf4b0f796ac5fdda89ae57922ada7475a9c1a9af3edecace03caaa662",
+          "f_table": "20dd62e53122197d95e1763cbd38f96df8c9869a487a185166f20c8dd41993fb",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "8fee0e22816c6e821aeaedff5dd670f5a97c852b7d3a64aaf906a1c6c3c113a5",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "fe02e32639ec863fbea95b0e6919d72c2a496545adf13f3b10b0d24e3beaa38b",
+          "f_ext_xyz_committed": "fe02e32639ec863fbea95b0e6919d72c2a496545adf13f3b10b0d24e3beaa38b"
+        }
+      },
+      {
+        "id": "p23_transfer_to_carry",
+        "mechanics": "actuator_skew",
+        "twin": "both",
+        "t": 3.87,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.1577794240138222,
+        "largest_R10_directional_ratio": 0.26875998867679673,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "aa9daf39bb72504a5a053e6c2d88acff8dc23790dd55531846478a7db9878b08",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "080c1dfa27544dd223d0cf78f0701907eccf2cf40d9a59daac9432bf120cd5d5",
+          "e_mm": "4d72026e602fea828341261489eb5c7913af76e5cd2a2940e1425597aac2b7c7",
+          "f_table": "8a1776130688957ae6c9db7527fb49ee5f4fb343760e843b776bab1529ea4086",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "025414342e370ec7dcb6a507c6595d2754720913d5d5507c4287818c871d5fd5",
+          "f_ext": "65575cff8828d0f2448ddb17412e9d34da0ee20e9ecc1e11d51aae2d86b9581d",
+          "f_ext_xyz_native": "52587f2df80ca67d795871ceb044152e182a98431f99f8dc45dcf1dc08738f0d",
+          "f_ext_xyz_second": "fe02e32639ec863fbea95b0e6919d72c2a496545adf13f3b10b0d24e3beaa38b",
+          "f_ext_xyz_committed": "70a842955938918dd62b90d0ad27469dbbbd53e62d9f8c14e25a0f0d0d419a4f"
+        }
+      },
+      {
+        "id": "p23_post_detach_diagonal_pair",
+        "mechanics": "actuator_skew",
+        "twin": "none",
+        "t": 3.86,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.1124655688981155,
+        "largest_R10_directional_ratio": 0.42266377441071357,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "1d1286021a8817f3ccfe6813e67eead41533bcd64a405bf7b50bf14f0bd95a72",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "5cb249e16296af08a50964049db1b402eea0754bda9b7f75efd5b39bea95841e",
+          "e_mm": "211a409d25834f68ce00ec579f800af91db05724f4d057e7cd0eefb051f3944d",
+          "f_table": "9ac1adf1506a8db5fb13b6bdefe536158abfcacd71624509036c9e74424a2eda",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "3f1c8610ce65a7a12ed4c9076786363dbd35a4b7f253813de492240a5603c88f",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        }
+      },
+      {
+        "id": "p23_post_detach_diagonal_pair",
+        "mechanics": "actuator_skew",
+        "twin": "first",
+        "t": 3.86,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.1124655688981155,
+        "largest_R10_directional_ratio": 0.42266377441071357,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "58a93697ad8b1df8a88b1cbe08860a11fa831500eb25f0d3ea2bb8ee6f08fa70",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "8a286a97b3c9aa71e2fc079899a12e38233dad0f074aed23268b8726a409cac7",
+          "e_mm": "0aa95a5ae345ad0bff2a049e7abc36faebc0e690445310f15b5554c1293458e4",
+          "f_table": "9ac1adf1506a8db5fb13b6bdefe536158abfcacd71624509036c9e74424a2eda",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "96c37af9be6e2fb7ac196a9c40eb6f543678ca8337c09737c93703d6d5436dba",
+          "f_ext": "7c80d1320d9d2229673238aa6bad4c6fa7f592f8eb7c9e2e82c92c02278d0753",
+          "f_ext_xyz_native": "e6285a9903e98aac7a9b8abafb810c589a16583573acbb676fdc1de7e79cbb70",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "4e8f9a4a7530addfd39e731706cbc5f34de13fce1dec1017cb5bb043c4aaa200"
+        }
+      },
+      {
+        "id": "p23_post_detach_diagonal_pair",
+        "mechanics": "actuator_skew",
+        "twin": "second",
+        "t": 3.86,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.1124655688981155,
+        "largest_R10_directional_ratio": 0.42266377441071357,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "fd8c978264d636146a7559e72e59f757326fd1861fb61ce6942be918cb3bbeca",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "4c281cc56be69e3357828bf1e433a30f0f121a5602c721181a5b9e53b4c7c9cd",
+          "e_mm": "8dcb429a7842126bf105dc57b41f69f2beb3265668eabdea8724354a45989750",
+          "f_table": "9ac1adf1506a8db5fb13b6bdefe536158abfcacd71624509036c9e74424a2eda",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "32ff77cb16adaf9692d214aadd67946331c25fdc67414b844ddedffbf7be81bc",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "60961b8fa29be2713e9afc69f8804fd7f3f051dcf2d34d878898494936782650",
+          "f_ext_xyz_committed": "60961b8fa29be2713e9afc69f8804fd7f3f051dcf2d34d878898494936782650"
+        }
+      },
+      {
+        "id": "p23_post_detach_diagonal_pair",
+        "mechanics": "actuator_skew",
+        "twin": "both",
+        "t": 3.86,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.1124655688981155,
+        "largest_R10_directional_ratio": 0.42266377441071357,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "ca5449ab5822c17237ea0eb05f013c52d4baf6098b4504e78c8382a40fe8b4f8",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "00e846bddb3a66ae8e645de4533c59984809fde01ac17ab6711fb0896cd2376b",
+          "e_mm": "dd7a6f6b0e16856dd7ed935f1d0c55aa6add27ea90185b71423ba9f3a8fd06a9",
+          "f_table": "9ac1adf1506a8db5fb13b6bdefe536158abfcacd71624509036c9e74424a2eda",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "d7e6061c2150bad456f7dab770171b30cee36c4176be2bce533d8c467e0fd95c",
+          "f_ext": "7c80d1320d9d2229673238aa6bad4c6fa7f592f8eb7c9e2e82c92c02278d0753",
+          "f_ext_xyz_native": "e6285a9903e98aac7a9b8abafb810c589a16583573acbb676fdc1de7e79cbb70",
+          "f_ext_xyz_second": "60961b8fa29be2713e9afc69f8804fd7f3f051dcf2d34d878898494936782650",
+          "f_ext_xyz_committed": "eff09df902d76a9d055ebfb43d117bbe1ad02cb7f2aab2b3e9ea855f21ca6dc5"
+        }
+      },
+      {
+        "id": "p23_transfer_to_post_detach",
+        "mechanics": "actuator_skew",
+        "twin": "none",
+        "t": 3.869,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.0910688351918765,
+        "largest_R10_directional_ratio": 0.1778750340189387,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "22c9a7773caef4c5b026e7986bf056de4b3ec0d27262d3d448328ddeb61d8275",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "ec9cdc734da7253a5ba452c334560d55c8778e6bca23a321c574b3a297a74898",
+          "e_mm": "79c010be58db15112f699dd6aef1e35d57bc5136c75b8f0459730d5f47d794d2",
+          "f_table": "aa3cfa6878d0733298e215abc70c0c2354dbf6b99b367502a8ebdac2aa83b04a",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "0c2c48d72b632eb03cd27cfec45106a01069bfb02efeb086ee90b776366e4562",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3"
+        }
+      },
+      {
+        "id": "p23_transfer_to_post_detach",
+        "mechanics": "actuator_skew",
+        "twin": "first",
+        "t": 3.868,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.1842628293072728,
+        "largest_R10_directional_ratio": 0.06374509867039801,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "6f33341a25cb9cdb84f56c7bf77aba128718fab438096ab0dc4c792f2623470a",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "29de2e532a6b0bce643f0e5ea186e690b5823555f6dc0226668e9a44f51c8202",
+          "e_mm": "358e8ef5cc0764054c6bbbf1bdf48cc70e92fec5f7744c71abc6b0c8bf9c9d72",
+          "f_table": "bacfb9cf8f77e63eb4f0e4552832039c3bf082b090b9ebdeca702f8533df006a",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "a077adecb1d321008ae2437735e7eb0f8d0e14dbbdee82a859d27db5b4242217",
+          "f_ext": "beb379533ad3411d75e5c2b4d790ffc8f6fe4c5def58e3a4e51c271db1a40ead",
+          "f_ext_xyz_native": "d958f8ac002511465b8d7eac7ece9b11424ebb0912bd6180623d849f156b54b1",
+          "f_ext_xyz_second": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_committed": "d958f8ac002511465b8d7eac7ece9b11424ebb0912bd6180623d849f156b54b1"
+        }
+      },
+      {
+        "id": "p23_transfer_to_post_detach",
+        "mechanics": "actuator_skew",
+        "twin": "second",
+        "t": 3.869,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.0910688351918765,
+        "largest_R10_directional_ratio": 0.1778750340189387,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "2eac6f98876be694135e496876fa63d71614aaac94b2e488598555135bd35606",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "d3d6a2ecd256b2a69ab1435627f08709ade8027d4d36bd7d5a0a773b5cdead58",
+          "e_mm": "c80b94002e14fa35c8e76eb50ef42de82c334305fae18747de5ce1ce605d0333",
+          "f_table": "aa3cfa6878d0733298e215abc70c0c2354dbf6b99b367502a8ebdac2aa83b04a",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "f45dfd7771071444a2587114e85aa468ba14074de608a3980528ce96a4d00d99",
+          "f_ext": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "f_ext_xyz_native": "61e24f28a13396159532146a170b1df39f5949bf7839b435f2607b652e55b5a3",
+          "f_ext_xyz_second": "1038ab14ca02760bfc25687d66845a172296dd9101408292439053a028ad5b30",
+          "f_ext_xyz_committed": "6fe299ca1abb406a971c0ad26ec2dd0d0a427ba6e1f68d25fc1b2a39c40e6ab4"
+        }
+      },
+      {
+        "id": "p23_transfer_to_post_detach",
+        "mechanics": "actuator_skew",
+        "twin": "both",
+        "t": 3.868,
+        "active_ports": [
+          "yaw"
+        ],
+        "yaw_ratio": 1.1842628293072728,
+        "largest_R10_directional_ratio": 0.06374509867039801,
+        "tool_N": 0.0,
+        "applied_N": 0.0,
+        "physical_sha256": {
+          "t": "2291cd2c721e0a2ca01b217e9949a0c3faa6a073e9ea565324e37e310f87c6bb",
+          "q": "bba36b01ff2a61cf267100c2c3ef56fa7fa8c004eea09620f2fe137245ea892e",
+          "q_d": "aa567e6abe6f04c93bee23d55f9916d6bd72feae7ed261a735d2c630a3a6b0be",
+          "tau": "dcd23d3f3ca7700321a6382502d1acd65e99fedfb7128f6435170264fb2a5112",
+          "e_mm": "b0eec2afe66f385d0f76f7f17d5d46fa97ca6f516136d08871021e7d441730f7",
+          "f_table": "bacfb9cf8f77e63eb4f0e4552832039c3bf082b090b9ebdeca702f8533df006a",
+          "f_tool": "21eb585b53341782bc9d97f21381ede5519cc828951216ae599299f561ab1562",
+          "qpos": "79feea7d8914f2846b324bedab677bc1a53924a7aef9569a1812e82ef8614ffa",
+          "f_ext": "beb379533ad3411d75e5c2b4d790ffc8f6fe4c5def58e3a4e51c271db1a40ead",
+          "f_ext_xyz_native": "d958f8ac002511465b8d7eac7ece9b11424ebb0912bd6180623d849f156b54b1",
+          "f_ext_xyz_second": "1038ab14ca02760bfc25687d66845a172296dd9101408292439053a028ad5b30",
+          "f_ext_xyz_committed": "5bae31265309e05e66bdc7e7b497db5b98f17374717cf05455a2dfe0a4c43699"
+        }
+      }
+    ],
+    "all_yaw_only": true
+  },
+  "diagnostic": {
+    "stock": {
+      "no_force_alarm_ms": [],
+      "true_peak_table_vertical_N": [
+        3.85,
+        45.4574382113219
+      ],
+      "most_negative_world_table_moment_about_base_Nm": [
+        3.848,
+        -4.9386504353182
+      ],
+      "peak_absolute_estimated_yaw_signed_Nm": [
+        3.876,
+        -3.484817989070674
+      ],
+      "at_3p861": {
+        "yaw_Nm": -1.962620640913959,
+        "bound_Nm": 5.9464286945673726,
+        "support_yaw_Nm": -0.7548593665875679,
+        "yaw_score": 0.330050311156846,
+        "table_N": 13.333903684238795
+      }
+    },
+    "actuator_skew": {
+      "no_force_alarm_ms": [
+        3861
+      ],
+      "true_peak_table_vertical_N": [
+        3.839,
+        90.46418448351966
+      ],
+      "most_negative_world_table_moment_about_base_Nm": [
+        3.838,
+        -18.545665291840958
+      ],
+      "peak_absolute_estimated_yaw_signed_Nm": [
+        3.867,
+        -7.590735823498868
+      ],
+      "at_3p861": {
+        "yaw_Nm": -7.005715400235812,
+        "bound_Nm": 5.9464286945673726,
+        "support_yaw_Nm": -1.4959421297496402,
+        "yaw_score": 1.1781383011682622,
+        "table_N": 12.313472347921916
+      }
+    }
+  },
+  "scope": "true table wrench was recorded offline after the physics step, not passed to a detector. Original normal-force magnitude checked against computed vertical component.",
+  "original_stock_vs_changed_6_episode_raw_sha256": "2bbe0f474af85ac472453b6c207b371ed17ca2c248c7c4abf69047eb08d665b8"
+}

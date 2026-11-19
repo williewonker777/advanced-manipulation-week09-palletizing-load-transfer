@@ -1,0 +1,52 @@
+{
+  "schema": "R10_RUNTIME_FINDINGS.v1",
+  "decision": "NOT_ELIGIBLE_KEEP_FAST2",
+  "candidate_sha256": "7d710db22f74bae898a7614c7689bf6c8e95796e165fe5724b6a56b7110fa6bc",
+  "plan_sha256": "16df4e07e37fec731b8a45d2c6fe2588d439b27d12e72f5bf4e349896431c7e1",
+  "baseline_sha256": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+  "functional": {
+    "three_payload_6000_row_and_both_grip_parity": true,
+    "off_grid_changed_payload_and_unknown_controller_parity": true,
+    "fresh_full_loop_digest_pairs_equal": "8/8"
+  },
+  "performance": {
+    "torque_worst_p99_improvement": 0.0506729128857214,
+    "servo_reset_speedup_conservative": 1.7873687255947308,
+    "servo_matched_reset_speedup_range": [
+      2.1809346480037672,
+      2.707093699335277
+    ],
+    "servo_worst_p99_regression": -0.05058458288812451,
+    "wall_ge_1ms": 0,
+    "cpu_ge_1ms": 0
+  },
+  "failed_gates": [
+    "torque_worst_p99_improvement_min_15pct",
+    "servo_reset_conservative_min_2x"
+  ],
+  "holdout_opened": false,
+  "live_source_changed": false,
+  "additional_costs": {
+    "torque_reset_ms_baseline_range": [
+      0.111,
+      0.122
+    ],
+    "torque_reset_ms_candidate_range": [
+      7.649,
+      8.466
+    ],
+    "module_import_ms_baseline": 10.546,
+    "module_import_ms_candidate": 68.882
+  },
+  "pins": {
+    "portable_summary": "d6f23443f00381d4e3df308d9c4642ba0d3ebc0baa3b2419f41e2509a757c077",
+    "candidate.py": "7d710db22f74bae898a7614c7689bf6c8e95796e165fe5724b6a56b7110fa6bc",
+    "validation_tool.py": "84b4ea367ff17fb898a8945c39a9820928db49673af35b432ba3b4952e451f0a"
+  },
+  "limits": [
+    "All performance numbers are finite CPU1 measurements under the frozen test setup, not general latency or hard real-time guarantees.",
+    "The favorable matched reset ratios do not override the preregistered conservative cross-case gate.",
+    "Exact parity on the tested grids and fallbacks does not justify adopting a candidate that missed both benefit gates."
+  ],
+  "source_schema": "R10_RUNTIME_PORTABLE_SUMMARY.v1"
+}

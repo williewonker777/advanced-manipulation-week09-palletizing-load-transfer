@@ -1,0 +1,12 @@
+{
+ "schema":"r22-compute-profile.v1",
+ "scope":"Separate Linux CPU simulation sample, not hardware, WCET, or a deadline guarantee.",
+ "arms":["r10","r21","core","augmented"],
+ "order":"Two repetitions, with arm order reversed for each condition on the second repetition. BLAS uses one thread. Child pinned to one accessible logical CPU; no other process affinity or scheduler changed.",
+ "measured":"Unit-preserving motor compute and detector update instance-method wrappers, summed on exactly corresponding 6000 time samples; reset excluded. Report wall and thread CPU p99/max and counts >=1000 us. Require both repetitions' physical signals and alarms bitwise equal and all arms identical physical traces.",
+ "cases":[
+ {"id":"loaded_normal","mass":8,"com":[0,0,-0.02],"collision":null},
+ {"id":"empty_pick","mass":0,"com":[0,0,0],"collision":[1.42,[0,10,0]]},
+ {"id":"loaded_place","mass":8,"com":[0.02,-0.01,0.03],"collision":[3.86,[0,10,0]]}
+ ]
+}

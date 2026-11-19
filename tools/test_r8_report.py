@@ -1,7 +1,5 @@
 """Presentation tests do not execute a controller or alter scientific inputs."""
 import unittest
-import hashlib
-import json
 from copy import deepcopy
 from tools import r8_report as R
 
@@ -14,7 +12,7 @@ class R8ReportTests(unittest.TestCase):
         r=c['R8_ADOPTION']['restoration']
         self.assertTrue(r['effective_adopted'])
         self.assertEqual('C1',r['effective_final_selection'])
-        self.assertEqual(R.sha(R.ROOT/'my_detector.py'),r['effective_detector_sha256'])
+        self.assertEqual(R.sha(R.ROOT/'experiments/r8_final/C1.py'),r['effective_detector_sha256'])
         self.assertIn('생산 import 실패 1건',texts[1])
         self.assertIn('778시험',texts[0])
         self.assertIn('결과를 본 뒤',texts[0])

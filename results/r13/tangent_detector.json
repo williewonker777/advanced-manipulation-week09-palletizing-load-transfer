@@ -1,0 +1,14 @@
+{
+  "schema":"r13-tangent-contrast-summary.v1",
+  "decision":"STOP_DEVELOPMENT_NO_GAIN_AND_NEW_NORMAL_FA",
+  "candidate":"Sign-symmetric six-sample Mahalanobis contrast of [Fx,Fy,Mz/0.02] from the continuously active R10 fast wrench innovation, OR unchanged R10.",
+  "physical_invariant":{"vertical_support":"[0,0,Fz,ry*Fz,-rx*Fz,0] for arbitrary centre of pressure","annihilator":"[Fx,Fy,Mz]","verified_exact_in_test":true,"limitation":"pure downward collisions are in the annihilated support subspace and receive no new evidence"},
+  "normal_only_freeze":{"fit_episodes":12,"threshold_episodes":8,"audit_episodes":8,"all_sets_include_nominal_and_actual-offset variants":true,"threshold":27.99896308963326,"model_sha256":"db9e6ee262d1a242811955d6faa78b599422504435c48ced9600cdbc4564304d","audit_new_alarm_rises":0},
+  "development":{"collision_cases":20,"directions":"+/- lateral, downward, oblique, orthogonal lateral across transport and release","R10_detected":16,"candidate_detected":16,"additional_detected":0,"event_losses":0,"new_development_normal_rises":1,"new_off_event_increased_cases":5,"physics_exact":true,"worst_update_p99_us":27.90190000000004,"release_normal_new_rise_ms":3845},
+  "misses":{"case2_downward":"both missed, as expected from the support invariant","case3_release":"both missed +x, -x, and oblique; candidate also generated a pre-event rise at 3.845 s","case3_detected":"downward retained by R10 at 138 ms and +y retained by R10 at 63 ms, unchanged"},
+  "interpretation":"The invariant removes vertical support algebraically, but the remaining tangential/torsional nuisance envelope required by actual offsets is too broad to recover the new weak events. The phase-conditioned model also creates a fresh release-boundary alarm in an unseen normal condition. The fixed channel therefore has no deployable gain.",
+  "independent_validation_opened":false,
+  "positive_retuning":false,
+  "pins":{"plan":"e22e447a8f56c018b762f8483a299eaca5734ceb00f9cf474ea8b46a6a0ca755","channel":"1015ccb65774cb479d2b387abd8a0880d4c547b3c4214fab101874acc92ef1dc","calibrate":"b732ce66cc82405e2e7a90a09aa572770efb49c907ad9cca749f7960a257b34a","qualification":"8c5b975fc58ebb5ed86f52e7df3b1644df10a5d0d73dfd707ff67117a5228934","test":"c79ec2eabc6001b1dcf52a96ab88c5bfd847fc90bfe6eddaf0061d5112525590","development":"67179beba2e21454629cdaa5f50663f8d51511b3d5a6831a5e8a4f9f46e5f296"},
+  "next_physics":"A useful invariant would require an independently observable contact geometry or tangential support/friction estimate; those are not available from the allowed detector inputs without reintroducing nuisance ambiguity. Do not lower this threshold or alter phase boundaries from these positives."
+}

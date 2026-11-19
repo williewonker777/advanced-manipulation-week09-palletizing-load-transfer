@@ -1,0 +1,48 @@
+{
+  "schema": "r19-event-state-known-summary.v1",
+  "fresh_claim": false,
+  "v1_dual_normal": {
+    "disposition": "rejected",
+    "result_sha256": "0e11407ad35162e0d7afc89ab11da79fd87d6207ff600d04e816aeff1bcf8050",
+    "reason": "predictor mismatch is a release transient rather than direct unloading",
+    "maximum_single_event_active_samples": 621
+  },
+  "v2_physical_unloading": {
+    "disposition": "send_to_independent_holdout",
+    "result_sha256": "f3f528e48d17c163e687d6b7368aa4181f50cf081159747442b2a6b1414394ed",
+    "frozen_sha256_manifest": "472ee5e532e742232bcdb7f0cae3f12d0d8bfea3143bc112f0db55a360c612ce",
+    "rows": 3,
+    "twins_per_row": 4,
+    "arms_per_twin": 3,
+    "maximum_single_event_active_samples": 74,
+    "fragment_case": {
+      "r18_rises_s": [
+        4.213,
+        4.224,
+        4.237
+      ],
+      "r19_rises_s": [
+        4.213
+      ],
+      "observable_release_s": 4.2860000000000005,
+      "programmed_force_attribution_only": {
+        "onset_s": 4.18,
+        "nonzero_until_before_s": 4.3
+      }
+    },
+    "known_anchor_second_delay_ms": {
+      "fz": 20.999999999999908,
+      "fx": 28.00000000000047
+    },
+    "all_normal_twins_no_added_false_vs_R10": true,
+    "all_R18_physics_exact": true,
+    "all_R18_onsets_unmasked": true,
+    "all_base_samples_preserved": true
+  },
+  "limitations": [
+    "all simulator cases in this summary were exposed before V2 and are diagnostic only",
+    "V2 requires eight consecutive below-floor samples, so physically inseparable arrivals remain one event",
+    "the parent owns the first independent close-pair evaluation and V2 must not be tuned afterward"
+  ],
+  "source_record_sha256": "9d22f7ed6a3e4eb090ed365882e69a415efc136e74f96de89370bfd937a2fc01"
+}

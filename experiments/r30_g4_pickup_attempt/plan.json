@@ -1,0 +1,48 @@
+{
+  "schema": "r30-g4-pickup-owner-preregistration.v1",
+  "status": "FROZEN_BEFORE_CANDIDATE_SCORING",
+  "classification": "post-disclosure development; structurally distinct ownership attempt",
+  "postmortem": {
+    "source": "E/r30/g4_attempt/postmortem.json",
+    "tool_a": "native 1125 and rejected optional 1352 are both initial-open pickup; no grip transition and commanded speed stays above 0.01 m/s",
+    "tool_b": "native 1091 and rejected optional 1322 are both initial-open pickup; no grip transition and commanded speed stays above 0.01 m/s",
+    "weak": "rejected optional 1318 is initial-open pickup with no earlier native event and positive measured progress",
+    "late": "rejected 4003 occurs after the observed closed-grip interval 1400..3899, during open return"
+  },
+  "unchanged_witness": {
+    "source": "existing causal NormalForce encoder/JTS estimate opposed to public commanded TCP velocity",
+    "minimum_command_speed_m_s": 0.01,
+    "onset_force_N": 5.0,
+    "release_force_N": 2.5,
+    "persistence_samples": 3,
+    "report_samples": 8,
+    "statement": "all numerical force/report thresholds are byte-for-byte the rejected R30 witness; this is not a threshold retune"
+  },
+  "new_owner": {
+    "start": "first open-gripper sample with commanded TCP speed at least 0.01 m/s and measured progress along that command not reversed",
+    "consume": "any native/base alarm observed during the live initial pickup lifecycle consumes the optional source permanently",
+    "retire": "first observed closed-gripper sample, commanded motion stop after start, or three consecutive samples of measured progress below -0.005 m/s",
+    "uncertainty": "invalid/nonfinite kinematics fail closed",
+    "arbitration": "native/base output always passes through; ownership can suppress only the optional pickup witness"
+  },
+  "known_gates": {
+    "weak_and_zero": "one post-contact weak rise, no prealarm, exact zero-offset twin silent",
+    "strong_tools": "A/B/C native edge identities retained within 2 ms, no added edge, duration at most +5",
+    "late_signed": "late oblique and its no-force twin exactly retain native edges with no optional edge",
+    "other_signed": "registered disclosed signed/matched cases have no loss, duplicate, false edge, delay over +5 ms or duration over +5 samples",
+    "physics": "force and physical hashes exact"
+  },
+  "prelocked_independent_if_known_passes": {
+    "weak_offsets_m": [[0.0017, 0.0012, 0.0010], [0.0021, 0.0016, 0.0012]],
+    "normal_zero_offset": [
+      {"mass": 5.7, "com": [0.026, 0.020, 0.041]},
+      {"mass": 6.5, "com": [0.031, 0.025, 0.046]}
+    ],
+    "nearby_second_external": [
+      {"onset_s": 1.675, "vector_N": [-10.0, 11.0, 0.0]},
+      {"onset_s": 1.655, "vector_N": [0.0, 0.0, -15.0]}
+    ],
+    "rule": "run once after known admission; no source or threshold change from outcomes"
+  },
+  "falsifier": "reject and stop on any known gate failure; do not create a third mechanism"
+}

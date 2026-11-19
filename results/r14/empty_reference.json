@@ -1,0 +1,96 @@
+{
+  "schema": "r14-empty-reference-summary.v1",
+  "status": "structural reference validated; preregistered operational gates not qualified",
+  "scope": "torque simulation only; no collisions, hardware, detector, controller, kit, or production changes",
+  "preregistration": {
+    "plan_sha256": "9091d7c602db31332c881c49708cbf349c3cb8e2152c11fb37012e1d484c9eb0",
+    "pre_hash_manifest": "private PRE.json",
+    "normal_fit_runs": 12,
+    "held_runs": 16,
+    "truth_opened_only_after_prediction_sha256": "8fd18df94d45fb2e1abfa7cae283da5ab3830f19937e3d417dd1784997a8c613"
+  },
+  "design": {
+    "completion_s": 1.252,
+    "public_inputs": [
+      "time",
+      "encoder",
+      "joint torque sensor",
+      "grip",
+      "known payload mass",
+      "known COM",
+      "nominal model/reference"
+    ],
+    "columns": [
+      "mass",
+      "vertical tracking mm",
+      "compliance rho",
+      "initial elastic deflection mm"
+    ],
+    "forbidden_inputs_used": [],
+    "ridge_alpha": 0.25
+  },
+  "normal_leave_one_out": {
+    "max_abs_mm": 0.6775221601094531,
+    "signed_mm": [
+      0.037622383909021895,
+      0.27729701629729075,
+      0.28996929714289077,
+      0.5001979056585164,
+      -0.026550891664692974,
+      -0.6775221601094531,
+      -0.5249115827686807,
+      0.24241538188072775,
+      -0.09386618822027937,
+      0.5303865413878661,
+      0.04477267880920696,
+      -0.1523553960310826
+    ],
+    "cited_previous_max_abs_mm": 1.705,
+    "reduction_fraction": 0.6026262990560393
+  },
+  "held_metrics": {
+    "point_rmse_mm": 0.5304710762234627,
+    "vertical_point_rmse_mm": 0.644183571589565,
+    "control_max_abs_error_mm": 0.6846990759901527,
+    "max_abs_action_error_mm": 2.4078545639102664,
+    "vertical_sign_correct": 7,
+    "vertical_accepted_sign_correct": 5,
+    "accepted_count": 5,
+    "accepted_interval_misses": 0,
+    "large_cases": 5,
+    "large_signed_accurate_action": 5,
+    "tiny_cases": 10,
+    "tiny_nonzero_actions": 0,
+    "strict_gate": false,
+    "functional_gate": false
+  },
+  "disposition": {
+    "point_estimator_credible": true,
+    "controller_eligible_under_preregistered_gates": false,
+    "falsifier": "one unaccepted medium displacement at -2.408mm produced 2.408mm fallback action error; strict also requires all eight vertical cases accepted, but only five were accepted",
+    "retuned_after_held": false
+  },
+  "portable_api": {
+    "import": "experiments.r14_empty_reference",
+    "stream": "EmptyReference(mass, com); observe(t, encoder, jts, grip); finish()",
+    "registration": "decide(frozen_r14_stream_features, empty_feature, calibration)",
+    "calibration": "experiments/r14_empty_reference/calibration.json"
+  },
+  "verification": {
+    "unit_tests": 3,
+    "batch_empty_stream_exact": true,
+    "frozen_r14_registration_stream_exact": true,
+    "observe_us_p95": 2.3239999999999985,
+    "observe_us_p99": 3.9036000000000013,
+    "observe_us_max": 15.03,
+    "finish_us": 4228.626,
+    "array_state_bytes": 120288,
+    "sealed_prediction_exact_parity": true
+  },
+  "limitations": [
+    "Normal and held evidence are simulation-only.",
+    "The empirical interval is not a probabilistic coverage claim.",
+    "The functional gate failure prevents automatic control-suite promotion despite 0.530mm held point RMSE.",
+    "Finish takes about 4.3ms but completes roughly 0.4s before grip; per-sample observation remains below 1ms in this measured run."
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "schema": "r25-postrelease-direction-probe-summary.v1",
+  "scope": "Post-disclosure diagnosis only; five physical episodes; no detector or selection change.",
+  "case": {
+    "id": "s24_detached_offaxis_b",
+    "mechanics": {
+      "kind": "actuator_delay_gain",
+      "delay_steps": 1,
+      "joint_gain": [
+        0.978,
+        1.019,
+        0.985,
+        1.014,
+        0.981,
+        1.011
+      ]
+    },
+    "mass_kg": 7.43,
+    "com_m": [
+      0.025,
+      0.018,
+      -0.013
+    ],
+    "registered_force": {
+      "nominal_s": 4.348,
+      "actual_start_s": 4.349,
+      "N": [
+        -5.9,
+        6.4,
+        -2.0
+      ]
+    },
+    "negated_force": {
+      "actual_start_s": 4.349,
+      "N": [
+        5.9,
+        -6.4,
+        2.0
+      ]
+    }
+  },
+  "false_alarm": {
+    "output_ticks_ms": [
+      3922,
+      3923,
+      3924,
+      3925,
+      3926,
+      3927,
+      3928,
+      3929
+    ],
+    "first_standardized_crossing": {
+      "tick_ms": 3860,
+      "basis": "fast positive_dfz",
+      "ratio": 1.6576447316142202,
+      "alarm_counter_at_sample": 0,
+      "note": "This is the first raw standardized crossing, not the first eligible persisted alarm sample."
+    },
+    "at_output_rise": {
+      "r10_fast_ratio": 1.7572142846703445,
+      "fast_persistence_count": 8,
+      "r10_slow_ratio": 0.37739847418317823,
+      "fast_innovation_world_N": [
+        0.8351241610891453,
+        0.61655051618053,
+        4.942351267608454
+      ],
+      "raw_wrench_world_N": [
+        1.1312507306882862,
+        1.3300019639872513,
+        10.229701436268563
+      ],
+      "packet_velocity_world_m_s": [
+        0.028442599732516387,
+        0.032721690288121816,
+        0.0629762705743809
+      ],
+      "packet_velocity_direction": [
+        0.3720068912145075,
+        0.42797403872515805,
+        0.8236802140795871
+      ],
+      "grip": false,
+      "table_projection_allowed": false,
+      "estimated_table_normal_N": 0.0,
+      "actual_detached_box_table_normal_N": 83.07418744258074,
+      "actual_applied_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_tool_N": 0.0
+    }
+  },
+  "matched_forces": {
+    "common_at_force_commit": {
+      "tick_ms": 4349,
+      "first_r10_raw_standardized_crossing": "fast positive_dfz",
+      "ratio": 1.1306664609326003,
+      "registered_and_negated_values_exactly_equal": true,
+      "interpretation": "The crossing is sign-invariant background at the committed-force tick, not force-direction evidence."
+    },
+    "registered": {
+      "output_rise_ms": 4381,
+      "latency_ms": 32,
+      "active_path": "yaw extension, not R10",
+      "r10_detected": false,
+      "top_slow_basis_ratio": {
+        "basis": "abs_mx",
+        "ratio": 0.653785888086918
+      },
+      "top_fast_basis_ratio": {
+        "basis": "abs_dfy",
+        "ratio": 0.42566082115588416
+      },
+      "positive_dfz_ratio": 0.0,
+      "fast_innovation_world_N": [
+        -4.200233964555176,
+        4.742447793642455,
+        -2.0429965977907645
+      ],
+      "packet_velocity_dot_applied_force_direction": -0.9290071344005437
+    },
+    "negated": {
+      "output_rise_ms": 4374,
+      "latency_ms": 25,
+      "active_path": "yaw extension, not R10",
+      "r10_detected": false,
+      "top_slow_basis_ratio": {
+        "basis": "abs_my",
+        "ratio": 0.5298879173332396
+      },
+      "top_fast_basis_ratio": {
+        "basis": "abs_dfx",
+        "ratio": 0.24737311914407312
+      },
+      "positive_dfz_ratio": 0.0,
+      "fast_innovation_world_N": [
+        2.7560772445665913,
+        -1.0429481453338951,
+        -0.5385017058663824
+      ],
+      "packet_velocity_dot_applied_force_direction": 0.9366794996233103
+    },
+    "registered_vs_negated_output_velocity_direction_dot": 0.9997435279004953
+  },
+  "causal_attribution": {
+    "finding": "The false is a persisted R10 fast positive-z innovation during post-release empty-arm upward motion under actuator delay/gain, with no applied or tool force. The matched genuine signed forces are detected later by the yaw extension and do not cross any R10 standardized basis at their output rises.",
+    "velocity_limit": "Opposite forces have nearly identical packet velocity direction at output, so velocity direction alone cannot distinguish force sign or justify suppression.",
+    "table_limit": "The nonzero table normal belongs to the detached box while the robot-side table projection is correctly disabled; it is contextual physical evidence, not an available runtime force truth."
+  },
+  "archival_parity": {
+    "r24_first_sha256": "dfce0da5e2ded2dd0dfb3e02a168aca48f661f715df0647fb1b46c1c87872c08",
+    "r24_post_false_sha256": "f07008b56aa6ae17f83e3db8fee0e6b15d52cf01332dad3c0c5e268340486aa4",
+    "four_common_records_exact": true,
+    "four_false_rises_exact": true,
+    "r23_and_r24_trace_signatures_exact": true
+  },
+  "next_experiment": "Predeclare normal-only post-release calibration across multiple disclosed loads and mechanics, then leave-one-mechanics-out test a packet-only prediction of fast positive-dFz from q/v/reference motion. Counterfactually pair none, +Fz, and -Fz forces; require removal of this background crossing without losing signed-force or yaw-extension events. Do not use schedule, case ID, actual force, or detached-box table truth at runtime.",
+  "stop": "No detector was implemented or tuned from these disclosed episodes.",
+  "raw_five_episode_sha256": "f954f2cfbb19498617b26bdd9aaae02276841eb5867d82ab702173de0e447f12"
+}

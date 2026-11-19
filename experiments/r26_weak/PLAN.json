@@ -1,0 +1,26 @@
+{
+  "schema": "r26-weak-pulse-lifecycle.v1",
+  "classification": "development only; no hidden R26 inputs",
+  "baseline": "experiments.r25_composed.detector:Detector",
+  "mechanism": "Track a signed world-horizontal normal-model excursion as a finite physical pulse. An optional one-shot is eligible only after a coherent onset has decayed or unloaded, and only if the incumbent never reported during that pulse. Incumbent reports consume ownership without being muted or extended.",
+  "inputs": ["encoder", "joint torque sensor", "grip", "public nominal models", "measured load fraction", "measured table support", "incumbent alarm"],
+  "forbidden": ["time schedule", "case ID", "mass", "COM", "mechanics label", "force truth", "global cooldown", "incumbent suppression"],
+  "normal_only_constants": {
+    "onset_score_n": 8.394415779390961,
+    "onset_samples": 2,
+    "release_fraction_of_peak": 0.45,
+    "release_score_fraction_of_peak": 0.65,
+    "release_samples": 4,
+    "maximum_episode_samples": 200,
+    "one_shot_samples": 8,
+    "rearm_quiet_samples": 8,
+    "minimum_measured_load_fraction": 0.8
+  },
+  "selection_order": [
+    "R25 stock weak single becomes strict with one rise and no false twin",
+    "R25 stock close-transfer cross isolated and joint short second become strict while every incumbent-owned first/long event keeps duration within +5 samples",
+    "the disclosed 3.855 s actuator-skew force-free controls remain false-free",
+    "the frozen old late +/-32 regression panel has zero event, duration, false, tool, tail, prefix, or physics regression"
+  ],
+  "stop": "Do not widen compute or tune another revision if the frozen lifecycle fails any targeted mechanism gate. Preserve the negative counterexample."
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "week09-r25-runtime-qualification.v1",
+  "closure_scope": "Identical preselected detector, protocol, inputs and amended evaluator; no use of the earlier result for reselection.",
+  "kit_requirements_sha256": "05b8bb963b0a832c0a4d74e02167c1dbe6d7e0d14c20eb09a3aa69b85d27d50e",
+  "course_required_mujoco": "3.17.0",
+  "authoritative_environment": {
+    "python": "3.12.3",
+    "mujoco": "3.17.0",
+    "numpy": "2.5.4"
+  },
+  "earlier_noncourse_environment": {
+    "python": "3.12.3",
+    "mujoco": "3.11.0",
+    "numpy": "1.26.4"
+  },
+  "choice_sha256": "17b00bb610e02554624570beec80745b294cde517907a6f67d8847f22cfd79be",
+  "acquisition_lock_sha256": "7dbd0b47c92aa58df7fc2893acb29f488b208874b2b3eb92802d960dcfd0b345",
+  "earlier_supplemental_result_sha256": "eb1602de50d25cac21d7ea0b1f98bfd2e3e224d156e2558d5b7145a8483ca54e",
+  "earlier_supplemental_raw_receipt_sha256": "0411c71e4373bcecd7a8ee8d794e0d457706a0235725eb77380dc26e1cc6b086",
+  "noncourse_verdict_only": {
+    "passed": false,
+    "failed_rows": 15,
+    "rows": 36,
+    "episodes": 198,
+    "old_strict": 54,
+    "new_strict": 54,
+    "slots": 75
+  },
+  "discovery": "A supplemental five-twin physical trajectory did not hash-match across the two interpreters. The first complete run used non-course MuJoCo 3.11.0. It was retained as sensitivity data, not accepted as the course-runtime independent result. Candidate, criteria, input cases and scorers stayed frozen."
+}

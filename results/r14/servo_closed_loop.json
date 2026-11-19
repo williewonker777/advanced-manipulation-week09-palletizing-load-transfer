@@ -1,0 +1,94 @@
+{
+  "claims_not_made": [
+    "strict-R13 accuracy",
+    "mass=0 or empty-payload Stream behavior",
+    "repeated validation",
+    "collision/held-impact performance",
+    "torque correction qualification",
+    "promotion/adoption"
+  ],
+  "composition": {
+    "servo": "R1 servo plus registered height reference; fixed Drive and unchanged R10 detector",
+    "torque": "unopened R12 guarded research composition; current 3x6 source is not full-pose-qualified"
+  },
+  "decision": "STOP_SERVO_G4_FAILED_PRESERVE_R10_R1",
+  "fallback": "Rejected positive-mass real Stream trace was byte-exact R1 servo; mass=0 is outside current Stream contract.",
+  "manufactured_fk_minus5mm_estimate": {
+    "bottom_corner_z_shift_mm_range": [
+      4.164799540441397,
+      5.840466495330931
+    ],
+    "command_world_z_mm": 5.0,
+    "flange_orientation_change_rad_range": [
+      0.004701340822539001,
+      0.0049751602080376845
+    ],
+    "flange_z_shift_mm_range": [
+      4.998649060650173,
+      4.998764844396764
+    ],
+    "limitation": "3x6 translational least-norm solve does not hold orientation; not suitable as the proposed full-pose torque correction without redesign",
+    "lowest_corner_z_shift_mm_range": [
+      4.244922955856614,
+      4.290196830924242
+    ]
+  },
+  "pins": {
+    "current": {
+      "RESULT.md": "472f2a8aee770044e79b9172447a1ad7ba84d05bc3d50cf00314a3d9f592dcb7",
+      "RUN.md": "4ea0718ef8147d536aa25ce458ff6bd5e6096c08d8b0c4fcf2c56839c2bad400",
+      "constant_probe.py": "3789a8b4c42be4bb83dd2dfbd583985fb5728ca8414292d290b0de40a997040e",
+      "controller.py": "7c791eec9d628799bea969706055eafaf273466e7e94032f9fee5a71f00d07ec",
+      "evaluate.py": "9273ff940387ae08c1c383a64086533a78a1c3526e9528ac86f40529140d1660",
+      "plan.json": "059beafb86df230a4e8c3a753dd5d31fc73e08b4a16dd49518d0742326a292fc",
+      "servo_controller.py": "1fcff5e042c148f7e7e86ff30ba912884ba34411ee8d5aa87755263c8f44b25c",
+      "servo_evaluate.py": "05c4b6b01906978ef03d5ed270c702453c2327fd3ec00fc292f1e5c9c9911d55",
+      "servo_zero_fallback.py": "c5e614c25b4fb3916dd5ae6af8270c10a919c88a73670b4f62bf5fadf152e14f",
+      "sign_geometry.py": "f947d6548f82467de4a8034024e8583a07ea43143eb169e0ae14f92712093dc9",
+      "sign_predictions.py": "ca0dddf837918238112bf377f0c9cc3210c3e48314f4c011467da23ab39ff725",
+      "test_controller.py": "ae9543567ee24c6c6c266f956d66f26ec20c8c6e06f1c898ebefbdd88a4ed0da",
+      "zero_fallback.py": "1eda508da1bb67a99450b4c89ea9aaa1ce8b23423c7bab6a9771d4e4e9553097"
+    },
+    "evidence": {
+      "SERVO_NORMAL.json": "61167cc96666d5086638d49f82ac37f7953c506378c612334fa3cf3583eeb288",
+      "SERVO_ZERO_FALLBACK.json": "c34d030af5bcaf43f746ad44f14b25338def45ba9baa91a92d9c559d003e4065",
+      "SIGN_GEOMETRY.json": "3a8a17c75609021055dd5b5fed3f921c2249869d163c080333a0bf567ccabfc5",
+      "SIGN_PREDICTIONS.json": "a19f6826858d51ebe61074dabe39838d21d8145cfeea9cf26b2879e9a01f89b2"
+    },
+    "executed": {
+      "calibration": "5797870f7fd6b7b03cf70b5e2de3e90a8c88513ac12bb9a8f62cde9d76d45d9a",
+      "controller": "1fcff5e042c148f7e7e86ff30ba912884ba34411ee8d5aa87755263c8f44b25c",
+      "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "plan": "4bec10d1d1799754325cfbac942fff80474a73b7cfcfcee3c6cc6a31d3a135e5",
+      "r1_servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "runner": "05c4b6b01906978ef03d5ed270c702453c2327fd3ec00fc292f1e5c9c9911d55"
+    }
+  },
+  "schema": "r14-registered-handoff-summary.v1",
+  "scope": "simulation-only conditional positive-payload study; no live/kit/evaluator changes",
+  "servo_normal": {
+    "abstained": 2,
+    "accepted": 2,
+    "accepted_max_final_mean_mg": 0.0028354862117535478,
+    "accepted_min_final_support_mg": 0.0,
+    "accepted_peak_mg_baseline": [
+      3.1042843147825776,
+      1.9378882221887885
+    ],
+    "accepted_peak_mg_candidate": [
+      1.0102768575105878,
+      1.006589954612543
+    ],
+    "all_cost_fa_tool_saturation_prefix_timing_pass": true,
+    "cases": 4,
+    "collisions_run": 0,
+    "g4_passes": 0
+  },
+  "sign": {
+    "all_restoring_sign": true,
+    "definition": "extra_height_mm is measured bottom displacement in world +z; command_world_z_mm = -extra_height_mm",
+    "exposed_accepted_rows": 4,
+    "ideal_translation_residual_rmse_mm": 0.3727711880779018,
+    "ideal_translation_residual_worst_abs_mm": 0.4886940599394496
+  }
+}

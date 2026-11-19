@@ -1,0 +1,126 @@
+{
+  "schema": "r22-guarded-release-summary.v1",
+  "candidate": "experiments.r22_guarded.candidate.Detector",
+  "decision": "targeted_exposed_pass_parent_full_census_required",
+  "candidate_sha256": "23d8dc0b9747e38dd9a346872f27612b7ba67052aff4c6d604401aba387dc1f1",
+  "plan_sha256": "56ce7cdac16699a8db591195b89260ec24fc3991638a829368612ba1b27a546c",
+  "targeted_summary": {
+    "r10": {
+      "attributable_hits": 2,
+      "false_edges_after_quiet": 1,
+      "no_force_false_rises": 0
+    },
+    "r21": {
+      "attributable_hits": 5,
+      "false_edges_after_quiet": 4,
+      "no_force_false_rises": 0
+    },
+    "core": {
+      "attributable_hits": 5,
+      "false_edges_after_quiet": 2,
+      "no_force_false_rises": 0
+    },
+    "guarded": {
+      "attributable_hits": 5,
+      "false_edges_after_quiet": 0,
+      "no_force_false_rises": 0
+    }
+  },
+  "guarded_rows": {
+    "319": {
+      "attributable_rise_indices": [
+        3840
+      ],
+      "core_rise_indices": [
+        3840,
+        3902
+      ],
+      "release_continuity_selected": false,
+      "unloaded_uses_original_r21_bank": true,
+      "no_force_false_rises": [],
+      "exact_force_and_physics": true
+    },
+    "330": {
+      "attributable_rise_indices": [
+        3879
+      ],
+      "core_rise_indices": [
+        3879
+      ],
+      "release_continuity_selected": true,
+      "unloaded_uses_original_r21_bank": false,
+      "no_force_false_rises": [],
+      "exact_force_and_physics": true
+    },
+    "335": {
+      "attributable_rise_indices": [
+        3946
+      ],
+      "core_rise_indices": [
+        3921,
+        3935
+      ],
+      "release_continuity_selected": false,
+      "unloaded_uses_original_r21_bank": true,
+      "no_force_false_rises": [],
+      "exact_force_and_physics": true
+    },
+    "339": {
+      "attributable_rise_indices": [
+        3826
+      ],
+      "core_rise_indices": [
+        3826
+      ],
+      "release_continuity_selected": true,
+      "unloaded_uses_original_r21_bank": false,
+      "no_force_false_rises": [],
+      "exact_force_and_physics": true
+    },
+    "349": {
+      "attributable_rise_indices": [
+        3823
+      ],
+      "core_rise_indices": [
+        3823
+      ],
+      "release_continuity_selected": true,
+      "unloaded_uses_original_r21_bank": false,
+      "no_force_false_rises": [],
+      "exact_force_and_physics": true
+    }
+  },
+  "reachability": {
+    "guard_input": "immediately preceding combined detector report from the same episode",
+    "positive_mass_quiet_release": [
+      319,
+      335
+    ],
+    "positive_mass_active_release": [
+      330,
+      339,
+      349
+    ],
+    "empty_mass": "continuity unchanged by unit test",
+    "positive_pickup": "original reset and loaded bank restored by unit test",
+    "multiple_cycles": "quiet then active selection demonstrated by unit test",
+    "eight_kg_no_force_twins": [
+      335,
+      349
+    ]
+  },
+  "dependencies": {
+    "base": "experiments.r22_combined.core.Detector",
+    "continuity_state": "experiments.r22_release.state.ReleaseBalance",
+    "reset_state": "experiments.r21_yaw_impulse.state.YawBalance",
+    "unloaded_reset_bank": "experiments/r21_yaw_impulse/normal_bins.json"
+  },
+  "scope": {
+    "hidden_reads": false,
+    "r22_challenge_opened": false,
+    "targeted_cases_only": true,
+    "episodes": 40,
+    "parent_full_census_required": true
+  },
+  "evidence_sha256": "2e090c3d861221998a357935415f005e1c2a3055c7365fb3cd431809edeffa1f"
+}

@@ -1,0 +1,3469 @@
+{
+  "schema": "r17-collision-studies.v1",
+  "scope": "These are research simulations on already exposed events, NOT the original demo and NOT fresh generalization. All original negative decisions retained.",
+  "observer_a": {
+    "status": "STOP_FROZEN_REPAIR_FAILED_EXPOSED_SENTINEL",
+    "normal_design": {
+      "case_count": 34,
+      "normal_only": true,
+      "normal_max_evidence": 24.955979643483047,
+      "decision_threshold": 31.19497455435381,
+      "new_normal_false_rises": [],
+      "tool_controls_preserved_exact_delay": true,
+      "dominant_normal_maxima": [
+        {
+          "id": "ec4:up",
+          "maximum": 24.955979643483047,
+          "coupled_false_rises": [
+            1.245
+          ],
+          "tool_present": true
+        },
+        {
+          "id": "ec2:up",
+          "maximum": 22.052076997578574,
+          "coupled_false_rises": [
+            1.247
+          ],
+          "tool_present": true
+        },
+        {
+          "id": "sh5",
+          "maximum": 20.240884173518758,
+          "coupled_false_rises": [
+            1.2530000000000001
+          ],
+          "tool_present": true
+        },
+        {
+          "id": "ec3:up",
+          "maximum": 17.958596240800404,
+          "coupled_false_rises": [
+            1.262
+          ],
+          "tool_present": true
+        },
+        {
+          "id": "ec1:up",
+          "maximum": 17.778446440782698,
+          "coupled_false_rises": [
+            1.26
+          ],
+          "tool_present": true
+        },
+        {
+          "id": "pc_heavy_up",
+          "maximum": 16.592642891598366,
+          "coupled_false_rises": [
+            1.27
+          ],
+          "tool_present": true
+        },
+        {
+          "id": "seen_fr_mid_up",
+          "maximum": 14.072380916186617,
+          "coupled_false_rises": [
+            1.2750000000000001
+          ],
+          "tool_present": true
+        },
+        {
+          "id": "pc_light_up",
+          "maximum": 12.122948657264821,
+          "coupled_false_rises": [
+            1.2790000000000001
+          ],
+          "tool_present": true
+        }
+      ]
+    },
+    "same_input_2x2": {
+      "r10/r10_core": {
+        "event": {
+          "outcome": "detected",
+          "delay_ms": 40.000000000000036,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "sensor_sha256": "dcbbca275f5f5098d3770271d7b5fc31e730701cc9260774263b8a2d65a4186b",
+        "positive_fz_peak": 2.5659303123362247,
+        "positive_fz_peak_t": 3.984,
+        "raw_fast_at_peak": [
+          0.9224287817114516,
+          -0.7422588958728102,
+          7.2169507398177135,
+          0.4300195247039421,
+          0.4207083006691481,
+          0.00530372540217014
+        ],
+        "corrected_fast_at_peak": [
+          0.9224287817114516,
+          -0.7422588958728102,
+          7.2169507398177135,
+          0.4300195247039421,
+          0.4207083006691481,
+          0.00530372540217014
+        ],
+        "core_rises_s": [
+          3.98
+        ],
+        "observer_rises_s": [
+          3.98
+        ],
+        "repair_evidence_peak": 0.0
+      },
+      "r10/coupled": {
+        "event": {
+          "outcome": "masked",
+          "delay_ms": null,
+          "prealarm": true,
+          "false_alarms": 1,
+          "false_alarm_times": [
+            3.906
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "sensor_sha256": "dcbbca275f5f5098d3770271d7b5fc31e730701cc9260774263b8a2d65a4186b",
+        "positive_fz_peak": 3.065896515180023,
+        "positive_fz_peak_t": 3.984,
+        "raw_fast_at_peak": [
+          0.9224287817114516,
+          -0.7422588958728102,
+          7.2169507398177135,
+          0.4300195247039421,
+          0.4207083006691481,
+          0.00530372540217014
+        ],
+        "corrected_fast_at_peak": [
+          0.9430122462721937,
+          -0.44887432236283775,
+          8.623158632584756,
+          0.29110322313936454,
+          0.4535506787467041,
+          0.012654773508364248
+        ],
+        "core_rises_s": [
+          3.98
+        ],
+        "observer_rises_s": [
+          3.906
+        ],
+        "repair_evidence_peak": 0.0
+      },
+      "D/r10_core": {
+        "event": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 1,
+          "false_alarm_times": [
+            3.903
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "sensor_sha256": "af376b83e451e9bc6b9bfb0a3e0fa4dfb2462525da0bb207e650b59b5ec20690",
+        "positive_fz_peak": 3.2238762871764606,
+        "positive_fz_peak_t": 3.984,
+        "raw_fast_at_peak": [
+          -1.1488888828659412,
+          -2.234871643131797,
+          9.067493471650536,
+          1.2189996794359383,
+          -0.4613129032426776,
+          -0.0052712481833166736
+        ],
+        "corrected_fast_at_peak": [
+          -1.1488888828659412,
+          -2.234871643131797,
+          9.067493471650536,
+          1.2189996794359383,
+          -0.4613129032426776,
+          -0.0052712481833166736
+        ],
+        "core_rises_s": [
+          3.903
+        ],
+        "observer_rises_s": [
+          3.903
+        ],
+        "repair_evidence_peak": 0.0
+      },
+      "D/coupled": {
+        "event": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "sensor_sha256": "af376b83e451e9bc6b9bfb0a3e0fa4dfb2462525da0bb207e650b59b5ec20690",
+        "positive_fz_peak": 3.7238424900202585,
+        "positive_fz_peak_t": 3.984,
+        "raw_fast_at_peak": [
+          -1.1488888828659412,
+          -2.234871643131797,
+          9.067493471650536,
+          1.2189996794359383,
+          -0.4613129032426776,
+          -0.0052712481833166736
+        ],
+        "corrected_fast_at_peak": [
+          -1.128305418305199,
+          -1.9414870696218247,
+          10.473701364417579,
+          1.0800833778713608,
+          -0.42847052516512163,
+          0.0020797999228774353
+        ],
+        "core_rises_s": [
+          3.903
+        ],
+        "observer_rises_s": [],
+        "repair_evidence_peak": 0.0
+      }
+    },
+    "repair": {
+      "sentinel": {
+        "event": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "sensor_sha256": "af376b83e451e9bc6b9bfb0a3e0fa4dfb2462525da0bb207e650b59b5ec20690",
+        "positive_fz_peak": 3.7238424900202585,
+        "positive_fz_peak_t": 3.984,
+        "raw_fast_at_peak": [
+          -1.1488888828659412,
+          -2.234871643131797,
+          9.067493471650536,
+          1.2189996794359383,
+          -0.4613129032426776,
+          -0.0052712481833166736
+        ],
+        "corrected_fast_at_peak": [
+          -1.128305418305199,
+          -1.9414870696218247,
+          10.473701364417579,
+          1.0800833778713608,
+          -0.42847052516512163,
+          0.0020797999228774353
+        ],
+        "core_rises_s": [
+          3.903
+        ],
+        "observer_rises_s": [],
+        "repair_evidence_peak": 5.144658197946448
+      },
+      "gates": {
+        "same_inputs_per_plant": true,
+        "sentinel_genuine": false,
+        "sentinel_delay": false,
+        "sentinel_no_prealarm": true,
+        "zero_exact_r10": true,
+        "servo_exact_r10": true
+      },
+      "zero_exact_r10": true,
+      "servo_exact_r10": true,
+      "controls": [
+        {
+          "id": "new_positive_heavy",
+          "role": "already_seen_strong_control",
+          "paths": {
+            "coupled": {
+              "event": {
+                "outcome": "detected",
+                "delay_ms": 28.00000000000047,
+                "prealarm": false,
+                "false_alarms": 0,
+                "false_alarm_times": [],
+                "tool_present": false,
+                "tool_detected": false,
+                "tool_prealarm": false,
+                "tool_delay_ms": null
+              },
+              "sensor_sha256": "194718a60c3eb13294e23543ffae92943bf3d81ecfb647271ee9173064904f6a",
+              "positive_fz_peak": 3.7543832464357187,
+              "positive_fz_peak_t": 4.07,
+              "raw_fast_at_peak": [
+                -1.071095454251783,
+                -1.079365428375545,
+                9.228591989076698,
+                0.6129888797660782,
+                -0.37403206222312724,
+                -0.0038682231641236076
+              ],
+              "corrected_fast_at_peak": [
+                -1.193142425439605,
+                -2.4804232848934435,
+                10.559600476153964,
+                1.24391564639308,
+                -0.40777978060922204,
+                -0.0014508514781313708
+              ],
+              "core_rises_s": [
+                3.903,
+                4.048
+              ],
+              "observer_rises_s": [
+                4.048
+              ],
+              "repair_evidence_peak": 0.0
+            },
+            "repair": {
+              "event": {
+                "outcome": "detected",
+                "delay_ms": 28.00000000000047,
+                "prealarm": false,
+                "false_alarms": 0,
+                "false_alarm_times": [],
+                "tool_present": false,
+                "tool_detected": false,
+                "tool_prealarm": false,
+                "tool_delay_ms": null
+              },
+              "sensor_sha256": "194718a60c3eb13294e23543ffae92943bf3d81ecfb647271ee9173064904f6a",
+              "positive_fz_peak": 3.7543832464357187,
+              "positive_fz_peak_t": 4.07,
+              "raw_fast_at_peak": [
+                -1.071095454251783,
+                -1.079365428375545,
+                9.228591989076698,
+                0.6129888797660782,
+                -0.37403206222312724,
+                -0.0038682231641236076
+              ],
+              "corrected_fast_at_peak": [
+                -1.193142425439605,
+                -2.4804232848934435,
+                10.559600476153964,
+                1.24391564639308,
+                -0.40777978060922204,
+                -0.0014508514781313708
+              ],
+              "core_rises_s": [
+                3.903,
+                4.048
+              ],
+              "observer_rises_s": [
+                4.048
+              ],
+              "repair_evidence_peak": 7.519155880546489
+            }
+          }
+        },
+        {
+          "id": "exposed_heavy_oblique_143ms",
+          "role": "already_seen_strong_control",
+          "paths": {
+            "coupled": {
+              "event": {
+                "outcome": "detected",
+                "delay_ms": 133.9999999999999,
+                "prealarm": false,
+                "false_alarms": 0,
+                "false_alarm_times": [],
+                "tool_present": false,
+                "tool_detected": false,
+                "tool_prealarm": false,
+                "tool_delay_ms": null
+              },
+              "sensor_sha256": "96cb9fa26994a026e7a0ae97463b6f1f16cbbdadf43398944707e7e1e3cff339",
+              "positive_fz_peak": 3.1361275060615847,
+              "positive_fz_peak_t": 4.041,
+              "raw_fast_at_peak": [
+                -0.40402150494694755,
+                0.11231764097316255,
+                7.374627345888345,
+                0.12854329100836376,
+                -0.02427314207480613,
+                -0.01206431037196494
+              ],
+              "corrected_fast_at_peak": [
+                -1.20006888714425,
+                -1.1609552634941664,
+                8.8206907320202,
+                0.7136877057647497,
+                -0.36263783405450173,
+                -0.009378644797459906
+              ],
+              "core_rises_s": [
+                3.903,
+                4.039
+              ],
+              "observer_rises_s": [
+                4.039
+              ],
+              "repair_evidence_peak": 0.0
+            },
+            "repair": {
+              "event": {
+                "outcome": "detected",
+                "delay_ms": 133.9999999999999,
+                "prealarm": false,
+                "false_alarms": 0,
+                "false_alarm_times": [],
+                "tool_present": false,
+                "tool_detected": false,
+                "tool_prealarm": false,
+                "tool_delay_ms": null
+              },
+              "sensor_sha256": "96cb9fa26994a026e7a0ae97463b6f1f16cbbdadf43398944707e7e1e3cff339",
+              "positive_fz_peak": 3.1361275060615847,
+              "positive_fz_peak_t": 4.041,
+              "raw_fast_at_peak": [
+                -0.40402150494694755,
+                0.11231764097316255,
+                7.374627345888345,
+                0.12854329100836376,
+                -0.02427314207480613,
+                -0.01206431037196494
+              ],
+              "corrected_fast_at_peak": [
+                -1.20006888714425,
+                -1.1609552634941664,
+                8.8206907320202,
+                0.7136877057647497,
+                -0.36263783405450173,
+                -0.009378644797459906
+              ],
+              "core_rises_s": [
+                3.903,
+                4.039
+              ],
+              "observer_rises_s": [
+                4.039
+              ],
+              "repair_evidence_peak": 4.974010979990752
+            }
+          }
+        },
+        {
+          "id": "ec2:up",
+          "role": "already_seen_tool_control",
+          "paths": {
+            "coupled": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 10.000000000000009
+            },
+            "repair": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 10.000000000000009
+            }
+          }
+        },
+        {
+          "id": "pc_light_up",
+          "role": "already_seen_tool_control",
+          "paths": {
+            "coupled": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 11.00000000000012
+            },
+            "repair": {
+              "outcome": "reference",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 11.00000000000012
+            }
+          }
+        }
+      ]
+    },
+    "attribution": [
+      "Plant path matters: R10 core detects +40 ms on genuine R10-plant inputs, but the same core misses on D-plant inputs and has a separate 3.903 s normal-release false rise.",
+      "Observer path matters independently: on the same R10 sensor record Coupled is already alarmed at 3.906 s and masks the later pulse; on the same D record Coupled suppresses the 3.903 s nuisance but also misses the sentinel.",
+      "The available collision evidence is corrected positive-fz innovation: D/Coupled peaks at score 3.723842 at 3.984 s; raw fz 9.06749 N becomes corrected 10.47370 N, so the normal correction does not attenuate the peak. The frozen 8-consecutive rule never fires, showing temporal fragmentation rather than peak removal.",
+      "The repair fails by calibration competition: sentinel leaky evidence peaks at 5.14466, while the all-normal threshold is 31.19497 because the eight largest normal maxima all occur in cases with genuine pick/tool contact. This is an allowed-signal ambiguity, not proof that the external sentinel is absent."
+    ],
+    "limitations": [
+      "new simulations, not original demo replay",
+      "finite frozen normal design set",
+      "exposed R16 controls only",
+      "no novel external cases",
+      "no physical separation guarantee for positive-normal external vs legitimate tool contact from scalar channel alone"
+    ]
+  },
+  "observed_open_edge_b": {
+    "status": "STOP_NOT_INTEGRATED_SENTINEL_MISSED",
+    "normal_gate": {
+      "case_count": 34,
+      "normal_max_evidence": 6.025945269177174,
+      "fixed_margin": 1.25,
+      "decision_threshold": 7.532431586471468,
+      "added_rise_count": 0,
+      "lost_coupled_rise_count": 0,
+      "passed": true
+    },
+    "exposed_gate": {
+      "passed": false,
+      "gates": {
+        "all_exposed_impacts": false,
+        "sentinel_recovered": false,
+        "tool_controls_unchanged": true,
+        "zero_exact_r10": true,
+        "servo_exact_r10": true
+      },
+      "rows": [
+        {
+          "id": "new_weak_oblique_pre",
+          "role": "exposed_r16_control",
+          "events": {
+            "r10": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "coupled": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "repair": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "normal_peak_evidence": 1.1029635687803485,
+          "repair_peak_evidence": 1.1111151247568103,
+          "gates": {
+            "same_D_inputs": true,
+            "retain_r10_5ms": true,
+            "retain_coupled_5ms": true,
+            "no_repair_prealarm": true,
+            "false_events_r10": true,
+            "false_events_coupled": true
+          },
+          "passed": true
+        },
+        {
+          "id": "new_vertical_pre",
+          "role": "exposed_r16_control",
+          "events": {
+            "r10": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 11.00000000000012
+            },
+            "coupled": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 11.00000000000012
+            },
+            "repair": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": true,
+              "tool_detected": true,
+              "tool_prealarm": false,
+              "tool_delay_ms": 11.00000000000012
+            }
+          },
+          "normal_peak_evidence": 0.7980466066562711,
+          "repair_peak_evidence": 3.1312159164534554,
+          "gates": {
+            "same_D_inputs": true,
+            "retain_r10_5ms": true,
+            "retain_coupled_5ms": true,
+            "no_repair_prealarm": true,
+            "false_events_r10": true,
+            "false_events_coupled": true
+          },
+          "passed": true
+        },
+        {
+          "id": "new_surface_normal_release",
+          "role": "exposed_r16_sentinel",
+          "events": {
+            "r10": {
+              "outcome": "detected",
+              "delay_ms": 40.000000000000036,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "coupled": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "repair": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "normal_peak_evidence": 1.1558529909952162,
+          "repair_peak_evidence": 5.144658197946448,
+          "gates": {
+            "same_D_inputs": true,
+            "retain_r10_5ms": false,
+            "retain_coupled_5ms": true,
+            "no_repair_prealarm": true,
+            "false_events_r10": true,
+            "false_events_coupled": true
+          },
+          "passed": false
+        },
+        {
+          "id": "new_off_release_pre",
+          "role": "exposed_r16_control",
+          "events": {
+            "r10": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "coupled": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "repair": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "normal_peak_evidence": 0.8839885636561898,
+          "repair_peak_evidence": 0.8914962522222325,
+          "gates": {
+            "same_D_inputs": true,
+            "retain_r10_5ms": true,
+            "retain_coupled_5ms": true,
+            "no_repair_prealarm": true,
+            "false_events_r10": true,
+            "false_events_coupled": true
+          },
+          "passed": true
+        },
+        {
+          "id": "new_oblique_post",
+          "role": "exposed_r16_control",
+          "events": {
+            "r10": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "coupled": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "repair": {
+              "outcome": "missed",
+              "delay_ms": null,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "normal_peak_evidence": 1.3910981154004742,
+          "repair_peak_evidence": 1.4483368925640554,
+          "gates": {
+            "same_D_inputs": true,
+            "retain_r10_5ms": true,
+            "retain_coupled_5ms": true,
+            "no_repair_prealarm": true,
+            "false_events_r10": true,
+            "false_events_coupled": true
+          },
+          "passed": true
+        },
+        {
+          "id": "new_positive_heavy",
+          "role": "exposed_r16_control",
+          "events": {
+            "r10": {
+              "outcome": "detected",
+              "delay_ms": 30.00000000000025,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "coupled": {
+              "outcome": "detected",
+              "delay_ms": 28.00000000000047,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "repair": {
+              "outcome": "detected",
+              "delay_ms": 28.00000000000047,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "normal_peak_evidence": 1.7193996885995115,
+          "repair_peak_evidence": 7.519155880546489,
+          "gates": {
+            "same_D_inputs": true,
+            "retain_r10_5ms": true,
+            "retain_coupled_5ms": true,
+            "no_repair_prealarm": true,
+            "false_events_r10": true,
+            "false_events_coupled": true
+          },
+          "passed": true
+        },
+        {
+          "id": "exposed_heavy_oblique_143ms",
+          "role": "exposed_r16_control",
+          "events": {
+            "r10": {
+              "outcome": "detected",
+              "delay_ms": 143.00000000000023,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "coupled": {
+              "outcome": "detected",
+              "delay_ms": 133.9999999999999,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            },
+            "repair": {
+              "outcome": "detected",
+              "delay_ms": 133.9999999999999,
+              "prealarm": false,
+              "false_alarms": 0,
+              "false_alarm_times": [],
+              "tool_present": false,
+              "tool_detected": false,
+              "tool_prealarm": false,
+              "tool_delay_ms": null
+            }
+          },
+          "normal_peak_evidence": 1.2281285544700304,
+          "repair_peak_evidence": 4.974010979990752,
+          "gates": {
+            "same_D_inputs": true,
+            "retain_r10_5ms": true,
+            "retain_coupled_5ms": true,
+            "no_repair_prealarm": true,
+            "false_events_r10": true,
+            "false_events_coupled": true
+          },
+          "passed": true
+        }
+      ],
+      "tool_rows": [
+        {
+          "id": "ec2:up",
+          "coupled": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 10.000000000000009
+          },
+          "repair": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 10.000000000000009
+          },
+          "passed": true
+        },
+        {
+          "id": "pc_light_up",
+          "coupled": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          },
+          "repair": {
+            "outcome": "reference",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          },
+          "passed": true
+        }
+      ],
+      "delegate_parity": {
+        "zero": true,
+        "servo": true
+      }
+    },
+    "sentinel_failure": {
+      "r10": {
+        "outcome": "detected",
+        "delay_ms": 40.000000000000036,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "coupled": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "repair": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "failed_gates": [
+        "retain_r10_5ms"
+      ]
+    },
+    "actual_release_edge_timing": [
+      {
+        "id": "pc_heavy_up",
+        "forced": false,
+        "grip_release_s": 3.9,
+        "max_evidence": 6.025945269177174,
+        "max_evidence_s": 3.918,
+        "max_evidence_after_release_ms": 18.000000000000238,
+        "positive_fz_score_at_max": 2.2239056112638913,
+        "observer_rises_s": [
+          1.27
+        ]
+      },
+      {
+        "id": "ec3:up",
+        "forced": false,
+        "grip_release_s": 3.9,
+        "max_evidence": 3.6516721636613285,
+        "max_evidence_s": 3.916,
+        "max_evidence_after_release_ms": 16.000000000000014,
+        "positive_fz_score_at_max": 2.8997103870011034,
+        "observer_rises_s": [
+          1.262
+        ]
+      },
+      {
+        "id": "new_surface_normal_release",
+        "forced": false,
+        "grip_release_s": 3.9,
+        "max_evidence": 1.1558529909952162,
+        "max_evidence_s": 4.1450000000000005,
+        "max_evidence_after_release_ms": 245.00000000000054,
+        "positive_fz_score_at_max": 2.1557968777870538,
+        "observer_rises_s": []
+      },
+      {
+        "id": "new_surface_normal_release",
+        "forced": true,
+        "grip_release_s": 3.9,
+        "max_evidence": 5.144658197946448,
+        "max_evidence_s": 3.989,
+        "max_evidence_after_release_ms": 88.99999999999997,
+        "positive_fz_score_at_max": 2.069950512634684,
+        "observer_rises_s": []
+      }
+    ],
+    "non_observability": "The scalar leaky corrected-positive-fz statistic is not separable on the frozen normals: benign pc_heavy_up reaches 6.025945 at +18 ms after the observed grip edge, above the forced sentinel maximum 5.144658 at +89 ms. No threshold choice is justified without dropping an adversarial normal or adding a forbidden clock/case mask."
+  },
+  "normal_prediction_c": {
+    "status": "STOP_NOT_INTEGRATED_POSTLANDING_FALSE_RISES",
+    "normal_fit": {
+      "case_count": 34,
+      "model_summary": {
+        "unique_traces": 30,
+        "mass_group_count": 15,
+        "maximum_normalized_residual": 1.0,
+        "maximum_envelope": 5.8575629789858255
+      },
+      "mass_groups": {
+        "3.45": [
+          "ec1:none",
+          "ec1:xy",
+          "ec1:up",
+          "ec1:down"
+        ],
+        "4.9": [
+          "ec2:none",
+          "ec2:xy",
+          "ec2:up",
+          "ec2:down"
+        ],
+        "6.55": [
+          "ec3:none",
+          "ec3:xy",
+          "ec3:up",
+          "ec3:down"
+        ],
+        "7.75": [
+          "ec4:none",
+          "ec4:xy",
+          "ec4:up",
+          "ec4:down"
+        ],
+        "7.1": [
+          "sh3"
+        ],
+        "6.65": [
+          "sh5"
+        ],
+        "3.72": [
+          "seen_fr_light_zero",
+          "seen_fr_light_down"
+        ],
+        "5.38": [
+          "seen_fr_mid_zero",
+          "seen_fr_mid_up"
+        ],
+        "7.42": [
+          "seen_fr_heavy_zero",
+          "seen_fr_heavy_down"
+        ],
+        "3.26": [
+          "pc_light_none"
+        ],
+        "3.83": [
+          "pc_light_up"
+        ],
+        "5.02": [
+          "pc_mid_zero"
+        ],
+        "5.91": [
+          "pc_mid_down"
+        ],
+        "6.92": [
+          "pc_heavy_none"
+        ],
+        "7.68": [
+          "pc_heavy_up"
+        ]
+      },
+      "duplicate_groups": [
+        {
+          "sensor_sha256": "fa85afe502176eeb5841c4a55fc869adbd52ff4ac4f1348eaef4b7debfbf1ffc",
+          "case_ids": [
+            "ec1:none",
+            "ec1:explicit_zero"
+          ]
+        },
+        {
+          "sensor_sha256": "1f7fa8155c1d175a1dd60d36ff5f49a10d2be936a40c9a1add2fdf6f65c79b05",
+          "case_ids": [
+            "ec2:none",
+            "ec2:explicit_zero"
+          ]
+        },
+        {
+          "sensor_sha256": "4abe65df702abe637ab1100004ad70c5866615e3ec47cfe930cd88094babff48",
+          "case_ids": [
+            "ec3:none",
+            "ec3:explicit_zero"
+          ]
+        },
+        {
+          "sensor_sha256": "0c586a48073fd29397b984b0f1d68ae138f493c4033d076f44fff593a5866e45",
+          "case_ids": [
+            "ec4:none",
+            "ec4:explicit_zero"
+          ]
+        }
+      ],
+      "added_rise_count": 0,
+      "lost_coupled_rise_count": 0,
+      "unsupported_cases": [],
+      "passed": true
+    },
+    "sentinel": {
+      "r10": {
+        "outcome": "detected",
+        "delay_ms": 40.000000000000036,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "coupled": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "prediction": {
+        "outcome": "detected",
+        "delay_ms": 21.00000000000035,
+        "prealarm": false,
+        "false_alarms": 54,
+        "false_alarm_times": [
+          4.605,
+          4.666,
+          4.688,
+          4.75,
+          4.773,
+          4.809,
+          4.844,
+          4.855,
+          4.867,
+          4.882,
+          4.921,
+          4.974,
+          4.986,
+          5.001,
+          5.062,
+          5.1080000000000005,
+          5.136,
+          5.15,
+          5.184,
+          5.214,
+          5.23,
+          5.271,
+          5.311,
+          5.339,
+          5.362,
+          5.412,
+          5.4590000000000005,
+          5.48,
+          5.4990000000000006,
+          5.508,
+          5.546,
+          5.557,
+          5.587,
+          5.597,
+          5.611,
+          5.666,
+          5.6850000000000005,
+          5.713,
+          5.735,
+          5.7540000000000004,
+          5.769,
+          5.78,
+          5.79,
+          5.815,
+          5.838,
+          5.8500000000000005,
+          5.8740000000000006,
+          5.886,
+          5.899,
+          5.91,
+          5.921,
+          5.948,
+          5.971,
+          5.982
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "normal_max_score": 0.9281720735006812,
+      "forced_max_score": 15.841999030995131,
+      "gates": {
+        "supported_normal": true,
+        "supported_forced": true,
+        "retain_r10_5ms": true,
+        "retain_coupled_5ms": true,
+        "no_prealarm": true,
+        "false_events_r10": false,
+        "false_events_coupled": false
+      },
+      "recovered_within_boundary": true
+    },
+    "all_exposed_rows": [
+      {
+        "id": "new_weak_oblique_pre",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coupled": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "prediction": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "normal_max_score": 0.9220861137890548,
+        "forced_max_score": 0.0,
+        "gates": {
+          "supported_normal": true,
+          "supported_forced": false,
+          "retain_r10_5ms": true,
+          "retain_coupled_5ms": true,
+          "no_prealarm": true,
+          "false_events_r10": true,
+          "false_events_coupled": true
+        },
+        "passed": false
+      },
+      {
+        "id": "new_vertical_pre",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          },
+          "coupled": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          },
+          "prediction": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          }
+        },
+        "normal_max_score": 0.9250207389389371,
+        "forced_max_score": 0.0,
+        "gates": {
+          "supported_normal": true,
+          "supported_forced": false,
+          "retain_r10_5ms": true,
+          "retain_coupled_5ms": true,
+          "no_prealarm": true,
+          "false_events_r10": true,
+          "false_events_coupled": true
+        },
+        "passed": false
+      },
+      {
+        "id": "new_surface_normal_release",
+        "role": "exposed_r16_sentinel",
+        "events": {
+          "r10": {
+            "outcome": "detected",
+            "delay_ms": 40.000000000000036,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coupled": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "prediction": {
+            "outcome": "detected",
+            "delay_ms": 21.00000000000035,
+            "prealarm": false,
+            "false_alarms": 54,
+            "false_alarm_times": [
+              4.605,
+              4.666,
+              4.688,
+              4.75,
+              4.773,
+              4.809,
+              4.844,
+              4.855,
+              4.867,
+              4.882,
+              4.921,
+              4.974,
+              4.986,
+              5.001,
+              5.062,
+              5.1080000000000005,
+              5.136,
+              5.15,
+              5.184,
+              5.214,
+              5.23,
+              5.271,
+              5.311,
+              5.339,
+              5.362,
+              5.412,
+              5.4590000000000005,
+              5.48,
+              5.4990000000000006,
+              5.508,
+              5.546,
+              5.557,
+              5.587,
+              5.597,
+              5.611,
+              5.666,
+              5.6850000000000005,
+              5.713,
+              5.735,
+              5.7540000000000004,
+              5.769,
+              5.78,
+              5.79,
+              5.815,
+              5.838,
+              5.8500000000000005,
+              5.8740000000000006,
+              5.886,
+              5.899,
+              5.91,
+              5.921,
+              5.948,
+              5.971,
+              5.982
+            ],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "normal_max_score": 0.9281720735006812,
+        "forced_max_score": 15.841999030995131,
+        "gates": {
+          "supported_normal": true,
+          "supported_forced": true,
+          "retain_r10_5ms": true,
+          "retain_coupled_5ms": true,
+          "no_prealarm": true,
+          "false_events_r10": false,
+          "false_events_coupled": false
+        },
+        "passed": false
+      },
+      {
+        "id": "new_off_release_pre",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coupled": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "prediction": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "normal_max_score": 0.9359110663400302,
+        "forced_max_score": 0.0,
+        "gates": {
+          "supported_normal": true,
+          "supported_forced": false,
+          "retain_r10_5ms": true,
+          "retain_coupled_5ms": true,
+          "no_prealarm": true,
+          "false_events_r10": true,
+          "false_events_coupled": true
+        },
+        "passed": false
+      },
+      {
+        "id": "new_oblique_post",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coupled": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "prediction": {
+            "outcome": "detected",
+            "delay_ms": 22.999999999999687,
+            "prealarm": false,
+            "false_alarms": 29,
+            "false_alarm_times": [
+              4.423,
+              4.489,
+              4.743,
+              4.827,
+              4.931,
+              4.969,
+              4.993,
+              5.081,
+              5.128,
+              5.138,
+              5.214,
+              5.337,
+              5.349,
+              5.3580000000000005,
+              5.487,
+              5.521,
+              5.591,
+              5.602,
+              5.665,
+              5.704,
+              5.719,
+              5.768,
+              5.797,
+              5.824,
+              5.852,
+              5.868,
+              5.881,
+              5.912,
+              5.958
+            ],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "normal_max_score": 0.9070255302307798,
+        "forced_max_score": 6.611868235181161,
+        "gates": {
+          "supported_normal": true,
+          "supported_forced": true,
+          "retain_r10_5ms": true,
+          "retain_coupled_5ms": true,
+          "no_prealarm": true,
+          "false_events_r10": false,
+          "false_events_coupled": false
+        },
+        "passed": false
+      },
+      {
+        "id": "new_positive_heavy",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "detected",
+            "delay_ms": 30.00000000000025,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coupled": {
+            "outcome": "detected",
+            "delay_ms": 28.00000000000047,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "prediction": {
+            "outcome": "detected",
+            "delay_ms": 18.000000000000682,
+            "prealarm": false,
+            "false_alarms": 42,
+            "false_alarm_times": [
+              4.697,
+              4.7330000000000005,
+              4.771,
+              4.822,
+              4.844,
+              4.872,
+              4.886,
+              4.918,
+              4.962,
+              4.9910000000000005,
+              5.1080000000000005,
+              5.131,
+              5.21,
+              5.234,
+              5.249,
+              5.274,
+              5.362,
+              5.398,
+              5.415,
+              5.424,
+              5.4590000000000005,
+              5.48,
+              5.535,
+              5.546,
+              5.5600000000000005,
+              5.5920000000000005,
+              5.634,
+              5.644,
+              5.6610000000000005,
+              5.71,
+              5.7330000000000005,
+              5.756,
+              5.78,
+              5.797,
+              5.838,
+              5.853,
+              5.869,
+              5.9430000000000005,
+              5.953,
+              5.964,
+              5.981,
+              5.998
+            ],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "normal_max_score": 0.9153173679967874,
+        "forced_max_score": 21.656931237953057,
+        "gates": {
+          "supported_normal": true,
+          "supported_forced": true,
+          "retain_r10_5ms": true,
+          "retain_coupled_5ms": true,
+          "no_prealarm": true,
+          "false_events_r10": false,
+          "false_events_coupled": false
+        },
+        "passed": false
+      },
+      {
+        "id": "exposed_heavy_oblique_143ms",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "detected",
+            "delay_ms": 143.00000000000023,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coupled": {
+            "outcome": "detected",
+            "delay_ms": 133.9999999999999,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "prediction": {
+            "outcome": "detected",
+            "delay_ms": 133.9999999999999,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "normal_max_score": 0.0,
+        "forced_max_score": 0.0,
+        "gates": {
+          "supported_normal": false,
+          "supported_forced": false,
+          "retain_r10_5ms": true,
+          "retain_coupled_5ms": true,
+          "no_prealarm": true,
+          "false_events_r10": true,
+          "false_events_coupled": true
+        },
+        "passed": false
+      }
+    ],
+    "outcome_gates": {
+      "all_exposed_impacts": false,
+      "sentinel_recovered": true,
+      "tool_controls_unchanged": true,
+      "zero_exact_r10": true,
+      "servo_exact_r10": true
+    },
+    "failure_attribution": [
+      "The predictor separates the old 16 N sentinel from its same-arm normal twin and raises at +21 ms versus R10 +40 ms.",
+      "After a genuine force, the plant remains displaced from the normal-only age-conditioned trajectory. With clear-after-8, the auxiliary decision repeatedly rearms, producing 54 postlanding false rises in the sentinel and additional false rises in two other exposed forced cases.",
+      "This is a recovery-state/model contract failure, not permission to lower or refit the frozen normal envelope using external outcomes.",
+      "Pre-edge forced cases intentionally abstain when the pulse contaminates bounded pre-edge features; a heavy feature-outside-support case also abstains. The unchanged Coupled OR remains active and preserves its positives."
+    ],
+    "delegate_parity": {
+      "zero": true,
+      "servo": true
+    },
+    "limitations": [
+      "finite 34-normal fit",
+      "seven previously exposed external cases only",
+      "no novel impacts",
+      "simulation research not original demo"
+    ]
+  },
+  "physical_corroboration_d": {
+    "schema": "r17-release-coincidence-summary.v1",
+    "status": "STOP_NO_MORE_CANDIDATES_REAL_LATE_FZ_EXCEEDS_FROZEN_FLOOR",
+    "research_not_original_demo": true,
+    "provenance": {
+      "plan_sha256": "d481e7dec438b15a987a32f6d25a3a55e9cbc05d9ca3c0b83ea5b0ef3ef42dd8",
+      "detector_sha256": "f7d94c84943a6c4ac95337671cc4235c169461888ddfb638d6698fdd132f9d6c",
+      "c_model_sha256": "42ee9d2eebc85a424f67d2ab3e45431d4a42ea3cbd89b9e78532fa000aba4b81",
+      "result_wrapper_sha256": "a8256c54dc351098d57247ad5156111ec3653af91163878985e677cc0163617a",
+      "late_wrapper_sha256": "e486ddb4516dc222d1ed12fca58aee4a9d5ef07ef917ace5faad291548a309bb",
+      "cpu": [
+        0
+      ],
+      "context_wrapper_sha256": "5dfff6605ae9b82d97c6d3f52bb332edf42bdb76eb3b487cabf873646fe9634d"
+    },
+    "rule": {
+      "prediction": "unchanged frozen R17C model and support policy",
+      "mismatch": "for each of 6 channels, abs(corrected_innovation-predicted)>1.25*age_direction_envelope",
+      "same_direction": "sign(prediction mismatch)==sign(corrected physical innovation)",
+      "positive_physical_floors": [
+        11.141377260806653,
+        11.141377260806653,
+        2.812605901696073,
+        4.885650078933188,
+        4.885650078933188,
+        0.4058946982950356
+      ],
+      "negative_physical_floors": [
+        11.141377260806653,
+        11.141377260806653,
+        27.842061547424592,
+        4.885650078933188,
+        4.885650078933188,
+        0.4058946982950356
+      ],
+      "decision": "OR across simultaneous qualifying channels, then OR unchanged Coupled; clear after 8 below and may rearm without blind/refractory/latch",
+      "physical_floor_provenance": "unchanged R10/R14 fast force/moment and positive-fz thresholds"
+    },
+    "envelope_floor_comparison": {
+      "envelope_min": [
+        0.3476112709640873,
+        0.2015978354628375,
+        0.14962920206058083,
+        0.06691376623124214,
+        0.15522074817371523,
+        0.0004012893087983534
+      ],
+      "envelope_max": [
+        5.8575629789858255,
+        4.216385590126729,
+        5.363955562876235,
+        1.9126087111635286,
+        2.6238709954019086,
+        0.11511553359203594
+      ],
+      "positive_floor_over_envelope_max": [
+        1.902049931136321,
+        2.6423999946531893,
+        0.5243529460165607,
+        2.5544430757930723,
+        1.86200087103933,
+        3.5259767785423937
+      ],
+      "negative_floor_over_envelope_max": [
+        1.902049931136321,
+        2.6423999946531893,
+        5.1905839302843235,
+        2.5544430757930723,
+        1.86200087103933,
+        3.5259767785423937
+      ]
+    },
+    "normal": {
+      "case_count": 34,
+      "added_rise_count": 0,
+      "lost_coupled_rise_count": 0,
+      "coincidence_sample_count": 0
+    },
+    "sentinel": {
+      "id": "new_surface_normal_release",
+      "role": "exposed_r16_sentinel",
+      "events": {
+        "r10": {
+          "outcome": "detected",
+          "delay_ms": 40.000000000000036,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "raw_r15": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "D_coupled": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "coincidence": {
+          "outcome": "detected",
+          "delay_ms": 28.999999999999915,
+          "prealarm": false,
+          "false_alarms": 2,
+          "false_alarm_times": [
+            5.417,
+            5.509
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "false_event_match": {
+        "r10": {
+          "passed": false,
+          "pairs": [],
+          "unmatched_candidate": 5.417,
+          "tolerance_ms": 20.0
+        },
+        "raw_r15": {
+          "passed": false,
+          "pairs": [],
+          "unmatched_candidate": 5.417,
+          "tolerance_ms": 20.0
+        },
+        "D_coupled": {
+          "passed": false,
+          "pairs": [],
+          "unmatched_candidate": 5.417,
+          "tolerance_ms": 20.0
+        }
+      },
+      "coincidence_times_s": [
+        3.969,
+        3.97,
+        3.971,
+        3.973,
+        3.974,
+        3.975,
+        3.977,
+        3.978,
+        3.979,
+        3.98,
+        3.982,
+        3.983,
+        3.984,
+        3.986,
+        3.987,
+        3.988,
+        3.989,
+        3.991,
+        3.992,
+        3.994,
+        3.996,
+        3.997,
+        3.998,
+        3.999,
+        4.001,
+        4.006,
+        4.016,
+        5.417,
+        5.509
+      ],
+      "max_physical_ratio": 3.7238424900202585,
+      "max_mismatch_ratio": 15.841999030995131,
+      "gates": {
+        "no_prealarm": true,
+        "retain_r10_5ms": true,
+        "false_events_r10": false,
+        "retain_raw_r15_5ms": true,
+        "false_events_raw_r15": false,
+        "retain_D_coupled_5ms": true,
+        "false_events_D_coupled": false
+      },
+      "passed": false
+    },
+    "all_exposed_rows": [
+      {
+        "id": "new_weak_oblique_pre",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "raw_r15": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "D_coupled": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coincidence": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "false_event_match": {
+          "r10": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          },
+          "raw_r15": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          },
+          "D_coupled": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          }
+        },
+        "coincidence_times_s": [],
+        "max_physical_ratio": 0.0,
+        "max_mismatch_ratio": 0.0,
+        "gates": {
+          "no_prealarm": true,
+          "retain_r10_5ms": true,
+          "false_events_r10": true,
+          "retain_raw_r15_5ms": true,
+          "false_events_raw_r15": true,
+          "retain_D_coupled_5ms": true,
+          "false_events_D_coupled": true
+        },
+        "passed": true
+      },
+      {
+        "id": "new_vertical_pre",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          },
+          "raw_r15": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          },
+          "D_coupled": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          },
+          "coincidence": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": true,
+            "tool_detected": true,
+            "tool_prealarm": false,
+            "tool_delay_ms": 11.00000000000012
+          }
+        },
+        "false_event_match": {
+          "r10": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          },
+          "raw_r15": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          },
+          "D_coupled": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          }
+        },
+        "coincidence_times_s": [],
+        "max_physical_ratio": 0.0,
+        "max_mismatch_ratio": 0.0,
+        "gates": {
+          "no_prealarm": true,
+          "retain_r10_5ms": true,
+          "false_events_r10": true,
+          "retain_raw_r15_5ms": true,
+          "false_events_raw_r15": true,
+          "retain_D_coupled_5ms": true,
+          "false_events_D_coupled": true
+        },
+        "passed": true
+      },
+      {
+        "id": "new_surface_normal_release",
+        "role": "exposed_r16_sentinel",
+        "events": {
+          "r10": {
+            "outcome": "detected",
+            "delay_ms": 40.000000000000036,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "raw_r15": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "D_coupled": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coincidence": {
+            "outcome": "detected",
+            "delay_ms": 28.999999999999915,
+            "prealarm": false,
+            "false_alarms": 2,
+            "false_alarm_times": [
+              5.417,
+              5.509
+            ],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "false_event_match": {
+          "r10": {
+            "passed": false,
+            "pairs": [],
+            "unmatched_candidate": 5.417,
+            "tolerance_ms": 20.0
+          },
+          "raw_r15": {
+            "passed": false,
+            "pairs": [],
+            "unmatched_candidate": 5.417,
+            "tolerance_ms": 20.0
+          },
+          "D_coupled": {
+            "passed": false,
+            "pairs": [],
+            "unmatched_candidate": 5.417,
+            "tolerance_ms": 20.0
+          }
+        },
+        "coincidence_times_s": [
+          3.969,
+          3.97,
+          3.971,
+          3.973,
+          3.974,
+          3.975,
+          3.977,
+          3.978,
+          3.979,
+          3.98,
+          3.982,
+          3.983,
+          3.984,
+          3.986,
+          3.987,
+          3.988,
+          3.989,
+          3.991,
+          3.992,
+          3.994,
+          3.996,
+          3.997,
+          3.998,
+          3.999,
+          4.001,
+          4.006,
+          4.016,
+          5.417,
+          5.509
+        ],
+        "max_physical_ratio": 3.7238424900202585,
+        "max_mismatch_ratio": 15.841999030995131,
+        "gates": {
+          "no_prealarm": true,
+          "retain_r10_5ms": true,
+          "false_events_r10": false,
+          "retain_raw_r15_5ms": true,
+          "false_events_raw_r15": false,
+          "retain_D_coupled_5ms": true,
+          "false_events_D_coupled": false
+        },
+        "passed": false
+      },
+      {
+        "id": "new_off_release_pre",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "raw_r15": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "D_coupled": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coincidence": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "false_event_match": {
+          "r10": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          },
+          "raw_r15": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          },
+          "D_coupled": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          }
+        },
+        "coincidence_times_s": [],
+        "max_physical_ratio": 0.0,
+        "max_mismatch_ratio": 0.0,
+        "gates": {
+          "no_prealarm": true,
+          "retain_r10_5ms": true,
+          "false_events_r10": true,
+          "retain_raw_r15_5ms": true,
+          "false_events_raw_r15": true,
+          "retain_D_coupled_5ms": true,
+          "false_events_D_coupled": true
+        },
+        "passed": true
+      },
+      {
+        "id": "new_oblique_post",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "raw_r15": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "D_coupled": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coincidence": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 1,
+            "false_alarm_times": [
+              5.3580000000000005
+            ],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "false_event_match": {
+          "r10": {
+            "passed": false,
+            "pairs": [],
+            "unmatched_candidate": 5.3580000000000005,
+            "tolerance_ms": 20.0
+          },
+          "raw_r15": {
+            "passed": false,
+            "pairs": [],
+            "unmatched_candidate": 5.3580000000000005,
+            "tolerance_ms": 20.0
+          },
+          "D_coupled": {
+            "passed": false,
+            "pairs": [],
+            "unmatched_candidate": 5.3580000000000005,
+            "tolerance_ms": 20.0
+          }
+        },
+        "coincidence_times_s": [
+          5.3580000000000005
+        ],
+        "max_physical_ratio": 2.445551536992841,
+        "max_mismatch_ratio": 6.611868235181161,
+        "gates": {
+          "no_prealarm": true,
+          "retain_r10_5ms": true,
+          "false_events_r10": false,
+          "retain_raw_r15_5ms": true,
+          "false_events_raw_r15": false,
+          "retain_D_coupled_5ms": true,
+          "false_events_D_coupled": false
+        },
+        "passed": false
+      },
+      {
+        "id": "new_positive_heavy",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "detected",
+            "delay_ms": 30.00000000000025,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "raw_r15": {
+            "outcome": "detected",
+            "delay_ms": 28.00000000000047,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "D_coupled": {
+            "outcome": "detected",
+            "delay_ms": 28.00000000000047,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coincidence": {
+            "outcome": "detected",
+            "delay_ms": 18.000000000000682,
+            "prealarm": false,
+            "false_alarms": 1,
+            "false_alarm_times": [
+              5.37
+            ],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "false_event_match": {
+          "r10": {
+            "passed": false,
+            "pairs": [],
+            "unmatched_candidate": 5.37,
+            "tolerance_ms": 20.0
+          },
+          "raw_r15": {
+            "passed": false,
+            "pairs": [],
+            "unmatched_candidate": 5.37,
+            "tolerance_ms": 20.0
+          },
+          "D_coupled": {
+            "passed": false,
+            "pairs": [],
+            "unmatched_candidate": 5.37,
+            "tolerance_ms": 20.0
+          }
+        },
+        "coincidence_times_s": [
+          4.038,
+          4.039,
+          4.041,
+          4.042,
+          4.043,
+          4.0440000000000005,
+          4.046,
+          4.047,
+          4.048,
+          4.049,
+          4.05,
+          4.051,
+          4.0520000000000005,
+          4.053,
+          4.054,
+          4.055,
+          4.056,
+          4.057,
+          4.058,
+          4.0600000000000005,
+          4.061,
+          4.062,
+          4.063,
+          4.064,
+          4.065,
+          4.066,
+          4.067,
+          4.069,
+          4.07,
+          4.071,
+          4.073,
+          4.074,
+          4.075,
+          4.0760000000000005,
+          4.077,
+          4.078,
+          4.079,
+          4.08,
+          4.081,
+          4.082,
+          4.083,
+          4.085,
+          4.086,
+          4.088,
+          4.089,
+          4.095,
+          4.103,
+          5.37
+        ],
+        "max_physical_ratio": 3.7543832464357187,
+        "max_mismatch_ratio": 21.656931237953057,
+        "gates": {
+          "no_prealarm": true,
+          "retain_r10_5ms": true,
+          "false_events_r10": false,
+          "retain_raw_r15_5ms": true,
+          "false_events_raw_r15": false,
+          "retain_D_coupled_5ms": true,
+          "false_events_D_coupled": false
+        },
+        "passed": false
+      },
+      {
+        "id": "exposed_heavy_oblique_143ms",
+        "role": "exposed_r16_control",
+        "events": {
+          "r10": {
+            "outcome": "detected",
+            "delay_ms": 143.00000000000023,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "raw_r15": {
+            "outcome": "missed",
+            "delay_ms": null,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "D_coupled": {
+            "outcome": "detected",
+            "delay_ms": 133.9999999999999,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          },
+          "coincidence": {
+            "outcome": "detected",
+            "delay_ms": 133.9999999999999,
+            "prealarm": false,
+            "false_alarms": 0,
+            "false_alarm_times": [],
+            "tool_present": false,
+            "tool_detected": false,
+            "tool_prealarm": false,
+            "tool_delay_ms": null
+          }
+        },
+        "false_event_match": {
+          "r10": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          },
+          "raw_r15": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          },
+          "D_coupled": {
+            "passed": true,
+            "pairs": [],
+            "unmatched_candidate": null,
+            "tolerance_ms": 20.0
+          }
+        },
+        "coincidence_times_s": [],
+        "max_physical_ratio": 0.0,
+        "max_mismatch_ratio": 0.0,
+        "gates": {
+          "no_prealarm": true,
+          "retain_r10_5ms": true,
+          "false_events_r10": true,
+          "retain_raw_r15_5ms": true,
+          "false_events_raw_r15": true,
+          "retain_D_coupled_5ms": true,
+          "false_events_D_coupled": true
+        },
+        "passed": true
+      }
+    ],
+    "tool_rows": [
+      {
+        "id": "ec2:up",
+        "coupled": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 10.000000000000009
+        },
+        "coincidence": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 10.000000000000009
+        },
+        "passed": true
+      },
+      {
+        "id": "pc_light_up",
+        "coupled": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.00000000000012
+        },
+        "coincidence": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.00000000000012
+        },
+        "passed": true
+      }
+    ],
+    "delegate_parity": {
+      "zero": true,
+      "servo": true
+    },
+    "gates": {
+      "normal_no_added_or_lost": true,
+      "all_exposed_impacts": false,
+      "sentinel_recovered": true,
+      "tool_controls_unchanged": true,
+      "zero_exact_r10": true,
+      "servo_exact_r10": true
+    },
+    "late_physical_attribution": [
+      {
+        "id": "new_surface_normal_release",
+        "event": {
+          "outcome": "detected",
+          "delay_ms": 28.999999999999915,
+          "prealarm": false,
+          "false_alarms": 2,
+          "false_alarm_times": [
+            5.417,
+            5.509
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "late_false_details": [
+          {
+            "time_s": 5.417,
+            "after_grip_release_ms": 1517.0,
+            "channels": [
+              "fz_N"
+            ],
+            "corrected_physical": {
+              "fx_N": -3.195184574735417,
+              "fy_N": 1.0447093583702767,
+              "fz_N": 2.943838681120558,
+              "mx_Nm": -0.29325382514731446,
+              "my_Nm": -1.458637699029153,
+              "mz_Nm": -0.0012822118254154874
+            },
+            "physical_floor": {
+              "fx_N": 11.141377260806653,
+              "fy_N": 11.141377260806653,
+              "fz_N": 2.812605901696073,
+              "mx_Nm": 4.885650078933188,
+              "my_Nm": 4.885650078933188,
+              "mz_Nm": 0.4058946982950356
+            },
+            "physical_ratio": {
+              "fx_N": 0.28678542158118076,
+              "fy_N": 0.09376842143613384,
+              "fz_N": 1.0466587869083785,
+              "mx_Nm": 0.060023501562631,
+              "my_Nm": 0.2985554993630767,
+              "mz_Nm": 0.0031589765296305417
+            },
+            "prediction_mismatch": {
+              "fx_N": -1.335174765890333,
+              "fy_N": 0.29193686752783243,
+              "fz_N": 1.6016077647972344,
+              "mx_Nm": -0.001825719528679326,
+              "my_Nm": -0.6985573272373107,
+              "mz_Nm": 0.0024067547945184602
+            },
+            "prediction_envelope": {
+              "fx_N": 2.1199264553932715,
+              "fy_N": 1.4944355525581305,
+              "fz_N": 1.2119655801528642,
+              "mx_Nm": 0.6215954438491875,
+              "my_Nm": 0.7714742251131055,
+              "mz_Nm": 0.0029749874542322778
+            },
+            "mismatch_ratio": {
+              "fx_N": 0.6298212669093005,
+              "fy_N": 0.19534925211602705,
+              "fz_N": 1.3214960812626586,
+              "mx_Nm": 0.0029371507573699093,
+              "my_Nm": 0.9054836888878504,
+              "mz_Nm": 0.8089966198326524
+            }
+          },
+          {
+            "time_s": 5.509,
+            "after_grip_release_ms": 1609.0000000000005,
+            "channels": [
+              "fz_N"
+            ],
+            "corrected_physical": {
+              "fx_N": -5.432900660652084,
+              "fy_N": 0.8670437642082793,
+              "fz_N": 3.6311341295703956,
+              "mx_Nm": -0.21561733711469283,
+              "my_Nm": -2.456655399681428,
+              "mz_Nm": 0.0046164138535251375
+            },
+            "physical_floor": {
+              "fx_N": 11.141377260806653,
+              "fy_N": 11.141377260806653,
+              "fz_N": 2.812605901696073,
+              "mx_Nm": 4.885650078933188,
+              "my_Nm": 4.885650078933188,
+              "mz_Nm": 0.4058946982950356
+            },
+            "physical_ratio": {
+              "fx_N": 0.4876327704801851,
+              "fy_N": 0.07782195539310766,
+              "fz_N": 1.2910213007022169,
+              "mx_Nm": 0.04413278348452131,
+              "my_Nm": 0.5028308126843694,
+              "mz_Nm": 0.011373427327128012
+            },
+            "prediction_mismatch": {
+              "fx_N": -0.9270979816480249,
+              "fy_N": 0.1540180567838726,
+              "fz_N": 1.2544597733974716,
+              "mx_Nm": -0.008882696481654517,
+              "my_Nm": -0.36995672901785026,
+              "mz_Nm": 0.0007212760177298947
+            },
+            "prediction_envelope": {
+              "fx_N": 0.9653500131246471,
+              "fy_N": 1.4894746051468615,
+              "fz_N": 0.8981904176902298,
+              "mx_Nm": 0.6163608459829485,
+              "my_Nm": 0.46473741999317286,
+              "mz_Nm": 0.002649948557319989
+            },
+            "mismatch_ratio": {
+              "fx_N": 0.9603749614579609,
+              "fy_N": 0.10340428514300617,
+              "fz_N": 1.3966523675719205,
+              "mx_Nm": 0.0144115197121075,
+              "my_Nm": 0.7960553919313944,
+              "mz_Nm": 0.27218491307595544
+            }
+          }
+        ]
+      },
+      {
+        "id": "new_oblique_post",
+        "event": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 1,
+          "false_alarm_times": [
+            5.3580000000000005
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "late_false_details": [
+          {
+            "time_s": 5.3580000000000005,
+            "after_grip_release_ms": 1458.0000000000007,
+            "channels": [
+              "fz_N"
+            ],
+            "corrected_physical": {
+              "fx_N": -6.90235644079811,
+              "fy_N": 1.4843089135330865,
+              "fz_N": 3.1945423823625116,
+              "mx_Nm": -0.49371283567108665,
+              "my_Nm": -3.09241460281442,
+              "mz_Nm": 0.015360029699007668
+            },
+            "physical_floor": {
+              "fx_N": 11.141377260806653,
+              "fy_N": 11.141377260806653,
+              "fz_N": 2.812605901696073,
+              "mx_Nm": 4.885650078933188,
+              "my_Nm": 4.885650078933188,
+              "mz_Nm": 0.4058946982950356
+            },
+            "physical_ratio": {
+              "fx_N": 0.6195245236941531,
+              "fy_N": 0.13322490377869317,
+              "fz_N": 1.1357945243719076,
+              "mx_Nm": 0.10105366280732325,
+              "my_Nm": 0.6329586754787948,
+              "mz_Nm": 0.037842400414510494
+            },
+            "prediction_mismatch": {
+              "fx_N": -1.9828856459034583,
+              "fy_N": 0.5104569133793857,
+              "fz_N": 0.8700076616597765,
+              "mx_Nm": -0.24016725609755957,
+              "my_Nm": -0.8641277437978867,
+              "mz_Nm": 0.0014353232345316394
+            },
+            "prediction_envelope": {
+              "fx_N": 1.856273008647113,
+              "fy_N": 1.4620621544280887,
+              "fz_N": 0.6195660930771325,
+              "mx_Nm": 0.613116459592117,
+              "my_Nm": 0.6976781576097939,
+              "mz_Nm": 0.003763427570647123
+            },
+            "mismatch_ratio": {
+              "fx_N": 1.0682079826978808,
+              "fy_N": 0.34913489268112535,
+              "fz_N": 1.4042209077950065,
+              "mx_Nm": 0.3917155580154114,
+              "my_Nm": 1.2385764616142487,
+              "mz_Nm": 0.38138723479799425
+            }
+          }
+        ]
+      },
+      {
+        "id": "new_positive_heavy",
+        "event": {
+          "outcome": "detected",
+          "delay_ms": 18.000000000000682,
+          "prealarm": false,
+          "false_alarms": 1,
+          "false_alarm_times": [
+            5.37
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "late_false_details": [
+          {
+            "time_s": 5.37,
+            "after_grip_release_ms": 1470.0000000000002,
+            "channels": [
+              "fz_N"
+            ],
+            "corrected_physical": {
+              "fx_N": -3.301697131957232,
+              "fy_N": -0.13721829457036394,
+              "fz_N": 3.648871841460656,
+              "mx_Nm": 0.2081529432147995,
+              "my_Nm": -1.5147122659320162,
+              "mz_Nm": -0.009308265109023064
+            },
+            "physical_floor": {
+              "fx_N": 11.141377260806653,
+              "fy_N": 11.141377260806653,
+              "fz_N": 2.812605901696073,
+              "mx_Nm": 4.885650078933188,
+              "my_Nm": 4.885650078933188,
+              "mz_Nm": 0.4058946982950356
+            },
+            "physical_ratio": {
+              "fx_N": 0.2963455104937524,
+              "fy_N": 0.01231609803332601,
+              "fz_N": 1.297327805242922,
+              "mx_Nm": 0.04260496348527911,
+              "my_Nm": 0.3100329007317616,
+              "mz_Nm": 0.0229327092670156
+            },
+            "prediction_mismatch": {
+              "fx_N": -2.0540869768713117,
+              "fy_N": 0.4260574764658952,
+              "fz_N": 1.6939513956343653,
+              "mx_Nm": -0.054877839810487106,
+              "my_Nm": -0.7770234630160642,
+              "mz_Nm": 0.0007105744796249026
+            },
+            "prediction_envelope": {
+              "fx_N": 2.5871756603925387,
+              "fy_N": 0.8204118671100281,
+              "fz_N": 1.280704552040727,
+              "mx_Nm": 0.3596280126756661,
+              "my_Nm": 1.137183440546939,
+              "mz_Nm": 0.0019960716872727633
+            },
+            "mismatch_ratio": {
+              "fx_N": 0.7939495598685617,
+              "fy_N": 0.5193214451745067,
+              "fz_N": 1.3226714880767416,
+              "mx_Nm": 0.15259612120365942,
+              "my_Nm": 0.683287704789605,
+              "mz_Nm": 0.35598645286921626
+            }
+          }
+        ]
+      }
+    ],
+    "failure_cause": "Every remaining late false rise is same-direction positive fz whose actual corrected physical innovation exceeds the unchanged 2.812605901696073 N floor: 2.94384, 3.63113, 3.19454, and 3.64887 N. Their normal-prediction mismatch ratios are also 1.3215--1.4042. These are real post-event impulses, not vanishing-envelope-only artifacts. Raising the floor from exposed outcomes is forbidden.",
+    "strengths": [
+      "sentinel genuine detection +29 ms versus R10 +40 ms",
+      "all R10/raw-R15/D positives retained <=+5 ms",
+      "34 normals no added/lost rise and zero coincidence samples",
+      "tool/zero/servo exact"
+    ],
+    "stop": "No more detector candidates without new evidence; no new external cases opened.",
+    "contact_phase_attribution": [
+      {
+        "id": "new_surface_normal_release",
+        "collision": [
+          3.94,
+          [
+            0.0,
+            0.0,
+            16.0
+          ]
+        ],
+        "normal_rises_s": [],
+        "forced_rises_s": [
+          3.969,
+          4.016,
+          5.417,
+          5.509
+        ],
+        "event": {
+          "outcome": "detected",
+          "delay_ms": 28.999999999999915,
+          "prealarm": false,
+          "false_alarms": 2,
+          "false_alarm_times": [
+            5.417,
+            5.509
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "late_false_details": [
+          {
+            "time_s": 5.417,
+            "after_grip_release_ms": 1517.0,
+            "nominal_phase": "return_hold_after_final_waypoint",
+            "actual_inputs_and_contacts": {
+              "f_ext_N": 0.0,
+              "f_tool_N": 0.0,
+              "f_table_N": 52.777799999943994,
+              "grip": false,
+              "input_pulse_active": false,
+              "flange_or_tool_contact": false,
+              "released_box_table_support": true
+            },
+            "normal_twin_same_time": {
+              "f_ext_N": 0.0,
+              "f_tool_N": 0.0,
+              "f_table_N": 52.777799999943994,
+              "grip": false,
+              "coincidence_channels": [],
+              "corrected_physical": {
+                "fx_N": -1.8388800248433925,
+                "fy_N": 1.148176282309607,
+                "fz_N": 1.232658453027379,
+                "mx_Nm": -0.41248539871908607,
+                "my_Nm": -0.827167778017111,
+                "mz_Nm": -0.0029356686953236235
+              },
+              "physical_ratio": {
+                "fx_N": 0.16504961476461616,
+                "fy_N": 0.10305514797965627,
+                "fz_N": 0.4382620587847215,
+                "mx_Nm": 0.08442794552514388,
+                "my_Nm": 0.16930557134737087,
+                "mz_Nm": 0.007232586943497727
+              },
+              "mismatch_ratio": {
+                "fx_N": 0.009967225017611034,
+                "fy_N": 0.26458403695651,
+                "fz_N": 0.090408890392848,
+                "mx_Nm": 0.1947525425070877,
+                "my_Nm": 0.08696000986349622,
+                "mz_Nm": 0.25321045422852695
+              }
+            },
+            "channels": [
+              "fz_N"
+            ],
+            "corrected_physical": {
+              "fx_N": -3.195184574735417,
+              "fy_N": 1.0447093583702767,
+              "fz_N": 2.943838681120558,
+              "mx_Nm": -0.29325382514731446,
+              "my_Nm": -1.458637699029153,
+              "mz_Nm": -0.0012822118254154874
+            },
+            "physical_floor": {
+              "fx_N": 11.141377260806653,
+              "fy_N": 11.141377260806653,
+              "fz_N": 2.812605901696073,
+              "mx_Nm": 4.885650078933188,
+              "my_Nm": 4.885650078933188,
+              "mz_Nm": 0.4058946982950356
+            },
+            "physical_ratio": {
+              "fx_N": 0.28678542158118076,
+              "fy_N": 0.09376842143613384,
+              "fz_N": 1.0466587869083785,
+              "mx_Nm": 0.060023501562631,
+              "my_Nm": 0.2985554993630767,
+              "mz_Nm": 0.0031589765296305417
+            },
+            "prediction_mismatch": {
+              "fx_N": -1.335174765890333,
+              "fy_N": 0.29193686752783243,
+              "fz_N": 1.6016077647972344,
+              "mx_Nm": -0.001825719528679326,
+              "my_Nm": -0.6985573272373107,
+              "mz_Nm": 0.0024067547945184602
+            },
+            "prediction_envelope": {
+              "fx_N": 2.1199264553932715,
+              "fy_N": 1.4944355525581305,
+              "fz_N": 1.2119655801528642,
+              "mx_Nm": 0.6215954438491875,
+              "my_Nm": 0.7714742251131055,
+              "mz_Nm": 0.0029749874542322778
+            },
+            "mismatch_ratio": {
+              "fx_N": 0.6298212669093005,
+              "fy_N": 0.19534925211602705,
+              "fz_N": 1.3214960812626586,
+              "mx_Nm": 0.0029371507573699093,
+              "my_Nm": 0.9054836888878504,
+              "mz_Nm": 0.8089966198326524
+            }
+          },
+          {
+            "time_s": 5.509,
+            "after_grip_release_ms": 1609.0000000000005,
+            "nominal_phase": "return_hold_after_final_waypoint",
+            "actual_inputs_and_contacts": {
+              "f_ext_N": 0.0,
+              "f_tool_N": 0.0,
+              "f_table_N": 52.777800035454085,
+              "grip": false,
+              "input_pulse_active": false,
+              "flange_or_tool_contact": false,
+              "released_box_table_support": true
+            },
+            "normal_twin_same_time": {
+              "f_ext_N": 0.0,
+              "f_tool_N": 0.0,
+              "f_table_N": 52.777800035454085,
+              "grip": false,
+              "coincidence_channels": [],
+              "corrected_physical": {
+                "fx_N": -5.386609035888375,
+                "fy_N": 1.0783910631434348,
+                "fz_N": 2.8073382007620205,
+                "mx_Nm": -0.3434024757695742,
+                "my_Nm": -2.4161059745281257,
+                "mz_Nm": 0.004274536557659836
+              },
+              "physical_ratio": {
+                "fx_N": 0.483477842083087,
+                "fy_N": 0.09679154003132263,
+                "fz_N": 0.9981271101895662,
+                "mx_Nm": 0.07028798015034231,
+                "my_Nm": 0.49453111366823416,
+                "mz_Nm": 0.010531146564897412
+              },
+              "mismatch_ratio": {
+                "fx_N": 0.9124217588533714,
+                "fy_N": 0.2452981436920861,
+                "fz_N": 0.47947944679323545,
+                "mx_Nm": 0.22173347970957388,
+                "my_Nm": 0.7088030567226264,
+                "mz_Nm": 0.14317210831001778
+              }
+            },
+            "channels": [
+              "fz_N"
+            ],
+            "corrected_physical": {
+              "fx_N": -5.432900660652084,
+              "fy_N": 0.8670437642082793,
+              "fz_N": 3.6311341295703956,
+              "mx_Nm": -0.21561733711469283,
+              "my_Nm": -2.456655399681428,
+              "mz_Nm": 0.0046164138535251375
+            },
+            "physical_floor": {
+              "fx_N": 11.141377260806653,
+              "fy_N": 11.141377260806653,
+              "fz_N": 2.812605901696073,
+              "mx_Nm": 4.885650078933188,
+              "my_Nm": 4.885650078933188,
+              "mz_Nm": 0.4058946982950356
+            },
+            "physical_ratio": {
+              "fx_N": 0.4876327704801851,
+              "fy_N": 0.07782195539310766,
+              "fz_N": 1.2910213007022169,
+              "mx_Nm": 0.04413278348452131,
+              "my_Nm": 0.5028308126843694,
+              "mz_Nm": 0.011373427327128012
+            },
+            "prediction_mismatch": {
+              "fx_N": -0.9270979816480249,
+              "fy_N": 0.1540180567838726,
+              "fz_N": 1.2544597733974716,
+              "mx_Nm": -0.008882696481654517,
+              "my_Nm": -0.36995672901785026,
+              "mz_Nm": 0.0007212760177298947
+            },
+            "prediction_envelope": {
+              "fx_N": 0.9653500131246471,
+              "fy_N": 1.4894746051468615,
+              "fz_N": 0.8981904176902298,
+              "mx_Nm": 0.6163608459829485,
+              "my_Nm": 0.46473741999317286,
+              "mz_Nm": 0.002649948557319989
+            },
+            "mismatch_ratio": {
+              "fx_N": 0.9603749614579609,
+              "fy_N": 0.10340428514300617,
+              "fz_N": 1.3966523675719205,
+              "mx_Nm": 0.0144115197121075,
+              "my_Nm": 0.7960553919313944,
+              "mz_Nm": 0.27218491307595544
+            }
+          }
+        ]
+      },
+      {
+        "id": "new_oblique_post",
+        "collision": [
+          4.08,
+          [
+            -7.0,
+            9.0,
+            0.0
+          ]
+        ],
+        "normal_rises_s": [],
+        "forced_rises_s": [
+          5.3580000000000005
+        ],
+        "event": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 1,
+          "false_alarm_times": [
+            5.3580000000000005
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "late_false_details": [
+          {
+            "time_s": 5.3580000000000005,
+            "after_grip_release_ms": 1458.0000000000007,
+            "nominal_phase": "return_hold_after_final_waypoint",
+            "actual_inputs_and_contacts": {
+              "f_ext_N": 0.0,
+              "f_tool_N": 0.0,
+              "f_table_N": 36.493199980936936,
+              "grip": false,
+              "input_pulse_active": false,
+              "flange_or_tool_contact": false,
+              "released_box_table_support": true
+            },
+            "normal_twin_same_time": {
+              "f_ext_N": 0.0,
+              "f_tool_N": 0.0,
+              "f_table_N": 36.493199980936936,
+              "grip": false,
+              "coincidence_channels": [],
+              "corrected_physical": {
+                "fx_N": -4.52106918632221,
+                "fy_N": 1.0940542450995938,
+                "fz_N": 2.222763948487464,
+                "mx_Nm": -0.3680482933887454,
+                "my_Nm": -2.036751493822695,
+                "mz_Nm": 0.014494905052463175
+              },
+              "physical_ratio": {
+                "fx_N": 0.405790871315929,
+                "fy_N": 0.09819739691862679,
+                "fz_N": 0.7902863131827609,
+                "mx_Nm": 0.07533251203883005,
+                "my_Nm": 0.41688443931036345,
+                "mz_Nm": 0.03571099872294257
+              },
+              "mismatch_ratio": {
+                "fx_N": 0.21462446887745495,
+                "fy_N": 0.08221418260628753,
+                "fz_N": 0.16426136509475042,
+                "mx_Nm": 0.18675524367979388,
+                "my_Nm": 0.2745325521584733,
+                "mz_Nm": 0.151510445540234
+              }
+            },
+            "channels": [
+              "fz_N"
+            ],
+            "corrected_physical": {
+              "fx_N": -6.90235644079811,
+              "fy_N": 1.4843089135330865,
+              "fz_N": 3.1945423823625116,
+              "mx_Nm": -0.49371283567108665,
+              "my_Nm": -3.09241460281442,
+              "mz_Nm": 0.015360029699007668
+            },
+            "physical_floor": {
+              "fx_N": 11.141377260806653,
+              "fy_N": 11.141377260806653,
+              "fz_N": 2.812605901696073,
+              "mx_Nm": 4.885650078933188,
+              "my_Nm": 4.885650078933188,
+              "mz_Nm": 0.4058946982950356
+            },
+            "physical_ratio": {
+              "fx_N": 0.6195245236941531,
+              "fy_N": 0.13322490377869317,
+              "fz_N": 1.1357945243719076,
+              "mx_Nm": 0.10105366280732325,
+              "my_Nm": 0.6329586754787948,
+              "mz_Nm": 0.037842400414510494
+            },
+            "prediction_mismatch": {
+              "fx_N": -1.9828856459034583,
+              "fy_N": 0.5104569133793857,
+              "fz_N": 0.8700076616597765,
+              "mx_Nm": -0.24016725609755957,
+              "my_Nm": -0.8641277437978867,
+              "mz_Nm": 0.0014353232345316394
+            },
+            "prediction_envelope": {
+              "fx_N": 1.856273008647113,
+              "fy_N": 1.4620621544280887,
+              "fz_N": 0.6195660930771325,
+              "mx_Nm": 0.613116459592117,
+              "my_Nm": 0.6976781576097939,
+              "mz_Nm": 0.003763427570647123
+            },
+            "mismatch_ratio": {
+              "fx_N": 1.0682079826978808,
+              "fy_N": 0.34913489268112535,
+              "fz_N": 1.4042209077950065,
+              "mx_Nm": 0.3917155580154114,
+              "my_Nm": 1.2385764616142487,
+              "mz_Nm": 0.38138723479799425
+            }
+          }
+        ]
+      },
+      {
+        "id": "new_positive_heavy",
+        "collision": [
+          4.02,
+          [
+            0.0,
+            0.0,
+            20.0
+          ]
+        ],
+        "normal_rises_s": [],
+        "forced_rises_s": [
+          4.038,
+          5.37
+        ],
+        "event": {
+          "outcome": "detected",
+          "delay_ms": 18.000000000000682,
+          "prealarm": false,
+          "false_alarms": 1,
+          "false_alarm_times": [
+            5.37
+          ],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "late_false_details": [
+          {
+            "time_s": 5.37,
+            "after_grip_release_ms": 1470.0000000000002,
+            "nominal_phase": "return_hold_after_final_waypoint",
+            "actual_inputs_and_contacts": {
+              "f_ext_N": 0.0,
+              "f_tool_N": 0.0,
+              "f_table_N": 72.79020000978807,
+              "grip": false,
+              "input_pulse_active": false,
+              "flange_or_tool_contact": false,
+              "released_box_table_support": true
+            },
+            "normal_twin_same_time": {
+              "f_ext_N": 0.0,
+              "f_tool_N": 0.0,
+              "f_table_N": 72.79020000978807,
+              "grip": false,
+              "coincidence_channels": [],
+              "corrected_physical": {
+                "fx_N": -1.771019145457565,
+                "fy_N": -0.2136738533832867,
+                "fz_N": 2.07848146333914,
+                "mx_Nm": 0.17093644810163489,
+                "my_Nm": -0.8124620451023702,
+                "mz_Nm": -0.009581583953716548
+              },
+              "physical_ratio": {
+                "fx_N": 0.15895872691500085,
+                "fy_N": 0.01917840571963689,
+                "fz_N": 0.7389878056096528,
+                "mx_Nm": 0.0349874520974617,
+                "my_Nm": 0.1662955864575091,
+                "mz_Nm": 0.02360608304066074
+              },
+              "mismatch_ratio": {
+                "fx_N": 0.20230902693798164,
+                "fy_N": 0.4261297668504912,
+                "fz_N": 0.0964789399053529,
+                "mx_Nm": 0.25608220627325784,
+                "my_Nm": 0.0657530170773989,
+                "mz_Nm": 0.21905808179106154
+              }
+            },
+            "channels": [
+              "fz_N"
+            ],
+            "corrected_physical": {
+              "fx_N": -3.301697131957232,
+              "fy_N": -0.13721829457036394,
+              "fz_N": 3.648871841460656,
+              "mx_Nm": 0.2081529432147995,
+              "my_Nm": -1.5147122659320162,
+              "mz_Nm": -0.009308265109023064
+            },
+            "physical_floor": {
+              "fx_N": 11.141377260806653,
+              "fy_N": 11.141377260806653,
+              "fz_N": 2.812605901696073,
+              "mx_Nm": 4.885650078933188,
+              "my_Nm": 4.885650078933188,
+              "mz_Nm": 0.4058946982950356
+            },
+            "physical_ratio": {
+              "fx_N": 0.2963455104937524,
+              "fy_N": 0.01231609803332601,
+              "fz_N": 1.297327805242922,
+              "mx_Nm": 0.04260496348527911,
+              "my_Nm": 0.3100329007317616,
+              "mz_Nm": 0.0229327092670156
+            },
+            "prediction_mismatch": {
+              "fx_N": -2.0540869768713117,
+              "fy_N": 0.4260574764658952,
+              "fz_N": 1.6939513956343653,
+              "mx_Nm": -0.054877839810487106,
+              "my_Nm": -0.7770234630160642,
+              "mz_Nm": 0.0007105744796249026
+            },
+            "prediction_envelope": {
+              "fx_N": 2.5871756603925387,
+              "fy_N": 0.8204118671100281,
+              "fz_N": 1.280704552040727,
+              "mx_Nm": 0.3596280126756661,
+              "my_Nm": 1.137183440546939,
+              "mz_Nm": 0.0019960716872727633
+            },
+            "mismatch_ratio": {
+              "fx_N": 0.7939495598685617,
+              "fy_N": 0.5193214451745067,
+              "fz_N": 1.3226714880767416,
+              "mx_Nm": 0.15259612120365942,
+              "my_Nm": 0.683287704789605,
+              "mz_Nm": 0.35598645286921626
+            }
+          }
+        ]
+      }
+    ],
+    "contact_conclusion": "All four remaining late rises occur after the 5.3 s final return waypoint with grip=false, f_ext=0 N, and f_tool=0 N. The nonzero f_table equals the released payload weight and is isolated box-on-table support, not flange/tool contact. Normal twins have no rise/coincidence at the same times. Therefore these are force-history-induced robot sensor/model ringdown mismatches, not hidden input pulses or tool contacts. The forced fz values still genuinely exceed the frozen physical floor, so the rule cannot reject them without forbidden outcome-based floor changes."
+  }
+}

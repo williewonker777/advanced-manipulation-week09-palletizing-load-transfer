@@ -1,0 +1,675 @@
+{
+  "benefit": {
+    "no_new_normal_edges": true,
+    "pickup_delays_exact": true,
+    "removed_memory_edges": [
+      3903,
+      3923
+    ]
+  },
+  "causal_findings": {
+    "3903": "C1 counterfactual slow route; fresh released observer has 1/31 residual samples and is unavailable; continuous empty inverse is finite [-3.243,6.179,-31.360]N.",
+    "3923": "C1 counterfactual fast route; fresh released observer has 21/31 residual samples and is unavailable; continuous empty inverse is finite [-2.338,-2.256,0.028]N.",
+    "control_separation": "+29mm 5.25kg has 3903/3923; matched zero-offset has none; mass0 normal retains unrelated 3873; mass8 normal has none.",
+    "offline_limit": "Box/table force coincides offline but cannot certify force on the open arm and was never used online."
+  },
+  "classification": "Disclosed postmortem only; no promotion or further threshold alternative.",
+  "decisive_regressions": [
+    {
+      "candidate": "absolute miss, 0 active samples",
+      "id": "near_quiet_[0.0, 0.0, -15.0]",
+      "meaning": "A genuine same-phase negative-z impulse is observationally admitted as the proposed unloading source and is suppressed.",
+      "memory": "strict attributable +130ms, 79 active samples"
+    },
+    {
+      "candidate": "strict +127ms, 68 active samples",
+      "id": "late_postrelease_[0.0, 0.0, -15.0]",
+      "meaning": "The added observer/reconstruction also violates the +5-sample duration guard (+60).",
+      "memory": "strict +127ms, 8 active samples"
+    }
+  ],
+  "eligible": false,
+  "pins": {
+    "candidate_plan_sha256": "7b74c2b23affd87a4dce9b4dedb9d54303b9da9c0598a7f3c5b142fc185a1152",
+    "candidate_sha256": "edc89c20eeeb469bd16096ed978bbde0d17dd4a35ddd666ba0c3c298d8b7c6c9",
+    "result_sha256": "3da7ec549cdd4123d5b44850bc5b6b4c1e4c1c0b93c7855326a5e169a8cad147",
+    "study_sha256": "0d556ac6ff2e7cbc7cc4c24a3fda94200f646c0891d66436d8f64ba3f5d6f3e2"
+  },
+  "positive_metrics": [
+    {
+      "group": "near_support",
+      "id": "near_support_[15.0, 0.0, 0.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": false,
+          "active_samples": 244,
+          "delays_ms": [
+            96
+          ],
+          "duplicate_rises": 1,
+          "duration_delta_samples_vs_none": 37,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3920,
+            3977
+          ],
+          "strict": false
+        },
+        "candidate": {
+          "absolute_miss": false,
+          "active_samples": 244,
+          "delays_ms": [
+            39,
+            96
+          ],
+          "duplicate_rises": 1,
+          "duration_delta_samples_vs_none": 59,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3920,
+            3977
+          ],
+          "strict": false
+        },
+        "memory": {
+          "absolute_miss": false,
+          "active_samples": 244,
+          "delays_ms": [
+            96
+          ],
+          "duplicate_rises": 1,
+          "duration_delta_samples_vs_none": 37,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3920,
+            3977
+          ],
+          "strict": false
+        }
+      }
+    },
+    {
+      "group": "near_support",
+      "id": "near_support_[-15.0, 0.0, 0.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": true,
+          "active_samples": 232,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 25,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3903
+          ],
+          "strict": false
+        },
+        "candidate": {
+          "absolute_miss": true,
+          "active_samples": 185,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 0,
+          "late_false_rises": 0,
+          "raw_rises": [],
+          "strict": false
+        },
+        "memory": {
+          "absolute_miss": true,
+          "active_samples": 232,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 25,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3903
+          ],
+          "strict": false
+        }
+      }
+    },
+    {
+      "group": "near_support",
+      "id": "near_support_[0.0, 0.0, 15.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": true,
+          "active_samples": 226,
+          "delays_ms": [],
+          "duplicate_rises": 1,
+          "duration_delta_samples_vs_none": 19,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3903,
+            3923
+          ],
+          "strict": false
+        },
+        "candidate": {
+          "absolute_miss": false,
+          "active_samples": 217,
+          "delays_ms": [
+            42
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 32,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3923
+          ],
+          "strict": true
+        },
+        "memory": {
+          "absolute_miss": true,
+          "active_samples": 226,
+          "delays_ms": [],
+          "duplicate_rises": 1,
+          "duration_delta_samples_vs_none": 19,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3903,
+            3923
+          ],
+          "strict": false
+        }
+      }
+    },
+    {
+      "group": "near_support",
+      "id": "near_support_[0.0, 0.0, -15.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": false,
+          "active_samples": 316,
+          "delays_ms": [
+            90
+          ],
+          "duplicate_rises": 1,
+          "duration_delta_samples_vs_none": 109,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3903,
+            3971
+          ],
+          "strict": false
+        },
+        "candidate": {
+          "absolute_miss": false,
+          "active_samples": 283,
+          "delays_ms": [
+            90
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 98,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3971
+          ],
+          "strict": true
+        },
+        "memory": {
+          "absolute_miss": false,
+          "active_samples": 316,
+          "delays_ms": [
+            90
+          ],
+          "duplicate_rises": 1,
+          "duration_delta_samples_vs_none": 109,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3903,
+            3971
+          ],
+          "strict": false
+        }
+      }
+    },
+    {
+      "group": "near_quiet",
+      "id": "near_quiet_[15.0, 0.0, 0.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": false,
+          "active_samples": 27,
+          "delays_ms": [
+            98
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 27,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3979
+          ],
+          "strict": true
+        },
+        "candidate": {
+          "absolute_miss": false,
+          "active_samples": 27,
+          "delays_ms": [
+            98
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 27,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3979
+          ],
+          "strict": true
+        },
+        "memory": {
+          "absolute_miss": false,
+          "active_samples": 27,
+          "delays_ms": [
+            98
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 27,
+          "late_false_rises": 0,
+          "raw_rises": [
+            3979
+          ],
+          "strict": true
+        }
+      }
+    },
+    {
+      "group": "near_quiet",
+      "id": "near_quiet_[-15.0, 0.0, 0.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": true,
+          "active_samples": 0,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 0,
+          "late_false_rises": 0,
+          "raw_rises": [],
+          "strict": false
+        },
+        "candidate": {
+          "absolute_miss": true,
+          "active_samples": 0,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 0,
+          "late_false_rises": 0,
+          "raw_rises": [],
+          "strict": false
+        },
+        "memory": {
+          "absolute_miss": true,
+          "active_samples": 0,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 0,
+          "late_false_rises": 0,
+          "raw_rises": [],
+          "strict": false
+        }
+      }
+    },
+    {
+      "group": "near_quiet",
+      "id": "near_quiet_[0.0, 0.0, 15.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": true,
+          "active_samples": 0,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 0,
+          "late_false_rises": 0,
+          "raw_rises": [],
+          "strict": false
+        },
+        "candidate": {
+          "absolute_miss": true,
+          "active_samples": 0,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 0,
+          "late_false_rises": 0,
+          "raw_rises": [],
+          "strict": false
+        },
+        "memory": {
+          "absolute_miss": true,
+          "active_samples": 0,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 0,
+          "late_false_rises": 0,
+          "raw_rises": [],
+          "strict": false
+        }
+      }
+    },
+    {
+      "group": "near_quiet",
+      "id": "near_quiet_[0.0, 0.0, -15.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": false,
+          "active_samples": 79,
+          "delays_ms": [
+            130
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 79,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4011
+          ],
+          "strict": true
+        },
+        "candidate": {
+          "absolute_miss": true,
+          "active_samples": 0,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 0,
+          "late_false_rises": 0,
+          "raw_rises": [],
+          "strict": false
+        },
+        "memory": {
+          "absolute_miss": false,
+          "active_samples": 79,
+          "delays_ms": [
+            130
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 79,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4011
+          ],
+          "strict": true
+        }
+      }
+    },
+    {
+      "group": "late_postrelease",
+      "id": "late_postrelease_[15.0, 0.0, 0.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": false,
+          "active_samples": 71,
+          "delays_ms": [
+            66
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 71,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4167
+          ],
+          "strict": true
+        },
+        "candidate": {
+          "absolute_miss": false,
+          "active_samples": 71,
+          "delays_ms": [
+            66
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 71,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4167
+          ],
+          "strict": true
+        },
+        "memory": {
+          "absolute_miss": false,
+          "active_samples": 71,
+          "delays_ms": [
+            66
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 71,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4167
+          ],
+          "strict": true
+        }
+      }
+    },
+    {
+      "group": "late_postrelease",
+      "id": "late_postrelease_[-15.0, 0.0, 0.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": false,
+          "active_samples": 8,
+          "delays_ms": [
+            125
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 8,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4226
+          ],
+          "strict": true
+        },
+        "candidate": {
+          "absolute_miss": false,
+          "active_samples": 8,
+          "delays_ms": [
+            125
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 8,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4226
+          ],
+          "strict": true
+        },
+        "memory": {
+          "absolute_miss": false,
+          "active_samples": 8,
+          "delays_ms": [
+            125
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 8,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4226
+          ],
+          "strict": true
+        }
+      }
+    },
+    {
+      "group": "late_postrelease",
+      "id": "late_postrelease_[0.0, 0.0, 15.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": false,
+          "active_samples": 68,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 68,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4139
+          ],
+          "strict": true
+        },
+        "candidate": {
+          "absolute_miss": false,
+          "active_samples": 68,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 68,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4139
+          ],
+          "strict": true
+        },
+        "memory": {
+          "absolute_miss": false,
+          "active_samples": 68,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 68,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4139
+          ],
+          "strict": true
+        }
+      }
+    },
+    {
+      "group": "late_postrelease",
+      "id": "late_postrelease_[0.0, 0.0, -15.0]",
+      "records": {
+        "c1": {
+          "absolute_miss": false,
+          "active_samples": 8,
+          "delays_ms": [
+            127
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 8,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4228
+          ],
+          "strict": true
+        },
+        "candidate": {
+          "absolute_miss": false,
+          "active_samples": 68,
+          "delays_ms": [
+            127
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 68,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4228
+          ],
+          "strict": true
+        },
+        "memory": {
+          "absolute_miss": false,
+          "active_samples": 8,
+          "delays_ms": [
+            127
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 8,
+          "late_false_rises": 0,
+          "raw_rises": [
+            4228
+          ],
+          "strict": true
+        }
+      }
+    },
+    {
+      "group": "pickup",
+      "id": "pickup_y15_mass0",
+      "records": {
+        "c1": {
+          "absolute_miss": true,
+          "active_samples": 31,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 16,
+          "late_false_rises": 2,
+          "raw_rises": [],
+          "strict": false
+        },
+        "candidate": {
+          "absolute_miss": false,
+          "active_samples": 39,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 24,
+          "late_false_rises": 2,
+          "raw_rises": [
+            1459
+          ],
+          "strict": true
+        },
+        "memory": {
+          "absolute_miss": false,
+          "active_samples": 39,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 24,
+          "late_false_rises": 2,
+          "raw_rises": [
+            1459
+          ],
+          "strict": true
+        }
+      }
+    },
+    {
+      "group": "pickup",
+      "id": "pickup_y15_mass8",
+      "records": {
+        "c1": {
+          "absolute_miss": true,
+          "active_samples": 0,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 0,
+          "late_false_rises": 0,
+          "raw_rises": [],
+          "strict": false
+        },
+        "candidate": {
+          "absolute_miss": false,
+          "active_samples": 8,
+          "delays_ms": [
+            43
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 8,
+          "late_false_rises": 0,
+          "raw_rises": [
+            1464
+          ],
+          "strict": true
+        },
+        "memory": {
+          "absolute_miss": false,
+          "active_samples": 8,
+          "delays_ms": [
+            43
+          ],
+          "duplicate_rises": 0,
+          "duration_delta_samples_vs_none": 8,
+          "late_false_rises": 0,
+          "raw_rises": [
+            1464
+          ],
+          "strict": true
+        }
+      }
+    }
+  ],
+  "schema": "r29-g4-support-release-verdict.v1",
+  "stop_reason": "The single preregistered physical mechanism failed a genuine signed counterfactual and duration guard; source remains frozen and no retune/second cutoff is allowed.",
+  "verdict": "rejected_known_genuine_loss"
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "R11_IDENTIFIED_SUMMARY.v1",
+  "decision": "STOP_NO_INDEPENDENT_EVAL",
+  "normal_only_freeze": {
+    "model_sha256": "c1024bda4f12cecbf46b6bf74f6b17e3a7314f0737571d6f828630b841042f99",
+    "reproduction_byte_equal": true,
+    "held_normal_extra_cycles": [
+      0,
+      0
+    ],
+    "threshold": 3.1946206017257586,
+    "modes_removed": 2
+  },
+  "development": {
+    "normal_cases": 4,
+    "collision_cases": 16,
+    "baseline_detected": 8,
+    "candidate_detected": 8,
+    "additional_detections": 0,
+    "event_losses": 0,
+    "tool_losses": 0,
+    "FA_increased_cases": [
+      "D2-collision-1",
+      "D3-collision-1"
+    ]
+  },
+  "conditions": {
+    "vertical_11N": {
+      "cases": 8,
+      "additional_detections": 0,
+      "missed_by_candidate": 6
+    },
+    "oblique": {
+      "cases": 8,
+      "additional_detections": 0,
+      "missed_by_candidate": 2
+    },
+    "deployable_event_statistic_range": [
+      1.4590501527669497,
+      10.854023558379291
+    ],
+    "unavailable_paired_innovation_peak_range": [
+      2.439043021072948,
+      28.29473999206015
+    ]
+  },
+  "gates": {
+    "held_normal_extra_events": true,
+    "development_normal_FA": true,
+    "event_losses": true,
+    "tool_losses": true,
+    "per_case_FA": false,
+    "additional_detected": false,
+    "physical_bytes": true,
+    "timing": true
+  },
+  "timing": {
+    "R1": {
+      "worst_p99_us": 338.15019617606265,
+      "maximum_us": 475.4560029445663,
+      "ge1ms_cycles": 0
+    },
+    "candidate": {
+      "worst_p99_us": 378.56671094977594,
+      "maximum_us": 1481.8770047028438,
+      "ge1ms_cycles": 20
+    }
+  },
+  "physical_arrays": [
+    "q",
+    "q_d",
+    "tau",
+    "e_mm",
+    "f_table",
+    "f_tool",
+    "qpos",
+    "r"
+  ],
+  "physical_comparisons_byte_exact": 160,
+  "independent_eval_opened": false,
+  "positive_retuning": false,
+  "conclusion": "Per-episode normal excitation identification did not make weak collision energy causally separable: it added no detections and introduced two off-event alarms. Stop without holdout."
+}

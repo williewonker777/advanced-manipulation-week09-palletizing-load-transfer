@@ -1,0 +1,107 @@
+{
+  "schema": "r23-tool-contact-d4-full.v1",
+  "classification": "supplemental exposed D4 protection audit, not preregistered holdout or promotion",
+  "audit_history": {
+    "original_exact_tool_rise_gate": "FAIL",
+    "reason": "genuine tool rises moved earlier in cases 370/378; exact indices differed although rise counts did not increase",
+    "preserved_full_sha256": "b78899bb7f4026f480ed1ec39a2dcdd0113c6aa73dc657b7a385680c1edf00f3",
+    "supplemental_gate": "one-to-one no-extra/no-later/no-prealarm tool-rise audit"
+  },
+  "candidate_sha256": "2ed447199694cb159770e43fe9a2f1b8a9c513a1c7480d96d079313df1002a38",
+  "model_sha256": "9633182c1d986117fd6fd541e361f9bddf28d79a05763e6012dcb118805a1e37",
+  "inputs": {
+    "cache_sha256": "c62dd430d7f3b9a4553c0562558f481a4518a893050d1cf8b28e82d3c6c44fcf",
+    "r22_sha256": "99656b969d2155bfcb1e5a7cb5d3ef8cfe65d97682832538006d254d5146891f",
+    "matrix_sha256": "bc4b3dbb925cfb8609f535e1420f8b3f20785769b7f339708ca914b6992db791"
+  },
+  "counts": {
+    "cases": 385,
+    "kinds": {
+      "reference": 189,
+      "collision": 180,
+      "offset": 16
+    },
+    "simulated_candidate": 385,
+    "same_motion_offset_twins": 16
+  },
+  "gates": {
+    "all_385_input_certified": true,
+    "all_385_protected_vs_r22": true,
+    "all_189_normals_witness_quiet": true,
+    "later_forcings_witness_quiet_and_score_exact": true,
+    "tool_attribution_has_same_motion_twins": true,
+    "offset_tool_rises_no_regression": true
+  },
+  "passed": true,
+  "summary": {
+    "r22": {
+      "strict": 137,
+      "false": 9,
+      "duplicate": 2,
+      "tool_detected": 6
+    },
+    "candidate": {
+      "strict": 138,
+      "false": 9,
+      "duplicate": 1,
+      "tool_detected": 6
+    },
+    "gained_external_ids": [
+      214
+    ],
+    "lost_external_ids": [],
+    "earlier_external_ids": [
+      219,
+      224,
+      229,
+      234,
+      239,
+      244
+    ],
+    "delayed_external_ids": [],
+    "gained_tool_ids": [],
+    "lost_tool_ids": [],
+    "new_tool_prealarm_ids": [],
+    "tool_rise_changes": [
+      {
+        "id": 370,
+        "r22": [
+          1087,
+          1318
+        ],
+        "candidate": [
+          1087,
+          1207
+        ]
+      },
+      {
+        "id": 378,
+        "r22": [
+          1086,
+          1314,
+          1450,
+          1637
+        ],
+        "candidate": [
+          1086,
+          1207,
+          1637
+        ]
+      }
+    ],
+    "shared_external_count": 137,
+    "nonzero_latency_delta_ms": {
+      "219": -18,
+      "224": -20,
+      "229": -23,
+      "234": -54,
+      "239": -5,
+      "244": -9
+    }
+  },
+  "limits": [
+    "fixed deterministic 1 ms simulator trajectory",
+    "finite exposed D4 matrix",
+    "no hard-real-time, hardware, hidden-test, or safety claim"
+  ]
+}

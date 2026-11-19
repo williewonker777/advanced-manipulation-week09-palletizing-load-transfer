@@ -1,0 +1,29 @@
+{
+  "schema": "r19-observable-unloading-plan.v1",
+  "status": "DESIGN_FIXED_BEFORE_CANDIDATE_PAIR_REPLAY",
+  "research_only": true,
+  "candidate": {
+    "onset": "unchanged R18-fast 4-of-8 coincidence or unchanged Coupled baseline",
+    "continuity": "after an R18-fast onset, keep the recovery event active",
+    "unloading": "all six current physical ratios <= 1 and all six current mismatch ratios <= frozen MARGIN",
+    "release": "all samples in the existing R18 eight-sample window satisfy unloading",
+    "rearm": "immediate after observable release; no refractory interval",
+    "unsupported": "abstain exactly as R18; unchanged Coupled baseline remains live"
+  },
+  "known_case_ids": [
+    "pair_return_opposed",
+    "diag_known_late_fz",
+    "diag_known_late_fx"
+  ],
+  "comparators": ["r10", "R18_fast", "R19_event"],
+  "twins": ["none", "first", "second", "both"],
+  "event_window_ms": 320.0,
+  "quiet_ms": 20.0,
+  "prohibitions": [
+    "no programmed-force input to classifier",
+    "no simulation truth input to classifier",
+    "no time or refractory hold",
+    "no threshold or frozen predictor change",
+    "known replay cannot make a fresh or independent claim"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "r20-slow-handoff-design.v1",
+  "role": "research only; not a default course or R10 detector",
+  "motivation": "The +41/+59 ms exposed example showed that slow evidence first crosses when the fast auxiliary event ends. Broad bridging was already known to compromise the protected gap80 case; no gap80 slow-source trace used to set this rule.",
+  "decision": "Start only on auxiliary falling edge with simultaneous independent incumbent slow evidence. Release on incumbent takeover, existing incumbent slow-only consecutive-clear count, or disarmed/unsupported. No holdoff, label, manual axis, injected impact time, or learned amplitude.",
+  "development_pair": ["i55", "gap80_weak"],
+  "required_anchors": {"i55": [41], "gap80_weak": [24], "pair_return_opposed": [33]},
+  "predeclared_additional_gates": ["keep every prior attributable rise (+5 ms)", "no new unmatched, false alarm or tool loss", "preserve every strictly successful four-twin case", "exact physical/force signals and strict original assessment", "no increase in duplicate raw rises in any slot"],
+  "independent_cohort": "Six fresh separately frozen four-twin conditions, shared with the broad candidate; never pooled with exposed controls.",
+  "submission": "R10 unchanged irrespective of development results"
+}

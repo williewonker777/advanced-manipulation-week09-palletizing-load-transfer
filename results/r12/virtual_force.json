@@ -1,0 +1,994 @@
+{
+  "schema": "r12-virtual-force-study.v2",
+  "decision": "DELAYED_DIAGNOSTIC_ONLY_NOT_CURRENT_FORCE_FEEDBACK",
+  "predeclared": "fb7fd60a399272edca79d39feb1e14f7c73b34a4ed19f6f48994cd2f4d432a3c",
+  "clock_erratum": "65088410e59774bae3704a8b4d12a225f681695014ebf5487c4a8b6e06059138",
+  "lag_solver_steps": 18,
+  "state_lag_steps": 17,
+  "pins": {
+    "experiments/r12_support/plan.json": "fb7fd60a399272edca79d39feb1e14f7c73b34a4ed19f6f48994cd2f4d432a3c",
+    "experiments/r12_support/evaluate.py": "e8c13d7ec0280de23cc072e271b12fd00d02f9ef7c6c542f51761e3f0183f5e3",
+    "tools/r12_normal_force.py": "16171dd512d77fba3a6ab9611c856580ac98225c452047c8b7d3935c98049a2e",
+    "tools/r12_force_audit.py": "b12c49ac0695b36e4f790edc3f7c6ab2905079f2b33576acb63082ecd5d119d0",
+    "tools/r5_fixture.py": "8f637a5d67d6bfd2f9021093b08e5d8b463bd58c71fa4e7da3f752087ed72f2d",
+    "tools/r11_placement.py": "8c841e53826409a0f0c336b7b3c6f1335172ffb205ab386f1a60c93012f19db0",
+    "results/r11/velocity_learning.json": "8df9e5c7c7b4da5f9e183549d2da2b96ef9bce61b801017b5ada9ee408605e09",
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "experiments/r11_velocity_ilc/controller.py": "46b69487f7ad8bb050fb5df1b47314e0f8ddce9298c61521aecd101a2c8110d7",
+    "experiments/r11_datum/controller.py": "c209573bf0b4b1d0e6db66b74fed8354dab70d4cdff899025ff69025b40484c9"
+  },
+  "numeric_estimates_identical_to_pre_erratum": true,
+  "summary": {
+    "cases": 12,
+    "delayed_rmse_range_mg": [
+      0.027499940257536114,
+      0.10828804682334627
+    ],
+    "cases_within_015": 12,
+    "full_window_legacy_comparison": "not established: legacy reports unavailable samples in all 12 episodes",
+    "descriptive_common_samples": {
+      "common": 1531,
+      "total": 1560,
+      "new_rmse": 0.06932392790292817,
+      "legacy_rmse": 0.08390669650880848
+    },
+    "current_last20_mae_range_mg": [
+      0.04815486196053195,
+      0.30849449425495845
+    ],
+    "current_mae_cases_above_012": 9,
+    "current_false_confidence_samples": 1
+  },
+  "rows": [
+    {
+      "mode": "servo",
+      "controller": "release",
+      "id": "light",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.0036937142192084915,
+        "rmse": 0.027499940257536114,
+        "mae": 0.02271882978212112
+      },
+      "matched_legacy_at_availability": {
+        "available": 129,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 111,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.06859847029223881,
+        "rmse": 0.15426493912458009,
+        "mae": 0.06859847029223881
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.0036937142192084915,
+        "rmse": 0.03076975636220834,
+        "mae": 0.026272369451148553
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.003694057487592534,
+        "rmse": 0.24010829951212675,
+        "mae": 0.13088039323439785
+      },
+      "current_legacy": {
+        "available": 129,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": 0.03186927606550451,
+        "rmse": 0.06696888681711491,
+        "mae": 0.050591395356158586
+      },
+      "true_support": {
+        "mean_mg": 2.2312444961977055e-06,
+        "min_mg": 0.0,
+        "peak_mg": 1.0110015531953507,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.0318715073100007,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "servo",
+      "controller": "release",
+      "id": "heavy",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": 0.016192503212823322,
+        "rmse": 0.037296630564271065,
+        "mae": 0.031844150312943104
+      },
+      "matched_legacy_at_availability": {
+        "available": 129,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 111,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.04741566889707055,
+        "rmse": 0.1051690693760191,
+        "mae": 0.04741566889707055
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": 0.01619246161344378,
+        "rmse": 0.037872057874272676,
+        "mae": 0.03188048805274599
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": 0.016192461613443777,
+        "rmse": 0.16423530980523174,
+        "mae": 0.09955408898667771
+      },
+      "current_legacy": {
+        "available": 129,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": 0.0473165694745239,
+        "rmse": 0.07704284051373671,
+        "mae": 0.057717480493478315
+      },
+      "true_support": {
+        "mean_mg": 0.0,
+        "min_mg": 0.0,
+        "peak_mg": 1.0071720520480076,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.0473165694745239,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "servo",
+      "controller": "release",
+      "id": "misgrasp",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.019259956239325995,
+        "rmse": 0.03882363727593043,
+        "mae": 0.030137862950202373
+      },
+      "matched_legacy_at_availability": {
+        "available": 129,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 111,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.039708215616085174,
+        "rmse": 0.08686193529394633,
+        "mae": 0.039708215616085174
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.019260331099467766,
+        "rmse": 0.039627456390927907,
+        "mae": 0.030176566907383205
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.019260395946947378,
+        "rmse": 0.1239332958669853,
+        "mae": 0.07391106325904663
+      },
+      "current_legacy": {
+        "available": 129,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": 0.007458367216570605,
+        "rmse": 0.05728502692829181,
+        "mae": 0.04815486196053195
+      },
+      "true_support": {
+        "mean_mg": 0.0,
+        "min_mg": 0.0,
+        "peak_mg": 1.0103922088768613,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.007458367216570605,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "servo",
+      "controller": "velocity",
+      "id": "light",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.007489004173600399,
+        "rmse": 0.06691703210987954,
+        "mae": 0.04876789954766185
+      },
+      "matched_legacy_at_availability": {
+        "available": 128,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 110,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.007748849071687294,
+        "rmse": 0.017239736912976922,
+        "mae": 0.007748849071687294
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.007637929244581233,
+        "rmse": 0.06725437405424299,
+        "mae": 0.049367243710972425
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.035477486773635235,
+        "rmse": 0.1401940582826811,
+        "mae": 0.08344144847648333
+      },
+      "current_legacy": {
+        "available": 128,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": -0.15359801436550127,
+        "rmse": 0.31128258958055377,
+        "mae": 0.21795572687019624
+      },
+      "true_support": {
+        "mean_mg": 0.1830790954615959,
+        "min_mg": 0.0,
+        "peak_mg": 1.000864485226564,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.02948108109609463,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "servo",
+      "controller": "velocity",
+      "id": "heavy",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": 0.01686977791559367,
+        "rmse": 0.07329967030477735,
+        "mae": 0.055527125143417816
+      },
+      "matched_legacy_at_availability": {
+        "available": 129,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 111,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.01218590907972125,
+        "rmse": 0.025594705816323535,
+        "mae": 0.01218590907972125
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": 0.01645925015129989,
+        "rmse": 0.07338099802013523,
+        "mae": 0.05568398863096544
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.009128748371893114,
+        "rmse": 0.1083727500629182,
+        "mae": 0.07651719771122865
+      },
+      "current_legacy": {
+        "available": 129,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": -0.08046132909465764,
+        "rmse": 0.20732991507995502,
+        "mae": 0.16214730487509044
+      },
+      "true_support": {
+        "mean_mg": 0.17410637740152496,
+        "min_mg": 0.020478817831249083,
+        "peak_mg": 1.0121557016553488,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.09364504830686732,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "servo",
+      "controller": "velocity",
+      "id": "misgrasp",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.02615427349797575,
+        "rmse": 0.07480189164382015,
+        "mae": 0.05978992816419443
+      },
+      "matched_legacy_at_availability": {
+        "available": 128,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 110,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.008227542540909297,
+        "rmse": 0.017790556603895197,
+        "mae": 0.008227542540909297
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.026448962552331926,
+        "rmse": 0.07502068498021015,
+        "mae": 0.060084617218550594
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.045833549581784566,
+        "rmse": 0.1106193097242705,
+        "mae": 0.08003286635744908
+      },
+      "current_legacy": {
+        "available": 128,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": -0.12202294607237014,
+        "rmse": 0.1955102334453829,
+        "mae": 0.12568674978376815
+      },
+      "true_support": {
+        "mean_mg": 0.13096500939346295,
+        "min_mg": 0.023309921840429782,
+        "peak_mg": 1.0107806043470884,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.00894206332109282,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "torque",
+      "controller": "release",
+      "id": "light",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.0029857799725723677,
+        "rmse": 0.04039514040190368,
+        "mae": 0.03306570866503931
+      },
+      "matched_legacy_at_availability": {
+        "available": 128,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 110,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.07602634711412581,
+        "rmse": 0.15598666021324212,
+        "mae": 0.07602634711412581
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.003200180438369872,
+        "rmse": 0.04212402730622762,
+        "mae": 0.03426014957579138
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.01947796188342205,
+        "rmse": 0.2103842876192582,
+        "mae": 0.13464735091718322
+      },
+      "current_legacy": {
+        "available": 128,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": 0.06759435374434383,
+        "rmse": 0.2496283095925235,
+        "mae": 0.22412310385549086
+      },
+      "true_support": {
+        "mean_mg": 0.10536396278705625,
+        "min_mg": 0.0,
+        "peak_mg": 1.0039664752350002,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.1729583165314001,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "torque",
+      "controller": "release",
+      "id": "heavy",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": 0.0169460502408288,
+        "rmse": 0.046326840396357115,
+        "mae": 0.038511565734179055
+      },
+      "matched_legacy_at_availability": {
+        "available": 127,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 109,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.0716333997244744,
+        "rmse": 0.1551467438030038,
+        "mae": 0.0716333997244744
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": 0.016805463188831454,
+        "rmse": 0.04485628298626769,
+        "mae": 0.0374055441501658
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": 0.0027393359849438794,
+        "rmse": 0.25174494117853824,
+        "mae": 0.157177749301243
+      },
+      "current_legacy": {
+        "available": 127,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": -0.002320644915275566,
+        "rmse": 0.17006313736530204,
+        "mae": 0.14976177379368813
+      },
+      "true_support": {
+        "mean_mg": 0.09444867610596826,
+        "min_mg": 0.0,
+        "peak_mg": 1.002862013736639,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.0921280311906927,
+      "current_false_confidence_samples": 1,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "torque",
+      "controller": "release",
+      "id": "misgrasp",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.01574013697455757,
+        "rmse": 0.03922455441390877,
+        "mae": 0.03170393474781512
+      },
+      "matched_legacy_at_availability": {
+        "available": 125,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 107,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.020343863326949402,
+        "rmse": 0.04284352486016853,
+        "mae": 0.020343863326949402
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.016063066783036553,
+        "rmse": 0.04048737486001491,
+        "mae": 0.03224675585624405
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.035068847870836514,
+        "rmse": 0.09055749039994201,
+        "mae": 0.059718257730200064
+      },
+      "current_legacy": {
+        "available": 125,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": -0.0893370903218591,
+        "rmse": 0.1690031652577544,
+        "mae": 0.13019144847749226
+      },
+      "true_support": {
+        "mean_mg": 0.1303000132869104,
+        "min_mg": 0.01146461670731224,
+        "peak_mg": 1.024475129133912,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.04096292296505132,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "torque",
+      "controller": "velocity",
+      "id": "light",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.0037305849920899452,
+        "rmse": 0.10828804682334627,
+        "mae": 0.09259359749664989
+      },
+      "matched_legacy_at_availability": {
+        "available": 128,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 110,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.0247209835216545,
+        "rmse": 0.05263687067347081,
+        "mae": 0.0247209835216545
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.004972580410948911,
+        "rmse": 0.10920112687158331,
+        "mae": 0.09389634974981324
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.06960002978358981,
+        "rmse": 0.20822066115517415,
+        "mae": 0.1354884345782035
+      },
+      "current_legacy": {
+        "available": 128,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": -0.29131438988683156,
+        "rmse": 0.4527618588576977,
+        "mae": 0.30849449425495845
+      },
+      "true_support": {
+        "mean_mg": 0.4462292961103332,
+        "min_mg": 0.07724847876161806,
+        "peak_mg": 1.048732590632114,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.15491490622350165,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "torque",
+      "controller": "velocity",
+      "id": "heavy",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": 0.02042812152899681,
+        "rmse": 0.1058507062783585,
+        "mae": 0.0899785730165547
+      },
+      "matched_legacy_at_availability": {
+        "available": 127,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 109,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.03840137489469986,
+        "rmse": 0.07760230666033352,
+        "mae": 0.03840137489469986
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": 0.019374566947641326,
+        "rmse": 0.10590374214687266,
+        "mae": 0.09001069481814221
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.028780183915983398,
+        "rmse": 0.16051881121032166,
+        "mae": 0.12458961053103063
+      },
+      "current_legacy": {
+        "available": 127,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": -0.13348507962477923,
+        "rmse": 0.28067891433044817,
+        "mae": 0.22789214086972204
+      },
+      "true_support": {
+        "mean_mg": 0.3371912321621306,
+        "min_mg": 0.06991012917161246,
+        "peak_mg": 1.0480769731574846,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "current_last20_estimated_mean": 0.20370615253735141,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    },
+    {
+      "mode": "torque",
+      "controller": "velocity",
+      "id": "misgrasp",
+      "id_window_s": [
+        3.77,
+        3.9
+      ],
+      "n": 130,
+      "matched_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.022333590659797533,
+        "rmse": 0.10244367448283773,
+        "mae": 0.08638677507866949
+      },
+      "matched_legacy_at_availability": {
+        "available": 124,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_legacy_at_effective_time": {
+        "available": 106,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "matched_zero": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.0019701028827190537,
+        "rmse": 0.008789911372362316,
+        "mae": 0.0019701028827190537
+      },
+      "adjacent_state_clock_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.022946678643201972,
+        "rmse": 0.10281659608551255,
+        "mae": 0.08684212074764976
+      },
+      "current_sensor": {
+        "available": 130,
+        "required": 130,
+        "bias": -0.06089181533149269,
+        "rmse": 0.16645454209321162,
+        "mae": 0.12340798790479234
+      },
+      "current_legacy": {
+        "available": 124,
+        "required": 130,
+        "bias": null,
+        "rmse": null,
+        "mae": null
+      },
+      "current_last20": {
+        "available": 20,
+        "required": 20,
+        "bias": -0.27509095719395027,
+        "rmse": 0.3371657782279276,
+        "mae": 0.27509095719395027
+      },
+      "true_support": {
+        "mean_mg": 0.262586696404323,
+        "min_mg": 0.011073383974507266,
+        "peak_mg": 1.2778963846915306,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": false,
+        "peak_le_110": false
+      },
+      "current_last20_estimated_mean": -0.012504260789627335,
+      "current_false_confidence_samples": 0,
+      "lag_samples": 18,
+      "state_lag_samples": 17
+    }
+  ]
+}

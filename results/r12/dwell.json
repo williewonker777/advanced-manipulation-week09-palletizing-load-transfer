@@ -1,0 +1,136 @@
+{
+  "schema": "R12_DWELL_SUMMARY.v1",
+  "status": "FAIL_STOP_NO_HELD",
+  "adopt": false,
+  "training_passed": false,
+  "held_executed": false,
+  "impact_preservation_tested": false,
+  "pins": {
+    "plan": "ee0409c4fcecc7d759a75736c8fc4b247d77103e64330c5825c388aeb1cd7604",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "experiments/r12_dwell/controller.py": "a1776f00d843261077bf1808bdf1fd794b18f620086b80d70674d2f0c6f693a5",
+    "experiments/r12_dwell/plan.py": "a4530414544dc6eb83b42063acd375412fe4b9bd152f5d81936ebea3a4d2503a",
+    "experiments/r12_dwell/run.py": "e222e094c37027ac360156129489e2414ffc0b27aeb78e6d2ab469150459cd30"
+  },
+  "preview": {
+    "clock_rate": 1.0830324909747298,
+    "arrival_s": 3.877,
+    "hold_ms": 23.00000000000013,
+    "max_tcp_reference_distortion_mm": 9.171559528592201,
+    "max_joint_reference_distortion_deg": 0.6602857554552185,
+    "max_abs_joint_jerk_rad_s3": 389.9074519433353,
+    "baseline_max_abs_joint_jerk_rad_s3": 307.1848434787219,
+    "jerk_ratio": 1.2692926106894444,
+    "nominal_full_payload_peak_nm": {
+      "train_640": [
+        11.252562900810117,
+        306.5702261149886,
+        108.62528493890444,
+        6.697973966662848,
+        14.952952597686373,
+        0.07701372360538401
+      ],
+      "held_light_480": [
+        10.704854315068337,
+        288.2020291092782,
+        103.76833786444425,
+        5.743541869178225,
+        10.314118330212743,
+        0.21758088048259006
+      ],
+      "held_boundary_605": [
+        12.06990547185581,
+        305.5195877743009,
+        110.52509752474228,
+        9.532863870231274,
+        11.940619562453527,
+        0.949450152658399
+      ],
+      "held_heavy_780": [
+        10.437441387120916,
+        328.6621024568684,
+        118.89084066521944,
+        3.328272266266647,
+        16.30351648562,
+        0.9593598941460438
+      ]
+    },
+    "caps": {
+      "clock_rate_max": 1.1,
+      "tcp_distortion_mm_max": 15.0,
+      "jerk_ratio_max": 1.35,
+      "nominal_torque_fraction_max": 0.95
+    },
+    "cap_pass": true
+  },
+  "modes": {
+    "servo": {
+      "failed_gates": [
+        "G4",
+        "cost",
+        "true_stationary"
+      ],
+      "baseline": {
+        "first_contact_s": 3.845,
+        "precontact_vz_m_s": -0.23041724526897123,
+        "final20_mean_mg": 0.0,
+        "final20_min_mg": 0.0,
+        "release_peak_mg": 1.0048544198795344
+      },
+      "candidate": {
+        "first_contact_s": 3.83,
+        "precontact_vz_m_s": -0.2324004470091845,
+        "final20_mean_mg": 0.03430321756340468,
+        "final20_min_mg": 0.0,
+        "release_peak_mg": 1.0105403052888224,
+        "true_hold_vz_max_mm_s": 46.031671894819496,
+        "true_hold_z_drift_mm": 0.6393429400830819,
+        "false_alarms": 0,
+        "saturation_pct": 0.0
+      },
+      "cost_ratios": {
+        "rms_mm": 1.6973095602504786,
+        "max_tcp_mm": 3.064961499250828,
+        "torque_step_place_nm": 1.2146914602121908,
+        "table_force_place_max_n": 1.005658417076943
+      }
+    },
+    "torque": {
+      "failed_gates": [
+        "G4",
+        "cost",
+        "true_stationary"
+      ],
+      "baseline": {
+        "first_contact_s": 3.845,
+        "precontact_vz_m_s": -0.23413771628681967,
+        "final20_mean_mg": 0.07958780834157383,
+        "final20_min_mg": 0.0,
+        "release_peak_mg": 1.0030491518278866
+      },
+      "candidate": {
+        "first_contact_s": 3.831,
+        "precontact_vz_m_s": -0.22798175426843037,
+        "final20_mean_mg": 0.2888343411919931,
+        "final20_min_mg": 0.2121873672216078,
+        "release_peak_mg": 1.003141591841348,
+        "true_hold_vz_max_mm_s": 28.447834263090055,
+        "true_hold_z_drift_mm": 0.45463135944306954,
+        "false_alarms": 0,
+        "saturation_pct": 0.0
+      },
+      "cost_ratios": {
+        "rms_mm": 1.1588170894020784,
+        "max_tcp_mm": 1.5218541607054852,
+        "torque_step_place_nm": 1.267800775197788,
+        "table_force_place_max_n": 1.0000921590066578
+      }
+    }
+  },
+  "limitations": [
+    "single training mass/COM+nuisance only",
+    "held normal/impact stage prohibited by failed training gate",
+    "commanded endpoint dwell was not true stationary plant behavior",
+    "development simulation, not official or hardware evidence"
+  ]
+}

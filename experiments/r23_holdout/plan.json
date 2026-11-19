@@ -1,0 +1,182 @@
+{
+  "schema": "r23-independent-transfer-detachment-plan.v1",
+  "status": "SEALED_BEFORE_R23_CANDIDATE_LOCK_OR_OUTPUT",
+  "classification": "Finite laboratory simulation holdout selected without R23 candidate output; not a safety qualification, hidden production test, hardware certificate, or original course demo.",
+  "selection": "Fixed post-detachment and transfer interpolation points, borderline signed diagonals, offsets, and mechanical perturbations before any R23 candidate was selected or executed.",
+  "controller": "my_torque.Controller",
+  "baseline_arm": "r22_light",
+  "candidate_arm_after_lock": "r23",
+  "dt_s": 0.001,
+  "event_window_ms": 280,
+  "reference_twin_ms": 18,
+  "quiet_ms": 24,
+  "preservation_slack_ms": 5,
+  "variants": {
+    "stock": {
+      "kind": "stock"
+    },
+    "contact_surface": {
+      "kind": "contact_surface",
+      "table_friction_scale": 0.89,
+      "table_solref_time_scale": 1.09,
+      "suction_solref_time_scale": 1.14
+    },
+    "actuator_skew": {
+      "kind": "actuator_skew",
+      "joint_gain": [1.011, 0.987, 1.009, 0.991, 1.014, 0.986]
+    }
+  },
+  "negative": [
+    {
+      "id": "n23_transfer_empty_interp",
+      "mass": 0.41,
+      "com": [0.014, -0.022, 0.009],
+      "offset": null,
+      "contact_probe": false
+    },
+    {
+      "id": "n23_transfer_mid_offset",
+      "mass": 2.77,
+      "com": [-0.017, 0.026, -0.011],
+      "offset": [0.0039, -0.0044, 0.0011],
+      "contact_probe": true
+    },
+    {
+      "id": "n23_detached_contact_probe",
+      "mass": 4.91,
+      "com": [0.021, -0.013, 0.018],
+      "offset": [-0.0048, 0.0037, 0.0015],
+      "contact_probe": true
+    },
+    {
+      "id": "n23_detached_heavy_interp",
+      "mass": 6.53,
+      "com": [-0.025, 0.015, -0.019],
+      "offset": null,
+      "contact_probe": false
+    }
+  ],
+  "single": [
+    {
+      "id": "s23_transfer_border_diag_a",
+      "phase": "transfer",
+      "mass": 1.19,
+      "com": [0.016, -0.018, 0.013],
+      "offset": null,
+      "impact": [1.361, [5.8, -5.6, 0.0]]
+    },
+    {
+      "id": "s23_transfer_border_diag_b",
+      "phase": "transfer",
+      "mass": 3.46,
+      "com": [-0.022, 0.019, -0.006],
+      "offset": null,
+      "impact": [1.672, [-6.2, 6.0, 0.0]]
+    },
+    {
+      "id": "s23_transfer_late_tangent",
+      "phase": "transfer",
+      "mass": 5.88,
+      "com": [0.027, 0.006, -0.017],
+      "offset": null,
+      "impact": [2.188, [0.0, 7.8, 0.0]]
+    },
+    {
+      "id": "s23_post_detach_border_diag",
+      "phase": "post_detachment",
+      "mass": 2.34,
+      "com": [-0.012, -0.024, 0.021],
+      "offset": null,
+      "impact": [4.023, [6.0, -6.4, 0.0]]
+    },
+    {
+      "id": "s23_post_detach_radial",
+      "phase": "post_detachment",
+      "mass": 7.36,
+      "com": [0.018, 0.023, -0.014],
+      "offset": null,
+      "impact": [4.177, [-8.2, 0.0, 0.0]]
+    },
+    {
+      "id": "s23_post_detach_late_tangent",
+      "phase": "post_detachment",
+      "mass": 4.62,
+      "com": [-0.028, 0.011, 0.007],
+      "offset": null,
+      "impact": [4.431, [0.0, 8.6, 0.0]]
+    }
+  ],
+  "paired": [
+    {
+      "id": "p23_transfer_close_diagonals",
+      "phase": "transfer",
+      "mass": 1.83,
+      "com": [0.013, -0.027, 0.016],
+      "offset": null,
+      "impacts": [[1.352, [5.9, 5.7, 0.0]], [1.493, [-6.1, 5.8, 0.0]]]
+    },
+    {
+      "id": "p23_transfer_to_carry",
+      "phase": "transfer",
+      "mass": 6.21,
+      "com": [-0.019, 0.009, -0.023],
+      "offset": null,
+      "impacts": [[1.718, [0.0, -8.4, 0.0]], [2.113, [8.8, 0.0, 0.0]]]
+    },
+    {
+      "id": "p23_detach_boundary_cross",
+      "phase": "post_detachment",
+      "mass": 3.73,
+      "com": [0.024, 0.017, -0.009],
+      "offset": null,
+      "impacts": [[3.963, [6.7, -6.2, 0.0]], [4.112, [-7.4, 0.0, 0.0]]]
+    },
+    {
+      "id": "p23_post_detach_diagonal_pair",
+      "phase": "post_detachment",
+      "mass": 7.71,
+      "com": [-0.015, 0.028, 0.012],
+      "offset": null,
+      "impacts": [[4.151, [-5.7, -6.5, 0.0]], [4.337, [6.6, 6.1, 0.0]]]
+    },
+    {
+      "id": "p23_transfer_to_post_detach",
+      "phase": "cross_phase",
+      "mass": 5.17,
+      "com": [0.009, -0.016, 0.025],
+      "offset": null,
+      "impacts": [[1.602, [0.0, 8.1, 0.0]], [4.265, [-6.3, 6.4, 0.0]]]
+    }
+  ],
+  "contact_evidence": {
+    "minimum_probe_variant_rows_with_real_r22_contact": 1,
+    "contact_threshold_N": 1.0,
+    "interpretation": "Contact is measured from the physical tool-force trace. Failure to materialize the minimum makes the cohort inadequate rather than silently claiming preservation."
+  },
+  "required_episodes": {
+    "per_arm": 108,
+    "both_arms": 216
+  },
+  "qualification": {
+    "safety_qualification": false,
+    "scoped_regression_floor": "Preserve every strict R22 slot within 5 ms; zero candidate false rises, duplicate in-window rises, new tool prealarm, lost R22 tool detection, or stuck tail.",
+    "scoped_detection": "Exactly one attributable candidate rising edge with a 24 ms quiet prefix for every isolated and both-impulse slot.",
+    "positive_gain": "Report candidate strict slots where R22 is not strict separately; no minimum gain is required and gains do not convert this simulation into safety evidence."
+  },
+  "gates": [
+    "candidate and complete transitive frozen model locked before plan detail disclosure or holdout execution",
+    "all protocol and candidate pins stable before and after execution",
+    "exact 6000-sample finite traces and one-to-one episode accounting",
+    "immutable R22 signed native, second, committed, and stock scalar force arithmetic",
+    "force-free sensed prefix exact and causal fields exact through each first nonzero force tick",
+    "physical traces bit-exact across arms within each twin",
+    "candidate has zero unmatched false rise and zero duplicate rise in every event slot",
+    "candidate preserves each strict R22 event within 5 ms",
+    "candidate has one quiet attributable rise per intended real impulse",
+    "no new tool prealarm, lost R22 real-contact detection, or stuck tail",
+    "both independent mechanical variants cause an observed physical change",
+    "minimum predeclared real-contact evidence materializes",
+    "no thresholds, cohort, scoring, mechanics, sources, or physics change after outcomes"
+  ],
+  "tuning_after_outcome": "forbidden"
+}

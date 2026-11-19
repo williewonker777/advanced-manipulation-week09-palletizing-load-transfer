@@ -1,0 +1,996 @@
+{
+  "C1": "experiments.r26_delivery_pair.candidate",
+  "candidate": "experiments.r27_landing_integration.unloaded_aware:Detector",
+  "classification": "Research-only R24 delivery controller with registered passive C1 vs R27. Not original demo, not my_torque C3, not promoted.",
+  "controller": "experiments.r26_delivery_pair.controller",
+  "default_promoted": false,
+  "development": {
+    "classification": "Disclosed opt-in integrated research candidate; not blind/default/hardware/deployment/safety evidence.",
+    "evidence_sha256": {
+      "audit.json": "8c04dc3b4bc6df268159e49ae7badb8d7014661c79edc0af611f3252e7c1041e",
+      "mechanism.json": "34fb64475e964ec61d4270acd5d9950af98876a25859ba70847e206d49132fdb",
+      "nearzero.json": "bc4e933f3c073362f00043b254aa8ca415066f20ce0e79ef5a948be8b7b806fa",
+      "official/result.json": "838047519123ec4bd36aab8007503b9686bd5e3a889325e9de7b4a2be8516399",
+      "postrelease.json": "cc813106bf2b082459ded6068df810a599cba4bb4c0bc083b5d7aae4c7fc8026",
+      "tool.json": "2e3610a1bd6c4428f8e5f6f386cf296a6d8bcb392c954c888ed552cfa86ababa"
+    },
+    "mechanism": {
+      "candidate_strict": {
+        "pickup_x15": true,
+        "pickup_y15": true,
+        "pickup_z15": false,
+        "transport_y15": true
+      },
+      "episodes": 20,
+      "integrity": {
+        "all_forces_exact": true,
+        "all_physics_matched": true
+      },
+      "pair_strict": {
+        "both_first": true,
+        "both_second": true,
+        "isolated_first": true,
+        "isolated_second": true
+      },
+      "worst_p99_us": 460.0031900000001
+    },
+    "nearzero": {
+      "episodes": 24,
+      "passed": true,
+      "rows": [
+        {
+          "c1": [
+            null,
+            41.00000000000015
+          ],
+          "candidate": [
+            39.00000000000014,
+            41.00000000000015
+          ],
+          "id": "nz_010"
+        },
+        {
+          "c1": [
+            null,
+            32.00000000000003
+          ],
+          "candidate": [
+            39.00000000000014,
+            32.00000000000003
+          ],
+          "id": "nz_035"
+        },
+        {
+          "c1": [
+            null,
+            41.00000000000015
+          ],
+          "candidate": [
+            40.000000000000036,
+            41.00000000000015
+          ],
+          "id": "nz_070"
+        },
+        {
+          "c1": [
+            null,
+            32.00000000000003
+          ],
+          "candidate": [
+            40.000000000000036,
+            32.00000000000003
+          ],
+          "id": "nz_100"
+        }
+      ]
+    },
+    "normal_audit": {
+      "episodes": 12,
+      "passed": true
+    },
+    "official": {
+      "c1": {
+        "impact_outcomes": {
+          "already_active": 0,
+          "detected": 15,
+          "indistinguishable": 4,
+          "missed": 5
+        },
+        "no_impact_false_rises": 1,
+        "worst_false_count_in_an_impact_run": 2
+      },
+      "candidate": {
+        "impact_outcomes": {
+          "already_active": 0,
+          "detected": 17,
+          "indistinguishable": 4,
+          "missed": 3
+        },
+        "no_impact_false_rises": 1,
+        "worst_false_count_in_an_impact_run": 2
+      },
+      "episodes": 58,
+      "same_control_cells": true
+    },
+    "postrelease": {
+      "episodes": 10,
+      "guards_passed": true,
+      "strict_genuine": 4
+    },
+    "resolution": {
+      "fit_episodes": 1,
+      "fit_mass_kg": 0.0,
+      "fit_max_table_normal_N": 0.0,
+      "schema": "r27-unresolved-payload-resolution.v1",
+      "sensor_reserve_N": 0.5,
+      "table_normal_resolution_N": 0.5
+    },
+    "schema": "r27-landing-unresolved-payload-result.v1",
+    "sources": {
+      "model.json": "447660558c5ba67ea65e53be568e493bdd5f42532b558f440884b3fb610b5939",
+      "unloaded_aware.py": "fe22ea86d0a3e975d8846e11f4fe63ccda99d40cf6bfb17d4ba34cac10ce4c69",
+      "unloaded_plan.json": "b6c0ec32ec7d0c81ea110ade0aca6d0ffdd2807cf00ee3f7ab998da7729d47e7",
+      "unloaded_resolution.json": "4505aa2889b1ba48eacfc620080866ddcf11ac5c2ca01b2d4d8a361e1388ddb2"
+    },
+    "tool": {
+      "episodes": 10,
+      "genuine_contact_rows": [
+        "known_high",
+        "unseen_high_25mm",
+        "unseen_high_35mm"
+      ],
+      "passed": true
+    },
+    "verdict": {
+      "automatic_default": false,
+      "eligible_as_opt_in_research_candidate": true,
+      "limitations": [
+        "finite disclosed MuJoCo 3.17 simulation",
+        "no broad independent R27 loaded evidence",
+        "no hardware/deployment/safety claim"
+      ],
+      "loaded_holdout_read": false
+    }
+  },
+  "final_disposition": "Known official gains real. The prospectively frozen separate laboratory holdback found four new outside-event false rises with 5.25 kg/high tool; no promotion. Preserve new falsifier.",
+  "first_two_attempts": {
+    "half_support": {
+      "official": {
+        "c1": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 15,
+            "indistinguishable": 4,
+            "missed": 5
+          },
+          "no_impact_false_rises": 1,
+          "worst_false_count_in_an_impact_run": 2
+        },
+        "episodes": 58,
+        "same_control_cells": true,
+        "sha256": "d918659e5f5a8495ea21203ebbdb4e39c9416865fae773033ed032a7f3789fab",
+        "support_aware": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 16,
+            "indistinguishable": 4,
+            "missed": 4
+          },
+          "no_impact_false_rises": 1,
+          "worst_false_count_in_an_impact_run": 2
+        }
+      },
+      "source": {
+        "candidate": "e40865f5c78851fb02f361d0cac9709f338e3a2ae016e71575e57bb111ee2bc3",
+        "model": "447660558c5ba67ea65e53be568e493bdd5f42532b558f440884b3fb610b5939",
+        "plan": "5e88e5fd8f050e76eac2a75207452184f0705a4ad7833073444c9a877542c3b5"
+      },
+      "verdict": {
+        "eligible": false,
+        "reason": "Authentic official detected 16/24, below preregistered >=17 retention gate. Mass-zero pickup lacks a valid carried-payload ownership signal, so the physical gate fails open and cannot retain that v1 gain.",
+        "retuned": false,
+        "stopped_before_tool_pair_and_postrelease_panels": true
+      }
+    },
+    "unconstrained": {
+      "failed_tool": {
+        "diagnosis": "The gripped inverse-force source also crosses its frozen normal bound during the high-offset placement/load-transfer episode, creating a new 3.857 s edge before the inherited 3.903 s edge. This violates the preregistered no-new-rise guard even though the genuine tool contact remains detected at the same delay.",
+        "failures": [
+          {
+            "failed": [
+              "no_extra_rises"
+            ],
+            "id": "tool_high"
+          }
+        ],
+        "genuine_contact_rows": [
+          "tool_high"
+        ],
+        "tool_guard_episodes": 6,
+        "tool_high_rises": {
+          "c1": [
+            1087,
+            1323,
+            3903
+          ],
+          "r27": [
+            1087,
+            1323,
+            3857,
+            3903
+          ]
+        },
+        "tool_high_true_contact_preserved": {
+          "c1": {
+            "delay_ms": 9,
+            "detected": true,
+            "peak_N": 264.05647593800427,
+            "prealarm": false,
+            "present": true
+          },
+          "r27": {
+            "delay_ms": 9,
+            "detected": true,
+            "peak_N": 264.05647593800427,
+            "prealarm": false,
+            "present": true
+          }
+        }
+      },
+      "official": {
+        "c1": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 15,
+            "indistinguishable": 4,
+            "missed": 5
+          },
+          "no_impact_false_rises": 1,
+          "worst_false_count_in_an_impact_run": 2
+        },
+        "candidate": {
+          "impact_outcomes": {
+            "already_active": 0,
+            "detected": 17,
+            "indistinguishable": 4,
+            "missed": 3
+          },
+          "no_impact_false_rises": 1,
+          "worst_false_count_in_an_impact_run": 2
+        },
+        "detected_gain": 2,
+        "episodes": 58,
+        "gained_strata": [
+          "mass 0 kg, 1.42 s, 15 N horizontal",
+          "mass 8 kg, 1.42 s, 15 N horizontal"
+        ],
+        "same_control_cells": true
+      },
+      "source": {
+        "candidate.py": "ffde18b42b8ccd8250eae184147f7e498003356cfdb1a7cd46ccc5edfce0fb95",
+        "model.json": "447660558c5ba67ea65e53be568e493bdd5f42532b558f440884b3fb610b5939",
+        "plan.json": "4d37047e107c9881f09ba90ecca55fc263ad0bc5338485852b8c10c4fed79c8b"
+      }
+    }
+  },
+  "post_failure_causal_ablation": {
+    "absent_tool_control": {
+      "duration_not_increased": true,
+      "no_ablation_added_edge": true,
+      "same_physics": true
+    },
+    "affected_loaded_tool": {
+      "ablation_active_samples": 208,
+      "ablation_rises": [
+        1093,
+        1323,
+        1458,
+        3858,
+        3903,
+        3923
+      ],
+      "added_rises": [],
+      "native_active_samples": 214,
+      "native_rises": [
+        1093,
+        1323,
+        1458,
+        3858,
+        3878,
+        3880,
+        3884,
+        3903,
+        3923
+      ],
+      "removed_rises": [
+        3878,
+        3880,
+        3884
+      ]
+    },
+    "changed_rule": "Clear consecutive onset evidence and cancel a pending optional notification on loss of ownership. C1 never suppressed. Diagnostic only.",
+    "classification": "Bounded causal diagnostic A/B only. This is not a registered R27 candidate, default, threshold/release change, deployment claim, or holdout evaluation.",
+    "episodes": 46,
+    "expected_outcome": true,
+    "failed_rows": [],
+    "gates": {
+      "all_native_repeated": true,
+      "all_physics_matched": true,
+      "first_3858_persists": true,
+      "later_three_removed": true,
+      "no_added_affected_edge": true,
+      "no_new_false_elsewhere": true,
+      "no_tool_twin_passed": true,
+      "pickup_mass0_preserved": true,
+      "pickup_mass8_preserved": true
+    },
+    "known_pickups": {
+      "pickup_y15_mass0": {
+        "ablation_strict": true,
+        "duration_not_increased": true,
+        "native_strict": true,
+        "same_first_rise": true,
+        "same_physics": true
+      },
+      "pickup_y15_mass8": {
+        "ablation_strict": true,
+        "duration_not_increased": true,
+        "native_strict": true,
+        "same_first_rise": true,
+        "same_physics": true
+      }
+    },
+    "prospective_plan_sha256": "ba20b3537ff5e5caaf2d8b5c7834807f0e7bb87be7ba169921736f9a7bbd8e28",
+    "raw_sha256": "63b095092c27b29cfbd1daa563a1a4f0820eb3b86ea1b0bb88a00c3ecdeb95ec",
+    "remaining": "Original false onset at tick 3858. Three resumed fragments removed, not four; not a registered or promoted detector.",
+    "runner_sha256": "86c11141f1d3657cea782f075e28521a857f8d1e9a2e02f417048f06163aef83"
+  },
+  "prospective_holdback": {
+    "changes": {
+      "added_flags": 4,
+      "duplicate_delta": 0,
+      "duration_delta_samples": 0,
+      "false_delta": 4,
+      "inherited_flags": 15,
+      "lost_incumbent_flags": 0,
+      "strict_gains": 0
+    },
+    "classification": "Prospective disclosed laboratory holdback of the frozen landing integration. Not a formal R27 loaded-detector blind test, grade, promotion, deployment, hardware, or safety claim.",
+    "control_conditions": 18,
+    "counts": {
+      "candidate": {
+        "absolute_misses_with_input_present": 0,
+        "duplicate_rises": 1,
+        "event_slots": 8,
+        "event_window_active_samples": 554,
+        "false_rises": 6,
+        "strict_events": 6,
+        "tool_detected_rows": 2,
+        "tool_present_rows": 2
+      },
+      "incumbent": {
+        "absolute_misses_with_input_present": 0,
+        "duplicate_rises": 1,
+        "event_slots": 8,
+        "event_window_active_samples": 554,
+        "false_rises": 2,
+        "strict_events": 6,
+        "tool_detected_rows": 2,
+        "tool_present_rows": 2
+      }
+    },
+    "episodes": 36,
+    "failed_rows": [
+      {
+        "gates": [
+          "candidate_no_duplicate"
+        ],
+        "id": "hb_s_pickup_oblique",
+        "kind": "single"
+      },
+      {
+        "gates": [
+          "candidate_all_four_strict"
+        ],
+        "id": "hb_p_short_signed_oblique",
+        "kind": "paired"
+      },
+      {
+        "gates": [
+          "no_added_edges",
+          "duration_le_plus5"
+        ],
+        "id": "hb_t_high_loaded",
+        "kind": "tool"
+      }
+    ],
+    "integrity": {
+      "all_authentic_forces_exact": true,
+      "all_physics_matched": true,
+      "sources_unchanged": true
+    },
+    "known_protection_passed": false,
+    "plan_sha256": "7eb05433f11ce31b4bb392282bb323329ad1f5453e8f4b193cab51c3fa108a69",
+    "post_outcome_diagnosis": {
+      "absolute_vs_inherited": {
+        "loaded_tool": "Candidate preserved all five incumbent flags and added four at ticks 3858/3878/3880/3884; row active samples 214 vs 207 (+7).",
+        "no_rise_misses_while_input_present": 0,
+        "pickup_oblique": "Two rises at ticks 1605/1712 and one duplicate were identical in incumbent and candidate; inherited, not added.",
+        "short_pair": "Both arms were strict in 3/4 slots. The both-second rise at tick 1675 was attributable but quiet_before=false; it was not a no-rise miss."
+      },
+      "post_outcome_diagnostic_episodes": 2,
+      "root_cause": {
+        "finding": "The frozen GripForceEpisode returns false before decrementing its pending pulse whenever load_ownership is false. The support-ownership input flickers during the pending pulse, interrupting and later resuming the same pulse as multiple alarm edges.",
+        "pending_pulse_ownership_false_ticks": 71,
+        "references": [
+          "experiments/r27_landing_integration/candidate.py:43-44",
+          "experiments/r27_landing_integration/candidate.py:55-56",
+          "experiments/r27_landing_integration/unloaded_aware.py:53-59"
+        ]
+      },
+      "summary_sha256": "7d8a3b7acf14651996569e0f48cf07f4f6f41340a0aadacf0f3711e5efbbf0ad",
+      "tool_attribution": {
+        "early_real_contact": {
+          "first_s": 1.083,
+          "first_tick": 1083,
+          "incumbent_and_candidate_delay_ms": 10,
+          "last_s": 1.399,
+          "last_tick": 1399,
+          "peak_N": 292.66074170745253
+        },
+        "explicit_tool_rows_present_detected": "2/2 in both arms; lateral control had no physical contact and no alarm.",
+        "finding": "The authentic tool collision is an early pickup contact preserved at the same delay. The four candidate-only edges are much later, after tool force and scheduled external force are quiet, during table/place dynamics and the optional gripped-force pulse. They are late rebound/ownership-fragmentation alarms, not additional tool contacts.",
+        "late_added_edges": [
+          {
+            "extra": true,
+            "horizontal_N": 16.76752491428091,
+            "load_branch": "resolved",
+            "load_ownership": true,
+            "ms_after_last_real_tool_contact": 2459,
+            "physical_grip": true,
+            "pulse_remaining": 7,
+            "scheduled_external_force_N": 0.0,
+            "t_s": 3.858,
+            "table_force_N": 24.534341419186738,
+            "tick": 3858,
+            "tool_force_N": 0.0
+          },
+          {
+            "extra": true,
+            "horizontal_N": 7.556520610768488,
+            "load_branch": "resolved",
+            "load_ownership": true,
+            "ms_after_last_real_tool_contact": 2479,
+            "physical_grip": true,
+            "pulse_remaining": 6,
+            "scheduled_external_force_N": 0.0,
+            "t_s": 3.878,
+            "table_force_N": 28.24774618979394,
+            "tick": 3878,
+            "tool_force_N": 0.0
+          },
+          {
+            "extra": true,
+            "horizontal_N": 7.868932504751115,
+            "load_branch": "resolved",
+            "load_ownership": true,
+            "ms_after_last_real_tool_contact": 2481,
+            "physical_grip": true,
+            "pulse_remaining": 5,
+            "scheduled_external_force_N": 0.0,
+            "t_s": 3.88,
+            "table_force_N": 27.99884473522276,
+            "tick": 3880,
+            "tool_force_N": 0.0
+          },
+          {
+            "extra": true,
+            "horizontal_N": 8.172637515930452,
+            "load_branch": "resolved",
+            "load_ownership": true,
+            "ms_after_last_real_tool_contact": 2485,
+            "physical_grip": true,
+            "pulse_remaining": 2,
+            "scheduled_external_force_N": 0.0,
+            "t_s": 3.884,
+            "table_force_N": 26.195331929690415,
+            "tick": 3884,
+            "tool_force_N": 0.0
+          }
+        ],
+        "weak_normal_contact_limit": "The loaded normal row had a real 16.517 N tool trace but neither arm reported it."
+      }
+    },
+    "result_sha256": "df6c6328e447353af01e05247895218364fa7fc48dcb46c10a5648b7d393d082",
+    "rows": [
+      {
+        "edge_attribution": {
+          "added_indices": [],
+          "candidate_added_edges": 0,
+          "candidate_edges": 0,
+          "candidate_inherited_edges": 0,
+          "incumbent_edges": 0,
+          "incumbent_lost_edges": 0,
+          "inherited_indices": [],
+          "lost_indices": []
+        },
+        "gates": {
+          "duration_le_plus5": true,
+          "forces_exact": true,
+          "no_added_edges": true,
+          "no_lost_edges": true,
+          "no_new_tool_prealarm": true,
+          "same_physics": true
+        },
+        "id": "hb_n_near_zero_positive",
+        "kind": "normal",
+        "passed": true
+      },
+      {
+        "edge_attribution": {
+          "added_indices": [],
+          "candidate_added_edges": 0,
+          "candidate_edges": 0,
+          "candidate_inherited_edges": 0,
+          "incumbent_edges": 0,
+          "incumbent_lost_edges": 0,
+          "inherited_indices": [],
+          "lost_indices": []
+        },
+        "gates": {
+          "duration_le_plus5": true,
+          "forces_exact": true,
+          "no_added_edges": true,
+          "no_lost_edges": true,
+          "no_new_tool_prealarm": true,
+          "same_physics": true
+        },
+        "id": "hb_n_mid_signed",
+        "kind": "normal",
+        "passed": true
+      },
+      {
+        "edge_attribution": {
+          "added_indices": [],
+          "candidate_added_edges": 0,
+          "candidate_edges": 0,
+          "candidate_inherited_edges": 0,
+          "incumbent_edges": 0,
+          "incumbent_lost_edges": 0,
+          "inherited_indices": [],
+          "lost_indices": []
+        },
+        "gates": {
+          "duration_le_plus5": true,
+          "forces_exact": true,
+          "no_added_edges": true,
+          "no_lost_edges": true,
+          "no_new_tool_prealarm": true,
+          "same_physics": true
+        },
+        "id": "hb_n_loaded_signed",
+        "kind": "normal",
+        "passed": true
+      },
+      {
+        "edge_attribution": {
+          "force": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 1,
+            "candidate_inherited_edges": 1,
+            "incumbent_edges": 1,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [
+              1418
+            ],
+            "lost_indices": []
+          },
+          "none": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 0,
+            "candidate_inherited_edges": 0,
+            "incumbent_edges": 0,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [],
+            "lost_indices": []
+          }
+        },
+        "gates": {
+          "candidate_no_duplicate": true,
+          "event_duration_le_plus5": true,
+          "forces_exact": true,
+          "no_added_false": true,
+          "no_added_none_edge": true,
+          "no_new_tool_prealarm": true,
+          "prefix_exact": true,
+          "preserve_incumbent_strict_plus5ms": true,
+          "same_physics": true
+        },
+        "id": "hb_s_approach_x_positive",
+        "kind": "single",
+        "passed": true
+      },
+      {
+        "edge_attribution": {
+          "force": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 1,
+            "candidate_inherited_edges": 1,
+            "incumbent_edges": 1,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [
+              1574
+            ],
+            "lost_indices": []
+          },
+          "none": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 0,
+            "candidate_inherited_edges": 0,
+            "incumbent_edges": 0,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [],
+            "lost_indices": []
+          }
+        },
+        "gates": {
+          "candidate_no_duplicate": true,
+          "event_duration_le_plus5": true,
+          "forces_exact": true,
+          "no_added_false": true,
+          "no_added_none_edge": true,
+          "no_new_tool_prealarm": true,
+          "prefix_exact": true,
+          "preserve_incumbent_strict_plus5ms": true,
+          "same_physics": true
+        },
+        "id": "hb_s_pickup_x_negative",
+        "kind": "single",
+        "passed": true
+      },
+      {
+        "edge_attribution": {
+          "force": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 2,
+            "candidate_inherited_edges": 2,
+            "incumbent_edges": 2,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [
+              1605,
+              1712
+            ],
+            "lost_indices": []
+          },
+          "none": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 0,
+            "candidate_inherited_edges": 0,
+            "incumbent_edges": 0,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [],
+            "lost_indices": []
+          }
+        },
+        "gates": {
+          "candidate_no_duplicate": false,
+          "event_duration_le_plus5": true,
+          "forces_exact": true,
+          "no_added_false": true,
+          "no_added_none_edge": true,
+          "no_new_tool_prealarm": true,
+          "prefix_exact": true,
+          "preserve_incumbent_strict_plus5ms": true,
+          "same_physics": true
+        },
+        "id": "hb_s_pickup_oblique",
+        "kind": "single",
+        "passed": false
+      },
+      {
+        "edge_attribution": {
+          "force": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 1,
+            "candidate_inherited_edges": 1,
+            "incumbent_edges": 1,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [
+              1670
+            ],
+            "lost_indices": []
+          },
+          "none": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 0,
+            "candidate_inherited_edges": 0,
+            "incumbent_edges": 0,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [],
+            "lost_indices": []
+          }
+        },
+        "gates": {
+          "candidate_no_duplicate": true,
+          "event_duration_le_plus5": true,
+          "forces_exact": true,
+          "no_added_false": true,
+          "no_added_none_edge": true,
+          "no_new_tool_prealarm": true,
+          "prefix_exact": true,
+          "preserve_incumbent_strict_plus5ms": true,
+          "same_physics": true
+        },
+        "id": "hb_s_pickup_y_loaded",
+        "kind": "single",
+        "passed": true
+      },
+      {
+        "edge_attribution": {
+          "both": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 2,
+            "candidate_inherited_edges": 2,
+            "incumbent_edges": 2,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [
+              1584,
+              1675
+            ],
+            "lost_indices": []
+          },
+          "first": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 1,
+            "candidate_inherited_edges": 1,
+            "incumbent_edges": 1,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [
+              1584
+            ],
+            "lost_indices": []
+          },
+          "none": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 0,
+            "candidate_inherited_edges": 0,
+            "incumbent_edges": 0,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [],
+            "lost_indices": []
+          },
+          "second": {
+            "added_indices": [],
+            "candidate_added_edges": 0,
+            "candidate_edges": 1,
+            "candidate_inherited_edges": 1,
+            "incumbent_edges": 1,
+            "incumbent_lost_edges": 0,
+            "inherited_indices": [
+              1676
+            ],
+            "lost_indices": []
+          }
+        },
+        "gates": {
+          "all_prefixes_exact": true,
+          "candidate_all_four_strict": false,
+          "candidate_no_duplicates": true,
+          "event_duration_le_plus5": true,
+          "forces_exact": true,
+          "no_added_false": true,
+          "no_added_none_edge": true,
+          "preserve_incumbent_strict_plus5ms": true,
+          "same_physics": true
+        },
+        "id": "hb_p_short_signed_oblique",
+        "kind": "paired",
+        "passed": false
+      },
+      {
+        "edge_attribution": {
+          "added_indices": [],
+          "candidate_added_edges": 0,
+          "candidate_edges": 1,
+          "candidate_inherited_edges": 1,
+          "incumbent_edges": 1,
+          "incumbent_lost_edges": 0,
+          "inherited_indices": [
+            1103
+          ],
+          "lost_indices": []
+        },
+        "gates": {
+          "duration_le_plus5": true,
+          "forces_exact": true,
+          "no_added_edges": true,
+          "no_new_tool_prealarm": true,
+          "preserve_incumbent_tool_plus5ms": true,
+          "same_physics": true
+        },
+        "id": "hb_t_high_midload",
+        "kind": "tool",
+        "passed": true,
+        "tool": {
+          "candidate": {
+            "active_samples": 72,
+            "false_times_s": [],
+            "rises": [
+              1103
+            ],
+            "tool": {
+              "delay_ms": 9,
+              "detected": true,
+              "peak_N": 198.65197662726118,
+              "prealarm": false,
+              "present": true
+            }
+          },
+          "incumbent": {
+            "active_samples": 72,
+            "false_times_s": [],
+            "rises": [
+              1103
+            ],
+            "tool": {
+              "delay_ms": 9,
+              "detected": true,
+              "peak_N": 198.65197662726118,
+              "prealarm": false,
+              "present": true
+            }
+          }
+        }
+      },
+      {
+        "edge_attribution": {
+          "added_indices": [
+            3858,
+            3878,
+            3880,
+            3884
+          ],
+          "candidate_added_edges": 4,
+          "candidate_edges": 9,
+          "candidate_inherited_edges": 5,
+          "incumbent_edges": 5,
+          "incumbent_lost_edges": 0,
+          "inherited_indices": [
+            1093,
+            1323,
+            1458,
+            3903,
+            3923
+          ],
+          "lost_indices": []
+        },
+        "gates": {
+          "duration_le_plus5": false,
+          "forces_exact": true,
+          "no_added_edges": false,
+          "no_new_tool_prealarm": true,
+          "preserve_incumbent_tool_plus5ms": true,
+          "same_physics": true
+        },
+        "id": "hb_t_high_loaded",
+        "kind": "tool",
+        "passed": false,
+        "tool": {
+          "candidate": {
+            "active_samples": 214,
+            "false_times_s": [
+              3.858,
+              3.878,
+              3.88,
+              3.884,
+              3.903,
+              3.923
+            ],
+            "rises": [
+              1093,
+              1323,
+              1458,
+              3858,
+              3878,
+              3880,
+              3884,
+              3903,
+              3923
+            ],
+            "tool": {
+              "delay_ms": 10,
+              "detected": true,
+              "peak_N": 292.66074170745253,
+              "prealarm": false,
+              "present": true
+            }
+          },
+          "incumbent": {
+            "active_samples": 207,
+            "false_times_s": [
+              3.903,
+              3.923
+            ],
+            "rises": [
+              1093,
+              1323,
+              1458,
+              3903,
+              3923
+            ],
+            "tool": {
+              "delay_ms": 10,
+              "detected": true,
+              "peak_N": 292.66074170745253,
+              "prealarm": false,
+              "present": true
+            }
+          }
+        }
+      },
+      {
+        "edge_attribution": {
+          "added_indices": [],
+          "candidate_added_edges": 0,
+          "candidate_edges": 0,
+          "candidate_inherited_edges": 0,
+          "incumbent_edges": 0,
+          "incumbent_lost_edges": 0,
+          "inherited_indices": [],
+          "lost_indices": []
+        },
+        "gates": {
+          "duration_le_plus5": true,
+          "forces_exact": true,
+          "no_added_edges": true,
+          "no_new_tool_prealarm": true,
+          "preserve_incumbent_tool_plus5ms": true,
+          "same_physics": true
+        },
+        "id": "hb_t_lateral_control",
+        "kind": "tool",
+        "passed": true,
+        "tool": {
+          "candidate": {
+            "active_samples": 0,
+            "false_times_s": [],
+            "rises": [],
+            "tool": {
+              "delay_ms": null,
+              "detected": false,
+              "peak_N": 0.0,
+              "prealarm": false,
+              "present": false
+            }
+          },
+          "incumbent": {
+            "active_samples": 0,
+            "false_times_s": [],
+            "rises": [],
+            "tool": {
+              "delay_ms": null,
+              "detected": false,
+              "peak_N": 0.0,
+              "prealarm": false,
+              "present": false
+            }
+          }
+        }
+      }
+    ],
+    "runner_sha256": "c6f38775ef1428705bfdbc6e1d2f15e762d489a920fd3dc02484b385af693685"
+  },
+  "schema": "r27-g4-opt-in-laboratory.v1",
+  "unloaded_development_receipt_sha256": "1defce8ee1deb8cbca4cab235ca81344a41a18bde0e3902d9699004fb8166275"
+}

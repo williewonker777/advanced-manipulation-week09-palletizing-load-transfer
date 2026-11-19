@@ -1,0 +1,292 @@
+{
+  "schema": "week09-r25-pre-independent-choice.v1",
+  "selection": "joint",
+  "selected_for_independent": "joint",
+  "entrypoint": "experiments.r25_composed.detector:Detector",
+  "default_promoted": false,
+  "prior_choice_policy": "7cdfcb7669ce895cfd6a981098c52f16c130d0bf862e93c0a8ba75e66c7a3833",
+  "independent_seal_sha256": "c55a70ed84fa2c160c88a805060cac040e63daab337ecbe6bc44ea074502c05a",
+  "basis": "Both physically distinct event-boundary repairs pass every exposed floor as one detector. The additional immediate and deferred force-onset witnesses show useful new evidence but both fail pre-existing no-new-regression requirements. No independent case or outcome used for selection. No re-selection after the independent result.",
+  "selected_source_pins": {
+    "experiments/r25_composed/detector.py": "04d591ce1a3e849d615a28faf8d138e035178ac080cab598ec41449fda7c9ed4",
+    "experiments/r25_composed/plan.json": "b9c3ea8f57da9c5509b84927e9d0d5ad81709cd30bbc7c3ae2370cf43733cdee",
+    "experiments/r25_fragment/event.py": "43de80f397364820212f5534ee46e9eb144a6faa7494f6d7617a991b80249a14",
+    "experiments/r25_fragment/stream.py": "3fdb052eadf4d51e340b16710ce17615d2d58460a0a11a021306c56d400c80fe",
+    "experiments/r25_fragment/selection_policy.json": "7cdfcb7669ce895cfd6a981098c52f16c130d0bf862e93c0a8ba75e66c7a3833",
+    "experiments/r25_pickup/candidate.py": "2dea5cd6476b459e22918218d14f115d65eb970a615002c4e73cca69a38abd93"
+  },
+  "inherited_source_closure": {
+    "path": "experiments/r25_portable/exposed_closure.json",
+    "sha256": "9fd7ddf885dd61a54a524c6ef5c4af422aff2fd7ea5c3c6b7cf1f3abdbeddf2a"
+  },
+  "studies": {
+    "r24": {
+      "raw_sha256": "ef1e70d3799d43566d8fd501a27965bec44ca4a014ae41e938e68f9b4e617ae6",
+      "finding": {
+        "rows": 52,
+        "episodes": 240,
+        "incumbent_and_candidate": {
+          "r24_joint": {
+            "strict": 51,
+            "slots": 84,
+            "duplicate_edges": 3,
+            "duplicate_slots": 2,
+            "false_rises": 2,
+            "all_four": 0
+          },
+          "experiments.r25_composed.detector:Detector": {
+            "strict": 53,
+            "slots": 84,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 2,
+            "all_four": 1
+          }
+        },
+        "all_required_relative_gates": true
+      }
+    },
+    "r23": {
+      "raw_sha256": "5f2c46fca44ff8caf6fcabf04323320bd1513c725fa6333c54a382e244948b09",
+      "finding": {
+        "rows": 45,
+        "episodes": 216,
+        "incumbent_and_candidate": {
+          "r24_joint": {
+            "strict": 66,
+            "slots": 78,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "all_four": 8
+          },
+          "experiments.r25_composed.detector:Detector": {
+            "strict": 66,
+            "slots": 78,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "all_four": 8
+          }
+        },
+        "all_required_relative_gates": true
+      }
+    },
+    "nearby": {
+      "raw_sha256": "a7ae7938a43cc3238a61c086c51102c6a1407837d9c1b7cd845c67f52c39b162",
+      "finding": {
+        "rows": 20,
+        "episodes": 80,
+        "incumbent_and_candidate": {
+          "r24_joint": {
+            "strict": 17,
+            "slots": 20,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "all_four": 0
+          },
+          "experiments.r25_composed.detector:Detector": {
+            "strict": 17,
+            "slots": 20,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "all_four": 0
+          }
+        },
+        "all_required_relative_gates": true
+      }
+    },
+    "stress": {
+      "raw_sha256": "95ba6ab18b288d9695edb21234ca42826f8279beedecd0e15edc28dc0aba7f31",
+      "finding": {
+        "rows": 12,
+        "episodes": 96,
+        "incumbent_and_candidate": {
+          "r24_joint": {
+            "strict": 24,
+            "slots": 48,
+            "duplicate_edges": 24,
+            "duplicate_slots": 12,
+            "false_rises": 0,
+            "all_four": 0
+          },
+          "experiments.r25_composed.detector:Detector": {
+            "strict": 36,
+            "slots": 48,
+            "duplicate_edges": 0,
+            "duplicate_slots": 0,
+            "false_rises": 0,
+            "all_four": 6
+          }
+        },
+        "all_required_relative_gates": true
+      }
+    },
+    "grip": {
+      "raw_sha256": "28d68becd234c6c28cdced9b5bf213cf68fdb7f7b067d6bb726f1821f4a5c6e7",
+      "finding": {
+        "rows": 16,
+        "episodes": 128,
+        "incumbent_and_candidate": {
+          "r24_joint": {
+            "strict": 42,
+            "slots": 64,
+            "duplicate_edges": 18,
+            "duplicate_slots": 18,
+            "false_rises": 0,
+            "all_four": 8
+          },
+          "experiments.r25_composed.detector:Detector": {
+            "strict": 42,
+            "slots": 64,
+            "duplicate_edges": 18,
+            "duplicate_slots": 18,
+            "false_rises": 0,
+            "all_four": 8
+          }
+        },
+        "all_required_relative_gates": true
+      }
+    },
+    "legacy66": {
+      "raw_sha256": "2a18ba685e49216a9fcc3d178a0e1f52f0e69b5bc40f7da29f06f01f70398c8c",
+      "finding": {
+        "rows": 66,
+        "episodes": 486,
+        "all_required_relative_gates": true
+      }
+    },
+    "weak": {
+      "raw_sha256": "f35d19e9b28685970cf41379d4b9f43b1c002a2776bbe50a739f4abddd3cc6e0",
+      "finding": {
+        "rows": 15,
+        "episodes": 60,
+        "all_required_relative_gates": true
+      }
+    },
+    "pairs": {
+      "raw_sha256": "629a61545d33848b4fccddf977ce49afd4cb0685e07bd37833609f1b4a44f695",
+      "finding": {
+        "rows": 14,
+        "episodes": 112,
+        "all_required_relative_gates": true
+      }
+    },
+    "weak-duration": {
+      "raw_sha256": "e92f47a9ffdb88a87d7e83733391473a1a55f0d800973adce3d8bfe128f4e54d",
+      "finding": {
+        "rows": 15,
+        "episodes": 60,
+        "all_required_relative_gates": true
+      }
+    },
+    "d4": {
+      "raw_sha256": "f188dc5aec6430855c93b60d379f2bf1e4271612b4b49695806d478e755f18c4",
+      "finding": {
+        "rows": 385,
+        "new_physics_episodes": 385,
+        "summary": {
+          "r24": {
+            "strict": 146,
+            "false_rises": 9,
+            "extra_edges": 2,
+            "tool": 6
+          },
+          "candidate": {
+            "strict": 146,
+            "false_rises": 9,
+            "extra_edges": 2,
+            "tool": 6
+          }
+        },
+        "all_required_relative_gates": true
+      }
+    },
+    "official": {
+      "raw_sha256": "903f4dee68f9fe4fca2bfaa9c6a8c16c9a1d77808a7b7f6767cdf73129af4a33",
+      "finding": {
+        "episodes": 87,
+        "all_original_evaluator_scientific_cells_agree": true
+      }
+    },
+    "profile": {
+      "raw_sha256": "f4ed798031739a69b11c182e5d3b6ad2ab5382b922b5970ea7d7534437af91bd",
+      "finding": {
+        "controller_detector_ticks": 48000,
+        "worst_episode_p99_wall_us": 354.23700000000014,
+        "hard_realtime": false
+      }
+    }
+  },
+  "other_trials": {
+    "immediate": {
+      "entrypoint": "experiments.r25_composed.with_weak:Detector",
+      "pins": {
+        "experiments/r25_composed/with_weak.py": "a5fb83c355f9b23432a39a3ef0ec82fcdc84a0db140f57b3c076512196f173af",
+        "experiments/r25_composed/detector.py": "04d591ce1a3e849d615a28faf8d138e035178ac080cab598ec41449fda7c9ed4",
+        "experiments/r25_weak/world_horizontal.py": "cbea3e924b3231ad8e5a1ad609ef18be17fe81060c5c863887cc91f6210f7afe",
+        "experiments/r25_weak/normal_force_detector.py": "f2c38e2a3f598b8b9579498bbbf975a34bbb381982944125369d24c5c9e20f38",
+        "experiments/r25_weak/world_horizontal_model.json": "acdfc763e4bd968f493b061a05db6c61d9fddeb75782dad304243cdb110c9e7a",
+        "experiments/r15_delayed_wrench/observer.py": "eff8f0b76d8c0358bb15b020be0db6e0b55d0e666a93ee2f46a1de6190ba2483",
+        "experiments/r25_fragment/event.py": "43de80f397364820212f5534ee46e9eb144a6faa7494f6d7617a991b80249a14",
+        "experiments/r25_fragment/stream.py": "3fdb052eadf4d51e340b16710ce17615d2d58460a0a11a021306c56d400c80fe",
+        "experiments/r25_fragment/selection_policy.json": "7cdfcb7669ce895cfd6a981098c52f16c130d0bf862e93c0a8ba75e66c7a3833",
+        "experiments/r25_pickup/candidate.py": "2dea5cd6476b459e22918218d14f115d65eb970a615002c4e73cca69a38abd93",
+        "experiments/r25_composed/plan.json": "b9c3ea8f57da9c5509b84927e9d0d5ad81709cd30bbc7c3ae2370cf43733cdee"
+      },
+      "exposed_guard_failures": [
+        {
+          "panel": "stress",
+          "guard_failures": 7,
+          "first_actual_failure": [
+            "cross_stress_0",
+            "stock",
+            [
+              "isolated_second:time",
+              "isolated_second:cost",
+              "isolated_second:duplicates",
+              "both_second:time",
+              "both_second:cost",
+              "both_second:duplicates"
+            ]
+          ],
+          "raw_sha256": "e417ba4f3eeb92d648eecd329f3077b7761866ff8e587849914434cb181218f5"
+        }
+      ]
+    },
+    "deferred": {
+      "entrypoint": "experiments.r25_composed.deferred_weak:Detector",
+      "pins": {
+        "experiments/r25_composed/deferred_weak.py": "6285fa91a5abebac316626c96edef0dd2aefacd2c71b1e3c21a066253d7bdbac",
+        "experiments/r25_composed/detector.py": "04d591ce1a3e849d615a28faf8d138e035178ac080cab598ec41449fda7c9ed4",
+        "experiments/r25_weak/world_horizontal.py": "cbea3e924b3231ad8e5a1ad609ef18be17fe81060c5c863887cc91f6210f7afe",
+        "experiments/r25_weak/world_horizontal_v2.py": "e4c4b2510962a495a0550a1f8b374b742099255a2372c9dd47c7a712064175e1",
+        "experiments/r25_weak/normal_force_detector_v2.py": "d4209bc129196594b5b0a0fa556bb135c00c4dc41da842205041a7da662e98ca",
+        "experiments/r25_weak/DEFERRED_V2_SPEC.json": "4b53c73eac237a67ed652fb83b95cf46df042a7d4dc5d8cf38a64a28839cb792",
+        "experiments/r25_weak/world_horizontal_model.json": "acdfc763e4bd968f493b061a05db6c61d9fddeb75782dad304243cdb110c9e7a",
+        "experiments/r15_delayed_wrench/observer.py": "eff8f0b76d8c0358bb15b020be0db6e0b55d0e666a93ee2f46a1de6190ba2483",
+        "experiments/r25_fragment/event.py": "43de80f397364820212f5534ee46e9eb144a6faa7494f6d7617a991b80249a14",
+        "experiments/r25_fragment/stream.py": "3fdb052eadf4d51e340b16710ce17615d2d58460a0a11a021306c56d400c80fe",
+        "experiments/r25_fragment/selection_policy.json": "7cdfcb7669ce895cfd6a981098c52f16c130d0bf862e93c0a8ba75e66c7a3833",
+        "experiments/r25_pickup/candidate.py": "2dea5cd6476b459e22918218d14f115d65eb970a615002c4e73cca69a38abd93"
+      },
+      "exposed_guard_failures": [
+        {
+          "panel": "sample",
+          "guard_failures": 2,
+          "first_actual_failure": [
+            "s24_transfer_offaxis_early",
+            "stock",
+            [
+              "single:time",
+              "single:duplicates"
+            ]
+          ],
+          "raw_sha256": "ea7818b2c0bdf9398e9839e58f1fa26c5d6a6872647821e8a58b57b60eb3c4e5"
+        }
+      ]
+    }
+  }
+}

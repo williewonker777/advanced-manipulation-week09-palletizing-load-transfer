@@ -1,0 +1,204 @@
+{
+  "schema": "r25-exposed-three-component-trial.v1",
+  "independent": false,
+  "candidate": "experiments.r25_composed.with_weak:Detector",
+  "rows": 52,
+  "episodes": 240,
+  "summary": {
+    "r24_joint": {
+      "strict": 51,
+      "slots": 84,
+      "duplicate_edges": 3,
+      "duplicate_slots": 2,
+      "false_rises": 2,
+      "all_four": 0
+    },
+    "experiments.r25_composed.with_weak:Detector": {
+      "strict": 64,
+      "slots": 84,
+      "duplicate_edges": 7,
+      "duplicate_slots": 7,
+      "false_rises": 2,
+      "all_four": 1
+    }
+  },
+  "relative_gate_regressions": [
+    [
+      "s24_transfer_offaxis_early",
+      "stock",
+      [
+        "single:time",
+        "single:duplicates"
+      ]
+    ],
+    [
+      "s24_transfer_offaxis_early",
+      "actuator_delay_gain",
+      [
+        "single:time",
+        "single:cost",
+        "single:duplicates"
+      ]
+    ],
+    [
+      "p24_transfer_near_diag",
+      "stock",
+      [
+        "isolated_second:duplicates",
+        "both_second:duplicates"
+      ]
+    ],
+    [
+      "p24_transfer_near_diag",
+      "actuator_delay_gain",
+      [
+        "both_second:duplicates"
+      ]
+    ],
+    [
+      "p24_transfer_near_diag",
+      "contact_armature",
+      [
+        "isolated_second:duplicates"
+      ]
+    ],
+    [
+      "p24_transfer_near_cross",
+      "contact_armature",
+      [
+        "both_second:duplicates"
+      ]
+    ]
+  ],
+  "known_target_details": [
+    {
+      "case": "s24_transfer_offaxis_mid",
+      "mechanics": "stock",
+      "incumbent": {
+        "raw_rise_indices": [],
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": false,
+        "duplicate_rises": 0,
+        "strict": false,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "raw_rise_indices": [
+          1559
+        ],
+        "attributable_rise_indices": [
+          1559
+        ],
+        "delays_ms": [
+          71
+        ],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": true,
+        "duplicate_rises": 0,
+        "strict": true,
+        "active_samples_in_slot": 8
+      }
+    },
+    {
+      "case": "s24_transfer_offaxis_mid",
+      "mechanics": "actuator_delay_gain",
+      "incumbent": {
+        "raw_rise_indices": [],
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": false,
+        "duplicate_rises": 0,
+        "strict": false,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "raw_rise_indices": [
+          1583
+        ],
+        "attributable_rise_indices": [
+          1583
+        ],
+        "delays_ms": [
+          95
+        ],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": true,
+        "duplicate_rises": 0,
+        "strict": true,
+        "active_samples_in_slot": 8
+      }
+    },
+    {
+      "case": "s24_transfer_offaxis_mid",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "raw_rise_indices": [],
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": false,
+        "duplicate_rises": 0,
+        "strict": false,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "raw_rise_indices": [
+          1544
+        ],
+        "attributable_rise_indices": [
+          1544
+        ],
+        "delays_ms": [
+          56
+        ],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": true,
+        "duplicate_rises": 0,
+        "strict": true,
+        "active_samples_in_slot": 8
+      }
+    },
+    {
+      "case": "s24_transfer_offaxis_mid",
+      "mechanics": "contact_armature",
+      "incumbent": {
+        "raw_rise_indices": [],
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": false,
+        "duplicate_rises": 0,
+        "strict": false,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "raw_rise_indices": [
+          1550
+        ],
+        "attributable_rise_indices": [
+          1550
+        ],
+        "delays_ms": [
+          62
+        ],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": true,
+        "duplicate_rises": 0,
+        "strict": true,
+        "active_samples_in_slot": 8
+      }
+    }
+  ],
+  "raw_sha256": "95b7b7a327a91361b37094cabf6eb84a4d3625a1315bbe22c3a7fe324320c257"
+}

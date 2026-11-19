@@ -1,0 +1,25 @@
+{
+  "schema": "r16-robust-prefix-plan.v1",
+  "frozen_before_new_capture": true,
+  "diagnosis": "R15 early perturbed point RMSE was 0.615 mm, but one-normal-per-hidden-perturbation affine mass calibration produced a 3.409 mm LOO guard and 0/12 substantial actions. The target is conditional normal prediction, not a lower acceptance threshold.",
+  "public_estimator": {
+    "deadline_s": 3.447,
+    "pregrasp_signature_window_s": [0.3, 0.9],
+    "carried_centres_last_s": 3.424,
+    "signals": ["encoder", "JTS", "grip", "known mass", "known nominal COM", "public taught trajectory", "nominal dynamics"],
+    "structure": "A single pooled stock+perturbed normal calibration. Before grasp, fit an empty-arm stiffness residual and encoder tracking projections onto taught viscous and regularized-Coulomb motion. During carriage, jointly solve three COM moments, one stiffness coordinate, six JTS DC terms and six linear drifts. Both the residual bias and normal absolute-COM expectation are affine in interpolated mass and the measured pregrasp signature; no fixture label or perturbation setting is an input.",
+    "uncertainty": "0.75 mm physical margin plus fully refitted leave-one-normal-out 2-D error plus largest five contiguous carried-time block deletion distance. Keep the existing radius <=2.5 mm, norm > radius and 15 mm vector cap. Require mass interpolation and a measured-signature standardized radius no larger than the greatest source-normal radius; this uses no hidden domain label.",
+    "assumptions": "The source-normal envelope spans the deployment stiffness/drag signatures; pickup perturbations are constant within an episode; no unmodeled pregrasp contact occurs in 0.3--0.9 s; accepted COM moment columns remain identifiable after DC/drift/stiffness nuisance projection. Poor support or observability forces zero action."
+  },
+  "calibration": "Existing exposed normal-only stock and perturbed records are development calibration, not acceptance evidence. Test truths and offset labels are never consumed by fit or prediction.",
+  "fresh_groups": [
+    {"id": "rp1", "mass": 3.28, "com": [0.013, -0.021, 0.018], "shift": [0.0064, -0.0057, 0.0049], "perturb": {"seed": 162301, "stiffness_scale": 1.035, "viscous_scale": 1.055, "coulomb_scale": 0.945}},
+    {"id": "rp2", "mass": 4.67, "com": [-0.020, 0.014, -0.022], "shift": [-0.0057, -0.0063, 0.0058], "perturb": {"seed": 162302, "stiffness_scale": 0.965, "viscous_scale": 0.955, "coulomb_scale": 1.055}},
+    {"id": "rp3", "mass": 6.12, "com": [0.021, 0.017, -0.015], "shift": [0.0069, 0.0061, 0.0045], "perturb": {"seed": 162303, "stiffness_scale": 1.018, "viscous_scale": 0.942, "coulomb_scale": 1.068}},
+    {"id": "rp4", "mass": 7.83, "com": [-0.012, -0.024, 0.020], "shift": [-0.0066, 0.0056, 0.0051], "perturb": {"seed": 162304, "stiffness_scale": 0.982, "viscous_scale": 1.058, "coulomb_scale": 0.938}}
+  ],
+  "variants": ["none", "explicit_zero", "xy", "up", "down"],
+  "sensing_gates": "Separately for stock and perturbed: vector RMSE <=1.5 mm; zero-on-abstain max action error <=2 mm; no accepted interval miss; no action for truth norm <1 mm; every truth norm >=3 mm accepted with positive dot. All 20 rows count. Predictions and source hashes are sealed before truth opens.",
+  "control_gate": "Only a domain passing every sensing gate may enter a separately reported control comparison. Require zero fallback parity and original R15 G4/cost/saturation/FA/tool gates; otherwise stop at bounded sensing evidence.",
+  "scope": "Simulation-only research; no release, kit, core controller, detector, evaluator, manifest, hardware, dependency, remote or GitHub changes."
+}

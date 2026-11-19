@@ -1,0 +1,97 @@
+{
+  "schema": "r25-exposed-three-component-trial.v1",
+  "independent": false,
+  "candidate": "experiments.r25_composed.with_weak:Detector",
+  "rows": 12,
+  "episodes": 96,
+  "summary": {
+    "r24_joint": {
+      "strict": 24,
+      "slots": 48,
+      "duplicate_edges": 24,
+      "duplicate_slots": 12,
+      "false_rises": 0,
+      "all_four": 0
+    },
+    "experiments.r25_composed.with_weak:Detector": {
+      "strict": 41,
+      "slots": 48,
+      "duplicate_edges": 7,
+      "duplicate_slots": 7,
+      "false_rises": 0,
+      "all_four": 8
+    }
+  },
+  "relative_gate_regressions": [
+    [
+      "cross_stress_0",
+      "stock",
+      [
+        "isolated_second:time",
+        "isolated_second:cost",
+        "isolated_second:duplicates",
+        "both_second:time",
+        "both_second:cost",
+        "both_second:duplicates"
+      ]
+    ],
+    [
+      "cross_stress_0",
+      "actuator_delay_gain",
+      [
+        "isolated_second:time",
+        "isolated_second:cost",
+        "isolated_second:duplicates",
+        "both_second:time",
+        "both_second:cost",
+        "both_second:duplicates"
+      ]
+    ],
+    [
+      "cross_stress_1",
+      "actuator_delay_gain",
+      [
+        "isolated_second:time",
+        "isolated_second:cost",
+        "isolated_second:duplicates"
+      ]
+    ],
+    [
+      "cross_stress_3",
+      "stock",
+      [
+        "isolated_second:time",
+        "isolated_second:cost",
+        "isolated_second:duplicates",
+        "both_second:time",
+        "both_second:cost",
+        "both_second:duplicates"
+      ]
+    ],
+    [
+      "cross_stress_3",
+      "actuator_delay_gain",
+      [
+        "isolated_second:cost",
+        "both_second:cost"
+      ]
+    ],
+    [
+      "cross_stress_4",
+      "actuator_delay_gain",
+      [
+        "both_second:cost"
+      ]
+    ],
+    [
+      "cross_stress_5",
+      "stock",
+      [
+        "isolated_second:cost",
+        "both_second:cost"
+      ]
+    ]
+  ],
+  "known_target_details": [],
+  "raw_sha256": "e417ba4f3eeb92d648eecd329f3077b7761866ff8e587849914434cb181218f5"
+}

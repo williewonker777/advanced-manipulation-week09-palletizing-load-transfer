@@ -1,0 +1,31 @@
+{
+  "schema": "r26-known-yaw-acquisition-closure.v1",
+  "classification": "Previously disclosed signed-yaw acquisition diagnostic source closure; opt-in only and not independent evidence.",
+  "candidate_sha256": "212f4e79367cb636c0143a2d1f8aa7ba5584aaaca5ecde6b412d01a4985b6784",
+  "sealed_v2": {
+    "closure_sha256": "bf0533c5d90dd3168ef67d7d5ced5cf77a4ca527c4644f420014a0870f44f4c9",
+    "registration_sha256": "e40cb4e057ecf551ebf72cac4311d63ba3d5c3fc79dc727de46ff689247f174e",
+    "evaluator_sha256": "7cc1eceab381d6b424f10325bbb480fd7e23064ce94ce84a77a70f967c86fbf4",
+    "signed_ownership_sha256": "a0570079ad5ce8425e9fbdc291b20401a9056b3bca35824237d157ec37a73057"
+  },
+  "files": {
+    "experiments/r26_yaw_onset_portable/__init__.py": "b914bb384b64d14f954f2a9ee0cb69087de5a160d2cc45ac04db0dfe68f48d6e",
+    "experiments/r26_yaw_onset_portable/target.py": "58aa565197605e8a4f08d5a23a2ca44f301dfb08e15ac88b14fe940e8282463a",
+    "experiments/r26_yaw_onset_portable/test_portable.py": "16d269cec1ee44af996b28fb634f41aa95083ebb028b53c988eebe226a16ac5a",
+    "experiments/r26_yaw_acquisition/__init__.py": "1886507b59b8ced7523dfc675c2ba8658d5cff59b3912733908303b9d2b3cf7c",
+    "experiments/r26_yaw_acquisition/candidate.py": "212f4e79367cb636c0143a2d1f8aa7ba5584aaaca5ecde6b412d01a4985b6784",
+    "experiments/r26_yaw_acquisition/plan.json": "bdb176a0ce41b51f1c6843d52329235bd7758203dde4008a5b2625fe11bd4383",
+    "tools/r26_yaw_acquisition_replay.py": "f9306585e767ef8868350b31902aa23c10c293ee5952fb7270614442b26a1a38"
+  },
+  "overlay_files": [
+    "experiments/r26_yaw_onset_portable/__init__.py",
+    "experiments/r26_yaw_onset_portable/target.py",
+    "experiments/r26_yaw_acquisition/__init__.py",
+    "experiments/r26_yaw_acquisition/candidate.py",
+    "experiments/r26_yaw_acquisition/plan.json"
+  ],
+  "public_files": [
+    "experiments/r26_yaw_onset_portable/test_portable.py",
+    "tools/r26_yaw_acquisition_replay.py"
+  ]
+}

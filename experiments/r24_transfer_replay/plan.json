@@ -1,0 +1,31 @@
+{
+  "schema": "r24-transfer-external-replay-plan.v1",
+  "status": "PREDECLARED_BEFORE_NEW_CASE_OUTCOMES",
+  "classification": "finite public laboratory simulation replay and new bounded challenge; not original course demo, hidden evaluation, hardware validation, promotion, or safety proof",
+  "candidate": "experiments.r24_transfer.deadband:Controller",
+  "candidate_sha256": "73bd939b7d3a1ca24e8db4535f9d8193755ea8e0af21cf4f7e672dccf33241d5",
+  "calibration_sha256": "98142aef04a70b23803e8034a86020acf3a0b75cf5585094027d4b1a2320794b",
+  "known_replay": [
+    {"id":"sh5","mass":6.65,"com":[-0.025,0.018,-0.02],"offset":[0.004,-0.006,0.0048],"mechanics":{"table_solref_time_scale":1.0},"expected":{"r19_false":[3.903],"r24_false":[],"r24_support":[0.619476538329388,0.47989254717574903,1.0388985042793473],"r24_physical_sha256":"b66cae3d6f40776839036db58760252cfc76a16137ef83714ce36c4ee43fd4da"}},
+    {"id":"heavy8_offset","mass":8.0,"com":[0.03,-0.025,0.04],"offset":[-0.004,0.006,0.003],"mechanics":{"table_solref_time_scale":1.0},"expected":{"r19_false":[3.9170000000000003],"r24_false":[3.9170000000000003],"r24_support":[0.7714279100668306,0.6558791477782302,1.0537362022706276],"r24_physical_sha256":"a020ddc85f43443aed3c0ea5f51a64a6e5d3f91ee2ecc5d3375c68823cf521ed"}},
+    {"id":"ec3:up","mass":6.55,"com":[0.016,0.023,-0.02],"offset":[0.0072,0.0054,0.0042],"mechanics":{"table_solref_time_scale":1.0},"expected":{"r19_false":[3.919],"r24_false":[3.919],"r24_support":[0.7794591862606497,0.6668987613279692,1.0498576446864287],"r24_physical_sha256":"e075c411ac2c713312be52e2941897e83abc33c00cc81d927e8cb236039295de"}}
+  ],
+  "new_normal": [
+    {"id":"interp_mass","mass":5.40,"com":[0.004,-0.006,0.012],"offset":[-0.002,0.003,0.0025],"mechanics":{"table_solref_time_scale":1.0}},
+    {"id":"interp_com","mass":6.20,"com":[0.022,-0.018,0.028],"offset":[0.003,-0.002,0.0035],"mechanics":{"table_solref_time_scale":1.0}},
+    {"id":"soft_table_10pct","mass":6.20,"com":[-0.012,0.015,0.025],"offset":[-0.003,0.002,0.003],"mechanics":{"table_solref_time_scale":1.10}}
+  ],
+  "impulse_base": {"mass":5.80,"com":[0.010,-0.012,0.020],"offset":[0.002,-0.003,0.003],"mechanics":{"table_solref_time_scale":1.05}},
+  "late_impulses": [
+    {"id":"late_x_pos","time_s":4.18,"force_n":[12.0,0.0,0.0]},
+    {"id":"late_x_neg","time_s":4.18,"force_n":[-12.0,0.0,0.0]},
+    {"id":"late_z_pos","time_s":4.18,"force_n":[0.0,0.0,16.0]},
+    {"id":"late_z_neg","time_s":4.18,"force_n":[0.0,0.0,-16.0]}
+  ],
+  "event_window_s": 0.32,
+  "twin_guard_s": 0.020,
+  "delay_margin_ms": 5.0,
+  "false_match_tolerance_ms": 2.0,
+  "reporting": "Known rows require exact pinned R24 physical hashes, false times, support metrics, and G4. New normals report G4 and false events without promotion acceptance. Every impulse has an actual signed-force episode and matched no-force twin per arm; report genuine true retention, +5 ms delay, forced/twin false events, inherited failures, and candidate-vs-R10/R19 gates separately. Do not retune or expand after disclosure.",
+  "stop_rule": "Run the fixed cohort once after source lock. Preserve every failure and inherited alarm; no case, force, mechanics, threshold, controller, detector, or gate change."
+}

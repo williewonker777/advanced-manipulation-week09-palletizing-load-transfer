@@ -1,0 +1,196 @@
+{
+  "schema": "r22-release-summary.v1",
+  "status": "continuity_candidate_retained_falling_edge_rejected",
+  "candidate": {
+    "import": "experiments.r22_release.candidate.Detector",
+    "source_sha256": "32b5a915a2f25d0e6e0607d3f52e94dad8a5a8c890b79d8f8c23b9ca5aee4699",
+    "state_sha256": "30cd330f75b7bd4078ba9d20ef0e902993626c14962466305136d0138c42e215",
+    "model_sha256": "fb02dd2121120ba90c64748272fe1c9f1873f174ac8ef107ba80e70b1b337340"
+  },
+  "mechanism": "At payload release subtract modeled outgoing base-axis angular momentum and preserve the causal sensor history.",
+  "official_original_evaluator": {
+    "episodes": 29,
+    "recognized_collision_cells": 24,
+    "control": {
+      "0.0": [
+        "2.09",
+        "4.05",
+        "0.0",
+        "9.0",
+        "4.8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "정상"
+      ],
+      "4.0": [
+        "2.32",
+        "4.42",
+        "0.0",
+        "9.0",
+        "6.8",
+        "39",
+        "0",
+        "0",
+        "0",
+        "정상"
+      ],
+      "8.0": [
+        "3.23",
+        "8.44",
+        "0.0",
+        "9.0",
+        "13.1",
+        "80",
+        "0",
+        "0",
+        "0",
+        "정상"
+      ]
+    },
+    "collisions": [
+      {
+        "mass": 0.0,
+        "time": 1.42,
+        "cells": [
+          "44",
+          "37",
+          "26",
+          "19",
+          "0회",
+          "10 N"
+        ]
+      },
+      {
+        "mass": 0.0,
+        "time": 3.0,
+        "cells": [
+          "57",
+          "38",
+          "25",
+          "19",
+          "0회",
+          "10 N"
+        ]
+      },
+      {
+        "mass": 0.0,
+        "time": 3.86,
+        "cells": [
+          "49",
+          "42",
+          "30",
+          "19",
+          "0회",
+          "10 N"
+        ]
+      },
+      {
+        "mass": 8.0,
+        "time": 1.42,
+        "cells": [
+          "43",
+          "37",
+          "27",
+          "21",
+          "0회",
+          "10 N"
+        ]
+      },
+      {
+        "mass": 8.0,
+        "time": 3.0,
+        "cells": [
+          "56",
+          "41",
+          "25",
+          "18",
+          "1회",
+          "10 N"
+        ]
+      },
+      {
+        "mass": 8.0,
+        "time": 3.86,
+        "cells": [
+          "93",
+          "66",
+          "38",
+          "22",
+          "0회",
+          "10 N"
+        ]
+      }
+    ]
+  },
+  "d4_exposed_targets": {
+    "episodes": 24,
+    "case_ids": [
+      330,
+      339,
+      349
+    ],
+    "r21_duplicate_counts": [
+      1,
+      2,
+      1
+    ],
+    "candidate_duplicate_counts": [
+      0,
+      0,
+      0
+    ],
+    "no_force_false_rises": 0,
+    "physical_and_force_exact": true
+  },
+  "four_twin": {
+    "episodes": 168,
+    "counts": {
+      "exposed": {
+        "reset": {
+          "strict": 4,
+          "edges": 4,
+          "preserve": 8
+        },
+        "continuous": {
+          "strict": 8,
+          "edges": 8,
+          "preserve": 8
+        },
+        "falling_edge": {
+          "strict": 2,
+          "edges": 2,
+          "preserve": 4
+        }
+      },
+      "previously_opened_fresh": {
+        "reset": {
+          "strict": 4,
+          "edges": 6,
+          "preserve": 6
+        },
+        "continuous": {
+          "strict": 4,
+          "edges": 6,
+          "preserve": 6
+        },
+        "falling_edge": {
+          "strict": 3,
+          "edges": 3,
+          "preserve": 6
+        }
+      }
+    },
+    "short_gap_note": "The continuity candidate emits distinct attributable edges for both impacts, but fails the 20 ms pre-onset quiet credit in both materials because the first alarm remains high until 2 ms after the second onset."
+  },
+  "rejected_falling_edge": {
+    "source_sha256": "d2d3b514377823eb15330157b8c1fec8506f4bacf836313155fe6ecb5117000c",
+    "reason": "Exposed strict rows fall 8 to 2 and previously-opened fresh strict rows fall 4 to 3; it also uncovers a later R10 rise in D4 case 339."
+  },
+  "limitations": [
+    "exposed finite simulation, not hidden evidence",
+    "no new independent force cohort in this lane",
+    "not hardware safety"
+  ]
+}

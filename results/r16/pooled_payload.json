@@ -1,0 +1,134 @@
+{
+  "schema": "r16-pooled-horizontal-sensor-report.v1",
+  "decision": "SENSING_ONLY_CONTROL_REJECTED",
+  "development": {
+    "stock": {
+      "count": 20,
+      "vector_rmse_mm": 0.09615319645262312,
+      "max_action_error_mm": 0.13464126552695674,
+      "accepted": 12,
+      "misses": 0,
+      "false_tiny": 0,
+      "big_signed": 12,
+      "big_n": 12,
+      "unsupported": 0,
+      "qualified": true
+    },
+    "perturbed": {
+      "count": 20,
+      "vector_rmse_mm": 0.34853486988391685,
+      "max_action_error_mm": 0.9010168986459842,
+      "accepted": 12,
+      "misses": 0,
+      "false_tiny": 0,
+      "big_signed": 12,
+      "big_n": 12,
+      "unsupported": 0,
+      "qualified": true
+    }
+  },
+  "fresh_sensing": {
+    "stock": {
+      "count": 20,
+      "vector_rmse_mm": 0.09820825475763062,
+      "max_action_error_mm": 0.13117030918798905,
+      "accepted": 12,
+      "accepted_interval_misses": 0,
+      "false_tiny_actions": 0,
+      "big_n": 12,
+      "big_signed": 12,
+      "unsupported": 0,
+      "qualified": true
+    },
+    "perturbed": {
+      "count": 20,
+      "vector_rmse_mm": 0.29457507443132575,
+      "max_action_error_mm": 0.4546463926520651,
+      "accepted": 12,
+      "accepted_interval_misses": 0,
+      "false_tiny_actions": 0,
+      "big_n": 12,
+      "big_signed": 12,
+      "unsupported": 0,
+      "qualified": true
+    }
+  },
+  "control": {
+    "completed_rows": 5,
+    "first_failure": {
+      "file": "rp1_up.json",
+      "passed": false,
+      "gates": {
+        "g4": true,
+        "cost": false,
+        "sat": true,
+        "FA": true,
+        "tool": true,
+        "complete": true,
+        "zero_fallback": true
+      },
+      "ratios": {
+        "r10": {
+          "rms": 1.0004927346908798,
+          "max": 0.9999061833869202,
+          "jitter": 0.9962702317799299,
+          "force": 1.0625614874293776
+        },
+        "r14": {
+          "rms": 0.9976734227372399,
+          "max": 1.0,
+          "jitter": 0.9996212529010562,
+          "force": 1.0113092724154882
+        },
+        "late": {
+          "rms": 1.0013125386176458,
+          "max": 1.0,
+          "jitter": 1.0004092509469296,
+          "force": 1.0111241895842362
+        }
+      }
+    },
+    "perturbed_rows_run": 0,
+    "impacts_run": 0
+  },
+  "calibration": {
+    "sha256": "774b529f856950494a697c9b6c3c39c476be7eb4ea753c27c26446428ca8ebd2",
+    "normal_guard_mm": 0.8968696577262881,
+    "deadline_s": 3.447
+  },
+  "limits": [
+    "signature-conditioned interpolation is empirical, not hidden-parameter identification",
+    "stiffness signature remained confounded with Coulomb in exposed diagnostic",
+    "no control adoption after first +5% cost failure"
+  ],
+  "stock_reproduction": {
+    "metrics": {
+      "count": 20,
+      "vector_rmse_mm": 0.09820825475763062,
+      "max_action_error_mm": 0.13117030918798905,
+      "accepted": 12,
+      "abstained": 8,
+      "accepted_interval_misses": 0,
+      "false_tiny_actions": 0,
+      "big_n": 12,
+      "big_signed": 12,
+      "qualified": true
+    },
+    "scope": {
+      "mode": "torque",
+      "episodes": 20,
+      "calibration_episodes": 0,
+      "evaluation_episodes": 20,
+      "runner": "authenticated ORIGINAL stock sim.runner.run_episode",
+      "inference_deadline_s": 3.447,
+      "predictions_sealed_before_truth": true,
+      "raw_sensor_captures_emitted": false,
+      "perturbed_calibration_regenerable_from_stock": false,
+      "collision_episodes": 0
+    },
+    "research_row_parity": true,
+    "research_explicit_zero_parity": true,
+    "prediction_seal_sha256": "af6692d4064bf052512ac8046bea4211fe5888853a0b462e4ee2d17e465a63d0",
+    "decision": "stock sensing reproduction passed"
+  }
+}

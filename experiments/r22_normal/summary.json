@@ -1,0 +1,84 @@
+{
+  "schema": "r22-normal-summary.v1",
+  "verdict": "QUALIFIED_COMPONENT_FIX_NOT_DEFAULT",
+  "candidate_sha256": "658683de0a0db00d520ebbd4c7a28cbaa4beb11bd6e93dd8e71edded6472279d",
+  "plan_sha256": "4a8830e3eeb89ed23b923a61164ad081c327eacc9e29724e959dcf63b273492f",
+  "root_cause": {
+    "case_id": 174,
+    "rise_s": 1.709,
+    "branch": "inherited R20 early horizontal residual",
+    "raw_y_N": -18.733790067440555,
+    "threshold_N": 18.3753578739,
+    "yaw_Nm": -1.909262172427529,
+    "yaw_bound_Nm": 3.5101791804684277,
+    "R10_active": false,
+    "yaw_active": false,
+    "width_above_threshold_samples": 1
+  },
+  "candidate": {
+    "change": "3-sample causal component-wise median before unchanged horizontal threshold",
+    "threshold_changed": false,
+    "window_changed": false,
+    "R10_changed": false,
+    "yaw_changed": false
+  },
+  "predeclared_evaluation": {
+    "episodes": 48,
+    "passed": true,
+    "gates": {
+      "case174_removed": true,
+      "all_rows_pass": true,
+      "protected_candidate_strict": true,
+      "source_pins_unchanged": true
+    },
+    "protected_delays_ms": {
+      "official_pick_0": 44.00000000000004,
+      "official_pick_8": 43.00000000000015,
+      "official_release_0": 92.00000000000009,
+      "official_release_8": 92.00000000000009
+    },
+    "fresh_strict": {
+      "r21": 3,
+      "candidate": 3
+    },
+    "fresh_missed": [
+      "fresh_x"
+    ]
+  },
+  "full_exposed_D4": {
+    "episodes": 770,
+    "raw_result_sha256": "469dac82efe6efbd6cc5dafdae11ba47c66de138aa3fedfb83bd588b548f6c00",
+    "R21_strict": 136,
+    "candidate_strict": 136,
+    "R21_false_rises": 10,
+    "candidate_false_rises": 9,
+    "strict_gains": [],
+    "strict_losses": [],
+    "new_false_cases": [],
+    "new_duplicate_cases": [],
+    "policy_comparison_failed_case_ids": [],
+    "policy_comparison_passed": true,
+    "raw_runner_failed_rows": 102,
+    "known_invalid_diagnostic_gate_failures_per_arm_both_arms_combined": {
+      "matched_prefix_exact": 96,
+      "off_by_one_force_schedule": 144,
+      "stock_scalar_matches_signed": 72
+    },
+    "interpretation": "The 102 raw failed rows are the already-documented off-by-one/prefix/vectorized-scalar diagnostic assumptions; all R21-to-candidate comparison gates pass. The separate R21 exact stock-input audit remains authoritative for those inputs."
+  },
+  "known_remaining": {
+    "duplicate_case_ids": [
+      330,
+      339,
+      349
+    ],
+    "candidate_duplicate_counts_unchanged_from_R21": true,
+    "fresh_6_to_7p5N_x_case_missed": "fresh_x",
+    "scope": "finite CPU simulator; not hidden, hardware, real-time, or safety proof"
+  },
+  "evidence_sha256": {
+    "diagnosis": "2a54771b0d0e1cdbc73a4923c22a92efb54b40c5f6efe4a50ce11be581e28b01",
+    "evaluation": "d7c7969c304a21ef2d4e2d0738fae7e3762475dd94b9e5a7c62f857a9b1b9209",
+    "reproduction": "81ec5bca19d9c72c33728048798b3c1153c0f0b5b2bee4ed33dcf650165bd540"
+  }
+}

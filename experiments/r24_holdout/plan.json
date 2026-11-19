@@ -1,0 +1,174 @@
+{
+  "schema": "r24-independent-actuator-transfer-plan.v1",
+  "status": "SEALED_BEFORE_R24_CANDIDATE_SELECTION_OR_OUTPUT",
+  "classification": "Finite laboratory simulation holdout fixed without R24 candidate output; not safety qualification, hardware evidence, hidden production evaluation, or original course demo.",
+  "selection": "New interpolation points, loaded-transfer normals, off-axis shocks, near-spaced pairs, tool offsets, and mechanics were fixed independently of any R24 candidate selection or result.",
+  "controller": "my_torque.Controller",
+  "baseline_arm": "r23_free",
+  "candidate_arm_after_lock": "r24",
+  "dt_s": 0.001,
+  "event_window_ms": 260,
+  "reference_twin_ms": 18,
+  "quiet_ms": 25,
+  "preservation_slack_ms": 5,
+  "alarm_cost_slack_samples": 5,
+  "loaded_transfer_window_ms": [1250, 1900],
+  "variants": {
+    "stock": {
+      "kind": "stock"
+    },
+    "actuator_delay_gain": {
+      "kind": "actuator_delay_gain",
+      "delay_steps": 1,
+      "joint_gain": [0.978, 1.019, 0.985, 1.014, 0.981, 1.011]
+    },
+    "damping_coupled": {
+      "kind": "damping_coupled",
+      "joint_damping_scale": [1.08, 0.94, 1.05, 0.96, 1.07, 0.95]
+    },
+    "contact_armature": {
+      "kind": "contact_armature",
+      "table_friction_scale": 1.07,
+      "table_solref_time_scale": 0.92,
+      "suction_solref_time_scale": 0.91,
+      "joint_armature_scale": [1.04, 0.97, 1.03, 0.98, 1.05, 0.96]
+    }
+  },
+  "negative": [
+    {
+      "id": "n24_loaded_empty_interp",
+      "mass": 0.58,
+      "com": [0.017, -0.021, 0.008],
+      "offset": null,
+      "contact_probe": false
+    },
+    {
+      "id": "n24_loaded_mid_interp",
+      "mass": 2.95,
+      "com": [-0.023, 0.014, -0.012],
+      "offset": null,
+      "contact_probe": false
+    },
+    {
+      "id": "n24_loaded_tool_probe_a",
+      "mass": 4.38,
+      "com": [0.019, -0.015, 0.022],
+      "offset": [-0.0046, 0.0039, 0.0013],
+      "contact_probe": true
+    },
+    {
+      "id": "n24_loaded_tool_probe_b",
+      "mass": 6.74,
+      "com": [-0.016, 0.025, -0.018],
+      "offset": [0.0041, -0.0047, 0.0016],
+      "contact_probe": true
+    }
+  ],
+  "single": [
+    {
+      "id": "s24_transfer_offaxis_early",
+      "phase": "loaded_transfer",
+      "mass": 1.27,
+      "com": [0.014, -0.019, 0.015],
+      "offset": null,
+      "impact": [1.333, [5.4, -6.0, 2.2]]
+    },
+    {
+      "id": "s24_transfer_offaxis_mid",
+      "phase": "loaded_transfer",
+      "mass": 3.81,
+      "com": [-0.026, 0.012, -0.005],
+      "offset": null,
+      "impact": [1.487, [-6.3, 5.7, -1.8]]
+    },
+    {
+      "id": "s24_transfer_offaxis_late",
+      "phase": "loaded_transfer",
+      "mass": 6.09,
+      "com": [0.021, 0.008, -0.024],
+      "offset": null,
+      "impact": [1.744, [0.0, 7.2, 3.1]]
+    },
+    {
+      "id": "s24_detached_offaxis_a",
+      "phase": "post_detachment",
+      "mass": 2.52,
+      "com": [-0.011, -0.027, 0.019],
+      "offset": null,
+      "impact": [4.091, [6.2, -5.8, 1.5]]
+    },
+    {
+      "id": "s24_detached_offaxis_b",
+      "phase": "post_detachment",
+      "mass": 7.43,
+      "com": [0.025, 0.018, -0.013],
+      "offset": null,
+      "impact": [4.348, [-5.9, 6.4, -2.0]]
+    }
+  ],
+  "paired": [
+    {
+      "id": "p24_transfer_near_diag",
+      "phase": "loaded_transfer",
+      "mass": 1.96,
+      "com": [0.012, -0.028, 0.017],
+      "offset": null,
+      "impacts": [[1.344, [5.8, 5.5, 2.0]], [1.482, [-6.0, 5.7, -1.5]]]
+    },
+    {
+      "id": "p24_transfer_near_cross",
+      "phase": "loaded_transfer",
+      "mass": 5.64,
+      "com": [-0.018, 0.011, -0.021],
+      "offset": null,
+      "impacts": [[1.521, [0.0, -7.8, 2.4]], [1.685, [7.9, 0.0, -2.1]]]
+    },
+    {
+      "id": "p24_detach_near_boundary",
+      "phase": "post_detachment",
+      "mass": 3.29,
+      "com": [0.023, 0.016, -0.008],
+      "offset": null,
+      "impacts": [[3.982, [6.1, -5.9, 1.7]], [4.122, [-7.0, 0.0, -2.2]]]
+    },
+    {
+      "id": "p24_detached_near_opposed",
+      "phase": "post_detachment",
+      "mass": 7.18,
+      "com": [-0.014, 0.029, 0.011],
+      "offset": null,
+      "impacts": [[4.184, [-5.6, -6.2, 1.9]], [4.324, [6.4, 5.8, -1.6]]]
+    }
+  ],
+  "contact_evidence": {
+    "minimum_probe_variant_rows_with_real_r23_contact": 2,
+    "contact_threshold_N": 1.0
+  },
+  "required_episodes": {
+    "per_arm": 120,
+    "both_arms": 240
+  },
+  "qualification": {
+    "safety_qualification": false,
+    "absolute_protection": "Zero candidate false rise, zero false active sample outside registered impulse/tool intervals, zero duplicate rise in every event slot, and loaded-transfer normal silence.",
+    "baseline_floor": "Preserve every strict R23 FREE event and real-tool detection within 5 ms, with no greater alarm-sample cost than R23 plus five samples on preserved strict slots.",
+    "scoped_detection": "Exactly one attributable candidate rise with a 25 ms quiet prefix for every intended isolated and both-impulse slot.",
+    "positive_gain": "Candidate-only strict slots are reported separately and never establish safety qualification."
+  },
+  "gates": [
+    "executable evaluator, protocol, plan, and gates compiled and dry-validated before R24 candidate output",
+    "complete candidate transitive source/model closure locked after exposed-only selection and before holdout output",
+    "exactly 240 complete 6000-sample episodes with matched no-force, only-first, only-second, and both twins",
+    "immutable certified signed native, second, committed, and scalar force arithmetic",
+    "force-free prefix exact and physical traces bit-exact across arms within every twin",
+    "loaded-transfer normal candidate traces contain zero alarm sample and zero rise",
+    "candidate contains zero false rise, zero false active sample, and zero duplicate in-window rise",
+    "candidate preserves every strict R23 FREE event and real-tool detection within five milliseconds",
+    "candidate alarm-sample cost on preserved strict slots is no greater than R23 plus five samples",
+    "candidate produces one quiet attributable rise for every intended real impulse",
+    "all three nonstock mechanics have independently observed physical effects",
+    "minimum predeclared real-contact evidence materializes",
+    "no source, condition, threshold, cohort, mechanics, scoring, or gate change after outcomes"
+  ],
+  "tuning_after_outcome": "forbidden"
+}

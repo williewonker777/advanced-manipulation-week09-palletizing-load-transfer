@@ -1,0 +1,16 @@
+{
+  "schema": "R11_PICK_DATUM_PLAN.v1",
+  "objective": "Does the measured TCP heave and face tilt at gripping provide a better support datum at placement than the nominal taught flange pose?",
+  "baseline": {"servo":"40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b","torque":"8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371","detector":"09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67"},
+  "design": "Use public encoder minus spring JTS/K at grip rising, the taught pickup and placement frames and public nominal 6D site Jacobian. Map observed vs taught pickup pose into placement; correct normal translation and planar tilt only (no yaw or horizontal position target). A common scale caps heave at 1.5mm and tilt at 0.4deg. Smooth C2 turn-on over original final descent and return to the original reference 100ms after release. No pressure command, learned table force, hidden state, changed release time, detector coupling or gate change.",
+  "cases": [
+    {"id":"a","mass":3.83,"com":[0.019,-0.014,0.031],"perturb":{"seed":112731},"force":[0,15,0],"onset":3.731},
+    {"id":"b","mass":6.17,"com":[-0.026,0.011,-0.018],"perturb":{"seed":112732,"stiffness_scale":0.94,"viscous_scale":1.09},"force":[7,0,-17],"onset":3.873},
+    {"id":"c","mass":7.73,"com":[0.009,0.023,0.012],"perturb":{"seed":112733,"stiffness_scale":1.06,"coulomb_scale":0.91},"force":[0,-22,0],"onset":3.927},
+    {"id":"d","mass":5.37,"com":[-0.011,-0.024,0.021],"perturb":{"seed":112734},"offset":[0.006,-0.008,0.004],"force":[0,0,21],"onset":3.797}
+  ],
+  "modes":["servo","torque"],
+  "gates":{"mean_support_mg_min":0.5,"min_support_mg_min":0.25,"improvement_mean_mg_min":0.25,"peak_support_mg_max":1.1,"normal_cost_ratio_max":1.05,"increased_saturation":false,"increased_fa":false,"lost_event":false,"added_delay_ms_max":5.0,"masked_baseline_event":false,"divergence":false},
+  "verification": "For each mode four paired normal/offset and four matched impacts, same observed inputs until intervention. Compare normal original TCP RMS/peak, pickup/placement torque step and table force peak. Offline only: actual box bottom corners relative to level table, motion over last 20ms and at release, signed deviations, observer discrepancy; do not feed ground-truth force, height or grasp offset to controller or fit to it. If any normal G4/cost, FA, event or delay gate fails reject before independent validation. No fitting on impacts. No contact geometries or simulator changes.",
+  "scope": "Finite development, not official and not universal: unknown initial offsets/compression and suction compliance can make taught pickup a bad datum."
+}

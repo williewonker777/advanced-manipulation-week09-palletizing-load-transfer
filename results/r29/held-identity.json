@@ -1,0 +1,74 @@
+{
+  "candidate": {
+    "entrypoint": "experiments.r29_native_event_link.candidate:Detector",
+    "sha256": "f7856439bc8ab798b4a6369c63b564ec58e6c54d0fe835365335c420c06b950e"
+  },
+  "hardware_runs": 0,
+  "immutable_r27_comparison": {
+    "changed_rows": 2,
+    "comparison_sha256": "1cfc72eefa54a826891116c726dd37321ff704b91cfe7a4c52badbe4a5fb1f03",
+    "exact_rows": 28,
+    "other_changes": 0,
+    "r27_duplicate_edges": 2,
+    "r27_result_sha256": "2102c5531634520d7d1c8a8745433c595f4b385413995b575bb3639c69495aa5",
+    "r29_duplicate_edges": 0
+  },
+  "known_preregistered": {
+    "byte_exact_repeat": true,
+    "episodes_each": 51,
+    "first_sha256": "0787ef67fbd2346ac2535d24d1a5328b02ac04d099bcfa51cc95834e2ea02c21",
+    "passed": true,
+    "repeat_sha256": "0787ef67fbd2346ac2535d24d1a5328b02ac04d099bcfa51cc95834e2ea02c21"
+  },
+  "original_receipt_sha256": "e5bb422536ee76226a207699c852d58e96d906225ee4b010bb67016b80c86135",
+  "prospective_close": {
+    "actual_supports": [
+      [
+        1605,
+        1724
+      ],
+      [
+        1802,
+        1920
+      ]
+    ],
+    "both_second_delay_ms": 43,
+    "episodes": 12,
+    "force_vector_cosine": -0.03296520471925889,
+    "passed": true,
+    "plan_sha256": "9235393cd10c058ed518082281319e2015bf9f7e98606a8409a223167b2f4a07",
+    "result_sha256": "04af418b4ce18df2d3fe26e18c022e909abd1f5b0b653e9c950caada450e89d4"
+  },
+  "r26_disclosed_156": {
+    "c3_strict_slots": 29,
+    "episodes": 156,
+    "r29_duplicate_edges": 0,
+    "r29_false_rises": 0,
+    "r29_strict_slots": 45,
+    "remaining_losses": [
+      "p26_close_place_cross/stock/both_second quiet_before=false (raw +73 ms)",
+      "p26_close_place_cross/actuator_deadzone/both_second quiet_before=false (raw +73 ms)",
+      "p26_close_place_cross/place_surface_shift/both_second quiet_before=false (raw +74 ms)"
+    ],
+    "result_sha256": "75e3458d20f262a4713499bee745233b9c966f1934b13377f39605c5d60f83f1"
+  },
+  "reason": "All frozen known/prospective protection gates pass except the pre-existing p26 both_second quiet-prefix failure across three mechanics; independent evidence was not opened.",
+  "runner_plumbing": {
+    "v1": "failed before serialization: missing boundary last_nonzero_index",
+    "v2": "failed before serialization: nonexistent runtime helper",
+    "v3": "passed; candidate, case, forces, plan, and gates unchanged"
+  },
+  "signed_directions": {
+    "fresh_episodes": 60,
+    "fresh_r27_exact_vs_immutable": true,
+    "passed": true,
+    "regressions": [],
+    "result_sha256": "e72e20e0312bddf417373a5ad6e41edb7852b4ebf1760b2dca3e05a69a61f2cc"
+  },
+  "unit": {
+    "log_sha256": "11d07c99d01ceb390017e4005035142a38401844c267341bf9e7d275a0273e36",
+    "passed": true,
+    "tests": 4
+  },
+  "verdict": "PARTIAL"
+}

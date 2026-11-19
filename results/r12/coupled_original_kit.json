@@ -1,0 +1,676 @@
+{
+  "schema": "r12-handoff-check.v1",
+  "mode": "torque",
+  "pins": {
+    "reference_ctrl": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "reference_det": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "candidate_ctrl": "682ae8eef25021eaebc34551bbe694185055ede5fe661ae2ba0f5968adfa1f5c",
+    "candidate_det": "fb709c67d36e168af638b57490b16996525be996e65759fccbb9caf57adac4e7",
+    "scorer": "5740c126fa8f2502a87d959e3ab236f1a96b5d38d9e98bce4370469ad05acdeb",
+    "plan": "fa9b9d1defb980ae37157e58741b4c937fe47dd1f905a7e3391c95ebb614dfb0",
+    "geometry": "8c841e53826409a0f0c336b7b3c6f1335172ffb205ab386f1a60c93012f19db0",
+    "events": "452dd27c97492c2e3ce9c002457e09180a444fd0b21531a0847dcfa28f0b2ff4",
+    "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "normal": [
+    {
+      "id": "mid",
+      "reference": {
+        "id": "mid",
+        "status": "ok",
+        "support": {
+          "mean_mg": 0.10766176803829111,
+          "min_mg": 0.0008805925074022738,
+          "peak_mg": 1.00779356829949,
+          "samples": 20,
+          "mean_ge_050": false,
+          "min_ge_025": false,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.4352035312902847,
+            -2.217669591475896
+          ],
+          "mean_lowest_corner_mm": -2.3631052932498204,
+          "mean_corner_spread_mm": 0.8192009414220823,
+          "mean_face_tilt_deg": 0.13180211221232313,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 12.665176538745035,
+          "free_minus_rigid_mean_mm": -1.2699172241989727,
+          "first_to_last_lowest_corner_speed_mm_s": 11.07633791649653
+        },
+        "cost": {
+          "tcp_rms": 2.425912398138709,
+          "tcp_peak": 5.054701506505497,
+          "pick_step": 8.98074462611001,
+          "place_step": 10.803795965657542,
+          "placing_force_peak": 43.698130680179545
+        },
+        "sat_pct": 0.0,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "candidate": {
+        "id": "mid",
+        "status": "ok",
+        "support": {
+          "mean_mg": 0.7985507670020274,
+          "min_mg": 0.6893651118693851,
+          "peak_mg": 1.0514479668891636,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.443399697921212,
+            -2.273875913911413
+          ],
+          "mean_lowest_corner_mm": -2.3901758073545714,
+          "mean_corner_spread_mm": 0.6035638570167435,
+          "mean_face_tilt_deg": 0.09696597444995941,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 3.2196706373762534,
+          "free_minus_rigid_mean_mm": -1.1470797159502761,
+          "first_to_last_lowest_corner_speed_mm_s": 8.327208447723102
+        },
+        "cost": {
+          "tcp_rms": 2.4472940559661445,
+          "tcp_peak": 5.05470150650784,
+          "pick_step": 8.98074462611001,
+          "place_step": 10.803795965657855,
+          "placing_force_peak": 45.59099413390751
+        },
+        "sat_pct": 0.0,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "assessment": {
+        "pass": true,
+        "gates": {
+          "g4": true,
+          "cost": true,
+          "saturation": true,
+          "alarms": true,
+          "tool": true
+        },
+        "g4": {
+          "mean_gain_mg": 0.6908889989637363,
+          "all_four_g4": true
+        },
+        "cost_ratios": {
+          "tcp_rms": 1.0088138622993315,
+          "tcp_peak": 1.0000000000004636,
+          "pick_step": 1.0,
+          "place_step": 1.0000000000000289,
+          "placing_force_peak": 1.0433168061027955
+        }
+      }
+    },
+    {
+      "id": "heavy",
+      "reference": {
+        "id": "heavy",
+        "status": "ok",
+        "support": {
+          "mean_mg": 0.11483101963782918,
+          "min_mg": 0.0,
+          "peak_mg": 1.0060789742270246,
+          "samples": 20,
+          "mean_ge_050": false,
+          "min_ge_025": false,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.4975025406223996,
+            -2.20592357943905
+          ],
+          "mean_lowest_corner_mm": -2.3884497016293054,
+          "mean_corner_spread_mm": 0.507405931379463,
+          "mean_face_tilt_deg": 0.09034362148549532,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 15.522785322381957,
+          "free_minus_rigid_mean_mm": -1.125697939105522,
+          "first_to_last_lowest_corner_speed_mm_s": 15.346261114913142
+        },
+        "cost": {
+          "tcp_rms": 3.2137971022022827,
+          "tcp_peak": 8.356531761852766,
+          "pick_step": 8.98074462611001,
+          "place_step": 13.287160221771359,
+          "placing_force_peak": 74.8118313077267
+        },
+        "sat_pct": 0.0,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "candidate": {
+        "id": "heavy",
+        "status": "ok",
+        "support": {
+          "mean_mg": 0.8044260061002454,
+          "min_mg": 0.6885361935950284,
+          "peak_mg": 1.0478745863149512,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.51851634636712,
+            -2.3135247944861854
+          ],
+          "mean_lowest_corner_mm": -2.45105332372398,
+          "mean_corner_spread_mm": 0.37119092109556806,
+          "mean_face_tilt_deg": 0.0739553585877495,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 8.906143025105699,
+          "free_minus_rigid_mean_mm": -1.0518492575195546,
+          "first_to_last_lowest_corner_speed_mm_s": 10.511117683060275
+        },
+        "cost": {
+          "tcp_rms": 3.355051271612383,
+          "tcp_peak": 8.356531761853418,
+          "pick_step": 8.98074462611001,
+          "place_step": 12.613098994716324,
+          "placing_force_peak": 77.91974466346251
+        },
+        "sat_pct": 0.0,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "assessment": {
+        "pass": true,
+        "gates": {
+          "g4": true,
+          "cost": true,
+          "saturation": true,
+          "alarms": true,
+          "tool": true
+        },
+        "g4": {
+          "mean_gain_mg": 0.6895949864624162,
+          "all_four_g4": true
+        },
+        "cost_ratios": {
+          "tcp_rms": 1.0439524229184551,
+          "tcp_peak": 1.000000000000078,
+          "pick_step": 1.0,
+          "place_step": 0.949269729889268,
+          "placing_force_peak": 1.0415430728189488
+        }
+      }
+    },
+    {
+      "id": "light",
+      "reference": {
+        "id": "light",
+        "status": "ok",
+        "support": {
+          "mean_mg": 0.12030130664380931,
+          "min_mg": 0.0,
+          "peak_mg": 1.004479629005772,
+          "samples": 20,
+          "mean_ge_050": false,
+          "min_ge_025": false,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.3145291721551127,
+            -2.1298398685235793
+          ],
+          "mean_lowest_corner_mm": -2.2563869232471063,
+          "mean_corner_spread_mm": 0.6810200551838876,
+          "mean_face_tilt_deg": 0.12366753905349034,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 10.776186945594592,
+          "free_minus_rigid_mean_mm": -1.1644407088145012,
+          "first_to_last_lowest_corner_speed_mm_s": 8.99451834451479
+        },
+        "cost": {
+          "tcp_rms": 2.2008586438149207,
+          "tcp_peak": 4.046120223955721,
+          "pick_step": 8.98074462611001,
+          "place_step": 10.210241121851155,
+          "placing_force_peak": 29.06913822361254
+        },
+        "sat_pct": 0.0,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "candidate": {
+        "id": "light",
+        "status": "ok",
+        "support": {
+          "mean_mg": 0.7880754672862916,
+          "min_mg": 0.42926722245265486,
+          "peak_mg": 1.0476133339336693,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.320388805749973,
+            -2.173495375070753
+          ],
+          "mean_lowest_corner_mm": -2.2757866474151487,
+          "mean_corner_spread_mm": 0.5256477616864371,
+          "mean_face_tilt_deg": 0.09878789629998844,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 2.610769326223453,
+          "free_minus_rigid_mean_mm": -1.0722512855866928,
+          "first_to_last_lowest_corner_speed_mm_s": 6.808803145124857
+        },
+        "cost": {
+          "tcp_rms": 2.2173133440981894,
+          "tcp_peak": 4.072830907718645,
+          "pick_step": 8.98074462611001,
+          "place_step": 10.210241121851396,
+          "placing_force_peak": 30.317406077373427
+        },
+        "sat_pct": 0.0,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        }
+      },
+      "assessment": {
+        "pass": true,
+        "gates": {
+          "g4": true,
+          "cost": true,
+          "saturation": true,
+          "alarms": true,
+          "tool": true
+        },
+        "g4": {
+          "mean_gain_mg": 0.6677741606424823,
+          "all_four_g4": true
+        },
+        "cost_ratios": {
+          "tcp_rms": 1.0074764912001557,
+          "tcp_peak": 1.006601554646048,
+          "pick_step": 1.0,
+          "place_step": 1.0000000000000238,
+          "placing_force_peak": 1.0429413436393835
+        }
+      }
+    },
+    {
+      "id": "pickup_offset",
+      "reference": {
+        "id": "pickup_offset",
+        "status": "ok",
+        "support": {
+          "mean_mg": 0.13155590614556972,
+          "min_mg": 0.015557902438493214,
+          "peak_mg": 1.0128888698083582,
+          "samples": 20,
+          "mean_ge_050": false,
+          "min_ge_025": false,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -1.8802171928795566,
+            -1.798190087083945
+          ],
+          "mean_lowest_corner_mm": -1.8530998037885222,
+          "mean_corner_spread_mm": 2.050926901523399,
+          "mean_face_tilt_deg": 0.40564645101303476,
+          "all_four_corners_below_plane_samples": 0,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 1.6265208012736379,
+          "free_minus_rigid_mean_mm": -0.34025671156219384,
+          "first_to_last_lowest_corner_speed_mm_s": 1.2611997279958649
+        },
+        "cost": {
+          "tcp_rms": 2.9823838263332356,
+          "tcp_peak": 7.535111402445181,
+          "pick_step": 9.01809215244839,
+          "place_step": 11.410706686938482,
+          "placing_force_peak": 56.53834253494577
+        },
+        "sat_pct": 0.0,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.999999999999789
+        }
+      },
+      "candidate": {
+        "id": "pickup_offset",
+        "status": "ok",
+        "support": {
+          "mean_mg": 0.8424420185463102,
+          "min_mg": 0.5463974914647097,
+          "peak_mg": 1.0137420038434184,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -1.9148199100937637,
+            -1.828501890720967
+          ],
+          "mean_lowest_corner_mm": -1.8905063009713623,
+          "mean_corner_spread_mm": 1.8868741001436735,
+          "mean_face_tilt_deg": 0.3801235323499533,
+          "all_four_corners_below_plane_samples": 12,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": -5.497121583436807,
+          "free_minus_rigid_mean_mm": -0.2673043144157778,
+          "first_to_last_lowest_corner_speed_mm_s": -2.10579264132862
+        },
+        "cost": {
+          "tcp_rms": 3.0380327426036424,
+          "tcp_peak": 7.533338134634062,
+          "pick_step": 8.990475264311002,
+          "place_step": 11.410689567503454,
+          "placing_force_peak": 56.58596353833539
+        },
+        "sat_pct": 0.0,
+        "event": {
+          "outcome": "reference",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.999999999999789
+        }
+      },
+      "assessment": {
+        "pass": true,
+        "gates": {
+          "g4": true,
+          "cost": true,
+          "saturation": true,
+          "alarms": true,
+          "tool": true
+        },
+        "g4": {
+          "mean_gain_mg": 0.7108861124007404,
+          "all_four_g4": true
+        },
+        "cost_ratios": {
+          "tcp_rms": 1.0186592066986984,
+          "tcp_peak": 0.9997646660126958,
+          "pick_step": 0.9969376130038891,
+          "place_step": 0.9999984997042253,
+          "placing_force_peak": 1.0008422780232757
+        }
+      }
+    }
+  ],
+  "impact": [
+    {
+      "id": "mid",
+      "reference": {
+        "id": "mid",
+        "status": "ok",
+        "event": {
+          "outcome": "detected",
+          "delay_ms": 50.00000000000027,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "normal_prefix_equal": true
+      },
+      "candidate": {
+        "id": "mid",
+        "status": "ok",
+        "event": {
+          "outcome": "detected",
+          "delay_ms": 50.00000000000027,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "normal_prefix_equal": true
+      },
+      "assessment": {
+        "pass": true,
+        "gates": {
+          "prefix": true,
+          "distinguishable": true,
+          "preserve_delay": true,
+          "prealarm": true,
+          "false_alarms": true,
+          "tool": true
+        }
+      }
+    },
+    {
+      "id": "heavy",
+      "reference": {
+        "id": "heavy",
+        "status": "ok",
+        "event": {
+          "outcome": "detected",
+          "delay_ms": 143.00000000000023,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "normal_prefix_equal": true
+      },
+      "candidate": {
+        "id": "heavy",
+        "status": "ok",
+        "event": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "normal_prefix_equal": true
+      },
+      "assessment": {
+        "pass": false,
+        "gates": {
+          "prefix": true,
+          "distinguishable": false,
+          "preserve_delay": false,
+          "prealarm": true,
+          "false_alarms": true,
+          "tool": true
+        }
+      }
+    },
+    {
+      "id": "light",
+      "reference": {
+        "id": "light",
+        "status": "ok",
+        "event": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "normal_prefix_equal": true
+      },
+      "candidate": {
+        "id": "light",
+        "status": "ok",
+        "event": {
+          "outcome": "missed",
+          "delay_ms": null,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": false,
+          "tool_detected": false,
+          "tool_prealarm": false,
+          "tool_delay_ms": null
+        },
+        "normal_prefix_equal": true
+      },
+      "assessment": {
+        "pass": false,
+        "gates": {
+          "prefix": true,
+          "distinguishable": false,
+          "preserve_delay": true,
+          "prealarm": true,
+          "false_alarms": true,
+          "tool": true
+        }
+      }
+    },
+    {
+      "id": "pickup_offset",
+      "reference": {
+        "id": "pickup_offset",
+        "status": "ok",
+        "event": {
+          "outcome": "detected",
+          "delay_ms": 68.00000000000006,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.999999999999789
+        },
+        "normal_prefix_equal": true
+      },
+      "candidate": {
+        "id": "pickup_offset",
+        "status": "ok",
+        "event": {
+          "outcome": "detected",
+          "delay_ms": 68.00000000000006,
+          "prealarm": false,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_present": true,
+          "tool_detected": true,
+          "tool_prealarm": false,
+          "tool_delay_ms": 11.999999999999789
+        },
+        "normal_prefix_equal": true
+      },
+      "assessment": {
+        "pass": true,
+        "gates": {
+          "prefix": true,
+          "distinguishable": true,
+          "preserve_delay": true,
+          "prealarm": true,
+          "false_alarms": true,
+          "tool": true
+        }
+      }
+    }
+  ],
+  "decision": "impact_qualification_failed"
+}

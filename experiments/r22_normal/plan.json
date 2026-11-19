@@ -1,0 +1,31 @@
+{
+  "schema": "r22-normal-spike-plan.v1",
+  "status": "FROZEN_AFTER_CASE174_NORMAL_DIAGNOSIS_BEFORE_ANY_CANDIDATE_FORCE_OUTCOME",
+  "diagnosis": "Case174 is an isolated inherited R20 horizontal-Y threshold crossing at 1.709s: -18.73N / 18.375N. R10 and yaw branches are inactive; yaw is -1.91Nm against 3.51Nm. Adjacent reference cases173/175 are quiet.",
+  "single_change": "Use the component-wise median of the current and prior two causal horizontal residual samples before the unchanged early-phase threshold. Do not change the threshold, time window, latch, R10 branch or yaw branch.",
+  "mechanical_basis": "The original task force has a 20ms ramp. A one-sample estimator excursion is not temporally coherent with that course collision contract; a 3ms causal median rejects one isolated sample while adding at most one sample to a sustained ramp.",
+  "protected": [
+    {"id":"official_pick_0", "mass":0.0, "com":[0,0,0], "time":1.42, "force":[0,10,0]},
+    {"id":"official_pick_8", "mass":8.0, "com":[0,0,0], "time":1.42, "force":[0,10,0]},
+    {"id":"official_release_0", "mass":0.0, "com":[0,0,0], "time":3.86, "force":[0,10,0]},
+    {"id":"official_release_8", "mass":8.0, "com":[0,0,0], "time":3.86, "force":[0,10,0]}
+  ],
+  "diagnostic_normals": [
+    {"id":"d4_173", "mass":8.0, "com":[0,-0.02,0.05]},
+    {"id":"d4_174", "mass":8.0, "com":[0,0,-0.02]},
+    {"id":"d4_175", "mass":8.0, "com":[0,0,0.015]},
+    {"id":"near_z_low", "mass":8.0, "com":[0,0,-0.025]},
+    {"id":"near_z_high", "mass":8.0, "com":[0,0,-0.015]},
+    {"id":"near_x", "mass":8.0, "com":[0.01,0,-0.02]},
+    {"id":"near_y", "mass":8.0, "com":[0,0.01,-0.02]},
+    {"id":"near_mass", "mass":7.6, "com":[0,0,-0.02]}
+  ],
+  "fresh_pairs": [
+    {"id":"fresh_x", "mass":1.7, "com":[-0.013,0.022,0.019], "time":1.467, "force":[7.5,0,0]},
+    {"id":"fresh_ny", "mass":4.4, "com":[0.021,-0.017,-0.011], "time":1.523, "force":[0,-8,0]},
+    {"id":"fresh_diag", "mass":7.1, "com":[-0.018,0.009,0.028], "time":1.61, "force":[-6,6,0]},
+    {"id":"fresh_late", "mass":3.3, "com":[0.011,0.025,-0.008], "time":3.835, "force":[0,-10,0]}
+  ],
+  "gates": ["case174 false rise removed", "no new no-force or force false rise", "no R21 strict detection lost", "no added collision-window rise", "physical traces exact", "protected official four remain strict"],
+  "interpretation": "Finite original simulation evidence only. The fresh cases are selected before candidate force outcomes but are not a hidden external holdout. No hardware or general impact guarantee."
+}

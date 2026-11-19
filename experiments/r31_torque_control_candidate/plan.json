@@ -1,0 +1,30 @@
+{
+  "schema": "r31-opt-in-torque-candidate-plan.v1",
+  "status": "FROZEN_BEFORE_R31_CANDIDATE_SIMULATOR_OUTPUTS",
+  "classification": "disclosed historical qualification for an opt-in alternative; not prospective promotion or default",
+  "candidate": "experiments.r31_torque_control_candidate.candidate:Detector",
+  "components": {
+    "detached_lifetime": {
+      "entrypoint": "experiments.r30_detached_lifetime.candidate:Detector",
+      "sha256": "16b1e899933066a820a606c9a5c5fe45c391c47a6c2584556271c34362fc7c66"
+    },
+    "held_plateau": {
+      "entrypoint": "experiments.r29_native_event_link.candidate:Detector",
+      "sha256": "f7856439bc8ab798b4a6369c63b564ec58e6c54d0fe835365335c420c06b950e"
+    }
+  },
+  "excluded": [
+    "experiments.r29_loaded_rising_certificate.candidate",
+    "experiments.r30_source_association.candidate",
+    "experiments.r30_yaw_headroom.candidate"
+  ],
+  "ownership": "held-gripper plateau identity and open-gripper detached endpoint are physically disjoint; cooperative MRO reaches physical C3 exactly once",
+  "gates": {
+    "official": "actual stock 29 R10 versus candidate, 66 displayed non-runtime cells and source/kit integrity",
+    "d4": "all 385 disclosed cases versus authenticated C3 plus actual R29 composed and R30 lifetime; exact physics/force/prefix, no strict loss, >5 ms delay, added false/duplicate/tool prealarm/stuck or >5 samples duration",
+    "r26": "all 156 disclosed episodes against authenticated C3, frozen R29 composed, and R30 lifetime; disclose all quiet/pre-second losses, false, duplicate, timing and duration",
+    "disposition": "any declared protection failure means no qualification or promotion; retain as distinct opt-in research comparison only"
+  },
+  "workers": 2,
+  "forbidden": ["R27 loaded 114", "R28 19", "102/69", "future R31 prospect", "default edits", "remote", "hardware"]
+}

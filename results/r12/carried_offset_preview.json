@@ -1,0 +1,63 @@
+{
+  "schema": "r12-carried-offset-preview.v1",
+  "mass_kg": 6.0,
+  "nominal_com_m": [
+    0.015,
+    -0.02,
+    0.012
+  ],
+  "sample_time_s": [
+    1.85,
+    3.504999999999965
+  ],
+  "probe_mm": 1,
+  "scope": "Known mass and COM; pure translational change of effective payload COM. Does not identify grasp rotation, structural errors, actual offset, or contact force.",
+  "conditions": {
+    "gravity_only": {
+      "samples": 332,
+      "rms_torque_nm_per_mm_xyz": [
+        0.036925031174923156,
+        0.029630286948321448,
+        1.250840039235702e-05
+      ],
+      "max_joint_change_for_4mm_z_nm": [
+        0.0,
+        4.7941675290985586e-05,
+        4.794167523414217e-05,
+        9.270822751261676e-05,
+        4.794167520572046e-05,
+        1.734723475976807e-17
+      ],
+      "noise_scaled_rank_singular_values": [
+        22.137201378318952,
+        20.967381080912027,
+        0.005509131923110178
+      ],
+      "z_rms_after_xy_and_joint_bias_per_4mm_in_sensor_noise_units": 4.0272598174914085e-06,
+      "note": "Finite nominal sensitivity at taught motion; noise scaling is per-channel, not independent repeated evidence."
+    },
+    "nominal_carry_dynamics": {
+      "samples": 332,
+      "rms_torque_nm_per_mm_xyz": [
+        0.03696230873114505,
+        0.029819386877625944,
+        0.006313952748490555
+      ],
+      "max_joint_change_for_4mm_z_nm": [
+        1.9926577706996795e-05,
+        0.05048535822220401,
+        0.05048022360959692,
+        0.04977390631558265,
+        0.05048190728441959,
+        7.430335485225648e-07
+      ],
+      "noise_scaled_rank_singular_values": [
+        21.950157303498816,
+        21.017918215747763,
+        4.216759713199808
+      ],
+      "z_rms_after_xy_and_joint_bias_per_4mm_in_sensor_noise_units": 0.2471876979291145,
+      "note": "Finite nominal sensitivity at taught motion; noise scaling is per-channel, not independent repeated evidence."
+    }
+  }
+}

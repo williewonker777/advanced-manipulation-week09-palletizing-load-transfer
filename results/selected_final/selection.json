@@ -1,0 +1,75 @@
+{
+  "additional_simulation_after_stop": false,
+  "course_demo": {
+    "argv": [
+      "run.py",
+      "--box",
+      "8"
+    ],
+    "byte_identical_to_guide": true,
+    "image_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+    "uses_original_files": true
+  },
+  "date": "2026-11-19",
+  "decision": "development_ended_by_operator",
+  "remote_git": false,
+  "research": {
+    "comparison_sha256": "5114b6b07167320d341165de9222be7c15f23d111d64c2febbe87ea648fe9a0a",
+    "counts": {
+      "new": {
+        "duplicate": 4,
+        "false_rises": 15,
+        "in_force": 180,
+        "masked": 0,
+        "strict": 180,
+        "tool": 6
+      },
+      "r31": {
+        "duplicate": 2,
+        "false_rises": 9,
+        "in_force": 154,
+        "masked": 0,
+        "strict": 154,
+        "tool": 6
+      },
+      "r33": {
+        "duplicate": 2,
+        "false_rises": 9,
+        "in_force": 168,
+        "masked": 0,
+        "strict": 168,
+        "tool": 6
+      }
+    },
+    "eligible_for_default": false,
+    "independent_qualification": "not_run",
+    "limitations": [
+      "two additional duplicate rises, six additional false rises vs R31/R33",
+      "disclosed, not unseen scenarios",
+      "no hardware deployment"
+    ],
+    "public_disclosed_conditions": 385,
+    "record_sha256": "b6d42c037095e9f4ca2899eec645fc637dbe49b01c2f7b228c6d6266715400d6",
+    "selected": "experiments.r34_workcell_trial.candidate:Detector",
+    "selection_metric": "most first detections during independently logged nonzero input, on the same disclosed D4",
+    "source_sha256": "8d0709e8ee83f4920cceabeb625c1aca5b637b3525ed48a802d1d2cb4a6f6623"
+  },
+  "schema": "week09-final-selection.v1",
+  "submission": {
+    "episodes": {
+      "servo": 29,
+      "torque": 29
+    },
+    "files": {
+      "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "primary_8kg_control_demo": "servo",
+    "score_of_24": {
+      "servo": 23,
+      "torque": 18
+    },
+    "selected": "R10"
+  }
+}

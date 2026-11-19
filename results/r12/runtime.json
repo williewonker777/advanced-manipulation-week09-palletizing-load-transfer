@@ -1,0 +1,849 @@
+{
+  "schema": "r12-runtime-profile.v1",
+  "decision": "keep_R10",
+  "tiers": {
+    "tier1": {
+      "plan_sha256": "81e4dc0c41c5b3f966a3191a58fd32e243c2819ef7830f4a9676a578117489d8",
+      "source_sha256": {
+        "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+        "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+        "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+        "sim/nominal.py": "08d45260e1fa90fe7919394a27e3e238c32c0f81033d1d176c066439d3a3a489",
+        "tools/r5_fixture.py": "8f637a5d67d6bfd2f9021093b08e5d8b463bd58c71fa4e7da3f752087ed72f2d",
+        "experiments/r12_runtime/candidate.py": "62c973e555680305c96d065a507da1ec128fdc0d4f54b4d32214ad4e784f945a",
+        "experiments/r12_runtime/benchmark.py": "a30e38c78bc0227636a4941bea9710e46979c31637f5fee2b911933789f3f5c0"
+      },
+      "evaluation": {
+        "exact_rows": [
+          {
+            "case": "servo_normal",
+            "exact": true
+          },
+          {
+            "case": "servo_collision",
+            "exact": true
+          },
+          {
+            "case": "torque_normal",
+            "exact": true
+          },
+          {
+            "case": "torque_collision",
+            "exact": true
+          }
+        ],
+        "aggregates": {
+          "servo": {
+            "baseline": {
+              "controller": {
+                "wall": {
+                  "p50_us": 38.04,
+                  "p99_us": 81.56901,
+                  "p99_9_us": 87.64000900000003,
+                  "max_us": 96.45,
+                  "max_cycle": 1744,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 38.13,
+                  "p99_us": 82.05009999999999,
+                  "p99_9_us": 88.12004000000016,
+                  "max_us": 96.51,
+                  "max_cycle": 1514,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "detector": {
+                "wall": {
+                  "p50_us": 175.42950000000002,
+                  "p99_us": 480.48988999999983,
+                  "p99_9_us": 652.9080300000002,
+                  "max_us": 1510.825,
+                  "max_cycle": 666,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      666,
+                      1510.825
+                    ]
+                  ]
+                },
+                "cpu": {
+                  "p50_us": 175.54899999999998,
+                  "p99_us": 480.72909999999985,
+                  "p99_9_us": 653.0581800000007,
+                  "max_us": 1511.175,
+                  "max_cycle": 666,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      666,
+                      1511.175
+                    ]
+                  ]
+                }
+              },
+              "combined": {
+                "wall": {
+                  "p50_us": 215.79950000000002,
+                  "p99_us": 558.5215999999995,
+                  "p99_9_us": 731.7871700000007,
+                  "max_us": 1592.975,
+                  "max_cycle": 666,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      666,
+                      1592.975
+                    ]
+                  ]
+                },
+                "cpu": {
+                  "p50_us": 215.899,
+                  "p99_us": 559.2113999999996,
+                  "p99_9_us": 732.3381400000005,
+                  "max_us": 1593.615,
+                  "max_cycle": 666,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      666,
+                      1593.615
+                    ]
+                  ]
+                }
+              }
+            },
+            "candidate": {
+              "controller": {
+                "wall": {
+                  "p50_us": 30.68,
+                  "p99_us": 52.21019999999997,
+                  "p99_9_us": 60.51033000000127,
+                  "max_us": 71.76,
+                  "max_cycle": 14774,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 30.77,
+                  "p99_us": 52.31059999999991,
+                  "p99_9_us": 60.610120000000464,
+                  "max_us": 70.94,
+                  "max_cycle": 14237,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "detector": {
+                "wall": {
+                  "p50_us": 168.154,
+                  "p99_us": 354.07939999999996,
+                  "p99_9_us": 454.3768490000302,
+                  "max_us": 5215.144,
+                  "max_cycle": 8511,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      8511,
+                      5215.144
+                    ]
+                  ]
+                },
+                "cpu": {
+                  "p50_us": 168.2495,
+                  "p99_us": 354.18989999999985,
+                  "p99_9_us": 454.52689000003033,
+                  "max_us": 5215.294,
+                  "max_cycle": 8511,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      8511,
+                      5215.294
+                    ]
+                  ]
+                }
+              },
+              "combined": {
+                "wall": {
+                  "p50_us": 199.749,
+                  "p99_us": 393.94069999999977,
+                  "p99_9_us": 507.03997900000377,
+                  "max_us": 5254.234,
+                  "max_cycle": 8511,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      8511,
+                      5254.234
+                    ]
+                  ]
+                },
+                "cpu": {
+                  "p50_us": 199.8945,
+                  "p99_us": 394.22978999999987,
+                  "p99_9_us": 507.73960000000227,
+                  "max_us": 5254.464,
+                  "max_cycle": 8511,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      8511,
+                      5254.464
+                    ]
+                  ]
+                }
+              }
+            }
+          },
+          "torque": {
+            "baseline": {
+              "controller": {
+                "wall": {
+                  "p50_us": 42.13,
+                  "p99_us": 72.66019999999996,
+                  "p99_9_us": 83.69021900000084,
+                  "max_us": 117.529,
+                  "max_cycle": 14122,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 42.22,
+                  "p99_us": 72.81118999999981,
+                  "p99_9_us": 83.88057000000218,
+                  "max_us": 117.72,
+                  "max_cycle": 14122,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "detector": {
+                "wall": {
+                  "p50_us": 98.6095,
+                  "p99_us": 225.95088999999984,
+                  "p99_9_us": 300.1693700000014,
+                  "max_us": 315.369,
+                  "max_cycle": 14946,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 98.66,
+                  "p99_us": 226.20939999999993,
+                  "p99_9_us": 300.5091500000006,
+                  "max_us": 315.569,
+                  "max_cycle": 14946,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "combined": {
+                "wall": {
+                  "p50_us": 143.22,
+                  "p99_us": 279.47069999999974,
+                  "p99_9_us": 377.48903100000007,
+                  "max_us": 410.269,
+                  "max_cycle": 15848,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 143.36450000000002,
+                  "p99_us": 279.86029999999994,
+                  "p99_9_us": 377.9500580000002,
+                  "max_us": 410.689,
+                  "max_cycle": 15848,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              }
+            },
+            "candidate": {
+              "controller": {
+                "wall": {
+                  "p50_us": 34.79,
+                  "p99_us": 57.42039999999994,
+                  "p99_9_us": 68.48914100000054,
+                  "max_us": 95.55,
+                  "max_cycle": 14140,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 34.88,
+                  "p99_us": 57.510499999999915,
+                  "p99_9_us": 68.21936100000138,
+                  "max_us": 79.139,
+                  "max_cycle": 20852,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "detector": {
+                "wall": {
+                  "p50_us": 99.0245,
+                  "p99_us": 223.74019999999982,
+                  "p99_9_us": 297.51977000000295,
+                  "max_us": 3245.019,
+                  "max_cycle": 14277,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      14277,
+                      3245.019
+                    ]
+                  ]
+                },
+                "cpu": {
+                  "p50_us": 99.0795,
+                  "p99_us": 223.33909999999997,
+                  "p99_9_us": 296.90951000000194,
+                  "max_us": 344.389,
+                  "max_cycle": 15060,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "combined": {
+                "wall": {
+                  "p50_us": 135.60950000000003,
+                  "p99_us": 267.359,
+                  "p99_9_us": 360.87176900001066,
+                  "max_us": 3293.649,
+                  "max_cycle": 14277,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      14277,
+                      3293.649
+                    ]
+                  ]
+                },
+                "cpu": {
+                  "p50_us": 135.74450000000002,
+                  "p99_us": 267.0310899999998,
+                  "p99_9_us": 357.98953100000585,
+                  "max_us": 415.599,
+                  "max_cycle": 15060,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              }
+            }
+          }
+        },
+        "paired_combined_cpu_p50_ratios": [
+          0.7818227129448092,
+          0.9665966340417121,
+          0.9975815257885082,
+          0.9535379101478537,
+          0.9417220225139258,
+          0.9041201437812596,
+          0.9973622014011986,
+          0.9563622479383668
+        ],
+        "median_paired_combined_cpu_p50_ratio": 0.9549500790431102,
+        "torque_combined_cpu_p99_ratio": 0.9541585212336292,
+        "mode_component_cpu_p99_ratios": {
+          "servo_controller": 0.6375446221272115,
+          "servo_detector": 0.7367764922073574,
+          "servo_combined": 0.704974523051569,
+          "torque_controller": 0.7898579874879131,
+          "torque_detector": 0.987311314207102,
+          "torque_combined": 0.9541585212336292
+        },
+        "combined_wall_ratios_all_modes": {
+          "p50_us": 0.9647216680319012,
+          "p99_us": 0.8502985265472646
+        },
+        "combined_wall_all_modes": {
+          "baseline": {
+            "p50_us": 198.989,
+            "p99_us": 428.0239100000012,
+            "p99_9_us": 715.5193890000054,
+            "max_us": 1592.975,
+            "max_cycle": 666,
+            "ge_800us": 1,
+            "ge_1000us": 1,
+            "outliers_ge_800us": [
+              [
+                666,
+                1592.975
+              ]
+            ]
+          },
+          "candidate": {
+            "p50_us": 191.969,
+            "p99_us": 363.9481,
+            "p99_9_us": 468.43942900000167,
+            "max_us": 5254.234,
+            "max_cycle": 8511,
+            "ge_800us": 2,
+            "ge_1000us": 2,
+            "outliers_ge_800us": [
+              [
+                8511,
+                5254.234
+              ],
+              [
+                38277,
+                3293.649
+              ]
+            ]
+          }
+        },
+        "gates": {
+          "all_traces_and_metrics_exact": true,
+          "median_paired_combined_cpu_p50_ratio_le_0_92": false,
+          "torque_combined_cpu_p99_ratio_le_0_92": false,
+          "no_mode_component_cpu_p99_ratio_gt_1_05": true,
+          "all_combined_wall_p50_p99_ratios_le_1_02": true
+        },
+        "passes": false
+      }
+    },
+    "tier2": {
+      "plan_sha256": "81e4dc0c41c5b3f966a3191a58fd32e243c2819ef7830f4a9676a578117489d8",
+      "source_sha256": {
+        "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+        "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+        "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+        "sim/nominal.py": "08d45260e1fa90fe7919394a27e3e238c32c0f81033d1d176c066439d3a3a489",
+        "tools/r5_fixture.py": "8f637a5d67d6bfd2f9021093b08e5d8b463bd58c71fa4e7da3f752087ed72f2d",
+        "experiments/r12_runtime/candidate.py": "62c973e555680305c96d065a507da1ec128fdc0d4f54b4d32214ad4e784f945a",
+        "experiments/r12_runtime/benchmark.py": "a30e38c78bc0227636a4941bea9710e46979c31637f5fee2b911933789f3f5c0"
+      },
+      "evaluation": {
+        "exact_rows": [
+          {
+            "case": "servo_normal",
+            "exact": true
+          },
+          {
+            "case": "servo_collision",
+            "exact": true
+          },
+          {
+            "case": "torque_normal",
+            "exact": true
+          },
+          {
+            "case": "torque_collision",
+            "exact": true
+          }
+        ],
+        "aggregates": {
+          "servo": {
+            "baseline": {
+              "controller": {
+                "wall": {
+                  "p50_us": 38.13,
+                  "p99_us": 62.76019999999997,
+                  "p99_9_us": 78.48903100000013,
+                  "max_us": 94.999,
+                  "max_cycle": 15764,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 38.26,
+                  "p99_us": 62.93049999999992,
+                  "p99_9_us": 78.71009000000033,
+                  "max_us": 95.589,
+                  "max_cycle": 15764,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "detector": {
+                "wall": {
+                  "p50_us": 165.309,
+                  "p99_us": 344.9696999999999,
+                  "p99_9_us": 479.3207300000067,
+                  "max_us": 1197.026,
+                  "max_cycle": 666,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      666,
+                      1197.026
+                    ]
+                  ]
+                },
+                "cpu": {
+                  "p50_us": 165.40449999999998,
+                  "p99_us": 345.19049999999976,
+                  "p99_9_us": 479.5907490000067,
+                  "max_us": 1198.747,
+                  "max_cycle": 666,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      666,
+                      1198.747
+                    ]
+                  ]
+                }
+              },
+              "combined": {
+                "wall": {
+                  "p50_us": 203.894,
+                  "p99_us": 397.9607999999997,
+                  "p99_9_us": 556.3488310000032,
+                  "max_us": 1239.726,
+                  "max_cycle": 666,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      666,
+                      1239.726
+                    ]
+                  ]
+                },
+                "cpu": {
+                  "p50_us": 204.1045,
+                  "p99_us": 398.4192999999999,
+                  "p99_9_us": 556.859759000003,
+                  "max_us": 1241.547,
+                  "max_cycle": 666,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      666,
+                      1241.547
+                    ]
+                  ]
+                }
+              }
+            },
+            "candidate": {
+              "controller": {
+                "wall": {
+                  "p50_us": 30.66,
+                  "p99_us": 51.08,
+                  "p99_9_us": 59.910010000000035,
+                  "max_us": 77.07,
+                  "max_cycle": 3868,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 30.779,
+                  "p99_us": 51.15069999999989,
+                  "p99_9_us": 60.00002000000008,
+                  "max_us": 77.589,
+                  "max_cycle": 3868,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "detector": {
+                "wall": {
+                  "p50_us": 158.3895,
+                  "p99_us": 339.4605999999998,
+                  "p99_9_us": 406.2192890000011,
+                  "max_us": 5156.674,
+                  "max_cycle": 8511,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      8511,
+                      5156.674
+                    ]
+                  ]
+                },
+                "cpu": {
+                  "p50_us": 158.46,
+                  "p99_us": 339.6309999999997,
+                  "p99_9_us": 406.54817100000065,
+                  "max_us": 5157.164,
+                  "max_cycle": 8511,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      8511,
+                      5157.164
+                    ]
+                  ]
+                }
+              },
+              "combined": {
+                "wall": {
+                  "p50_us": 189.9845,
+                  "p99_us": 377.9001099999997,
+                  "p99_9_us": 457.1045910000253,
+                  "max_us": 5195.694,
+                  "max_cycle": 8511,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      8511,
+                      5195.694
+                    ]
+                  ]
+                },
+                "cpu": {
+                  "p50_us": 190.2145,
+                  "p99_us": 378.12928999999997,
+                  "p99_9_us": 457.5645600000252,
+                  "max_us": 5196.314,
+                  "max_cycle": 8511,
+                  "ge_800us": 1,
+                  "ge_1000us": 1,
+                  "outliers_ge_800us": [
+                    [
+                      8511,
+                      5196.314
+                    ]
+                  ]
+                }
+              }
+            }
+          },
+          "torque": {
+            "baseline": {
+              "controller": {
+                "wall": {
+                  "p50_us": 41.849,
+                  "p99_us": 73.36049999999992,
+                  "p99_9_us": 88.68006000000024,
+                  "max_us": 109.3,
+                  "max_cycle": 14123,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 41.96,
+                  "p99_us": 73.34239999999961,
+                  "p99_9_us": 89.06001900000008,
+                  "max_us": 109.51,
+                  "max_cycle": 14123,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "detector": {
+                "wall": {
+                  "p50_us": 96.77449999999999,
+                  "p99_us": 243.79249999999942,
+                  "p99_9_us": 333.99963000000247,
+                  "max_us": 348.949,
+                  "max_cycle": 14277,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 96.83449999999999,
+                  "p99_us": 244.23109999999983,
+                  "p99_9_us": 334.1796900000026,
+                  "max_us": 348.719,
+                  "max_cycle": 14277,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "combined": {
+                "wall": {
+                  "p50_us": 140.48,
+                  "p99_us": 305.1106999999997,
+                  "p99_9_us": 419.6901900000046,
+                  "max_us": 437.689,
+                  "max_cycle": 14277,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 140.6945,
+                  "p99_us": 305.30559999999895,
+                  "p99_9_us": 420.4986900000026,
+                  "max_us": 438.259,
+                  "max_cycle": 14322,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              }
+            },
+            "candidate": {
+              "controller": {
+                "wall": {
+                  "p50_us": 34.66,
+                  "p99_us": 65.6501,
+                  "p99_9_us": 73.09008000000031,
+                  "max_us": 85.509,
+                  "max_cycle": 4871,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 34.77,
+                  "p99_us": 65.84049999999992,
+                  "p99_9_us": 73.2501300000005,
+                  "max_us": 82.08,
+                  "max_cycle": 14578,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "detector": {
+                "wall": {
+                  "p50_us": 87.6395,
+                  "p99_us": 280.37070999999975,
+                  "p99_9_us": 308.40909100000033,
+                  "max_us": 332.539,
+                  "max_cycle": 14934,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 87.715,
+                  "p99_us": 280.68038999999993,
+                  "p99_9_us": 308.5491600000006,
+                  "max_us": 329.459,
+                  "max_cycle": 7944,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              },
+              "combined": {
+                "wall": {
+                  "p50_us": 123.3695,
+                  "p99_us": 343.42017999999996,
+                  "p99_9_us": 378.7589610000037,
+                  "max_us": 402.389,
+                  "max_cycle": 7944,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                },
+                "cpu": {
+                  "p50_us": 123.5445,
+                  "p99_us": 343.8296999999999,
+                  "p99_9_us": 379.2598600000033,
+                  "max_us": 402.879,
+                  "max_cycle": 7944,
+                  "ge_800us": 0,
+                  "ge_1000us": 0,
+                  "outliers_ge_800us": []
+                }
+              }
+            }
+          }
+        },
+        "paired_combined_cpu_p50_ratios": [
+          0.9490001440398037,
+          0.9255223342939483,
+          0.9315038236131425,
+          0.92459820239352,
+          0.9082945839741534,
+          0.8439871728214559,
+          0.8951348184977623,
+          0.8682371159169734
+        ],
+        "median_paired_combined_cpu_p50_ratio": 0.9164463931838367,
+        "torque_combined_cpu_p99_ratio": 1.1261820942688279,
+        "mode_component_cpu_p99_ratios": {
+          "servo_controller": 0.8128125471750575,
+          "servo_detector": 0.9838944003383636,
+          "servo_combined": 0.9490737271010719,
+          "torque_controller": 0.8977140099042337,
+          "torque_detector": 1.149240985279926,
+          "torque_combined": 1.1261820942688279
+        },
+        "combined_wall_ratios_all_modes": {
+          "p50_us": 0.9283834012219958,
+          "p99_us": 0.9599398909860382
+        },
+        "combined_wall_all_modes": {
+          "baseline": {
+            "p50_us": 196.4,
+            "p99_us": 376.649,
+            "p99_9_us": 478.8821000000157,
+            "max_us": 1239.726,
+            "max_cycle": 666,
+            "ge_800us": 1,
+            "ge_1000us": 1,
+            "outliers_ge_800us": [
+              [
+                666,
+                1239.726
+              ]
+            ]
+          },
+          "candidate": {
+            "p50_us": 182.3345,
+            "p99_us": 361.5604000000003,
+            "p99_9_us": 432.5789710000037,
+            "max_us": 5195.694,
+            "max_cycle": 8511,
+            "ge_800us": 1,
+            "ge_1000us": 1,
+            "outliers_ge_800us": [
+              [
+                8511,
+                5195.694
+              ]
+            ]
+          }
+        },
+        "gates": {
+          "all_traces_and_metrics_exact": true,
+          "median_paired_combined_cpu_p50_ratio_le_0_92": true,
+          "torque_combined_cpu_p99_ratio_le_0_92": false,
+          "no_mode_component_cpu_p99_ratio_gt_1_05": false,
+          "all_combined_wall_p50_p99_ratios_le_1_02": true
+        },
+        "passes": false
+      }
+    }
+  },
+  "scope": "order-balanced finite timing; raw maxima retained in local evidence, no hard real-time claim"
+}

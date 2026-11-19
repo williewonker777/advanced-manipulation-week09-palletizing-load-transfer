@@ -1,0 +1,22 @@
+{
+  "schema": "r11-dissipation-decision.v1",
+  "decision": "reject",
+  "adoption_ready": false,
+  "reason": "The first stationary entry-pulse return gate failed: candidate tail 0.34330041595941635deg versus R1 0.20267421051452894deg, above both 0.05deg absolute and 0.5x-R1 limits.",
+  "root_cause": "The memoryless compensation injects velocity-aligned power and reduces kinetic friction. The declared positive residual-dissipation bound held, but retained damping was insufficient for the required disturbance settling.",
+  "first_failed_gate": {
+    "group": "d0",
+    "case": "entry_pulse",
+    "gate": "terminal_response"
+  },
+  "stop_rule": "No controller retuning, historical r3 regression, or holdout after development failure.",
+  "pins": {
+    "candidate": "ab2676155a13ecad93ff71c71239c927c262500b435434e97d33bda8d813b421",
+    "qualification": "23dfb2d6008b3a348be3c50c35ac86f1be21b5c9262fc4bf2e2f1475c8537208",
+    "r1": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "ringdown": "64995c9e26ef63142d053b503c87d27321e5032930198d03d7e5aa1cdc116e85",
+    "plan": "740ea8037e3d001ac3bac3a80fc1d00d6eaf7c0d71ac76339f219ea1db245013",
+    "result": "5fb52245fb7ee24b3cd594db1aba37771997b729dfc6102e18ba6469fe9ccdf8"
+  }
+}

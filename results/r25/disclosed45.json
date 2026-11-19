@@ -1,0 +1,35 @@
+{
+  "schema": "r25-development-comparison.v1",
+  "independent": false,
+  "arm": "experiments.r25_composed.detector:Detector",
+  "rows": 45,
+  "actual_episodes": 216,
+  "baseline_identity": "R24 records and physical signatures exactly equal after removing added occupancy fields",
+  "summary": {
+    "r24_joint": {
+      "strict": 66,
+      "slots": 78,
+      "duplicate_edges": 0,
+      "duplicate_slots": 0,
+      "false_rises": 0,
+      "all_four": 8
+    },
+    "experiments.r25_composed.detector:Detector": {
+      "strict": 66,
+      "slots": 78,
+      "duplicate_edges": 0,
+      "duplicate_slots": 0,
+      "false_rises": 0,
+      "all_four": 8
+    }
+  },
+  "relative_gate_regressions": [],
+  "changes": {
+    "rows_with_entire_scientific_record_unchanged": 45,
+    "new_strict_slots": [],
+    "lost_strict_slots": [],
+    "occupancy_changes": [],
+    "false_time_changes": []
+  },
+  "raw_sha256": "5f2c46fca44ff8caf6fcabf04323320bd1513c725fa6333c54a382e244948b09"
+}

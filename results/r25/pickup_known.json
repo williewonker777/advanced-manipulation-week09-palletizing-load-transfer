@@ -1,0 +1,25 @@
+{
+  "schema": "r25-pickup-disclosed-probe.v1",
+  "episodes": 42,
+  "passed": true,
+  "raw_sha256": "bd99e89f35df7afadb51bf59734135508643b3bfcb69455dbee1bc17ea30b856",
+  "candidate_sha256": "2dea5cd6476b459e22918218d14f115d65eb970a615002c4e73cca69a38abd93",
+  "duration": {
+    "id": "s24_transfer_offaxis_early",
+    "variant": "stock",
+    "boundary": {
+      "nominal_index": 1333,
+      "first_nonzero_index": 1334,
+      "nominal_sample_zero": true
+    },
+    "gates": {
+      "r23_plus_five_active_samples": true,
+      "same_or_earlier_strict_rise": true,
+      "zero_duplicate": true,
+      "none_quiet": true,
+      "force_and_physics_exact": true
+    },
+    "passed": true
+  },
+  "scope": "Targeted revealed rows only; separate from independent acceptance"
+}

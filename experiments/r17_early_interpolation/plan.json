@@ -1,0 +1,14 @@
+{
+  "schema": "r17-early-measured-motion-plan.v1",
+  "purpose": "Recover reliable horizontal COM decisions at the R15 2.463 s causal deadline under measured model error, not merely at R16 3.447 s.",
+  "sensing": "Use the two empty-arm tracking projections onto centered public taught velocity and smoothed Coulomb direction from 0.300--0.900 s, conditioned also on known mass. Retain the R15 carried 1.840--2.440 s DC+stiffness nuisance solve and R16 physical margin, interpolated mass/signature, contiguous block and leave-one-normal-out guards. No stiffness/fixture/force/true pose/late samples or impact labels enter policy.",
+  "fit": "24 previous undisplaced stock/perturbed source normals only. Four previous R16 cohorts in both domains are exposed comparisons, not new holdouts. Baseline is separate previously measured R15 (2.463 s) and R16 (3.447 s). No retrospective domain selection.",
+  "gates": "Individually by domain: vector RMS <=1.5mm, worst action error including abstentions <=2mm, no accepted interval miss, no actions on true norm <1mm; all norm>=3mm accepted and positive dot. Fixed uncertainty = 0.75mm + maximum fully refitted normal LOO + worst of five chronological deletion deltas, limit 2.5mm; command norm<=15mm and no extrapolation outside normal mass and standardized signature radius. Verify equality of cached and directly truncated causal features; no lookahead. Calibration and predictions sealed before truth is opened.",
+  "holdout": [
+    {"id":"ep1","mass":3.61,"com":[-0.016,0.022,0.011],"shift":[-0.0063,0.0053,0.0051],"perturb":{"seed":174701,"stiffness_scale":1.024,"viscous_scale":1.043,"coulomb_scale":0.961}},
+    {"id":"ep2","mass":5.63,"com":[0.024,-0.012,-0.016],"shift":[0.0058,-0.0071,0.0048],"perturb":{"seed":174702,"stiffness_scale":0.971,"viscous_scale":0.947,"coulomb_scale":1.051}},
+    {"id":"ep3","mass":7.54,"com":[-0.013,-0.017,0.018],"shift":[-0.0067,-0.0059,0.0056],"perturb":{"seed":174703,"stiffness_scale":1.011,"viscous_scale":0.964,"coulomb_scale":1.034}}
+  ],
+  "variants":["none","explicit_zero","xy","up","down"],
+  "stop": "Do not open new holdout if exposed sensing fails. A physical controller is a further distinct test: never infer better handoff/collision or 1 kHz safety from sensing. Do not modify or relabel R16 negatives."
+}

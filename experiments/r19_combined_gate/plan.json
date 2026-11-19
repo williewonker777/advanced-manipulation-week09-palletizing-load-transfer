@@ -1,0 +1,17 @@
+{
+  "schema": "r19-integrated-protected-regression.v1",
+  "status": "FIXED_BEFORE_R19_PROGRESSIVE_REPLAY",
+  "research_only": true,
+  "controller": "unchanged experiments.r17_candidate.policy.Controller",
+  "detector": "immutable experiments.r19_event_state.physical_detector.Detector V2 inside the registered R17 domain; exact my_detector fallback otherwise",
+  "scorer": "experiments.r18_combined_gate.study imported and executed directly; no R19 gate or threshold override",
+  "stages": ["known-normal 37", "exposed-impact 7", "fresh-normal 6", "fresh-impact 8"],
+  "stop": "do not open the next stage after any failed existing gate",
+  "claims": "all cases are already exposed regression conditions; no independent claim",
+  "required_pins": {
+    "r17_plan_sha256": "e456213558efb182ce1a773978a2fea4ba129bf1836f6bb81d94168a4b52c6a1",
+    "r17_scorer_sha256": "e313b3f93b2997786dfac1c6ce3ef8c5d3e33de6fa5b9dae47b0d30f097aca77",
+    "r18_integrated_study_sha256": "6f6690692bd904c829f6640f1a6f57c6643c5d8bcf4c6167402638ad23527204",
+    "r19_physical_detector_sha256": "f2666f8adedb4e09051b2b7f75bc977362394c00894ba7a016a52b43d78b5c2f"
+  }
+}

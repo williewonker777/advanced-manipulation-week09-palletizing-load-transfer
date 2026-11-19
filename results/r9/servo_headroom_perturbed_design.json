@@ -1,0 +1,116 @@
+{
+  "scope": "prior R8 no-advance stress at affected heavy mass plus new high-demand normal/collision stress",
+  "baseline": "r1_servo",
+  "candidate": "experiments.r9_saturation.headroom_guard",
+  "detector": "experiments.r8_final.C1",
+  "source_sha256": {
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "headroom_guard.py": "773d1afe8da62a35c97281c22120354322121b6820a58f64044e5e64e774c228",
+    "C1.py": "3e3a67f75fcf795ec49d847b54ac72514d69bb17bc750f92478f1785e6d308e0",
+    "perturb_runner.py": "4e3d72da862f9f4e398a86ad9cd5b1f7b50b5f4cfad16c7a4ccbfe49436e4718"
+  },
+  "prior": {
+    "mass": 7.873,
+    "com": [
+      0.011,
+      -0.017,
+      0.023
+    ],
+    "conditions": [
+      {
+        "contact_time_scale": 0.8
+      },
+      {
+        "contact_time_scale": 1.2
+      },
+      {
+        "effective_impedance_d0": 0.56
+      },
+      {
+        "effective_impedance_d0": 0.84
+      },
+      {
+        "table_height_delta_m": -0.0005
+      },
+      {
+        "table_height_delta_m": 0.0005
+      },
+      {
+        "stiffness_scale": 0.8
+      },
+      {
+        "stiffness_scale": 1.2
+      },
+      {
+        "viscous_scale": 0.8,
+        "coulomb_scale": 0.8
+      },
+      {
+        "viscous_scale": 1.2,
+        "coulomb_scale": 1.2
+      },
+      {
+        "contact_friction_scale": 0.8
+      },
+      {
+        "contact_friction_scale": 1.2
+      },
+      {
+        "seed_override": 3834801
+      },
+      {
+        "seed_override": 3834802
+      }
+    ]
+  },
+  "new": {
+    "mass": 8.0,
+    "com": [
+      -0.03,
+      0.02,
+      -0.02
+    ],
+    "conditions": [
+      {
+        "stiffness_scale": 0.7
+      },
+      {
+        "stiffness_scale": 1.3
+      },
+      {
+        "contact_time_scale": 0.7
+      },
+      {
+        "contact_time_scale": 1.3
+      },
+      {
+        "table_height_delta_m": -0.00075
+      },
+      {
+        "table_height_delta_m": 0.00075
+      }
+    ],
+    "collision": [
+      3.86,
+      [
+        0.0,
+        40.0,
+        0.0
+      ]
+    ]
+  },
+  "inventory_per_controller": {
+    "normal": 20,
+    "collision": 6
+  },
+  "gates": {
+    "candidate_saturated_episodes": 0,
+    "candidate_diverged": 0,
+    "normal_each_cost_ratio_max": 1.05,
+    "normal_place_peak_over_mg_max": 1.5,
+    "conditions_with_increased_false_alarms": 0,
+    "baseline_detected_event_losses": 0
+  },
+  "development_only": true,
+  "no_retuning_after_run": true
+}

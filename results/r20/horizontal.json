@@ -1,0 +1,898 @@
+{
+  "schema": "r20-horizontal-check.v1",
+  "original_demo": false,
+  "submission_changed": false,
+  "episodes": {
+    "normal_calibration": 20,
+    "official": 58,
+    "post_freeze": 24
+  },
+  "evaluator_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+  "source_sha256": {
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "experiments/r20_horizontal/__init__.py": "fb93a0985b6f9ca7513887c66fb0a3a5997174592a063fcbaa6ca8d5411dfd6d",
+    "experiments/r20_horizontal/calibrate_normal.py": "a13bca3f0ad81342d8f3685f08bad130b4cb9a33474396e2917612a5a1376549",
+    "experiments/r20_horizontal/trace_detector.py": "be35c3082113faba510ff1eb85c5e4e0a83bd9e72d3699d61f0402da1a35cbc4",
+    "experiments/r20_horizontal/fresh.py": "cec8c934bd6b9312eab1c88ee756aaa9d34943d9affcaf4509b0be31a16940e5",
+    "experiments/r20_horizontal/candidate_detector.py": "1770c36e002404a660c9cfc1ef45ddbb6cb1f53a3ec973c82b760e60881e7025",
+    "experiments/r20_horizontal/FRESH_PLAN.json": "6fcfb117da8ca8d106a02bcec0c336ac7d316440e9e0da278223d6954927fa6d"
+  },
+  "calibrated_threshold_N": 18.375357873972536,
+  "r10": {
+    "modules": [
+      "my_torque",
+      "my_detector"
+    ],
+    "episodes": 29,
+    "cells": {
+      "control": {
+        "0.0": [
+          "2.09",
+          "4.05",
+          "0.0",
+          "9.0",
+          "4.8",
+          "0",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "4.0": [
+          "2.32",
+          "4.42",
+          "0.0",
+          "9.0",
+          "6.8",
+          "39",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "8.0": [
+          "3.23",
+          "8.44",
+          "0.0",
+          "9.0",
+          "13.1",
+          "80",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ]
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "cells": [
+            "놓침",
+            "놓침",
+            "37",
+            "22",
+            "0회",
+            "40 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "cells": [
+            "57",
+            "42",
+            "27",
+            "19",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "cells": [
+            "놓침",
+            "78",
+            "30",
+            "19",
+            "0회",
+            "15 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "cells": [
+            "놓침",
+            "놓침",
+            "36",
+            "24",
+            "0회",
+            "40 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "cells": [
+            "56",
+            "43",
+            "26",
+            "18",
+            "1회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "cells": [
+            "놓침",
+            "91",
+            "42",
+            "22",
+            "0회",
+            "15 N"
+          ]
+        }
+      ]
+    },
+    "impact_outcomes": {
+      "detected": 18,
+      "missed": 6,
+      "already_active": 0,
+      "indistinguishable": 0
+    },
+    "no_impact_false_rises": 0,
+    "worst_false_count_in_an_impact_run": 1
+  },
+  "candidate": {
+    "modules": [
+      "my_torque",
+      "experiments.r20_horizontal.candidate_detector"
+    ],
+    "episodes": 29,
+    "cells": {
+      "control": {
+        "0.0": [
+          "2.09",
+          "4.05",
+          "0.0",
+          "9.0",
+          "4.8",
+          "0",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "4.0": [
+          "2.32",
+          "4.42",
+          "0.0",
+          "9.0",
+          "6.8",
+          "39",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ],
+        "8.0": [
+          "3.23",
+          "8.44",
+          "0.0",
+          "9.0",
+          "13.1",
+          "80",
+          "0",
+          "0",
+          "0",
+          "정상"
+        ]
+      },
+      "collisions": [
+        {
+          "mass": 0.0,
+          "time": 1.42,
+          "cells": [
+            "놓침",
+            "107",
+            "34",
+            "20",
+            "0회",
+            "15 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.0,
+          "cells": [
+            "57",
+            "42",
+            "27",
+            "19",
+            "0회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 0.0,
+          "time": 3.86,
+          "cells": [
+            "놓침",
+            "78",
+            "30",
+            "19",
+            "0회",
+            "15 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 1.42,
+          "cells": [
+            "놓침",
+            "107",
+            "36",
+            "21",
+            "0회",
+            "15 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.0,
+          "cells": [
+            "56",
+            "43",
+            "26",
+            "18",
+            "1회",
+            "10 N"
+          ]
+        },
+        {
+          "mass": 8.0,
+          "time": 3.86,
+          "cells": [
+            "놓침",
+            "91",
+            "42",
+            "22",
+            "0회",
+            "15 N"
+          ]
+        }
+      ]
+    },
+    "impact_outcomes": {
+      "detected": 20,
+      "missed": 4,
+      "already_active": 0,
+      "indistinguishable": 0
+    },
+    "no_impact_false_rises": 0,
+    "worst_false_count_in_an_impact_run": 1
+  },
+  "official_changes": [
+    {
+      "mass_kg": 0.0,
+      "time_s": 1.42,
+      "force_N": 15,
+      "reference": "놓침",
+      "candidate": "107"
+    },
+    {
+      "mass_kg": 0.0,
+      "time_s": 1.42,
+      "force_N": 40,
+      "reference": "37",
+      "candidate": "34"
+    },
+    {
+      "mass_kg": 0.0,
+      "time_s": 1.42,
+      "force_N": 100,
+      "reference": "22",
+      "candidate": "20"
+    },
+    {
+      "mass_kg": 8.0,
+      "time_s": 1.42,
+      "force_N": 15,
+      "reference": "놓침",
+      "candidate": "107"
+    },
+    {
+      "mass_kg": 8.0,
+      "time_s": 1.42,
+      "force_N": 100,
+      "reference": "24",
+      "candidate": "21"
+    }
+  ],
+  "fresh": {
+    "schema": "R20_HORIZONTAL_FRESH_RESULT.v1",
+    "plan_sha256": "6fcfb117da8ca8d106a02bcec0c336ac7d316440e9e0da278223d6954927fa6d",
+    "candidate_sha256": "1770c36e002404a660c9cfc1ef45ddbb6cb1f53a3ec973c82b760e60881e7025",
+    "cases": [
+      {
+        "case": {
+          "id": "fresh_early_px_light",
+          "mass": 0.7,
+          "com": [
+            0.011,
+            -0.034,
+            0.007
+          ],
+          "time": 1.47,
+          "force": [
+            14.0,
+            0.0,
+            0.0
+          ]
+        },
+        "no_force": {
+          "r10_false_rise_times": [],
+          "candidate_false_rise_times": [],
+          "r10_all_rise_times": [],
+          "candidate_all_rise_times": [],
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "force": {
+          "r10": {
+            "official": "detected",
+            "strict_true_positive": true,
+            "delay_ms": 106.0000000000001,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": [
+              1.576
+            ]
+          },
+          "candidate": {
+            "official": "detected",
+            "strict_true_positive": true,
+            "delay_ms": 106.0000000000001,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": [
+              1.576
+            ]
+          },
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "none_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "force_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "none_all_physical_equal": true,
+        "force_all_physical_equal": true,
+        "none_applied_force_equal": true,
+        "force_applied_force_equal": true
+      },
+      {
+        "case": {
+          "id": "fresh_early_ny_lowmid",
+          "mass": 2.65,
+          "com": [
+            -0.029,
+            -0.004,
+            0.017
+          ],
+          "time": 1.535,
+          "force": [
+            0.0,
+            -16.0,
+            0.0
+          ]
+        },
+        "no_force": {
+          "r10_false_rise_times": [],
+          "candidate_false_rise_times": [],
+          "r10_all_rise_times": [],
+          "candidate_all_rise_times": [],
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "force": {
+          "r10": {
+            "official": "detected",
+            "strict_true_positive": true,
+            "delay_ms": 49.000000000000156,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": [
+              1.584
+            ]
+          },
+          "candidate": {
+            "official": "detected",
+            "strict_true_positive": true,
+            "delay_ms": 49.000000000000156,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": [
+              1.584
+            ]
+          },
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "none_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "force_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "none_all_physical_equal": true,
+        "force_all_physical_equal": true,
+        "none_applied_force_equal": true,
+        "force_applied_force_equal": true
+      },
+      {
+        "case": {
+          "id": "fresh_early_nx_strong",
+          "mass": 4.75,
+          "com": [
+            0.023,
+            0.018,
+            -0.023
+          ],
+          "time": 1.625,
+          "force": [
+            -20.0,
+            0.0,
+            0.0
+          ]
+        },
+        "no_force": {
+          "r10_false_rise_times": [],
+          "candidate_false_rise_times": [],
+          "r10_all_rise_times": [],
+          "candidate_all_rise_times": [],
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "force": {
+          "r10": {
+            "official": "detected",
+            "strict_true_positive": true,
+            "delay_ms": 36.00000000000003,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": [
+              1.661
+            ]
+          },
+          "candidate": {
+            "official": "detected",
+            "strict_true_positive": true,
+            "delay_ms": 36.00000000000003,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": [
+              1.661
+            ]
+          },
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "none_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "force_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "none_all_physical_equal": true,
+        "force_all_physical_equal": true,
+        "none_applied_force_equal": true,
+        "force_applied_force_equal": true
+      },
+      {
+        "case": {
+          "id": "fresh_early_py_heavy",
+          "mass": 7.85,
+          "com": [
+            -0.006,
+            0.033,
+            0.011
+          ],
+          "time": 1.695,
+          "force": [
+            0.0,
+            18.0,
+            0.0
+          ]
+        },
+        "no_force": {
+          "r10_false_rise_times": [],
+          "candidate_false_rise_times": [],
+          "r10_all_rise_times": [],
+          "candidate_all_rise_times": [],
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "force": {
+          "r10": {
+            "official": "detected",
+            "strict_true_positive": true,
+            "delay_ms": 36.00000000000003,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": [
+              1.731
+            ]
+          },
+          "candidate": {
+            "official": "detected",
+            "strict_true_positive": true,
+            "delay_ms": 36.00000000000003,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": [
+              1.731
+            ]
+          },
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "none_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "force_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "none_all_physical_equal": true,
+        "force_all_physical_equal": true,
+        "none_applied_force_equal": true,
+        "force_applied_force_equal": true
+      },
+      {
+        "case": {
+          "id": "fresh_outside_px_carry",
+          "mass": 3.15,
+          "com": [
+            0.034,
+            -0.017,
+            0.026
+          ],
+          "time": 2.215,
+          "force": [
+            14.0,
+            0.0,
+            0.0
+          ]
+        },
+        "no_force": {
+          "r10_false_rise_times": [],
+          "candidate_false_rise_times": [],
+          "r10_all_rise_times": [],
+          "candidate_all_rise_times": [],
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "force": {
+          "r10": {
+            "official": "detected",
+            "strict_true_positive": true,
+            "delay_ms": 44.00000000000004,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": [
+              2.259
+            ]
+          },
+          "candidate": {
+            "official": "detected",
+            "strict_true_positive": true,
+            "delay_ms": 44.00000000000004,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": [
+              2.259
+            ]
+          },
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "none_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "force_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "none_all_physical_equal": true,
+        "force_all_physical_equal": true,
+        "none_applied_force_equal": true,
+        "force_applied_force_equal": true
+      },
+      {
+        "case": {
+          "id": "fresh_outside_ny_release",
+          "mass": 6.05,
+          "com": [
+            -0.024,
+            0.009,
+            -0.018
+          ],
+          "time": 3.91,
+          "force": [
+            0.0,
+            -18.0,
+            0.0
+          ]
+        },
+        "no_force": {
+          "r10_false_rise_times": [],
+          "candidate_false_rise_times": [],
+          "r10_all_rise_times": [],
+          "candidate_all_rise_times": [],
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "force": {
+          "r10": {
+            "official": "missed",
+            "strict_true_positive": false,
+            "delay_ms": null,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": []
+          },
+          "candidate": {
+            "official": "missed",
+            "strict_true_positive": false,
+            "delay_ms": null,
+            "alarm_before": false,
+            "reference_twin": false,
+            "false_rise_times": [],
+            "all_rise_times": []
+          },
+          "candidate_unmatched_false_rises": [],
+          "r10_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          },
+          "candidate_tool": {
+            "present": false,
+            "detected": false,
+            "prealarm": false
+          }
+        },
+        "none_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "force_log_equal": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "f_ext": true,
+          "qpos": true
+        },
+        "none_all_physical_equal": true,
+        "force_all_physical_equal": true,
+        "none_applied_force_equal": true,
+        "force_applied_force_equal": true
+      }
+    ],
+    "gates": {
+      "source_pin": true,
+      "physical_and_force_equal": true,
+      "no_extra_no_force_false": true,
+      "no_extra_force_false": true,
+      "no_strict_baseline_loss": true
+    },
+    "passed": true
+  }
+}

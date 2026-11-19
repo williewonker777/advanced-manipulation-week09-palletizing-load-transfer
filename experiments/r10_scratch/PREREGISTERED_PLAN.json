@@ -1,0 +1,57 @@
+{
+  "schema": "R10_SCRATCH_PREREGISTRATION.v1",
+  "classification": "final servo-only single-scratch-model resource experiment",
+  "baseline_sha256": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+  "candidate": [
+    "one canonical empty Nominal",
+    "one independent full-payload model with fresh data",
+    "geometry shares only immutable empty model and has fresh data",
+    "one dedicated fully owned scratch model/data for all four precomputed COM offsets",
+    "scratch payload is set before each inverse-dynamics call and scalar torque is saved immediately",
+    "reset-local batched servo reference features with original row reductions",
+    "no torque-path or import-time reference work"
+  ],
+  "fallback_gate": {
+    "compare_against": "four original independent offset models",
+    "random_states": 128,
+    "actual_active_constraint_states": 32,
+    "active_constraint_source": "public nominal joint-limit constraints produced by mj_inverse",
+    "forced_nonvertical_states": 32,
+    "orders": ["negative-positive", "positive-negative", "alternating"],
+    "repeat_after_reset": true,
+    "repeat_after_mass_switch": true,
+    "byte_exact_required": true,
+    "fallback_worst_cpu_us_max": 1000.0,
+    "stop_if_active_constraints_unavailable": true
+  },
+  "grid_gate": {
+    "payloads": [[0.0,[0,0,0]],[3.141,[-0.017,0.013,0.029]],[7.777,[0.026,-0.021,0.047]]],
+    "rows": 6000,
+    "both_grips": true,
+    "byte_exact_required": true
+  },
+  "fresh_full_loop_cases": {
+    "servo": [
+      [0.0,[0,0,0],[1.619,[0,-12,0]],null],
+      [2.713,[-0.019,0.014,0.026],null,null],
+      [6.431,[0.016,-0.022,0.041],[3.731,[9,0,0]],null],
+      [7.811,[-0.027,0.018,-0.011],null,[0.011,-0.013,0.004]]
+    ],
+    "torque": [
+      [0.0,[0,0,0],[2.219,[0,0,13]],null],
+      [5.917,[-0.021,0.019,0.024],[3.337,[0,-10,7]],null]
+    ]
+  },
+  "timing": {
+    "cpu": 1,
+    "cold_subprocess_pairs": 4,
+    "cold_metric": "minimum baseline import_plus_first_reset divided by maximum candidate import_plus_first_reset",
+    "cold_speedup_min": 2.0,
+    "import_overhead_max_ms": 10.0,
+    "torque_reset_overhead_max_ms": 10.0,
+    "finite_worst_p99_us_max": 800.0,
+    "servo_worst_p99_regression_max": 0.05
+  },
+  "adoption": "every gate must pass; first failure stops; no retune or posthoc gate change",
+  "created_before_candidate_import_or_execution": true
+}

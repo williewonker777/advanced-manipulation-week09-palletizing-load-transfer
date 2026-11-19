@@ -1,0 +1,237 @@
+{
+  "D4_run_this_round": false,
+  "comparison": {
+    "arms": {
+      "c3": "experiments.r26_yaw_acquisition.candidate:Detector",
+      "composed": "experiments.r29_disjoint_events.candidate:Detector",
+      "r27": "experiments.r27_load_change.manifold:Detector"
+    },
+    "authentication": {
+      "chain_note": "The composed report independently states archive_r24_rows_exact=true against its pinned course-first archive; this derivation additionally matches every historical C3/R27 row physical signature to that report.",
+      "episodes": 198,
+      "exact": true,
+      "missing_from_composed": [],
+      "missing_from_history": [],
+      "physical_signature_mismatches": [],
+      "physical_signatures_compared": 36,
+      "physical_signatures_exact": true,
+      "row_key_definition": [
+        "kind",
+        "id",
+        "variant",
+        "episodes"
+      ],
+      "row_key_sets_exact": true,
+      "row_keys_compared": 36
+    },
+    "classification": "post-disclosure read-only derivation; no simulation and no new candidate evaluation",
+    "comparisons": {
+      "composed_vs_c3": {
+        "common_strict_delay": {
+          "changed_count": 0,
+          "count": 57,
+          "max_delta_ms": 0,
+          "min_delta_ms": 0
+        },
+        "duplicate_rises_delta": 0,
+        "event_slot_occupied_samples_delta": -170,
+        "false_rises_delta": 0,
+        "protection": {
+          "duplicate_regressions": [],
+          "event_occupancy_regressions": [],
+          "false_regressions": [],
+          "latency_regressions": [],
+          "no_duplicate_regression": true,
+          "no_event_occupancy_regression_over_5_samples": true,
+          "no_false_regression": true,
+          "no_latency_regression_over_5ms": true,
+          "no_quiet_before_regression": true,
+          "no_strict_loss": true,
+          "no_tool_regression_over_5ms": true,
+          "quiet_before_regressions": [],
+          "tool_regressions": []
+        },
+        "strict_delta": 5,
+        "strict_gains": [
+          "p25_close_transfer_cross:actuator_shift:isolated_second",
+          "p25_close_transfer_cross:contact_shift:both_second",
+          "p25_close_transfer_cross:contact_shift:isolated_second",
+          "p25_close_transfer_cross:stock:both_second",
+          "p25_close_transfer_cross:stock:isolated_second"
+        ],
+        "strict_losses": []
+      },
+      "composed_vs_r27": {
+        "common_strict_delay": {
+          "changed_count": 0,
+          "count": 62,
+          "max_delta_ms": 0,
+          "min_delta_ms": 0
+        },
+        "duplicate_rises_delta": 0,
+        "event_slot_occupied_samples_delta": -181,
+        "false_rises_delta": 0,
+        "protection": {
+          "duplicate_regressions": [],
+          "event_occupancy_regressions": [],
+          "false_regressions": [],
+          "latency_regressions": [],
+          "no_duplicate_regression": true,
+          "no_event_occupancy_regression_over_5_samples": true,
+          "no_false_regression": true,
+          "no_latency_regression_over_5ms": true,
+          "no_quiet_before_regression": true,
+          "no_strict_loss": true,
+          "no_tool_regression_over_5ms": true,
+          "quiet_before_regressions": [],
+          "tool_regressions": []
+        },
+        "strict_delta": 0,
+        "strict_gains": [],
+        "strict_losses": []
+      },
+      "r27_vs_c3": {
+        "common_strict_delay": {
+          "changed_count": 0,
+          "count": 57,
+          "max_delta_ms": 0,
+          "min_delta_ms": 0
+        },
+        "duplicate_rises_delta": 0,
+        "event_slot_occupied_samples_delta": 11,
+        "false_rises_delta": 0,
+        "protection": {
+          "duplicate_regressions": [],
+          "event_occupancy_regressions": [],
+          "false_regressions": [],
+          "latency_regressions": [],
+          "no_duplicate_regression": true,
+          "no_event_occupancy_regression_over_5_samples": true,
+          "no_false_regression": true,
+          "no_latency_regression_over_5ms": true,
+          "no_quiet_before_regression": true,
+          "no_strict_loss": true,
+          "no_tool_regression_over_5ms": true,
+          "quiet_before_regressions": [],
+          "tool_regressions": []
+        },
+        "strict_delta": 5,
+        "strict_gains": [
+          "p25_close_transfer_cross:actuator_shift:isolated_second",
+          "p25_close_transfer_cross:contact_shift:both_second",
+          "p25_close_transfer_cross:contact_shift:isolated_second",
+          "p25_close_transfer_cross:stock:both_second",
+          "p25_close_transfer_cross:stock:isolated_second"
+        ],
+        "strict_losses": []
+      }
+    },
+    "metric_definition": {
+      "duplicate_rises": "sum of duplicate_rises across the same 75 event slots",
+      "event_slot_occupied_samples": "sum of active_samples_in_slot across the same 75 event slots",
+      "false_rises": "sum of false_times_s across every registered negative/counterfactual twin",
+      "protected_change_thresholds": {
+        "delay_ms": 5,
+        "event_occupancy_samples": 5
+      },
+      "strict": "count of strict event slots across 9 single slots and 66 paired slots (75 total)"
+    },
+    "metrics": {
+      "c3": {
+        "duplicate_rises": 0,
+        "event_slot_occupied_samples": 5062,
+        "event_slots": 75,
+        "false_rises": 0,
+        "false_twins": 0,
+        "force_exact_failures": 0,
+        "missed": 18,
+        "physical_exact_failures": 0,
+        "strict": 57,
+        "stuck_tail_twins": 0,
+        "tool_detected_twins": 4,
+        "tool_present_twins": 6
+      },
+      "composed": {
+        "duplicate_rises": 0,
+        "event_slot_occupied_samples": 4892,
+        "event_slots": 75,
+        "false_rises": 0,
+        "false_twins": 0,
+        "force_exact_failures": 0,
+        "missed": 13,
+        "physical_exact_failures": 0,
+        "strict": 62,
+        "stuck_tail_twins": 0,
+        "tool_detected_twins": 4,
+        "tool_present_twins": 6
+      },
+      "r27": {
+        "duplicate_rises": 0,
+        "event_slot_occupied_samples": 5073,
+        "event_slots": 75,
+        "false_rises": 0,
+        "false_twins": 0,
+        "force_exact_failures": 0,
+        "missed": 13,
+        "physical_exact_failures": 0,
+        "strict": 62,
+        "stuck_tail_twins": 0,
+        "tool_detected_twins": 4,
+        "tool_present_twins": 6
+      }
+    },
+    "schema": "r29-basic-composition-r25-three-way.v1",
+    "sources": {
+      "course_first_archive_sha256": "83987dba8ce14fb6cc0283021d6bd062ac2fedb317ceb8da67c3d4b2b8c4f4fe",
+      "course_first_composed_report": {
+        "schema": "r29-basic-composition-r25-198.v1",
+        "sha256": "4f35b69a57729c4041a7859c4d6f837754857a3d62ff8fd3151061bf53a0640f"
+      },
+      "historical_c3_r27": {
+        "schema": "r27-revisited-physical-history.v1",
+        "sha256": "c3a4ec15e5c3e080323e5598839213088ad6bbf5b5f171b6aa39839b0e31b4e5"
+      },
+      "historical_reference_sha256": "3e1520eeddd473117a6f7990b6664a7a0c01ccb25823c1456748a5e6b98020d3"
+    },
+    "verdict": {
+      "comparable": true,
+      "direct_c3_rerun_needed": false,
+      "limits": [
+        "This is a derivation from disclosed stored records, not a fresh execution.",
+        "event_slot_occupied_samples is registered event-window occupancy, not whole-episode alarm-high duration.",
+        "It does not cover sealed R27-114, unused R28-19, fresh R29 component prospects, or D4."
+      ],
+      "reason": "Exact row keys, episode counts, and physical signatures establish the same disclosed R25 cohort and mechanics for all three stored arms."
+    }
+  },
+  "historical_198_positive_misses": 13,
+  "history_status": "broad_protection_passes_but_not_qualified_due_known_absolute_misses",
+  "mode": "disclosed archival authentication; not a new blind trial",
+  "official": {
+    "all_delays_equal": true,
+    "comparison": "C3 vs basic composed on the same student torque controller",
+    "duplicates": [
+      1,
+      1
+    ],
+    "episodes": 29,
+    "false_alarms": [
+      1,
+      1
+    ],
+    "only_four_duration_reductions": [
+      7,
+      7,
+      7,
+      7
+    ],
+    "r27_records_equal": 25,
+    "report_sha256": "ac637806216109a73c8b5670c7d4eecee3dd8bad364dcabc986482a6c94491fa",
+    "strict": [
+      24,
+      24
+    ]
+  },
+  "schema": "r29-broad-history.v1",
+  "three_way_receipt_sha256": "23473875870dffbdf95006ed3a994a5ea03d86d21957667d498f0a72838fc7ad"
+}

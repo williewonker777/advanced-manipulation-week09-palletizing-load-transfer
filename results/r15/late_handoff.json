@@ -1,0 +1,264 @@
+{
+  "schema": "r15-late-stock-handoff-report.v1",
+  "scope": "Four previously exposed stock development cases. R10 comparator unchanged. No fresh stage or paired external impulses for this candidate.",
+  "all_development_gates": false,
+  "portable_check": {
+    "cases": 4,
+    "r15_g4_cases": 3,
+    "r14_g4_cases": 2,
+    "all_gates": false,
+    "qualified": false,
+    "failed": [
+      "sh3"
+    ]
+  },
+  "rows": [
+    {
+      "id": "sh0",
+      "arms": {
+        "r10": {
+          "mean_weight": 0.10565389531260087,
+          "minimum_weight": 0.0,
+          "peak_weight": 1.0033731665758927,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": null,
+          "saturation_pct": 0.0
+        },
+        "r14": {
+          "mean_weight": 0.7664641201970764,
+          "minimum_weight": 0.4261025660341117,
+          "peak_weight": 1.0474834130757193,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": null,
+          "saturation_pct": 0.0
+        },
+        "xy": {
+          "mean_weight": 0.7664641201970764,
+          "minimum_weight": 0.4261025660341117,
+          "peak_weight": 1.0474834130757193,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": null,
+          "saturation_pct": 0.0
+        }
+      },
+      "G4_R14": true,
+      "gates": {
+        "g4": true,
+        "cost": true,
+        "sat": true,
+        "FA": true,
+        "tool": true,
+        "prefix": true,
+        "fallback": true,
+        "controller_p99_below_800us": true
+      },
+      "cost_ratios": {
+        "r10": {
+          "tcp_rms": 1.0069366452100885,
+          "tcp_max": 1.0070720206013417,
+          "place_step": 1.000000000000018,
+          "pick_step": 1.0,
+          "place_force": 1.04396195550092
+        },
+        "r14": {
+          "tcp_rms": 1.0,
+          "tcp_max": 1.0,
+          "place_step": 1.0,
+          "pick_step": 1.0,
+          "place_force": 1.0
+        }
+      },
+      "xy_mm": [
+        0.0,
+        0.0
+      ],
+      "prefix_exact": true
+    },
+    {
+      "id": "sh1",
+      "arms": {
+        "r10": {
+          "mean_weight": 0.0,
+          "minimum_weight": 0.0,
+          "peak_weight": 2.8999475310391896,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": null,
+          "saturation_pct": 0.0
+        },
+        "r14": {
+          "mean_weight": 0.8594757431205242,
+          "minimum_weight": 0.6662834570672889,
+          "peak_weight": 1.0332091679974076,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": null,
+          "saturation_pct": 0.0
+        },
+        "xy": {
+          "mean_weight": 0.8685091621211436,
+          "minimum_weight": 0.7130309823471818,
+          "peak_weight": 1.0483905560415008,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": null,
+          "saturation_pct": 0.0
+        }
+      },
+      "G4_R14": true,
+      "gates": {
+        "g4": true,
+        "cost": true,
+        "sat": true,
+        "FA": true,
+        "tool": true,
+        "prefix": true,
+        "fallback": true,
+        "controller_p99_below_800us": true
+      },
+      "cost_ratios": {
+        "r10": {
+          "tcp_rms": 0.7360456548018502,
+          "tcp_max": 0.6112201537969755,
+          "place_step": 0.7412871540145533,
+          "pick_step": 1.0,
+          "place_force": 0.36152052574062
+        },
+        "r14": {
+          "tcp_rms": 0.9987793709956277,
+          "tcp_max": 1.0,
+          "place_step": 1.0001071091085687,
+          "pick_step": 1.0,
+          "place_force": 1.0146934314118776
+        }
+      },
+      "xy_mm": [
+        -6.086593234249539,
+        -6.973679444413727
+      ],
+      "prefix_exact": true
+    },
+    {
+      "id": "sh3",
+      "arms": {
+        "r10": {
+          "mean_weight": 0.0,
+          "minimum_weight": 0.0,
+          "peak_weight": 1.325691800024277,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": null,
+          "saturation_pct": 0.0
+        },
+        "r14": {
+          "mean_weight": 0.4391747778992424,
+          "minimum_weight": 0.33088362025763995,
+          "peak_weight": 1.3256918000369284,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": null,
+          "saturation_pct": 0.0
+        },
+        "xy": {
+          "mean_weight": 0.5226085813522808,
+          "minimum_weight": 0.44013159480921266,
+          "peak_weight": 1.162138096879924,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": null,
+          "saturation_pct": 0.0
+        }
+      },
+      "G4_R14": false,
+      "gates": {
+        "g4": false,
+        "cost": true,
+        "sat": true,
+        "FA": true,
+        "tool": true,
+        "prefix": true,
+        "fallback": true,
+        "controller_p99_below_800us": true
+      },
+      "cost_ratios": {
+        "r10": {
+          "tcp_rms": 0.9112030377154322,
+          "tcp_max": 0.9242779009289515,
+          "place_step": 1.0140904665699957,
+          "pick_step": 1.0,
+          "place_force": 0.8766276572417828
+        },
+        "r14": {
+          "tcp_rms": 0.971845655765322,
+          "tcp_max": 1.0,
+          "place_step": 1.014090466569849,
+          "pick_step": 1.0,
+          "place_force": 0.876627657233417
+        }
+      },
+      "xy_mm": [
+        -4.932494387150361,
+        6.9553617175839655
+      ],
+      "prefix_exact": true
+    },
+    {
+      "id": "sh5",
+      "arms": {
+        "r10": {
+          "mean_weight": 0.126616917749757,
+          "minimum_weight": 0.011674000943098936,
+          "peak_weight": 1.0510826235650212,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": 11.0,
+          "saturation_pct": 0.0
+        },
+        "r14": {
+          "mean_weight": 0.5935669757182314,
+          "minimum_weight": 0.041381995352981156,
+          "peak_weight": 1.0438926481563393,
+          "false_alarm_times_s": [
+            3.879,
+            3.906
+          ],
+          "tool_delay_ms": 11.0,
+          "saturation_pct": 0.0
+        },
+        "xy": {
+          "mean_weight": 0.8472991371586,
+          "minimum_weight": 0.6386177898932743,
+          "peak_weight": 1.063966452330873,
+          "false_alarm_times_s": [],
+          "tool_delay_ms": 11.0,
+          "saturation_pct": 0.0
+        }
+      },
+      "G4_R14": false,
+      "gates": {
+        "g4": true,
+        "cost": true,
+        "sat": true,
+        "FA": true,
+        "tool": true,
+        "prefix": true,
+        "fallback": true,
+        "controller_p99_below_800us": true
+      },
+      "cost_ratios": {
+        "r10": {
+          "tcp_rms": 1.0151242161540421,
+          "tcp_max": 1.0003385414385175,
+          "place_step": 1.0004993380436678,
+          "pick_step": 0.9992295088088584,
+          "place_force": 1.0122576745890375
+        },
+        "r14": {
+          "tcp_rms": 1.004540021303571,
+          "tcp_max": 1.0,
+          "place_step": 1.000459581914777,
+          "pick_step": 1.0,
+          "place_force": 1.0192297591232076
+        }
+      },
+      "xy_mm": [
+        -1.3623124131354616,
+        -9.880601343319167
+      ],
+      "prefix_exact": true
+    }
+  ]
+}

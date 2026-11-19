@@ -1,0 +1,84 @@
+{
+  "candidate": "Keep the previous independent two-force settled acquisition and its standard event pulse. For a new optional plateau only, require both current filtered physical-force projections outside the ordinary force range for the currently measured posture and motion. Passing native C3 or any other source is invariant. No live time/trajectory lookup, labels, force direction, true contact, event clocks, or paired reference trace.",
+  "classification": "New physically distinct normal-state feasibility check after disclosed later rebound alarms. Future holdout still sealed. No change to previous scores or candidate sources.",
+  "extra_cal_normals": [
+    {
+      "com": [
+        -0.018,
+        -0.006,
+        0.016
+      ],
+      "id": "cal0",
+      "mass": 1.37,
+      "offset": [
+        0.0006,
+        0.001,
+        -0.0004
+      ]
+    },
+    {
+      "com": [
+        -0.009,
+        0.0,
+        0.018
+      ],
+      "id": "cal1",
+      "mass": 2.79,
+      "offset": [
+        0.0,
+        0.0005,
+        -0.0004
+      ]
+    },
+    {
+      "com": [
+        0.0,
+        0.006,
+        0.02
+      ],
+      "id": "cal2",
+      "mass": 4.09,
+      "offset": [
+        -0.0006,
+        0.0,
+        -0.0004
+      ]
+    },
+    {
+      "com": [
+        0.009,
+        0.012,
+        0.022
+      ],
+      "id": "cal3",
+      "mass": 6.39,
+      "offset": [
+        0.0006,
+        -0.0005,
+        -0.0004
+      ]
+    },
+    {
+      "com": [
+        0.018,
+        0.018,
+        0.024
+      ],
+      "id": "cal4",
+      "mass": 7.34,
+      "offset": [
+        0.0,
+        -0.001,
+        -0.0004
+      ]
+    }
+  ],
+  "fit": "Reuse exact 27 earlier unforced histories. Twenty-four fixed prototypes (six joints \u00d7 four motion regimes) by farthest-point cover using 12 measured coordinates (mean endpoint angle and average velocity over the same 40ms force window); normalization median and 5\u201395 percentile range with .02 rad/.05 rad/s numerical floor. No mass/COM/absolute time input for cell selection. At every tick assign nearest two cells, collect max signed force per observer/direction. Separately calibrate using five disjoint no-force payloads \u00d7 three mechanical regimes below. Upper envelope is max(fit,cal) plus positive cal excess over fit, clipped at zero. If either nearest cell is outside observed radius or the estimates disagree, never add an optional alarm. No fitting or selection using forced outputs.",
+  "requirements": "Same policies as predecessors: genuine both registered during force, no new normal/false/duplicate, no strict/quiet/time/duration loss; first 15 and further 18 audit no-force cases NOT introduced into training. Full disclosed R26 and past protections prior to enrollment. Flat release from the same event must not count as another new impulse. If fails no independent enrollment.",
+  "schema": "r27-two-source-feasible-state-preregistration.v1",
+  "trigger": {
+    "change-r26.json": "c1c76ab7db2b029d0c99ed39da93e17d63a8e0613a70a9d1651d30e04b83e4ea",
+    "settled-contrasts.json": "713bd4931fe97d30c6795370667a1f797b717298576098307f3f4d7f1d87a129",
+    "settled-normal_audit.json": "0917ce7465988c64dbfd214876a69e53737368383d4b9869546f17f9fd347b67"
+  }
+}

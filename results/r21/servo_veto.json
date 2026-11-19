@@ -1,0 +1,802 @@
+{
+  "schema": "r21-servo-protection-summary.v1",
+  "promoted": false,
+  "official_false_attribution": [
+    {
+      "force": 10.0,
+      "arm": "r10",
+      "delay": 48.99999999999993,
+      "false": []
+    },
+    {
+      "force": 10.0,
+      "arm": "candidate",
+      "delay": 42.000000000000256,
+      "false": []
+    },
+    {
+      "force": 15.0,
+      "arm": "r10",
+      "delay": 36.99999999999992,
+      "false": []
+    },
+    {
+      "force": 15.0,
+      "arm": "candidate",
+      "delay": 36.00000000000003,
+      "false": []
+    },
+    {
+      "force": 40.0,
+      "arm": "r10",
+      "delay": 24.99999999999991,
+      "false": []
+    },
+    {
+      "force": 40.0,
+      "arm": "candidate",
+      "delay": 23.00000000000013,
+      "false": []
+    },
+    {
+      "force": 100.0,
+      "arm": "r10",
+      "delay": 18.000000000000238,
+      "false": []
+    },
+    {
+      "force": 100.0,
+      "arm": "candidate",
+      "delay": 18.000000000000238,
+      "false": [
+        3.862
+      ]
+    }
+  ],
+  "independent": {
+    "schema": "r21-servo-yaw-fresh-result.v1",
+    "plan_sha256": "488bb327b502ff2541d68175b14ecd6cd3a25288bd9c08d549d32cae77cf74c6",
+    "episodes": 32,
+    "rows": [
+      {
+        "id": "servo_weak_px_a",
+        "force_N": 10.0,
+        "r10": {
+          "delay_ms": 56.00000000000005,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate": {
+          "delay_ms": 56.00000000000005,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate_only": false,
+        "physical_equal": [
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          },
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          }
+        ],
+        "gates": {
+          "exact_physics_force": true,
+          "no_added_none_false": true,
+          "no_added_force_false": true,
+          "no_baseline_loss": true
+        },
+        "passed": true
+      },
+      {
+        "id": "servo_weak_nx_b",
+        "force_N": 10.0,
+        "r10": {
+          "delay_ms": 38.000000000000036,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate": {
+          "delay_ms": 38.000000000000036,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate_only": false,
+        "physical_equal": [
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          },
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          }
+        ],
+        "gates": {
+          "exact_physics_force": true,
+          "no_added_none_false": true,
+          "no_added_force_false": true,
+          "no_baseline_loss": true
+        },
+        "passed": true
+      },
+      {
+        "id": "servo_weak_py_c",
+        "force_N": 10.0,
+        "r10": {
+          "delay_ms": 38.9999999999997,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate": {
+          "delay_ms": 37.999999999999815,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate_only": false,
+        "physical_equal": [
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          },
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          }
+        ],
+        "gates": {
+          "exact_physics_force": true,
+          "no_added_none_false": true,
+          "no_added_force_false": true,
+          "no_baseline_loss": true
+        },
+        "passed": true
+      },
+      {
+        "id": "servo_weak_ny_d",
+        "force_N": 10.0,
+        "r10": {
+          "delay_ms": 44.00000000000004,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate": {
+          "delay_ms": 31.00000000000014,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate_only": false,
+        "physical_equal": [
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          },
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          }
+        ],
+        "gates": {
+          "exact_physics_force": true,
+          "no_added_none_false": true,
+          "no_added_force_false": true,
+          "no_baseline_loss": true
+        },
+        "passed": true
+      },
+      {
+        "id": "servo_weak_px_e",
+        "force_N": 10.0,
+        "r10": {
+          "delay_ms": 50.00000000000027,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate": {
+          "delay_ms": 34.000000000000256,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate_only": false,
+        "physical_equal": [
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          },
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          }
+        ],
+        "gates": {
+          "exact_physics_force": true,
+          "no_added_none_false": true,
+          "no_added_force_false": true,
+          "no_baseline_loss": true
+        },
+        "passed": true
+      },
+      {
+        "id": "servo_weak_ny_f",
+        "force_N": 10.0,
+        "r10": {
+          "delay_ms": 47.000000000000156,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate": {
+          "delay_ms": 40.000000000000036,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate_only": false,
+        "physical_equal": [
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          },
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          }
+        ],
+        "gates": {
+          "exact_physics_force": true,
+          "no_added_none_false": true,
+          "no_added_force_false": true,
+          "no_baseline_loss": true
+        },
+        "passed": true
+      },
+      {
+        "id": "servo_strong_px",
+        "force_N": 40.0,
+        "r10": {
+          "delay_ms": 22.999999999999687,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate": {
+          "delay_ms": 22.999999999999687,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate_only": false,
+        "physical_equal": [
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          },
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          }
+        ],
+        "gates": {
+          "exact_physics_force": true,
+          "no_added_none_false": true,
+          "no_added_force_false": true,
+          "no_baseline_loss": true
+        },
+        "passed": true
+      },
+      {
+        "id": "servo_strong_ny",
+        "force_N": 40.0,
+        "r10": {
+          "delay_ms": 24.99999999999991,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": []
+        },
+        "candidate": {
+          "delay_ms": 21.999999999999797,
+          "strict": true,
+          "alarm_before": false,
+          "reference_twin": false,
+          "false": [
+            3.861
+          ]
+        },
+        "candidate_only": false,
+        "physical_equal": [
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          },
+          {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "f_ext": true,
+            "qpos": true
+          }
+        ],
+        "gates": {
+          "exact_physics_force": true,
+          "no_added_none_false": true,
+          "no_added_force_false": false,
+          "no_baseline_loss": true
+        },
+        "passed": false
+      }
+    ],
+    "passed": false,
+    "weak": {
+      "r10": 6,
+      "candidate": 6,
+      "candidate_only": 0
+    }
+  },
+  "support_bound_diagnostics": {
+    "schema": "r21-support-yaw-exposed-diagnostic.v1",
+    "rows": [
+      {
+        "id": "100_py",
+        "late_rise_samples": [
+          {
+            "t": 3.872,
+            "detect": true,
+            "allowed": true,
+            "fz": 18.40674517290481,
+            "yaw": 6.690293976434725,
+            "bound": 1.9698984962458153,
+            "excess": 4.720395480188909
+          }
+        ],
+        "max_bound_3p84_3p90": 2.5921640520649563,
+        "max_abs_yaw_3p84_3p90": 8.61902697868272
+      },
+      {
+        "id": "40_ny",
+        "late_rise_samples": [
+          {
+            "t": 3.866,
+            "detect": true,
+            "allowed": true,
+            "fz": 15.292952703125671,
+            "yaw": -7.262473006730607,
+            "bound": 1.6382157008102565,
+            "excess": -5.6242573059203504
+          }
+        ],
+        "max_bound_3p84_3p90": 2.3946703539457874,
+        "max_abs_yaw_3p84_3p90": 8.646820717320425
+      }
+    ]
+  },
+  "support_gate": {
+    "episodes": 32,
+    "passed": false,
+    "rows": [
+      {
+        "id": "exposed_prior_100_py_then_release_py",
+        "physical_equal": {
+          "none": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "first": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "second": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "both": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          }
+        },
+        "first_only_near_second_s": [
+          3.872
+        ],
+        "gates": {
+          "candidate_pair_assessment": false,
+          "exact_physics_all_twins": true,
+          "actual_second_isolated_and_both": true,
+          "no_first_only_delayed_rise_near_second": false,
+          "retain_all_r10_events_5ms": true,
+          "no_added_both_false": true
+        },
+        "passed": false
+      },
+      {
+        "id": "exposed_prior_40_ny_then_release_px",
+        "physical_equal": {
+          "none": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "first": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "second": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "both": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          }
+        },
+        "first_only_near_second_s": [
+          3.866
+        ],
+        "gates": {
+          "candidate_pair_assessment": false,
+          "exact_physics_all_twins": true,
+          "actual_second_isolated_and_both": true,
+          "no_first_only_delayed_rise_near_second": false,
+          "retain_all_r10_events_5ms": true,
+          "no_added_both_false": true
+        },
+        "passed": false
+      },
+      {
+        "id": "strong_px_then_release_ny",
+        "physical_equal": {
+          "none": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "first": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "second": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "both": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          }
+        },
+        "first_only_near_second_s": [],
+        "gates": {
+          "candidate_pair_assessment": true,
+          "exact_physics_all_twins": true,
+          "actual_second_isolated_and_both": true,
+          "no_first_only_delayed_rise_near_second": true,
+          "retain_all_r10_events_5ms": true,
+          "no_added_both_false": true
+        },
+        "passed": true
+      },
+      {
+        "id": "early_10_py_then_release_px_zero_mass",
+        "physical_equal": {
+          "none": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "first": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "second": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          },
+          "both": {
+            "t": true,
+            "q": true,
+            "q_d": true,
+            "tau": true,
+            "e_mm": true,
+            "f_table": true,
+            "f_tool": true,
+            "qpos": true,
+            "f_ext": true,
+            "f_ext_xyz_committed": true,
+            "f_ext_xyz_native": true,
+            "f_ext_xyz_second": true
+          }
+        },
+        "first_only_near_second_s": [],
+        "gates": {
+          "candidate_pair_assessment": true,
+          "exact_physics_all_twins": true,
+          "actual_second_isolated_and_both": true,
+          "no_first_only_delayed_rise_near_second": true,
+          "retain_all_r10_events_5ms": true,
+          "no_added_both_false": true
+        },
+        "passed": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "r22-payload-boundary-summary.v1",
+  "decision": "tested_boundary_no_candidate",
+  "case": "sh5 exposed normal",
+  "fresh_reproduction": {
+    "exact_against_r19": {
+      "support": true,
+      "saturation_pct": true,
+      "tool_delay_ms": true,
+      "false_alarm_times": true,
+      "cost": true
+    },
+    "g4": {
+      "mean_gain_mg": 0.492164667488031,
+      "all_four_g4": true
+    },
+    "final_20ms_support": {
+      "mean_mg": 0.618781585237788,
+      "min_mg": 0.47905889169799776,
+      "peak_mg": 1.0390889534632433,
+      "samples": 20,
+      "mean_ge_050": true,
+      "min_ge_025": true,
+      "peak_le_110": true
+    },
+    "tracking_and_peak_cost": {
+      "tcp_rms": 3.4292574795498134,
+      "tcp_max": 8.522036262999025,
+      "place_step": 12.235051215735922,
+      "pick_step": 8.955447076802301,
+      "place_force": 67.78652651260488
+    },
+    "saturation_pct": 0.0,
+    "tool_delay_ms": 11.0,
+    "false_alarm_times": [
+      3.903
+    ],
+    "decisive_release_sample": {
+      "directional_score": 1.0278324774280156,
+      "directional_over": true,
+      "corrected_my_nm": -6.558351501904777,
+      "corrected_mz_nm": -0.37037566315522397,
+      "table_my_nm": 0.0,
+      "fast_score": 0.5252078159289572,
+      "cf_alarm": 4,
+      "detected": true
+    }
+  },
+  "mechanism_boundary": {
+    "r22_release": "optional yaw/Mz detector continuity; no actuator output",
+    "g4_failure": "registered Coupled My persistence from actual closed-loop input history",
+    "same_channel": false,
+    "can_change_support_or_command": false,
+    "factorial_decisions": {
+      "r16_sensor__r16_model": false,
+      "r16_sensor__r17_model": false,
+      "r17_sensor__r16_model": true,
+      "r17_sensor__r17_model": true
+    },
+    "model_swap_max_score_delta": 0.001995426595410299,
+    "sensor_stream_swap_max_score_delta": 0.1262554259601485
+  },
+  "failed_physical_interventions": {
+    "post_release_command_handover": {
+      "derivative_r17_nm_s": [
+        1106.5104218216825,
+        1888.130123517783
+      ],
+      "derivative_candidate_nm_s": [
+        0.0,
+        0.156520098544287
+      ],
+      "false_alarm_times": [
+        3.903
+      ]
+    },
+    "horizontal_information_action": {
+      "removed_mm": 9.905791603371402,
+      "fully_removed_before_release_s": 3.873,
+      "false_alarm_times": [
+        3.903
+      ]
+    },
+    "bounded_normal_arrest": {
+      "first_active_s": 3.899,
+      "impulse_n_s": 0.0032618250000000003,
+      "false_alarm_times": [
+        3.903
+      ]
+    }
+  },
+  "stage_control": {
+    "new_controller_opened": false,
+    "collision_or_holdout_runs": 0,
+    "reason": "No compatible causal actuator coordinate survived the exposed-normal gate; opening protected cases would be outcome-fit and non-informative."
+  },
+  "boundary": "Do not transplant R22 yaw continuity into G4. A future transfer law must preregister a public pre-release actuator coordinate that changes actual support or closed-loop state, then pass the exposed normal before collisions/holdouts.",
+  "evidence_sha256": {
+    "fresh_result": "bd4e5632bcee335b99138bd179e234e1510d29796e3d28c456d64815aa2ee820",
+    "r19_archive": "6bbc048417638003ebf7d2f0739c4b06e0d1bc649a5b1fb0486f2f65098326aa",
+    "r19_factorial": "3223543cfe37e8bbb0e9abee470888bf0a4271baf273a2ac1e0a093d38e5b361",
+    "r18_continuity": "af6d5caef3d8b36109115906aa1c09e4f2f6aaac90404ad312363b8cd06ebb9d",
+    "r17_support_shape": "2225a66975a12832d9c267338544a607880153c3ec3b9827840e3bc3f7f17d47"
+  }
+}

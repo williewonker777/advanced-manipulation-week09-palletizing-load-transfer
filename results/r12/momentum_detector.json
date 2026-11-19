@@ -1,0 +1,81 @@
+{
+  "schema": "r12-total-momentum-summary.v1",
+  "decision": "STOP_NEGATIVE",
+  "observability": {
+    "pending_controller_command_available_to_detector": false,
+    "actual_applied_clipped_tau_m_available": true,
+    "alignment": "tau_m supplied before compute is the torque applied over the preceding state transition; pending output is not exposed"
+  },
+  "method": "20ms discrete conservation balance of total nominal link momentum plus public motor inertia momentum, driven by actual tau_m minus public friction and nominal bias; internal JTS spring torque cancels",
+  "normal_only_freeze": {
+    "fit_episodes": 4,
+    "audit_episodes": 2,
+    "threshold": 9.70245266531525,
+    "audit_maxima": [
+      7.095077658198019,
+      9.145193014585951
+    ]
+  },
+  "development": {
+    "normal_cases": 4,
+    "collision_cases": 16,
+    "baseline_counts": {
+      "detected": 6,
+      "missed": 10,
+      "masked": 0,
+      "indistinguishable": 0
+    },
+    "candidate_counts": {
+      "detected": 6,
+      "missed": 10,
+      "masked": 0,
+      "indistinguishable": 0
+    },
+    "additional_detections": 0,
+    "normal_false_alarm_increases": [
+      "td3-normal"
+    ],
+    "collision_FA_increases": [
+      "td3-0",
+      "td3-1",
+      "td3-2",
+      "td3-3"
+    ],
+    "normal_statistic_range": [
+      6.443965979827046,
+      9.981125424122816
+    ],
+    "collision_statistic_range": [
+      6.443965979827046,
+      17.108720064624414
+    ],
+    "largest_collision_statistic_case": "td3-1",
+    "physical_byte_exact_comparisons": 160,
+    "worst_p99_us": 379.0117859657102
+  },
+  "gates": {
+    "normal_FA": false,
+    "event_loss": true,
+    "per_case_FA": false,
+    "tool_loss": true,
+    "gain": false,
+    "physical": true,
+    "timing": true
+  },
+  "pins": {
+    "plan": "d50bcdb5ec24ffd8b25335057c249445ed1d8bfc2c5e5699bd23548c419ae77f",
+    "model": "578ffb08ead441fe721daab2af43dafe3725955322fe09e92325ae521b98ac54",
+    "freeze": "ea05a3c1ad804a0b18200a8f162c09ddc7b694f323e8469ad5799540b61f6df8",
+    "development": "ef84f2d26f6aeb285cdbb81aec144690717cfbf71e385dfcd8ffa22534908bbf",
+    "observer.py": "0845021b3bee49d443ef5627276817666528dee46c13b905dd44db711d50e51a",
+    "runner.py": "81e5aa795092f22a004156bd0da7f407e38db334b997258faa5879eeb627880d",
+    "fit_normal.py": "c0a7516fe1313a3714e3761aaacf0fdbffeb4240a689c4d403fc7429ab966481",
+    "evaluate.py": "5324ebe76f8e9e0202fd56f32a7afcef9b1a8aab195a36134120b774fa057aa6",
+    "r1_torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "r10_detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "runner": "3cf99c21b93f431cc57a0929e4d05b083fb8f35f06dc52bc2d2ddcde3e55ed1f"
+  },
+  "retuning": false,
+  "independent_validation_opened": false,
+  "conclusion": "The applied-torque total-momentum balance was observable and passive, but weak impacts did not exceed normal uncertainty. One fresh high-payload normal crossed at the public 1.7s pose transition, while the only large collision response occurred in a case R10 already detected. Stop negative."
+}

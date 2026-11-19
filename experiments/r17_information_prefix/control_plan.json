@@ -1,0 +1,8 @@
+{
+ "schema": "r17-information-closed-loop-plan.v1",
+ "prerequisite": "Both new sensing cohorts pass every frozen sensing gate.",
+ "stock": ["rp1:up","sh3","sh5","ec1:up","ec3:up"],
+ "perturbed": ["rp1:up","rp1:down","rp4:up","rp4:none"],
+ "comparators": "R10 original submission; raw R15 early stock policy; D=R16 balanced active arm; and same balanced reference plus late full R16 calibrated 3.447s moment model. Identical 7ms wait + 200ms C2 COM blend for late and information candidates. Nominal height calibration identical on stock and perturbed; no hidden parameter is provided to the candidate.",
+ "qualification": "Every selected calibrated case independently: all 4 G4 relative to R10, five costs <=1.05 times BOTH R10 and raw R15, injective FA matching and no tool delay loss >5ms and saturation <= min vs R10,R15,D, candidate controller p99<=800us. Separate late-policy ablation reported without choosing a winner by evaluation. Same case group identifiers are exposed scenarios, not unseen generalization. No impact runs unless full normal gates pass in both domains."
+}

@@ -1,0 +1,693 @@
+{
+  "schema": "r20-bridge-challenge-compact.v1",
+  "episodes": 72,
+  "plan_sha256": "9f21d2911ea753df559410506dc02ea9f62f8b5259b7c71c89b2e6dc83127808",
+  "arms": [
+    "r19",
+    "r20",
+    "slow"
+  ],
+  "strict_definition": "all R18 gates true AND exactly one raw+credited response in every slot",
+  "arms_summary": {
+    "r19": {
+      "exact_strict_cases": 2,
+      "denominator": 6,
+      "one_per_slot_only": 3
+    },
+    "r20": {
+      "exact_strict_cases": 2,
+      "denominator": 6,
+      "one_per_slot_only": 3
+    },
+    "slow": {
+      "exact_strict_cases": 2,
+      "denominator": 6,
+      "one_per_slot_only": 3
+    }
+  },
+  "rows": [
+    {
+      "id": "fresh_gap07_horizontal_reverse",
+      "arms": {
+        "r19": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "quiet_before_second"
+          ],
+          "one_per_slot": false,
+          "raw_ms": {
+            "isolated_first": [
+              35
+            ],
+            "isolated_second": [
+              59
+            ],
+            "both_first": [
+              35
+            ],
+            "both_second": [
+              68
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              35
+            ],
+            "isolated_second": [
+              59
+            ],
+            "both_first": [
+              35
+            ],
+            "both_second": []
+          }
+        },
+        "r20": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "quiet_before_second"
+          ],
+          "one_per_slot": false,
+          "raw_ms": {
+            "isolated_first": [
+              35
+            ],
+            "isolated_second": [
+              59
+            ],
+            "both_first": [
+              35
+            ],
+            "both_second": [
+              68
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              35
+            ],
+            "isolated_second": [
+              59
+            ],
+            "both_first": [
+              35
+            ],
+            "both_second": []
+          },
+          "retained_r19": true,
+          "all_candidate_gates": false
+        },
+        "slow": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "quiet_before_second"
+          ],
+          "one_per_slot": false,
+          "raw_ms": {
+            "isolated_first": [
+              35
+            ],
+            "isolated_second": [
+              59
+            ],
+            "both_first": [
+              35
+            ],
+            "both_second": [
+              68
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              35
+            ],
+            "isolated_second": [
+              59
+            ],
+            "both_first": [
+              35
+            ],
+            "both_second": []
+          },
+          "retained_r19": true,
+          "all_candidate_gates": false
+        }
+      }
+    },
+    {
+      "id": "fresh_gap23_vertical_aligned",
+      "arms": {
+        "r19": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "both_second_genuine",
+            "quiet_before_second"
+          ],
+          "one_per_slot": false,
+          "raw_ms": {
+            "isolated_first": [
+              127
+            ],
+            "isolated_second": [
+              58
+            ],
+            "both_first": [
+              127
+            ],
+            "both_second": [
+              58
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              127
+            ],
+            "isolated_second": [
+              58
+            ],
+            "both_first": [
+              127
+            ],
+            "both_second": []
+          }
+        },
+        "r20": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "both_second_genuine",
+            "quiet_before_second"
+          ],
+          "one_per_slot": false,
+          "raw_ms": {
+            "isolated_first": [
+              127
+            ],
+            "isolated_second": [
+              58
+            ],
+            "both_first": [
+              127
+            ],
+            "both_second": [
+              58
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              127
+            ],
+            "isolated_second": [
+              58
+            ],
+            "both_first": [
+              127
+            ],
+            "both_second": []
+          },
+          "retained_r19": true,
+          "all_candidate_gates": false
+        },
+        "slow": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "both_second_genuine",
+            "quiet_before_second"
+          ],
+          "one_per_slot": false,
+          "raw_ms": {
+            "isolated_first": [
+              127
+            ],
+            "isolated_second": [
+              58
+            ],
+            "both_first": [
+              127
+            ],
+            "both_second": [
+              58
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              127
+            ],
+            "isolated_second": [
+              58
+            ],
+            "both_first": [
+              127
+            ],
+            "both_second": []
+          },
+          "retained_r19": true,
+          "all_candidate_gates": false
+        }
+      }
+    },
+    {
+      "id": "fresh_gap47_horizontal_cross",
+      "arms": {
+        "r19": {
+          "exact_strict": true,
+          "all_r18_gates": true,
+          "failed_r18_gates": [],
+          "one_per_slot": true,
+          "raw_ms": {
+            "isolated_first": [
+              48
+            ],
+            "isolated_second": [
+              32
+            ],
+            "both_first": [
+              48
+            ],
+            "both_second": [
+              32
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              48
+            ],
+            "isolated_second": [
+              32
+            ],
+            "both_first": [
+              48
+            ],
+            "both_second": [
+              32
+            ]
+          }
+        },
+        "r20": {
+          "exact_strict": true,
+          "all_r18_gates": true,
+          "failed_r18_gates": [],
+          "one_per_slot": true,
+          "raw_ms": {
+            "isolated_first": [
+              48
+            ],
+            "isolated_second": [
+              32
+            ],
+            "both_first": [
+              48
+            ],
+            "both_second": [
+              32
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              48
+            ],
+            "isolated_second": [
+              32
+            ],
+            "both_first": [
+              48
+            ],
+            "both_second": [
+              32
+            ]
+          },
+          "retained_r19": true,
+          "all_candidate_gates": true
+        },
+        "slow": {
+          "exact_strict": true,
+          "all_r18_gates": true,
+          "failed_r18_gates": [],
+          "one_per_slot": true,
+          "raw_ms": {
+            "isolated_first": [
+              48
+            ],
+            "isolated_second": [
+              32
+            ],
+            "both_first": [
+              48
+            ],
+            "both_second": [
+              32
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              48
+            ],
+            "isolated_second": [
+              32
+            ],
+            "both_first": [
+              48
+            ],
+            "both_second": [
+              32
+            ]
+          },
+          "retained_r19": true,
+          "all_candidate_gates": true
+        }
+      }
+    },
+    {
+      "id": "fresh_gap90_diagonal_opposed",
+      "arms": {
+        "r19": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "signed_profiles_exact",
+            "isolated_second_genuine",
+            "both_second_genuine"
+          ],
+          "one_per_slot": false,
+          "raw_ms": {
+            "isolated_first": [
+              49
+            ],
+            "isolated_second": [],
+            "both_first": [
+              49
+            ],
+            "both_second": []
+          },
+          "credited_ms": {
+            "isolated_first": [
+              49
+            ],
+            "isolated_second": [],
+            "both_first": [
+              49
+            ],
+            "both_second": []
+          }
+        },
+        "r20": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "signed_profiles_exact",
+            "isolated_second_genuine",
+            "both_second_genuine"
+          ],
+          "one_per_slot": false,
+          "raw_ms": {
+            "isolated_first": [
+              49
+            ],
+            "isolated_second": [],
+            "both_first": [
+              49
+            ],
+            "both_second": []
+          },
+          "credited_ms": {
+            "isolated_first": [
+              49
+            ],
+            "isolated_second": [],
+            "both_first": [
+              49
+            ],
+            "both_second": []
+          },
+          "retained_r19": true,
+          "all_candidate_gates": false
+        },
+        "slow": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "signed_profiles_exact",
+            "isolated_second_genuine",
+            "both_second_genuine"
+          ],
+          "one_per_slot": false,
+          "raw_ms": {
+            "isolated_first": [
+              49
+            ],
+            "isolated_second": [],
+            "both_first": [
+              49
+            ],
+            "both_second": []
+          },
+          "credited_ms": {
+            "isolated_first": [
+              49
+            ],
+            "isolated_second": [],
+            "both_first": [
+              49
+            ],
+            "both_second": []
+          },
+          "retained_r19": true,
+          "all_candidate_gates": false
+        }
+      }
+    },
+    {
+      "id": "fresh_gap140_vertical_reverse",
+      "arms": {
+        "r19": {
+          "exact_strict": true,
+          "all_r18_gates": true,
+          "failed_r18_gates": [],
+          "one_per_slot": true,
+          "raw_ms": {
+            "isolated_first": [
+              24
+            ],
+            "isolated_second": [
+              57
+            ],
+            "both_first": [
+              24
+            ],
+            "both_second": [
+              48
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              24
+            ],
+            "isolated_second": [
+              57
+            ],
+            "both_first": [
+              24
+            ],
+            "both_second": [
+              48
+            ]
+          }
+        },
+        "r20": {
+          "exact_strict": true,
+          "all_r18_gates": true,
+          "failed_r18_gates": [],
+          "one_per_slot": true,
+          "raw_ms": {
+            "isolated_first": [
+              24
+            ],
+            "isolated_second": [
+              57
+            ],
+            "both_first": [
+              24
+            ],
+            "both_second": [
+              48
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              24
+            ],
+            "isolated_second": [
+              57
+            ],
+            "both_first": [
+              24
+            ],
+            "both_second": [
+              48
+            ]
+          },
+          "retained_r19": true,
+          "all_candidate_gates": true
+        },
+        "slow": {
+          "exact_strict": true,
+          "all_r18_gates": true,
+          "failed_r18_gates": [],
+          "one_per_slot": true,
+          "raw_ms": {
+            "isolated_first": [
+              24
+            ],
+            "isolated_second": [
+              57
+            ],
+            "both_first": [
+              24
+            ],
+            "both_second": [
+              48
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              24
+            ],
+            "isolated_second": [
+              57
+            ],
+            "both_first": [
+              24
+            ],
+            "both_second": [
+              48
+            ]
+          },
+          "retained_r19": true,
+          "all_candidate_gates": true
+        }
+      }
+    },
+    {
+      "id": "fresh_gap210_mixed_separated",
+      "arms": {
+        "r19": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "signed_profiles_exact"
+          ],
+          "one_per_slot": true,
+          "raw_ms": {
+            "isolated_first": [
+              34
+            ],
+            "isolated_second": [
+              55
+            ],
+            "both_first": [
+              34
+            ],
+            "both_second": [
+              45
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              34
+            ],
+            "isolated_second": [
+              55
+            ],
+            "both_first": [
+              34
+            ],
+            "both_second": [
+              45
+            ]
+          }
+        },
+        "r20": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "signed_profiles_exact"
+          ],
+          "one_per_slot": true,
+          "raw_ms": {
+            "isolated_first": [
+              34
+            ],
+            "isolated_second": [
+              55
+            ],
+            "both_first": [
+              34
+            ],
+            "both_second": [
+              45
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              34
+            ],
+            "isolated_second": [
+              55
+            ],
+            "both_first": [
+              34
+            ],
+            "both_second": [
+              45
+            ]
+          },
+          "retained_r19": true,
+          "all_candidate_gates": false
+        },
+        "slow": {
+          "exact_strict": false,
+          "all_r18_gates": false,
+          "failed_r18_gates": [
+            "signed_profiles_exact"
+          ],
+          "one_per_slot": true,
+          "raw_ms": {
+            "isolated_first": [
+              34
+            ],
+            "isolated_second": [
+              55
+            ],
+            "both_first": [
+              34
+            ],
+            "both_second": [
+              45
+            ]
+          },
+          "credited_ms": {
+            "isolated_first": [
+              34
+            ],
+            "isolated_second": [
+              55
+            ],
+            "both_first": [
+              34
+            ],
+            "both_second": [
+              45
+            ]
+          },
+          "retained_r19": true,
+          "all_candidate_gates": false
+        }
+      }
+    }
+  ]
+}

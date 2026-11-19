@@ -1,0 +1,371 @@
+{
+  "archive_sha256": "854459ef3292f3c20eae7bc8ba829a83eae70e6ce2b5e66f5b89abeb6836489a",
+  "default_changed": false,
+  "disclosed_R26": {
+    "c3": {
+      "counts": {
+        "all_four": 0,
+        "duplicate_edges": 0,
+        "duplicate_slots": 0,
+        "false_rises": 0,
+        "slots": 57,
+        "strict": 29
+      },
+      "entrypoint": "experiments.r26_yaw_acquisition.candidate:Detector",
+      "paired_strict": {
+        "both_first": 6,
+        "both_second": 0,
+        "isolated_first": 6,
+        "isolated_second": 3,
+        "long_single": 8
+      }
+    },
+    "composed": {
+      "counts": {
+        "all_four": 3,
+        "duplicate_edges": 0,
+        "duplicate_slots": 0,
+        "false_rises": 0,
+        "slots": 57,
+        "strict": 48
+      },
+      "entrypoint": "experiments.r29_disjoint_events.candidate:Detector",
+      "episodes": 156,
+      "original_sha256": "ad4fd0337448640db59679489a8bde72db38ededa9b42d4f298615d6044a8051",
+      "paired_strict": {
+        "both_first": 9,
+        "both_second": 3,
+        "isolated_first": 9,
+        "isolated_second": 6,
+        "long_single": 9
+      },
+      "pin": "4567628058b7284e6db1216d38e891bd182e18c415fc79613075c8a38b848a5a",
+      "relative_losses_vs_c3": [
+        [
+          "p26_close_place_cross",
+          "stock",
+          [
+            "both_second:new_prealarm"
+          ]
+        ],
+        [
+          "p26_close_place_cross",
+          "actuator_deadzone",
+          [
+            "both_second:new_prealarm"
+          ]
+        ],
+        [
+          "p26_close_place_cross",
+          "place_surface_shift",
+          [
+            "both_second:new_prealarm"
+          ]
+        ]
+      ]
+    },
+    "force_tube": {
+      "counts": {
+        "all_four": 0,
+        "duplicate_edges": 12,
+        "duplicate_slots": 12,
+        "false_rises": 0,
+        "slots": 57,
+        "strict": 17
+      },
+      "entrypoint": "experiments.r29_force_tube.candidate:Detector",
+      "episodes": 156,
+      "original_sha256": "16573de259341a9ee3d0b0e49cee888ecd4fd55fb34aaaa470e5a25e98dbd078",
+      "paired_strict": {
+        "both_first": 3,
+        "both_second": 0,
+        "isolated_first": 3,
+        "isolated_second": 3,
+        "long_single": 5
+      },
+      "pin": "900b58a66657d2ad5c5fdb770d0787c0e4b74e24331ea422b3b5ee563da05144",
+      "relative_losses_vs_c3": [
+        [
+          "s26_long_transfer_rotated",
+          "stock",
+          [
+            "single:time",
+            "single:duplicates"
+          ]
+        ],
+        [
+          "s26_long_transfer_rotated",
+          "actuator_deadzone",
+          [
+            "single:time",
+            "single:duplicates"
+          ]
+        ],
+        [
+          "s26_long_transfer_rotated",
+          "place_surface_shift",
+          [
+            "single:time",
+            "single:duplicates"
+          ]
+        ],
+        [
+          "p26_close_transfer_oblique",
+          "stock",
+          [
+            "long_single:time",
+            "long_single:duplicates",
+            "isolated_first:time",
+            "isolated_first:duplicates",
+            "both_first:time",
+            "both_first:duplicates"
+          ]
+        ],
+        [
+          "p26_close_transfer_oblique",
+          "actuator_deadzone",
+          [
+            "long_single:time",
+            "long_single:duplicates",
+            "isolated_first:time",
+            "isolated_first:duplicates",
+            "both_first:time",
+            "both_first:duplicates"
+          ]
+        ],
+        [
+          "p26_close_transfer_oblique",
+          "place_surface_shift",
+          [
+            "long_single:time",
+            "long_single:duplicates",
+            "isolated_first:time",
+            "isolated_first:duplicates",
+            "both_first:time",
+            "both_first:duplicates"
+          ]
+        ]
+      ]
+    },
+    "linked": {
+      "counts": {
+        "all_four": 0,
+        "duplicate_edges": 0,
+        "duplicate_slots": 0,
+        "false_rises": 0,
+        "slots": 57,
+        "strict": 45
+      },
+      "entrypoint": "experiments.r29_native_event_link.candidate:Detector",
+      "episodes": 156,
+      "original_sha256": "75e3458d20f262a4713499bee745233b9c966f1934b13377f39605c5d60f83f1",
+      "paired_strict": {
+        "both_first": 9,
+        "both_second": 0,
+        "isolated_first": 9,
+        "isolated_second": 6,
+        "long_single": 9
+      },
+      "pin": "f7856439bc8ab798b4a6369c63b564ec58e6c54d0fe835365335c420c06b950e",
+      "relative_losses_vs_c3": [
+        [
+          "p26_close_place_cross",
+          "stock",
+          [
+            "both_second:new_prealarm"
+          ]
+        ],
+        [
+          "p26_close_place_cross",
+          "actuator_deadzone",
+          [
+            "both_second:new_prealarm"
+          ]
+        ],
+        [
+          "p26_close_place_cross",
+          "place_surface_shift",
+          [
+            "both_second:new_prealarm"
+          ]
+        ]
+      ]
+    },
+    "r27": {
+      "counts": {
+        "all_registered_paired_slots": 0,
+        "duplicate_edges": 2,
+        "duplicate_slots": 2,
+        "false_rises": 0,
+        "slots": 57,
+        "strict": 43
+      },
+      "entrypoint": "experiments.r27_load_change.manifold:Detector",
+      "original_sha256": "2102c5531634520d7d1c8a8745433c595f4b385413995b575bb3639c69495aa5"
+    },
+    "released": {
+      "counts": {
+        "all_four": 3,
+        "duplicate_edges": 0,
+        "duplicate_slots": 0,
+        "false_rises": 0,
+        "slots": 57,
+        "strict": 32
+      },
+      "entrypoint": "experiments.r29_detached_release.candidate:Detector",
+      "episodes": 156,
+      "original_sha256": "7b644ed7ab2e8a57d669b3464dcb9119e1524117ac1a1d11ebb0accd961c67f2",
+      "paired_strict": {
+        "both_first": 6,
+        "both_second": 3,
+        "isolated_first": 6,
+        "isolated_second": 3,
+        "long_single": 8
+      },
+      "pin": "0e3ba44c7ec952bd7f8b90f54454b309031ade7f7d8f5db93a2770044648310d",
+      "relative_losses_vs_c3": []
+    }
+  },
+  "disclosed_protections": {
+    "composed": {
+      "actual_normal_episodes": 66,
+      "baseline_episodes": 30,
+      "collected_candidate_episodes": 30,
+      "distinct_normals": 33,
+      "normal_false_total": 0,
+      "normal_relative_losses": [],
+      "signed_relative_losses": [],
+      "signed_slots": 24,
+      "signed_strict": 21,
+      "sources": {
+        "additional.json": "65f202ff95fda94600574d47d8cff1bfad9af9c8946f5702940ca78bed7aaa3c",
+        "directions.json": "71fc3970a48a74ea903c6e146aae5adfcd9b4ad9cd93fdb9d1465fb5bb4275f9",
+        "normal.json": "760ba028f5a1fa46acf7a2a425e43795df2ee382434188fde813aab9d5e239ca"
+      }
+    },
+    "detached": {
+      "actual_normal_episodes": 66,
+      "baseline_episodes": 30,
+      "collected_candidate_episodes": 30,
+      "distinct_normals": 33,
+      "normal_false_total": 0,
+      "normal_relative_losses": [],
+      "signed_relative_losses": [],
+      "signed_slots": 24,
+      "signed_strict": 6,
+      "sources": {
+        "additional.json": "49300551265f9eb9b5d99ec56ad492fe7a510da49b4cb8009f2f75e8000b24b1",
+        "directions.json": "6db9f139213a910b3dcf9312165d3cdf5c316a1e83e6bc264c8ce71bf97a2d11",
+        "normal.json": "83146578cd38ac1606c16c4790812292cd5048c32119ff9a1fb8db1f460b9d28"
+      }
+    },
+    "torque": {
+      "actual_normal_episodes": 66,
+      "baseline_episodes": 30,
+      "collected_candidate_episodes": 30,
+      "distinct_normals": 33,
+      "normal_false_total": 0,
+      "normal_relative_losses": [],
+      "signed_relative_losses": [],
+      "signed_slots": 24,
+      "signed_strict": 6,
+      "sources": {
+        "additional.json": "ecf463f8e125c21076ee1353b9af5b219dc77f833ead69ac50558c6665621ed8",
+        "directions.json": "6b1f598d0f363802f3d664170e7c85a09b297831e312c4894d015d06a3880281",
+        "normal.json": "4597e5badfe1bad7fd2ee39bda25eae54ccc2081a9718fed4d375ceed9f33a7f"
+      }
+    }
+  },
+  "prospective_detached": {
+    "absolute_passed": false,
+    "counts": {
+      "c3": {
+        "all_four": 9,
+        "duplicate_edges": 0,
+        "duplicate_slots": 0,
+        "false_rises": 0,
+        "slots": 75,
+        "strict": 69
+      },
+      "endpoint": {
+        "all_four": 9,
+        "duplicate_edges": 0,
+        "duplicate_slots": 0,
+        "false_rises": 0,
+        "slots": 75,
+        "strict": 69
+      }
+    },
+    "episodes": 150,
+    "misses": [
+      {
+        "case": "r29_detached_opposite_late",
+        "mechanics": "stock",
+        "slots": [
+          "both_second"
+        ]
+      },
+      {
+        "case": "r29_detached_opposite_late",
+        "mechanics": "actuator_deadzone",
+        "slots": [
+          "both_second"
+        ]
+      },
+      {
+        "case": "r29_detached_opposite_late",
+        "mechanics": "place_surface_shift",
+        "slots": [
+          "both_second"
+        ]
+      },
+      {
+        "case": "r29_detached_orthogonal_short",
+        "mechanics": "stock",
+        "slots": [
+          "both_second"
+        ]
+      },
+      {
+        "case": "r29_detached_orthogonal_short",
+        "mechanics": "actuator_deadzone",
+        "slots": [
+          "both_second"
+        ]
+      },
+      {
+        "case": "r29_detached_orthogonal_short",
+        "mechanics": "place_surface_shift",
+        "slots": [
+          "both_second"
+        ]
+      }
+    ],
+    "new_distinct_inputs_single_arm": 75,
+    "paired_strict": {
+      "both_first": {
+        "c3": 15,
+        "endpoint": 15
+      },
+      "both_second": {
+        "c3": 9,
+        "endpoint": 9
+      },
+      "isolated_first": {
+        "c3": 15,
+        "endpoint": 15
+      },
+      "isolated_second": {
+        "c3": 15,
+        "endpoint": 15
+      },
+      "long_single": {
+        "c3": 15,
+        "endpoint": 15
+      }
+    },
+    "relative_losses": [],
+    "source_sha256": "727c6aef36846a9399d86bf5a30a4ae3a42d2a1f73414351e18e4bf739d9e5fe"
+  },
+  "schema": "r29-disclosed-and-prelocked-detached-torque-summary.v1"
+}

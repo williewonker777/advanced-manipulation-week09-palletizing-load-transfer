@@ -1,0 +1,296 @@
+{
+  "arms": {
+    "c3": "experiments.r26_yaw_acquisition.candidate:Detector",
+    "naive_diagnostic": "experiments.r31_fresh_pair_transfer.naive:Detector",
+    "r29_composed": "experiments.r29_disjoint_events.candidate:Detector",
+    "r30_headroom": "experiments.r30_yaw_headroom.candidate:Detector",
+    "r31_held_identity": "experiments.r31_held_identity.candidate:Detector"
+  },
+  "candidate": {
+    "entrypoint": "experiments.r31_held_identity.candidate:Detector",
+    "existed_before_panel": true,
+    "sha256": "1e33b4698ef3678afe72cc4e286fcab5d27b2232e7bf087fdef7500ccc674764"
+  },
+  "cases": [
+    {
+      "com": [
+        -0.03,
+        0.029,
+        0.03
+      ],
+      "family": "orthogonal_close",
+      "id": "r31f_0_orthogonal_close",
+      "impacts": [
+        [
+          1.729,
+          50,
+          [
+            21.96,
+            2.31,
+            0.88
+          ]
+        ],
+        [
+          1.824,
+          48,
+          [
+            -2.14,
+            -23.74,
+            0.94
+          ]
+        ]
+      ],
+      "long": [
+        1.729,
+        143,
+        [
+          20.2,
+          2.13,
+          0.81
+        ]
+      ],
+      "mass": 1.43,
+      "offset": [
+        0.0005,
+        -0.0006,
+        0.0012
+      ]
+    },
+    {
+      "com": [
+        -0.023,
+        0.019,
+        0.015
+      ],
+      "family": "signed_opposite",
+      "id": "r31f_1_signed_opposite",
+      "impacts": [
+        [
+          2.051,
+          51,
+          [
+            0.67,
+            25.82,
+            -1.26
+          ]
+        ],
+        [
+          2.163,
+          46,
+          [
+            -0.46,
+            -24.95,
+            1.54
+          ]
+        ]
+      ],
+      "long": [
+        2.051,
+        158,
+        [
+          0.62,
+          23.75,
+          -1.16
+        ]
+      ],
+      "mass": 3.63,
+      "offset": [
+        -0.0002,
+        -0.0013,
+        0.0009
+      ]
+    },
+    {
+      "com": [
+        -0.009,
+        -0.018,
+        0.022
+      ],
+      "family": "near_collinear",
+      "id": "r31f_2_near_collinear",
+      "impacts": [
+        [
+          2.382,
+          44,
+          [
+            20.18,
+            8.19,
+            1.54
+          ]
+        ],
+        [
+          2.516,
+          53,
+          [
+            17.3,
+            12.73,
+            -1.31
+          ]
+        ]
+      ],
+      "long": [
+        2.382,
+        187,
+        [
+          18.57,
+          7.53,
+          1.42
+        ]
+      ],
+      "mass": 4.24,
+      "offset": [
+        0.0014,
+        0.0013,
+        0.001
+      ]
+    },
+    {
+      "com": [
+        0.006,
+        -0.022,
+        0.044
+      ],
+      "family": "oblique_reversal",
+      "id": "r31f_3_oblique_reversal",
+      "impacts": [
+        [
+          2.752,
+          44,
+          [
+            -23.73,
+            8.02,
+            0.79
+          ]
+        ],
+        [
+          2.907,
+          46,
+          [
+            16.2,
+            -21.31,
+            -1.45
+          ]
+        ]
+      ],
+      "long": [
+        2.752,
+        201,
+        [
+          -21.83,
+          7.38,
+          0.73
+        ]
+      ],
+      "mass": 5.99,
+      "offset": [
+        -0.0003,
+        0.0012,
+        0.0006
+      ]
+    },
+    {
+      "com": [
+        -0.024,
+        -0.023,
+        0.048
+      ],
+      "family": "mixed_3d",
+      "id": "r31f_4_mixed_3d",
+      "impacts": [
+        [
+          3.089,
+          51,
+          [
+            11.81,
+            16.2,
+            10.19
+          ]
+        ],
+        [
+          3.255,
+          44,
+          [
+            -14.66,
+            9.2,
+            -11.84
+          ]
+        ]
+      ],
+      "long": [
+        3.089,
+        210,
+        [
+          10.87,
+          14.9,
+          9.37
+        ]
+      ],
+      "mass": 7.24,
+      "offset": [
+        0.0003,
+        0.0016,
+        0.001
+      ]
+    }
+  ],
+  "classification": "Independent fresh loaded separated-force transfer panel; private research only, not an enrollment, default, deployment, safety, or publication claim.",
+  "controller": "my_torque:Controller",
+  "episode_accounting": {
+    "arms": 5,
+    "cases": 5,
+    "episodes": 125,
+    "twins": 5,
+    "workers": 1
+  },
+  "forbidden": [
+    "original R31 15-control candidate execution or scoring",
+    "R30 closed 102/69 execution",
+    "R27/R28 reserved inputs",
+    "case, scorer, arm, or gate changes after any output",
+    "replacement after failure",
+    "default/public edits",
+    "remote",
+    "hardware"
+  ],
+  "gates": {
+    "candidate_signal": "On every eligible case R31 held identity must have strict isolated_second and causal both_second; uninformative cases cannot qualify it.",
+    "diagnostic": "Naive one-event-per-grip is reported only and excluded from qualification.",
+    "informative": "A case is eligible only if at least one of C3, R29 composed, or R30 headroom has strict isolated_second and causal both_second.",
+    "integrity": "Exact programmed signed forces, disjoint actual supports, same-grip starts, causal prefixes, and motion/force hashes equal across all arms.",
+    "protection": "Against each comparator, retain every strict slot within +5 ms and +5 active samples, add no duplicate/false/pre-tool/stuck rise, and lose no real tool event."
+  },
+  "generation": {
+    "algorithm": "stdlib random.Random over fixed family templates in generate.py",
+    "families": [
+      "orthogonal_close",
+      "signed_opposite",
+      "near_collinear",
+      "oblique_reversal",
+      "mixed_3d"
+    ],
+    "seed": 310131,
+    "source": "experiments/r31_fresh_pair_transfer/generate.py"
+  },
+  "novelty": "Exact IDs, case identities, pulse triples, and mass/COM/offset tuples must not collide with disclosed plans. Reserved R27/R28 or closed R30 102/69 inputs are never read.",
+  "original_r31_closure": {
+    "candidate_episodes": 0,
+    "receipt": "E/r31/distinct/candidate-prep/closure/NON_ENROLLMENT.json",
+    "sha256": "407ad35beb7c077d87c5f2ae43d103f0bb79c43bc6cf2a317be940041822eba1"
+  },
+  "schema": "r31-fresh-pair-transfer-preregistration.v1",
+  "scoring": {
+    "duration_slack_samples": 5,
+    "event_window_ms": 320,
+    "latency_slack_ms": 5,
+    "quiet_ms": 25,
+    "reference_twin_ms": 20
+  },
+  "status": "FROZEN_BEFORE_ANY_OUTPUT",
+  "twins": [
+    "none",
+    "long",
+    "first",
+    "second",
+    "both"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "ringdown-design.v1",
+  "purpose": "Directly measure residual joint-angle and motor-torque oscillation. Diagnostic screens, not certified limits or a detection holdout.",
+  "modes": ["servo", "torque"],
+  "payloads": [
+    {"name": "empty", "mass": 0.0, "com": [0, 0, 0]},
+    {"name": "mid", "mass": 3.43, "com": [-0.012, 0.009, 0.023]},
+    {"name": "high", "mass": 8.0, "com": [-0.03, 0.02, -0.02]}
+  ],
+  "pulses": [
+    {"name": "transport", "t": 2.203, "force": [10.0, -12.0, 8.0]},
+    {"name": "stationary", "t": 5.323, "force": [0.0, 14.0, -9.0]}
+  ],
+  "dt": 0.001,
+  "cycles": 6000,
+  "window_samples": 200,
+  "late_start_samples_after_force_off": 300,
+  "band_hz": [15.0, 150.0],
+  "angle_rms_limit_deg": 0.02,
+  "torque_rms_limit_pct_rated": 1.0,
+  "late_to_early_ratio": 0.5,
+  "return_error_deg": 0.05,
+  "min_response_deg": 0.005,
+  "screen": "Per axis and per signal: quiet terminal baseline must be below absolute RMS limits. For matched forced-minus-control trajectories, late band RMS must be <= absolute limit and <= max(half the early RMS, one tenth of the absolute limit). An under-excited pair cannot count as a pass. Peak absolute matched joint error in final 50 samples of the post-pulse window is separately screened. Original saturation/divergence are independent checks, never cleared by this vibration screen.",
+  "limits": "The finite 15-150 Hz windows do not exclude slower oscillation, high-frequency chatter above band, other configurations or instability on hardware. During transport, subtracting a same-input unforced baseline removes taught motion but does not make the dynamics time invariant. Rest probes the returned, released arm, not an 8kg suspended static hold."
+}

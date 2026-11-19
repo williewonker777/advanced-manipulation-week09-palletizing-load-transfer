@@ -1,0 +1,80 @@
+{
+  "schema": "R10_PARTIAL_RESULT.v1",
+  "normal_rows": 8,
+  "impact_rows": 8,
+  "g4_pass": 1,
+  "cost_pass": 0,
+  "normal_FA_nonincrease": 4,
+  "added_normal_FA": 4,
+  "baseline_positive_impacts": 5,
+  "retained_positive_impacts": 4,
+  "added_impact_prealarm": 0,
+  "cost_ratio_range": [
+    1.204270918113836,
+    1.8344353296998233
+  ],
+  "freeze_eligible": false,
+  "fallback": "R1+C1",
+  "design_sha256": "1b304251b6b13967c297c25ae489986ad32121208c0de67b1ba24dff3faeba2a",
+  "controller_sha256": "4cbc1b9828a4424f28562c2e039ec3835b3008f8892b2293147888d5be6cb8be",
+  "corrected_dev_log_sha256": "a087b7509e939d168b2ef812245718f1a358f343df184791d9af42ea23e430ef",
+  "incident": "First implementation armed on pickup, not placement. Retained first run; corrected only phase arming. Corrected simulation is development, not independent confirmation.",
+  "commanded_profile": {
+    "schema": "R10_PARTIAL_PLAN.v1",
+    "parameters": {
+      "support_fraction": 0.68,
+      "contact_threshold": 0.01,
+      "minimum_duration": 0.039,
+      "velocity_ramp": 0.01,
+      "maximum_fraction_rate": 25.0,
+      "return_duration": 0.06
+    },
+    "rows": [
+      {
+        "duration_s": 0.039,
+        "maximum_feasible_fraction": 0.725,
+        "selected_peak_rate": 23.448275862068968,
+        "final20_mean": 0.536436345497411,
+        "final20_min": 0.3282758620689656,
+        "mean_gate": true,
+        "min_gate": true
+      },
+      {
+        "duration_s": 0.04,
+        "maximum_feasible_fraction": 0.75,
+        "selected_peak_rate": 22.666666666666668,
+        "final20_mean": 0.5412218006474976,
+        "final20_min": 0.3400000000000001,
+        "mean_gate": true,
+        "min_gate": true
+      },
+      {
+        "duration_s": 0.045,
+        "maximum_feasible_fraction": 0.8749999999999999,
+        "selected_peak_rate": 19.42857142857143,
+        "final20_mean": 0.561047257697855,
+        "final20_min": 0.38857142857142857,
+        "mean_gate": true,
+        "min_gate": true
+      },
+      {
+        "duration_s": 0.049,
+        "maximum_feasible_fraction": 0.975,
+        "selected_peak_rate": 17.435897435897438,
+        "final20_mean": 0.5732475389596134,
+        "final20_min": 0.4184615384615385,
+        "mean_gate": true,
+        "min_gate": true
+      },
+      {
+        "duration_s": 0.058,
+        "maximum_feasible_fraction": 1.2,
+        "selected_peak_rate": 14.166666666666668,
+        "final20_mean": 0.5932636254046859,
+        "final20_min": 0.4675,
+        "mean_gate": true,
+        "min_gate": true
+      }
+    ]
+  }
+}

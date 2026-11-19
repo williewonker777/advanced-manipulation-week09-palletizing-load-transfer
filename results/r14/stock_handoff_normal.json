@@ -1,0 +1,1226 @@
+{
+  "schema": "r14-stock-handoff-normal.v1",
+  "stage": "normal",
+  "unloaded": {
+    "id": "unloaded",
+    "byte_parity": {
+      "q": true,
+      "q_d": true,
+      "tau": true,
+      "e_mm": true,
+      "f_table": true,
+      "f_tool": true,
+      "qpos": true,
+      "r": true,
+      "detect": true,
+      "f_ext": true
+    },
+    "passed": true
+  },
+  "rows": [
+    {
+      "id": "sh0",
+      "arms": {
+        "r10": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 2.218996962519065,
+            "tcp_max": 4.054446929462553,
+            "place_step": 10.227687857772025,
+            "pick_step": 8.98074462611001,
+            "place_force": 31.00573590694495
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 53.948595159454285,
+          "registration": null,
+          "hybrid_active": false,
+          "support": {
+            "mean_mg": 0.10565389531260087,
+            "min_mg": 0.0,
+            "peak_mg": 1.0033731665758927,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.3914211500022686,
+              -2.185491750990684
+            ],
+            "mean_lowest_corner_mm": -2.3245654700016694,
+            "mean_corner_spread_mm": 0.8756713259822273,
+            "mean_face_tilt_deg": 0.14032218164691435,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 11.262265529841724,
+            "free_minus_rigid_mean_mm": -1.266303648593559,
+            "first_to_last_lowest_corner_speed_mm_s": 10.298414509296736
+          }
+        },
+        "hybrid": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 2.234389357170324,
+            "tcp_max": 4.083120061674759,
+            "place_step": 10.22768785777221,
+            "pick_step": 8.98074462611001,
+            "place_force": 32.368808689159344
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 78.81810000981207,
+          "registration": null,
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.7664641201970764,
+            "min_mg": 0.4261025660341117,
+            "peak_mg": 1.0474834130757193,
+            "samples": 20,
+            "mean_ge_050": true,
+            "min_ge_025": true,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.3965653303738033,
+              -2.2348156353482724
+            ],
+            "mean_lowest_corner_mm": -2.3464134267401016,
+            "mean_corner_spread_mm": 0.7019695794560122,
+            "mean_face_tilt_deg": 0.1128540318174347,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 2.4398619011340763,
+            "free_minus_rigid_mean_mm": -1.1624838886391518,
+            "first_to_last_lowest_corner_speed_mm_s": 7.819760599891348
+          }
+        },
+        "registered": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 2.234389357170324,
+            "tcp_max": 4.083120061674759,
+            "place_step": 10.22768785777221,
+            "pick_step": 8.98074462611001,
+            "place_force": 32.368808689159344
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 215.93199926428497,
+          "registration": {
+            "accepted": false,
+            "estimated_extra_height_mm": -0.07896646640769811,
+            "half_width_mm": 1.4084512759940906,
+            "command_world_z_mm": 0.0,
+            "finish_t": 3.5500000000000003,
+            "stream_completed_at_s": 3.527,
+            "stream_timing_us": {
+              "p95": 157.889,
+              "p99": 166.914,
+              "max": 266.55,
+              "finish": 19.419
+            },
+            "ik_max_position_error_m": 0.0,
+            "ik_max_orientation_error_rad": 0.0
+          },
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.7664641201970764,
+            "min_mg": 0.4261025660341117,
+            "peak_mg": 1.0474834130757193,
+            "samples": 20,
+            "mean_ge_050": true,
+            "min_ge_025": true,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.3965653303738033,
+              -2.2348156353482724
+            ],
+            "mean_lowest_corner_mm": -2.3464134267401016,
+            "mean_corner_spread_mm": 0.7019695794560122,
+            "mean_face_tilt_deg": 0.1128540318174347,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 2.4398619011340763,
+            "free_minus_rigid_mean_mm": -1.1624838886391518,
+            "first_to_last_lowest_corner_speed_mm_s": 7.819760599891348
+          }
+        }
+      },
+      "ratios": {
+        "r10": {
+          "tcp_rms": 1.0069366452100885,
+          "tcp_max": 1.0070720206013417,
+          "place_step": 1.000000000000018,
+          "pick_step": 1.0,
+          "place_force": 1.04396195550092
+        },
+        "hybrid": {
+          "tcp_rms": 1.0,
+          "tcp_max": 1.0,
+          "place_step": 1.0,
+          "pick_step": 1.0,
+          "place_force": 1.0
+        }
+      },
+      "g4": {
+        "mean_gain_mg": 0.6608102248844756,
+        "all_four_g4": true
+      },
+      "prefix": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true
+      },
+      "full_fallback": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true
+      },
+      "gates": {
+        "status": true,
+        "G4": true,
+        "cost_r10": true,
+        "cost_hybrid": true,
+        "saturation": true,
+        "FA": true,
+        "tool": true,
+        "prefix": true,
+        "timing": true,
+        "fallback": true
+      },
+      "passed": true
+    },
+    {
+      "id": "sh1",
+      "arms": {
+        "r10": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.895310480235408,
+            "tcp_max": 11.437702863600322,
+            "place_step": 10.96223213372356,
+            "pick_step": 8.98074462611001,
+            "place_force": 125.1733352297756
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 48.91080752713612,
+          "registration": null,
+          "hybrid_active": false,
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 2.8999475310391896,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -3.6972085892223765,
+              -2.2244783514300797
+            ],
+            "mean_lowest_corner_mm": -2.9893412241335797,
+            "mean_corner_spread_mm": 0.7673277246692503,
+            "mean_face_tilt_deg": 0.14205848811265978,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 77.9832951315245,
+            "free_minus_rigid_mean_mm": -6.175958172552934,
+            "first_to_last_lowest_corner_speed_mm_s": 77.51211777854193
+          }
+        },
+        "hybrid": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.317003623526929,
+            "tcp_max": 8.205647928319634,
+            "place_step": 10.962232133723774,
+            "pick_step": 8.98074462611001,
+            "place_force": 125.1733352316458
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 65.84879854926841,
+          "registration": null,
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.33293440962279675,
+            "min_mg": 0.18050442242642237,
+            "peak_mg": 2.899947531082517,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -3.9159156223886082,
+              -3.105181101270213
+            ],
+            "mean_lowest_corner_mm": -3.5228153414726826,
+            "mean_corner_spread_mm": 0.48012574494857313,
+            "mean_face_tilt_deg": 0.0870402221457196,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 48.27554444584844,
+            "free_minus_rigid_mean_mm": -6.084591899737147,
+            "first_to_last_lowest_corner_speed_mm_s": 42.670237953599745
+          }
+        },
+        "registered": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 2.8706303277202267,
+            "tcp_max": 6.990954503373896,
+            "place_step": 8.125291567318186,
+            "pick_step": 8.98074462611001,
+            "place_force": 44.597440527440114
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 640.8981034473982,
+          "registration": {
+            "accepted": true,
+            "estimated_extra_height_mm": -5.186592329100428,
+            "half_width_mm": 1.305943445719627,
+            "command_world_z_mm": 5.186592329100428,
+            "finish_t": 3.5500000000000003,
+            "stream_completed_at_s": 3.527,
+            "stream_timing_us": {
+              "p95": 156.364,
+              "p99": 164.369,
+              "max": 221.911,
+              "finish": 13.33
+            },
+            "ik_max_position_error_m": 1.9838630738178153e-11,
+            "ik_max_orientation_error_rad": 1.1886538513187845e-15
+          },
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.8594757431205242,
+            "min_mg": 0.6662834570672889,
+            "peak_mg": 1.0332091679974076,
+            "samples": 20,
+            "mean_ge_050": true,
+            "min_ge_025": true,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.2816712286439578,
+              -2.1424517917924732
+            ],
+            "mean_lowest_corner_mm": -2.2402157187113305,
+            "mean_corner_spread_mm": 0.8472924698411084,
+            "mean_face_tilt_deg": 0.22185499213765708,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 3.7373261462196767,
+            "free_minus_rigid_mean_mm": -6.1275122284400565,
+            "first_to_last_lowest_corner_speed_mm_s": 6.247867682119415
+          }
+        }
+      },
+      "ratios": {
+        "r10": {
+          "tcp_rms": 0.7369451914772,
+          "tcp_max": 0.6112201537969755,
+          "place_step": 0.7412077639116965,
+          "pick_step": 1.0,
+          "place_force": 0.3562854696295693
+        },
+        "hybrid": {
+          "tcp_rms": 0.8654287584612045,
+          "tcp_max": 0.8519686153297483,
+          "place_step": 0.7412077639116821,
+          "pick_step": 1.0,
+          "place_force": 0.3562854696242461
+        }
+      },
+      "g4": {
+        "mean_gain_mg": 0.8594757431205242,
+        "all_four_g4": true
+      },
+      "prefix": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true
+      },
+      "full_fallback": null,
+      "gates": {
+        "status": true,
+        "G4": true,
+        "cost_r10": true,
+        "cost_hybrid": true,
+        "saturation": true,
+        "FA": true,
+        "tool": true,
+        "prefix": true,
+        "timing": true,
+        "fallback": true
+      },
+      "passed": true
+    },
+    {
+      "id": "sh2",
+      "arms": {
+        "r10": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 4.445459174436821,
+            "tcp_max": 12.936089549466,
+            "place_step": 11.577403614418245,
+            "pick_step": 8.98074462611001,
+            "place_force": 132.84722202912397
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 51.928110187873244,
+          "registration": null,
+          "hybrid_active": false,
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 2.355134016382998,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -3.8459694809903304,
+              -2.3027040709430273
+            ],
+            "mean_lowest_corner_mm": -3.0977009387200947,
+            "mean_corner_spread_mm": 1.7995617495449232,
+            "mean_face_tilt_deg": 0.29869784726825277,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 80.67812296972942,
+            "free_minus_rigid_mean_mm": -5.912568463385196,
+            "first_to_last_lowest_corner_speed_mm_s": 81.22449526564753
+          }
+        },
+        "hybrid": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.7370263806188175,
+            "tcp_max": 9.113765007707896,
+            "place_step": 11.577403614418415,
+            "pick_step": 8.98074462611001,
+            "place_force": 132.8472220306657
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 81.12890020129275,
+          "registration": null,
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.35960558773373585,
+            "min_mg": 0.2284280447556143,
+            "peak_mg": 2.35513401641033,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -4.1161222204424295,
+              -3.2586148824675716
+            ],
+            "mean_lowest_corner_mm": -3.698566688157734,
+            "mean_corner_spread_mm": 1.3040831216648325,
+            "mean_face_tilt_deg": 0.23843755062022315,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 47.93972572876633,
+            "free_minus_rigid_mean_mm": -5.7738966594858985,
+            "first_to_last_lowest_corner_speed_mm_s": 45.13196515657147
+          }
+        },
+        "registered": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.3825189254010644,
+            "tcp_max": 7.352256386500637,
+            "place_step": 8.65199803071053,
+            "pick_step": 8.98074462611001,
+            "place_force": 56.71832037584305
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 655.6439981795849,
+          "registration": {
+            "accepted": true,
+            "estimated_extra_height_mm": -4.576954754374881,
+            "half_width_mm": 1.2909406370019902,
+            "command_world_z_mm": 4.576954754374881,
+            "finish_t": 3.5500000000000003,
+            "stream_completed_at_s": 3.527,
+            "stream_timing_us": {
+              "p95": 159.404,
+              "p99": 174.4685,
+              "max": 288.96,
+              "finish": 10.88
+            },
+            "ik_max_position_error_m": 1.9792278926900053e-11,
+            "ik_max_orientation_error_rad": 1.2785718880327523e-15
+          },
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.7304372117593976,
+            "min_mg": 0.7095189043478625,
+            "peak_mg": 1.0055102668234375,
+            "samples": 20,
+            "mean_ge_050": true,
+            "min_ge_025": true,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.8438500492921026,
+              -2.5465119775971363
+            ],
+            "mean_lowest_corner_mm": -2.7291841893591644,
+            "mean_corner_spread_mm": 1.793559377376692,
+            "mean_face_tilt_deg": 0.29029751744314214,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 12.46826494901242,
+            "free_minus_rigid_mean_mm": -5.705362525974877,
+            "first_to_last_lowest_corner_speed_mm_s": 15.64937219447191
+          }
+        }
+      },
+      "ratios": {
+        "r10": {
+          "tcp_rms": 0.7608930354938156,
+          "tcp_max": 0.5683523106721333,
+          "place_step": 0.7473176472776263,
+          "pick_step": 1.0,
+          "place_force": 0.42694396999441014
+        },
+        "hybrid": {
+          "tcp_rms": 0.9051364857748074,
+          "tcp_max": 0.806719986776324,
+          "place_step": 0.7473176472776153,
+          "pick_step": 1.0,
+          "place_force": 0.42694396998945533
+        }
+      },
+      "g4": {
+        "mean_gain_mg": 0.7304372117593976,
+        "all_four_g4": true
+      },
+      "prefix": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true
+      },
+      "full_fallback": null,
+      "gates": {
+        "status": true,
+        "G4": true,
+        "cost_r10": true,
+        "cost_hybrid": true,
+        "saturation": true,
+        "FA": true,
+        "tool": true,
+        "prefix": true,
+        "timing": true,
+        "fallback": true
+      },
+      "passed": true
+    },
+    {
+      "id": "sh3",
+      "arms": {
+        "r10": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.892314176655566,
+            "tcp_max": 8.500591418395476,
+            "place_step": 12.169016769649716,
+            "pick_step": 8.98074462611001,
+            "place_force": 92.33575956349091
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 54.26820629509166,
+          "registration": null,
+          "hybrid_active": false,
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 1.325691800024277,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -3.2489216516496366,
+              -2.0984202141190442
+            ],
+            "mean_lowest_corner_mm": -2.700021022025589,
+            "mean_corner_spread_mm": 1.982009556384954,
+            "mean_face_tilt_deg": 0.43485829755053035,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 61.129143779495294,
+            "free_minus_rigid_mean_mm": -0.9137109332455774,
+            "first_to_last_lowest_corner_speed_mm_s": 60.552707238452236
+          }
+        },
+        "hybrid": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.6494359783070696,
+            "tcp_max": 7.85690879284923,
+            "place_step": 12.169016769651478,
+            "pick_step": 8.98074462611001,
+            "place_force": 92.3357595643721
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 88.43700925353914,
+          "registration": null,
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.4391747778992424,
+            "min_mg": 0.33088362025763995,
+            "peak_mg": 1.3256918000369284,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": true,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -3.4489210993358315,
+              -2.9007560376639963
+            ],
+            "mean_lowest_corner_mm": -3.2001127196790575,
+            "mean_corner_spread_mm": 1.7318824210298678,
+            "mean_face_tilt_deg": 0.39409533238812766,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 31.349801284340003,
+            "free_minus_rigid_mean_mm": -0.807942364264392,
+            "first_to_last_lowest_corner_speed_mm_s": 28.850792719570276
+          }
+        },
+        "registered": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.6494359783070696,
+            "tcp_max": 7.85690879284923,
+            "place_step": 12.169016769651478,
+            "pick_step": 8.98074462611001,
+            "place_force": 92.3357595643721
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 219.4612087623682,
+          "registration": {
+            "accepted": false,
+            "estimated_extra_height_mm": 0.21111077623217822,
+            "half_width_mm": 1.5079774810111917,
+            "command_world_z_mm": 0.0,
+            "finish_t": 3.5500000000000003,
+            "stream_completed_at_s": 3.527,
+            "stream_timing_us": {
+              "p95": 158.894,
+              "p99": 167.224,
+              "max": 267.73,
+              "finish": 14.29
+            },
+            "ik_max_position_error_m": 0.0,
+            "ik_max_orientation_error_rad": 0.0
+          },
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.4391747778992424,
+            "min_mg": 0.33088362025763995,
+            "peak_mg": 1.3256918000369284,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": true,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -3.4489210993358315,
+              -2.9007560376639963
+            ],
+            "mean_lowest_corner_mm": -3.2001127196790575,
+            "mean_corner_spread_mm": 1.7318824210298678,
+            "mean_face_tilt_deg": 0.39409533238812766,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 31.349801284340003,
+            "free_minus_rigid_mean_mm": -0.807942364264392,
+            "first_to_last_lowest_corner_speed_mm_s": 28.850792719570276
+          }
+        }
+      },
+      "ratios": {
+        "r10": {
+          "tcp_rms": 0.9376005668285525,
+          "tcp_max": 0.9242779009289515,
+          "place_step": 1.0000000000001448,
+          "pick_step": 1.0,
+          "place_force": 1.0000000000095433
+        },
+        "hybrid": {
+          "tcp_rms": 1.0,
+          "tcp_max": 1.0,
+          "place_step": 1.0,
+          "pick_step": 1.0,
+          "place_force": 1.0
+        }
+      },
+      "g4": {
+        "mean_gain_mg": 0.4391747778992424,
+        "all_four_g4": false
+      },
+      "prefix": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true
+      },
+      "full_fallback": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true
+      },
+      "gates": {
+        "status": true,
+        "G4": false,
+        "cost_r10": true,
+        "cost_hybrid": true,
+        "saturation": true,
+        "FA": true,
+        "tool": true,
+        "prefix": true,
+        "timing": true,
+        "fallback": true
+      },
+      "passed": false
+    },
+    {
+      "id": "sh4",
+      "arms": {
+        "r10": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 5.419998562874918,
+            "tcp_max": 15.805268983923835,
+            "place_step": 12.607253245539596,
+            "pick_step": 8.98074462611001,
+            "place_force": 179.09848505845542
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 55.608890543226174,
+          "registration": null,
+          "hybrid_active": false,
+          "support": {
+            "mean_mg": 0.0,
+            "min_mg": 0.0,
+            "peak_mg": 2.3109780133737905,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -3.943174505700614,
+              -2.5156639115355097
+            ],
+            "mean_lowest_corner_mm": -3.239098919596379,
+            "mean_corner_spread_mm": 1.4443753959069072,
+            "mean_face_tilt_deg": 0.2418032790550994,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 74.26665396146002,
+            "free_minus_rigid_mean_mm": -7.143392316961716,
+            "first_to_last_lowest_corner_speed_mm_s": 75.13213653500547
+          }
+        },
+        "hybrid": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 4.699416056865947,
+            "tcp_max": 11.905112204237788,
+            "place_step": 12.310831301065434,
+            "pick_step": 8.98074462611001,
+            "place_force": 179.09848506113948
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 1,
+          "false_alarm_times": [
+            3.907
+          ],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 73.04809958441183,
+          "registration": null,
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.441100855595276,
+            "min_mg": 0.3688063469700888,
+            "peak_mg": 2.310978013408424,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": true,
+            "peak_le_110": false
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -4.169063552856021,
+              -3.266052373619979
+            ],
+            "mean_lowest_corner_mm": -3.7204251400005566,
+            "mean_corner_spread_mm": 0.9420862779027132,
+            "mean_face_tilt_deg": 0.1696305818478176,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 45.74238294461381,
+            "free_minus_rigid_mean_mm": -6.9267270589350645,
+            "first_to_last_lowest_corner_speed_mm_s": 47.52690417031799
+          }
+        },
+        "registered": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 4.140378160807306,
+            "tcp_max": 9.483551022836906,
+            "place_step": 9.352385322753378,
+            "pick_step": 8.98074462611001,
+            "place_force": 77.66805364905349
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": null,
+          "ctrl_p99_us": 663.246787444223,
+          "registration": {
+            "accepted": true,
+            "estimated_extra_height_mm": -5.842514366372624,
+            "half_width_mm": 1.1406897608652433,
+            "command_world_z_mm": 5.842514366372624,
+            "finish_t": 3.5500000000000003,
+            "stream_completed_at_s": 3.527,
+            "stream_timing_us": {
+              "p95": 158.50400000000002,
+              "p99": 168.3135,
+              "max": 246.791,
+              "finish": 12.5
+            },
+            "ik_max_position_error_m": 1.9611368085037384e-11,
+            "ik_max_orientation_error_rad": 1.1486507759680945e-15
+          },
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.7799083065829656,
+            "min_mg": 0.7389535683799897,
+            "peak_mg": 1.002181365553794,
+            "samples": 20,
+            "mean_ge_050": true,
+            "min_ge_025": true,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -2.9953171716609104,
+              -2.676610179397492
+            ],
+            "mean_lowest_corner_mm": -2.8655755913832452,
+            "mean_corner_spread_mm": 2.4574448613042366,
+            "mean_face_tilt_deg": 0.4184152781493019,
+            "all_four_corners_below_plane_samples": 20,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": 9.755403569793998,
+            "free_minus_rigid_mean_mm": -6.897967017865298,
+            "first_to_last_lowest_corner_speed_mm_s": 16.774052224390434
+          }
+        }
+      },
+      "ratios": {
+        "r10": {
+          "tcp_rms": 0.7639076122948517,
+          "tcp_max": 0.6000246520627395,
+          "place_step": 0.7418257681198099,
+          "pick_step": 1.0,
+          "place_force": 0.4336611424920967
+        },
+        "hybrid": {
+          "tcp_rms": 0.8810409869452026,
+          "tcp_max": 0.7965948459907085,
+          "place_step": 0.7596875543200711,
+          "pick_step": 1.0,
+          "place_force": 0.4336611424855976
+        }
+      },
+      "g4": {
+        "mean_gain_mg": 0.7799083065829656,
+        "all_four_g4": true
+      },
+      "prefix": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true
+      },
+      "full_fallback": null,
+      "gates": {
+        "status": true,
+        "G4": true,
+        "cost_r10": true,
+        "cost_hybrid": true,
+        "saturation": true,
+        "FA": true,
+        "tool": true,
+        "prefix": true,
+        "timing": true,
+        "fallback": true
+      },
+      "passed": true
+    },
+    {
+      "id": "sh5",
+      "arms": {
+        "r10": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.464460936960078,
+            "tcp_max": 8.519152176966086,
+            "place_step": 12.142068501349883,
+            "pick_step": 8.962352490448097,
+            "place_force": 68.56895157219951
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_delay_ms": 11.0,
+          "ctrl_p99_us": 48.869888414628825,
+          "registration": null,
+          "hybrid_active": false,
+          "support": {
+            "mean_mg": 0.126616917749757,
+            "min_mg": 0.011674000943098936,
+            "peak_mg": 1.0510826235650212,
+            "samples": 20,
+            "mean_ge_050": false,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -1.650224682197873,
+              -1.5658061841712627
+            ],
+            "mean_lowest_corner_mm": -1.6262635042661029,
+            "mean_corner_spread_mm": 2.4675633059793003,
+            "mean_face_tilt_deg": 0.45238731791164877,
+            "all_four_corners_below_plane_samples": 0,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": -6.428389540160936,
+            "free_minus_rigid_mean_mm": -0.7098027464628347,
+            "first_to_last_lowest_corner_speed_mm_s": -1.9312782009168166
+          }
+        },
+        "hybrid": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.5009637430514147,
+            "tcp_max": 8.522036262999025,
+            "place_step": 12.142551001241998,
+            "pick_step": 8.955447076802301,
+            "place_force": 68.09990274145103
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 2,
+          "false_alarm_times": [
+            3.879,
+            3.906
+          ],
+          "tool_delay_ms": 11.0,
+          "ctrl_p99_us": 69.52749914489686,
+          "registration": null,
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.5935669757182314,
+            "min_mg": 0.041381995352981156,
+            "peak_mg": 1.0438926481563393,
+            "samples": 20,
+            "mean_ge_050": true,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -1.6671815371500642,
+              -1.5680021616882247
+            ],
+            "mean_lowest_corner_mm": -1.6422320417409426,
+            "mean_corner_spread_mm": 2.4217981158970847,
+            "mean_face_tilt_deg": 0.4447798016354506,
+            "all_four_corners_below_plane_samples": 0,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": -12.472776536968714,
+            "free_minus_rigid_mean_mm": -0.6769714610016994,
+            "first_to_last_lowest_corner_speed_mm_s": -3.519836113556499
+          }
+        },
+        "registered": {
+          "status": "ok",
+          "cost": {
+            "tcp_rms": 3.5009637430514147,
+            "tcp_max": 8.522036262999025,
+            "place_step": 12.142551001241998,
+            "pick_step": 8.955447076802301,
+            "place_force": 68.09990274145103
+          },
+          "saturation_pct": 0.0,
+          "false_alarms": 2,
+          "false_alarm_times": [
+            3.879,
+            3.906
+          ],
+          "tool_delay_ms": 11.0,
+          "ctrl_p99_us": 245.0758873601445,
+          "registration": {
+            "accepted": false,
+            "estimated_extra_height_mm": -0.18982336978144676,
+            "half_width_mm": 1.2070497653742698,
+            "command_world_z_mm": 0.0,
+            "finish_t": 3.5500000000000003,
+            "stream_completed_at_s": 3.527,
+            "stream_timing_us": {
+              "p95": 159.595,
+              "p99": 239.64600000000002,
+              "max": 308.229,
+              "finish": 11.289
+            },
+            "ik_max_position_error_m": 0.0,
+            "ik_max_orientation_error_rad": 0.0
+          },
+          "hybrid_active": true,
+          "support": {
+            "mean_mg": 0.5935669757182314,
+            "min_mg": 0.041381995352981156,
+            "peak_mg": 1.0438926481563393,
+            "samples": 20,
+            "mean_ge_050": true,
+            "min_ge_025": false,
+            "peak_le_110": true
+          },
+          "last20_geometry": {
+            "min_corner_range_mm": [
+              -1.6671815371500642,
+              -1.5680021616882247
+            ],
+            "mean_lowest_corner_mm": -1.6422320417409426,
+            "mean_corner_spread_mm": 2.4217981158970847,
+            "mean_face_tilt_deg": 0.4447798016354506,
+            "all_four_corners_below_plane_samples": 0,
+            "all_four_corners_above_plane_samples": 0,
+            "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+            "actual_link_rigid_corner_speed_mm_s": -12.472776536968714,
+            "free_minus_rigid_mean_mm": -0.6769714610016994,
+            "first_to_last_lowest_corner_speed_mm_s": -3.519836113556499
+          }
+        }
+      },
+      "ratios": {
+        "r10": {
+          "tcp_rms": 1.0105363595536356,
+          "tcp_max": 1.0003385414385175,
+          "place_step": 1.0000397378660861,
+          "pick_step": 0.9992295088088584,
+          "place_force": 0.9931594574513132
+        },
+        "hybrid": {
+          "tcp_rms": 1.0,
+          "tcp_max": 1.0,
+          "place_step": 1.0,
+          "pick_step": 1.0,
+          "place_force": 1.0
+        }
+      },
+      "g4": {
+        "mean_gain_mg": 0.46695005796847433,
+        "all_four_g4": false
+      },
+      "prefix": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true
+      },
+      "full_fallback": {
+        "q": true,
+        "q_d": true,
+        "tau": true,
+        "e_mm": true,
+        "f_table": true,
+        "f_tool": true,
+        "qpos": true,
+        "r": true,
+        "detect": true,
+        "f_ext": true
+      },
+      "gates": {
+        "status": true,
+        "G4": false,
+        "cost_r10": true,
+        "cost_hybrid": true,
+        "saturation": true,
+        "FA": true,
+        "tool": true,
+        "prefix": true,
+        "timing": true,
+        "fallback": true
+      },
+      "passed": false
+    }
+  ],
+  "passed": false,
+  "pins": {
+    "sources": {
+      "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "experiments/r12_hybrid/controller.py": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+      "experiments/r14_online/stream.py": "18d12c79398a5820bf64546a97f9c3cedb51e4af6b61ed44ba0aa887c36ef816",
+      "experiments/r14_airborne/registration.py": "7da9c3e79d6dca610cff6e8048410783c3ceb03a58211f1ad30328e219944b04",
+      "models/r12/counterfactual_coefficients.json": "183df664558017be3e9d3faa9c5883cd6ca55c593c45a1e995afb0dcefee886c",
+      "experiments/r14_stock_handoff/controller.py": "10f6657d255b52b4e9f802200bb6275b9db5b7499d2de21a36ee9f5260e67d61",
+      "experiments/r14_stock_handoff/detector.py": "9fecfee47778a370e743497a8370ad7465c68ab126ae06b9f17c1bbf3fd8a0e9",
+      "experiments/r14_stock_handoff/geometry.py": "cb7418f0c6b8ac562e45ac0188f137346db5b613a7a5752d81670a094ee7da54",
+      "experiments/r14_stock_handoff/test_controller.py": "bdf59066b3ce6c6d6cac9ba3bb22ff0f20dbe6c6c6eadf7fb6f9eb5156170384",
+      "experiments/r14_stock_handoff/plan.json": "a82dd8e8557259cd672bfca6f1b9095968ffc1e1f256389a6376f562baa82414",
+      "experiments/r14_stock_handoff/run.py": "14c4bea1ae2cb5531d0e7329168997e67fede9a0fe7790d8609bc917836e9161"
+    },
+    "calibration": "cfd91f8b53e71088cad01f1fba0dedfa7e778f85fd84dd1431f5c80e3d3c59e4",
+    "calibration_sources": {
+      "servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+      "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "estimator": "79d3fe1c90e06fd89aa0b75b51097528723ce7413468a453a20bbe41421fe0d9",
+      "registration": "7da9c3e79d6dca610cff6e8048410783c3ceb03a58211f1ad30328e219944b04",
+      "plan": "c7b9ee36195e429305be27b822081f664979a75ef41a761117e7b31531e3cfeb",
+      "base_audit": "1651baab2a1d3e3ae91e8d523f10e5edab4a3568dd9f8c7b3035ae7ddba5373e",
+      "audit": "6f30501730880069c99cb1c4d12888c8be97ea95e7420dec4cb097cf10172b1b",
+      "kit_manifest": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema":"r31-servo-release-prospective-plan.v1",
+  "status":"FROZEN_BEFORE_ANY_PROSPECTIVE_OUTPUT",
+  "classification":"small prospective post-freeze simulator panel; not official or blind deployment evidence",
+  "candidate_sha256":"2c1af9274f310dd84a9a8909987be7fe41e28fd89faf477be07087a7c2738303",
+  "runner_sha256":"c70bf92bbd89d87aec48db2bdd34ee4355127143ee44da87b4b9581f386cd075",
+  "cases":[
+    {"id":"p31_empty_py9","mass":0.0,"com":[0,0,0],"time":3.845,"force":[0,9,0]},
+    {"id":"p31_empty_ny10","mass":0.0,"com":[0,0,0],"time":3.875,"force":[0,-10,0]},
+    {"id":"p31_empty_px10","mass":0.0,"com":[0,0,0],"time":3.905,"force":[10,0,0]},
+    {"id":"p31_light_py10","mass":0.35,"com":[0.012,-0.009,0.018],"time":3.855,"force":[0,10,0]},
+    {"id":"p31_mid_nx12","mass":2.3,"com":[-0.021,0.014,0.027],"time":3.885,"force":[-12,0,0]},
+    {"id":"p31_heavy_oblique","mass":6.4,"com":[0.026,-0.018,0.039],"time":3.915,"force":[9,-9,0]}
+  ],
+  "gates":{"all_twins_retained":true,"minimum_candidate_only":1,"no_no_force_edge":true,"no_native_loss_or_delay_over_5ms":true,"no_force_false_edge":true,"physical_exact":true},
+  "no_sample_rejection":"all six registered cases and 24 executions remain regardless of outcome"
+}

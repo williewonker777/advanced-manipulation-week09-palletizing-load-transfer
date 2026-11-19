@@ -1,0 +1,195 @@
+{
+  "schema": "r10-startup.v1",
+  "headline_definition": "detector module import wall + first detector reset wall; setup excluded",
+  "scope": "finite paired cold startup measurement; not a universal timing guarantee",
+  "payload": {
+    "mass_kg": 3.141,
+    "com_m": [
+      -0.017,
+      0.013,
+      0.029
+    ]
+  },
+  "pairs": 4,
+  "kit_integrity": {
+    "status": "ok",
+    "files": 20,
+    "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "sources": {
+    "FAST2": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+    "current": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "r1_servo": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "tool": "6ee5eca1ad47b158a9bc1336ccb925e59e63249d8b1899cbe01c23dbd5ed9b66"
+  },
+  "conservative": {
+    "FAST2": {
+      "minimum_ms": 272.339932,
+      "maximum_ms": 276.088446
+    },
+    "current": {
+      "minimum_ms": 111.023224,
+      "maximum_ms": 115.088417
+    },
+    "conservative_speedup_FAST2_over_current": 2.3663539659251716
+  },
+  "clocks": {
+    "perf_counter": {
+      "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+      "resolution_s": 1e-09,
+      "monotonic": true,
+      "adjustable": false
+    },
+    "thread_time": {
+      "implementation": "clock_gettime(CLOCK_THREAD_CPUTIME_ID)",
+      "resolution_s": 1e-09,
+      "monotonic": true,
+      "adjustable": false
+    }
+  },
+  "config_sha256": "db2f85407992c21fb3e331acef93f3d6f91e86ad72a760da76a1b93226627735",
+  "trajectory_sha256": "1b02f05ae110de09f736d6110f5ddf7bdc7111c1fec5fc11e23752d54819bb94",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "implementation": "cpython",
+    "numpy": "2.5.4",
+    "mujoco": "3.17.0"
+  },
+  "private_record_sha256": "34d5296cd10e4d9995fb3c0f81aa981a25006ebc25d73c7a3f64d543033e1dfe",
+  "rows": [
+    {
+      "sequence": 0,
+      "pair": 0,
+      "order_in_pair": 0,
+      "variant": "FAST2",
+      "detector_sha256": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+      "controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "preimport_numeric_modules": [],
+      "detector_import_ms": 63.542993,
+      "first_reset_ms": 212.545453,
+      "setup_ms": 152.192408,
+      "headline_ms": 276.088446,
+      "worker_total_ms": 428.507324,
+      "overlay_setup_ms": 11.670041,
+      "process_wall_ms": 492.583184
+    },
+    {
+      "sequence": 1,
+      "pair": 0,
+      "order_in_pair": 1,
+      "variant": "current",
+      "detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "preimport_numeric_modules": [],
+      "detector_import_ms": 63.010857,
+      "first_reset_ms": 48.012367,
+      "setup_ms": 147.459831,
+      "headline_ms": 111.023224,
+      "worker_total_ms": 258.716524,
+      "overlay_setup_ms": 11.686522,
+      "process_wall_ms": 310.567515
+    },
+    {
+      "sequence": 2,
+      "pair": 1,
+      "order_in_pair": 0,
+      "variant": "current",
+      "detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "preimport_numeric_modules": [],
+      "detector_import_ms": 63.933831,
+      "first_reset_ms": 50.269123,
+      "setup_ms": 147.160732,
+      "headline_ms": 114.202954,
+      "worker_total_ms": 261.591984,
+      "overlay_setup_ms": 11.455663,
+      "process_wall_ms": 314.464709
+    },
+    {
+      "sequence": 3,
+      "pair": 1,
+      "order_in_pair": 1,
+      "variant": "FAST2",
+      "detector_sha256": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+      "controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "preimport_numeric_modules": [],
+      "detector_import_ms": 65.072583,
+      "first_reset_ms": 208.631929,
+      "setup_ms": 146.992804,
+      "headline_ms": 273.704512,
+      "worker_total_ms": 420.910065,
+      "overlay_setup_ms": 11.551222,
+      "process_wall_ms": 486.456725
+    },
+    {
+      "sequence": 4,
+      "pair": 2,
+      "order_in_pair": 0,
+      "variant": "FAST2",
+      "detector_sha256": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+      "controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "preimport_numeric_modules": [],
+      "detector_import_ms": 63.216635,
+      "first_reset_ms": 212.357195,
+      "setup_ms": 147.43714,
+      "headline_ms": 275.57383,
+      "worker_total_ms": 423.226559,
+      "overlay_setup_ms": 11.148195,
+      "process_wall_ms": 487.526858
+    },
+    {
+      "sequence": 5,
+      "pair": 2,
+      "order_in_pair": 1,
+      "variant": "current",
+      "detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "preimport_numeric_modules": [],
+      "detector_import_ms": 64.929794,
+      "first_reset_ms": 50.158623,
+      "setup_ms": 148.765002,
+      "headline_ms": 115.088417,
+      "worker_total_ms": 264.093368,
+      "overlay_setup_ms": 11.293754,
+      "process_wall_ms": 316.683835
+    },
+    {
+      "sequence": 6,
+      "pair": 3,
+      "order_in_pair": 0,
+      "variant": "current",
+      "detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "preimport_numeric_modules": [],
+      "detector_import_ms": 63.334575,
+      "first_reset_ms": 51.719933,
+      "setup_ms": 147.221102,
+      "headline_ms": 115.054508,
+      "worker_total_ms": 262.501458,
+      "overlay_setup_ms": 12.063329,
+      "process_wall_ms": 315.536653
+    },
+    {
+      "sequence": 7,
+      "pair": 3,
+      "order_in_pair": 1,
+      "variant": "FAST2",
+      "detector_sha256": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+      "controller_sha256": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "preimport_numeric_modules": [],
+      "detector_import_ms": 62.878368,
+      "first_reset_ms": 209.461564,
+      "setup_ms": 146.978384,
+      "headline_ms": 272.339932,
+      "worker_total_ms": 419.540025,
+      "overlay_setup_ms": 11.220615,
+      "process_wall_ms": 482.752151
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "r25-exposed-three-component-trial.v1",
+  "independent": false,
+  "candidate": "experiments.r25_composed.deferred_weak:Detector",
+  "rows": 14,
+  "episodes": 68,
+  "summary": {
+    "r24_joint": {
+      "strict": 15,
+      "slots": 25,
+      "duplicate_edges": 3,
+      "duplicate_slots": 2,
+      "false_rises": 0,
+      "all_four": 0
+    },
+    "experiments.r25_composed.deferred_weak:Detector": {
+      "strict": 19,
+      "slots": 25,
+      "duplicate_edges": 3,
+      "duplicate_slots": 3,
+      "false_rises": 0,
+      "all_four": 1
+    }
+  },
+  "relative_gate_regressions": [
+    [
+      "s24_transfer_offaxis_early",
+      "stock",
+      [
+        "single:time",
+        "single:duplicates"
+      ]
+    ],
+    [
+      "p24_transfer_near_diag",
+      "stock",
+      [
+        "isolated_second:duplicates",
+        "both_second:duplicates"
+      ]
+    ]
+  ],
+  "known_target_details": [
+    {
+      "case": "s24_transfer_offaxis_mid",
+      "mechanics": "stock",
+      "incumbent": {
+        "raw_rise_indices": [],
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": false,
+        "duplicate_rises": 0,
+        "strict": false,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "raw_rise_indices": [
+          1559
+        ],
+        "attributable_rise_indices": [
+          1559
+        ],
+        "delays_ms": [
+          71
+        ],
+        "quiet_before": true,
+        "high_before": false,
+        "exactly_one": true,
+        "duplicate_rises": 0,
+        "strict": true,
+        "active_samples_in_slot": 8
+      }
+    }
+  ],
+  "raw_sha256": "ea7818b2c0bdf9398e9839e58f1fa26c5d6a6872647821e8a58b57b60eb3c4e5"
+}

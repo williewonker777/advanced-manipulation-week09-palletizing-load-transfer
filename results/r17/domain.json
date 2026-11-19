@@ -1,0 +1,230 @@
+{
+  "schema": "r17-guarded-control-research-baseline.v1",
+  "fallback": {
+    "schema": "r17-known-domain-independent.v1",
+    "settings": "original simulator, 3 no-external-force generated simulation pairs, not an original recorded demo",
+    "rows": [
+      {
+        "mass_kg": 0.0,
+        "samples": 6000,
+        "same_arrays": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        },
+        "same_nonclock_metrics": {
+          "rms_mm": true,
+          "max_mm": true,
+          "diverged": true,
+          "saturation_pct": true,
+          "torque_jitter": true,
+          "false_alarms": true,
+          "false_alarm_times": true,
+          "detect_delay_ms": true,
+          "alarm_before_collision": true,
+          "r_peak": true,
+          "tool_contact_delay_ms": true
+        },
+        "force_sha256": "bb918147fe10391b43adeba4bd21b9ef32e5bd6c5076c3517733a05ed6dd0569",
+        "selected_controller": "r1_torque",
+        "selected_detector": "my_detector",
+        "passed": true
+      },
+      {
+        "mass_kg": 2.21,
+        "samples": 6000,
+        "same_arrays": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        },
+        "same_nonclock_metrics": {
+          "rms_mm": true,
+          "max_mm": true,
+          "diverged": true,
+          "saturation_pct": true,
+          "torque_jitter": true,
+          "false_alarms": true,
+          "false_alarm_times": true,
+          "detect_delay_ms": true,
+          "alarm_before_collision": true,
+          "r_peak": true,
+          "tool_contact_delay_ms": true
+        },
+        "force_sha256": "b4d1c6b7f220176c58768344f927fddcdb337efa25205223b0b898157ff90f26",
+        "selected_controller": "r1_torque",
+        "selected_detector": "my_detector",
+        "passed": true
+      },
+      {
+        "mass_kg": 8.07,
+        "samples": 6000,
+        "same_arrays": {
+          "t": true,
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        },
+        "same_nonclock_metrics": {
+          "rms_mm": true,
+          "max_mm": true,
+          "diverged": true,
+          "saturation_pct": true,
+          "torque_jitter": true,
+          "false_alarms": true,
+          "false_alarm_times": true,
+          "detect_delay_ms": true,
+          "alarm_before_collision": true,
+          "r_peak": true,
+          "tool_contact_delay_ms": true
+        },
+        "force_sha256": "17121e838a364383967e8d005ad58f69366ef0cdfd140edebcd0491a71259f22",
+        "selected_controller": "r1_torque",
+        "selected_detector": "my_detector",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "in_calibration": {
+    "schema": "r17-guarded-reference.v1",
+    "rows": [
+      {
+        "id": "ec1:down",
+        "gates": {
+          "status": true,
+          "gate_force": true,
+          "gate_tau": true,
+          "gate_q": true,
+          "detect_array_exact": true,
+          "events_exact": true,
+          "tool_delay_exact": true,
+          "saturation_exact": true
+        },
+        "max_abs_differences": {
+          "q": 4.4633003456334697e-11,
+          "q_d": 0.0,
+          "qpos": 4.4476593553232225e-11,
+          "tau": 1.3649545849148126e-07,
+          "e_mm": 2.2259627141529847e-08,
+          "f_table": 1.1035169222850527e-07,
+          "f_tool": 0.0,
+          "r": 3.644335522245967e-08
+        },
+        "passed": true,
+        "height_mm": 4.546789068424022,
+        "cost_ratios": {
+          "tcp_rms": 0.9999999997714467,
+          "tcp_max": 1.0,
+          "place_step": 1.0000000015722572,
+          "pick_step": 1.0,
+          "place_force": 1.0000000000022713
+        },
+        "observer": "unmodified Coupled",
+        "trace_length": 6000
+      },
+      {
+        "id": "sh3",
+        "gates": {
+          "status": true,
+          "gate_force": true,
+          "gate_tau": true,
+          "gate_q": true,
+          "detect_array_exact": true,
+          "events_exact": true,
+          "tool_delay_exact": true,
+          "saturation_exact": true
+        },
+        "max_abs_differences": {
+          "q": 8.369780563066698e-14,
+          "q_d": 0.0,
+          "qpos": 8.340501683398727e-14,
+          "tau": 2.1955770534987096e-12,
+          "e_mm": 4.417577414983498e-11,
+          "f_table": 1.3214318528298463e-10,
+          "f_tool": 0.0,
+          "r": 1.4857448604743695e-11
+        },
+        "passed": true,
+        "height_mm": 0.0,
+        "cost_ratios": {
+          "tcp_rms": 1.0000000000004983,
+          "tcp_max": 1.0,
+          "place_step": 0.9999999999999953,
+          "pick_step": 1.0,
+          "place_force": 1.0000000000000062
+        },
+        "observer": "unmodified Coupled",
+        "trace_length": 6000
+      },
+      {
+        "id": "sh4",
+        "gates": {
+          "status": true,
+          "gate_force": true,
+          "gate_tau": true,
+          "gate_q": true,
+          "detect_array_exact": true,
+          "events_exact": true,
+          "tool_delay_exact": true,
+          "saturation_exact": true
+        },
+        "max_abs_differences": {
+          "q": 3.128724644814451e-11,
+          "q_d": 0.0,
+          "qpos": 3.117757636263152e-11,
+          "tau": 1.7171065191945445e-07,
+          "e_mm": 1.6875824071505008e-08,
+          "f_table": 8.013226704406406e-08,
+          "f_tool": 0.0,
+          "r": 5.937984726145373e-08
+        },
+        "passed": true,
+        "height_mm": 5.819814222184533,
+        "cost_ratios": {
+          "tcp_rms": 0.999999999838607,
+          "tcp_max": 1.0,
+          "place_step": 1.0000000051684048,
+          "pick_step": 1.0,
+          "place_force": 1.0000000000023013
+        },
+        "observer": "unmodified Coupled",
+        "trace_length": 6000
+      }
+    ],
+    "passed": true,
+    "no_external_pulses": true,
+    "frozen_inputs": {
+      "__init__.py": "fd273018cbcebe133868d30a48cafddc8b4e7adc0ab3dab808e1413572d4028e",
+      "domain.py": "fbfabee19b4f00e6f0ead835129c0395ebcfc5011a11d6f9afcb7676d18c908b",
+      "observer.py": "5d5d95b284e362a01a722a19cfe3b496234647db52993c7c864f7d7608c35889",
+      "plan.json": "351fa79eaf7f9d2573016b228f5342f6137846e1248f967fdce1069d570688cb",
+      "policy.py": "e09a174613f502bdf477e81542da1d92681c73a1623b6728f80957f37eb0d41c",
+      "timing.py": "ee63cec8cdd260601dbd3e93dce8f459bc4311482e00849f8e6a0ff63e631d37"
+    }
+  },
+  "scope": "No detector improvement claimed for this timing and domain routing baseline."
+}

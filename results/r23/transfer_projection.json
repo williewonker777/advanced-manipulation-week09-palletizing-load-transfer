@@ -1,0 +1,237 @@
+{
+  "schema": "r23-transfer-decoupled-summary.v1",
+  "decision": "reject_development_heavy_negative_normal_alarm",
+  "candidate": {
+    "path": "experiments/r23_transfer/decoupled.py",
+    "sha256": "7b542cf05598275b16052f44c8cd7debf44a77a48a94e8290a24a95e0e247ae4",
+    "plan_sha256": "341d0002e2dce1b516fcd575aacc5dcbdb65aa4965e34a60c6123a7bcebf92eb",
+    "mechanism": "phase-one pitch damping torque projected into null(Jz M^-1)"
+  },
+  "development": {
+    "sh5": {
+      "passed": true,
+      "false_alarm_times": {
+        "r19": [
+          3.903
+        ],
+        "candidate": []
+      },
+      "support": {
+        "mean_mg": 0.6189010498750732,
+        "min_mg": 0.47991999973861854,
+        "peak_mg": 1.0386706277020248,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "g4": {
+        "mean_gain_mg": 0.4922841321253162,
+        "all_four_g4": true
+      },
+      "cost_ratios": {
+        "r10": {
+          "tcp_rms": 0.989507085389383,
+          "tcp_max": 1.0003385414385175,
+          "place_step": 1.0076578973653214,
+          "pick_step": 0.9992295088088584,
+          "place_force": 0.9881912272311211
+        },
+        "r19": {
+          "tcp_rms": 0.9996649900510747,
+          "tcp_max": 1.0,
+          "place_step": 1.0,
+          "pick_step": 1.0,
+          "place_force": 0.9995974110206596
+        }
+      },
+      "saturation_pct": 0.0,
+      "tool_delay_ms": 11.0,
+      "intervention": {
+        "samples": 46,
+        "impulse_nms": 0.008606875151603723,
+        "max_moment_nm": 0.19570950000000004,
+        "max_joint_delta_nm": 0.14781658031693426,
+        "max_normal_acceleration_before_m_s2": 0.00233332437216641,
+        "max_normal_acceleration_after_m_s2": 6.778533812325994e-18
+      },
+      "physical_sha256": {
+        "r10": "c7ad4dae2c1e8662fde359778dd7ee5e12649d2bf6f4b83bcf47bae716ad1126",
+        "r19": "d5a54d43d8a8ac7d29050e643bcb9cfac38b97b8d7c3dffde14956ca7178fc69",
+        "candidate": "aef82a725be86572e9a09d64d0bf8d504f5eba429e4f208b08243b2b2482b38a"
+      }
+    },
+    "sh3": {
+      "passed": true,
+      "false_alarm_times": {
+        "r19": [],
+        "candidate": []
+      },
+      "support": {
+        "mean_mg": 0.6389334696546166,
+        "min_mg": 0.5041325039926,
+        "peak_mg": 1.0359692096832798,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "g4": {
+        "mean_gain_mg": 0.6389334696546166,
+        "all_four_g4": true
+      },
+      "cost_ratios": {
+        "r10": {
+          "tcp_rms": 0.8371597027670243,
+          "tcp_max": 0.9242779009289515,
+          "place_step": 0.9885380823856978,
+          "pick_step": 1.0,
+          "place_force": 0.781455546201846
+        },
+        "r19": {
+          "tcp_rms": 1.000344393824224,
+          "tcp_max": 1.0,
+          "place_step": 1.0,
+          "pick_step": 1.0,
+          "place_force": 0.999639055052904
+        }
+      },
+      "saturation_pct": 0.0,
+      "tool_delay_ms": null,
+      "intervention": {
+        "samples": 48,
+        "impulse_nms": 0.00799534223212245,
+        "max_moment_nm": 0.208953,
+        "max_joint_delta_nm": 0.1583988194594763,
+        "max_normal_acceleration_before_m_s2": 0.002229044448547786,
+        "max_normal_acceleration_after_m_s2": 7.040681493180056e-18
+      },
+      "physical_sha256": {
+        "r10": "16c3102b726226154b9ce9ee2ec8a797e866e428be3eb311959f339e7bd25f4c",
+        "r19": "b838abaeda460aeb0a0613e849f9e36921500a571dad36f16c8d03132949f22c",
+        "candidate": "b64d401022446b13c1299dac4ca0bd938e25e40d7abea07b0b8bf654c15a3cd0"
+      }
+    },
+    "unloaded": {
+      "passed": true,
+      "physical_parity": true,
+      "samples": 0,
+      "physical_sha256": {
+        "r19": "a7eaa996d3a144193ff04a45a2bb4b3140495c4fbb04fbfe8145418eff8dbdf2",
+        "candidate": "a7eaa996d3a144193ff04a45a2bb4b3140495c4fbb04fbfe8145418eff8dbdf2"
+      }
+    },
+    "heavy8_offset": {
+      "passed": false,
+      "false_alarm_times": {
+        "r19": [
+          3.9170000000000003
+        ],
+        "candidate": [
+          3.876,
+          3.919
+        ]
+      },
+      "support": {
+        "mean_mg": 0.7723005429699419,
+        "min_mg": 0.6578951958618166,
+        "peak_mg": 1.0536788093674578,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "g4": {
+        "mean_gain_mg": 0.6680338869278946,
+        "all_four_g4": true
+      },
+      "cost_ratios": {
+        "r10": {
+          "tcp_rms": 0.9846747718171873,
+          "tcp_max": 1.0003480322698022,
+          "place_step": 0.958130801291982,
+          "pick_step": 0.9999997477426298,
+          "place_force": 1.049702074874949
+        },
+        "r19": {
+          "tcp_rms": 0.9997227122386944,
+          "tcp_max": 1.0,
+          "place_step": 1.0,
+          "pick_step": 1.0,
+          "place_force": 0.999938091433674
+        }
+      },
+      "saturation_pct": 0.0,
+      "tool_delay_ms": 12.0,
+      "intervention": {
+        "samples": 39,
+        "impulse_nms": 0.007722655720033638,
+        "max_moment_nm": 0.23544,
+        "max_joint_delta_nm": 0.17731440097556406,
+        "max_normal_acceleration_before_m_s2": 0.0062135092515686365,
+        "max_normal_acceleration_after_m_s2": 7.350416677354278e-18
+      },
+      "physical_sha256": {
+        "r10": "a3729a5b8bebc5da8f6725daa4017a6ba871f65ce2988653756368ef2a3b50d5",
+        "r19": "ec89d3601c6a4c49550a9a16e154ecf27afbf877d952e3e8505587dd18aed452",
+        "candidate": "b18bde8c3141e180fccaf6ffa05074b16935058ffa3d394a2536b3df39b35f11"
+      }
+    }
+  },
+  "heavy_failure": {
+    "r19_false_alarm_times": [
+      3.9170000000000003
+    ],
+    "candidate_false_alarm_times": [
+      3.876,
+      3.919
+    ],
+    "projection": {
+      "max_normal_acceleration_before_m_s2": 0.0062135092515686365,
+      "max_normal_acceleration_after_m_s2": 7.350416677354278e-18,
+      "max_moment_nm": 0.23544
+    },
+    "event_3p876": {
+      "corrected_raw_fz_n": -21.665720302986706,
+      "corrected_residual_my_nm": 0.8988690713279539,
+      "table_fz_n": 13.41813050790563,
+      "directional_score": 1.175645796395905,
+      "component_scores": {
+        "force_xyz": [
+          0.06312264046449179,
+          0.05249036101430843,
+          1.175645796395905
+        ],
+        "moment_xyz": [
+          0.3122537009165305,
+          0.1408718066114787,
+          0.20267817714288663
+        ],
+        "out_of_height_positive_fz": 0.0
+      },
+      "cf_alarm": 4,
+      "detected": true
+    },
+    "measured_boundary": "Instantaneous rigid operational acceleration was decoupled to numerical zero, but elastic/contact/table-projection dynamics changed corrected raw Fz enough for four negative-normal crossings."
+  },
+  "validation": {
+    "preregistered": [
+      "rp1:up",
+      "ec1:up",
+      "ec3:up"
+    ],
+    "opened": false,
+    "reason": "development heavy8_offset failed first"
+  },
+  "scope": {
+    "normal_only": true,
+    "detector_threshold_changed": false,
+    "phase_one_modified": false,
+    "r23_detector_holdout_opened": false,
+    "retuned": false
+  },
+  "evidence_sha256": {
+    "development": "4b1eff40e9ee65dfd58b1e5332623fd1ecb9daf8f63f9a7ae9f845aa387ed8c7",
+    "diagnosis": "273b39ce12e1470a9f240b4e2cf2b8d949440baff2311e6d9e23b6ccce17954c"
+  }
+}

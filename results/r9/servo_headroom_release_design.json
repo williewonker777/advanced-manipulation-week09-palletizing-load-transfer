@@ -1,0 +1,319 @@
+{
+  "schema": "R9_SATURATION_RELEASE_HOLDOUT.v1",
+  "classification": "independent finite local stress frozen before simulation",
+  "pins": {
+    "HEADROOM1.py": "ccaaf08dfe1d62dad7b88bc61a93e127285f61c582aa3904f755a88e90043908",
+    "FAST2.py": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "experiments/r8_final/C1.py": "3e3a67f75fcf795ec49d847b54ac72514d69bb17bc750f92478f1785e6d308e0"
+  },
+  "matrix": {
+    "matched_physical_conditions": 12,
+    "episodes_after_baseline_candidate_pairing": 24,
+    "groups": 4,
+    "roles_per_group": [
+      "reference",
+      "weak_release_collision",
+      "pick_offset"
+    ],
+    "cpu": 4
+  },
+  "negative_overlap_audit": {
+    "prior_json_files_scanned": 322,
+    "prior_exact_coms": 75,
+    "prior_seeds": 747,
+    "exact_com_overlap": [],
+    "seed_overlap": []
+  },
+  "selection_basis": "causal heavy negative-x/positive-y high-demand subdomain; continuous COMs, new seeds, combined hidden stiffness/viscous/Coulomb perturbations, and new release times/vectors/offsets; no simulation or detector output inspected",
+  "conditions": [
+    {
+      "group_id": "H0",
+      "mass": 8.0,
+      "com": [
+        -0.0285,
+        0.0185,
+        -0.0135
+      ],
+      "perturb": {
+        "seed": 392917,
+        "stiffness_scale": 0.84,
+        "viscous_scale": 1.12,
+        "coulomb_scale": 0.91
+      },
+      "condition_id": "H0-reference",
+      "role": "reference",
+      "collision": null,
+      "pick_offset": null
+    },
+    {
+      "group_id": "H0",
+      "mass": 8.0,
+      "com": [
+        -0.0285,
+        0.0185,
+        -0.0135
+      ],
+      "perturb": {
+        "seed": 392917,
+        "stiffness_scale": 0.84,
+        "viscous_scale": 1.12,
+        "coulomb_scale": 0.91
+      },
+      "condition_id": "H0-collision",
+      "role": "collision",
+      "collision": [
+        3.847,
+        [
+          0.0,
+          13.5,
+          0.0
+        ]
+      ],
+      "pick_offset": null
+    },
+    {
+      "group_id": "H0",
+      "mass": 8.0,
+      "com": [
+        -0.0285,
+        0.0185,
+        -0.0135
+      ],
+      "perturb": {
+        "seed": 392917,
+        "stiffness_scale": 0.84,
+        "viscous_scale": 1.12,
+        "coulomb_scale": 0.91
+      },
+      "condition_id": "H0-offset",
+      "role": "offset",
+      "collision": null,
+      "pick_offset": [
+        0.017,
+        -0.006,
+        0.009
+      ]
+    },
+    {
+      "group_id": "H1",
+      "mass": 8.0,
+      "com": [
+        -0.0255,
+        0.0165,
+        0.0065
+      ],
+      "perturb": {
+        "seed": 392923,
+        "stiffness_scale": 1.17,
+        "viscous_scale": 0.89,
+        "coulomb_scale": 1.14
+      },
+      "condition_id": "H1-reference",
+      "role": "reference",
+      "collision": null,
+      "pick_offset": null
+    },
+    {
+      "group_id": "H1",
+      "mass": 8.0,
+      "com": [
+        -0.0255,
+        0.0165,
+        0.0065
+      ],
+      "perturb": {
+        "seed": 392923,
+        "stiffness_scale": 1.17,
+        "viscous_scale": 0.89,
+        "coulomb_scale": 1.14
+      },
+      "condition_id": "H1-collision",
+      "role": "collision",
+      "collision": [
+        3.874,
+        [
+          9.1923881554,
+          9.1923881554,
+          0.0
+        ]
+      ],
+      "pick_offset": null
+    },
+    {
+      "group_id": "H1",
+      "mass": 8.0,
+      "com": [
+        -0.0255,
+        0.0165,
+        0.0065
+      ],
+      "perturb": {
+        "seed": 392923,
+        "stiffness_scale": 1.17,
+        "viscous_scale": 0.89,
+        "coulomb_scale": 1.14
+      },
+      "condition_id": "H1-offset",
+      "role": "offset",
+      "collision": null,
+      "pick_offset": [
+        -0.014,
+        0.011,
+        0.007
+      ]
+    },
+    {
+      "group_id": "H2",
+      "mass": 7.96,
+      "com": [
+        -0.029,
+        0.014,
+        0.0015
+      ],
+      "perturb": {
+        "seed": 392929,
+        "stiffness_scale": 0.91,
+        "viscous_scale": 1.19,
+        "coulomb_scale": 0.83
+      },
+      "condition_id": "H2-reference",
+      "role": "reference",
+      "collision": null,
+      "pick_offset": null
+    },
+    {
+      "group_id": "H2",
+      "mass": 7.96,
+      "com": [
+        -0.029,
+        0.014,
+        0.0015
+      ],
+      "perturb": {
+        "seed": 392929,
+        "stiffness_scale": 0.91,
+        "viscous_scale": 1.19,
+        "coulomb_scale": 0.83
+      },
+      "condition_id": "H2-collision",
+      "role": "collision",
+      "collision": [
+        3.907,
+        [
+          -14.5,
+          0.0,
+          0.0
+        ]
+      ],
+      "pick_offset": null
+    },
+    {
+      "group_id": "H2",
+      "mass": 7.96,
+      "com": [
+        -0.029,
+        0.014,
+        0.0015
+      ],
+      "perturb": {
+        "seed": 392929,
+        "stiffness_scale": 0.91,
+        "viscous_scale": 1.19,
+        "coulomb_scale": 0.83
+      },
+      "condition_id": "H2-offset",
+      "role": "offset",
+      "collision": null,
+      "pick_offset": [
+        0.009,
+        0.015,
+        -0.006
+      ]
+    },
+    {
+      "group_id": "H3",
+      "mass": 7.92,
+      "com": [
+        -0.0235,
+        0.019,
+        -0.0085
+      ],
+      "perturb": {
+        "seed": 392933,
+        "stiffness_scale": 1.08,
+        "viscous_scale": 0.82,
+        "coulomb_scale": 1.18
+      },
+      "condition_id": "H3-reference",
+      "role": "reference",
+      "collision": null,
+      "pick_offset": null
+    },
+    {
+      "group_id": "H3",
+      "mass": 7.92,
+      "com": [
+        -0.0235,
+        0.019,
+        -0.0085
+      ],
+      "perturb": {
+        "seed": 392933,
+        "stiffness_scale": 1.08,
+        "viscous_scale": 0.82,
+        "coulomb_scale": 1.18
+      },
+      "condition_id": "H3-collision",
+      "role": "collision",
+      "collision": [
+        3.821,
+        [
+          -9.8994949366,
+          -9.8994949366,
+          0.0
+        ]
+      ],
+      "pick_offset": null
+    },
+    {
+      "group_id": "H3",
+      "mass": 7.92,
+      "com": [
+        -0.0235,
+        0.019,
+        -0.0085
+      ],
+      "perturb": {
+        "seed": 392933,
+        "stiffness_scale": 1.08,
+        "viscous_scale": 0.82,
+        "coulomb_scale": 1.18
+      },
+      "condition_id": "H3-offset",
+      "role": "offset",
+      "collision": null,
+      "pick_offset": [
+        -0.016,
+        -0.008,
+        0.011
+      ]
+    }
+  ],
+  "gates": {
+    "candidate_reference_saturation_episodes": 0,
+    "candidate_collision_or_offset_saturation_nonincrease_per_case": true,
+    "baseline_detected_event_losses": 0,
+    "baseline_tool_event_losses": 0,
+    "per_case_extra_false_alarms": 0,
+    "candidate_divergence": 0,
+    "normal_cost_ratio_each_metric_max": 1.05,
+    "saturation_crossings_improved_min": 1,
+    "actual_guard_interventions_min": 1,
+    "separate_candidate_combined_p99_us_max": 800.0
+  },
+  "metric_contract": "tools.r5_metrics.event_result with controller-specific matched references",
+  "tuning_after_results": "forbidden; first failed gate determines a negative decision",
+  "official": false,
+  "hardware_claim": false
+}

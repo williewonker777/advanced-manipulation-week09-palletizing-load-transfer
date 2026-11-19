@@ -1,0 +1,24 @@
+{
+  "schema":"r13-carried-datum.v1",
+  "objective":"Estimate extra carried box bottom-height error at taught placement attributable to a displaced pickup, prior to touchdown. Reconstruct measured link dynamics, use public known payload+COM, nominal robot and encoder/JTS. No fixture offsets, actual link or free-box state, table force, impact/alarms, or stiffness labels in inference or fitting.",
+  "window":"Decision at 3.550s. Measured 41-point smooth quadratic-endpoint convolution of q/central velocity/acceleration, end +22ms. Lift [1.55,1.69] and free carry [1.84,3.51] every 8ms. Previous-step R12 physics: at state j use unfiltered elastic JTS j+1, rigid-axis average j+1/j+2; do not need future observations relative to decision. Filter dynamics differences against matched centre torque.",
+  "parameters":"Linearize public inverse dynamics in three flange-referenced COM displacements (1.0mm symmetric probes) about a public pickup datum: nominal box pose and measured flange at suction onset. Separate nuisance column for inverse stiffness, estimated from measured q/encoder reconstruction (+/-5%); unknown per-joint affine sensor bias terms. Fit full motion, not a static gravity model.",
+  "normal_calibration":"Five known zero-displacement training trials per mode. No measured box positions or simulator labels in model: fit per-phase/per-joint mean ID mismatch vs mass with intercept and slope. Normalize by per-joint training mismatch with public noise floor. Subtract this calibration from new public measurements; no fitting on displaced/impact cases. Empirical error guard uses leave-one-normal-out and fixed block deletion, not probabilistic coverage.",
+  "uncertainty":"Report an envelope at least 0.75mm (pickup pose/systematic motion), plus the largest leave-one-calibration-out false vertical estimate, plus largest change dropping each of five interleaved 80ms block sets. Abstain if interval contains zero, half-width >2.5mm, extrapolated mass, |inferred shift|>15mm, ill-conditioned or nonfinite. No claims of formal confidence coverage.",
+  "scoring":"Offline compute true bottom via rigid pose of free box relative to actual flange while airborne, projected to taught placement. Compare its CHANGE vs the same case's nominal pickup variant; also report absolute relative-to-ideal geometry and COM. A different physical pose at latch, tilt and weld/box motion are not the same as the configured offset. Do not use a matched zero run to infer a test case (score only).",
+  "gates":"Per mode: all 8 nonzero-height cases correct sign incl abstentions as non-success, RMSE of operational estimates vs measured bottom delta <=2mm (report paired-difference RMSE separately), max magnitude on 4 zero and 4 lateral-only cases vs their respective truth <=2mm, all accepted estimates within declared intervals; >=6/8 confident vertical corrections, or do not connect to control. Normal control/detector untouched by recording. If passes, freeze then test active correction on new paired physical cases with complete R12 costs, G4 and collisions. If fails, a separate active-excitation arm may be evaluated but never fit on held truth.",
+  "fit":[
+    {"id":"f0","mass":3.14,"com":[0.013,-0.021,0.013],"perturb":{"seed":146301,"stiffness_scale":0.97,"viscous_scale":1.04,"coulomb_scale":1.06}},
+    {"id":"f1","mass":4.27,"com":[-0.017,0.012,0.022],"perturb":{"seed":146302,"stiffness_scale":1.04,"viscous_scale":0.96,"coulomb_scale":0.94}},
+    {"id":"f2","mass":5.51,"com":[0.018,0.009,-0.024],"perturb":{"seed":146303}},
+    {"id":"f3","mass":6.82,"com":[-0.021,-0.016,0.025],"perturb":{"seed":146304,"stiffness_scale":0.96,"viscous_scale":1.03,"coulomb_scale":1.07}},
+    {"id":"f4","mass":7.89,"com":[0.012,0.026,-0.016],"perturb":{"seed":146305,"stiffness_scale":1.03,"viscous_scale":0.95,"coulomb_scale":0.96}}
+  ],
+  "test":[
+    {"id":"a","mass":3.67,"com":[0.017,0.006,-0.022],"shift":[0.007,-0.005,0.0045],"perturb":{"seed":146311}},
+    {"id":"b","mass":5.18,"com":[-0.018,0.021,0.015],"shift":[-0.008,0.006,0.0055],"perturb":{"seed":146312,"stiffness_scale":0.95,"viscous_scale":1.05,"coulomb_scale":1.03}},
+    {"id":"c","mass":6.58,"com":[0.025,-0.014,0.018],"shift":[0.009,0.004,0.006],"perturb":{"seed":146313,"stiffness_scale":1.05,"viscous_scale":0.96,"coulomb_scale":0.92}},
+    {"id":"d","mass":7.52,"com":[-0.016,-0.022,-0.013],"shift":[-0.006,-0.009,0.004],"perturb":{"seed":146314,"stiffness_scale":0.98,"viscous_scale":1.07,"coulomb_scale":0.96}}
+  ],
+  "variants":"zero: no pickup offset, xy: displaced horizontally only, up/down: same horizontal displacement and opposite vertical translations. All seeds matched within group for evaluator-only differences. Test fixture settings never passed to estimate()."
+}

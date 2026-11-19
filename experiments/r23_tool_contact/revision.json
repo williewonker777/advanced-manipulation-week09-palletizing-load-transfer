@@ -1,0 +1,9 @@
+{
+  "schema":"r23-tool-contact-candidate-revision.v1",
+  "protected_candidate_sha256":"302b1a593554c7ba900bb4bf4c6c77a4e7d0f72dfd12aa8ae4b549b09eba4602",
+  "final_candidate_sha256":"2ed447199694cb159770e43fe9a2f1b8a9c513a1c7480d96d079313df1002a38",
+  "model_sha256":"9633182c1d986117fd6fd541e361f9bddf28d79a05763e6012dcb118805a1e37",
+  "reason":"Fail closed for controllers without an explicit MODE='torque'.",
+  "only_behavioral_change":"The tool witness enable default changed from implicit torque to disabled; explicit torque execution and every threshold/model byte are unchanged.",
+  "timing":"Applied after protected outcomes; therefore the rerun is labeled regression, not a fresh holdout."
+}

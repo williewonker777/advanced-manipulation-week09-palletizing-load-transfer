@@ -1,0 +1,84 @@
+{
+  "schema": "r19-load-transfer-summary.v1",
+  "decision": "reject_first_gate",
+  "intervention": "support-weighted monotone removal of only the R17 horizontal information-COM correction",
+  "candidate": {
+    "support": {
+      "mean_mg": 0.618781585237788,
+      "min_mg": 0.47905889169799776,
+      "peak_mg": 1.0390889534632433,
+      "samples": 20,
+      "mean_ge_050": true,
+      "min_ge_025": true,
+      "peak_le_110": true
+    },
+    "g4": {
+      "mean_gain_mg": 0.492164667488031,
+      "all_four_g4": true
+    },
+    "cost_ratios": {
+      "r10": {
+        "tcp_rms": 0.9898386911987658,
+        "tcp_max": 1.0003385414385175,
+        "place_step": 1.0076578973653214,
+        "pick_step": 0.9992295088088584,
+        "place_force": 0.9885892223571368
+      },
+      "r15": {
+        "tcp_rms": 0.9842005704126446,
+        "tcp_max": 1.0,
+        "place_step": 1.0000159281319956,
+        "pick_step": 1.0,
+        "place_force": 0.9912416888981264
+      }
+    },
+    "tool_delay_ms": 11.0,
+    "saturation_pct": 0.0,
+    "ctrl_p99_us": 364.0889919188339,
+    "false_alarm_times": [
+      3.903
+    ],
+    "transition": {
+      "samples": 161,
+      "initial_effective_weight": 1.0,
+      "release_effective_weight": 0.0,
+      "finite": true,
+      "nonincrease_after_handoff": true,
+      "reducing_samples": 20,
+      "max_removed_horizontal_com_mm": 9.905791603371402
+    },
+    "max_release_window_command_step_nm": 5.410128344185722
+  },
+  "directional_scores": {
+    "r16_no_false_rise": {
+      "3.9": 1.2651334430748407,
+      "3.901": 1.0862126494272621,
+      "3.902": 1.2635334834720748,
+      "3.903": 0.9119878232229625
+    },
+    "r17_false_rise": {
+      "3.9": 1.1408734437101025,
+      "3.901": 1.055877544033653,
+      "3.902": 1.2169693336509686,
+      "3.903": 1.0321048543208506
+    },
+    "candidate_false_rise": {
+      "3.9": 1.189324572067846,
+      "3.901": 1.0945919273669757,
+      "3.902": 1.245508777614968,
+      "3.903": 1.0278324774280156
+    }
+  },
+  "failed_gates": [
+    "false_events"
+  ],
+  "stage_control": {
+    "known_failure_executed": true,
+    "known_pass_controls_executed": false,
+    "protected_impacts_executed": false,
+    "new_holdouts_executed": false,
+    "reason": "the preregistered sh5 false-event gate failed"
+  },
+  "conclusion": "Removing the full 9.91 mm horizontal information action by 3.873 s preserved support and costs but changed the fourth release score only from 1.0321 to 1.0278; four consecutive threshold crossings and the 3.903 s false rise remained. The surviving release event is not repaired by support-weighting this COM action. No parameter was retuned and downstream stages stayed closed.",
+  "source_record_sha256": "605c4a86c70c58e1611a7cd698111ddc34f1268b30f9d4715d60fe5ea564919e"
+}

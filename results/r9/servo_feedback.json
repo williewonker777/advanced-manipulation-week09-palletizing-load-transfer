@@ -1,0 +1,48 @@
+{
+  "status": "VERIFIED_NEGATIVE",
+  "decision": "STOP_NO_HOLDOUT",
+  "adopt_feedback_governor": false,
+  "previous_release_decision_changed": false,
+  "failed_gates": [
+    "normal_cost_ratios",
+    "catchup"
+  ],
+  "mechanism": "The fixed feedforward relief is active through release/table load transfer. The unchanged position loop and table contact absorb the temporary tracking deficit, increasing P0 placement force and delaying recovery.",
+  "P0_reference": {
+    "active_window_s": [
+      3.81,
+      3.859
+    ],
+    "peak_relief_nm": 25.763741199637025,
+    "baseline_place_force_n": 78.86816084403762,
+    "candidate_place_force_n": 95.59849683251366,
+    "place_force_ratio": 1.2121304187828141,
+    "catchup_s": 0.4
+  },
+  "successful_but_insufficient": {
+    "baseline_saturated_samples": 24,
+    "candidate_saturated_samples": 0,
+    "minimum_actual_j2_margin_nm": 17.67074710625741,
+    "candidate_worst_combined_p99_us": 374.86840000000024,
+    "event_losses": [],
+    "extra_false_alarms": []
+  },
+  "pins": {
+    "plan": "65ab5bcf3cc8163206500452b81c18e8cdc82f6a8bed89352067f76639378b2b",
+    "governor.py": "fb41a6ac2b8e86cee3607c7da757646f85233f46f46a23838a31b252ee01d9ab",
+    "runner.py": "6db3927cac750781dfe397181a03ef6527434bdc92ad0cdc7077f158485e83e9",
+    "run_development.py": "342fd193d7ed6958feb81bef05760649d9949cdc07dda0f84adeb546fded3d37",
+    "FAST2.py": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b"
+  },
+  "scope": {
+    "paired_conditions": 9,
+    "episodes": 18,
+    "official": false,
+    "holdout_opened": false
+  },
+  "all_conditions": {
+    "worst_catchup_s": 0.405,
+    "complete_record_sha256": "d62d7ffa37f4133d52866084c053c3e568f0c6290f9b257b200fe1187a644951"
+  }
+}

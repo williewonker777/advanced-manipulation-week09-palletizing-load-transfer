@@ -1,0 +1,723 @@
+{
+  "schema": "r30-g4-unload-notice-qualification.v1",
+  "classification": "prospectively source-pinned post-disclosure development panel; excludes sealed R28/R27 studies",
+  "plan_sha256": "d5958909984bc869d4488a397beace28358eaf4384168ebf65db3f777f693425",
+  "source_pins": {
+    "candidate_sha256": "db394659e0f61b159bb740d4fe9e9acea4d1f3be068aabc613fc396bca606d42",
+    "runner_sha256": "a19f9d2bbaa5f2b352583c9b64f8b3fa738d93b162d5beec7e3daa1cf331193a",
+    "published_result_sha256": "09c224f2b8b32ab72d3f4e796911311f3d260697de40de9075887c86e1c0dca4",
+    "published_runner_sha256": "6c566a1dd260c02e4686fbfddd533a9187d5db7c87d07255796513baa17b9b16"
+  },
+  "episodes": 22,
+  "rows": [
+    {
+      "id": "q30_s1_zero",
+      "stratum": "light_com_low",
+      "role": "zero",
+      "case": {
+        "id": "q30_s1_zero",
+        "stratum": "light_com_low",
+        "role": "zero",
+        "phase": "pickup",
+        "mass": 5.4,
+        "com": [
+          0.025,
+          0.019,
+          0.04
+        ],
+        "offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [],
+      "candidate_rises": [],
+      "added_rises": [],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 0,
+      "candidate_active_samples": 0,
+      "active_delta": 0,
+      "contact": {
+        "peak_N": 0.0,
+        "raw_nonzero_first_tick": null,
+        "raw_nonzero_last_tick": null,
+        "registered_first_tick": null,
+        "registered_last_tick": null
+      },
+      "notice": [],
+      "baseline_tool_owned": false,
+      "candidate_tool": {
+        "present": false,
+        "detected": false,
+        "prealarm": false,
+        "delay_ms": null,
+        "peak_N": 0.0
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    },
+    {
+      "id": "q30_s1_low",
+      "stratum": "light_com_low",
+      "role": "low",
+      "case": {
+        "id": "q30_s1_low",
+        "stratum": "light_com_low",
+        "role": "low",
+        "phase": "pickup",
+        "mass": 5.4,
+        "com": [
+          0.025,
+          0.019,
+          0.04
+        ],
+        "offset": [
+          0.00145,
+          0.00105,
+          0.0009
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [],
+      "candidate_rises": [
+        1358
+      ],
+      "added_rises": [
+        1358
+      ],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 0,
+      "candidate_active_samples": 8,
+      "active_delta": 8,
+      "contact": {
+        "peak_N": 18.49929792965943,
+        "raw_nonzero_first_tick": 1311,
+        "raw_nonzero_last_tick": 1362,
+        "registered_first_tick": 1311,
+        "registered_last_tick": 1349
+      },
+      "notice": [
+        {
+          "tick": 1358,
+          "contact_relation": "DURING",
+          "samples_after_raw_contact_end": -4
+        }
+      ],
+      "baseline_tool_owned": false,
+      "candidate_tool": {
+        "present": true,
+        "detected": true,
+        "prealarm": false,
+        "delay_ms": 47,
+        "peak_N": 18.49929792965943
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    },
+    {
+      "id": "q30_s1_high",
+      "stratum": "light_com_low",
+      "role": "high",
+      "case": {
+        "id": "q30_s1_high",
+        "stratum": "light_com_low",
+        "role": "high",
+        "phase": "pickup",
+        "mass": 5.4,
+        "com": [
+          0.025,
+          0.019,
+          0.04
+        ],
+        "offset": [
+          0.00225,
+          0.00165,
+          0.00125
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [
+        1312
+      ],
+      "candidate_rises": [
+        1312
+      ],
+      "added_rises": [],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 26,
+      "candidate_active_samples": 26,
+      "active_delta": 0,
+      "contact": {
+        "peak_N": 27.33402710572427,
+        "raw_nonzero_first_tick": 1297,
+        "raw_nonzero_last_tick": 1358,
+        "registered_first_tick": 1297,
+        "registered_last_tick": 1347
+      },
+      "notice": [],
+      "baseline_tool_owned": true,
+      "candidate_tool": {
+        "present": true,
+        "detected": true,
+        "prealarm": false,
+        "delay_ms": 15,
+        "peak_N": 27.33402710572427
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    },
+    {
+      "id": "q30_s2_zero",
+      "stratum": "mid_com_mid",
+      "role": "zero",
+      "case": {
+        "id": "q30_s2_zero",
+        "stratum": "mid_com_mid",
+        "role": "zero",
+        "phase": "pickup",
+        "mass": 6.0,
+        "com": [
+          0.029,
+          0.022,
+          0.043
+        ],
+        "offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [],
+      "candidate_rises": [],
+      "added_rises": [],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 0,
+      "candidate_active_samples": 0,
+      "active_delta": 0,
+      "contact": {
+        "peak_N": 0.0,
+        "raw_nonzero_first_tick": null,
+        "raw_nonzero_last_tick": null,
+        "registered_first_tick": null,
+        "registered_last_tick": null
+      },
+      "notice": [],
+      "baseline_tool_owned": false,
+      "candidate_tool": {
+        "present": false,
+        "detected": false,
+        "prealarm": false,
+        "delay_ms": null,
+        "peak_N": 0.0
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    },
+    {
+      "id": "q30_s2_low",
+      "stratum": "mid_com_mid",
+      "role": "low",
+      "case": {
+        "id": "q30_s2_low",
+        "stratum": "mid_com_mid",
+        "role": "low",
+        "phase": "pickup",
+        "mass": 6.0,
+        "com": [
+          0.029,
+          0.022,
+          0.043
+        ],
+        "offset": [
+          0.0016,
+          0.00115,
+          0.00095
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [
+        1325
+      ],
+      "candidate_rises": [
+        1325
+      ],
+      "added_rises": [],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 27,
+      "candidate_active_samples": 27,
+      "active_delta": 0,
+      "contact": {
+        "peak_N": 20.403568210149906,
+        "raw_nonzero_first_tick": 1309,
+        "raw_nonzero_last_tick": 1361,
+        "registered_first_tick": 1309,
+        "registered_last_tick": 1348
+      },
+      "notice": [],
+      "baseline_tool_owned": true,
+      "candidate_tool": {
+        "present": true,
+        "detected": true,
+        "prealarm": false,
+        "delay_ms": 16,
+        "peak_N": 20.403568210149906
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    },
+    {
+      "id": "q30_s2_high",
+      "stratum": "mid_com_mid",
+      "role": "high",
+      "case": {
+        "id": "q30_s2_high",
+        "stratum": "mid_com_mid",
+        "role": "high",
+        "phase": "pickup",
+        "mass": 6.0,
+        "com": [
+          0.029,
+          0.022,
+          0.043
+        ],
+        "offset": [
+          0.0024,
+          0.00175,
+          0.0013
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [
+        1312
+      ],
+      "candidate_rises": [
+        1312
+      ],
+      "added_rises": [],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 33,
+      "candidate_active_samples": 33,
+      "active_delta": 0,
+      "contact": {
+        "peak_N": 29.270714042771523,
+        "raw_nonzero_first_tick": 1296,
+        "raw_nonzero_last_tick": 1357,
+        "registered_first_tick": 1296,
+        "registered_last_tick": 1346
+      },
+      "notice": [],
+      "baseline_tool_owned": true,
+      "candidate_tool": {
+        "present": true,
+        "detected": true,
+        "prealarm": false,
+        "delay_ms": 16,
+        "peak_N": 29.270714042771523
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    },
+    {
+      "id": "q30_s3_zero",
+      "stratum": "heavy_com_high",
+      "role": "zero",
+      "case": {
+        "id": "q30_s3_zero",
+        "stratum": "heavy_com_high",
+        "role": "zero",
+        "phase": "pickup",
+        "mass": 6.8,
+        "com": [
+          0.033,
+          0.026,
+          0.047
+        ],
+        "offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [],
+      "candidate_rises": [],
+      "added_rises": [],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 0,
+      "candidate_active_samples": 0,
+      "active_delta": 0,
+      "contact": {
+        "peak_N": 0.0,
+        "raw_nonzero_first_tick": null,
+        "raw_nonzero_last_tick": null,
+        "registered_first_tick": null,
+        "registered_last_tick": null
+      },
+      "notice": [],
+      "baseline_tool_owned": false,
+      "candidate_tool": {
+        "present": false,
+        "detected": false,
+        "prealarm": false,
+        "delay_ms": null,
+        "peak_N": 0.0
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    },
+    {
+      "id": "q30_s3_low",
+      "stratum": "heavy_com_high",
+      "role": "low",
+      "case": {
+        "id": "q30_s3_low",
+        "stratum": "heavy_com_high",
+        "role": "low",
+        "phase": "pickup",
+        "mass": 6.8,
+        "com": [
+          0.033,
+          0.026,
+          0.047
+        ],
+        "offset": [
+          0.00175,
+          0.00125,
+          0.001
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [],
+      "candidate_rises": [
+        1358
+      ],
+      "added_rises": [
+        1358
+      ],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 0,
+      "candidate_active_samples": 8,
+      "active_delta": 8,
+      "contact": {
+        "peak_N": 22.59411518650174,
+        "raw_nonzero_first_tick": 1307,
+        "raw_nonzero_last_tick": 1360,
+        "registered_first_tick": 1307,
+        "registered_last_tick": 1346
+      },
+      "notice": [
+        {
+          "tick": 1358,
+          "contact_relation": "DURING",
+          "samples_after_raw_contact_end": -2
+        }
+      ],
+      "baseline_tool_owned": false,
+      "candidate_tool": {
+        "present": true,
+        "detected": true,
+        "prealarm": false,
+        "delay_ms": 51,
+        "peak_N": 22.59411518650174
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    },
+    {
+      "id": "q30_s3_high",
+      "stratum": "heavy_com_high",
+      "role": "high",
+      "case": {
+        "id": "q30_s3_high",
+        "stratum": "heavy_com_high",
+        "role": "high",
+        "phase": "pickup",
+        "mass": 6.8,
+        "com": [
+          0.033,
+          0.026,
+          0.047
+        ],
+        "offset": [
+          0.00255,
+          0.00185,
+          0.00135
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [
+        1309
+      ],
+      "candidate_rises": [
+        1309
+      ],
+      "added_rises": [],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 22,
+      "candidate_active_samples": 22,
+      "active_delta": 0,
+      "contact": {
+        "peak_N": 30.618289553052406,
+        "raw_nonzero_first_tick": 1294,
+        "raw_nonzero_last_tick": 1356,
+        "registered_first_tick": 1294,
+        "registered_last_tick": 1346
+      },
+      "notice": [],
+      "baseline_tool_owned": true,
+      "candidate_tool": {
+        "present": true,
+        "detected": true,
+        "prealarm": false,
+        "delay_ms": 15,
+        "peak_N": 30.618289553052406
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    },
+    {
+      "id": "q30_later_oblique",
+      "stratum": "signed_control",
+      "role": "external",
+      "case": {
+        "id": "q30_later_oblique",
+        "stratum": "signed_control",
+        "role": "external",
+        "phase": "pickup",
+        "mass": 6.1,
+        "com": [
+          0.029,
+          0.023,
+          0.044
+        ],
+        "offset": [
+          0.0019,
+          0.0014,
+          0.0011
+        ],
+        "impact": [
+          1.665,
+          [
+            11.0,
+            -9.0,
+            0.0
+          ]
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [
+        1702
+      ],
+      "candidate_rises": [
+        1353,
+        1702
+      ],
+      "added_rises": [
+        1353
+      ],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 100,
+      "candidate_active_samples": 108,
+      "active_delta": 8,
+      "contact": {
+        "peak_N": 24.319640971235213,
+        "raw_nonzero_first_tick": 1303,
+        "raw_nonzero_last_tick": 1359,
+        "registered_first_tick": 1303,
+        "registered_last_tick": 1346
+      },
+      "notice": [
+        {
+          "tick": 1353,
+          "contact_relation": "DURING",
+          "samples_after_raw_contact_end": -6
+        }
+      ],
+      "baseline_tool_owned": false,
+      "candidate_tool": {
+        "present": true,
+        "detected": true,
+        "prealarm": false,
+        "delay_ms": 50,
+        "peak_N": 24.319640971235213
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    },
+    {
+      "id": "q30_later_negative_z",
+      "stratum": "signed_control",
+      "role": "external",
+      "case": {
+        "id": "q30_later_negative_z",
+        "stratum": "signed_control",
+        "role": "external",
+        "phase": "pickup",
+        "mass": 6.1,
+        "com": [
+          0.029,
+          0.023,
+          0.044
+        ],
+        "offset": [
+          0.0019,
+          0.0014,
+          0.0011
+        ],
+        "impact": [
+          1.645,
+          [
+            0.0,
+            0.0,
+            -15.0
+          ]
+        ],
+        "mechanics": {
+          "table_friction_scale": 0.945,
+          "table_solref_time_scale": 1.015,
+          "suction_solref_time_scale": 1.055,
+          "dof_damping_scale": 0.945,
+          "torque_deadband_nm": 0.028
+        }
+      },
+      "memory_rises": [
+        1699
+      ],
+      "candidate_rises": [
+        1353,
+        1699
+      ],
+      "added_rises": [
+        1353
+      ],
+      "lost_native": [],
+      "added_out_of_window": [],
+      "memory_active_samples": 67,
+      "candidate_active_samples": 75,
+      "active_delta": 8,
+      "contact": {
+        "peak_N": 24.319640971235213,
+        "raw_nonzero_first_tick": 1303,
+        "raw_nonzero_last_tick": 1359,
+        "registered_first_tick": 1303,
+        "registered_last_tick": 1346
+      },
+      "notice": [
+        {
+          "tick": 1353,
+          "contact_relation": "DURING",
+          "samples_after_raw_contact_end": -6
+        }
+      ],
+      "baseline_tool_owned": false,
+      "candidate_tool": {
+        "present": true,
+        "detected": true,
+        "prealarm": false,
+        "delay_ms": 50,
+        "peak_N": 24.319640971235213
+      },
+      "physical_exact": true,
+      "force_exact": true,
+      "passed": true
+    }
+  ],
+  "counts": {
+    "inputs": 11,
+    "physical_contact_rows": 8,
+    "genuinely_missed_rescued": 4,
+    "zero_controls": 3
+  },
+  "acceptance": {
+    "all_rows_pass": true,
+    "physical_contact_rows_at_least_3": true,
+    "genuinely_missed_rescued_at_least_1": true,
+    "all_zero_controls_silent": true,
+    "no_lost_native": true,
+    "no_added_out_of_window": true
+  },
+  "passed": true
+}

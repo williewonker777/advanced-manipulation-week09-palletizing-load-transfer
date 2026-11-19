@@ -1,0 +1,69 @@
+{
+  "schema": "r21-full-d4-protection-plan.v1",
+  "status": "FROZEN_BEFORE_OUTCOMES",
+  "classification": "full pre-existing exposed D4 census; not an independent hidden holdout",
+  "plan_sha256": "EXTERNAL_SHA256_REQUIRED",
+  "arms": [
+    "r10",
+    "yaw"
+  ],
+  "controller": "my_torque",
+  "case_builder": "tools.d4_robustness.build_cases('my_torque')",
+  "case_count": 385,
+  "composition": {
+    "reference": 189,
+    "collision": 180,
+    "offset": 16
+  },
+  "matrix_sha256": "bc4b3dbb925cfb8609f535e1420f8b3f20785769b7f339708ca914b6992db791",
+  "workers_allowed": [
+    1,
+    2,
+    3
+  ],
+  "reference_twin_radius_samples": 20,
+  "sample_period_ms": 1,
+  "true_windows": {
+    "artificial": "[onset,onset+320ms)",
+    "tool": "[first contact,last contact+300 samples)"
+  },
+  "classification_rules": {
+    "official": "unchanged D4 alarm-before/miss/reference +/-20ms precedence using stock result",
+    "strict": "artificial-window rise only, unmasked, absent from matched no-force +/-20ms",
+    "false": "rise outside artificial and tool windows, each compared to matched no-force",
+    "duplicate": "attributable artificial-window rises beyond the first",
+    "delayed": "rise after artificial window is false unless inside true tool window"
+  },
+  "gates": [
+    "source pins stable before/after",
+    "stock kit integrity",
+    "385 unique cases per arm",
+    "signed applied force exact",
+    "onset/off-by-one bounds exact",
+    "matched physical/no-force prefixes exact",
+    "physical logs exact between arms",
+    "no R10 strict loss",
+    "no new false rise",
+    "no new masked collision",
+    "no new attributable duplicate rise",
+    "preserve true tool detection",
+    "no new tool prealarm"
+  ],
+  "tuning_after_results": "forbidden",
+  "source_pins": {
+    "my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "sim/runner.py": "3cf99c21b93f431cc57a0929e4d05b083fb8f35f06dc52bc2d2ddcde3e55ed1f",
+    "sim/plant.py": "8f4a16e1d083dc8559ac21427166c78db7261b7bedd149b8dae8f789a6245f1e",
+    "tools/kit_manifest.sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+    "tools/check_integrity.py": "f448980a2bd1384c0e23ceec6f7c19d8213b55cf7b2a6e1407d3162b6b5b69e5",
+    "tools/d4_robustness.py": "97420c69151a008a24b839a3df9b2b11eafc33033c4393cf6512fd91fb1f62e6",
+    "experiments/r20_horizontal/candidate_detector.py": "1770c36e002404a660c9cfc1ef45ddbb6cb1f53a3ec973c82b760e60881e7025",
+    "experiments/r21_yaw_impulse/state.py": "f04d46e93c55e04aa869050fe43c895951f3a970e3729b01e8d94744532f3a9f",
+    "experiments/r21_yaw_impulse/detector.py": "69e1e884f393a17751546165554f994c19b0cb127830233fba1f2329481c87cb",
+    "experiments/r21_yaw_impulse/frozen.py": "71a75f131ea6d3aae94f9acf40c42abe92d9123000d86e685f8bb5f4a00a4342",
+    "experiments/r21_yaw_impulse/coarse.py": "f3a8a4202e638346dfa6a7994b056cbf509be4f335fb09c76d6657d47abcafe9",
+    "experiments/r21_yaw_impulse/normal_bins.json": "5f22f640eb8824f764ffeec7ecbef7ba23df02a874547b93b8ddc72925e25c15",
+    "experiments/r21_full_protection/runner.py": "f995b07bc38a045164ca2209089de002ffd5f8e121cf136a42e6917547522b6f"
+  }
+}

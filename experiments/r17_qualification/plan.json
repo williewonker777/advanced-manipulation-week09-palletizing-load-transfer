@@ -1,0 +1,974 @@
+{
+  "schema": "r17-progressive-handoff-plan.v1",
+  "status": "FROZEN_BEFORE_R17_CANDIDATE_OUTCOMES",
+  "scope": "ORIGINAL stock clean-overlay qualification; stages are all-or-nothing and diagnostic subsets never unlock",
+  "candidate_module": "experiments.r17_candidate.policy",
+  "candidate_controller": "Controller(height, early)",
+  "candidate_detector": "Detector()",
+  "thresholds": {
+    "g4": "each calibrated positive candidate independently satisfies mean>=0.50mg, min>=0.25mg, peak<=1.10mg, mean gain vs R10>=0.25mg",
+    "cost": "each TCP RMS/max, pickup/place torque step and placement peak force <=1.05 times BOTH R10 and raw R15",
+    "false_events": "candidate false rises injectively match R10 and raw R15 within 20ms and add none relative to D; scheduled tool contacts are scored separately",
+    "tool": "no lost R10/raw-R15/D tool hit and no delay >5ms",
+    "saturation": "candidate saturation <= minimum R10/raw-R15/D saturation",
+    "runtime": "candidate controller p99 <=800us; reported separately and is not hard real-time proof",
+    "impact": "same-arm forced/unforced exact prefix and exact requested force; retain every detected R10/raw-R15/D collision with <=5ms added delay; no prealarm; min forced saturation",
+    "fallback": "empty and declared closed-loop out-of-calibration cases exact R10 for every non-clock metric and signed log field, including detector output"
+  },
+  "known_normal_cases": [
+    {
+      "id": "ec1:none",
+      "mass": 3.45,
+      "com": [
+        0.019,
+        -0.014,
+        0.021
+      ],
+      "offset": null,
+      "claim": "exposed"
+    },
+    {
+      "id": "ec1:explicit_zero",
+      "mass": 3.45,
+      "com": [
+        0.019,
+        -0.014,
+        0.021
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec1:xy",
+      "mass": 3.45,
+      "com": [
+        0.019,
+        -0.014,
+        0.021
+      ],
+      "offset": [
+        0.0058,
+        -0.0065,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec1:up",
+      "mass": 3.45,
+      "com": [
+        0.019,
+        -0.014,
+        0.021
+      ],
+      "offset": [
+        0.0058,
+        -0.0065,
+        0.0044
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec1:down",
+      "mass": 3.45,
+      "com": [
+        0.019,
+        -0.014,
+        0.021
+      ],
+      "offset": [
+        0.0058,
+        -0.0065,
+        -0.0044
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec2:none",
+      "mass": 4.9,
+      "com": [
+        -0.022,
+        0.018,
+        -0.013
+      ],
+      "offset": null,
+      "claim": "exposed"
+    },
+    {
+      "id": "ec2:explicit_zero",
+      "mass": 4.9,
+      "com": [
+        -0.022,
+        0.018,
+        -0.013
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec2:xy",
+      "mass": 4.9,
+      "com": [
+        -0.022,
+        0.018,
+        -0.013
+      ],
+      "offset": [
+        -0.0062,
+        -0.0048,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec2:up",
+      "mass": 4.9,
+      "com": [
+        -0.022,
+        0.018,
+        -0.013
+      ],
+      "offset": [
+        -0.0062,
+        -0.0048,
+        0.0052
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec2:down",
+      "mass": 4.9,
+      "com": [
+        -0.022,
+        0.018,
+        -0.013
+      ],
+      "offset": [
+        -0.0062,
+        -0.0048,
+        -0.0052
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec3:none",
+      "mass": 6.55,
+      "com": [
+        0.016,
+        0.023,
+        -0.02
+      ],
+      "offset": null,
+      "claim": "exposed"
+    },
+    {
+      "id": "ec3:explicit_zero",
+      "mass": 6.55,
+      "com": [
+        0.016,
+        0.023,
+        -0.02
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec3:xy",
+      "mass": 6.55,
+      "com": [
+        0.016,
+        0.023,
+        -0.02
+      ],
+      "offset": [
+        0.0072,
+        0.0054,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec3:up",
+      "mass": 6.55,
+      "com": [
+        0.016,
+        0.023,
+        -0.02
+      ],
+      "offset": [
+        0.0072,
+        0.0054,
+        0.0042
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec3:down",
+      "mass": 6.55,
+      "com": [
+        0.016,
+        0.023,
+        -0.02
+      ],
+      "offset": [
+        0.0072,
+        0.0054,
+        -0.0042
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec4:none",
+      "mass": 7.75,
+      "com": [
+        -0.015,
+        -0.02,
+        0.017
+      ],
+      "offset": null,
+      "claim": "exposed"
+    },
+    {
+      "id": "ec4:explicit_zero",
+      "mass": 7.75,
+      "com": [
+        -0.015,
+        -0.02,
+        0.017
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec4:xy",
+      "mass": 7.75,
+      "com": [
+        -0.015,
+        -0.02,
+        0.017
+      ],
+      "offset": [
+        -0.0054,
+        0.0076,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec4:up",
+      "mass": 7.75,
+      "com": [
+        -0.015,
+        -0.02,
+        0.017
+      ],
+      "offset": [
+        -0.0054,
+        0.0076,
+        0.0055
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "ec4:down",
+      "mass": 7.75,
+      "com": [
+        -0.015,
+        -0.02,
+        0.017
+      ],
+      "offset": [
+        -0.0054,
+        0.0076,
+        -0.0055
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "sh3",
+      "mass": 7.1,
+      "com": [
+        -0.016,
+        -0.019,
+        0.027
+      ],
+      "offset": [
+        0.005,
+        0.007,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "sh5",
+      "mass": 6.65,
+      "com": [
+        -0.025,
+        0.018,
+        -0.02
+      ],
+      "offset": [
+        0.004,
+        -0.006,
+        0.0048
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "seen_fr_light_zero",
+      "mass": 3.72,
+      "com": [
+        -0.017,
+        0.009,
+        0.024
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "seen_fr_light_down",
+      "mass": 3.72,
+      "com": [
+        -0.017,
+        0.009,
+        0.024
+      ],
+      "offset": [
+        -0.0033,
+        0.0027,
+        -0.0036
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "seen_fr_mid_zero",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "seen_fr_mid_up",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0028,
+        -0.0031,
+        0.0034
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "seen_fr_heavy_zero",
+      "mass": 7.42,
+      "com": [
+        -0.009,
+        0.026,
+        -0.014
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "seen_fr_heavy_down",
+      "mass": 7.42,
+      "com": [
+        -0.009,
+        0.026,
+        -0.014
+      ],
+      "offset": [
+        0.0031,
+        0.0024,
+        -0.0038
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "pc_light_none",
+      "mass": 3.26,
+      "com": [
+        0.012,
+        0.017,
+        -0.023
+      ],
+      "offset": null,
+      "claim": "exposed"
+    },
+    {
+      "id": "pc_light_up",
+      "mass": 3.83,
+      "com": [
+        -0.024,
+        -0.008,
+        0.015
+      ],
+      "offset": [
+        0.0036,
+        -0.0029,
+        0.0032
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "pc_mid_zero",
+      "mass": 5.02,
+      "com": [
+        0.008,
+        -0.025,
+        0.019
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "pc_mid_down",
+      "mass": 5.91,
+      "com": [
+        -0.019,
+        0.014,
+        -0.026
+      ],
+      "offset": [
+        -0.0027,
+        0.0034,
+        -0.0035
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "pc_heavy_none",
+      "mass": 6.92,
+      "com": [
+        0.026,
+        0.006,
+        -0.011
+      ],
+      "offset": null,
+      "claim": "exposed"
+    },
+    {
+      "id": "pc_heavy_up",
+      "mass": 7.68,
+      "com": [
+        -0.013,
+        -0.027,
+        0.022
+      ],
+      "offset": [
+        0.0035,
+        0.0026,
+        0.0037
+      ],
+      "claim": "exposed"
+    }
+  ],
+  "fallback_cases": [
+    {
+      "id": "r17fb_empty",
+      "mass": 0.0,
+      "com": [
+        0,
+        0,
+        0
+      ],
+      "offset": null,
+      "kind": "empty"
+    },
+    {
+      "id": "r17fb_low",
+      "mass": 2.5,
+      "com": [
+        0.012,
+        -0.009,
+        0.018
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "kind": "out_of_calibration"
+    },
+    {
+      "id": "r17fb_high",
+      "mass": 8.15,
+      "com": [
+        -0.015,
+        0.011,
+        -0.021
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "kind": "out_of_calibration"
+    }
+  ],
+  "exposed_impact_cases": [
+    {
+      "id": "new_weak_oblique_pre",
+      "mass": 3.72,
+      "com": [
+        -0.017,
+        0.009,
+        0.024
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision": [
+        3.78,
+        [
+          6.0,
+          -7.0,
+          -5.0
+        ]
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "new_vertical_pre",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0028,
+        -0.0031,
+        0.0034
+      ],
+      "collision": [
+        3.86,
+        [
+          0.0,
+          0.0,
+          -13.0
+        ]
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "new_surface_normal_release",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision": [
+        3.94,
+        [
+          0.0,
+          0.0,
+          16.0
+        ]
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "new_off_release_pre",
+      "mass": 7.42,
+      "com": [
+        -0.009,
+        0.026,
+        -0.014
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision": [
+        3.82,
+        [
+          11.0,
+          0.0,
+          -4.0
+        ]
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "new_oblique_post",
+      "mass": 3.72,
+      "com": [
+        -0.017,
+        0.009,
+        0.024
+      ],
+      "offset": [
+        -0.0033,
+        0.0027,
+        -0.0036
+      ],
+      "collision": [
+        4.08,
+        [
+          -7.0,
+          9.0,
+          0.0
+        ]
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "new_positive_heavy",
+      "mass": 7.42,
+      "com": [
+        -0.009,
+        0.026,
+        -0.014
+      ],
+      "offset": [
+        0.0031,
+        0.0024,
+        -0.0038
+      ],
+      "collision": [
+        4.02,
+        [
+          0.0,
+          0.0,
+          20.0
+        ]
+      ],
+      "claim": "exposed"
+    },
+    {
+      "id": "exposed_heavy_oblique_143ms",
+      "mass": 7.58,
+      "com": [
+        -0.018,
+        0.025,
+        -0.017
+      ],
+      "offset": null,
+      "collision": [
+        3.905,
+        [
+          8.0,
+          -5.0,
+          -15.0
+        ]
+      ],
+      "claim": "exposed"
+    }
+  ],
+  "fresh_normal_cases": [
+    {
+      "id": "r17n_light_none",
+      "mass": 2.88,
+      "com": [
+        -0.013,
+        0.022,
+        0.016
+      ],
+      "offset": null,
+      "claim": "fresh"
+    },
+    {
+      "id": "r17n_light_up",
+      "mass": 3.61,
+      "com": [
+        0.026,
+        0.006,
+        -0.018
+      ],
+      "offset": [
+        -0.0024,
+        0.0033,
+        0.0029
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17n_mid_down",
+      "mass": 4.47,
+      "com": [
+        -0.007,
+        -0.027,
+        0.023
+      ],
+      "offset": [
+        0.0031,
+        0.0018,
+        -0.0031
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17n_mid_xy",
+      "mass": 5.66,
+      "com": [
+        0.024,
+        -0.019,
+        -0.009
+      ],
+      "offset": [
+        -0.0041,
+        0.0047,
+        0.0
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17n_heavy_zero",
+      "mass": 6.73,
+      "com": [
+        -0.021,
+        0.014,
+        0.027
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17n_heavy_down",
+      "mass": 7.79,
+      "com": [
+        0.011,
+        -0.024,
+        -0.016
+      ],
+      "offset": [
+        0.0026,
+        -0.0038,
+        -0.0027
+      ],
+      "claim": "fresh"
+    }
+  ],
+  "fresh_impact_cases": [
+    {
+      "id": "r17i_light_oblique_pre",
+      "mass": 3.18,
+      "com": [
+        0.018,
+        0.013,
+        -0.022
+      ],
+      "offset": null,
+      "collision": [
+        3.74,
+        [
+          5.5,
+          -6.5,
+          -4.5
+        ]
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17i_mid_vertical_pre",
+      "mass": 4.74,
+      "com": [
+        -0.023,
+        0.017,
+        0.012
+      ],
+      "offset": [
+        0.0022,
+        -0.0027,
+        0.0025
+      ],
+      "collision": [
+        3.82,
+        [
+          0,
+          0,
+          -12.5
+        ]
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17i_heavy_lateral_pre",
+      "mass": 7.31,
+      "com": [
+        0.015,
+        -0.026,
+        0.019
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "collision": [
+        3.89,
+        [
+          13,
+          -4,
+          1
+        ]
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17i_light_release_down",
+      "mass": 3.37,
+      "com": [
+        -0.016,
+        -0.011,
+        0.025
+      ],
+      "offset": [
+        -0.0028,
+        0.0032,
+        -0.0024
+      ],
+      "collision": [
+        3.905,
+        [
+          0,
+          0,
+          -15
+        ]
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17i_mid_release_up",
+      "mass": 5.29,
+      "com": [
+        0.027,
+        0.008,
+        -0.014
+      ],
+      "offset": [
+        0.0034,
+        -0.0021,
+        0.003
+      ],
+      "collision": [
+        3.95,
+        [
+          0,
+          0,
+          15.5
+        ]
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17i_heavy_oblique_post",
+      "mass": 7.56,
+      "com": [
+        -0.009,
+        0.024,
+        0.018
+      ],
+      "offset": null,
+      "collision": [
+        4.03,
+        [
+          -8,
+          5,
+          -10
+        ]
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17i_mid_lateral_late",
+      "mass": 5.83,
+      "com": [
+        0.019,
+        -0.021,
+        -0.017
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "collision": [
+        4.18,
+        [
+          -14,
+          3,
+          0
+        ]
+      ],
+      "claim": "fresh"
+    },
+    {
+      "id": "r17i_heavy_vertical_late",
+      "mass": 6.96,
+      "com": [
+        -0.025,
+        -0.006,
+        0.021
+      ],
+      "offset": [
+        0.0025,
+        0.0029,
+        -0.0026
+      ],
+      "collision": [
+        4.34,
+        [
+          0,
+          0,
+          -17
+        ]
+      ],
+      "claim": "fresh"
+    }
+  ]
+}

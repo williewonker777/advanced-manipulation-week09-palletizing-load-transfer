@@ -302,7 +302,9 @@ def validate(root, ffprobe="ffprobe", probe_fn=None):
                                       (data.get("fresh_full_loop_parity", {}), PARITY)):
             if record.get("file") != expected_path.as_posix() or record.get("sha256") != sha256(root / expected_path):
                 errors.append("R7 proof hash binding differs")
-        candidate = root / "my_detector.py"
+        # The manifest records the submission name at render time. Later
+        # rounds own the live name; only the exact archived R7 bytes count.
+        candidate = root / "experiments/r7_final/A_STATE.py"
         if (data.get("candidate") != {"file": "my_detector.py", "sha256": CANDIDATE_SHA256}
                 or candidate.is_symlink() or not candidate.is_file() or sha256(candidate) != CANDIDATE_SHA256):
             errors.append("R7 candidate source binding differs")

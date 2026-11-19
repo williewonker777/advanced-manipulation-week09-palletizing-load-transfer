@@ -1,0 +1,9 @@
+{
+ "schema":"r32-joint-state-protocol.v1","status":"FROZEN_BEFORE_PHYSICS_OUTPUT",
+ "entrypoint":"experiments.r32_joint_state.candidate:Detector",
+ "candidate_sha256":"633b1d49229ed07764d925bb84a5248d7db183aef2a2e4e4d835512752033d1a",
+ "parents":{"c2":{"entrypoint":"experiments.r32_native_handoff.candidate:Detector","sha256":"d3949f6452b6d3573a9b61a63b77900d0ce78e8603dba2912a7b2e8c034dd837"},"readback":{"entrypoint":"experiments.r32_detached_readback.candidate:Detector","sha256":"a417c78fff0a2da124038921172b102ec426678e9b9a4a43a6a738fbdccbd4b1"}},
+ "composition":"ParentCompatibleReadback calls authoritative RetirementReadback once but returns legacy_output into held C2. The outer adapter adds readback_active only when detached, after the unchanged C2 decision. event_output/event_started/measured_load remain held C2 fields; linked_native is held linked_native OR detached_native.",
+ "invariants":["one parent/plant update","original C2 event_output and event_started exact","zero detached effect while gripped","no new threshold","detached_native separately observable","no suppression of parent alarm_level"],
+ "validation":"complete disclosed D4 against pinned replay, full R26 156, disclosed cross stress; any generic decision or protection loss rejects without alternative"
+}

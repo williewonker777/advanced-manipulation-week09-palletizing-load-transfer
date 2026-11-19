@@ -1,0 +1,276 @@
+{
+  "schema": "r14-airborne.v1",
+  "prior": "R13 frozen carried estimator estimated a correction *relative to a moving measured latch frame* but scored it as a change relative to normal pickup. On exposed R13 pairs, adding the pre-existing latch-to-teach bottom term before differencing fitted the observed change more closely. Paired zero/truth is not available at inference. R13 prior results remain recorded and are not validation.",
+  "design": "Two arms use same new calibration and test cases: passive R1 with R10 detector or 1.5-deg compact body-pitch sine (3 cycles, world translation exactly held at nominal TCP) at 1.98--3.40s. Taught reference/TCP, grip/switches/plant/evaluator and later motion unchanged. Probe is research only and is NOT applied to physical hardware. Compare to unmodified R1, never to a moved score reference.",
+  "estimator": "Same causal R13 joint inverse dynamics correction, plus the downward box extent in the measured latch pose, minus normal expectation fitted vs known payload mass only from that mode/arm calibration recordings. Normal baseline evaluated from internally fitted normal absolute values; leave-one-record-out recomputes both. No true box pose, actual offsets, nuisance settings or per-test matched-zero in predictions. Block/fold estimates and normal LOO define an empirical guard; also report original unregistered and offline paired errors.",
+  "uncertainty": "0.75 mm fixed geometry margin + largest abs leave-one-calibration-out normal predicted change + largest of five 80ms-block deletion changes. Keep R13 width <=2.5 mm, interval excludes zero, within calibration and displacement support. No probabilistic coverage claim. Also evaluate an interval-soft robust action separately: subtract envelope from magnitude (zero if interval contains zero), never claim this replaces the strict sign or RMSE gates.",
+  "gates": {
+    "identification": "For each mode/arm report original R13 strict metric: 8/8 correct and accepted including sub-resolution changes, point RMSE <=2mm, max control error <=2mm, no accepted intervals miss. Separately for actual control, nominal or active arm: across all 16 records point RMSE <=2 mm, max error of applied (zero if abstention) <=2mm, no accepted interval misses, no action for |truth|<1mm, and correct action in >=75% of |truth|>=2.5mm with every such error <=2mm. Tiny changes need not be acted on but are included in max-error and all-sample metrics; a failure stays a failure. No test-case-specific threshold or retries. Report both gates even if different.",
+    "movement": "Probe must hold nominal reference TCP to 1e-8m and stay within velocity limits. In all 16 two-arm physical pairs/mode: whole-cycle original TCP RMS/max ratios <=1.05, zero added saturation, no new false alarm count or additional tool-contact event, peak placement force and torque jitter <=1.05 relative to identical passive condition. No energy, bandwidth or hardware guarantee. If the probe fails do not use it in control.",
+    "next": "Only if the functional gate passes on a mode and chosen excitation satisfies motion limits may qualified estimates drive a separately frozen R12 hybrid with new cases and complete G4/collisions; prefer passive if it meets goal. If not, keep R10 and report which term or uncertainty dominates. No threshold optimization on held truths."
+  },
+  "fit": [
+    {
+      "id": "n00",
+      "mass": 2.86,
+      "com": [
+        0.017,
+        -0.023,
+        0.014
+      ],
+      "perturb": {
+        "seed": 150800,
+        "stiffness_scale": 0.96,
+        "viscous_scale": 1.04,
+        "coulomb_scale": 0.95
+      }
+    },
+    {
+      "id": "n01",
+      "mass": 2.93,
+      "com": [
+        -0.017,
+        0.009,
+        -0.018
+      ],
+      "perturb": {
+        "seed": 150801,
+        "stiffness_scale": 1.04,
+        "viscous_scale": 0.97,
+        "coulomb_scale": 1.07
+      }
+    },
+    {
+      "id": "n02",
+      "mass": 3.91,
+      "com": [
+        0.009,
+        0.013,
+        -0.021
+      ],
+      "perturb": {
+        "seed": 150802,
+        "stiffness_scale": 1.0,
+        "viscous_scale": 1.02,
+        "coulomb_scale": 0.94
+      }
+    },
+    {
+      "id": "n03",
+      "mass": 4.34,
+      "com": [
+        -0.019,
+        -0.012,
+        0.025
+      ],
+      "perturb": {
+        "seed": 150803,
+        "stiffness_scale": 0.98,
+        "viscous_scale": 0.94,
+        "coulomb_scale": 1.02
+      }
+    },
+    {
+      "id": "n04",
+      "mass": 4.88,
+      "com": [
+        0.022,
+        -0.015,
+        -0.013
+      ],
+      "perturb": {
+        "seed": 150804,
+        "stiffness_scale": 1.045,
+        "viscous_scale": 1.03,
+        "coulomb_scale": 0.96
+      }
+    },
+    {
+      "id": "n05",
+      "mass": 5.33,
+      "com": [
+        -0.011,
+        0.024,
+        0.016
+      ],
+      "perturb": {
+        "seed": 150805,
+        "stiffness_scale": 0.955,
+        "viscous_scale": 1.04,
+        "coulomb_scale": 1.06
+      }
+    },
+    {
+      "id": "n06",
+      "mass": 5.92,
+      "com": [
+        0.018,
+        0.014,
+        0.021
+      ],
+      "perturb": {
+        "seed": 150806,
+        "stiffness_scale": 1.02,
+        "viscous_scale": 0.96,
+        "coulomb_scale": 0.95
+      }
+    },
+    {
+      "id": "n07",
+      "mass": 6.46,
+      "com": [
+        -0.021,
+        0.016,
+        -0.024
+      ],
+      "perturb": {
+        "seed": 150807,
+        "stiffness_scale": 0.97,
+        "viscous_scale": 1.06,
+        "coulomb_scale": 1.02
+      }
+    },
+    {
+      "id": "n08",
+      "mass": 7.09,
+      "com": [
+        0.014,
+        -0.019,
+        -0.01
+      ],
+      "perturb": {
+        "seed": 150808,
+        "stiffness_scale": 1.025,
+        "viscous_scale": 0.96,
+        "coulomb_scale": 1.04
+      }
+    },
+    {
+      "id": "n09",
+      "mass": 7.43,
+      "com": [
+        -0.016,
+        -0.014,
+        0.019
+      ],
+      "perturb": {
+        "seed": 150809,
+        "stiffness_scale": 0.99,
+        "viscous_scale": 1.03,
+        "coulomb_scale": 0.97
+      }
+    },
+    {
+      "id": "n10",
+      "mass": 7.95,
+      "com": [
+        0.024,
+        0.012,
+        -0.016
+      ],
+      "perturb": {
+        "seed": 150810,
+        "stiffness_scale": 1.045,
+        "viscous_scale": 1.04,
+        "coulomb_scale": 0.95
+      }
+    },
+    {
+      "id": "n11",
+      "mass": 8.0,
+      "com": [
+        -0.018,
+        0.023,
+        0.02
+      ],
+      "perturb": {
+        "seed": 150811,
+        "stiffness_scale": 0.955,
+        "viscous_scale": 0.96,
+        "coulomb_scale": 1.06
+      }
+    }
+  ],
+  "test": [
+    {
+      "id": "e",
+      "mass": 3.49,
+      "com": [
+        -0.015,
+        0.022,
+        0.013
+      ],
+      "perturb": {
+        "seed": 150920,
+        "stiffness_scale": 0.975,
+        "viscous_scale": 1.045,
+        "coulomb_scale": 0.96
+      },
+      "shift": [
+        0.005,
+        0.008,
+        0.0048
+      ]
+    },
+    {
+      "id": "f",
+      "mass": 4.94,
+      "com": [
+        0.016,
+        -0.018,
+        -0.025
+      ],
+      "perturb": {
+        "seed": 150921,
+        "stiffness_scale": 1.025,
+        "viscous_scale": 0.965,
+        "coulomb_scale": 1.04
+      },
+      "shift": [
+        -0.007,
+        0.004,
+        0.0062
+      ]
+    },
+    {
+      "id": "g",
+      "mass": 6.27,
+      "com": [
+        -0.021,
+        -0.013,
+        0.022
+      ],
+      "perturb": {
+        "seed": 150922,
+        "stiffness_scale": 0.96,
+        "viscous_scale": 1.035,
+        "coulomb_scale": 1.07
+      },
+      "shift": [
+        0.008,
+        -0.004,
+        0.0054
+      ]
+    },
+    {
+      "id": "h",
+      "mass": 7.68,
+      "com": [
+        0.023,
+        0.009,
+        -0.019
+      ],
+      "perturb": {
+        "seed": 150923,
+        "stiffness_scale": 1.04,
+        "viscous_scale": 0.945,
+        "coulomb_scale": 0.95
+      },
+      "shift": [
+        -0.006,
+        -0.008,
+        0.0043
+      ]
+    }
+  ]
+}

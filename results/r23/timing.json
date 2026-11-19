@@ -1,0 +1,826 @@
+{
+  "data": {
+    "schema": "r23-timing.v1",
+    "episodes": 24,
+    "isolated_machine": false,
+    "hard_realtime_proven": false,
+    "summary": {
+      "light": {
+        "cycles": 48000,
+        "worst_episode_wall_p99_us": 350.1676900000002,
+        "worst_episode_cpu_p99_us": 346.97989,
+        "worst_wall_us": 3802.152,
+        "wall_cycles_at_least_1ms": 1
+      },
+      "free": {
+        "cycles": 48000,
+        "worst_episode_wall_p99_us": 330.61280000000005,
+        "worst_episode_cpu_p99_us": 326.71020000000004,
+        "worst_wall_us": 3906.532,
+        "wall_cycles_at_least_1ms": 1
+      },
+      "onset": {
+        "cycles": 48000,
+        "worst_episode_wall_p99_us": 345.50129000000004,
+        "worst_episode_cpu_p99_us": 341.70801,
+        "worst_wall_us": 465.179,
+        "wall_cycles_at_least_1ms": 0
+      }
+    },
+    "rows": [
+      {
+        "case": "loaded_normal",
+        "arm": "light",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 144.0745,
+          "p99_us": 280.0857100000002,
+          "max_us": 3802.152,
+          "at_least_1ms": 1
+        },
+        "sum_cpu": {
+          "p50_us": 141.37400000000002,
+          "p99_us": 276.6221000000001,
+          "max_us": 3799.028,
+          "at_least_1ms": 1
+        },
+        "detector_wall": {
+          "p50_us": 106.57,
+          "p99_us": 235.08951000000002,
+          "max_us": 3751.262,
+          "at_least_1ms": 1
+        },
+        "controller_wall": {
+          "p50_us": 35.15,
+          "p99_us": 57.64050000000001,
+          "max_us": 82.59,
+          "at_least_1ms": 0
+        },
+        "physical": "a135ca741b599ac224c7f296bbef3dd9a918172fa07752eab5670544241d5784",
+        "residual": "9a89f82cfda4c24c4ff42aeba41bfcd223205e3d9dd2d4b170af7ef7badedf29",
+        "detected": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a"
+      },
+      {
+        "case": "loaded_normal",
+        "arm": "free",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 194.73,
+          "p99_us": 312.5090900000002,
+          "max_us": 408.039,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 191.924,
+          "p99_us": 309.1779000000002,
+          "max_us": 404.709,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 157.9195,
+          "p99_us": 255.51020000000003,
+          "max_us": 352.949,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.46,
+          "p99_us": 63.550200000000004,
+          "max_us": 77.889,
+          "at_least_1ms": 0
+        },
+        "physical": "a135ca741b599ac224c7f296bbef3dd9a918172fa07752eab5670544241d5784",
+        "residual": "9a89f82cfda4c24c4ff42aeba41bfcd223205e3d9dd2d4b170af7ef7badedf29",
+        "detected": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a"
+      },
+      {
+        "case": "loaded_normal",
+        "arm": "onset",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 195.04,
+          "p99_us": 310.29780000000017,
+          "max_us": 416.979,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 192.1745,
+          "p99_us": 307.10240000000005,
+          "max_us": 412.809,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 158.08,
+          "p99_us": 255.41090000000003,
+          "max_us": 347.759,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.11,
+          "p99_us": 58.53070000000002,
+          "max_us": 74.28,
+          "at_least_1ms": 0
+        },
+        "physical": "a135ca741b599ac224c7f296bbef3dd9a918172fa07752eab5670544241d5784",
+        "residual": "9a89f82cfda4c24c4ff42aeba41bfcd223205e3d9dd2d4b170af7ef7badedf29",
+        "detected": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a"
+      },
+      {
+        "case": "empty_pick",
+        "arm": "light",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 157.535,
+          "p99_us": 350.1676900000002,
+          "max_us": 511.009,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 154.95999999999998,
+          "p99_us": 346.97989,
+          "max_us": 506.788,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 118.08449999999999,
+          "p99_us": 302.1722100000003,
+          "max_us": 449.239,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 35.7,
+          "p99_us": 62.35190000000004,
+          "max_us": 75.86,
+          "at_least_1ms": 0
+        },
+        "physical": "b40e06683a8f988e8445138f4e0d5a629424c4ba28c3d691ea83b49c5dd25859",
+        "residual": "0735ff922ce50e3c593b0f12ea4cc45f058674fdb384af23d48c20e3eaff5c40",
+        "detected": "c0413afd5bd3df619a136b58d2d4307bd4a9c684d2954ccc80914fb3b67540ae"
+      },
+      {
+        "case": "empty_pick",
+        "arm": "free",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 197.579,
+          "p99_us": 330.61280000000005,
+          "max_us": 525.239,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 194.9395,
+          "p99_us": 326.71020000000004,
+          "max_us": 521.038,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 160.9,
+          "p99_us": 280.5720000000003,
+          "max_us": 468.129,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.56,
+          "p99_us": 64.20060000000002,
+          "max_us": 76.58,
+          "at_least_1ms": 0
+        },
+        "physical": "b40e06683a8f988e8445138f4e0d5a629424c4ba28c3d691ea83b49c5dd25859",
+        "residual": "0735ff922ce50e3c593b0f12ea4cc45f058674fdb384af23d48c20e3eaff5c40",
+        "detected": "c0413afd5bd3df619a136b58d2d4307bd4a9c684d2954ccc80914fb3b67540ae"
+      },
+      {
+        "case": "empty_pick",
+        "arm": "onset",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 197.6945,
+          "p99_us": 335.15991000000025,
+          "max_us": 432.439,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 194.99,
+          "p99_us": 331.87070000000006,
+          "max_us": 429.768,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 160.78,
+          "p99_us": 280.8839900000001,
+          "max_us": 392.549,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.69,
+          "p99_us": 63.200490000000016,
+          "max_us": 90.48,
+          "at_least_1ms": 0
+        },
+        "physical": "b40e06683a8f988e8445138f4e0d5a629424c4ba28c3d691ea83b49c5dd25859",
+        "residual": "0735ff922ce50e3c593b0f12ea4cc45f058674fdb384af23d48c20e3eaff5c40",
+        "detected": "c0413afd5bd3df619a136b58d2d4307bd4a9c684d2954ccc80914fb3b67540ae"
+      },
+      {
+        "case": "loaded_place",
+        "arm": "light",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 152.29500000000002,
+          "p99_us": 288.2138000000001,
+          "max_us": 343.479,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 149.48950000000002,
+          "p99_us": 284.9628000000001,
+          "max_us": 340.679,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 112.4345,
+          "p99_us": 240.36271000000008,
+          "max_us": 300.979,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 35.62,
+          "p99_us": 60.60190000000004,
+          "max_us": 74.74,
+          "at_least_1ms": 0
+        },
+        "physical": "d0e12693f40c3bde1b2bbd5bc0af20d12e27403fd8982c6b786f22936c3b3c08",
+        "residual": "add9d369f8a70f5e6b36540fdd68cb7fe481915c00df60c43a1949b112c7ae04",
+        "detected": "031c72854c6b5872d2c8dfb445cede27e03d5ae1748a0bdd14940a0c2f2b3e19"
+      },
+      {
+        "case": "loaded_place",
+        "arm": "free",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 194.77949999999998,
+          "p99_us": 306.3830000000001,
+          "max_us": 376.42,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 191.9395,
+          "p99_us": 302.66060000000004,
+          "max_us": 372.408,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 158.005,
+          "p99_us": 251.57319000000007,
+          "max_us": 322.449,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.59,
+          "p99_us": 63.01,
+          "max_us": 89.32,
+          "at_least_1ms": 0
+        },
+        "physical": "d0e12693f40c3bde1b2bbd5bc0af20d12e27403fd8982c6b786f22936c3b3c08",
+        "residual": "add9d369f8a70f5e6b36540fdd68cb7fe481915c00df60c43a1949b112c7ae04",
+        "detected": "15b3d861240c0fa86fe99a1696703404ab9079583f6537163e51b9a6d02282ab"
+      },
+      {
+        "case": "loaded_place",
+        "arm": "onset",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 195.404,
+          "p99_us": 296.2402100000002,
+          "max_us": 387.499,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 192.4995,
+          "p99_us": 293.0597,
+          "max_us": 383.049,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 158.4,
+          "p99_us": 244.81060000000002,
+          "max_us": 318.549,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.68,
+          "p99_us": 61.69150000000003,
+          "max_us": 85.859,
+          "at_least_1ms": 0
+        },
+        "physical": "d0e12693f40c3bde1b2bbd5bc0af20d12e27403fd8982c6b786f22936c3b3c08",
+        "residual": "add9d369f8a70f5e6b36540fdd68cb7fe481915c00df60c43a1949b112c7ae04",
+        "detected": "031c72854c6b5872d2c8dfb445cede27e03d5ae1748a0bdd14940a0c2f2b3e19"
+      },
+      {
+        "case": "detached",
+        "arm": "light",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 152.059,
+          "p99_us": 284.18190000000004,
+          "max_us": 402.199,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 149.3345,
+          "p99_us": 281.18,
+          "max_us": 398.308,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 112.939,
+          "p99_us": 236.68430000000012,
+          "max_us": 344.359,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 35.48,
+          "p99_us": 62.44030000000001,
+          "max_us": 92.38,
+          "at_least_1ms": 0
+        },
+        "physical": "6d00b1fb6fcb3c60eb32a3fd8e572aba2c259aa7f5167018e7fab858531aca15",
+        "residual": "b621d434ac43f715be7f99fc548942fd983742e7f37bb00050b2c988ebc8c5cb",
+        "detected": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a"
+      },
+      {
+        "case": "detached",
+        "arm": "free",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 192.669,
+          "p99_us": 300.25980000000004,
+          "max_us": 3906.532,
+          "at_least_1ms": 1
+        },
+        "sum_cpu": {
+          "p50_us": 189.88,
+          "p99_us": 297.14080000000007,
+          "max_us": 3903.348,
+          "at_least_1ms": 1
+        },
+        "detector_wall": {
+          "p50_us": 156.414,
+          "p99_us": 250.03040000000001,
+          "max_us": 3854.002,
+          "at_least_1ms": 1
+        },
+        "controller_wall": {
+          "p50_us": 36.29,
+          "p99_us": 59.722000000000044,
+          "max_us": 75.39,
+          "at_least_1ms": 0
+        },
+        "physical": "6d00b1fb6fcb3c60eb32a3fd8e572aba2c259aa7f5167018e7fab858531aca15",
+        "residual": "b621d434ac43f715be7f99fc548942fd983742e7f37bb00050b2c988ebc8c5cb",
+        "detected": "4e111609e0042d62816089775eb9b8a9ee00e264ba2e1c245c2265d792f1c9d6"
+      },
+      {
+        "case": "detached",
+        "arm": "onset",
+        "rep": 0,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 194.01999999999998,
+          "p99_us": 305.6927000000001,
+          "max_us": 465.179,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 191.204,
+          "p99_us": 302.23700000000014,
+          "max_us": 460.089,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 157.46,
+          "p99_us": 252.7348900000001,
+          "max_us": 360.62,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 35.6,
+          "p99_us": 62.34070000000002,
+          "max_us": 111.12,
+          "at_least_1ms": 0
+        },
+        "physical": "6d00b1fb6fcb3c60eb32a3fd8e572aba2c259aa7f5167018e7fab858531aca15",
+        "residual": "b621d434ac43f715be7f99fc548942fd983742e7f37bb00050b2c988ebc8c5cb",
+        "detected": "4e111609e0042d62816089775eb9b8a9ee00e264ba2e1c245c2265d792f1c9d6"
+      },
+      {
+        "case": "loaded_normal",
+        "arm": "onset",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 196.03449999999998,
+          "p99_us": 302.0369900000001,
+          "max_us": 398.45,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 193.144,
+          "p99_us": 298.94090000000006,
+          "max_us": 394.348,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 159.15,
+          "p99_us": 250.92880000000022,
+          "max_us": 330.379,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.159499999999994,
+          "p99_us": 61.28040000000001,
+          "max_us": 90.329,
+          "at_least_1ms": 0
+        },
+        "physical": "a135ca741b599ac224c7f296bbef3dd9a918172fa07752eab5670544241d5784",
+        "residual": "9a89f82cfda4c24c4ff42aeba41bfcd223205e3d9dd2d4b170af7ef7badedf29",
+        "detected": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a"
+      },
+      {
+        "case": "loaded_normal",
+        "arm": "free",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 193.1995,
+          "p99_us": 306.1645100000001,
+          "max_us": 380.929,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 190.4245,
+          "p99_us": 302.612,
+          "max_us": 377.268,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 156.8845,
+          "p99_us": 252.47951000000003,
+          "max_us": 311.609,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.0895,
+          "p99_us": 59.0501,
+          "max_us": 73.42,
+          "at_least_1ms": 0
+        },
+        "physical": "a135ca741b599ac224c7f296bbef3dd9a918172fa07752eab5670544241d5784",
+        "residual": "9a89f82cfda4c24c4ff42aeba41bfcd223205e3d9dd2d4b170af7ef7badedf29",
+        "detected": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a"
+      },
+      {
+        "case": "loaded_normal",
+        "arm": "light",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 160.0545,
+          "p99_us": 306.8569000000006,
+          "max_us": 416.079,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 157.2145,
+          "p99_us": 303.5598000000007,
+          "max_us": 411.949,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 119.169,
+          "p99_us": 258.48019000000005,
+          "max_us": 347.739,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 35.52,
+          "p99_us": 64.39120000000003,
+          "max_us": 76.64,
+          "at_least_1ms": 0
+        },
+        "physical": "a135ca741b599ac224c7f296bbef3dd9a918172fa07752eab5670544241d5784",
+        "residual": "9a89f82cfda4c24c4ff42aeba41bfcd223205e3d9dd2d4b170af7ef7badedf29",
+        "detected": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a"
+      },
+      {
+        "case": "empty_pick",
+        "arm": "onset",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 198.3995,
+          "p99_us": 345.50129000000004,
+          "max_us": 450.259,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 195.7245,
+          "p99_us": 341.70801,
+          "max_us": 446.799,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 161.53,
+          "p99_us": 292.14200000000005,
+          "max_us": 408.619,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.7195,
+          "p99_us": 67.20210000000007,
+          "max_us": 93.12,
+          "at_least_1ms": 0
+        },
+        "physical": "b40e06683a8f988e8445138f4e0d5a629424c4ba28c3d691ea83b49c5dd25859",
+        "residual": "0735ff922ce50e3c593b0f12ea4cc45f058674fdb384af23d48c20e3eaff5c40",
+        "detected": "c0413afd5bd3df619a136b58d2d4307bd4a9c684d2954ccc80914fb3b67540ae"
+      },
+      {
+        "case": "empty_pick",
+        "arm": "free",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 199.0445,
+          "p99_us": 327.75061000000005,
+          "max_us": 604.708,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 196.4145,
+          "p99_us": 324.09580000000017,
+          "max_us": 601.678,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 161.825,
+          "p99_us": 277.8411100000003,
+          "max_us": 547.419,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.85,
+          "p99_us": 62.13001000000002,
+          "max_us": 84.479,
+          "at_least_1ms": 0
+        },
+        "physical": "b40e06683a8f988e8445138f4e0d5a629424c4ba28c3d691ea83b49c5dd25859",
+        "residual": "0735ff922ce50e3c593b0f12ea4cc45f058674fdb384af23d48c20e3eaff5c40",
+        "detected": "c0413afd5bd3df619a136b58d2d4307bd4a9c684d2954ccc80914fb3b67540ae"
+      },
+      {
+        "case": "empty_pick",
+        "arm": "light",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 156.329,
+          "p99_us": 335.15000000000003,
+          "max_us": 507.739,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 153.75,
+          "p99_us": 331.2699,
+          "max_us": 503.608,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 118.32,
+          "p99_us": 289.6635000000001,
+          "max_us": 447.719,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 35.65,
+          "p99_us": 58.79300000000006,
+          "max_us": 93.38,
+          "at_least_1ms": 0
+        },
+        "physical": "b40e06683a8f988e8445138f4e0d5a629424c4ba28c3d691ea83b49c5dd25859",
+        "residual": "0735ff922ce50e3c593b0f12ea4cc45f058674fdb384af23d48c20e3eaff5c40",
+        "detected": "c0413afd5bd3df619a136b58d2d4307bd4a9c684d2954ccc80914fb3b67540ae"
+      },
+      {
+        "case": "loaded_place",
+        "arm": "onset",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 197.4995,
+          "p99_us": 305.77249000000006,
+          "max_us": 397.099,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 194.6345,
+          "p99_us": 302.2418,
+          "max_us": 393.599,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 160.19,
+          "p99_us": 253.07150000000001,
+          "max_us": 348.309,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.83,
+          "p99_us": 63.26050000000001,
+          "max_us": 81.14,
+          "at_least_1ms": 0
+        },
+        "physical": "d0e12693f40c3bde1b2bbd5bc0af20d12e27403fd8982c6b786f22936c3b3c08",
+        "residual": "add9d369f8a70f5e6b36540fdd68cb7fe481915c00df60c43a1949b112c7ae04",
+        "detected": "031c72854c6b5872d2c8dfb445cede27e03d5ae1748a0bdd14940a0c2f2b3e19"
+      },
+      {
+        "case": "loaded_place",
+        "arm": "free",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 195.49,
+          "p99_us": 301.3724000000001,
+          "max_us": 389.809,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 192.7,
+          "p99_us": 298.0015000000001,
+          "max_us": 383.949,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 158.65,
+          "p99_us": 249.5893,
+          "max_us": 310.879,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.52,
+          "p99_us": 61.370400000000004,
+          "max_us": 88.07,
+          "at_least_1ms": 0
+        },
+        "physical": "d0e12693f40c3bde1b2bbd5bc0af20d12e27403fd8982c6b786f22936c3b3c08",
+        "residual": "add9d369f8a70f5e6b36540fdd68cb7fe481915c00df60c43a1949b112c7ae04",
+        "detected": "15b3d861240c0fa86fe99a1696703404ab9079583f6537163e51b9a6d02282ab"
+      },
+      {
+        "case": "loaded_place",
+        "arm": "light",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 152.81900000000002,
+          "p99_us": 318.8799,
+          "max_us": 468.329,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 149.9745,
+          "p99_us": 314.4838000000001,
+          "max_us": 463.149,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 113.475,
+          "p99_us": 260.7843900000003,
+          "max_us": 368.069,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 35.41,
+          "p99_us": 66.49921,
+          "max_us": 102.66,
+          "at_least_1ms": 0
+        },
+        "physical": "d0e12693f40c3bde1b2bbd5bc0af20d12e27403fd8982c6b786f22936c3b3c08",
+        "residual": "add9d369f8a70f5e6b36540fdd68cb7fe481915c00df60c43a1949b112c7ae04",
+        "detected": "031c72854c6b5872d2c8dfb445cede27e03d5ae1748a0bdd14940a0c2f2b3e19"
+      },
+      {
+        "case": "detached",
+        "arm": "onset",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 198.52,
+          "p99_us": 309.07911000000024,
+          "max_us": 382.229,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 195.59949999999998,
+          "p99_us": 306.0344000000001,
+          "max_us": 378.999,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 160.8245,
+          "p99_us": 256.1956000000002,
+          "max_us": 325.319,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 37.25,
+          "p99_us": 62.084100000000085,
+          "max_us": 83.629,
+          "at_least_1ms": 0
+        },
+        "physical": "6d00b1fb6fcb3c60eb32a3fd8e572aba2c259aa7f5167018e7fab858531aca15",
+        "residual": "b621d434ac43f715be7f99fc548942fd983742e7f37bb00050b2c988ebc8c5cb",
+        "detected": "4e111609e0042d62816089775eb9b8a9ee00e264ba2e1c245c2265d792f1c9d6"
+      },
+      {
+        "case": "detached",
+        "arm": "free",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 194.67,
+          "p99_us": 308.3004,
+          "max_us": 433.459,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 191.84,
+          "p99_us": 304.60909999999996,
+          "max_us": 429.559,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 157.879,
+          "p99_us": 254.35581000000013,
+          "max_us": 375.189,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 36.58,
+          "p99_us": 61.61030000000001,
+          "max_us": 80.45,
+          "at_least_1ms": 0
+        },
+        "physical": "6d00b1fb6fcb3c60eb32a3fd8e572aba2c259aa7f5167018e7fab858531aca15",
+        "residual": "b621d434ac43f715be7f99fc548942fd983742e7f37bb00050b2c988ebc8c5cb",
+        "detected": "4e111609e0042d62816089775eb9b8a9ee00e264ba2e1c245c2265d792f1c9d6"
+      },
+      {
+        "case": "detached",
+        "arm": "light",
+        "rep": 1,
+        "cycles": 6000,
+        "sum_wall": {
+          "p50_us": 145.59449999999998,
+          "p99_us": 270.34550000000013,
+          "max_us": 378.32,
+          "at_least_1ms": 0
+        },
+        "sum_cpu": {
+          "p50_us": 142.8145,
+          "p99_us": 267.44530000000015,
+          "max_us": 374.579,
+          "at_least_1ms": 0
+        },
+        "detector_wall": {
+          "p50_us": 108.8395,
+          "p99_us": 227.37100000000004,
+          "max_us": 327.759,
+          "at_least_1ms": 0
+        },
+        "controller_wall": {
+          "p50_us": 35.17,
+          "p99_us": 57.12971000000001,
+          "max_us": 84.97,
+          "at_least_1ms": 0
+        },
+        "physical": "6d00b1fb6fcb3c60eb32a3fd8e572aba2c259aa7f5167018e7fab858531aca15",
+        "residual": "b621d434ac43f715be7f99fc548942fd983742e7f37bb00050b2c988ebc8c5cb",
+        "detected": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a"
+      }
+    ]
+  },
+  "authenticated_run_sha256": "11881ede396a4f5c0f0071b5ed79acccd6b629b0db69f05ec3cc1d193791c083"
+}

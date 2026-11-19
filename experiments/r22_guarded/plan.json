@@ -1,0 +1,26 @@
+{
+  "schema": "r22-guarded-release-plan.v1",
+  "status": "FROZEN_BEFORE_TARGETED_OUTCOMES",
+  "base": "experiments.r22_combined.core.Detector",
+  "mechanism": "At a positive-mass loaded-to-unloaded transition, preserve outgoing modeled yaw momentum only when the detector's immediately preceding combined sensor report was active. If that report was quiet, reset YawBalance and use the original R21 normal-only calibrated bank during the unloaded interval. Empty-mass command transitions remain continuous; positive pickup retains the original reset semantics.",
+  "causal_basis": "An active pre-release sensor report establishes that the outgoing disturbance is still observed and continuity avoids splitting one physical event. A quiet report provides no such evidence; retaining an uncertain outgoing-model correction can create a new unloaded event, so reset is conservative.",
+  "targeted_exposed_cases": [319, 330, 335, 339, 349],
+  "required_checks": [
+    "exact normalized signed force and physical prefixes against R10",
+    "attributable rises against each matched no-force twin",
+    "false edges after a quiet pre-release interval",
+    "empty-mass command continuity",
+    "positive-mass pickup reset",
+    "multiple release-pickup cycles",
+    "8 kg no-force behavior"
+  ],
+  "forbidden": [
+    "clock or force labels in switching",
+    "case blacklist",
+    "previous-episode state",
+    "threshold retuning",
+    "scoring suppression",
+    "stock or frozen-source edits",
+    "r22_challenge inspection"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema":"r13-innovation-evidence-summary.v1",
+  "decision":"STOP_NORMAL_AUDIT_FAILED_NO_POSITIVES_OPENED",
+  "candidate":"Continuously active causal 8/16/32 ms adjacent-step GLR in six joint-residual coordinates, with 100 ms phase-conditioned full-covariance normal whitening and a familywise normal-only threshold, OR unchanged R10.",
+  "materially_distinct":true,
+  "comparison":{"r10_fir":"one 8-gap-8 wrench contrast with diagonal scaling","r11_coherent":"one gated 20 ms accumulated wrench vector","r13":"three adjacent step templates in joint residual, full covariance by public phase, continuously active"},
+  "normal_only":{"fit_episodes":8,"threshold_episodes":4,"audit_episodes":8,"threshold":7.684282576185337,"threshold_normal_max":7.080269120176512,"audit_failures":[{"case":"audit_1_offset","max":88.19607174410523,"crossings":82,"new_off_tool_rises_ms":[3915]},{"case":"audit_3_normal","max":9.069382156684489,"crossings":5,"new_off_tool_rises_ms":[4000]},{"case":"audit_3_offset","max":337.0223144975403,"crossings":220,"new_off_tool_rises_ms":[3857,4000]}]},
+  "interpretation":"The strongest 32 ms persistent-step evidence is not collision-specific. Offset/tool dynamics and the natural release transition occupy the same whitened joint-residual step subspace. Even the no-tool audit produces a new OR event at 4.000 s. Passing the observed offset envelope by threshold inflation would require a threshold above 337 versus 7.684 frozen, eliminating the intended weak-signal sensitivity.",
+  "positive_collision_data_opened":false,
+  "independent_validation_opened":false,
+  "r12_optional_audit_opened":false,
+  "retuning":false,
+  "portable_artifacts":{"plan":"plan.json","channel":"channel.py","calibration":"calibrate.py","attribution":"diagnose.py","tests":"test_channel.py"},
+  "private_artifacts":{"normal_model_sha256":"ea4a332ec22cb4253a8b0b3cfb03c104170958c3594b7e4b46c1ec2554a9bffc","normal_attribution_sha256":"d1629aa9051c82a16b9319d0fb32f6107f30aff91ae588bc8e93d5ed292e8de3"},
+  "pins":{"plan":"45d1dfa074363b78e4fd3595fdcea50967b6841cb580be0b0d746b68d82ed5e9","channel":"4acc115e6e87b5a5052f7d62855e8d287fa7df0f2ad3aff6dbe1ead94323de1a","calibrate":"6644fc4e931db09cc93521506900ee63334aa2ddaf7212ff31045df923c5cc49","diagnose":"2372de9f848cd24e4fa1303d25a3a892fd34f0744331eeb2b0b2bc758c6eed2f","test":"ceebcb45ae1426fef989141ffd2181a47b679cafcb675fa2c169b60a12be4d1f"},
+  "next_physics":"A future attempt must causally predict allowed-sensor self-action at release/offset transitions before evidence accumulation, or fit a demonstrably broader independent offset-normal distribution before freezing. Reweighting horizons/components or raising this threshold after audit is posthoc and is not pursued."
+}

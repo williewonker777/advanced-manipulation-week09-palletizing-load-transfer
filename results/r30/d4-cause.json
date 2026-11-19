@@ -1,0 +1,1941 @@
+{
+  "all_force_exact": true,
+  "all_physics_exact": true,
+  "episodes": 95,
+  "groups": {
+    "clean_none_controls": {
+      "ids": [
+        10,
+        25,
+        47,
+        101
+      ],
+      "rises_by_arm": {
+        "c3": 0,
+        "geometry": 0,
+        "headroom": 0,
+        "r29_composed": 0,
+        "r29_early": 0
+      }
+    },
+    "geometry_only": {
+      "d4_attributed_duplicate_ids_by_arm": {
+        "c3": [],
+        "geometry": [
+          262
+        ],
+        "headroom": [],
+        "r29_composed": [],
+        "r29_early": [
+          262
+        ]
+      },
+      "ids": [
+        262
+      ]
+    },
+    "headroom_14": {
+      "d4_attributed_duplicate_ids_by_arm": {
+        "c3": [],
+        "geometry": [
+          266,
+          269,
+          270,
+          276,
+          279,
+          280,
+          286,
+          287,
+          289,
+          290,
+          297,
+          298,
+          308,
+          316
+        ],
+        "headroom": [
+          266,
+          269,
+          270,
+          276,
+          279,
+          280,
+          286,
+          287,
+          289,
+          290,
+          297,
+          298,
+          308,
+          316
+        ],
+        "r29_composed": [
+          316
+        ],
+        "r29_early": [
+          266,
+          269,
+          270,
+          276,
+          279,
+          280,
+          286,
+          287,
+          289,
+          290,
+          297,
+          298,
+          308,
+          316
+        ]
+      },
+      "ids": [
+        266,
+        269,
+        270,
+        276,
+        279,
+        280,
+        286,
+        287,
+        289,
+        290,
+        297,
+        298,
+        308,
+        316
+      ]
+    }
+  },
+  "prospective_rows_run": 0,
+  "rows": [
+    {
+      "force_nonzero": [
+        null,
+        null
+      ],
+      "id": 10,
+      "methods": {
+        "c3": {
+          "intervals": [],
+          "rises": []
+        },
+        "geometry": {
+          "intervals": [],
+          "rises": []
+        },
+        "headroom": {
+          "intervals": [],
+          "rises": []
+        },
+        "r29_composed": {
+          "intervals": [],
+          "rises": []
+        },
+        "r29_early": {
+          "intervals": [],
+          "rises": []
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        null,
+        null
+      ],
+      "id": 25,
+      "methods": {
+        "c3": {
+          "intervals": [],
+          "rises": []
+        },
+        "geometry": {
+          "intervals": [],
+          "rises": []
+        },
+        "headroom": {
+          "intervals": [],
+          "rises": []
+        },
+        "r29_composed": {
+          "intervals": [],
+          "rises": []
+        },
+        "r29_early": {
+          "intervals": [],
+          "rises": []
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        null,
+        null
+      ],
+      "id": 47,
+      "methods": {
+        "c3": {
+          "intervals": [],
+          "rises": []
+        },
+        "geometry": {
+          "intervals": [],
+          "rises": []
+        },
+        "headroom": {
+          "intervals": [],
+          "rises": []
+        },
+        "r29_composed": {
+          "intervals": [],
+          "rises": []
+        },
+        "r29_early": {
+          "intervals": [],
+          "rises": []
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        null,
+        null
+      ],
+      "id": 101,
+      "methods": {
+        "c3": {
+          "intervals": [],
+          "rises": []
+        },
+        "geometry": {
+          "intervals": [],
+          "rises": []
+        },
+        "headroom": {
+          "intervals": [],
+          "rises": []
+        },
+        "r29_composed": {
+          "intervals": [],
+          "rises": []
+        },
+        "r29_early": {
+          "intervals": [],
+          "rises": []
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        3101,
+        3219
+      ],
+      "id": 262,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              3137,
+              3240
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 10.0,
+              "source": "inherited_or_unclassified",
+              "tick": 3137
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              3128,
+              3132
+            ],
+            [
+              3137,
+              3240
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 10.0,
+              "source": "geometry_optional_notice",
+              "tick": 3128
+            },
+            {
+              "actual_N": 10.0,
+              "source": "native:yaw",
+              "tick": 3137
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              3137,
+              3240
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 10.0,
+              "source": "native:yaw",
+              "tick": 3137
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              3137,
+              3240
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 10.0,
+              "source": "native:yaw",
+              "tick": 3137
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              3128,
+              3132
+            ],
+            [
+              3137,
+              3240
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 10.0,
+              "source": "early_optional_notice",
+              "tick": 3128
+            },
+            {
+              "actual_N": 10.0,
+              "source": "native:yaw",
+              "tick": 3137
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        2701,
+        2820
+      ],
+      "id": 266,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              2740,
+              2834
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 10.0,
+              "source": "inherited_or_unclassified",
+              "tick": 2740
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              2729,
+              2733
+            ],
+            [
+              2740,
+              2834
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 10.0,
+              "source": "geometry_optional_notice",
+              "tick": 2729
+            },
+            {
+              "actual_N": 10.0,
+              "source": "native:yaw",
+              "tick": 2740
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              2729,
+              2733
+            ],
+            [
+              2740,
+              2834
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 10.0,
+              "source": "headroom_optional_notice",
+              "tick": 2729
+            },
+            {
+              "actual_N": 10.0,
+              "source": "native:yaw",
+              "tick": 2740
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              2740,
+              2834
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 10.0,
+              "source": "native:yaw",
+              "tick": 2740
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              2729,
+              2733
+            ],
+            [
+              2740,
+              2834
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 10.0,
+              "source": "early_optional_notice",
+              "tick": 2729
+            },
+            {
+              "actual_N": 10.0,
+              "source": "native:yaw",
+              "tick": 2740
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        1900,
+        2019
+      ],
+      "id": 269,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              1941,
+              2046
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 15.0,
+              "source": "inherited_or_unclassified",
+              "tick": 1941
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              1931,
+              1935
+            ],
+            [
+              1946,
+              2046
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 15.0,
+              "source": "geometry_optional_notice",
+              "tick": 1931
+            },
+            {
+              "actual_N": 15.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 1946
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              1931,
+              1935
+            ],
+            [
+              1946,
+              2046
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 15.0,
+              "source": "headroom_optional_notice",
+              "tick": 1931
+            },
+            {
+              "actual_N": 15.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 1946
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              1941,
+              2046
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 15.0,
+              "source": "native:normal+r8_base",
+              "tick": 1941
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              1931,
+              1935
+            ],
+            [
+              1946,
+              2046
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 15.0,
+              "source": "early_optional_notice",
+              "tick": 1931
+            },
+            {
+              "actual_N": 15.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 1946
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        2300,
+        2419
+      ],
+      "id": 270,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              2337,
+              2446
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 15.0,
+              "source": "inherited_or_unclassified",
+              "tick": 2337
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              2326,
+              2330
+            ],
+            [
+              2337,
+              2446
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 15.0,
+              "source": "geometry_optional_notice",
+              "tick": 2326
+            },
+            {
+              "actual_N": 15.0,
+              "source": "native:yaw",
+              "tick": 2337
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              2326,
+              2330
+            ],
+            [
+              2337,
+              2446
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 15.0,
+              "source": "headroom_optional_notice",
+              "tick": 2326
+            },
+            {
+              "actual_N": 15.0,
+              "source": "native:yaw",
+              "tick": 2337
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              2337,
+              2446
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 15.0,
+              "source": "native:yaw",
+              "tick": 2337
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              2326,
+              2330
+            ],
+            [
+              2337,
+              2446
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 15.0,
+              "source": "early_optional_notice",
+              "tick": 2326
+            },
+            {
+              "actual_N": 15.0,
+              "source": "native:yaw",
+              "tick": 2337
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        2701,
+        2820
+      ],
+      "id": 276,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              2733,
+              2845
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 14.999999999999998,
+              "source": "inherited_or_unclassified",
+              "tick": 2733
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              2726,
+              2730
+            ],
+            [
+              2733,
+              2845
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 14.999999999999998,
+              "source": "geometry_optional_notice",
+              "tick": 2726
+            },
+            {
+              "actual_N": 14.999999999999998,
+              "source": "native:yaw",
+              "tick": 2733
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              2726,
+              2730
+            ],
+            [
+              2733,
+              2845
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 14.999999999999998,
+              "source": "headroom_optional_notice",
+              "tick": 2726
+            },
+            {
+              "actual_N": 14.999999999999998,
+              "source": "native:yaw",
+              "tick": 2733
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              2733,
+              2845
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 14.999999999999998,
+              "source": "native:yaw",
+              "tick": 2733
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              2726,
+              2730
+            ],
+            [
+              2733,
+              2845
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 14.999999999999998,
+              "source": "early_optional_notice",
+              "tick": 2726
+            },
+            {
+              "actual_N": 14.999999999999998,
+              "source": "native:yaw",
+              "tick": 2733
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        1900,
+        2019
+      ],
+      "id": 279,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              1932,
+              2057
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.0,
+              "source": "inherited_or_unclassified",
+              "tick": 1932
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              1926,
+              1930
+            ],
+            [
+              1934,
+              2057
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.0,
+              "source": "geometry_optional_notice",
+              "tick": 1926
+            },
+            {
+              "actual_N": 25.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 1934
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              1926,
+              1930
+            ],
+            [
+              1934,
+              2057
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.0,
+              "source": "headroom_optional_notice",
+              "tick": 1926
+            },
+            {
+              "actual_N": 25.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 1934
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              1932,
+              2057
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.0,
+              "source": "native:normal+r8_base",
+              "tick": 1932
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              1926,
+              1930
+            ],
+            [
+              1934,
+              2057
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.0,
+              "source": "early_optional_notice",
+              "tick": 1926
+            },
+            {
+              "actual_N": 25.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 1934
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        2300,
+        2419
+      ],
+      "id": 280,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              2332,
+              2457
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.0,
+              "source": "inherited_or_unclassified",
+              "tick": 2332
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              2323,
+              2327
+            ],
+            [
+              2334,
+              2457
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.0,
+              "source": "geometry_optional_notice",
+              "tick": 2323
+            },
+            {
+              "actual_N": 25.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 2334
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              2323,
+              2327
+            ],
+            [
+              2334,
+              2457
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.0,
+              "source": "headroom_optional_notice",
+              "tick": 2323
+            },
+            {
+              "actual_N": 25.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 2334
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              2332,
+              2457
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.0,
+              "source": "native:normal+r8_base",
+              "tick": 2332
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              2323,
+              2327
+            ],
+            [
+              2334,
+              2457
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.0,
+              "source": "early_optional_notice",
+              "tick": 2323
+            },
+            {
+              "actual_N": 25.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 2334
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        2701,
+        2820
+      ],
+      "id": 286,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              2730,
+              2857
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 24.999999999999996,
+              "source": "inherited_or_unclassified",
+              "tick": 2730
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              2723,
+              2727
+            ],
+            [
+              2730,
+              2857
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 24.999999999999996,
+              "source": "geometry_optional_notice",
+              "tick": 2723
+            },
+            {
+              "actual_N": 24.999999999999996,
+              "source": "native:yaw",
+              "tick": 2730
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              2723,
+              2727
+            ],
+            [
+              2730,
+              2857
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 24.999999999999996,
+              "source": "headroom_optional_notice",
+              "tick": 2723
+            },
+            {
+              "actual_N": 24.999999999999996,
+              "source": "native:yaw",
+              "tick": 2730
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              2730,
+              2857
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 24.999999999999996,
+              "source": "native:yaw",
+              "tick": 2730
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              2723,
+              2727
+            ],
+            [
+              2730,
+              2857
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 24.999999999999996,
+              "source": "early_optional_notice",
+              "tick": 2723
+            },
+            {
+              "actual_N": 24.999999999999996,
+              "source": "native:yaw",
+              "tick": 2730
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        3101,
+        3219
+      ],
+      "id": 287,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              3135,
+              3252
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.000000000000004,
+              "source": "inherited_or_unclassified",
+              "tick": 3135
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              3127,
+              3131
+            ],
+            [
+              3174,
+              3252
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.000000000000004,
+              "source": "geometry_optional_notice",
+              "tick": 3127
+            },
+            {
+              "actual_N": 25.000000000000004,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3174
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              3127,
+              3131
+            ],
+            [
+              3174,
+              3252
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.000000000000004,
+              "source": "headroom_optional_notice",
+              "tick": 3127
+            },
+            {
+              "actual_N": 25.000000000000004,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3174
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              3135,
+              3252
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.000000000000004,
+              "source": "native:normal+r8_base",
+              "tick": 3135
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              3127,
+              3131
+            ],
+            [
+              3174,
+              3252
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 25.000000000000004,
+              "source": "early_optional_notice",
+              "tick": 3127
+            },
+            {
+              "actual_N": 25.000000000000004,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3174
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        1900,
+        2019
+      ],
+      "id": 289,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              1927,
+              2067
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.0,
+              "source": "inherited_or_unclassified",
+              "tick": 1927
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              1922,
+              1926
+            ],
+            [
+              1927,
+              2067
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.0,
+              "source": "geometry_optional_notice",
+              "tick": 1922
+            },
+            {
+              "actual_N": 40.0,
+              "source": "native:directional+normal+r8_base",
+              "tick": 1927
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              1922,
+              1926
+            ],
+            [
+              1927,
+              2067
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.0,
+              "source": "headroom_optional_notice",
+              "tick": 1922
+            },
+            {
+              "actual_N": 40.0,
+              "source": "native:directional+normal+r8_base",
+              "tick": 1927
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              1927,
+              2067
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.0,
+              "source": "native:directional+normal+r8_base",
+              "tick": 1927
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              1922,
+              1926
+            ],
+            [
+              1927,
+              2067
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.0,
+              "source": "early_optional_notice",
+              "tick": 1922
+            },
+            {
+              "actual_N": 40.0,
+              "source": "native:directional+normal+r8_base",
+              "tick": 1927
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        2300,
+        2419
+      ],
+      "id": 290,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              2327,
+              2466
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.0,
+              "source": "inherited_or_unclassified",
+              "tick": 2327
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              2320,
+              2324
+            ],
+            [
+              2328,
+              2466
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.0,
+              "source": "geometry_optional_notice",
+              "tick": 2320
+            },
+            {
+              "actual_N": 40.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 2328
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              2320,
+              2324
+            ],
+            [
+              2328,
+              2466
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.0,
+              "source": "headroom_optional_notice",
+              "tick": 2320
+            },
+            {
+              "actual_N": 40.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 2328
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              2327,
+              2466
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.0,
+              "source": "native:normal+r8_base",
+              "tick": 2327
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              2320,
+              2324
+            ],
+            [
+              2328,
+              2466
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.0,
+              "source": "early_optional_notice",
+              "tick": 2320
+            },
+            {
+              "actual_N": 40.0,
+              "source": "native:normal+r8_base+yaw",
+              "tick": 2328
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        3101,
+        3219
+      ],
+      "id": 297,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              3128,
+              3262
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.00000000000001,
+              "source": "inherited_or_unclassified",
+              "tick": 3128
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              3125,
+              3129
+            ],
+            [
+              3133,
+              3262
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.00000000000001,
+              "source": "geometry_optional_notice",
+              "tick": 3125
+            },
+            {
+              "actual_N": 40.00000000000001,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3133
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              3125,
+              3129
+            ],
+            [
+              3133,
+              3262
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.00000000000001,
+              "source": "headroom_optional_notice",
+              "tick": 3125
+            },
+            {
+              "actual_N": 40.00000000000001,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3133
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              3128,
+              3262
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.00000000000001,
+              "source": "native:normal+r8_base",
+              "tick": 3128
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              3125,
+              3129
+            ],
+            [
+              3133,
+              3262
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.00000000000001,
+              "source": "early_optional_notice",
+              "tick": 3125
+            },
+            {
+              "actual_N": 40.00000000000001,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3133
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        3401,
+        3519
+      ],
+      "id": 298,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              3428,
+              3561
+            ],
+            [
+              3818,
+              3862
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.00000000000001,
+              "source": "inherited_or_unclassified",
+              "tick": 3428
+            },
+            {
+              "actual_N": 0.0,
+              "source": "inherited_or_unclassified",
+              "tick": 3818
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              3422,
+              3426
+            ],
+            [
+              3440,
+              3561
+            ],
+            [
+              3818,
+              3862
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.00000000000001,
+              "source": "geometry_optional_notice",
+              "tick": 3422
+            },
+            {
+              "actual_N": 40.00000000000001,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3440
+            },
+            {
+              "actual_N": 0.0,
+              "source": "native:directional+r8_base",
+              "tick": 3818
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              3422,
+              3426
+            ],
+            [
+              3440,
+              3561
+            ],
+            [
+              3818,
+              3862
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.00000000000001,
+              "source": "headroom_optional_notice",
+              "tick": 3422
+            },
+            {
+              "actual_N": 40.00000000000001,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3440
+            },
+            {
+              "actual_N": 0.0,
+              "source": "native:directional+r8_base",
+              "tick": 3818
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              3428,
+              3561
+            ],
+            [
+              3818,
+              3862
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.00000000000001,
+              "source": "native:normal+r8_base",
+              "tick": 3428
+            },
+            {
+              "actual_N": 0.0,
+              "source": "native:directional+r8_base",
+              "tick": 3818
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              3422,
+              3426
+            ],
+            [
+              3440,
+              3561
+            ],
+            [
+              3818,
+              3862
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 40.00000000000001,
+              "source": "early_optional_notice",
+              "tick": 3422
+            },
+            {
+              "actual_N": 40.00000000000001,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3440
+            },
+            {
+              "actual_N": 0.0,
+              "source": "native:directional+r8_base",
+              "tick": 3818
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        3401,
+        3519
+      ],
+      "id": 308,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              3422,
+              3578
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 100.00000000000001,
+              "source": "inherited_or_unclassified",
+              "tick": 3422
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              3418,
+              3422
+            ],
+            [
+              3424,
+              3578
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 90.0000000000012,
+              "source": "geometry_optional_notice",
+              "tick": 3418
+            },
+            {
+              "actual_N": 100.00000000000001,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3424
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              3418,
+              3422
+            ],
+            [
+              3424,
+              3578
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 90.0000000000012,
+              "source": "headroom_optional_notice",
+              "tick": 3418
+            },
+            {
+              "actual_N": 100.00000000000001,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3424
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              3422,
+              3578
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 100.00000000000001,
+              "source": "native:normal+r8_base",
+              "tick": 3422
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              3418,
+              3422
+            ],
+            [
+              3424,
+              3578
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 90.0000000000012,
+              "source": "early_optional_notice",
+              "tick": 3418
+            },
+            {
+              "actual_N": 100.00000000000001,
+              "source": "native:directional+normal+r8_base",
+              "tick": 3424
+            }
+          ]
+        }
+      }
+    },
+    {
+      "force_nonzero": [
+        3861,
+        3979
+      ],
+      "id": 316,
+      "methods": {
+        "c3": {
+          "intervals": [
+            [
+              3951,
+              3989
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 5.0,
+              "source": "inherited_or_unclassified",
+              "tick": 3951
+            }
+          ]
+        },
+        "geometry": {
+          "intervals": [
+            [
+              3951,
+              3963
+            ],
+            [
+              3964,
+              3982
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 5.0,
+              "source": "native:detached",
+              "tick": 3951
+            },
+            {
+              "actual_N": 3.999999999999975,
+              "source": "native:detached",
+              "tick": 3964
+            }
+          ]
+        },
+        "headroom": {
+          "intervals": [
+            [
+              3951,
+              3963
+            ],
+            [
+              3964,
+              3982
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 5.0,
+              "source": "native:detached",
+              "tick": 3951
+            },
+            {
+              "actual_N": 3.999999999999975,
+              "source": "native:detached",
+              "tick": 3964
+            }
+          ]
+        },
+        "r29_composed": {
+          "intervals": [
+            [
+              3951,
+              3963
+            ],
+            [
+              3964,
+              3982
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 5.0,
+              "source": "native:detached",
+              "tick": 3951
+            },
+            {
+              "actual_N": 3.999999999999975,
+              "source": "native:detached",
+              "tick": 3964
+            }
+          ]
+        },
+        "r29_early": {
+          "intervals": [
+            [
+              3951,
+              3963
+            ],
+            [
+              3964,
+              3982
+            ]
+          ],
+          "rises": [
+            {
+              "actual_N": 5.0,
+              "source": "native:detached",
+              "tick": 3951
+            },
+            {
+              "actual_N": 3.999999999999975,
+              "source": "native:detached",
+              "tick": 3964
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "schema": "r30-d4-causal-replay-summary.v1",
+  "source_sha256": "da0d800c151db065bdbb89ae62ba831e8d32dd19519b79b069e6abf0248b7de5"
+}

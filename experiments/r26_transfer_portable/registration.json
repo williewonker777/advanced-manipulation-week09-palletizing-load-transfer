@@ -1,0 +1,28 @@
+{
+  "schema": "r26-transfer-arm-registration.v1",
+  "classification": "finite local simulation research; never the ORIGINAL course demo",
+  "arms": {
+    "baseline": {
+      "controller": "r1_torque:Controller",
+      "detector": "experiments.r14_stock_handoff.detector:Detector",
+      "status": "frozen_existing_reference"
+    },
+    "r24": {
+      "controller": "experiments.r26_delivery_pair.controller:Controller",
+      "detector": "experiments.r14_stock_handoff.detector:Detector",
+      "status": "frozen_existing_reference"
+    },
+    "registered-c1": {
+      "controller": "experiments.r26_delivery_pair.controller:Controller",
+      "detector": "experiments.r26_delivery_pair.candidate:Detector",
+      "status": "frozen_registered_candidate",
+      "detector_sha256": "ef6a55ad84b6770aed59644d0d4e6e8686bb0f042756b4817ed811f74cbe4655"
+    }
+  },
+  "original": {
+    "entrypoint": ["run.py", "--box", "8"],
+    "controller": "servo_controller",
+    "detector": "collision_detector",
+    "execution": "tools.course_example; separate from every research arm"
+  }
+}

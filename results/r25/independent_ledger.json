@@ -1,0 +1,113 @@
+{
+  "schema": "r25-secondary-event-ledger.v1",
+  "scope": "Descriptive post-run accounting, not a replacement qualification.",
+  "episodes": 198,
+  "rows": 36,
+  "failed_rows": 15,
+  "protocol_claims": {
+    "safety_qualification": false,
+    "incumbent_safety_floor_pass": false,
+    "positive_qualification_pass": false,
+    "positive_gain_count": 0,
+    "absolute_miss_count": 21
+  },
+  "strict_and_alarm_totals": {
+    "r24_joint": {
+      "total": {
+        "false_rises": 0,
+        "stuck_tails": 0,
+        "real_tool_contacts": 6,
+        "tool_detections": 4,
+        "positive_slots": 75,
+        "strict_slots": 54,
+        "extra_rises": 4,
+        "slots_with_multiple_rises": 3,
+        "paired_rows": 12,
+        "five_of_five_rows": 3
+      },
+      "by_slot": {
+        "single": {
+          "strict": 9,
+          "total": 15
+        },
+        "long_single": {
+          "strict": 12,
+          "total": 12
+        },
+        "isolated_first": {
+          "strict": 12,
+          "total": 12
+        },
+        "isolated_second": {
+          "strict": 6,
+          "total": 12
+        },
+        "both_first": {
+          "strict": 12,
+          "total": 12
+        },
+        "both_second": {
+          "strict": 3,
+          "total": 12
+        }
+      },
+      "miss_reasons": {
+        "no_attributable_rise": 15,
+        "multiple_rises": 3,
+        "insufficient_preceding_quiet": 3
+      }
+    },
+    "r25": {
+      "total": {
+        "false_rises": 0,
+        "stuck_tails": 0,
+        "real_tool_contacts": 6,
+        "tool_detections": 4,
+        "positive_slots": 75,
+        "strict_slots": 54,
+        "extra_rises": 4,
+        "slots_with_multiple_rises": 3,
+        "paired_rows": 12,
+        "five_of_five_rows": 3
+      },
+      "by_slot": {
+        "single": {
+          "strict": 9,
+          "total": 15
+        },
+        "long_single": {
+          "strict": 12,
+          "total": 12
+        },
+        "isolated_first": {
+          "strict": 12,
+          "total": 12
+        },
+        "isolated_second": {
+          "strict": 6,
+          "total": 12
+        },
+        "both_first": {
+          "strict": 12,
+          "total": 12
+        },
+        "both_second": {
+          "strict": 3,
+          "total": 12
+        }
+      },
+      "miss_reasons": {
+        "no_attributable_rise": 15,
+        "multiple_rises": 3,
+        "insufficient_preceding_quiet": 3
+      }
+    }
+  },
+  "changed_full_scientific_records": [],
+  "changed_events": [],
+  "failed_guard_row_counts": {
+    "candidate_zero_duplicate": 3
+  },
+  "cases_failing_any_guard": 3,
+  "independent_result_sha256": "83987dba8ce14fb6cc0283021d6bd062ac2fedb317ceb8da67c3d4b2b8c4f4fe"
+}

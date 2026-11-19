@@ -1,0 +1,640 @@
+{
+  "candidate_sha256": "16b1e899933066a820a606c9a5c5fe45c391c47a6c2584556271c34362fc7c66",
+  "close_pairs": {
+    "both_second": {
+      "r25_joint": 2,
+      "r26": 2
+    },
+    "controls_include_detectable_second": true,
+    "counts": {
+      "r25_joint": {
+        "all_four": 2,
+        "duplicate_edges": 0,
+        "duplicate_slots": 0,
+        "false_rises": 0,
+        "slots": 30,
+        "strict": 26
+      },
+      "r26": {
+        "all_four": 2,
+        "duplicate_edges": 0,
+        "duplicate_slots": 0,
+        "false_rises": 0,
+        "slots": 30,
+        "strict": 26
+      }
+    },
+    "episodes": 60,
+    "guard_losses": [],
+    "passed": true
+  },
+  "evidence_sha256": {
+    "broad.json": "ca70d0b3fdae8d45838757b463a1117acf3ccc24bcb88b58b378e424ea16c2fa",
+    "focus.json": "5b9603db96487c3b0599a8135f0fef43ac608129b0fac88205bb2cda96900173",
+    "full.json": "6cc83a4bccde5813567ea8b8e2f02b3fef45060594afde6e3a918b1e5509367d",
+    "pairs.json": "508c6d3e96f7289b4d5e6527b460efb75e915086ff8a694f0b25d391d1a2bd50"
+  },
+  "full_d4": {
+    "comparisons": {
+      "new_vs_c3": {
+        "changed_event_or_active_cost_vs_baseline": [
+          311,
+          315,
+          316,
+          317,
+          320,
+          321,
+          325,
+          326,
+          327,
+          328,
+          330,
+          331,
+          335,
+          336,
+          337,
+          338,
+          340,
+          341,
+          345,
+          346,
+          347,
+          355,
+          357
+        ],
+        "duplicate_slots": [
+          244,
+          304
+        ],
+        "losses": [],
+        "new_strict_ids": [],
+        "physical_force_prefix_exact": 385,
+        "strict": 146,
+        "target": {
+          "c3": {
+            "delay_ms": 91,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "c3_active_samples": 38,
+          "candidate": {
+            "delay_ms": 91,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "candidate_active_samples": 12,
+          "failures": [],
+          "gates": {
+            "duration_plus_5_samples": true,
+            "latency_plus_5_ms": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "physical_force_prefix_exact": true,
+            "strict_positive_retained": true,
+            "tool_retained": true,
+            "tool_time_plus_5_ms": true
+          },
+          "id": 316,
+          "kind": "collision"
+        }
+      },
+      "new_vs_released": {
+        "changed_event_or_active_cost_vs_baseline": [
+          316
+        ],
+        "duplicate_slots": [
+          244,
+          304
+        ],
+        "losses": [],
+        "new_strict_ids": [],
+        "physical_force_prefix_exact": 385,
+        "strict": 146,
+        "target": {
+          "c3": {
+            "delay_ms": 91,
+            "delayed_false": [],
+            "duplicate": 1,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 1,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "c3_active_samples": 30,
+          "candidate": {
+            "delay_ms": 91,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "candidate_active_samples": 12,
+          "failures": [],
+          "gates": {
+            "duration_plus_5_samples": true,
+            "latency_plus_5_ms": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": true,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "physical_force_prefix_exact": true,
+            "strict_positive_retained": true,
+            "tool_retained": true,
+            "tool_time_plus_5_ms": true
+          },
+          "id": 316,
+          "kind": "collision"
+        }
+      },
+      "released_vs_c3": {
+        "changed_event_or_active_cost_vs_baseline": [
+          311,
+          315,
+          316,
+          317,
+          320,
+          321,
+          325,
+          326,
+          327,
+          328,
+          330,
+          331,
+          335,
+          336,
+          337,
+          338,
+          340,
+          341,
+          345,
+          346,
+          347,
+          355,
+          357
+        ],
+        "duplicate_slots": [
+          244,
+          304,
+          316
+        ],
+        "losses": [
+          {
+            "failures": [
+              "no_new_duplicate"
+            ],
+            "id": 316
+          }
+        ],
+        "new_strict_ids": [],
+        "physical_force_prefix_exact": 385,
+        "strict": 146,
+        "target": {
+          "c3": {
+            "delay_ms": 91,
+            "delayed_false": [],
+            "duplicate": 0,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 0,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "c3_active_samples": 38,
+          "candidate": {
+            "delay_ms": 91,
+            "delayed_false": [],
+            "duplicate": 1,
+            "false": [],
+            "masked": false,
+            "raw_duplicate": 1,
+            "strict": true,
+            "stuck": false,
+            "tool": {
+              "detected": false,
+              "first_index": null,
+              "last_index": null,
+              "peak_n": 0.0,
+              "prealarm": false,
+              "present": false
+            },
+            "valid": {
+              "active_force_bounds": true,
+              "actual_signed": true,
+              "attribution_window": true,
+              "complete": true,
+              "per_tick_scalar": true,
+              "prefix": true
+            }
+          },
+          "candidate_active_samples": 30,
+          "failures": [
+            "no_new_duplicate"
+          ],
+          "gates": {
+            "duration_plus_5_samples": true,
+            "latency_plus_5_ms": true,
+            "no_new_delayed_false": true,
+            "no_new_duplicate": false,
+            "no_new_false": true,
+            "no_new_mask": true,
+            "no_new_stuck_tail": true,
+            "no_new_tool_prealarm": true,
+            "physical_force_prefix_exact": true,
+            "strict_positive_retained": true,
+            "tool_retained": true,
+            "tool_time_plus_5_ms": true
+          },
+          "id": 316,
+          "kind": "collision"
+        }
+      }
+    },
+    "episodes": 770,
+    "passed": true,
+    "unique_physical_cases": 385
+  },
+  "known_r26": {
+    "against_c3": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": {
+        "all_four": 0,
+        "duplicate_edges": 0,
+        "duplicate_slots": 0,
+        "false_rises": 0,
+        "slots": 57,
+        "strict": 29
+      },
+      "experiments.r30_detached_lifetime.candidate:Detector": {
+        "all_four": 3,
+        "duplicate_edges": 0,
+        "duplicate_slots": 0,
+        "false_rises": 0,
+        "slots": 57,
+        "strict": 32
+      }
+    },
+    "against_released": {
+      "absolute_non_strict": [
+        [
+          "s26_long_carry_signed",
+          "stock",
+          "single",
+          []
+        ],
+        [
+          "s26_long_carry_signed",
+          "actuator_deadzone",
+          "single",
+          []
+        ],
+        [
+          "s26_long_carry_signed",
+          "place_surface_shift",
+          "single",
+          []
+        ],
+        [
+          "s26_long_place_lateral",
+          "stock",
+          "single",
+          []
+        ],
+        [
+          "s26_long_place_lateral",
+          "actuator_deadzone",
+          "single",
+          []
+        ],
+        [
+          "s26_long_place_lateral",
+          "place_surface_shift",
+          "single",
+          []
+        ],
+        [
+          "p26_close_transfer_oblique",
+          "stock",
+          "both_second",
+          []
+        ],
+        [
+          "p26_close_transfer_oblique",
+          "stock",
+          "isolated_second",
+          []
+        ],
+        [
+          "p26_close_transfer_oblique",
+          "actuator_deadzone",
+          "both_second",
+          []
+        ],
+        [
+          "p26_close_transfer_oblique",
+          "actuator_deadzone",
+          "isolated_second",
+          []
+        ],
+        [
+          "p26_close_transfer_oblique",
+          "place_surface_shift",
+          "both_second",
+          []
+        ],
+        [
+          "p26_close_transfer_oblique",
+          "place_surface_shift",
+          "isolated_second",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "stock",
+          "both_first",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "stock",
+          "both_second",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "stock",
+          "isolated_first",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "stock",
+          "isolated_second",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "actuator_deadzone",
+          "both_first",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "actuator_deadzone",
+          "both_second",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "actuator_deadzone",
+          "isolated_first",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "actuator_deadzone",
+          "isolated_second",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "actuator_deadzone",
+          "long_single",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "place_surface_shift",
+          "both_first",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "place_surface_shift",
+          "both_second",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "place_surface_shift",
+          "isolated_first",
+          []
+        ],
+        [
+          "p26_close_place_cross",
+          "place_surface_shift",
+          "isolated_second",
+          []
+        ]
+      ],
+      "counts": {
+        "new": {
+          "all_four": 3,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 32
+        },
+        "old": {
+          "all_four": 3,
+          "duplicate_edges": 0,
+          "duplicate_slots": 0,
+          "false_rises": 0,
+          "slots": 57,
+          "strict": 32
+        }
+      },
+      "guard_losses": []
+    },
+    "episodes": 156,
+    "paired_second": {
+      "experiments.r26_yaw_acquisition.candidate:Detector": 0,
+      "experiments.r30_detached_lifetime.candidate:Detector": 3
+    }
+  },
+  "official": {
+    "cells_per_arm": 66,
+    "counts": {
+      "new": {
+        "impact_outcomes": {
+          "already_active": 0,
+          "detected": 24,
+          "indistinguishable": 0,
+          "missed": 0
+        },
+        "no_impact_false_rises": 0,
+        "worst_false_count_in_an_impact_run": 1
+      },
+      "old": {
+        "impact_outcomes": {
+          "already_active": 0,
+          "detected": 24,
+          "indistinguishable": 0,
+          "missed": 0
+        },
+        "no_impact_false_rises": 0,
+        "worst_false_count_in_an_impact_run": 1
+      }
+    },
+    "episodes": 58,
+    "evaluator_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+    "kit_manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+    "match_c3": true,
+    "matched": true,
+    "report_sha256": "4ea07c84312692ec960315e759c12589abf4fa8d5c51ab6013e6e677925c587d"
+  },
+  "overlay_bytes_identical": {
+    "explicit_spacing_vectors": 60,
+    "focus": 102
+  },
+  "schema": "r30-one-detached-acquisition-followup.v1",
+  "scope": "Separate frozen endpoint-only follow-up after real ID316. Not either rejected held method; not enrolled in any sealed plan. Physical simulation only.",
+  "source": "experiments.r30_detached_lifetime.candidate:Detector",
+  "targeted": {
+    "episodes": 102,
+    "id316": {
+      "c3": {
+        "force": [
+          3861,
+          3979
+        ],
+        "intervals": [
+          [
+            3951,
+            3989
+          ]
+        ]
+      },
+      "lifetime": {
+        "force": [
+          3861,
+          3979
+        ],
+        "intervals": [
+          [
+            3951,
+            3963
+          ]
+        ]
+      },
+      "released": {
+        "force": [
+          3861,
+          3979
+        ],
+        "intervals": [
+          [
+            3951,
+            3963
+          ],
+          [
+            3964,
+            3982
+          ]
+        ]
+      }
+    },
+    "other_changed_vs_released": [],
+    "physics_and_force_exact": true,
+    "target_one_onset_at_original_time": true
+  }
+}

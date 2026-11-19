@@ -1,0 +1,55 @@
+{
+  "schema": "R9_HEADROOM_D4_DERIVATION.v1",
+  "method": "381 rows select exact R1 -5ms endpoint delay; only four affected rows rerun paired with archived C1",
+  "inventory": {
+    "all_D4": 385,
+    "affected": 4,
+    "unchanged_exact_R1": 381,
+    "affected_by_kind": {
+      "reference": 2,
+      "collision": 2,
+      "offset": 0
+    },
+    "affected_original_case_ids": [
+      168,
+      169,
+      251,
+      300
+    ]
+  },
+  "baseline_saturated_case_ids": [
+    168,
+    169,
+    251,
+    300
+  ],
+  "baseline_saturation_subset_of_affected": true,
+  "derived_full_D4": {
+    "R1_saturated_episodes": 4,
+    "headroom_saturated_episodes": 0,
+    "headroom_diverged": 0,
+    "C1_detected_event_losses": 0,
+    "C1_tool_event_losses": 0,
+    "conditions_with_increased_C1_false_alarms": 0,
+    "normal_candidate_over_R1_max": {
+      "rms_mm": 0.9971488512395836,
+      "max_mm": 0.9485285856692809,
+      "torque_step_place_nm": 0.9485998757272346,
+      "table_force_place_max_n": 1.0001809195365892
+    }
+  },
+  "limits": "finite exposed D4; unchanged derivation depends on exact selected delay -0.005 and deterministic inherited runtime; not sealed/official/hardware proof",
+  "complete_record_sha256": "6fcf3bbf87247d5182172470fae00d42644dd22d71f02c68b4786ee42d37e555",
+  "status": "development only; reject after the separate release stress test",
+  "executed_detector": "experiments/r8_final/C1.py",
+  "sources": {
+    "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+    "experiments/r9_saturation/headroom_guard.py": "773d1afe8da62a35c97281c22120354322121b6820a58f64044e5e64e774c228",
+    "experiments/r8_final/C1.py": "3e3a67f75fcf795ec49d847b54ac72514d69bb17bc750f92478f1785e6d308e0",
+    "tools/kit_manifest.sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+    "experiments/r9_saturation/evaluate_headroom_d4.py": "d791021610ce90cbcb95b9ad3ae939446f31e9ee5962c09a21c0965dc859bdfa",
+    "results/r9/servo_headroom_d4_design.json": "cacc2d418ee14dca194967cc2e4f010ec92d6c79d20f93158a83f51d734deae9"
+  },
+  "release_detector_sha256": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+  "release_decision": "servo_headroom_release.json"
+}

@@ -1,0 +1,212 @@
+{
+  "schema": "r17-demo-provenance.v1",
+  "guide_example": {
+    "mode": "servo_controller + collision_detector",
+    "mass_kg": 8,
+    "user_specified_collision": false,
+    "script_default_mass_kg_without_box_option": 6,
+    "reproduced_graph_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+    "instructor_html_embedded_result_graph_byte_identical": true
+  },
+  "first_repository_media": {
+    "type": "Course-supplied unmodified run.py, fixed original first four repository comparison conditions, freshly run with course modules and current R10 separately. Not a new original video or R17 test. Derived CSV values are limited by the standard writer precision.",
+    "historical_media_byte_identical": true,
+    "original_kit_files_unchanged": 28,
+    "rows": [
+      {
+        "id": "01_servo_no_collision",
+        "condition": {
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "collision": null
+        },
+        "historical_mp4_git_commit": "05091fced32f54dce2cb8c6460bcd5242df725fc",
+        "historical_mp4_sha256": "77c028d1f377eab39c4a2b33b80ea6e8140a1db52b7a27d9909bbfda3b5f0b7b",
+        "runs": {
+          "course": {
+            "ctrl": "servo_controller",
+            "detector": "collision_detector",
+            "rms_mm": 6.144477803146886,
+            "max_mm": 14.0003,
+            "place_peak_N": 101.306,
+            "rises_s": [
+              1.402,
+              1.425,
+              1.428,
+              1.432,
+              1.435,
+              3.858,
+              3.912
+            ],
+            "samples": 6000
+          },
+          "current_r10": {
+            "ctrl": "my_servo",
+            "detector": "my_detector",
+            "rms_mm": 1.1744284529324303,
+            "max_mm": 3.91444,
+            "place_peak_N": 78.8305,
+            "rises_s": [],
+            "samples": 6000
+          }
+        }
+      },
+      {
+        "id": "02_torque_no_collision",
+        "condition": {
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "collision": null
+        },
+        "historical_mp4_git_commit": "05091fced32f54dce2cb8c6460bcd5242df725fc",
+        "historical_mp4_sha256": "84c8e276c0e75aebf1f612fe027c6f1d30821c46c8150fb12323523d47a7ddeb",
+        "runs": {
+          "course": {
+            "ctrl": "torque_controller",
+            "detector": "collision_detector",
+            "rms_mm": 7.041960833037217,
+            "max_mm": 13.1829,
+            "place_peak_N": 294.596,
+            "rises_s": [
+              1.402,
+              1.418,
+              1.432,
+              1.454,
+              1.46,
+              3.776,
+              3.824,
+              3.91,
+              3.926
+            ],
+            "samples": 6000
+          },
+          "current_r10": {
+            "ctrl": "my_torque",
+            "detector": "my_detector",
+            "rms_mm": 3.231611226225794,
+            "max_mm": 8.44376,
+            "place_peak_N": 79.5782,
+            "rises_s": [],
+            "samples": 6000
+          }
+        }
+      },
+      {
+        "id": "03_servo_place_collision",
+        "condition": {
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "collision": {
+            "time_s": 3.86,
+            "force_n": [
+              0.0,
+              15.0,
+              0.0
+            ]
+          }
+        },
+        "historical_mp4_git_commit": "05091fced32f54dce2cb8c6460bcd5242df725fc",
+        "historical_mp4_sha256": "f1d6e6de7d1ffca3687ec947a8653138e35591cf1b6deafa8a9cafbc70e1bddf",
+        "runs": {
+          "course": {
+            "ctrl": "servo_controller",
+            "detector": "collision_detector",
+            "rms_mm": 6.150833090298243,
+            "max_mm": 13.7488,
+            "place_peak_N": 101.306,
+            "rises_s": [
+              1.402,
+              1.425,
+              1.428,
+              1.432,
+              1.435,
+              3.858,
+              3.9,
+              3.912
+            ],
+            "samples": 6000
+          },
+          "current_r10": {
+            "ctrl": "my_servo",
+            "detector": "my_detector",
+            "rms_mm": 1.240403216196484,
+            "max_mm": 3.91444,
+            "place_peak_N": 78.8341,
+            "rises_s": [
+              3.927,
+              3.929
+            ],
+            "samples": 6000
+          }
+        }
+      },
+      {
+        "id": "04_servo_transport_collision",
+        "condition": {
+          "box_mass_kg": 8.0,
+          "box_com_m": [
+            0.02,
+            -0.01,
+            0.03
+          ],
+          "collision": {
+            "time_s": 3.0,
+            "force_n": [
+              0.0,
+              15.0,
+              0.0
+            ]
+          }
+        },
+        "historical_mp4_git_commit": "05091fced32f54dce2cb8c6460bcd5242df725fc",
+        "historical_mp4_sha256": "a4bdffedbbfe6a43fbe31950f2d894f99be36910349da35e60c98e3db6b443a4",
+        "runs": {
+          "course": {
+            "ctrl": "servo_controller",
+            "detector": "collision_detector",
+            "rms_mm": 6.169195719222038,
+            "max_mm": 14.0706,
+            "place_peak_N": 105.552,
+            "rises_s": [
+              1.402,
+              1.425,
+              1.428,
+              1.432,
+              1.435,
+              3.068,
+              3.085,
+              3.097,
+              3.858,
+              3.898,
+              3.912
+            ],
+            "samples": 6000
+          },
+          "current_r10": {
+            "ctrl": "my_servo",
+            "detector": "my_detector",
+            "rms_mm": 1.333482952982494,
+            "max_mm": 3.91626,
+            "place_peak_N": 78.8299,
+            "rises_s": [
+              3.037
+            ],
+            "samples": 6000
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "r22-independent-protection-plan.v1",
+  "status": "SEALED_BEFORE_R22_CANDIDATE_LOCK",
+  "classification": "New finite research challenge selected without any R22 candidate output; not a hidden production or hardware certificate.",
+  "selection": "Fixed diverse interpolation values and force geometries distinct from R21 named fixtures; no search over outcomes.",
+  "controller": "my_torque.Controller",
+  "arms_before_lock": ["r10", "r21_yaw"],
+  "candidate_arm_after_lock": "r22",
+  "dt_s": 0.001,
+  "event_window_ms": 320,
+  "reference_twin_ms": 20,
+  "quiet_ms": 20,
+  "variants": {
+    "stock": {"kind": "stock"},
+    "contact_suction": {"kind": "contact_suction", "table_friction_scale": 0.93, "table_solref_time_scale": 1.12, "suction_solref_time_scale": 1.18},
+    "actuator_gain": {"kind": "actuator_gain", "joint_gain": [0.985, 1.012, 0.992, 1.008, 0.988, 1.006]}
+  },
+  "negative": [
+    {"id": "n_empty_interp", "mass": 0.0, "com": [0.011, -0.019, 0.006], "offset": null},
+    {"id": "n_light_skew", "mass": 0.73, "com": [-0.013, 0.021, -0.008], "offset": null},
+    {"id": "n_mid_skew", "mass": 3.37, "com": [0.026, -0.017, 0.009], "offset": null},
+    {"id": "n_heavy_low", "mass": 7.63, "com": [-0.018, 0.009, -0.023], "offset": null},
+    {"id": "n_tool_xy", "mass": 2.86, "com": [0.007, -0.011, 0.024], "offset": [0.0047, -0.0036, 0.0]},
+    {"id": "n_tool_xyz", "mass": 5.42, "com": [-0.009, 0.022, -0.014], "offset": [-0.0042, 0.0033, 0.0012]}
+  ],
+  "single": [
+    {"id": "s_pick_tangent_pos", "mass": 1.41, "com": [0.018, -0.014, 0.011], "offset": null, "impact": [1.397, [0.0, 7.25, 0.0]]},
+    {"id": "s_pick_radial_neg", "mass": 4.26, "com": [-0.024, 0.013, -0.004], "offset": null, "impact": [1.469, [-8.75, 0.0, 0.0]]},
+    {"id": "s_pick_diag", "mass": 6.84, "com": [0.012, 0.027, -0.016], "offset": null, "impact": [1.533, [6.4, -6.9, 0.0]]},
+    {"id": "s_carry_radial", "mass": 2.19, "com": [-0.019, -0.016, 0.022], "offset": null, "impact": [2.347, [9.5, 0.0, 0.0]]},
+    {"id": "s_carry_oblique", "mass": 5.76, "com": [0.023, 0.008, -0.019], "offset": null, "impact": [2.731, [-5.8, 8.1, 0.0]]},
+    {"id": "s_release_tangent", "mass": 3.91, "com": [-0.015, 0.024, 0.013], "offset": null, "impact": [3.811, [0.0, -10.75, 0.0]]},
+    {"id": "s_release_radial", "mass": 7.28, "com": [0.019, -0.026, -0.012], "offset": null, "impact": [3.874, [11.25, 0.0, 0.0]]},
+    {"id": "s_after_release_diag", "mass": 4.83, "com": [-0.021, 0.018, 0.007], "offset": null, "impact": [3.927, [-7.7, -7.1, 0.0]]}
+  ],
+  "paired": [
+    {"id": "p_pick_close_xy", "mass": 2.63, "com": [0.014, -0.023, 0.018], "offset": null, "impacts": [[1.391, [0.0, 9.0, 0.0]], [1.548, [-9.5, 0.0, 0.0]]]},
+    {"id": "p_pick_close_diag", "mass": 6.17, "com": [-0.027, 0.011, -0.006], "offset": null, "impacts": [[1.428, [7.4, 6.2, 0.0]], [1.617, [-6.8, 8.0, 0.0]]]},
+    {"id": "p_carry_opposed", "mass": 4.49, "com": [0.022, -0.009, 0.025], "offset": null, "impacts": [[2.281, [10.0, 0.0, 0.0]], [2.446, [-10.5, 0.0, 0.0]]]},
+    {"id": "p_carry_orthogonal", "mass": 7.47, "com": [-0.016, 0.025, -0.021], "offset": null, "impacts": [[2.684, [0.0, -11.0, 0.0]], [2.903, [10.5, 0.0, 0.0]]]},
+    {"id": "p_release_short", "mass": 3.58, "com": [0.025, 0.014, -0.017], "offset": null, "impacts": [[3.704, [0.0, 11.5, 0.0]], [3.843, [-12.0, 0.0, 0.0]]]},
+    {"id": "p_release_cross", "mass": 7.11, "com": [-0.023, -0.012, 0.016], "offset": null, "impacts": [[3.751, [-8.0, 7.5, 0.0]], [3.916, [7.0, 9.0, 0.0]]]},
+    {"id": "p_release_longer", "mass": 5.13, "com": [0.008, -0.028, 0.004], "offset": null, "impacts": [[3.662, [12.0, 0.0, 0.0]], [3.889, [0.0, -11.5, 0.0]]]},
+    {"id": "p_pick_to_release", "mass": 1.87, "com": [-0.011, 0.016, -0.022], "offset": null, "impacts": [[1.512, [0.0, 8.5, 0.0]], [3.934, [-9.0, 5.5, 0.0]]]}
+  ],
+  "required_episodes": {"per_arm": 162, "all_three_arms": 486},
+  "gates": [
+    "candidate manifest frozen before plan detail is disclosed or any outcome is run",
+    "all source pins stable before and after",
+    "complete finite 6000-sample traces",
+    "exact signed native, second, committed and stock scalar force arithmetic",
+    "force-free prefix exact until the first actually nonzero sample; nominal-onset sample classified from exact profile",
+    "physical traces bit-exact across arms for each twin",
+    "no new unmatched false rise relative to R10 or frozen R21",
+    "no new prealarm, stuck tail, or missed true tool contact",
+    "preserve each comparator strict hit within 5 ms",
+    "exactly one attributable rising edge per isolated real impulse",
+    "both-impulse twin quiet before, and has exactly one separately attributable rise for, each real impulse",
+    "no threshold, timing, cohort, scoring, or mechanics change after outcomes"
+  ],
+  "interpretation": "Every case and every mechanical variant is reported. Any candidate regression is a release failure. Improvements are finite simulation evidence only.",
+  "tuning_after_outcome": "forbidden"
+}

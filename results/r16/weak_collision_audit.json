@@ -1,0 +1,212 @@
+{
+  "schema": "r16-weak-collision-independent.v1",
+  "notes": "These experiments used the unchanged R10 torque controller. They are separate from the D handoff policy. Neither supplementary detector was promoted. Gains from different splits overlap and should not be added.",
+  "initial_candidate": {
+    "schema": "r16-independent-detector-verdict.v1",
+    "verdict": "FAIL_PROMOTION",
+    "reason": "Priority preservation fails: mass-0 1.429 s no-impact false rise makes all official 0 kg/1.42 s cells indistinguishable and loses two R10-valid official detections. Two negative-normal independent impacts also add post-event false rises.",
+    "model_parity": {
+      "arrays_exact": true,
+      "6000_sample_score_and_detection_exact": true,
+      "representative_delay_ms": 49.0
+    },
+    "strata": {
+      "stock_normal": {
+        "cases": 6,
+        "passed": 5,
+        "gains": 0,
+        "failures": [
+          {
+            "sn0": [
+              "false_events"
+            ]
+          }
+        ]
+      },
+      "stock_impact": {
+        "cases": 6,
+        "passed": 5,
+        "gains": 6,
+        "failures": [
+          {
+            "si3": [
+              "false_events"
+            ]
+          }
+        ]
+      },
+      "perturb_normal": {
+        "cases": 6,
+        "passed": 6,
+        "gains": 0,
+        "failures": []
+      },
+      "perturb_impact": {
+        "cases": 6,
+        "passed": 5,
+        "gains": 6,
+        "failures": [
+          {
+            "pi3": [
+              "false_events"
+            ]
+          }
+        ]
+      },
+      "official_normal": {
+        "cases": 3,
+        "passed": 2,
+        "gains": 0,
+        "failures": [
+          {
+            "official-normal-0": [
+              "false_events"
+            ]
+          }
+        ]
+      },
+      "official_impact": {
+        "cases": 24,
+        "passed": 13,
+        "gains": 4,
+        "failures": [
+          {
+            "official-0-1.42-40": [
+              "preserve"
+            ]
+          },
+          {
+            "official-0-1.42-100": [
+              "preserve"
+            ]
+          },
+          {
+            "official-0-3-10": [
+              "false_events"
+            ]
+          },
+          {
+            "official-0-3-15": [
+              "false_events"
+            ]
+          },
+          {
+            "official-0-3-40": [
+              "false_events"
+            ]
+          },
+          {
+            "official-0-3-100": [
+              "false_events"
+            ]
+          },
+          {
+            "official-0-3.86-10": [
+              "false_events"
+            ]
+          },
+          {
+            "official-0-3.86-15": [
+              "false_events"
+            ]
+          },
+          {
+            "official-0-3.86-40": [
+              "false_events"
+            ]
+          },
+          {
+            "official-0-3.86-100": [
+              "false_events"
+            ]
+          },
+          {
+            "official-8-3-40": [
+              "false_events"
+            ]
+          }
+        ]
+      }
+    },
+    "runtime": {
+      "worst_combined_controller_detector_p99_us": 273.7911137371777,
+      "cycles_ge_1ms": 0,
+      "passed_800us": true
+    },
+    "official_evaluator": {
+      "r10_valid_detected_cells": 18,
+      "candidate_valid_detected_cells": 20,
+      "new_valid_cells": 4,
+      "r10_valid_cells_invalidated": 2,
+      "mass0_1p42_candidate_cells": [
+        "indistinguishable",
+        "indistinguishable",
+        "indistinguishable",
+        "indistinguishable"
+      ],
+      "mass0_noimpact_pick_false_alarms": 1,
+      "note": "A higher aggregate detected-cell count does not override lost protected cells or the new no-impact false alarm."
+    },
+    "source_review_gaps": [
+      "Original candidate evaluator compares only false-alarm counts, not injective event times.",
+      "Original candidate has no model shape/finite/provenance validation and no mass/COM domain abstention.",
+      "Original candidate local evaluator omits official, perturbation, and combined runtime gates."
+    ],
+    "decision": "Do not package or promote. A future candidate must predeclare an out-of-domain fallback/normal model including unloaded payload and remove negative-normal post-event false rises, then repeat independent gates; no threshold tuning on this matrix."
+  },
+  "out_of_domain_fallback_candidate": {
+    "schema": "r16-domain-innovation-summary.v1",
+    "decision": "rejected_after_frozen_regression_gate",
+    "domain_fallback": {
+      "unloaded_ticks": 6000,
+      "decision_equal_to_r10": true,
+      "residual_equal_to_r10": true,
+      "physics_equal": true,
+      "official_mass_zero_failures": 0
+    },
+    "diagnosis": {
+      "si3_no_pulse_twin_max_score": 5.146256083074488,
+      "si3_pulse_second_rise_s": 3.846,
+      "si3_table_force_at_second_rise_n": 54.18837832979575,
+      "pi3_no_pulse_twin_max_score": 4.243817110795391,
+      "pi3_pulse_second_rise_s": 3.845,
+      "pi3_table_force_at_second_rise_n": 50.192935974855466,
+      "interpretation": "The second rise is induced by a delayed second landing/support transient after the pulse, not a residual score tail and not present in either exact no-pulse twin."
+    },
+    "frozen_candidate": {
+      "domain_normal_passed": 6,
+      "domain_normal_total": 6,
+      "regression_total": 60,
+      "regression_failures": [
+        "si3",
+        "pi3",
+        "official-8-3-40"
+      ],
+      "regression_gains": 20,
+      "regression_losses": 0,
+      "prior_targeted_gains_retained": 5,
+      "fresh_matrix_executed": false
+    },
+    "channel_audit": {
+      "classification": "targeted mechanism diagnostic, not validation",
+      "support_state_at_3p86": "last_table_allowed=true and raw_fz=11.038 N",
+      "lateral": {
+        "r10": "missed",
+        "prior_ms": 87.0,
+        "conditioned_ms": 87.0
+      },
+      "oblique": {
+        "r10": "missed",
+        "prior_ms": 107.0,
+        "conditioned_ms": 107.0
+      },
+      "limitation": "The candidate explicitly abstains only the supplemental tangential coordinates during inferred positive support. These examples are detected after that state ends; they do not prove general tangential separation or continuous supplemental coverage."
+    },
+    "limitations": [
+      "The support-compatible coordinate removal is a supplemental-channel abstention, not a general physical separator.",
+      "The delayed support tail still re-arms the channel after the inferred support state ends.",
+      "The fixed fresh impact matrix was not opened because regression failed.",
+      "The model path is private and absolute, so this branch is research-only and non-portable."
+    ]
+  }
+}

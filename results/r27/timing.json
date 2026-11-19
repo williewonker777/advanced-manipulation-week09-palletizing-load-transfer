@@ -1,0 +1,236 @@
+{
+  "episodes": 8,
+  "note": "Controller.compute + Detector.update on each 1 ms tick. Two actual force cases, two repeats, reversed arm order. Shared CPU with affinity, no end-to-end or hard real-time guarantee.",
+  "rows": [
+    {
+      "alarm_sha256": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a",
+      "case": "s26_long_carry_signed",
+      "detector_thread": {
+        "at_least_1ms": 2,
+        "max_us": 3968.747,
+        "p50_us": 171.88,
+        "p99_us": 271.8293
+      },
+      "entry": "experiments.r26_yaw_acquisition.candidate:Detector",
+      "physical_sha256": "1024d4af0376a1394cb5815958125853b7076fb0e3865cd5e26c0c0002d2ba47",
+      "repeat": 0,
+      "samples": 6000,
+      "thread": {
+        "at_least_1ms": 2,
+        "max_us": 4013.827,
+        "p50_us": 211.334,
+        "p99_us": 329.39980000000025
+      },
+      "wall": {
+        "at_least_1ms": 2,
+        "max_us": 4017.107,
+        "p50_us": 214.3645,
+        "p99_us": 333.5267000000002
+      }
+    },
+    {
+      "alarm_sha256": "b0dee12dad85c955625b0ae8a09d309c7588a6243bbac87dd18bd486ed9c512b",
+      "case": "s26_long_carry_signed",
+      "detector_thread": {
+        "at_least_1ms": 0,
+        "max_us": 511.288,
+        "p50_us": 166.14,
+        "p99_us": 326.7123000000001
+      },
+      "entry": "experiments.r27_load_change.manifold:Detector",
+      "physical_sha256": "1024d4af0376a1394cb5815958125853b7076fb0e3865cd5e26c0c0002d2ba47",
+      "repeat": 0,
+      "samples": 6000,
+      "thread": {
+        "at_least_1ms": 0,
+        "max_us": 582.838,
+        "p50_us": 203.24450000000002,
+        "p99_us": 369.51981
+      },
+      "wall": {
+        "at_least_1ms": 0,
+        "max_us": 587.398,
+        "p50_us": 206.10500000000002,
+        "p99_us": 372.6394
+      }
+    },
+    {
+      "alarm_sha256": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a",
+      "case": "s26_long_place_lateral",
+      "detector_thread": {
+        "at_least_1ms": 0,
+        "max_us": 424.309,
+        "p50_us": 163.42950000000002,
+        "p99_us": 239.33190000000005
+      },
+      "entry": "experiments.r26_yaw_acquisition.candidate:Detector",
+      "physical_sha256": "72517837ddaeda20c83a3b8293aedc048e605d6ea5afdf56d630110f0d9089be",
+      "repeat": 0,
+      "samples": 6000,
+      "thread": {
+        "at_least_1ms": 0,
+        "max_us": 499.718,
+        "p50_us": 201.514,
+        "p99_us": 279.95220000000006
+      },
+      "wall": {
+        "at_least_1ms": 0,
+        "max_us": 504.339,
+        "p50_us": 204.48450000000003,
+        "p99_us": 282.8666100000004
+      }
+    },
+    {
+      "alarm_sha256": "83436e3366bb3aaedb785548ddd39c4dc59a064637c80f9f80b00f3bf2c86485",
+      "case": "s26_long_place_lateral",
+      "detector_thread": {
+        "at_least_1ms": 0,
+        "max_us": 517.899,
+        "p50_us": 165.6045,
+        "p99_us": 337.3376000000002
+      },
+      "entry": "experiments.r27_load_change.manifold:Detector",
+      "physical_sha256": "72517837ddaeda20c83a3b8293aedc048e605d6ea5afdf56d630110f0d9089be",
+      "repeat": 0,
+      "samples": 6000,
+      "thread": {
+        "at_least_1ms": 0,
+        "max_us": 601.518,
+        "p50_us": 202.499,
+        "p99_us": 378.5767000000002
+      },
+      "wall": {
+        "at_least_1ms": 0,
+        "max_us": 610.008,
+        "p50_us": 205.44400000000002,
+        "p99_us": 381.60200000000026
+      }
+    },
+    {
+      "alarm_sha256": "b0dee12dad85c955625b0ae8a09d309c7588a6243bbac87dd18bd486ed9c512b",
+      "case": "s26_long_carry_signed",
+      "detector_thread": {
+        "at_least_1ms": 0,
+        "max_us": 487.448,
+        "p50_us": 168.27949999999998,
+        "p99_us": 318.6943000000001
+      },
+      "entry": "experiments.r27_load_change.manifold:Detector",
+      "physical_sha256": "1024d4af0376a1394cb5815958125853b7076fb0e3865cd5e26c0c0002d2ba47",
+      "repeat": 1,
+      "samples": 6000,
+      "thread": {
+        "at_least_1ms": 0,
+        "max_us": 525.878,
+        "p50_us": 206.56900000000002,
+        "p99_us": 360.61809000000017
+      },
+      "wall": {
+        "at_least_1ms": 0,
+        "max_us": 528.748,
+        "p50_us": 209.5495,
+        "p99_us": 363.6885000000002
+      }
+    },
+    {
+      "alarm_sha256": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a",
+      "case": "s26_long_carry_signed",
+      "detector_thread": {
+        "at_least_1ms": 0,
+        "max_us": 364.488,
+        "p50_us": 164.59949999999998,
+        "p99_us": 244.20751000000018
+      },
+      "entry": "experiments.r26_yaw_acquisition.candidate:Detector",
+      "physical_sha256": "1024d4af0376a1394cb5815958125853b7076fb0e3865cd5e26c0c0002d2ba47",
+      "repeat": 1,
+      "samples": 6000,
+      "thread": {
+        "at_least_1ms": 0,
+        "max_us": 402.228,
+        "p50_us": 201.615,
+        "p99_us": 289.57041000000004
+      },
+      "wall": {
+        "at_least_1ms": 0,
+        "max_us": 405.029,
+        "p50_us": 204.4745,
+        "p99_us": 292.2937000000001
+      }
+    },
+    {
+      "alarm_sha256": "83436e3366bb3aaedb785548ddd39c4dc59a064637c80f9f80b00f3bf2c86485",
+      "case": "s26_long_place_lateral",
+      "detector_thread": {
+        "at_least_1ms": 0,
+        "max_us": 398.119,
+        "p50_us": 166.3095,
+        "p99_us": 315.4933000000001
+      },
+      "entry": "experiments.r27_load_change.manifold:Detector",
+      "physical_sha256": "72517837ddaeda20c83a3b8293aedc048e605d6ea5afdf56d630110f0d9089be",
+      "repeat": 1,
+      "samples": 6000,
+      "thread": {
+        "at_least_1ms": 0,
+        "max_us": 462.469,
+        "p50_us": 203.519,
+        "p99_us": 356.99820000000017
+      },
+      "wall": {
+        "at_least_1ms": 0,
+        "max_us": 474.338,
+        "p50_us": 206.3845,
+        "p99_us": 361.05441000000013
+      }
+    },
+    {
+      "alarm_sha256": "a6bedce1e512d6531cd02fe7a0b72bb64f229cdb254ec48d63308877004e620a",
+      "case": "s26_long_place_lateral",
+      "detector_thread": {
+        "at_least_1ms": 0,
+        "max_us": 361.129,
+        "p50_us": 165.61950000000002,
+        "p99_us": 242.29560000000012
+      },
+      "entry": "experiments.r26_yaw_acquisition.candidate:Detector",
+      "physical_sha256": "72517837ddaeda20c83a3b8293aedc048e605d6ea5afdf56d630110f0d9089be",
+      "repeat": 1,
+      "samples": 6000,
+      "thread": {
+        "at_least_1ms": 0,
+        "max_us": 398.779,
+        "p50_us": 202.749,
+        "p99_us": 283.1418100000001
+      },
+      "wall": {
+        "at_least_1ms": 0,
+        "max_us": 401.739,
+        "p50_us": 205.714,
+        "p99_us": 286.10590000000013
+      }
+    }
+  ],
+  "schema": "r27-known-loaded-shared-timing.v1",
+  "simulation_only": true,
+  "sources": [
+    "experiments.r26_yaw_acquisition.candidate:Detector",
+    "experiments.r27_load_change.manifold:Detector"
+  ],
+  "totals": {
+    "experiments.r26_yaw_acquisition.candidate:Detector": {
+      "max_wall_us": 4017.107,
+      "samples": 24000,
+      "wall_at_least_1ms": 2,
+      "worst_episode_p99_thread_us": 329.39980000000025,
+      "worst_episode_p99_wall_us": 333.5267000000002
+    },
+    "experiments.r27_load_change.manifold:Detector": {
+      "max_wall_us": 610.008,
+      "samples": 24000,
+      "wall_at_least_1ms": 0,
+      "worst_episode_p99_thread_us": 378.5767000000002,
+      "worst_episode_p99_wall_us": 381.60200000000026
+    }
+  }
+}

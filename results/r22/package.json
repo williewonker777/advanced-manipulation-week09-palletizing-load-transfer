@@ -1,0 +1,96 @@
+{
+  "schema": "r22-optional-research-zip.v1",
+  "default_promoted": false,
+  "stock_course_demo": false,
+  "archive_sha256": "555f2442fa53129f21b88bd49f0359b9afa43f081c814aeb1c147c0c37b1c867",
+  "entries": [
+    "torque_controller.py",
+    "collision_detector.py",
+    "README.md",
+    "receipt.json"
+  ],
+  "generated_twice_byte_identical": true,
+  "receipt": {
+    "audit_sha256": "ede71675af3748c1c14384940acc89bff5477ec1631b7bdda5828624b923c02c",
+    "build": {
+      "frozen_sources_sha256": {
+        "experiments/r15_delayed_wrench/observer.py": "eff8f0b76d8c0358bb15b020be0db6e0b55d0e666a93ee2f46a1de6190ba2483",
+        "experiments/r21_yaw_impulse/normal_bins.json": "5f22f640eb8824f764ffeec7ecbef7ba23df02a874547b93b8ddc72925e25c15",
+        "experiments/r22_combined/candidate.py": "0d69976ee4f6529cdd8ae67d6321d1d2637a60b7b27adc1b2e95c4e48a37367b",
+        "experiments/r22_combined/core.py": "bdcd186ea58db958e2d4de0a4bcfa9b2a32ea54d54b9860d8a29d249d5abd8ad",
+        "experiments/r22_combined/selection.json": "b74b3a1eac159f3836eea9b83b45b23872417573413cd416a1b3758abf6cedc0",
+        "experiments/r22_guarded/candidate.py": "23d8dc0b9747e38dd9a346872f27612b7ba67052aff4c6d604401aba387dc1f1",
+        "experiments/r22_guarded/plan.json": "56ce7cdac16699a8db591195b89260ec24fc3991638a829368612ba1b27a546c",
+        "experiments/r22_light/candidate.py": "1d6738b62af1a56e679544ed2a5f7695c920b5ecb6aa74d35c0b1952d141a5b1",
+        "experiments/r22_light/plan.json": "e29341a31bd46a2aaa43b9ba2e4b0ee1b8b3a603f47a82226e9757b904bc69e6",
+        "experiments/r22_light/selection.json": "0650647478ce28542f66753f97242046e3c7123cb469de08908b40adf59affa3",
+        "experiments/r22_light/witness.py": "430b2b2ebdda4c4cde9e9d1760a581f77628fca4ebe52e1211d80edc14153d7b",
+        "experiments/r22_normal/candidate.py": "658683de0a0db00d520ebbd4c7a28cbaa4beb11bd6e93dd8e71edded6472279d",
+        "experiments/r22_release/model.json": "fb02dd2121120ba90c64748272fe1c9f1873f174ac8ef107ba80e70b1b337340",
+        "experiments/r22_release/state.py": "30cd330f75b7bd4078ba9d20ef0e902993626c14962466305136d0138c42e215",
+        "experiments/r22_tangent/detector.py": "681c6a5d17a48efad81b4555bc2a0ff7a03f47556832ae752cc279ac0572bd4e",
+        "experiments/r22_tangent/frozen.py": "dac541250c09e0e400414441e58458121d24f4e138d99da9769d7e2d90a0746a",
+        "experiments/r22_tangent/model.json": "896ffbe13c95a24444f06541c55206a0718e6378da04fdc876c1907876fa0732",
+        "experiments/r22_tangent/state.py": "5ab5424fb795c2e2240b6cbed0f2dcdae30929d9ec543188cb570421288725a0"
+      },
+      "lines": 2178,
+      "r10_detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "schema": "r22-standalone-build.v1",
+      "standalone_sha256": "881d5e740230d4811c4fccf622c7acc4785f06f40700885b509e622a6861e49b",
+      "variant": "light"
+    },
+    "default_submission_promoted": false,
+    "evaluator_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+    "files": {
+      "README.md": "195d7662d97a7b9f01ccd620b8afcdfe004730816b4bb483c0e03d3ab9e20620",
+      "collision_detector.py": "881d5e740230d4811c4fccf622c7acc4785f06f40700885b509e622a6861e49b",
+      "torque_controller.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "gates": {
+      "default_filename": true,
+      "modular_generated_6000_exact": true,
+      "protected_kit_unchanged": true,
+      "servo_R10_exact": true,
+      "torque_controls_R10_exact_except_compute": true,
+      "torque_official_24_of_24": true
+    },
+    "independent_evaluation": {
+      "genuine_offset_tool_contacts_missed_by_all": 2,
+      "hard_realtime_proven": false,
+      "negative_rows_passed": 18,
+      "negative_rows_total": 18,
+      "pair_rows_complete": 15,
+      "pair_rows_total": 24,
+      "promoted": false,
+      "published_holdout_sha256": "6320d9c3d2971eed367756cafc97c4c6b187e7d8b13897d7f1719cd41692b338",
+      "rows_passed": 51,
+      "rows_total": 66,
+      "single_rows_passed": 18,
+      "single_rows_total": 24,
+      "status": "bounded_not_generalized",
+      "strict_gain_vs_r21": 0,
+      "strict_loss_vs_r21": 0,
+      "twin_slots_one_to_one": 79,
+      "twin_slots_total": 96
+    },
+    "kit_manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+    "parity_case_ids": [
+      174,
+      319,
+      330,
+      335,
+      339,
+      349,
+      "weak6",
+      "servo_normal",
+      "servo_force"
+    ],
+    "recognized_collision_cells": {
+      "servo": 23,
+      "torque": 24
+    },
+    "schema": "r22-torque-package.v1",
+    "status": "research_option",
+    "variant": "light"
+  }
+}

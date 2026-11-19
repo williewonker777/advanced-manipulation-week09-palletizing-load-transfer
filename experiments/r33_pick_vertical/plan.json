@@ -1,0 +1,12 @@
+{
+  "stage": "mechanism and normal-only fit before output replay",
+  "parent": "R31 event (not the R32 alarm level)",
+  "development_disclosed_cases": [193,194,203,204,213,214],
+  "training": "27 no-force pickups, nine intermediate masses absent from D4, three off-grid COMs; no forced rows used in coefficients or thresholds",
+  "work_envelope": "first rising TCP displacement from measured grip surface, 3 mm clearance through one 35 mm table-proximity band; close the route when that band is exited",
+  "features": ["aligned inverse dynamics world Z force", "independent generalized momentum observer world Z force", "measured change of TCP height"],
+  "estimator": "median by 4 mm height bin for each channel, linear interpolation between bin centers; require both 8-sample average residuals to share sign, use the smaller magnitude",
+  "noise_bound": "maximum signed concurrence on all normal training samples per sign plus at least 0.75 N or three normal within-stream one-step median jitters, whichever is greater",
+  "ownership": "One supplementary event per persistent signed sensor excursion, never erase a parent sample; keep native priority for a near-support excursion that already notified, reset once both sensors show normal support or an opposite qualified excursion. One-shot low-force output, not contact duration.",
+  "guard": "Report all D4 normals, offsets, all 180 external impacts against their own no-force twins and unchanged physics. Do not open new one-shot panel until a checked historical gate. Never enroll an alternate after outcome."
+}

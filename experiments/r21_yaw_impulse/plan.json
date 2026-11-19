@@ -1,0 +1,12 @@
+{
+  "schema":"r21-yaw-balance-plan.v1",
+  "objective":"Detect weak external angular impulse about the vertical base axis independently of the horizontal-wrench fit.",
+  "restriction":"Original R10 torque control, known mass/COM; yaw witness complements R20, not an all-direction detector. No plant state, collision labels, force history, training seed or future reference at inference.",
+  "observable":"Past encoder, link-side spring torque with startup bias correction, nominal inertia row already computed by R10, known grip. Compare 12-sample averaged link angular momentum minus integrated measured joint input at times separated by 32 ms.",
+  "bound":"1.05 times maximum absolute normal balance for each of grip-off/on over all normal calibration episodes, not an impact-fitted threshold. Never evaluate a difference across a change of nominal load. Three successive exceedances start, eight quiet clear, as in previous detection conventions.",
+  "normal_masses":[0.0,2.5,5.5,8.0],
+  "normal_coms":[[0,0,0],[0.02,-0.01,0.03],[-0.022,0.016,-0.01],[0.017,0.026,0.012]],
+  "stored_earlier_results_are_exposed":true,
+  "development_anchors":[[0.0,1.42,10],[8.0,1.42,10],[0.0,3.86,10],[8.0,3.86,10]],
+  "fresh_robustness":"hold genuine independent inputs and independent sensor noise checks separate from past/official tests. A radial force through the base axis has zero yaw moment; table friction and payload inertia errors are not gravity."
+}

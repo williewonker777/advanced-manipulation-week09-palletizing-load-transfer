@@ -1,0 +1,965 @@
+{
+  "schema": "r25-declined-weak-world-observer.v1",
+  "independent": false,
+  "classification": "Developmental threshold calibration using force-free episodes, plus a frozen nearby development panel. This option is rejected; it is not the selected study, course default, or hardware result.",
+  "candidate": "experiments.r25_weak.normal_force_detector:Detector",
+  "sources": {
+    "world-horizontal-target-candidate.json": "e5baf8beefb7390f158731de771e13afbf8dc57895b5486493322902bd7306d0",
+    "world-horizontal-audit-gate.json": "4aa21bb54b7c887b492425f0dc966d2129307c7fa4c28ec5985430a759ca91be",
+    "world-horizontal-heldback.json": "d61913aa4df4b8c102f0fea653ad74c4faaef09c2f29e31b99a01c384378ebf9",
+    "world_horizontal.py": "cbea3e924b3231ad8e5a1ad609ef18be17fe81060c5c863887cc91f6210f7afe",
+    "world_horizontal_model.json": "acdfc763e4bd968f493b061a05db6c61d9fddeb75782dad304243cdb110c9e7a"
+  },
+  "normal_audit": {
+    "threshold_n": 8.394415779390961,
+    "support_uncertainty_per_n": 0.2,
+    "worst_score_n": 7.7052762737303855,
+    "samples_above_threshold": 0,
+    "episodes_above_threshold": 0,
+    "passed": true
+  },
+  "fit_episodes": 18,
+  "audit_episodes": 18,
+  "known_missed_target": {
+    "case": "s24_transfer_offaxis_mid",
+    "mechanics": "stock",
+    "incumbent": {
+      "strict": false,
+      "attributable_rise_indices": [],
+      "delays_ms": [],
+      "quiet_before": true,
+      "duplicate_rises": 0,
+      "active_samples_in_slot": 0
+    },
+    "trial": {
+      "strict": true,
+      "attributable_rise_indices": [
+        1559
+      ],
+      "delays_ms": [
+        71
+      ],
+      "quiet_before": true,
+      "duplicate_rises": 0,
+      "active_samples_in_slot": 8
+    },
+    "physics_sha256": "ba9152762339e094de1195ddc0cde7b012bc6f49eb104dbc7e7f8dbd17957d9d"
+  },
+  "heldback_development": {
+    "summary": {
+      "rows": 32,
+      "episodes": 128,
+      "passed_rows": 16,
+      "gained_rows": 16,
+      "strict_rows": 16,
+      "false_free_rows": 32,
+      "false_active_free_rows": 32
+    },
+    "direction_strict": {
+      "original": 8,
+      "opposite": 8
+    },
+    "direction_total": {
+      "original": 16,
+      "opposite": 16
+    }
+  },
+  "rows": [
+    {
+      "case": "held_00",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1465
+        ],
+        "delays_ms": [
+          34
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "c2d7ddab2ddacbc6859bf3ee8e399a8223f00666835bf251503d753c4d28b735"
+    },
+    {
+      "case": "held_00",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1464
+        ],
+        "delays_ms": [
+          33
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "387cb4024c3084f8b23cd2b6f660209b556bb5e09cf1ea80c4c248ca264cbc75"
+    },
+    {
+      "case": "held_01",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1465
+        ],
+        "delays_ms": [
+          34
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "cb2216c8c6c8d9a28f795e93d2164b7074a6241216c72788846ddb790e72d78f"
+    },
+    {
+      "case": "held_01",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1466
+        ],
+        "delays_ms": [
+          35
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "0b3b48eb3b0b61dbf7f89ef83a4a43f08ec768e77b72d273bc910703383d4c09"
+    },
+    {
+      "case": "held_02",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1473
+        ],
+        "delays_ms": [
+          42
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "59026934e3cb0cddfaac1e799fa8a812d1c0ceeb8cd081edadcec22b4e45f717"
+    },
+    {
+      "case": "held_02",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1473
+        ],
+        "delays_ms": [
+          42
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "93c01d4d9056f37931c8198a23a96c65b0251adbe6ce8ba8216da0bf24017643"
+    },
+    {
+      "case": "held_03",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1474
+        ],
+        "delays_ms": [
+          43
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "de97f0cd3a3993617394023bf93124c477c710f05d9133dc8674b98ef706d7f9"
+    },
+    {
+      "case": "held_03",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1474
+        ],
+        "delays_ms": [
+          43
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "8533febb6915d4115b1012ef271f2761cffba4c5615e7287a1a7e651b2d57844"
+    },
+    {
+      "case": "held_04",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1463
+        ],
+        "delays_ms": [
+          32
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "072a36650366978bd7baf739a33ebc1833897db06ee792b94865d8c9863a60d3"
+    },
+    {
+      "case": "held_04",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1462
+        ],
+        "delays_ms": [
+          31
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "30fbec90db02a98b581aa0e6b55fdf39ead509076186426aee75850f40537b4c"
+    },
+    {
+      "case": "held_05",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1463
+        ],
+        "delays_ms": [
+          32
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "6cdc17d9874b836c55a0d7832f519256d113f37f52abaf45c187dcfde87eb1ed"
+    },
+    {
+      "case": "held_05",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1463
+        ],
+        "delays_ms": [
+          32
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "cbd9c012978e3fe9d8b588c2a9ec55c9d974fb70a3c7611c8a44d636ba813e9f"
+    },
+    {
+      "case": "held_06",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1471
+        ],
+        "delays_ms": [
+          40
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "1e1fc3aa64e4a708f1120e529b0596cbcac0be16171f37e71ec5dae8bcaaf032"
+    },
+    {
+      "case": "held_06",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1471
+        ],
+        "delays_ms": [
+          40
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "f868853ab4c6bcadc42887d549a36871329c1717a342e8d462eb91e6fea4337e"
+    },
+    {
+      "case": "held_07",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1473
+        ],
+        "delays_ms": [
+          42
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "030ade0a7b615ed1e3a02982c4cf2f67f1ea294be7596bc008918c97487c81be"
+    },
+    {
+      "case": "held_07",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": false,
+        "attributable_rise_indices": [],
+        "delays_ms": [],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 0
+      },
+      "trial": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1473
+        ],
+        "delays_ms": [
+          42
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 8
+      },
+      "physics_sha256": "dd3d7d9b9704cf8244ad2a6b14ae73ad6bd2ca869f9e9f07cbe7b830ab2cea81"
+    },
+    {
+      "case": "held_08",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1627
+        ],
+        "delays_ms": [
+          76
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 43
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1607,
+          1627
+        ],
+        "delays_ms": [
+          56,
+          76
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 51
+      },
+      "physics_sha256": "e8b8b336dcf14df8f6af229ef3771dedd1fd8ab27eac828f50352cbd9f8f7c8d"
+    },
+    {
+      "case": "held_08",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1631
+        ],
+        "delays_ms": [
+          80
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 39
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1608,
+          1631
+        ],
+        "delays_ms": [
+          57,
+          80
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 47
+      },
+      "physics_sha256": "3f4cfcd999a4741c5d85041eced13db5d1c2dd5e15a047681b2b58ae5562bf22"
+    },
+    {
+      "case": "held_09",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1634
+        ],
+        "delays_ms": [
+          83
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 41
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1592,
+          1634
+        ],
+        "delays_ms": [
+          41,
+          83
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 49
+      },
+      "physics_sha256": "d3960f5da8ee24482182e463c24108027c91fe7a2548dc14e4e95d82ef6771f3"
+    },
+    {
+      "case": "held_09",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1631
+        ],
+        "delays_ms": [
+          80
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 44
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1592,
+          1631
+        ],
+        "delays_ms": [
+          41,
+          80
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 52
+      },
+      "physics_sha256": "ee7cdbec9594388887ea3b0b4e15a9663b56644f7671745ce867ba8666aad486"
+    },
+    {
+      "case": "held_10",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1633
+        ],
+        "delays_ms": [
+          82
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 41
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1594,
+          1633
+        ],
+        "delays_ms": [
+          43,
+          82
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 49
+      },
+      "physics_sha256": "10396e39bcab2d492abb37578952195b118630b58c856848cc9abd455396fa75"
+    },
+    {
+      "case": "held_10",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1629
+        ],
+        "delays_ms": [
+          78
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 46
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1593,
+          1629
+        ],
+        "delays_ms": [
+          42,
+          78
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 54
+      },
+      "physics_sha256": "356eef2c852c977b9ec495c666ae73baafead438fbf190ccb4bc548fabfa0187"
+    },
+    {
+      "case": "held_11",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1633
+        ],
+        "delays_ms": [
+          82
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 44
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1591,
+          1633
+        ],
+        "delays_ms": [
+          40,
+          82
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 52
+      },
+      "physics_sha256": "7cbc24822c3f0341d6fb06ed71fc2e1d06cfdee586df4568e53cc6e20b959222"
+    },
+    {
+      "case": "held_11",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1631
+        ],
+        "delays_ms": [
+          80
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 44
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1595,
+          1631
+        ],
+        "delays_ms": [
+          44,
+          80
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 52
+      },
+      "physics_sha256": "e4539a2ab22cca0dac068770606ede7b623b31add85a7ed840a891b680f650ef"
+    },
+    {
+      "case": "held_12",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1609
+        ],
+        "delays_ms": [
+          58
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 72
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1590,
+          1609
+        ],
+        "delays_ms": [
+          39,
+          58
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 80
+      },
+      "physics_sha256": "50aa72c45e334e3a01d0e5066cd4039d02e0c6b795cfbcf5937824ba97d807e1"
+    },
+    {
+      "case": "held_12",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1609
+        ],
+        "delays_ms": [
+          58
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 71
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1589,
+          1609
+        ],
+        "delays_ms": [
+          38,
+          58
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 79
+      },
+      "physics_sha256": "4fad1ccbdd47d118b4f5564636bf8666e500d8f2c08ffc1c0da77a8852950525"
+    },
+    {
+      "case": "held_13",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1610
+        ],
+        "delays_ms": [
+          59
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 72
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1589,
+          1610
+        ],
+        "delays_ms": [
+          38,
+          59
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 80
+      },
+      "physics_sha256": "a20e75054280291354e452159fe47824ce78d283e56bff2ef0686357b7edd8a8"
+    },
+    {
+      "case": "held_13",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1610
+        ],
+        "delays_ms": [
+          59
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 70
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1587,
+          1610
+        ],
+        "delays_ms": [
+          36,
+          59
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 78
+      },
+      "physics_sha256": "8a77643c8d26d69e581caa4c8823d46e1672e3714ac863d6fc437e979a60a931"
+    },
+    {
+      "case": "held_14",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1620
+        ],
+        "delays_ms": [
+          69
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 63
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1588,
+          1620
+        ],
+        "delays_ms": [
+          37,
+          69
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 71
+      },
+      "physics_sha256": "b7323596d994bc4906855cc7ec3f308159bbf64f11d3c23b6b3c24d9551ddf8e"
+    },
+    {
+      "case": "held_14",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1620
+        ],
+        "delays_ms": [
+          69
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 63
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1588,
+          1620
+        ],
+        "delays_ms": [
+          37,
+          69
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 71
+      },
+      "physics_sha256": "44553360ecd1c88b2beb433128a8db9784c0d36c0b00eaff1961128cf8cf2ddf"
+    },
+    {
+      "case": "held_15",
+      "mechanics": "stock",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1616
+        ],
+        "delays_ms": [
+          65
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 66
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1586,
+          1616
+        ],
+        "delays_ms": [
+          35,
+          65
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 74
+      },
+      "physics_sha256": "f3c7ac0ddb9eaf268542e0d41b1191359c833ddea1a43376eb7b313ed5c223d3"
+    },
+    {
+      "case": "held_15",
+      "mechanics": "damping_coupled",
+      "incumbent": {
+        "strict": true,
+        "attributable_rise_indices": [
+          1613
+        ],
+        "delays_ms": [
+          62
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 0,
+        "active_samples_in_slot": 70
+      },
+      "trial": {
+        "strict": false,
+        "attributable_rise_indices": [
+          1589,
+          1613
+        ],
+        "delays_ms": [
+          38,
+          62
+        ],
+        "quiet_before": true,
+        "duplicate_rises": 1,
+        "active_samples_in_slot": 78
+      },
+      "physics_sha256": "e64167edcd8de38af59d5b8155336344eeadc5d64bbd9941336fc2e823378287"
+    }
+  ]
+}

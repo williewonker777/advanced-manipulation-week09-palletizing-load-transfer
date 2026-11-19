@@ -1,0 +1,56 @@
+{
+  "schema": "r27-loaded-observer-disclosed-forced-protocol.v1",
+  "status": "LOCKED_AFTER_NORMAL_ONLY_FIT_AUDIT_AND_BEFORE_ANY_R27_CANDIDATE_FORCED_OUTCOME",
+  "classification": "Development evaluation on already disclosed R26 cases only. It is not the unopened independent R27 challenge.",
+  "selected_candidate": {
+    "module": "experiments.r27_loaded_observer.candidate",
+    "class": "Detector",
+    "candidate_sha256": "6c24a8d1944e3c5c23fd2c6a24f1b2afce1054c4817ec443cf5513bb21f87d4b",
+    "witness_sha256": "9f656cb0aac1e06f8ca20cd50c0ce8d2c16a14148ac622dde0852590b0954c7d",
+    "model_sha256": "7e33eff6766c99f374533dd44b1cf5c0128afa771256c7f1e050d529630b1937",
+    "normal_protocol_sha256": "efcf058b61a1eab589a99e4039f1335db37598920a07b43a555b8b3b21f8d7af",
+    "normal_fit_audit_sha256": "0cd3ca620f25e220e8bc2b968d9b4bc1c95415547d3639a3d5485c32233a28da",
+    "normal_fit_audit_passed": true,
+    "normal_fit_episodes": 16,
+    "normal_audit_episodes": 16
+  },
+  "baseline": {
+    "module": "experiments.r26_yaw_acquisition.candidate",
+    "class": "Detector",
+    "sha256": "212f4e79367cb636c0143a2d1f8aa7ba5584aaaca5ecde6b412d01a4985b6784",
+    "r26_plan_sha256": "2047651eedd58b10e68bbf80b0f7cf973ab34643502a5190bffd02b4dcf62d77",
+    "r26_first_result_sha256": "854459ef3292f3c20eae7bc8ba829a83eae70e6ce2b5e66f5b89abeb6836489a"
+  },
+  "presealed_independent_r27_challenge": {
+    "episodes": 114,
+    "plan_sha256_prefix": "a1943e5c",
+    "closure_sha256_prefix": "09ee1f8a",
+    "seal_sha256_prefix": "c1f9f8f7",
+    "access": "Never inspect plan, closure, seal contents, cases, or outcomes in this lane."
+  },
+  "known_cases": {
+    "target_misses": ["s26_long_carry_signed", "s26_long_place_lateral"],
+    "detected_comparator": ["s26_long_transfer_rotated"],
+    "mechanics": ["stock", "actuator_deadzone", "place_surface_shift"],
+    "twins": ["none", "single"],
+    "arms": ["r26", "r27"]
+  },
+  "target_gates": [
+    "For each stock target, the R27 forced twin has exactly one attributable rise inside the unchanged 270 ms event window and the authentic no-force twin has no rise.",
+    "Report perturbed-mechanics target results without changing selection or parameters.",
+    "No target slot has duplicate rises, pre-force alarm, outside-window false rise, or stuck tail.",
+    "Every injected force and causal pre-force prefix is exact; R26 and R27 physical traces are exact."
+  ],
+  "preservation_gates": [
+    "Detected comparator remains strict with no extra rise and no first-rise delay or active-duration increase versus frozen R26.",
+    "All 32 force-free normal fit/audit episodes remain candidate-rise-free.",
+    "The extra pulse never holds output when the native R26 report is live; pending extra evidence is cancelled by native output.",
+    "Disclosed pregrasp actual-tool controls old_xy and old_xyz, and legacy distinct inputs, are evaluated only after the fixed known-case panel and must not lose an R26 rise."
+  ],
+  "falsifiers": [
+    "Either stock target remains without an attributable R27 rise.",
+    "Any new no-force rise, duplicate target/comparator rise, native detection loss, or physical/force/prefix mismatch.",
+    "Any source/model/protocol change after this lock."
+  ],
+  "stop": "If falsified, retain the exact failure and do not tune this candidate on forced outcomes."
+}

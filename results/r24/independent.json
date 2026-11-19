@@ -1,0 +1,727 @@
+{
+  "schema": "week09-r24-compact-independent-report.v1",
+  "first_result_sha256": "dfce0da5e2ded2dd0dfb3e02a168aca48f661f715df0647fb1b46c1c87872c08",
+  "initial_verification_sha256": "df81d79e661bb5e3acd0ccef3e35056ceea3049c14ae21c9a91ca7cdb55edcd6",
+  "fixed_selection_sha256": "5560b6c2c228e6015380e4b2d2fa82712453977f007a145f8a16a0c90ca2f822",
+  "evaluator_sha256": "91d24a00b87ee41077daa53976fa76c67afee93ed3bbc4155e2fe3c464a29b62",
+  "lock_sha256": "34df722725ca185d24fd09a6582ea5e63aa7e21141da63e4ba6768f9dde98b1b",
+  "plan_sha256": "cc84fca2bff1dda7ad8611b2e0aeb1baadecf131ec1ce2496156aa8a6bdb7280",
+  "overall": "FAIL",
+  "rows": 52,
+  "failed_rows": 29,
+  "episodes": 240,
+  "arms": {
+    "r23_free": {
+      "slots_without_required_quiet_prefix": 14,
+      "no_attributable_rise_slots": 23,
+      "false_rises_outside": 2,
+      "false_active_samples_outside": 16,
+      "real_tool_present_negative": 5,
+      "tool_detected_negative": 2,
+      "tool_prealarm_negative": 0,
+      "tail_active_trials": 0,
+      "duplicate_slots": 10,
+      "strict_single": [
+        11,
+        20
+      ],
+      "complete_paired_conditions": [
+        0,
+        16
+      ],
+      "strict_paired": [
+        32,
+        64
+      ]
+    },
+    "r24": {
+      "slots_without_required_quiet_prefix": 14,
+      "no_attributable_rise_slots": 23,
+      "false_rises_outside": 2,
+      "false_active_samples_outside": 16,
+      "real_tool_present_negative": 5,
+      "tool_detected_negative": 2,
+      "tool_prealarm_negative": 0,
+      "tail_active_trials": 0,
+      "duplicate_slots": 2,
+      "strict_single": [
+        11,
+        20
+      ],
+      "complete_paired_conditions": [
+        0,
+        16
+      ],
+      "strict_paired": [
+        40,
+        64
+      ]
+    }
+  },
+  "by_row_type": {
+    "negative": {
+      "rows": 16,
+      "relative_or_absolute_protection_fails": 2,
+      "scoped_fails": 0,
+      "overall_fails": 2
+    },
+    "single": {
+      "rows": 20,
+      "relative_or_absolute_protection_fails": 2,
+      "scoped_fails": 9,
+      "overall_fails": 11
+    },
+    "paired": {
+      "rows": 16,
+      "relative_or_absolute_protection_fails": 1,
+      "scoped_fails": 16,
+      "overall_fails": 16
+    }
+  },
+  "positive_gain_slots": [
+    {
+      "variant": "stock",
+      "id": "p24_transfer_near_diag",
+      "kind": "paired",
+      "slots": [
+        "isolated_first",
+        "both_first"
+      ]
+    },
+    {
+      "variant": "actuator_delay_gain",
+      "id": "p24_transfer_near_diag",
+      "kind": "paired",
+      "slots": [
+        "isolated_first",
+        "both_first"
+      ]
+    },
+    {
+      "variant": "damping_coupled",
+      "id": "p24_transfer_near_diag",
+      "kind": "paired",
+      "slots": [
+        "isolated_first",
+        "both_first"
+      ]
+    },
+    {
+      "variant": "contact_armature",
+      "id": "p24_transfer_near_diag",
+      "kind": "paired",
+      "slots": [
+        "isolated_first",
+        "both_first"
+      ]
+    }
+  ],
+  "strict_losses_or_previously_strict_over_5ms_later": [],
+  "protected_alarm_length_regression": [
+    {
+      "id": "s24_transfer_offaxis_early",
+      "mechanics": "stock",
+      "slot": "single",
+      "delays_ms": [
+        [
+          60
+        ],
+        [
+          60
+        ]
+      ],
+      "r23_samples": 6,
+      "joint_samples": 77
+    }
+  ],
+  "inherited_false_or_nonquiet_transfer_rows": [
+    {
+      "id": "n24_loaded_tool_probe_b",
+      "mechanics": "stock",
+      "twin": "none",
+      "false_s": [],
+      "outside_false_samples": 0,
+      "loaded_transfer_quiet": {
+        "active_samples": 39,
+        "rises": 1,
+        "passed": false
+      },
+      "tool": {
+        "present": true,
+        "detected": true,
+        "prealarm": false,
+        "delay_ms": 13,
+        "peak_N": 24.740934036750968
+      },
+      "baseline_same": true
+    },
+    {
+      "id": "n24_loaded_tool_probe_b",
+      "mechanics": "contact_armature",
+      "twin": "none",
+      "false_s": [],
+      "outside_false_samples": 0,
+      "loaded_transfer_quiet": {
+        "active_samples": 34,
+        "rises": 1,
+        "passed": false
+      },
+      "tool": {
+        "present": true,
+        "detected": true,
+        "prealarm": false,
+        "delay_ms": 19,
+        "peak_N": 30.85978866744762
+      },
+      "baseline_same": true
+    },
+    {
+      "id": "s24_detached_offaxis_b",
+      "mechanics": "actuator_delay_gain",
+      "twin": "none",
+      "false_s": [
+        3.922
+      ],
+      "outside_false_samples": 8,
+      "loaded_transfer_quiet": {
+        "active_samples": 0,
+        "rises": 0,
+        "passed": true
+      },
+      "tool": {
+        "present": false,
+        "detected": false,
+        "prealarm": false,
+        "delay_ms": null,
+        "peak_N": 0.0
+      },
+      "baseline_same": true
+    },
+    {
+      "id": "s24_detached_offaxis_b",
+      "mechanics": "actuator_delay_gain",
+      "twin": "force",
+      "false_s": [
+        3.922
+      ],
+      "outside_false_samples": 8,
+      "loaded_transfer_quiet": {
+        "active_samples": 0,
+        "rises": 0,
+        "passed": true
+      },
+      "tool": {
+        "present": false,
+        "detected": false,
+        "prealarm": false,
+        "delay_ms": null,
+        "peak_N": 0.0
+      },
+      "baseline_same": true
+    }
+  ],
+  "mechanics_effect_in_physics": {
+    "stock": true,
+    "actuator_delay_gain": true,
+    "damping_coupled": true,
+    "contact_armature": true
+  },
+  "bad_rows": [
+    {
+      "id": "n24_loaded_tool_probe_b",
+      "kind": "negative",
+      "mechanics": "stock",
+      "strict_scope_failure": false,
+      "failed_protection": [
+        "candidate_loaded_transfer_normal_quiet"
+      ],
+      "failed_slots": []
+    },
+    {
+      "id": "n24_loaded_tool_probe_b",
+      "kind": "negative",
+      "mechanics": "contact_armature",
+      "strict_scope_failure": false,
+      "failed_protection": [
+        "candidate_loaded_transfer_normal_quiet"
+      ],
+      "failed_slots": []
+    },
+    {
+      "id": "s24_transfer_offaxis_early",
+      "kind": "single",
+      "mechanics": "stock",
+      "strict_scope_failure": false,
+      "failed_protection": [
+        "preserve_r23_alarm_sample_cost"
+      ],
+      "failed_slots": []
+    },
+    {
+      "id": "s24_transfer_offaxis_early",
+      "kind": "single",
+      "mechanics": "damping_coupled",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "single",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "s24_transfer_offaxis_early",
+      "kind": "single",
+      "mechanics": "contact_armature",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "single",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "s24_transfer_offaxis_mid",
+      "kind": "single",
+      "mechanics": "stock",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "single",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "s24_transfer_offaxis_mid",
+      "kind": "single",
+      "mechanics": "actuator_delay_gain",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "single",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "s24_transfer_offaxis_mid",
+      "kind": "single",
+      "mechanics": "damping_coupled",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "single",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "s24_transfer_offaxis_mid",
+      "kind": "single",
+      "mechanics": "contact_armature",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "single",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "s24_transfer_offaxis_late",
+      "kind": "single",
+      "mechanics": "stock",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "single",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "s24_transfer_offaxis_late",
+      "kind": "single",
+      "mechanics": "actuator_delay_gain",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "single",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "s24_transfer_offaxis_late",
+      "kind": "single",
+      "mechanics": "damping_coupled",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "single",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "s24_detached_offaxis_b",
+      "kind": "single",
+      "mechanics": "actuator_delay_gain",
+      "strict_scope_failure": false,
+      "failed_protection": [
+        "candidate_zero_false_rises",
+        "candidate_zero_false_active_samples"
+      ],
+      "failed_slots": []
+    },
+    {
+      "id": "p24_transfer_near_diag",
+      "kind": "paired",
+      "mechanics": "stock",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "isolated_second",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        },
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_transfer_near_diag",
+      "kind": "paired",
+      "mechanics": "actuator_delay_gain",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "isolated_second",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        },
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_transfer_near_diag",
+      "kind": "paired",
+      "mechanics": "damping_coupled",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "isolated_second",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        },
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_transfer_near_diag",
+      "kind": "paired",
+      "mechanics": "contact_armature",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "isolated_second",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        },
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_transfer_near_cross",
+      "kind": "paired",
+      "mechanics": "stock",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "isolated_second",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        },
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_transfer_near_cross",
+      "kind": "paired",
+      "mechanics": "actuator_delay_gain",
+      "strict_scope_failure": true,
+      "failed_protection": [
+        "candidate_zero_duplicate_rises"
+      ],
+      "failed_slots": [
+        {
+          "slot": "isolated_second",
+          "quiet_before": true,
+          "attributable_rises_ms": [
+            1714,
+            1737,
+            1786
+          ],
+          "extra_rises": 2
+        },
+        {
+          "slot": "both_second",
+          "quiet_before": true,
+          "attributable_rises_ms": [
+            1714,
+            1791
+          ],
+          "extra_rises": 1
+        }
+      ]
+    },
+    {
+      "id": "p24_transfer_near_cross",
+      "kind": "paired",
+      "mechanics": "damping_coupled",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "isolated_second",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        },
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_transfer_near_cross",
+      "kind": "paired",
+      "mechanics": "contact_armature",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "isolated_second",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        },
+        {
+          "slot": "both_second",
+          "quiet_before": true,
+          "attributable_rises_ms": [],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_detach_near_boundary",
+      "kind": "paired",
+      "mechanics": "stock",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [
+            4167
+          ],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_detach_near_boundary",
+      "kind": "paired",
+      "mechanics": "actuator_delay_gain",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [
+            4165
+          ],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_detach_near_boundary",
+      "kind": "paired",
+      "mechanics": "damping_coupled",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [
+            4167
+          ],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_detach_near_boundary",
+      "kind": "paired",
+      "mechanics": "contact_armature",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [
+            4167
+          ],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_detached_near_opposed",
+      "kind": "paired",
+      "mechanics": "stock",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [
+            4358
+          ],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_detached_near_opposed",
+      "kind": "paired",
+      "mechanics": "actuator_delay_gain",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [
+            4358
+          ],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_detached_near_opposed",
+      "kind": "paired",
+      "mechanics": "damping_coupled",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [
+            4359
+          ],
+          "extra_rises": 0
+        }
+      ]
+    },
+    {
+      "id": "p24_detached_near_opposed",
+      "kind": "paired",
+      "mechanics": "contact_armature",
+      "strict_scope_failure": true,
+      "failed_protection": [],
+      "failed_slots": [
+        {
+          "slot": "both_second",
+          "quiet_before": false,
+          "attributable_rises_ms": [
+            4358
+          ],
+          "extra_rises": 0
+        }
+      ]
+    }
+  ],
+  "claims": {
+    "safety_qualification": false,
+    "absolute_protection_pass": false,
+    "scoped_detection_pass": false,
+    "positive_gain_count": 8
+  },
+  "default_promoted": false
+}

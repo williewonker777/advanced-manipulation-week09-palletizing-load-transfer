@@ -1,0 +1,102 @@
+{
+  "schema": "r25-development-comparison.v1",
+  "independent": false,
+  "arm": "experiments.r25_composed.detector:Detector",
+  "rows": 52,
+  "actual_episodes": 240,
+  "baseline_identity": "precisely equal to R24 independent records and dynamics",
+  "summary": {
+    "r24_joint": {
+      "strict": 51,
+      "slots": 84,
+      "duplicate_edges": 3,
+      "duplicate_slots": 2,
+      "false_rises": 2,
+      "all_four": 0
+    },
+    "experiments.r25_composed.detector:Detector": {
+      "strict": 53,
+      "slots": 84,
+      "duplicate_edges": 0,
+      "duplicate_slots": 0,
+      "false_rises": 2,
+      "all_four": 1
+    }
+  },
+  "relative_gate_regressions": [],
+  "changes": {
+    "rows_with_entire_scientific_record_unchanged": 50,
+    "new_strict_slots": [
+      [
+        "actuator_delay_gain:p24_transfer_near_cross",
+        "isolated_second"
+      ],
+      [
+        "actuator_delay_gain:p24_transfer_near_cross",
+        "both_second"
+      ]
+    ],
+    "lost_strict_slots": [],
+    "occupancy_changes": [
+      {
+        "case": "stock:s24_transfer_offaxis_early",
+        "slot": "single",
+        "strict_before": true,
+        "strict_after": true,
+        "samples": [
+          77,
+          6
+        ],
+        "delays_ms": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ]
+      },
+      {
+        "case": "actuator_delay_gain:p24_transfer_near_cross",
+        "slot": "isolated_second",
+        "strict_before": false,
+        "strict_after": true,
+        "samples": [
+          57,
+          94
+        ],
+        "delays_ms": [
+          [
+            28,
+            51,
+            100
+          ],
+          [
+            28
+          ]
+        ]
+      },
+      {
+        "case": "actuator_delay_gain:p24_transfer_near_cross",
+        "slot": "both_second",
+        "strict_before": false,
+        "strict_after": true,
+        "samples": [
+          54,
+          93
+        ],
+        "delays_ms": [
+          [
+            28,
+            105
+          ],
+          [
+            28
+          ]
+        ]
+      }
+    ],
+    "false_time_changes": []
+  },
+  "raw_sha256": "ef1e70d3799d43566d8fd501a27965bec44ca4a014ae41e938e68f9b4e617ae6"
+}

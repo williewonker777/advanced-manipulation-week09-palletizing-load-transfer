@@ -1,0 +1,227 @@
+{
+  "schema": "r17-support-shape-summary.v1",
+  "decision": "reject",
+  "reason": "first protected sh5 no-extra-false gate failed",
+  "diagnosis": {
+    "rp4_candidate_support": {
+      "mean_mg": 0.4263433113365921,
+      "min_mg": 0.3300376222962376,
+      "peak_mg": 1.0125598273352392,
+      "samples": 20,
+      "mean_ge_050": false,
+      "min_ge_025": true,
+      "peak_le_110": true
+    },
+    "rp4_late_support": {
+      "mean_mg": 0.7162002452802999,
+      "min_mg": 0.5643149744303468,
+      "peak_mg": 1.0427755953385647,
+      "samples": 20,
+      "mean_ge_050": true,
+      "min_ge_025": true,
+      "peak_le_110": true
+    },
+    "rp4_candidate_final20": {
+      "proxy_mean_mg": 0.5163199068939957,
+      "proxy_min_mg": 0.41622843344391736,
+      "proxy_minus_force_mean_mg": 0.08997659555740353,
+      "force_mean_mg": 0.4263433113365921,
+      "force_min_mg": 0.3300376222962376,
+      "public_bottom_vz_mean_mm_s": -0.274147858340747,
+      "load_bottom_vz_mean_mm_s": -11.890272110471095,
+      "public_bottom_endpoint_speed_mm_s": 10.811579314353258,
+      "load_bottom_endpoint_speed_mm_s": 7.290428624853886,
+      "actual_rigid_vz_mean_mm_s": 16.788203597432883,
+      "free_lowest_vz_mean_mm_s": 25.223947530057146,
+      "command_vertical_mean_n": 156.29266294628738,
+      "alpha_mean": 1.0,
+      "normal_position_scale_mean": 0.2,
+      "commanded_load_mean": 0.4499999999999999
+    },
+    "rp4_late_final20": {
+      "proxy_mean_mg": 0.47839111233244747,
+      "proxy_min_mg": 0.3516072732951635,
+      "proxy_minus_force_mean_mg": -0.2378091329478523,
+      "force_mean_mg": 0.7162002452802999,
+      "force_min_mg": 0.5643149744303468,
+      "public_bottom_vz_mean_mm_s": -10.228293224322545,
+      "load_bottom_vz_mean_mm_s": -26.06321881442266,
+      "public_bottom_endpoint_speed_mm_s": -5.499038383979658,
+      "load_bottom_endpoint_speed_mm_s": 12.303019855187728,
+      "actual_rigid_vz_mean_mm_s": 4.928997673921826,
+      "free_lowest_vz_mean_mm_s": 10.87608650040923,
+      "command_vertical_mean_n": 159.82310460851048,
+      "alpha_mean": 1.0,
+      "normal_position_scale_mean": 0.2,
+      "commanded_load_mean": 0.4499999999999999
+    },
+    "rp4_candidate_law_preview": {
+      "first_active_s": 3.875,
+      "active_samples": 10,
+      "max_force_n": 3.8406150000000006,
+      "max_force_fraction_mg": 0.05,
+      "impulse_n_s": 0.03259910388693524,
+      "slope10_final_range_mm_s": [
+        -18.078764584839035,
+        28.129344552346723
+      ]
+    },
+    "sh5_candidate_law_preview": {
+      "first_active_s": 3.899,
+      "active_samples": 1,
+      "max_force_n": 3.2618250000000004,
+      "max_force_fraction_mg": 0.05,
+      "impulse_n_s": 0.0032618250000000003,
+      "slope10_final_range_mm_s": [
+        -24.461002760461923,
+        1.464951880120191
+      ]
+    }
+  },
+  "study": {
+    "complete": false,
+    "passed": false,
+    "stopped_at": "sh5",
+    "rows_run": 1,
+    "first_row": {
+      "domain": "stock",
+      "id": "sh5",
+      "shaped": {
+        "status": "ok",
+        "cost": {
+          "tcp_rms": 3.4252864237419836,
+          "tcp_max": 8.522036262999025,
+          "place_step": 12.235051215735893,
+          "pick_step": 8.955447076802301,
+          "place_force": 67.79214631990716
+        },
+        "saturation_pct": 0.0,
+        "false_alarms": 1,
+        "false_alarm_times": [
+          3.903
+        ],
+        "tool_delay_ms": 11.0,
+        "ctrl_p99_us": 237.7704106038437,
+        "registration": {
+          "accepted": false,
+          "estimated_extra_height_mm": -0.1992332759821681,
+          "half_width_mm": 1.1593092812471633,
+          "command_world_z_mm": 0.0,
+          "finish_t": 3.5500000000000003,
+          "stream_completed_at_s": 3.527,
+          "stream_timing_us": {
+            "p95": 158.53449999999998,
+            "p99": 170.139,
+            "max": 292.229,
+            "finish": 14.29
+          },
+          "ik_max_position_error_m": 0.0,
+          "ik_max_orientation_error_rad": 0.0
+        },
+        "hybrid_active": true,
+        "support": {
+          "mean_mg": 0.6191795753371304,
+          "min_mg": 0.4770819976412971,
+          "peak_mg": 1.0391750986013528,
+          "samples": 20,
+          "mean_ge_050": true,
+          "min_ge_025": true,
+          "peak_le_110": true
+        },
+        "last20_geometry": {
+          "min_corner_range_mm": [
+            -2.4605188665025444,
+            -2.234325086960428
+          ],
+          "mean_lowest_corner_mm": -2.380950997251151,
+          "mean_corner_spread_mm": 1.6447361153598457,
+          "mean_face_tilt_deg": 0.2763510931739549,
+          "all_four_corners_below_plane_samples": 20,
+          "all_four_corners_above_plane_samples": 0,
+          "taught_rigid_corner_speed_mm_s": -13.951246507563981,
+          "actual_link_rigid_corner_speed_mm_s": 4.52116988074839,
+          "free_minus_rigid_mean_mm": -0.912794651704598,
+          "first_to_last_lowest_corner_speed_mm_s": 11.848789986816278
+        },
+        "shape": {
+          "samples": 1,
+          "first_t": 3.899,
+          "max_force_n": 3.2618250000000004,
+          "impulse_n_s": 0.0032618250000000003
+        }
+      },
+      "g4": {
+        "mean_gain_mg": 0.4925626575873734,
+        "all_four_g4": true
+      },
+      "ratios": {
+        "r10": {
+          "tcp_rms": 0.9886924650238752,
+          "tcp_max": 1.0003385414385175,
+          "place_step": 1.007657897365319,
+          "pick_step": 0.9992295088088584,
+          "place_force": 0.9886711808408736
+        },
+        "r15": {
+          "tcp_rms": 0.9830608731415842,
+          "tcp_max": 1.0,
+          "place_step": 1.0000159281319934,
+          "pick_step": 1.0,
+          "place_force": 0.9913238672832448
+        },
+        "d": {
+          "tcp_rms": 1.0110254234220892,
+          "tcp_max": 1.0,
+          "place_step": 1.0000159281319934,
+          "pick_step": 1.0,
+          "place_force": 0.9966220536749605
+        },
+        "candidate": {
+          "tcp_rms": 0.9993118291759701,
+          "tcp_max": 1.0,
+          "place_step": 1.0,
+          "pick_step": 1.0,
+          "place_force": 1.0
+        }
+      },
+      "gates": {
+        "status": true,
+        "g4": true,
+        "cost": true,
+        "no_extra_false": false,
+        "tool": true,
+        "saturation": true,
+        "timing": true,
+        "sh5_no_false": false
+      },
+      "passed": false
+    }
+  },
+  "scope": {
+    "protected_rows_planned": 9,
+    "protected_rows_run": 1,
+    "fresh_rows_run": 0,
+    "impacts_run": 0,
+    "cpu": 4
+  },
+  "sources": {
+    "experiments/r17_support_shape/plan.json": "e2cf6c55db585954ff2564067e80632b90ed499a058e55398327f04775f82ceb",
+    "experiments/r17_support_shape/diagnose.py": "26e1e6ab9b55a2f2151d85d1fbf2bcb8878843cf892dd7656514a0323924d211",
+    "experiments/r17_support_shape/adjustment_plan.json": "5fcb00a2dcd384de23e8800a209d8749e2642f4886a8bedebe0dbac652a1c102",
+    "experiments/r17_support_shape/controller.py": "91090f9801903efc7d86ae4c21ff9832ba4ed3b6c1837dcfc107222f8d00c033",
+    "experiments/r17_support_shape/study.py": "fa1a20e9fb984cc04bed647a2d14d8a61dc495bbbf68b9018fd839954e648244",
+    "experiments/r17_support_shape/test_controller.py": "993e9f99b70ab42f516859f93832babb6387c357d74687b380184a370b187c92",
+    "experiments/r17_support_shape/RESULT.md": "68c22cebb6bf33725b42f8508bad4ae7c05cde915d3e369018876d4927b4af37"
+  },
+  "evidence": {
+    "DIAGNOSIS_V2.json": "2c120db40a04c97d288d82d3509283a2f8f677a831d481e394cf5688b5b6c3b1",
+    "DIAGNOSIS_V3.json": "1d409d4301c8f32f078adadf56799d66c373d0a2987dc1d39b9b0c2b1ab004ff",
+    "DIAGNOSIS_V4.json": "e2f880826d7c117543f5e433c30669eebe1d475eb5e927f16fe9a1dc9a9fd36e",
+    "STUDY.json": "2f03c085729c5efd44598e669d950d40338ff6ed1685200800a6529a5dbce723"
+  },
+  "limitations": [
+    "rp4 shaped plant response not opened because prior sh5 gate failed",
+    "no claim of global non-observability; only this fixed support proxy/velocity law and exposed pairs",
+    "invalid DIAGNOSIS.json used wrong release and is retained but not evidence"
+  ]
+}

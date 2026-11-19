@@ -1,0 +1,44 @@
+{
+  "schema": "course-example-authenticity.v1",
+  "source_authenticity": {
+    "status": "authentic_original_course",
+    "protected_files": 20,
+    "manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+    "stock_source_sha256": {
+      "run.py": "7735f4a1d666f631abee10b28261d201786f9526e6892ac61235125d685c3d6b",
+      "servo_controller.py": "50b5d2b05a45d540615a4af4373780d86872c60c8049c8af75dd6a4c4836e416",
+      "collision_detector.py": "fe4b1101ba41ffa46e04500f7153a0c569125b20083d8cd3a9fe6d8d69bda884"
+    },
+    "unchanged_after_run": true
+  },
+  "guide_authenticity": {
+    "status": "known_hash_pinned_revision",
+    "sha256": "6b1ae2d0e38b8914ee0b4b3b27d82c9c72f2e15c00d8fb7ea698cfa3330de187",
+    "embedded_pngs": 12
+  },
+  "execution": {
+    "isolated_python": true,
+    "headless": true,
+    "box_kg": 8,
+    "controller": "servo_controller",
+    "detector": "collision_detector",
+    "argv": [
+      "run.py",
+      "--box",
+      "8"
+    ],
+    "stdout": [
+      "[servo_controller / servo \ubc29\uc2dd] \ubc15\uc2a4 8.0 kg | TCP \uc624\ucc28 RMS 6.14 mm, \ucd5c\ub300 14.00 mm | \ud1a0\ud06c \ud3ec\ud654 0.0% | \ud1a0\ud06c \ub5a8\ub9bc 0.16 | \uc81c\uc5b4 \uacc4\uc0b0 7 us | \uc815\uc0c1",
+      "\ucda9\ub3cc \uac10\uc9c0 | \uc624\uac10\uc9c0 7\ud68c (1.402s, 1.425s, 1.428s, 1.432s, 1.435s \u2026)",
+      "\uadf8\ub798\ud504 \uc800\uc7a5: result.png"
+    ]
+  },
+  "render_identity": {
+    "generated_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+    "guide_embedded_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+    "expected_reference_sha256": "82cb22df246af8600f7c28dac1e5a901e55bd2a5e439aa0a109348bff8e6436c",
+    "byte_identical_to_guide": true,
+    "byte_identical_to_expected_reference": true,
+    "status": "byte_identical"
+  }
+}

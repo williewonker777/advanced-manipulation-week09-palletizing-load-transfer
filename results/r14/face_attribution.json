@@ -1,0 +1,506 @@
+{
+  "schema": "r14-face-attribution-summary.v1",
+  "scope": "exposed diagnostic only; static ownership uses unchanged R12 hybrid and coupled detector",
+  "runs": 18,
+  "cases": {
+    "sh3_none": {
+      "offset_m": null,
+      "G4": {
+        "mean_gain_mg": 0.6431328409509846,
+        "passed": true
+      },
+      "support": {
+        "mean_mg": 0.7694142533282164,
+        "min_mg": 0.6678433838009802,
+        "peak_mg": 1.0530461922060506,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "placement_peak": {
+        "mg": 1.0530461922060506,
+        "time_s": 3.9,
+        "relative_release_ms": 0.0,
+        "phase": "post_release"
+      },
+      "contact": {
+        "persistent_001mg_time_s": 3.848,
+        "relative_release_ms": -52.00000000000004,
+        "footprint_verified": true,
+        "tool_contact_peak_n": 0.0,
+        "tool_contact_peak_time_s": null,
+        "tool_contact_starts_s": [],
+        "tool_contact_ends_s": []
+      },
+      "motion": {
+        "lowest_corner_velocity_final20_mean_mm_s": 9.577721451024223,
+        "lowest_corner_velocity_final20_range_mm_s": [
+          -4.8900115989893855,
+          19.169041907981743
+        ],
+        "post50_max_upward_velocity_mm_s": 23.989535780326477,
+        "post50_rebound_from_release_mm": 1.1209876504183878,
+        "corner_spread_final20_mean_mm": 0.2241420681722449,
+        "corner_spread_final20_range_mm": [
+          0.20989059980865576,
+          0.24625720494465125
+        ],
+        "face_tilt_final20_mean_deg": 0.036016637464817966,
+        "lowest_corner_final20_range_mm": [
+          -2.4394806428243987,
+          -2.2491811530664325
+        ]
+      },
+      "hybrid": {
+        "armed_s": 3.854,
+        "pre_release_load": 0.45,
+        "release_load": 0.45
+      },
+      "false_alarms": {
+        "coupled": 0,
+        "coupled_times": [],
+        "r10": 0
+      },
+      "registered_policy": {
+        "accepted": false,
+        "estimated_extra_height_mm": 0.10979949566250236,
+        "half_width_mm": 1.437602360370432,
+        "command_world_z_mm": 0.0
+      },
+      "registered_fallback_physics_exact": true
+    },
+    "sh3_xy": {
+      "offset_m": [
+        0.005,
+        0.007,
+        0.0
+      ],
+      "G4": {
+        "mean_gain_mg": 0.4391747778992424,
+        "passed": false
+      },
+      "support": {
+        "mean_mg": 0.4391747778992424,
+        "min_mg": 0.33088362025763995,
+        "peak_mg": 1.3256918000369284,
+        "samples": 20,
+        "mean_ge_050": false,
+        "min_ge_025": true,
+        "peak_le_110": false
+      },
+      "placement_peak": {
+        "mg": 1.3256918000369284,
+        "time_s": 3.843,
+        "relative_release_ms": -56.99999999999994,
+        "phase": "pre_arming"
+      },
+      "contact": {
+        "persistent_001mg_time_s": 3.837,
+        "relative_release_ms": -62.99999999999972,
+        "footprint_verified": true,
+        "tool_contact_peak_n": 0.0,
+        "tool_contact_peak_time_s": null,
+        "tool_contact_starts_s": [],
+        "tool_contact_ends_s": []
+      },
+      "motion": {
+        "lowest_corner_velocity_final20_mean_mm_s": 29.57691183998536,
+        "lowest_corner_velocity_final20_range_mm_s": [
+          19.53940294321832,
+          35.187463080591726
+        ],
+        "post50_max_upward_velocity_mm_s": 35.817686462869425,
+        "post50_rebound_from_release_mm": 1.5830047863561243,
+        "corner_spread_final20_mean_mm": 1.715798603050811,
+        "corner_spread_final20_range_mm": [
+          1.5536927594492642,
+          1.8627610340065106
+        ],
+        "face_tilt_final20_mean_deg": 0.39057708073919,
+        "lowest_corner_final20_range_mm": [
+          -3.430201512499162,
+          -2.865665026732766
+        ]
+      },
+      "hybrid": {
+        "armed_s": 3.845,
+        "pre_release_load": 0.45,
+        "release_load": 0.45
+      },
+      "false_alarms": {
+        "coupled": 0,
+        "coupled_times": [],
+        "r10": 0
+      },
+      "registered_policy": {
+        "accepted": false,
+        "estimated_extra_height_mm": 0.21111077623217822,
+        "half_width_mm": 1.5079774810111917,
+        "command_world_z_mm": 0.0
+      },
+      "registered_fallback_physics_exact": true
+    },
+    "sh5_none": {
+      "offset_m": null,
+      "G4": {
+        "mean_gain_mg": 0.7071779843467142,
+        "passed": true
+      },
+      "support": {
+        "mean_mg": 0.8330700301836259,
+        "min_mg": 0.7400439866355738,
+        "peak_mg": 1.0497196106360567,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "placement_peak": {
+        "mg": 1.0497196106360567,
+        "time_s": 3.9,
+        "relative_release_ms": 0.0,
+        "phase": "post_release"
+      },
+      "contact": {
+        "persistent_001mg_time_s": 3.848,
+        "relative_release_ms": -52.00000000000004,
+        "footprint_verified": true,
+        "tool_contact_peak_n": 0.0,
+        "tool_contact_peak_time_s": null,
+        "tool_contact_starts_s": [],
+        "tool_contact_ends_s": []
+      },
+      "motion": {
+        "lowest_corner_velocity_final20_mean_mm_s": 10.383861478286061,
+        "lowest_corner_velocity_final20_range_mm_s": [
+          -4.196995151402261,
+          20.23937771286177
+        ],
+        "post50_max_upward_velocity_mm_s": 24.299650654719617,
+        "post50_rebound_from_release_mm": 1.1334179024307653,
+        "corner_spread_final20_mean_mm": 0.30085603238600367,
+        "corner_spread_final20_range_mm": [
+          0.2713516233975857,
+          0.32772284572202703
+        ],
+        "face_tilt_final20_mean_deg": 0.054053207817002256,
+        "lowest_corner_final20_range_mm": [
+          -2.444315316186001,
+          -2.2401480177951374
+        ]
+      },
+      "hybrid": {
+        "armed_s": 3.857,
+        "pre_release_load": 0.45,
+        "release_load": 0.45
+      },
+      "false_alarms": {
+        "coupled": 0,
+        "coupled_times": [],
+        "r10": 0
+      },
+      "registered_policy": {
+        "accepted": false,
+        "estimated_extra_height_mm": 0.029908154814719923,
+        "half_width_mm": 1.0221655882600558,
+        "command_world_z_mm": 0.0
+      },
+      "registered_fallback_physics_exact": true
+    },
+    "sh5_xy": {
+      "offset_m": [
+        0.004,
+        -0.006,
+        0.0
+      ],
+      "G4": {
+        "mean_gain_mg": 0.7256427148424275,
+        "passed": true
+      },
+      "support": {
+        "mean_mg": 0.8411811085753342,
+        "min_mg": 0.7867709369114171,
+        "peak_mg": 1.034799126758385,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": true,
+        "peak_le_110": true
+      },
+      "placement_peak": {
+        "mg": 1.034799126758385,
+        "time_s": 3.9,
+        "relative_release_ms": 0.0,
+        "phase": "post_release"
+      },
+      "contact": {
+        "persistent_001mg_time_s": 3.847,
+        "relative_release_ms": -52.999999999999936,
+        "footprint_verified": true,
+        "tool_contact_peak_n": 0.0,
+        "tool_contact_peak_time_s": null,
+        "tool_contact_starts_s": [],
+        "tool_contact_ends_s": []
+      },
+      "motion": {
+        "lowest_corner_velocity_final20_mean_mm_s": 11.009413330318583,
+        "lowest_corner_velocity_final20_range_mm_s": [
+          -2.9173251544432066,
+          20.319435623701974
+        ],
+        "post50_max_upward_velocity_mm_s": 24.791669109859416,
+        "post50_rebound_from_release_mm": 1.158058214908114,
+        "corner_spread_final20_mean_mm": 0.8102796472863426,
+        "corner_spread_final20_range_mm": [
+          0.7487842802418573,
+          0.8801784558460481
+        ],
+        "face_tilt_final20_mean_deg": 0.1633327560317775,
+        "lowest_corner_final20_range_mm": [
+          -2.5039691402948914,
+          -2.2902468541360896
+        ]
+      },
+      "hybrid": {
+        "armed_s": 3.857,
+        "pre_release_load": 0.45,
+        "release_load": 0.45
+      },
+      "false_alarms": {
+        "coupled": 0,
+        "coupled_times": [],
+        "r10": 0
+      },
+      "registered_policy": {
+        "accepted": false,
+        "estimated_extra_height_mm": 0.11439646336549433,
+        "half_width_mm": 1.1492495866723573,
+        "command_world_z_mm": 0.0
+      },
+      "registered_fallback_physics_exact": true
+    },
+    "sh5_z": {
+      "offset_m": [
+        0.0,
+        0.0,
+        0.0048
+      ],
+      "G4": {
+        "mean_gain_mg": 0.5379371304619276,
+        "passed": false
+      },
+      "support": {
+        "mean_mg": 0.7001308274875074,
+        "min_mg": 0.06745334704149582,
+        "peak_mg": 1.0980451893020167,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "placement_peak": {
+        "mg": 1.0980451893020167,
+        "time_s": 3.8970000000000002,
+        "relative_release_ms": -2.9999999999996696,
+        "phase": "armed_pre_release"
+      },
+      "contact": {
+        "persistent_001mg_time_s": 3.858,
+        "relative_release_ms": -41.999999999999815,
+        "footprint_verified": true,
+        "tool_contact_peak_n": 87.9844827513889,
+        "tool_contact_peak_time_s": 1.242,
+        "tool_contact_starts_s": [
+          1.242
+        ],
+        "tool_contact_ends_s": [
+          1.324
+        ]
+      },
+      "motion": {
+        "lowest_corner_velocity_final20_mean_mm_s": -2.8303953022424984,
+        "lowest_corner_velocity_final20_range_mm_s": [
+          -18.2582954506032,
+          7.548933311051553
+        ],
+        "post50_max_upward_velocity_mm_s": 15.075404876136567,
+        "post50_rebound_from_release_mm": 0.6854413068761627,
+        "corner_spread_final20_mean_mm": 0.8585817809030223,
+        "corner_spread_final20_range_mm": [
+          0.7925486503029092,
+          0.9045948612702867
+        ],
+        "face_tilt_final20_mean_deg": 0.14687262732941278,
+        "lowest_corner_final20_range_mm": [
+          -1.5360706419792771,
+          -1.4507465212044994
+        ]
+      },
+      "hybrid": {
+        "armed_s": 3.869,
+        "pre_release_load": 0.45,
+        "release_load": 0.45
+      },
+      "false_alarms": {
+        "coupled": 2,
+        "coupled_times": [
+          3.878,
+          3.92
+        ],
+        "r10": 0
+      },
+      "registered_policy": {
+        "accepted": false,
+        "estimated_extra_height_mm": -0.09390250980158299,
+        "half_width_mm": 1.0629233574214205,
+        "command_world_z_mm": 0.0
+      },
+      "registered_fallback_physics_exact": true
+    },
+    "sh5_xyz": {
+      "offset_m": [
+        0.004,
+        -0.006,
+        0.0048
+      ],
+      "G4": {
+        "mean_gain_mg": 0.46695005796847433,
+        "passed": false
+      },
+      "support": {
+        "mean_mg": 0.5935669757182314,
+        "min_mg": 0.041381995352981156,
+        "peak_mg": 1.0438926481563393,
+        "samples": 20,
+        "mean_ge_050": true,
+        "min_ge_025": false,
+        "peak_le_110": true
+      },
+      "placement_peak": {
+        "mg": 1.0438926481563393,
+        "time_s": 3.924,
+        "relative_release_ms": 24.00000000000002,
+        "phase": "post_release"
+      },
+      "contact": {
+        "persistent_001mg_time_s": 3.857,
+        "relative_release_ms": -42.9999999999997,
+        "footprint_verified": true,
+        "tool_contact_peak_n": 88.15610814973269,
+        "tool_contact_peak_time_s": 1.242,
+        "tool_contact_starts_s": [
+          1.242
+        ],
+        "tool_contact_ends_s": [
+          1.324
+        ]
+      },
+      "motion": {
+        "lowest_corner_velocity_final20_mean_mm_s": -2.2687778947887867,
+        "lowest_corner_velocity_final20_range_mm_s": [
+          -17.963195223971383,
+          8.063083353912148
+        ],
+        "post50_max_upward_velocity_mm_s": 17.824050496587972,
+        "post50_rebound_from_release_mm": 0.7801385528661704,
+        "corner_spread_final20_mean_mm": 2.4096833963019724,
+        "corner_spread_final20_range_mm": [
+          2.254756661297446,
+          2.4950877123853736
+        ],
+        "face_tilt_final20_mean_deg": 0.443153832559162,
+        "lowest_corner_final20_range_mm": [
+          -1.6671815371500642,
+          -1.5871858757091597
+        ]
+      },
+      "hybrid": {
+        "armed_s": 3.869,
+        "pre_release_load": 0.45,
+        "release_load": 0.45
+      },
+      "false_alarms": {
+        "coupled": 2,
+        "coupled_times": [
+          3.879,
+          3.906
+        ],
+        "r10": 0
+      },
+      "registered_policy": {
+        "accepted": false,
+        "estimated_extra_height_mm": -0.18982336978144676,
+        "half_width_mm": 1.2070497653742698,
+        "command_world_z_mm": 0.0
+      },
+      "registered_fallback_physics_exact": true
+    }
+  },
+  "attribution": {
+    "sh3": {
+      "owner": "XY pickup geometry is sufficient",
+      "evidence": "same-mass/COM no-offset passes G4, while XY fails mean and peak",
+      "contact_advance_ms": -10.999999999999677,
+      "peak": {
+        "mg": 1.3256918000369284,
+        "time_s": 3.843,
+        "relative_release_ms": -56.99999999999994,
+        "phase": "pre_arming"
+      },
+      "peak_leads_arming_ms": 2.000000000000224,
+      "corner_spread_increase_mm": 1.4916565348785662,
+      "rebound_increase_mm": 0.4620171359377365
+    },
+    "sh5": {
+      "owner": "positive Z pickup geometry is sufficient; XY alone is not",
+      "evidence": "none and XY pass G4; Z and XY+Z fail the final-20ms minimum",
+      "z_pickup_tool_contact": {
+        "tool_contact_peak_n": 87.9844827513889,
+        "tool_contact_peak_time_s": 1.242,
+        "tool_contact_starts_s": [
+          1.242
+        ],
+        "tool_contact_ends_s": [
+          1.324
+        ]
+      },
+      "z_contact_delay_vs_none_ms": 10.000000000000231,
+      "z_arming_delay_vs_none_ms": 12.00000000000001,
+      "z_peak": {
+        "mg": 1.0980451893020167,
+        "time_s": 3.8970000000000002,
+        "relative_release_ms": -2.9999999999996696,
+        "phase": "armed_pre_release"
+      },
+      "xyz_peak": {
+        "mg": 1.0438926481563393,
+        "time_s": 3.924,
+        "relative_release_ms": 24.00000000000002,
+        "phase": "post_release"
+      },
+      "xy_interaction": {
+        "min_support_change_mg": -0.02607135168851466,
+        "mean_support_change_mg": -0.10656385176927607,
+        "corner_spread_increase_mm": 1.55110161539895,
+        "tilt_increase_deg": 0.2962812052297492
+      }
+    }
+  },
+  "policy_separation": {
+    "all_registered_decisions_abstained": true,
+    "all_registered_fallback_physics_exact": true,
+    "conclusion": "The consumed registered policy issued zero command in every condition; physical attribution belongs to pickup geometry under the frozen hybrid, not to registered actuation."
+  },
+  "next_fix_diagnostic": "sh3 needs an XY/face-orientation correction before contact because its 1.326mg peak occurs 2ms before arming. sh5 needs Z/grasp-face correction: the +4.8mm pickup creates an 88N tool contact at 1.242s, delays placement contact/arming about 10/12ms, and causes the minimum-support failure; XY only amplifies later tilt/spread. This does not establish a universal controller or threshold change.",
+  "truth_disclosure": "Table force, free-box pose, bottom corners, tilt, contact and footprint are offline scoring truth only and were not controller or detector inputs.",
+  "pins": {
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "experiments/r12_hybrid/controller.py": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+    "experiments/r14_stock_handoff/controller.py": "10f6657d255b52b4e9f802200bb6275b9db5b7499d2de21a36ee9f5260e67d61",
+    "experiments/r14_stock_handoff/detector.py": "9fecfee47778a370e743497a8370ad7465c68ab126ae06b9f17c1bbf3fd8a0e9",
+    "experiments/r14_face_attribution/plan.json": "f238a26fc80bb28177d679dd7c3bfb728556458387e0ec984b929856e9d78eae",
+    "experiments/r14_face_attribution/run.py": "b8e862ffa0d6cb30ea487cb14f2c65c1d108d086ccc3f5bab5a694c392c229f8"
+  },
+  "calibration_sha256": "cfd91f8b53e71088cad01f1fba0dedfa7e778f85fd84dd1431f5c80e3d3c59e4"
+}

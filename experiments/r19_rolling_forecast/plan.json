@@ -1,0 +1,33 @@
+{
+  "schema":"r19-rolling-forecast-plan.v1",
+  "status":"FROZEN_BEFORE_ANY_R19_ROLLING_OBSERVATION",
+  "model":{"horizon_ms":16,"older_lag_ms":24,"ridge":0.001,"target":"current corrected force innovation minus 16ms-old innovation","error_band":"unchanged original R17C per-age envelope","margin":1.25,"support":"known mass 2.8..8.0kg and finite live controller effective COM within +/-0.04m"},
+  "train_seeds":[19301,19303,19307],
+  "calibration_seeds":[19401,19411],
+  "unseen_seeds":[19501,19511],
+  "train":[
+    {"id":"rt1","mass":2.95,"com":[-0.028,-0.024,-0.026],"offset":null},
+    {"id":"rt2","mass":3.62,"com":[0.027,-0.019,0.025],"offset":[-0.003,0.002,0.001]},
+    {"id":"rt3","mass":4.35,"com":[-0.022,0.028,0.018],"offset":[0.002,-0.003,-0.002]},
+    {"id":"rt4","mass":5.05,"com":[0.024,0.017,-0.027],"offset":null},
+    {"id":"rt5","mass":5.78,"com":[-0.027,-0.014,0.026],"offset":[-0.002,-0.002,0.002]},
+    {"id":"rt6","mass":6.52,"com":[0.021,-0.028,-0.019],"offset":[0.003,0.002,-0.001]},
+    {"id":"rt7","mass":7.18,"com":[-0.019,0.022,0.028],"offset":[0.002,-0.001,0.0]},
+    {"id":"rt8","mass":7.88,"com":[0.028,0.026,-0.023],"offset":[-0.002,0.003,0.001]}
+  ],
+  "calibration":[
+    {"id":"rc1","mass":3.28,"com":[0.014,-0.025,0.019],"offset":[0.001,0.002,-0.002]},
+    {"id":"rc2","mass":4.72,"com":[-0.025,0.016,-0.021],"offset":null},
+    {"id":"rc3","mass":6.08,"com":[0.026,0.021,0.017],"offset":[-0.002,0.001,0.002]},
+    {"id":"rc4","mass":7.55,"com":[-0.016,-0.027,0.022],"offset":[0.003,-0.002,0.0]}
+  ],
+  "unseen":[
+    {"id":"ru1","mass":3.44,"com":[-0.021,0.019,0.015],"offset":null},
+    {"id":"ru2","mass":4.11,"com":[0.025,-0.012,-0.024],"offset":[-0.001,0.003,0.002]},
+    {"id":"ru3","mass":5.36,"com":[-0.013,-0.026,0.027],"offset":[0.002,-0.001,-0.002]},
+    {"id":"ru4","mass":6.83,"com":[0.018,0.024,-0.016],"offset":[-0.003,-0.002,0.001]},
+    {"id":"ru5","mass":7.67,"com":[-0.026,0.011,0.020],"offset":[0.001,0.002,0.0]}
+  ],
+  "gates":{"calibration":"all active normal samples max directional error/original envelope <=1.25; candidate detect bits equal R18","nonvacuity":"active at every post-release sample from age 24ms; active before both known collision onsets","unseen":"same gate on ten entirely unseen tuple/seed episodes before forces"},
+  "forbidden":["V1/V2 tuples or seeds","future target sample in features","larger error floors","lower margin","force fit","absolute event time","force-dependent support"]
+}

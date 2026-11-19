@@ -1,0 +1,60 @@
+{
+  "schema": "r21-torque-research-archive.v1",
+  "archive_sha256": "1abf84f290021005d7dd21a89173da52e9911a36c6505bbed3cbf3c38b97539d",
+  "entries": [
+    "torque_controller.py",
+    "collision_detector.py",
+    "README.md",
+    "receipt.json"
+  ],
+  "receipt": {
+    "audit_sha256": "3ff9e1da6e647abb6aa183f4659a6e5b23a7615011e5454be2fe2c3ae0bf0650",
+    "build": {
+      "lines": 1973,
+      "r10_detector_sha256": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+      "r20_branch_sha256": "1770c36e002404a660c9cfc1ef45ddbb6cb1f53a3ec973c82b760e60881e7025",
+      "schema": "r21-yaw-standalone-build.v1",
+      "standalone_sha256": "f28a4b6da0939e435fc97130ee9be7db7b98b7c2956346f778914788162492ad",
+      "yaw_lock_manifest_sha256": "a21d8536d407b3e470b4213c3dd2533e4082135ef6766928f26b8b4b518cc4dc",
+      "yaw_sources_sha256": {
+        "coarse.py": "f3a8a4202e638346dfa6a7994b056cbf509be4f335fb09c76d6657d47abcafe9",
+        "detector.py": "69e1e884f393a17751546165554f994c19b0cb127830233fba1f2329481c87cb",
+        "frozen.py": "71a75f131ea6d3aae94f9acf40c42abe92d9123000d86e685f8bb5f4a00a4342",
+        "normal_bins.json": "5f22f640eb8824f764ffeec7ecbef7ba23df02a874547b93b8ddc72925e25c15",
+        "state.py": "f04d46e93c55e04aa869050fe43c895951f3a970e3729b01e8d94744532f3a9f"
+      }
+    },
+    "default_submission_promoted": false,
+    "evaluator_sha256": "ee7effc27ac0006c7d2f392523e3e1e4a45626d1113116cba40e00978bd2786f",
+    "files": {
+      "README.md": "890e38fc0a677efadab2d034cd002af028fb0874da45c5ce745279d00f875743",
+      "collision_detector.py": "f28a4b6da0939e435fc97130ee9be7db7b98b7c2956346f778914788162492ad",
+      "torque_controller.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371"
+    },
+    "full_d4": {
+      "episodes": 770,
+      "exposed": true,
+      "policy_regression_case_ids": [
+        174,
+        330,
+        339,
+        349
+      ],
+      "summary_sha256": "f88efb7c4417d19a4974e4875d7df8b4db4bdf956bb9e4bc29220c805f4c2c71",
+      "verdict": "FAIL"
+    },
+    "gates": {
+      "frozen_yaw_torque_table_exact": true,
+      "protected_kit_unchanged": true,
+      "servo_R10_fallback_exact": true,
+      "standalone_default_filename": true
+    },
+    "kit_manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
+    "recognized_collision_cells": {
+      "servo": 23,
+      "torque": 24
+    },
+    "schema": "r21-torque-yaw-portable-package.v1",
+    "status": "installable_research_option"
+  }
+}

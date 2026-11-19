@@ -1,0 +1,124 @@
+{
+  "schema": "r18-pair-attribution-summary.v1",
+  "classifier_changed": false,
+  "new_impulses": false,
+  "result_sha256": "42f44d6a3b8b9ad9bad86966de8a7a085e8d365b1dff0bef8d6a98825be7ba68",
+  "v4_assessments_exact": {
+    "pair_cross_axis_return": "3c7b607d602c70665744b81859e3fb9895f1d0a4c997303f5e96abfaa96b51e0",
+    "pair_return_opposed": "c6caf7cfba342eeb303dc8e3cde49b7d0361d8456ed7579cd2d9afdbf63d647a"
+  },
+  "pair_cross_axis_return": {
+    "disposition": "miss_attributed_to_prediction_support_abstention",
+    "detector_supported_release": false,
+    "detector_supported_second_onset": false,
+    "minimum_normalized_support_margin": -10.624771459069404,
+    "out_of_support_features": [
+      {
+        "direction": "fx_N",
+        "feature": "history_mean",
+        "normalized_value": 2.853482425415022,
+        "signed_margin_to_support": -1.739626644763065
+      },
+      {
+        "direction": "fx_N",
+        "feature": "command_mean",
+        "normalized_value": -12.50807373424529,
+        "signed_margin_to_support": -10.624771459069404
+      },
+      {
+        "direction": "fx_N",
+        "feature": "command_last",
+        "normalized_value": -5.3564507511795885,
+        "signed_margin_to_support": -3.0596503050571644
+      },
+      {
+        "direction": "fy_N",
+        "feature": "history_mean",
+        "normalized_value": -3.015356476024426,
+        "signed_margin_to_support": -0.3739596820630946
+      },
+      {
+        "direction": "fz_N",
+        "feature": "history_mean",
+        "normalized_value": 2.3530966304589067,
+        "signed_margin_to_support": -0.542522353506067
+      }
+    ],
+    "observed_fz_physical_ratio_max": 2.115003258006823,
+    "raw_coincidence_samples": 0,
+    "recovery_rises": 0,
+    "base_coupled_samples": 0,
+    "physical_response": {
+      "max_abs_q_delta": 0.010943045765399617,
+      "max_abs_residual_delta": 10.360423067924573,
+      "instantaneous_added_samples": 0,
+      "base_coupled_added_samples": 0
+    },
+    "single_second_pulse": {
+      "active_components_whole_episode": 2,
+      "second_force_components": 1,
+      "second_component_samples": 119,
+      "both_valid_rises_s": [],
+      "all_both_second_rises_within_one_320ms_window": true
+    },
+    "controller_release": {
+      "grip": 0.0,
+      "hybrid_active": 1.0,
+      "hybrid_alpha": 1.0,
+      "commanded_load": 0.45,
+      "normal_position_scale": 0.19999999999999996,
+      "support_valid": 0.0,
+      "lambda_support": 0.0,
+      "relief_position_m": 0.00019620000000000038
+    }
+  },
+  "pair_return_opposed": {
+    "disposition": "three_rises_from_fragmented_same_direction_fz_coincidence_within_one_continuous_second_pulse",
+    "detector_supported_release": true,
+    "minimum_normalized_support_margin": 0.03563927292388569,
+    "fz_physical_ratio_max": 2.685218983910387,
+    "fz_mismatch_ratio_max": 3.000441997733752,
+    "fz_same_direction_samples": 21,
+    "mz_mismatch_ratio_max_but_physical_ratio_max": [
+      12.909387333842286,
+      0.0822427195223155
+    ],
+    "raw_coincidence_samples": 21,
+    "raw_coincidence_components": 11,
+    "recovery_detected_samples": 24,
+    "recovery_rises": 3,
+    "base_coupled_samples": 0,
+    "first_only_raw_coincidence_samples": 0,
+    "valid_rises_s": [
+      4.213,
+      4.224,
+      4.237
+    ],
+    "single_second_pulse": {
+      "active_components_whole_episode": 2,
+      "second_force_components": 1,
+      "second_component_samples": 119,
+      "both_valid_rises_s": [
+        4.213,
+        4.224,
+        4.237
+      ],
+      "all_both_second_rises_within_one_320ms_window": true
+    },
+    "controller_release": {
+      "grip": 0.0,
+      "hybrid_active": 1.0,
+      "hybrid_alpha": 1.0,
+      "commanded_load": 0.45,
+      "normal_position_scale": 0.19999999999999996,
+      "support_valid": 0.0,
+      "lambda_support": 0.0,
+      "relief_position_m": 0.00019620000000000038
+    }
+  },
+  "limitations": [
+    "offline force, tool, and actual state are attribution-only",
+    "V4 did not persist raw q arrays; live q/flag/force hashes are pinned here and the complete V4 assessment is reproduced byte-canonically",
+    "no classifier, threshold, case, impulse, controller, or V4 file was changed"
+  ]
+}

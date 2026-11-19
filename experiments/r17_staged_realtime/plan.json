@@ -1,0 +1,13 @@
+{
+  "schema": "r17-staged-realtime-plan.v1",
+  "design": "Retain frozen R17A scheduled-reference optimization. Accumulate early prefix normal equations when each public fit centre completes. After all height fit centres complete at 3.527s, spread height normalized-system construction, five fold Gram blocks, full/deleted solves, information solve, and decision assembly over 14 consecutive causal ticks. At 3.55, validate the complete public stream and immutable feature arrays before consuming the staged result. Never shift unknown-height reference work or detector work into reset.",
+  "decision_contract": "Early decision remains 2.463s and height decision remains 3.55s. Require identical accept/actions and all numeric decision fields within 1e-9. Missing, incomplete, stale, reset-crossing, or schema-invalid staged state fails closed; there is no late batch-solve fallback.",
+  "physics_gate": "Against frozen R17A, use prior R17 tolerances: reference q 2e-10, qd 2e-9, qdd 2e-6, command 2e-5; plant q/qpos 2e-7, tau/r 2e-5, force/e 2e-4, costs <=1.0001; identical detector, FA, saturation, tool and divergence outcomes. Empty must be byte-exact. No impacts.",
+  "timing_gate": "CPU4, single BLAS, unchanged registered detector, 6000 ticks. One wrapper-free reference plus two order-balanced timed trials for C, R17A, and staged. Report controller and combined wall/thread p50/p99/max/overruns, reset, both decision samples, staging-tick times, all overrun timestamps and top samples. Require controller p99<=800us, combined p99<=1000us, no p99/overrun regression vs R17A, and improved 2.463/3.55 decision samples. Hard OS max is reported but is not a hard-real-time claim.",
+  "cases": [
+    {"id": "ec1_down_active", "mass": 3.45, "com": [0.019, -0.014, 0.021], "offset": [0.0058, -0.0065, -0.0044]},
+    {"id": "sh4_heavy_active", "mass": 7.90, "com": [0.024, -0.014, 0.015], "offset": [-0.006, -0.005, -0.0058]},
+    {"id": "empty", "mass": 0.0, "com": [0.0, 0.0, 0.0], "offset": null}
+  ],
+  "scope": "New family only; frozen C, R17A, sensors, detector, runner, kit and defaults unchanged. Normal simulator episodes only."
+}

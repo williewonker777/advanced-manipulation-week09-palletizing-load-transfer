@@ -1,0 +1,32 @@
+{
+  "classification": "interface-only namespace correction; same inherited R23 scoring policy; no condition, threshold, plan, selection, candidate, or gate change",
+  "exact_namespace_correction": {
+    "prior.tool_floor": "prior.prior.tool_floor",
+    "prior.tool_gates": "prior.prior.tool_gates"
+  },
+  "fixture_count": 3,
+  "interrupted_attempt": {
+    "exit_code": 1,
+    "failure": "R25 referred to R24 module attributes tool_gates/tool_floor that R24 itself delegates to its pinned R23 evaluator",
+    "log_sha256": "56ff5d40df0d461d7f17e45f9302a6aaa0870edf2ce987de69364cb5e4afc6b4",
+    "result_created": false
+  },
+  "original_evaluator_sha256": "3f904c80132ab6bd251077e79be81b2fdf11140563b2de4406989b3e7a6d4cc8",
+  "repaired_evaluator_sha256": "fe0352d32df6c5dc0b0fd78dc1bb8e4decb0606ec02dac0ba74a24f571fec6a6",
+  "schema": "r25-verifier-interface-amendment.v1",
+  "status": "SEALED_BEFORE_RETRY_WITHOUT_SCIENTIFIC_RESULT",
+  "unchanged_pins": {
+    "candidate_sha256": "04d591ce1a3e849d615a28faf8d138e035178ac080cab598ec41449fda7c9ed4",
+    "choice_sha256": "17b00bb610e02554624570beec80745b294cde517907a6f67d8847f22cfd79be",
+    "independent_seal_sha256": "c55a70ed84fa2c160c88a805060cac040e63daab337ecbe6bc44ea074502c05a",
+    "plan_sha256": "85c5c7fd9a4ccb01f44added17f938d7691219ea3e73e873e2aed4735bebd1b2",
+    "protocol_sha256": "ddb3836c63f04f7d5c57c61713b7456e6863efc82debcc80b25d3fdf84ad56d1"
+  },
+  "underlying_policy": {
+    "identity_checked": true,
+    "path": "experiments/r23_holdout/evaluator.py",
+    "sha256": "85b8b0279b8bd18064d3ca180358dcc13ce6fde5d94dd42cbd0f327db7ad4f24",
+    "tool_floor_source_sha256": "f066ad5f859eae6155e4920dfb80b9812f8c428ed23c8ab980b9aee42468a778",
+    "tool_gates_source_sha256": "ac1f011f8c90d967b760aa9b564c1fd36946dcbd0ae23d5aa7c48b218f73e77e"
+  }
+}

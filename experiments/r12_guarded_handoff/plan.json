@@ -1,0 +1,14 @@
+{
+  "schema":"r12-guarded-handoff.v1",
+  "question":"Can the useful torque training result be reproduced independently, while preserving R1 exactly when unarmed and refusing contact too late for a bumpless handoff?",
+  "changes":"Inherit and call the entire R1 law. Use the R1 unload-capped carried fraction in a continuous convex combination with 0.45 before AND after release. Scale only the world-vertical Jacobian projection of position torque down to 0.20; never alter damping, detector, thresholds or grip. Arm between 120 and 20 ms before release with a positive known mass and public support >=0.05. Keep R1 on missing/late contact. Fixed 20 ms rise, 40 ms fade.",
+  "protocol":"First verify synthetic late and absent contact, and full 6000-cycle no-payload R1 byte parity. Then compare four new normal pairs, including lighter payload, nuisance and vertical pickup offset. All four G4 gates, each cost <=1.05 matching R1, no new saturation, divergence, or false alarm; byte-identical before arming. If any group fails, do not open a held collision set, do not promote, retain utility as research-only. No detector tuning or truth-based compensation.",
+  "cases":[
+    {"id":"mid","mass":5.28,"com":[0.018,-0.014,0.025],"perturb":{"seed":132721}},
+    {"id":"heavy","mass":7.72,"com":[-0.024,0.011,-0.016],"perturb":{"seed":132722,"stiffness_scale":0.96,"coulomb_scale":1.07,"viscous_scale":1.02}},
+    {"id":"light","mass":2.86,"com":[0.004,0.023,0.014],"perturb":{"seed":132723,"stiffness_scale":1.04,"coulomb_scale":0.94,"viscous_scale":1.06}},
+    {"id":"offset","mass":6.57,"com":[-0.010,0.017,0.027],"offset":[0.007,-0.009,0.004],"perturb":{"seed":132724,"stiffness_scale":0.98,"viscous_scale":0.94,"coulomb_scale":1.04}}
+  ],
+  "held_if_all_pass":[{"mass":5.94,"onset":3.889,"force":[0,16,0]},{"mass":7.21,"onset":3.904,"force":[7,-6,-14]}],
+  "inputs":"encoders, JTS, grip, public reference, known box and nominal robot only. No access to drive internals or detector alarms. Physical measurements after episode. No hardware or safety claim."
+}

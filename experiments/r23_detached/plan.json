@@ -1,0 +1,13 @@
+{
+  "schema": "r23-post-detachment-development.v1",
+  "purpose": "Recognize real horizontal impacts on the empty arm after setting down a load without introducing extra releases of the same event. Previous R22 independent conditions are exposed development cases now.",
+  "causal_observation": "Register a real grip=true to grip=false transition, never the nominal release clock. Same-episode startup bias from the R15 delayed inverse-dynamics estimator; after detachment start a fresh empty-arm sensor stencil. Never use environment identity, contact truth, measured applied force, or the programmed impact time/direction in a detector. Do not adapt on impacts. Keep R22 LIGHT active everywhere. Report unavailable startup and the finite stencil blind interval honestly.",
+  "fixed_threshold": "Use the previous frozen R22 entire-task, empty-arm planar bound (4.60253623135071 N; 32 normal-only calibration runs), unchanged kernel, 12-sample vector average, 3 samples above and 8 below 0.8 times the bound.",
+  "candidates_before_R23_outcomes": {
+    "free": "Additional port only after observed detachment with amplitude hysteresis. May join a pre-existing shock through stencil warmup.",
+    "onset": "Prefer causal onset certification: after the edge or an incumbent report, a new auxiliary event may start only after three consecutive sensor-valid low planar samples with the incumbent quiet. Once admitted, an event is released by actual force recovery, not a timer. An already active incumbent is never suppressed."
+  },
+  "exposed_acceptance": "Protect each strict R22 single and twin event, every actual tool detection, and per-case false/duplicate/tail/prealarm safeguards on the previous 66 case-by-mechanics rows and full 385 D4 conditions. Treat physical/force/prefix mismatches as invalid. Require a new strict hit for post-release 4.83 kg (-7.7,-7.1) N in all three mechanics, no new negative rises, no lost old group, no weak/official regressions. Prioritize onset if tied. If both fail, keep negatives, diagnose with EXPOSED inputs only, separately lock any revision before testing. No switching or retuning based on new independent data.",
+  "independent": "Independent verifier chooses and seals new workloads before any R23 outcome; do not read until exposed selection. A gain is scoped, not equivalent to full qualification. If neither development candidate survives, do not spend unseen data.",
+  "unchanged": "Student R10, course stock kit, and R22 locks are immutable; only observations/detector vary. No hardware, remote, or hard-RT assertion."
+}

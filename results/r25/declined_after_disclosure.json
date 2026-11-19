@@ -1,0 +1,298 @@
+{
+  "schema": "r25-post-disclosure-rejected-arm-contrast.v1",
+  "independent_qualification": false,
+  "candidate_or_threshold_changed": false,
+  "selection_changed": false,
+  "qualification_scope": "Only post-disclosure stock two-case analysis. The unchanged optional arms that failed development were not submitted to the independent evaluation.",
+  "choice_of_cases": "Inspect the missed short second whose measured signal crossed the optional boundary, and a known long single with duplicate reports as a control.",
+  "source_result_sha256": "83987dba8ce14fb6cc0283021d6bd062ac2fedb317ceb8da67c3d4b2b8c4f4fe",
+  "episodes": 28,
+  "rows": [
+    {
+      "arm": "immediate",
+      "case": "p25_close_transfer_cross",
+      "variant": "stock",
+      "episodes": 10,
+      "selected": {
+        "long_single": {
+          "strict": true,
+          "delays_ms": [
+            39
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 146,
+          "quiet_before": true
+        },
+        "isolated_first": {
+          "strict": true,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 45,
+          "quiet_before": true
+        },
+        "isolated_second": {
+          "strict": false,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 0,
+          "quiet_before": true
+        },
+        "both_first": {
+          "strict": true,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 45,
+          "quiet_before": true
+        },
+        "both_second": {
+          "strict": false,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 0,
+          "quiet_before": true
+        }
+      },
+      "declined": {
+        "long_single": {
+          "strict": true,
+          "delays_ms": [
+            39
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 146,
+          "quiet_before": true
+        },
+        "isolated_first": {
+          "strict": true,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 45,
+          "quiet_before": true
+        },
+        "isolated_second": {
+          "strict": true,
+          "delays_ms": [
+            35
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 8,
+          "quiet_before": true
+        },
+        "both_first": {
+          "strict": true,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 45,
+          "quiet_before": true
+        },
+        "both_second": {
+          "strict": true,
+          "delays_ms": [
+            35
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 8,
+          "quiet_before": true
+        }
+      },
+      "false_rises_by_twin": {
+        "none": [],
+        "long": [],
+        "first": [],
+        "second": [],
+        "both": []
+      },
+      "scientific_positive_and_protections_pass": true,
+      "full_selected_record_and_dynamics_reproduced": true
+    },
+    {
+      "arm": "immediate",
+      "case": "s25_long_transfer_signed",
+      "variant": "stock",
+      "episodes": 4,
+      "selected": {
+        "single": {
+          "strict": false,
+          "delays_ms": [
+            60,
+            84,
+            154
+          ],
+          "duplicate_rises": 2,
+          "active_samples_in_slot": 89,
+          "quiet_before": true
+        }
+      },
+      "declined": {
+        "single": {
+          "strict": false,
+          "delays_ms": [
+            60,
+            84,
+            154
+          ],
+          "duplicate_rises": 2,
+          "active_samples_in_slot": 89,
+          "quiet_before": true
+        }
+      },
+      "false_rises_by_twin": {
+        "none": [],
+        "single": []
+      },
+      "scientific_positive_and_protections_pass": false,
+      "full_selected_record_and_dynamics_reproduced": true
+    },
+    {
+      "arm": "deferred",
+      "case": "p25_close_transfer_cross",
+      "variant": "stock",
+      "episodes": 10,
+      "selected": {
+        "long_single": {
+          "strict": true,
+          "delays_ms": [
+            39
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 146,
+          "quiet_before": true
+        },
+        "isolated_first": {
+          "strict": true,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 45,
+          "quiet_before": true
+        },
+        "isolated_second": {
+          "strict": false,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 0,
+          "quiet_before": true
+        },
+        "both_first": {
+          "strict": true,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 45,
+          "quiet_before": true
+        },
+        "both_second": {
+          "strict": false,
+          "delays_ms": [],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 0,
+          "quiet_before": true
+        }
+      },
+      "declined": {
+        "long_single": {
+          "strict": true,
+          "delays_ms": [
+            39
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 146,
+          "quiet_before": true
+        },
+        "isolated_first": {
+          "strict": true,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 45,
+          "quiet_before": true
+        },
+        "isolated_second": {
+          "strict": true,
+          "delays_ms": [
+            35
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 8,
+          "quiet_before": true
+        },
+        "both_first": {
+          "strict": true,
+          "delays_ms": [
+            38
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 45,
+          "quiet_before": true
+        },
+        "both_second": {
+          "strict": true,
+          "delays_ms": [
+            35
+          ],
+          "duplicate_rises": 0,
+          "active_samples_in_slot": 8,
+          "quiet_before": true
+        }
+      },
+      "false_rises_by_twin": {
+        "none": [],
+        "long": [],
+        "first": [],
+        "second": [],
+        "both": []
+      },
+      "scientific_positive_and_protections_pass": true,
+      "full_selected_record_and_dynamics_reproduced": true
+    },
+    {
+      "arm": "deferred",
+      "case": "s25_long_transfer_signed",
+      "variant": "stock",
+      "episodes": 4,
+      "selected": {
+        "single": {
+          "strict": false,
+          "delays_ms": [
+            60,
+            84,
+            154
+          ],
+          "duplicate_rises": 2,
+          "active_samples_in_slot": 89,
+          "quiet_before": true
+        }
+      },
+      "declined": {
+        "single": {
+          "strict": false,
+          "delays_ms": [
+            60,
+            84,
+            154
+          ],
+          "duplicate_rises": 2,
+          "active_samples_in_slot": 89,
+          "quiet_before": true
+        }
+      },
+      "false_rises_by_twin": {
+        "none": [],
+        "single": []
+      },
+      "scientific_positive_and_protections_pass": false,
+      "full_selected_record_and_dynamics_reproduced": true
+    }
+  ]
+}

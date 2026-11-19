@@ -1,0 +1,103 @@
+{
+  "schema": "R12_HYBRID_SUMMARY.v1",
+  "status": "FAIL_STOP_NO_HELD",
+  "adopt": false,
+  "training_passed": false,
+  "held_executed": false,
+  "impact_preservation_tested": false,
+  "pins": {
+    "plan": "4b342ca69850a676521396cc121e118ce785642da46b9f77c22c1394bc8a751e",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "experiments/r12_hybrid/controller.py": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+    "experiments/r12_hybrid/plan.py": "acca1fee33e778b2d30d8b533282bdbdadd69dec1f90390ccfc957f23ad888e2",
+    "experiments/r12_hybrid/run.py": "d025d86de27c798a3de901155a97e94ab3a1945873a66d5f18f5137d80566119"
+  },
+  "mechanism": "contact-armed reduction only of world-vertical position-loop torque projection; tangential/nullspace position torque and full damping retained; C2 partial gravity support blend continuous across release",
+  "rows": [
+    {
+      "case": "train_mid_620",
+      "passed": false,
+      "failed_gates": [
+        "FA"
+      ],
+      "g4": {
+        "mean": true,
+        "minimum": true,
+        "improvement": true,
+        "peak": true
+      },
+      "ratios": {
+        "rms_mm": 1.025071784980583,
+        "max_tcp_mm": 0.9999999999997502,
+        "torque_step_place_nm": 1.0000000000000342,
+        "table_force_place_max_n": 1.0390716274830982
+      },
+      "baseline": {
+        "final20_mean_mg": 0.11141626315716051,
+        "final20_min_mg": 0.0035886267959906026,
+        "release_peak_mg": 1.0127874394883796,
+        "false_alarms": 0
+      },
+      "candidate": {
+        "activation_s": 3.857,
+        "final20_mean_mg": 0.8091010402995845,
+        "final20_min_mg": 0.7524021961530131,
+        "release_peak_mg": 1.0523586930436304,
+        "false_alarms": 1,
+        "false_alarm_times": [
+          3.903
+        ],
+        "saturation_pct": 0.0,
+        "minimum_normal_position_scale": 0.19999999999999996,
+        "pre_release_load": 0.45,
+        "release_load": 0.45
+      }
+    },
+    {
+      "case": "train_heavy_770",
+      "passed": false,
+      "failed_gates": [
+        "FA"
+      ],
+      "g4": {
+        "mean": true,
+        "minimum": true,
+        "improvement": true,
+        "peak": true
+      },
+      "ratios": {
+        "rms_mm": 1.0269693272247835,
+        "max_tcp_mm": 0.9999999999999892,
+        "torque_step_place_nm": 0.9265544026619376,
+        "table_force_place_max_n": 1.0318151077674134
+      },
+      "baseline": {
+        "final20_mean_mg": 0.06682894777220243,
+        "final20_min_mg": 0.0,
+        "release_peak_mg": 1.0029673647424016,
+        "false_alarms": 0
+      },
+      "candidate": {
+        "activation_s": 3.853,
+        "final20_mean_mg": 0.710837020691734,
+        "final20_min_mg": 0.6028880562828668,
+        "release_peak_mg": 1.0348768795388796,
+        "false_alarms": 1,
+        "false_alarm_times": [
+          3.903
+        ],
+        "saturation_pct": 0.0,
+        "minimum_normal_position_scale": 0.19999999999999996,
+        "pre_release_load": 0.45,
+        "release_load": 0.45
+      }
+    }
+  ],
+  "limitations": [
+    "two torque-mode normal development conditions only",
+    "both add release false alarm at3.903",
+    "held normal and paired impacts prohibited by training gate",
+    "no servo evaluation",
+    "not official or hardware evidence"
+  ]
+}

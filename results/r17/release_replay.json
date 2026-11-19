@@ -1,0 +1,689 @@
+{
+  "schema": "r17-portable-release-negative-replay.v1",
+  "scope": "opt-in single already-exposed sentinel; never promotion evidence",
+  "pins": {
+    "tools/r17_release_replay.py": "1449d4c0737d2b91f0fbcedf59473b0488d80a4c1518e15a27bae64d7f03a61d",
+    "r1_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "my_detector.py": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "experiments/r12_hybrid/controller.py": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+    "experiments/r14_online/__init__.py": "96dbe75e3709e2a869b40c628718fb4931ccd52348e0d74c9d3aaf58c681f7dd",
+    "experiments/r14_online/stream.py": "18d12c79398a5820bf64546a97f9c3cedb51e4af6b61ed44ba0aa887c36ef816",
+    "experiments/r14_airborne/registration.py": "7da9c3e79d6dca610cff6e8048410783c3ceb03a58211f1ad30328e219944b04",
+    "experiments/r14_airborne/plan.json": "c7b9ee36195e429305be27b822081f664979a75ef41a761117e7b31531e3cfeb",
+    "experiments/r14_stock_handoff/__init__.py": "1b8a51edf3e49f52585cdf6298e2275837b99328783ff223f2e5e6fbcc9c6338",
+    "experiments/r14_stock_handoff/controller.py": "10f6657d255b52b4e9f802200bb6275b9db5b7499d2de21a36ee9f5260e67d61",
+    "experiments/r14_stock_handoff/detector.py": "9fecfee47778a370e743497a8370ad7465c68ab126ae06b9f17c1bbf3fd8a0e9",
+    "experiments/r14_stock_handoff/geometry.py": "cb7418f0c6b8ac562e45ac0188f137346db5b613a7a5752d81670a094ee7da54",
+    "experiments/r14_stock_handoff/qualification.py": "14c4bea1ae2cb5531d0e7329168997e67fede9a0fe7790d8609bc917836e9161",
+    "experiments/r15_early_com/__init__.py": "6c37c43586c8c1d77c3199fa97e42070f0ad2d7380181a8873234c13c569cc39",
+    "experiments/r15_early_com/stream.py": "573fe224978290740aa8e25b8882a27ee555321056b4cf18ea16427525bcddce",
+    "experiments/r15_early_com/sensing.py": "749de98130b6036d62ba76e3952327fdd00eb0d8ffb07b6a3460251786b6812d",
+    "experiments/r15_early_com/controller.py": "577d84365fb06bd777e2b92bfd8959fad4a33fe25711e423f1a72fa9021038ed",
+    "experiments/r16_payload_contract/__init__.py": "8287ab2cf01b550f1856b8eb5e17c4daf8e69e72cd8e6e1413cb1781b1b2f466",
+    "experiments/r16_payload_contract/controller.py": "15d6b7569dbc3f8bb0d34cb7aaf9652d9852a3dde8eb5f425c57aee0a7a68b59",
+    "experiments/r16_payload_contract/plan.json": "c10e7505f8cedc36ba6f2087ab5302cac591bf63fbf85add0b69a56ddce45c7a",
+    "experiments/r16_balanced/controller.py": "4fbacf735ea57ac03c9aa1585c452cb732cc6172711315bb93a66c152b75a93e",
+    "experiments/r16_balanced/coefficients.json": "a724b8cb9c025802794e82752abaeba90487ad3127ad63da738111b289db0e61",
+    "experiments/r16_balanced/plan.json": "5ef943c92556575a8d213ffed24b23b729ecdd97a1497740c4437703d3d2c191",
+    "experiments/r16_release/__init__.py": "35aeff07e15d09310da6e05475f84167f23bb81ebb34af08adad3249cdd446b6",
+    "experiments/r16_release/controller.py": "4b630cce41c3498100cff500886a824be99680f9f877621007a0bdc6213ff400",
+    "experiments/r16_release/plan.json": "f77bb5d637629b84c3c3532f718071403ffd2c59e3f6fb67982dfb3caa1f4c05",
+    "experiments/r16_normal_phase/__init__.py": "21f77311abd8dd5046648ea626607a0aaa8bc3c4d7b1da663a9946d0c403e687",
+    "experiments/r16_normal_phase/controller.py": "8bc23e517922bf2a56d652bee9bedda65a35fab983ee2417a13429b3ec77fb78",
+    "experiments/r16_normal_phase/plan.json": "3705679db320196a147d40d4de51dd82bb47cfe7179ee937aed2e25af69f2520",
+    "experiments/r17_release_prediction/__init__.py": "2437d1698a50c265ef591f3e60c74ca1d107c735d4a6c223381e45322e172648",
+    "experiments/r17_release_prediction/detector.py": "0072fc3ce26e5c16e50aeef92e3801bc6ee37190bea5e51a374005be311d5409",
+    "experiments/r17_release_prediction/plan.json": "2ca3a5d5e684f7bf460759b3a8a0dddec20d258ab5bea18d3dd9461deec3123c",
+    "experiments/r17_release_coincidence/__init__.py": "27d29bbeef362cf1778eecb165699f6d3a3672b8c85674a1beaf22465153fb8d",
+    "experiments/r17_release_coincidence/portable_detector.py": "21b0a6ab472d9b34634c05eeae5eda0be0af0a904c71ec8479348415cae91033",
+    "experiments/r17_release_coincidence/plan.json": "d481e7dec438b15a987a32f6d25a3a55e9cbc05d9ca3c0b83ea5b0ef3ef42dd8",
+    "experiments/r17_release_coincidence/replay.py": "177142599a5d4bca51b9aac2a7e903061a7e50054f1681977e30452c1640ba13",
+    "results/r17/release_observation_model.json": "42ee9d2eebc85a424f67d2ab3e45431d4a42ea3cbd89b9e78532fa000aba4b81",
+    "tools/r13_grasp_estimator.py": "79d3fe1c90e06fd89aa0b75b51097528723ce7413468a453a20bbe41421fe0d9",
+    "tools/r11_placement.py": "8c841e53826409a0f0c336b7b3c6f1335172ffb205ab386f1a60c93012f19db0",
+    "tools/r14_paired_events.py": "bf9efcb14e2b7e7038f70ebe8bc482f09c70c89c23fee8029db168cf671dff66",
+    "tools/r5_metrics.py": "452dd27c97492c2e3ce9c002457e09180a444fd0b21531a0847dcfa28f0b2ff4",
+    "models/r12/counterfactual_coefficients.json": "183df664558017be3e9d3faa9c5883cd6ca55c593c45a1e995afb0dcefee886c",
+    "tools/kit_manifest.sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294"
+  },
+  "calibration_provenance": {
+    "height_sha256": "cfd91f8b53e71088cad01f1fba0dedfa7e778f85fd84dd1431f5c80e3d3c59e4",
+    "early_sha256": "d07c7c49308680eb50824ef3790596c6f2789abb084fa313f33e7569944575a3",
+    "release_model_sha256": "42ee9d2eebc85a424f67d2ab3e45431d4a42ea3cbd89b9e78532fa000aba4b81",
+    "release_model_default_installed": false
+  },
+  "result": {
+    "schema": "r17-release-sentinel-negative-replay.v1",
+    "scope": "single already-exposed 5.38kg 16N sentinel; distinct R10/R15 comparators and identical trajectories for the three D-plant arms",
+    "case": {
+      "id": "new_surface_normal_release",
+      "mass": 5.38,
+      "com": [
+        0.021,
+        -0.016,
+        0.011
+      ],
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision": [
+        3.94,
+        [
+          0.0,
+          0.0,
+          16.0
+        ]
+      ],
+      "role": "ALREADY_EXPOSED_R16_SENTINEL"
+    },
+    "model_sha256": "42ee9d2eebc85a424f67d2ab3e45431d4a42ea3cbd89b9e78532fa000aba4b81",
+    "arms": {
+      "r10": {
+        "outcome": "detected",
+        "delay_ms": 40.000000000000036,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "raw_r15": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "D_coupled": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "R17C_prediction": {
+        "outcome": "detected",
+        "delay_ms": 21.00000000000035,
+        "prealarm": false,
+        "false_alarms": 54,
+        "false_alarm_times": [
+          4.605,
+          4.666,
+          4.688,
+          4.75,
+          4.773,
+          4.809,
+          4.844,
+          4.855,
+          4.867,
+          4.882,
+          4.921,
+          4.974,
+          4.986,
+          5.001,
+          5.062,
+          5.1080000000000005,
+          5.136,
+          5.15,
+          5.184,
+          5.214,
+          5.23,
+          5.271,
+          5.311,
+          5.339,
+          5.362,
+          5.412,
+          5.4590000000000005,
+          5.48,
+          5.4990000000000006,
+          5.508,
+          5.546,
+          5.557,
+          5.587,
+          5.597,
+          5.611,
+          5.666,
+          5.6850000000000005,
+          5.713,
+          5.735,
+          5.7540000000000004,
+          5.769,
+          5.78,
+          5.79,
+          5.815,
+          5.838,
+          5.8500000000000005,
+          5.8740000000000006,
+          5.886,
+          5.899,
+          5.91,
+          5.921,
+          5.948,
+          5.971,
+          5.982
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "R17D_coincidence": {
+        "outcome": "detected",
+        "delay_ms": 28.999999999999915,
+        "prealarm": false,
+        "false_alarms": 2,
+        "false_alarm_times": [
+          5.417,
+          5.509
+        ],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      }
+    },
+    "runs": {
+      "r10": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.6082849965646924,
+          "max_mm": 5.952791841822798,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.118689982251669,
+          "max_mm": 21.51546344358751,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null
+        },
+        "normal_rising_times_s": [],
+        "forced_rising_times_s": [
+          3.98
+        ]
+      },
+      "raw_r15": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.6511422261484836,
+          "max_mm": 5.952791841823865,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.241381539407742,
+          "max_mm": 22.024414582784114,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null
+        },
+        "normal_rising_times_s": [],
+        "forced_rising_times_s": []
+      },
+      "D_coupled": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.61105137994693,
+          "max_mm": 5.952791841823865,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.01650270161789,
+          "max_mm": 21.047104471310337,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null
+        },
+        "normal_rising_times_s": [],
+        "forced_rising_times_s": []
+      },
+      "R17C_prediction": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.61105137994693,
+          "max_mm": 5.952791841823865,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.01650270161789,
+          "max_mm": 21.047104471310337,
+          "saturation_pct": 0.0,
+          "false_alarms": 54,
+          "false_alarm_times": [
+            4.605,
+            4.666,
+            4.688,
+            4.75,
+            4.773,
+            4.809,
+            4.844,
+            4.855,
+            4.867,
+            4.882,
+            4.921,
+            4.974,
+            4.986,
+            5.001,
+            5.062,
+            5.1080000000000005,
+            5.136,
+            5.15,
+            5.184,
+            5.214,
+            5.23,
+            5.271,
+            5.311,
+            5.339,
+            5.362,
+            5.412,
+            5.4590000000000005,
+            5.48,
+            5.4990000000000006,
+            5.508,
+            5.546,
+            5.557,
+            5.587,
+            5.597,
+            5.611,
+            5.666,
+            5.6850000000000005,
+            5.713,
+            5.735,
+            5.7540000000000004,
+            5.769,
+            5.78,
+            5.79,
+            5.815,
+            5.838,
+            5.8500000000000005,
+            5.8740000000000006,
+            5.886,
+            5.899,
+            5.91,
+            5.921,
+            5.948,
+            5.971,
+            5.982
+          ],
+          "tool_contact_delay_ms": null
+        },
+        "normal_rising_times_s": [],
+        "forced_rising_times_s": [
+          3.9610000000000003,
+          4.029,
+          4.605,
+          4.666,
+          4.688,
+          4.75,
+          4.773,
+          4.809,
+          4.844,
+          4.855,
+          4.867,
+          4.882,
+          4.921,
+          4.974,
+          4.986,
+          5.001,
+          5.062,
+          5.1080000000000005,
+          5.136,
+          5.15,
+          5.184,
+          5.214,
+          5.23,
+          5.271,
+          5.311,
+          5.339,
+          5.362,
+          5.412,
+          5.4590000000000005,
+          5.48,
+          5.4990000000000006,
+          5.508,
+          5.546,
+          5.557,
+          5.587,
+          5.597,
+          5.611,
+          5.666,
+          5.6850000000000005,
+          5.713,
+          5.735,
+          5.7540000000000004,
+          5.769,
+          5.78,
+          5.79,
+          5.815,
+          5.838,
+          5.8500000000000005,
+          5.8740000000000006,
+          5.886,
+          5.899,
+          5.91,
+          5.921,
+          5.948,
+          5.971,
+          5.982
+        ]
+      },
+      "R17D_coincidence": {
+        "normal": {
+          "diverged": false,
+          "rms_mm": 2.61105137994693,
+          "max_mm": 5.952791841823865,
+          "saturation_pct": 0.0,
+          "false_alarms": 0,
+          "false_alarm_times": [],
+          "tool_contact_delay_ms": null
+        },
+        "forced": {
+          "diverged": false,
+          "rms_mm": 6.01650270161789,
+          "max_mm": 21.047104471310337,
+          "saturation_pct": 0.0,
+          "false_alarms": 2,
+          "false_alarm_times": [
+            5.417,
+            5.509
+          ],
+          "tool_contact_delay_ms": null
+        },
+        "normal_rising_times_s": [],
+        "forced_rising_times_s": [
+          3.969,
+          4.016,
+          5.417,
+          5.509
+        ]
+      }
+    },
+    "physical_parity": {
+      "D_coupled": {
+        "normal": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        },
+        "forced": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        }
+      },
+      "R17C_prediction": {
+        "normal": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        },
+        "forced": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        }
+      },
+      "R17D_coincidence": {
+        "normal": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        },
+        "forced": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "f_ext": true
+        }
+      }
+    },
+    "prefix": {
+      "r10": {
+        "passed": true,
+        "samples_through_onset": 3941,
+        "fields": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        }
+      },
+      "raw_r15": {
+        "passed": true,
+        "samples_through_onset": 3941,
+        "fields": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        }
+      },
+      "D_coupled": {
+        "passed": true,
+        "samples_through_onset": 3941,
+        "fields": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        }
+      },
+      "R17C_prediction": {
+        "passed": true,
+        "samples_through_onset": 3941,
+        "fields": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        }
+      },
+      "R17D_coincidence": {
+        "passed": true,
+        "samples_through_onset": 3941,
+        "fields": {
+          "q": true,
+          "q_d": true,
+          "tau": true,
+          "e_mm": true,
+          "f_table": true,
+          "f_tool": true,
+          "qpos": true,
+          "r": true,
+          "detect": true,
+          "f_ext": true
+        }
+      }
+    },
+    "force": {
+      "r10": {
+        "passed": true,
+        "exact_trapezoid": true,
+        "requested_peak_N": 16.0,
+        "observed_peak_N": 16.0,
+        "zero_through_onset": true,
+        "active_first_s": 3.9410000000000003,
+        "active_last_s": 4.059
+      },
+      "raw_r15": {
+        "passed": true,
+        "exact_trapezoid": true,
+        "requested_peak_N": 16.0,
+        "observed_peak_N": 16.0,
+        "zero_through_onset": true,
+        "active_first_s": 3.9410000000000003,
+        "active_last_s": 4.059
+      },
+      "D_coupled": {
+        "passed": true,
+        "exact_trapezoid": true,
+        "requested_peak_N": 16.0,
+        "observed_peak_N": 16.0,
+        "zero_through_onset": true,
+        "active_first_s": 3.9410000000000003,
+        "active_last_s": 4.059
+      },
+      "R17C_prediction": {
+        "passed": true,
+        "exact_trapezoid": true,
+        "requested_peak_N": 16.0,
+        "observed_peak_N": 16.0,
+        "zero_through_onset": true,
+        "active_first_s": 3.9410000000000003,
+        "active_last_s": 4.059
+      },
+      "R17D_coincidence": {
+        "passed": true,
+        "exact_trapezoid": true,
+        "requested_peak_N": 16.0,
+        "observed_peak_N": 16.0,
+        "zero_through_onset": true,
+        "active_first_s": 3.9410000000000003,
+        "active_last_s": 4.059
+      }
+    },
+    "false_event_match": {
+      "r10": {
+        "passed": false,
+        "pairs": [],
+        "unmatched_candidate": 5.417,
+        "tolerance_ms": 20.0
+      },
+      "raw_r15": {
+        "passed": false,
+        "pairs": [],
+        "unmatched_candidate": 5.417,
+        "tolerance_ms": 20.0
+      },
+      "D_coupled": {
+        "passed": false,
+        "pairs": [],
+        "unmatched_candidate": 5.417,
+        "tolerance_ms": 20.0
+      }
+    },
+    "integrity": {
+      "all_runs_complete": true,
+      "identical_D_physics": true,
+      "matched_prefixes": true,
+      "exact_forces": true,
+      "sentinel_R10_genuine": true,
+      "R17C_genuine": true,
+      "R17D_genuine": true
+    },
+    "expected_negative_signature": {
+      "reference_delays_exact": true,
+      "false_locations_exact": true,
+      "raw_r15_and_D_miss_without_false": true,
+      "no_prealarm": true
+    },
+    "failure": {
+      "R17C_added_false_rises": 54,
+      "R17D_added_false_rises": 2,
+      "R17D_false_events_match_R10": false,
+      "R17D_false_events_match_raw_R15": false,
+      "R17D_false_events_match_D": false
+    },
+    "replay_valid": true,
+    "status": "NEGATIVE_CONTROL_REPRODUCED",
+    "candidate_passed": false,
+    "promotion_eligible": false,
+    "limitations": [
+      "already exposed research sentinel",
+      "no novel external pulse",
+      "no fit from pulse",
+      "no control or deployment qualification"
+    ]
+  },
+  "limitations": [
+    "negative control only",
+    "already exposed sentinel",
+    "no novel positive",
+    "no model fitting",
+    "no hard-coded CPU affinity",
+    "no promotion"
+  ]
+}

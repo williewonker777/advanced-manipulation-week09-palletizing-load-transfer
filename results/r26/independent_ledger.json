@@ -1,0 +1,1565 @@
+{
+  "arms": {
+    "r25_joint": {
+      "counts": {
+        "actual_tool_contact": 4,
+        "actual_tool_detected": 4,
+        "all_five_paired_slots": 0,
+        "duplicate_edges": 0,
+        "episodes": 78,
+        "false_rises": 0,
+        "no_attributable_rise": 25,
+        "paired_rows": 9,
+        "preceding_quiet_only": 3,
+        "slots": 57,
+        "strict": 29,
+        "stuck_tail": 0
+      },
+      "slots": {
+        "both_first": {
+          "strict": 6,
+          "total": 9
+        },
+        "both_second": {
+          "strict": 0,
+          "total": 9
+        },
+        "isolated_first": {
+          "strict": 6,
+          "total": 9
+        },
+        "isolated_second": {
+          "strict": 3,
+          "total": 9
+        },
+        "long_single": {
+          "strict": 8,
+          "total": 9
+        },
+        "single": {
+          "strict": 6,
+          "total": 12
+        }
+      }
+    },
+    "r26": {
+      "counts": {
+        "actual_tool_contact": 4,
+        "actual_tool_detected": 4,
+        "all_five_paired_slots": 0,
+        "duplicate_edges": 0,
+        "episodes": 78,
+        "false_rises": 0,
+        "no_attributable_rise": 25,
+        "paired_rows": 9,
+        "preceding_quiet_only": 3,
+        "slots": 57,
+        "strict": 29,
+        "stuck_tail": 0
+      },
+      "slots": {
+        "both_first": {
+          "strict": 6,
+          "total": 9
+        },
+        "both_second": {
+          "strict": 0,
+          "total": 9
+        },
+        "isolated_first": {
+          "strict": 6,
+          "total": 9
+        },
+        "isolated_second": {
+          "strict": 3,
+          "total": 9
+        },
+        "long_single": {
+          "strict": 8,
+          "total": 9
+        },
+        "single": {
+          "strict": 6,
+          "total": 12
+        }
+      }
+    }
+  },
+  "classification": "retrospective ledger from the locked first result; no revised scoring",
+  "condition_by_mechanics_rows": 30,
+  "entrypoint": "experiments.r26_yaw_acquisition.candidate:Detector",
+  "event_records_exact_between_arms": true,
+  "failed": [
+    "stock:s26_long_carry_signed",
+    "actuator_deadzone:s26_long_carry_signed",
+    "place_surface_shift:s26_long_carry_signed",
+    "stock:s26_long_place_lateral",
+    "actuator_deadzone:s26_long_place_lateral",
+    "place_surface_shift:s26_long_place_lateral",
+    "stock:p26_close_transfer_oblique",
+    "actuator_deadzone:p26_close_transfer_oblique",
+    "place_surface_shift:p26_close_transfer_oblique",
+    "stock:p26_close_place_cross",
+    "actuator_deadzone:p26_close_place_cross",
+    "place_surface_shift:p26_close_place_cross",
+    "stock:p26_close_detached_reverse",
+    "actuator_deadzone:p26_close_detached_reverse",
+    "place_surface_shift:p26_close_detached_reverse"
+  ],
+  "independent_physics_episodes": 156,
+  "lock_sha256": "8af329bf0d1e4756185dd773da8c8e5dda20bf390fd8a96bd01f9cd06291de02",
+  "paired_long_is_separate_from_isolated_and_both_inputs": true,
+  "positive_gains": [],
+  "preregistered_claims": {
+    "absolute_miss_count": 28,
+    "incumbent_safety_floor_pass": true,
+    "positive_gain_count": 0,
+    "positive_qualification_pass": false,
+    "safety_qualification": false
+  },
+  "real_tool_contact_evidence": {
+    "adequate": true,
+    "required": 2,
+    "rows": [
+      "stock:n26_place_tool_near",
+      "place_surface_shift:n26_place_tool_near",
+      "stock:n26_place_tool_signed",
+      "place_surface_shift:n26_place_tool_signed"
+    ]
+  },
+  "rows": [
+    {
+      "absolute_misses": [],
+      "case": "n26_place_clear",
+      "episodes": 2,
+      "event_slots": {
+        "r25_joint": {},
+        "r26": {}
+      },
+      "failed_protections": [],
+      "kind": "negative",
+      "mechanics": "stock",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "n26_place_clear",
+      "episodes": 2,
+      "event_slots": {
+        "r25_joint": {},
+        "r26": {}
+      },
+      "failed_protections": [],
+      "kind": "negative",
+      "mechanics": "actuator_deadzone",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "n26_place_clear",
+      "episodes": 2,
+      "event_slots": {
+        "r25_joint": {},
+        "r26": {}
+      },
+      "failed_protections": [],
+      "kind": "negative",
+      "mechanics": "place_surface_shift",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "n26_place_tool_near",
+      "episodes": 2,
+      "event_slots": {
+        "r25_joint": {},
+        "r26": {}
+      },
+      "failed_protections": [],
+      "kind": "negative",
+      "mechanics": "stock",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "n26_place_tool_near",
+      "episodes": 2,
+      "event_slots": {
+        "r25_joint": {},
+        "r26": {}
+      },
+      "failed_protections": [],
+      "kind": "negative",
+      "mechanics": "actuator_deadzone",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "n26_place_tool_near",
+      "episodes": 2,
+      "event_slots": {
+        "r25_joint": {},
+        "r26": {}
+      },
+      "failed_protections": [],
+      "kind": "negative",
+      "mechanics": "place_surface_shift",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "n26_place_tool_signed",
+      "episodes": 2,
+      "event_slots": {
+        "r25_joint": {},
+        "r26": {}
+      },
+      "failed_protections": [],
+      "kind": "negative",
+      "mechanics": "stock",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "n26_place_tool_signed",
+      "episodes": 2,
+      "event_slots": {
+        "r25_joint": {},
+        "r26": {}
+      },
+      "failed_protections": [],
+      "kind": "negative",
+      "mechanics": "actuator_deadzone",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "n26_place_tool_signed",
+      "episodes": 2,
+      "event_slots": {
+        "r25_joint": {},
+        "r26": {}
+      },
+      "failed_protections": [],
+      "kind": "negative",
+      "mechanics": "place_surface_shift",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "s26_long_transfer_rotated",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 77,
+            "attributable_rise_delays_ms": [
+              36
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 77,
+            "attributable_rise_delays_ms": [
+              36
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "stock",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "s26_long_transfer_rotated",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 75,
+            "attributable_rise_delays_ms": [
+              38
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 75,
+            "attributable_rise_delays_ms": [
+              38
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "actuator_deadzone",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "s26_long_transfer_rotated",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 70,
+            "attributable_rise_delays_ms": [
+              43
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 70,
+            "attributable_rise_delays_ms": [
+              43
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "place_surface_shift",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "single"
+      ],
+      "case": "s26_long_carry_signed",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "stock",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "single"
+      ],
+      "case": "s26_long_carry_signed",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "actuator_deadzone",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "single"
+      ],
+      "case": "s26_long_carry_signed",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "place_surface_shift",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "single"
+      ],
+      "case": "s26_long_place_lateral",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "stock",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "single"
+      ],
+      "case": "s26_long_place_lateral",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "actuator_deadzone",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "single"
+      ],
+      "case": "s26_long_place_lateral",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "place_surface_shift",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "s26_long_detached_reverse",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 173,
+            "attributable_rise_delays_ms": [
+              39
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 173,
+            "attributable_rise_delays_ms": [
+              39
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "stock",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "s26_long_detached_reverse",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 173,
+            "attributable_rise_delays_ms": [
+              39
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 173,
+            "attributable_rise_delays_ms": [
+              39
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "actuator_deadzone",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [],
+      "case": "s26_long_detached_reverse",
+      "episodes": 4,
+      "event_slots": {
+        "r25_joint": {
+          "single": {
+            "active_samples": 173,
+            "attributable_rise_delays_ms": [
+              39
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "single": {
+            "active_samples": 173,
+            "attributable_rise_delays_ms": [
+              39
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "single",
+      "mechanics": "place_surface_shift",
+      "passed": true,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "isolated_second",
+        "both_second"
+      ],
+      "case": "p26_close_transfer_oblique",
+      "episodes": 10,
+      "event_slots": {
+        "r25_joint": {
+          "both_first": {
+            "active_samples": 23,
+            "attributable_rise_delays_ms": [
+              45
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": false
+          },
+          "isolated_first": {
+            "active_samples": 23,
+            "attributable_rise_delays_ms": [
+              45
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 56,
+            "attributable_rise_delays_ms": [
+              45
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "both_first": {
+            "active_samples": 23,
+            "attributable_rise_delays_ms": [
+              45
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": false
+          },
+          "isolated_first": {
+            "active_samples": 23,
+            "attributable_rise_delays_ms": [
+              45
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 56,
+            "attributable_rise_delays_ms": [
+              45
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "paired",
+      "mechanics": "stock",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "isolated_second",
+        "both_second"
+      ],
+      "case": "p26_close_transfer_oblique",
+      "episodes": 10,
+      "event_slots": {
+        "r25_joint": {
+          "both_first": {
+            "active_samples": 20,
+            "attributable_rise_delays_ms": [
+              41
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_first": {
+            "active_samples": 20,
+            "attributable_rise_delays_ms": [
+              41
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 60,
+            "attributable_rise_delays_ms": [
+              41
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "both_first": {
+            "active_samples": 20,
+            "attributable_rise_delays_ms": [
+              41
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_first": {
+            "active_samples": 20,
+            "attributable_rise_delays_ms": [
+              41
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 60,
+            "attributable_rise_delays_ms": [
+              41
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "paired",
+      "mechanics": "actuator_deadzone",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "isolated_second",
+        "both_second"
+      ],
+      "case": "p26_close_transfer_oblique",
+      "episodes": 10,
+      "event_slots": {
+        "r25_joint": {
+          "both_first": {
+            "active_samples": 30,
+            "attributable_rise_delays_ms": [
+              38
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": false
+          },
+          "isolated_first": {
+            "active_samples": 30,
+            "attributable_rise_delays_ms": [
+              38
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 59,
+            "attributable_rise_delays_ms": [
+              42
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "both_first": {
+            "active_samples": 30,
+            "attributable_rise_delays_ms": [
+              38
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": false
+          },
+          "isolated_first": {
+            "active_samples": 30,
+            "attributable_rise_delays_ms": [
+              38
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 59,
+            "attributable_rise_delays_ms": [
+              42
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "paired",
+      "mechanics": "place_surface_shift",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "isolated_first",
+        "isolated_second",
+        "both_first",
+        "both_second"
+      ],
+      "case": "p26_close_place_cross",
+      "episodes": 10,
+      "event_slots": {
+        "r25_joint": {
+          "both_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 68,
+            "attributable_rise_delays_ms": [
+              109
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "both_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 68,
+            "attributable_rise_delays_ms": [
+              109
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "paired",
+      "mechanics": "stock",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "long_single",
+        "isolated_first",
+        "isolated_second",
+        "both_first",
+        "both_second"
+      ],
+      "case": "p26_close_place_cross",
+      "episodes": 10,
+      "event_slots": {
+        "r25_joint": {
+          "both_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "both_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "paired",
+      "mechanics": "actuator_deadzone",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "isolated_first",
+        "isolated_second",
+        "both_first",
+        "both_second"
+      ],
+      "case": "p26_close_place_cross",
+      "episodes": 10,
+      "event_slots": {
+        "r25_joint": {
+          "both_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 65,
+            "attributable_rise_delays_ms": [
+              117
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "both_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_first": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 0,
+            "attributable_rise_delays_ms": [],
+            "duplicate_rises": 0,
+            "outcome": "no_attributable_rise",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 65,
+            "attributable_rise_delays_ms": [
+              117
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "paired",
+      "mechanics": "place_surface_shift",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "both_second"
+      ],
+      "case": "p26_close_detached_reverse",
+      "episodes": 10,
+      "event_slots": {
+        "r25_joint": {
+          "both_first": {
+            "active_samples": 38,
+            "attributable_rise_delays_ms": [
+              33
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 73,
+            "attributable_rise_delays_ms": [
+              27
+            ],
+            "duplicate_rises": 0,
+            "outcome": "preceding_quiet_only",
+            "quiet_before": false
+          },
+          "isolated_first": {
+            "active_samples": 38,
+            "attributable_rise_delays_ms": [
+              33
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 76,
+            "attributable_rise_delays_ms": [
+              26
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 151,
+            "attributable_rise_delays_ms": [
+              35
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "both_first": {
+            "active_samples": 38,
+            "attributable_rise_delays_ms": [
+              33
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 73,
+            "attributable_rise_delays_ms": [
+              27
+            ],
+            "duplicate_rises": 0,
+            "outcome": "preceding_quiet_only",
+            "quiet_before": false
+          },
+          "isolated_first": {
+            "active_samples": 38,
+            "attributable_rise_delays_ms": [
+              33
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 76,
+            "attributable_rise_delays_ms": [
+              26
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 151,
+            "attributable_rise_delays_ms": [
+              35
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "paired",
+      "mechanics": "stock",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "both_second"
+      ],
+      "case": "p26_close_detached_reverse",
+      "episodes": 10,
+      "event_slots": {
+        "r25_joint": {
+          "both_first": {
+            "active_samples": 39,
+            "attributable_rise_delays_ms": [
+              33
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 73,
+            "attributable_rise_delays_ms": [
+              26
+            ],
+            "duplicate_rises": 0,
+            "outcome": "preceding_quiet_only",
+            "quiet_before": false
+          },
+          "isolated_first": {
+            "active_samples": 39,
+            "attributable_rise_delays_ms": [
+              33
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 75,
+            "attributable_rise_delays_ms": [
+              27
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 151,
+            "attributable_rise_delays_ms": [
+              35
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "both_first": {
+            "active_samples": 39,
+            "attributable_rise_delays_ms": [
+              33
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 73,
+            "attributable_rise_delays_ms": [
+              26
+            ],
+            "duplicate_rises": 0,
+            "outcome": "preceding_quiet_only",
+            "quiet_before": false
+          },
+          "isolated_first": {
+            "active_samples": 39,
+            "attributable_rise_delays_ms": [
+              33
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 75,
+            "attributable_rise_delays_ms": [
+              27
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 151,
+            "attributable_rise_delays_ms": [
+              35
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "paired",
+      "mechanics": "actuator_deadzone",
+      "passed": false,
+      "strict_gains": []
+    },
+    {
+      "absolute_misses": [
+        "both_second"
+      ],
+      "case": "p26_close_detached_reverse",
+      "episodes": 10,
+      "event_slots": {
+        "r25_joint": {
+          "both_first": {
+            "active_samples": 39,
+            "attributable_rise_delays_ms": [
+              32
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 75,
+            "attributable_rise_delays_ms": [
+              25
+            ],
+            "duplicate_rises": 0,
+            "outcome": "preceding_quiet_only",
+            "quiet_before": false
+          },
+          "isolated_first": {
+            "active_samples": 39,
+            "attributable_rise_delays_ms": [
+              32
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 73,
+            "attributable_rise_delays_ms": [
+              26
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 151,
+            "attributable_rise_delays_ms": [
+              35
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        },
+        "r26": {
+          "both_first": {
+            "active_samples": 39,
+            "attributable_rise_delays_ms": [
+              32
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "both_second": {
+            "active_samples": 75,
+            "attributable_rise_delays_ms": [
+              25
+            ],
+            "duplicate_rises": 0,
+            "outcome": "preceding_quiet_only",
+            "quiet_before": false
+          },
+          "isolated_first": {
+            "active_samples": 39,
+            "attributable_rise_delays_ms": [
+              32
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "isolated_second": {
+            "active_samples": 73,
+            "attributable_rise_delays_ms": [
+              26
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          },
+          "long_single": {
+            "active_samples": 151,
+            "attributable_rise_delays_ms": [
+              35
+            ],
+            "duplicate_rises": 0,
+            "outcome": "strict",
+            "quiet_before": true
+          }
+        }
+      },
+      "failed_protections": [],
+      "kind": "paired",
+      "mechanics": "place_surface_shift",
+      "passed": false,
+      "strict_gains": []
+    }
+  ],
+  "schema": "r26-independent-row-ledger.v1",
+  "source_sha256": "854459ef3292f3c20eae7bc8ba829a83eae70e6ce2b5e66f5b89abeb6836489a"
+}

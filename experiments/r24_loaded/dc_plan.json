@@ -1,0 +1,8 @@
+{
+ "schema":"week09-r24-drive-impulse-consistency.v1",
+ "reason":"Centered slope changes on J2 were large but split-window fits had large noise and weak excitation. A deviation on one motor does not imply two are anomalous. DC impulse and centered torque slope have distinct failure modes: constant JTS offset can affect DC but is rejected by the centered slope.",
+ "rule":"For each excited elastic joint, integrate motor-side momentum, JTS and friction over the complete pregrasp window. Compare inferred delivered/commanded impulse ratio only when mean commanded torque exceeds that joint's nominal Coulomb torque. In the SAME JOINT require both DC ratio and full centered slope clearly above or both clearly below their respective nominal-only bands. One consistent joint suffices. Missing, insufficiently excited, nonfinite or mixed-sign estimates leave R23 unchanged. Not a direct read of gain, not independent sensors.",
+ "fit":"Same 12 predeclared nominal-only seeds plus canonical nominal commissioning and 16 deterministic different nominal noise seeds (401 + 19*k, k=0..15). Preserve the existing max/min + one observed span or 0.002 margin; no tuning on collision outcomes. These are 29 noise realizations of ONE unloaded approach, not 29 new trajectories.",
+ "study":"Unused seeds 193/223/257/307 for known variants (previously used in drive-port development); 733/757/787/809 for new diagnostic only. Each axis + and - 2% separately; report unobservable axes, not detector certification. New independent collision statistics evaluated separately after freezing one selected sensor.",
+ "correction":"If the motor port departs, use unchanged R24 normal-only FIR of support; all non-yaw existing channels and all thresholds untouched."
+}

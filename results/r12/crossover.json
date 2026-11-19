@@ -1,0 +1,241 @@
+{
+  "schema": "r12-crossover-summary.v1",
+  "scope": "exposed heavy/light cases only; attribution, not promotion",
+  "retuning": false,
+  "threshold_changes": false,
+  "cases": [
+    "heavy",
+    "light"
+  ],
+  "matrix_counts": {
+    "R1+R10": {
+      "detected": 1,
+      "indistinguishable": 0,
+      "missed": 1,
+      "masked": 0
+    },
+    "R1+fixed_counterfactual": {
+      "detected": 0,
+      "indistinguishable": 0,
+      "missed": 1,
+      "masked": 1
+    },
+    "raw_hybrid+R10": {
+      "detected": 0,
+      "indistinguishable": 0,
+      "missed": 1,
+      "masked": 1
+    },
+    "raw_hybrid+fixed_counterfactual": {
+      "detected": 0,
+      "indistinguishable": 0,
+      "missed": 2,
+      "masked": 0
+    }
+  },
+  "aggregate_counts": {
+    "detected": 1,
+    "indistinguishable": 0,
+    "missed": 5,
+    "masked": 2,
+    "clean_distinguishable_detections": 1
+  },
+  "pins": {
+    "r1_torque": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
+    "r10_detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "raw_hybrid": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+    "counterfactual_detector": "62e40ff4d81b6d14643cb87bbebdfafb6f9d62835416ef47fe7215a5fff9aec9",
+    "counterfactual_model": "5684d187ebf9a531f0b976fd5dc448c96ba56a8d94803bed4778f69c5f2be50b",
+    "check_plan": "fa9b9d1defb980ae37157e58741b4c937fe47dd1f905a7e3391c95ebb614dfb0",
+    "runner": "de28361ea82ab57d7dc57ea574a02b5c32b1ce53101051ca3370cc4613ed7fb7"
+  },
+  "rows": [
+    {
+      "case": "heavy",
+      "controller": "R1",
+      "detector": "R10",
+      "outcome": "detected",
+      "delay_ms": 143.00000000000023,
+      "prealarm": false,
+      "forced_false_alarms": 0,
+      "own_normal_false_alarms": 0,
+      "normal_prefix_equal": true,
+      "forced_score_peak": 3.237830288907085,
+      "own_normal_score_peak": 1.3060998721474042,
+      "forced_minus_normal_wrench_peak_signed": [
+        10.353521667068133,
+        -7.252351455685752,
+        -17.372500156847373,
+        3.0277739580785763,
+        4.1529546537871695,
+        -0.04217045339203997
+      ],
+      "no_external_mute": true
+    },
+    {
+      "case": "heavy",
+      "controller": "R1",
+      "detector": "fixed_counterfactual",
+      "outcome": "masked",
+      "delay_ms": null,
+      "prealarm": true,
+      "forced_false_alarms": 1,
+      "own_normal_false_alarms": 2,
+      "normal_prefix_equal": true,
+      "forced_score_peak": 6.959941640654455,
+      "own_normal_score_peak": 7.212661259219524,
+      "forced_minus_normal_wrench_peak_signed": [
+        10.353521667068133,
+        -7.252351455685752,
+        -17.372500156847373,
+        3.0277739580785763,
+        4.1529546537871695,
+        -0.04217045339203997
+      ],
+      "no_external_mute": true
+    },
+    {
+      "case": "heavy",
+      "controller": "raw_hybrid",
+      "detector": "R10",
+      "outcome": "masked",
+      "delay_ms": null,
+      "prealarm": true,
+      "forced_false_alarms": 1,
+      "own_normal_false_alarms": 1,
+      "normal_prefix_equal": true,
+      "forced_score_peak": 2.832606547610397,
+      "own_normal_score_peak": 1.5956559172538696,
+      "forced_minus_normal_wrench_peak_signed": [
+        10.94261497819145,
+        -7.355097192859054,
+        -17.11705450842733,
+        3.018922994029698,
+        4.3921631762134465,
+        -0.04776581603534042
+      ],
+      "no_external_mute": true
+    },
+    {
+      "case": "heavy",
+      "controller": "raw_hybrid",
+      "detector": "fixed_counterfactual",
+      "outcome": "missed",
+      "delay_ms": null,
+      "prealarm": false,
+      "forced_false_alarms": 0,
+      "own_normal_false_alarms": 0,
+      "normal_prefix_equal": true,
+      "forced_score_peak": 3.3467430589715663,
+      "own_normal_score_peak": 2.490607207964271,
+      "forced_minus_normal_wrench_peak_signed": [
+        10.94261497819145,
+        -7.355097192859054,
+        -17.11705450842733,
+        3.018922994029698,
+        4.3921631762134465,
+        -0.04776581603534042
+      ],
+      "no_external_mute": true
+    },
+    {
+      "case": "light",
+      "controller": "R1",
+      "detector": "R10",
+      "outcome": "missed",
+      "delay_ms": null,
+      "prealarm": false,
+      "forced_false_alarms": 0,
+      "own_normal_false_alarms": 0,
+      "normal_prefix_equal": true,
+      "forced_score_peak": 1.3423813575059393,
+      "own_normal_score_peak": 1.4583222189702874,
+      "forced_minus_normal_wrench_peak_signed": [
+        -3.1115357821304297,
+        -19.40822384604214,
+        3.3039737669197544,
+        7.824896322578479,
+        -1.298202824521098,
+        -0.01565352007824017
+      ],
+      "no_external_mute": true
+    },
+    {
+      "case": "light",
+      "controller": "R1",
+      "detector": "fixed_counterfactual",
+      "outcome": "missed",
+      "delay_ms": null,
+      "prealarm": false,
+      "forced_false_alarms": 0,
+      "own_normal_false_alarms": 0,
+      "normal_prefix_equal": true,
+      "forced_score_peak": 3.448713622879131,
+      "own_normal_score_peak": 3.4542975642156084,
+      "forced_minus_normal_wrench_peak_signed": [
+        -3.1115357821304297,
+        -19.40822384604214,
+        3.3039737669197544,
+        7.824896322578479,
+        -1.298202824521098,
+        -0.01565352007824017
+      ],
+      "no_external_mute": true
+    },
+    {
+      "case": "light",
+      "controller": "raw_hybrid",
+      "detector": "R10",
+      "outcome": "missed",
+      "delay_ms": null,
+      "prealarm": false,
+      "forced_false_alarms": 0,
+      "own_normal_false_alarms": 0,
+      "normal_prefix_equal": true,
+      "forced_score_peak": 2.515208147348091,
+      "own_normal_score_peak": 2.5300715657524937,
+      "forced_minus_normal_wrench_peak_signed": [
+        -2.9992820361666555,
+        -19.228258536183795,
+        3.0234079176559727,
+        7.721077173796198,
+        -1.254334645671478,
+        -0.01865822196342344
+      ],
+      "no_external_mute": true
+    },
+    {
+      "case": "light",
+      "controller": "raw_hybrid",
+      "detector": "fixed_counterfactual",
+      "outcome": "missed",
+      "delay_ms": null,
+      "prealarm": false,
+      "forced_false_alarms": 0,
+      "own_normal_false_alarms": 0,
+      "normal_prefix_equal": true,
+      "forced_score_peak": 2.444829499883966,
+      "own_normal_score_peak": 2.3702751366434742,
+      "forced_minus_normal_wrench_peak_signed": [
+        -2.9992820361666555,
+        -19.228258536183795,
+        3.0234079176559727,
+        7.721077173796198,
+        -1.254334645671478,
+        -0.01865822196342344
+      ],
+      "no_external_mute": true
+    }
+  ],
+  "diagnosis": {
+    "heavy": "R1+R10 is the sole clean distinguishable detection (143 ms). Either one-sided crossover is masked by a matched-normal prealarm; raw_hybrid+fixed_counterfactual is clean but misses.",
+    "light": "All four cells miss; neither swap rescues this exposed probe.",
+    "wrench": "Forced-minus-own-normal signed six-axis peaks remain similar between controllers, but score history/persistence outcomes differ.",
+    "causal_limit": "The fixed subtraction is controller-specific and is itself unclean on R1, while R10 is unclean on raw hybrid. Therefore the crossover does not uniquely attribute the heavy miss to controller physics or detector correction."
+  },
+  "units": {
+    "wrench_axes_0_to_2": "N",
+    "wrench_axes_3_to_5": "N m",
+    "score": "normalized threshold ratio; >1 is instantaneous only"
+  }
+}

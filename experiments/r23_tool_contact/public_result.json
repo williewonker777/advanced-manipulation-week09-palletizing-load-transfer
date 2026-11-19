@@ -1,0 +1,84 @@
+{
+  "schema": "r23-tool-contact-public-result.v1",
+  "status": "optional_research_candidate",
+  "default_promoted": false,
+  "candidate_sha256": "2ed447199694cb159770e43fe9a2f1b8a9c513a1c7480d96d079313df1002a38",
+  "model_sha256": "9633182c1d986117fd6fd541e361f9bddf28d79a05763e6012dcb118805a1e37",
+  "contract": {
+    "offline_ground_truth": "f_tool > 1 N; offset without measured contact is a nuisance negative",
+    "runtime_inputs": ["time", "joint torque sensor", "grip command", "R22 LIGHT inputs"],
+    "normal_only_fit_rows": 12,
+    "approach_window_s": [1.2, 1.4],
+    "score_threshold": 3.0,
+    "persistence_ms": 8,
+    "latch_ms": 160,
+    "requested_max_delay_ms": 120
+  },
+  "original_r22_events": {
+    "genuine_contacts": 2,
+    "peak_N": [10.33820930576907, 11.079329420450694],
+    "duration_ms": [28, 29],
+    "r10_detected": 0,
+    "r22_detected": 0,
+    "candidate_detected": 2,
+    "candidate_delay_ms": [9, 9],
+    "same_motion_no_offset_false_rises": 0
+  },
+  "protected_post_fit": {
+    "classification": "candidate/model frozen before listed offsets ran",
+    "protected_candidate_sha256": "302b1a593554c7ba900bb4bf4c6c77a4e7d0f72dfd12aa8ae4b549b09eba4602",
+    "genuine_contacts": 6,
+    "nuisance_offsets": 6,
+    "candidate_detected": 6,
+    "candidate_delay_ms_range": [9, 11],
+    "candidate_prealarm": 0,
+    "nuisance_added_rises": 0,
+    "weakest_detected": {"peak_N": 3.00411740902748, "duration_ms": 13, "impulse_Ns": 0.029265229393144368}
+  },
+  "post_protected_revision": {
+    "change": "controllers without explicit MODE='torque' now fail closed with the witness disabled",
+    "science_parameters_changed": false,
+    "protected_vs_final_raw_npz_identical": true,
+    "protected_vs_final_scientific_fields_identical": true,
+    "classification": "post-outcome regression, not fresh holdout"
+  },
+  "weak_boundary": {
+    "classification": "post-freeze characterization, not fitting or holdout",
+    "genuine_contacts": 2,
+    "missed": 2,
+    "missed_examples": [
+      {"peak_N": 2.003703795957934, "duration_ms": 8, "envelope_score_peak": 2.8650311726560833},
+      {"peak_N": 2.63097229157035, "duration_ms": 10, "envelope_score_peak": 3.256325391081695}
+    ],
+    "interpretation": "The offline >1 N label is broader than the demonstrated sensor observability contract."
+  },
+  "full_exposed_d4": {
+    "cases": 385,
+    "kinds": {"reference": 189, "collision": 180, "offset": 16},
+    "r22": {"strict": 137, "false": 9, "duplicate": 2, "tool_detected": 6},
+    "candidate": {"strict": 138, "false": 9, "duplicate": 1, "tool_detected": 6},
+    "external_gain_ids": [214],
+    "external_loss_ids": [],
+    "external_earlier_ids": [219, 224, 229, 234, 239, 244],
+    "external_delayed_ids": [],
+    "tool_gain_ids": [],
+    "tool_loss_ids": [],
+    "new_tool_prealarm_ids": [],
+    "later_forcings_witness_quiet_and_score_exact": true,
+    "all_189_normals_witness_quiet": true,
+    "all_physical_hashes_exact_r10": true
+  },
+  "audit_history": {
+    "original_exact_tool_rise_gate": "FAIL",
+    "reason": "Cases 370 and 378 moved genuine rises earlier, so exact indices differed.",
+    "preserved_failed_full_sha256": "b78899bb7f4026f480ed1ec39a2dcdd0113c6aa73dc657b7a385680c1edf00f3",
+    "supplemental_result": "PASS: no added tool rise count, no later first rise, no prealarm; exact failure remains disclosed"
+  },
+  "limits": [
+    "fixed deterministic 1 ms lab trajectory and scheduled 1.2-1.4 s approach window",
+    "no demonstrated detection below 3.0 N / 13 ms; two genuine 2.0-2.63 N contacts were missed",
+    "finite stock plus two perturbed mechanics, not broad mechanics coverage",
+    "not a hidden-test, hard-real-time, hardware, safety, or default-promotion result"
+  ],
+  "alternate_path": "For variable schedules or weaker contacts, key the normal envelope to a measured approach-phase estimator and site-calibrated force-free approaches, or add a physical wrist force/torque/contact sensor."
+}

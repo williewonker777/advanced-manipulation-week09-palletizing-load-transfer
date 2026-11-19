@@ -1,0 +1,166 @@
+{
+  "schema": "r11-rebound-summary.v1",
+  "decision": "STOP_NO_INDEPENDENT_EVAL",
+  "law": "one-sided downward Cartesian damping proportional only to measured upward lower-face-center speed, spatially windowed near the taught support and capped at known weight",
+  "episodes": 32,
+  "physical_effect": {
+    "braking_work_j_range": [
+      0.4675213397134941,
+      1.5020479741755652
+    ],
+    "positive_work_j_range": [
+      0.016199606970793128,
+      0.31855212220789003
+    ],
+    "final20_speed_changes_mm_s": [
+      {
+        "mode": "servo",
+        "id": "rb0",
+        "R1": 48.43815993438517,
+        "candidate": 47.11561513041767
+      },
+      {
+        "mode": "servo",
+        "id": "rb1",
+        "R1": 79.36652144939058,
+        "candidate": 63.06111675211742
+      },
+      {
+        "mode": "servo",
+        "id": "rb2",
+        "R1": 34.490134495264755,
+        "candidate": 20.817874973274773
+      },
+      {
+        "mode": "servo",
+        "id": "rb3",
+        "R1": 27.87206993285461,
+        "candidate": 26.559366594042434
+      },
+      {
+        "mode": "torque",
+        "id": "rb0",
+        "R1": 23.185488088086508,
+        "candidate": 24.039374223781394
+      },
+      {
+        "mode": "torque",
+        "id": "rb1",
+        "R1": 56.4819773081726,
+        "candidate": 50.72668312524718
+      },
+      {
+        "mode": "torque",
+        "id": "rb2",
+        "R1": 91.81227762391875,
+        "candidate": 76.16567258443017
+      },
+      {
+        "mode": "torque",
+        "id": "rb3",
+        "R1": 20.404255961217924,
+        "candidate": 22.97124472749166
+      }
+    ],
+    "support_mean_mg_max": 0.4489195950085728,
+    "support_min_mg_max": 0.0,
+    "support_peak_mg_max": 2.431199202489006
+  },
+  "G4_by_row": [
+    {
+      "mode": "servo",
+      "id": "rb0",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": true
+    },
+    {
+      "mode": "servo",
+      "id": "rb1",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": true,
+      "peak_le_1.10mg": false
+    },
+    {
+      "mode": "servo",
+      "id": "rb2",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": true
+    },
+    {
+      "mode": "servo",
+      "id": "rb3",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": true
+    },
+    {
+      "mode": "torque",
+      "id": "rb0",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": false
+    },
+    {
+      "mode": "torque",
+      "id": "rb1",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": true,
+      "peak_le_1.10mg": false
+    },
+    {
+      "mode": "torque",
+      "id": "rb2",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": false
+    },
+    {
+      "mode": "torque",
+      "id": "rb3",
+      "mean_ge_0.50mg": false,
+      "min_ge_0.25mg": false,
+      "mean_gain_ge_0.25mg": false,
+      "peak_le_1.10mg": true
+    }
+  ],
+  "gates": {
+    "G4_rows_passed": 0,
+    "normal_cost_rows_passed": 0,
+    "saturation_rows_passed": 8,
+    "normal_FA_rows_passed": 7,
+    "impact_FA_rows_passed": 7,
+    "event_rows_passed": 8,
+    "delay_rows_passed": 7,
+    "tool_rows_passed": 8,
+    "timing_rows_passed": 8
+  },
+  "adverse": {
+    "normal_cost_ratio_range": [
+      2.244151028807381,
+      6.6381706307615325
+    ],
+    "normal_FA_added": [
+      "torque:rb3"
+    ],
+    "impact_FA_added": [
+      "torque:rb1"
+    ],
+    "delay_failed": [
+      "torque:rb3"
+    ],
+    "new_saturation": false
+  },
+  "independent_eval_opened": false,
+  "positive_retuning": false,
+  "counterexample_context": "Previously measured actual link and welded-box upward speeds agree closely while the taught reference descends, confirming real arm rebound; these exposed cases were context only and were not used for fitting or case selection.",
+  "conclusion": "The fixed damper removed kinetic energy but did not establish continuous support. Weight-capped braking produced intermittent/impulsive contact, excessive normal cost, and detector regressions; reject."
+}

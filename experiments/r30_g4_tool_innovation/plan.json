@@ -1,0 +1,36 @@
+{
+  "schema": "r30-g4-tool-innovation-preregistration.v1",
+  "status": "FROZEN_BEFORE_CANDIDATE_SCORING",
+  "classification": "post-disclosure development experiment; not blind evidence",
+  "target": "published R29 r29_pick_heavy_opposite open-gripper physical tool contact",
+  "diagnosis": {
+    "source": "E/r30/g4_tool/diagnostic-v4.json",
+    "tool_contact_ticks_offline_only": [1303, 1346],
+    "weak_opposing_force_peak_N": 12.509831077495242,
+    "weak_consecutive_samples_over_5N": 29,
+    "matched_zero_offset_peak_N": 0.9901785611720471,
+    "contact_grip_closed": false
+  },
+  "mechanism": {
+    "base": "experiments.r28_contact_memory.candidate:Detector",
+    "source": "the existing causal NormalForce estimate from encoder and JTS, projected against the normalized public commanded TCP velocity",
+    "eligibility": "gripper open and commanded TCP speed at least 0.01 m/s",
+    "signed_evidence": "minus dot(world force, normalized commanded TCP velocity)",
+    "onset_threshold_N": 5.0,
+    "threshold_rationale": "ten times the already frozen 0.5 N measured normal resolution; not fitted to the disclosed 12.51 N target peak",
+    "release_threshold_N": 2.5,
+    "onset_consecutive_samples": 3,
+    "report_samples": 8,
+    "arbitration": "base is never suppressed; optional report fires only when the base is not already high and cannot rearm until physical evidence releases"
+  },
+  "known_gates": {
+    "target": "weak contact gets one attributable rise after physical contact and no prealarm",
+    "matched": "same mass/COM/mechanics at zero offset gets no rise",
+    "strong_tools": "three published high-offset tools retain first rise within +5 ms, with no added duplicate or more than +5 active samples",
+    "signed_and_matched": "published signed forced rows and matched twins have no lost rise, added false rise, duplicate, or delay over +5 ms",
+    "physics": "all force and physical hashes remain exact",
+    "official": "run original official controls only after targeted guards pass"
+  },
+  "independent_after_freeze": "one small fixed offset matrix may run after candidate freeze; no threshold or code change is permitted from its outcomes",
+  "falsifier": "reject on target miss, matched false edge, any protected loss/delay/duplicate/duration regression, or a new false/tool prealarm; do not try another threshold"
+}

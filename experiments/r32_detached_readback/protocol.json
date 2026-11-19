@@ -1,0 +1,42 @@
+{
+  "schema": "r32-detached-readback-protocol.v1",
+  "status": "FROZEN_BEFORE_FIRST_SIMULATOR_OUTCOME",
+  "classification": "disclosed_historical_source_ownership_experiment_no_default_no_promotion",
+  "entrypoint": "experiments.r32_detached_readback.candidate:Detector",
+  "candidate_sha256": "a417c78fff0a2da124038921172b102ec426678e9b9a4a43a6a738fbdccbd4b1",
+  "test_sha256": "7072ee1ca7e6fa65178682912b39104aba5f4f1d43a3f411f2b6c637d6170c1b",
+  "parent": {
+    "entrypoint": "experiments.r31_held_identity.candidate:Detector",
+    "sha256": "1e33b4698ef3678afe72cc4e286fcab5d27b2232e7bf087fdef7500ccc674764"
+  },
+  "authoritative_endpoint_sha256": "16b1e899933066a820a606c9a5c5fe45c391c47a6c2584556271c34362fc7c66",
+  "mechanism": "Call the inherited AcquisitionEndpoint exactly once. Only its first false-to-true retired transition may arm a readback. Return at most two current samples while raw report, detached identity, complete sole ownership, mean quiet and the existing low>=3 certificate all remain true. Never clear parent retirement.",
+  "separate_outputs": ["detached_endpoint.legacy_output", "detached_endpoint.readback_active"],
+  "bound_proof": [
+    "Within one detached acquisition, inherited retired can transition false-to-true at most once because this adapter never clears it.",
+    "Only that transition assigns readback_remaining=2.",
+    "Each readback output decrements remaining; no other path increments it.",
+    "Any proof loss sets remaining=0 and cannot rearm before a real inherited endpoint reset.",
+    "An inherited fail-open raw route may remain high on its own sample, but readback_active is false and the adapter never suppresses legacy_output."
+  ],
+  "evaluation": {
+    "d4": "all 385 disclosed physical cases, R31 held identity vs readback, with registered references and original guards",
+    "r26": "full disclosed 78 inputs per arm, R31 held identity vs readback (156 episodes)",
+    "priority_cases": [311, 316],
+    "cross": "run only as a post-result diagnostic if the fixed candidate has positive width gain and no hard protection failure"
+  },
+  "success": [
+    "recover one or two detached active samples beyond R31 held identity",
+    "no new rise, duplicate, false, prealarm, stuck output or strict loss",
+    "no onset change and no parent legacy_output change",
+    "preserve attributable close second and all registered physics/forces"
+  ],
+  "falsifiers": [
+    "more than two readback_active samples in one continuous detached acquisition",
+    "readback after a raw gap, ownership loss, nonsole route, grip or short-low loss",
+    "legacy_output differs from unmodified R31 held identity",
+    "case 316 duplicate returns",
+    "any new D4 or R26 protection failure"
+  ],
+  "no_retuning_or_substitution_after_outcomes": true
+}

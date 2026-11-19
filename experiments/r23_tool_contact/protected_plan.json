@@ -1,0 +1,22 @@
+{
+  "schema":"r23-tool-contact-protected-plan.v1",
+  "frozen_before_any_listed_offset_execution":true,
+  "candidate_sha256":"302b1a593554c7ba900bb4bf4c6c77a4e7d0f72dfd12aa8ae4b549b09eba4602",
+  "model_sha256":"9633182c1d986117fd6fd541e361f9bddf28d79a05763e6012dcb118805a1e37",
+  "mechanics":["stock","contact_suction","actuator_gain"],
+  "cases":[
+    {"id":"protected_near","mass":5.42,"com":[-0.009,0.022,-0.014],"offset":[-0.0038,0.0030,0.0010]},
+    {"id":"protected_heavy","mass":7.10,"com":[0.017,-0.021,0.012],"offset":[-0.0048,0.0038,0.0014]},
+    {"id":"protected_light","mass":1.41,"com":[0.018,-0.014,0.011],"offset":[-0.0065,0.0048,0.0020]},
+    {"id":"protected_xy","mass":2.86,"com":[0.007,-0.011,0.024],"offset":[0.0060,-0.0045,0.0]}
+  ],
+  "twins":"Every offset episode is paired with the exact same mass, COM and mechanics at offset=null.",
+  "classification":"f_tool > 1 N is a genuine tool contact; offset alone is not positive ground truth.",
+  "gates":[
+    "all offset/no-offset physics is exact across base and candidate arms",
+    "candidate is bit-exact to R22 LIGHT on every no-offset twin",
+    "candidate is bit-exact to R22 LIGHT on every offset with no genuine tool contact",
+    "every genuine contact has no prealarm, delay <= 120 ms and at most one candidate rise in its contact window",
+    "at least one genuine contact is present, otherwise observability is untested"
+  ]
+}

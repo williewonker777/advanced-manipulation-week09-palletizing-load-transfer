@@ -1,0 +1,13 @@
+{
+  "schema": "r25-weak-support-confidence-lock.v1",
+  "stage": "selected on disclosed force-free fit panel after the strict physical-friction correction alone overlapped; written before audit mechanics",
+  "score_n": "max(norm(physically_unexplained_horizontal) - k * observed_support_normal, 0)",
+  "interpretation": "k*Fz is uncertainty in the delayed normal model during genuinely observed support transfer, not attributed external force and not a time mute",
+  "k_grid": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5],
+  "selection": "minimize the worst eligible fit-negative score; break ties at 1e-12 toward the smallest k",
+  "selected_k": 0.2,
+  "fit_worst_score_n": 7.404014344900873,
+  "threshold_formula": "1.10 * fit_worst_score + 0.25",
+  "frozen_threshold_n": 8.394415779390961,
+  "audit_rule": "zero audit samples above threshold; no adjustment after audit"
+}

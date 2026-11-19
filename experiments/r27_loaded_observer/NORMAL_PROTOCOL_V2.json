@@ -1,0 +1,43 @@
+{
+  "schema": "r27-loaded-observer-normal-protocol.v2",
+  "status": "LOCKED_BEFORE_V2_NORMAL_OUTCOMES_AND_BEFORE_ANY_FORCED_OUTCOME",
+  "classification": "Genuinely separate physical eligibility proposal after v1 was falsified on normal-only data; v1 remains rejected and is not retuned.",
+  "v1_failure": {
+    "report_sha256": "0b1cc56e1de0ac1279db7b5856bbb6a574c2acd33cba98e3fd61d034cfbb97ea",
+    "fit_onset_max_N": 38.75339822573303,
+    "fit_sustain_max_N": 59.780852789361575,
+    "physical_attribution": "The maxima occur at payload acquisition settling near effective grip age 48 ms and at the public table-support/place state, not during settled unsupported loaded motion. A global loaded-motion change bound cannot distinguish 6--8 N forces."
+  },
+  "mechanism": "Apply the same formal change scores only to causally settled, unsupported loaded motion: the observer-effective grip state must have been continuously true for 96 samples and the observer-effective public table-geometry support gate must be false. These are physical state gates derived from public joint/model state, not target times.",
+  "runtime_inputs": ["encoder", "joint_torque_sensor", "grip", "public_nominal_empty_model", "public_nominal_loaded_model", "public_table_geometry_gate"],
+  "forbidden_runtime_inputs": ["case_id", "target_time", "impact_schedule", "applied_force_truth", "contact_truth", "paired_no_force_trace", "mechanics_variant"],
+  "fixed_feature_rule": {
+    "observer_effective_grip_stability_samples": 96,
+    "observer_effective_table_support_allowed": false,
+    "onset_lag_samples": 8,
+    "sustain_lag_samples": 32,
+    "onset_persistence_samples": 3,
+    "pending_samples": 25,
+    "pulse_samples": 8,
+    "rearm_quiet_samples": 25,
+    "coherence": "Successive eligible eight-sample force changes must have positive dot product.",
+    "ineligible_behavior": "Reset onset, pending, pulse, ownership, and history immediately."
+  },
+  "formal_fit_rule": {
+    "onset_threshold_N": "1.05 * maximum eligible v2 fit onset score + 0.05 N",
+    "sustain_threshold_N": "1.05 * maximum eligible v2 fit 32-sample displacement + 0.05 N",
+    "ownership_release_N": "0.50 * sustain_threshold_N",
+    "no_parameter_search": true
+  },
+  "normal_data": {
+    "fit": "The same locked eight fit payload/COM/offset cases and two fit mechanics, recaptured with observer-effective eligibility telemetry.",
+    "audit": "The same disjoint eight audit cases and two disjoint audit mechanics, never used to change parameters."
+  },
+  "falsifiers": [
+    "Any candidate-only alarm on any eligible fit or audit normal sample.",
+    "Any use of current rather than observer-effective table/grip eligibility.",
+    "Any audit-driven parameter change.",
+    "Any native R26 or physical trace difference caused by passive capture."
+  ],
+  "forced_gate_deferred": "After a passing normal audit, freeze model/candidate/protocol hashes and only then run disclosed forced targets because the independent R27 challenge is already presealed."
+}

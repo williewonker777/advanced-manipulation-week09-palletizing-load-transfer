@@ -1,0 +1,32 @@
+{
+  "schema": "r22-choice-before-independent-outcomes.v1",
+  "selected_for_external_evaluation": "experiments.r22_light.candidate:Detector",
+  "default_promoted": false,
+  "scope": "Selection for evaluation; not validation by hidden results. The original two variants had already been rejected on exposed criteria. No hidden outcome used.",
+  "case_gates": {
+    "every_d4_input_certified": true,
+    "every_d4_protection_pass": true,
+    "d4_all_385": true,
+    "no_strict_loss": true,
+    "official_all": true,
+    "prior_weak_all": true,
+    "protect_old_pairs": true
+  },
+  "remaining_exposed_pair_issues": [
+    [
+      "short_gap_y_to_x",
+      "stock"
+    ],
+    [
+      "short_gap_y_to_x",
+      "changed"
+    ]
+  ],
+  "source_sha256": {
+    "selection_rule": "0650647478ce28542f66753f97242046e3c7123cb469de08908b40adf59affa3",
+    "full_d4": "99656b969d2155bfcb1e5a7cb5d3ef8cfe65d97682832538006d254d5146891f",
+    "official": "0a234aee5f3149bac2eb3f46e9748a24eca9231a2223e6462ad839a928c20847",
+    "previous_weak": "306e7ddb286c7540d9ac702e56f5418a46a367118808ea42014af3ec041d8ae5",
+    "previous_pairs": "795b0bf227ca3d409830c8baedf1550060564406dbe69ed65cc29845b4a7bb75"
+  }
+}

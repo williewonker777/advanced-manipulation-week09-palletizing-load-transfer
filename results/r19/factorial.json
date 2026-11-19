@@ -1,0 +1,54 @@
+{
+  "schema": "r19-observer-factorial-summary.v1",
+  "decision": "actual_input_history_sufficient; nominal_payload_history_not_decision_causal",
+  "scope": {
+    "force_truth_read": false,
+    "wrong_controller_advanced": false,
+    "known_forced_or_sham_opened": false,
+    "protected_or_new_cases_opened": false
+  },
+  "samples_per_stream": 6000,
+  "diagonal_all_fields_bit_exact": true,
+  "model_schedule_max_abs_delta_mm": [
+    1.2375502773663145,
+    9.827093783776364,
+    0.0
+  ],
+  "release_decision_2x2": {
+    "r16_sensor__r16_model": false,
+    "r16_sensor__r17_model": false,
+    "r17_sensor__r16_model": true,
+    "r17_sensor__r17_model": true
+  },
+  "maximum_release_score_change_from_model_swap": 0.001995426595410299,
+  "maximum_release_score_change_from_sensor_stream_swap": 0.1262554259601485,
+  "release_scores": {
+    "r16_sensor__r16_model": {
+      "3.9": 1.2651334430748407,
+      "3.901": 1.0862126494272621,
+      "3.902": 1.2635334834720748,
+      "3.903": 0.9119878232229625
+    },
+    "r16_sensor__r17_model": {
+      "3.9": 1.267128869670251,
+      "3.901": 1.0881083412169892,
+      "3.902": 1.2653343858806478,
+      "3.903": 0.9136986943626628
+    },
+    "r17_sensor__r16_model": {
+      "3.9": 1.1389181146642493,
+      "3.901": 1.0540199457825936,
+      "3.902": 1.2152046179188727,
+      "3.903": 1.030428370473768
+    },
+    "r17_sensor__r17_model": {
+      "3.9": 1.1408734437101025,
+      "3.901": 1.055877544033653,
+      "3.902": 1.2169693336509686,
+      "3.903": 1.0321048543208506
+    }
+  },
+  "repair_attempted": false,
+  "repair_reason": "No model-state-only repair follows: both cross cells follow the complete actual input stream. Individual sensor-channel swaps would create unphysical histories and are not causal repair evidence.",
+  "source_record_sha256": "3223543cfe37e8bbb0e9abee470888bf0a4271baf273a2ac1e0a093d38e5b361"
+}

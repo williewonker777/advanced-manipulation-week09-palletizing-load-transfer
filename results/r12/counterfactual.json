@@ -1,0 +1,98 @@
+{
+  "schema": "r12-counterfactual-summary.v1",
+  "status": "PASS_DETECTOR_ONLY_OFFSET_G4_FAIL",
+  "detector_study_passed": true,
+  "adoption_eligible": false,
+  "reason_not_adoption": "two of three pickup-offset physical cases fail all-four G4; detector result is separately qualified scientific evidence only",
+  "normal_model": {
+    "fit_cases": 4,
+    "full_cycle_samples": 6000,
+    "predictors": [
+      "constant",
+      "known mass"
+    ],
+    "outputs": [
+      "signed six-axis wrench difference",
+      "signed six-axis fast-innovation difference"
+    ],
+    "maximum_fit_wrench_difference": 47.54207725967632,
+    "maximum_fit_fast_difference": 35.1746905438203,
+    "model_sha256": "5684d187ebf9a531f0b976fd5dc448c96ba56a8d94803bed4778f69c5f2be50b"
+  },
+  "verification": {
+    "zero_difference_actual_bit_parity": true,
+    "fresh_normal_cases": 3,
+    "fresh_offset_cases": 3,
+    "normal_G4_passed": 3,
+    "offset_G4_passed": 1,
+    "R1_FA_total": 0,
+    "raw_hybrid_FA_total": 4,
+    "counter_FA_total": 0,
+    "physics_exact_all": true
+  },
+  "release_study": [
+    {
+      "id": "ce0",
+      "force": [
+        0,
+        17,
+        0
+      ],
+      "R1_outcome": "detected",
+      "R1_delay_ms": 51.000000000000156,
+      "raw_hybrid_outcome": "indistinguishable",
+      "counter_outcome": "detected",
+      "counter_delay_ms": 55.000000000000156,
+      "counter_false_alarms": 0
+    },
+    {
+      "id": "ce1",
+      "force": [
+        0,
+        0,
+        -35
+      ],
+      "R1_outcome": "detected",
+      "R1_delay_ms": 40.000000000000036,
+      "raw_hybrid_outcome": "indistinguishable",
+      "counter_outcome": "detected",
+      "counter_delay_ms": 34.000000000000256,
+      "counter_false_alarms": 0
+    },
+    {
+      "id": "ce2",
+      "force": [
+        13,
+        -11,
+        16
+      ],
+      "R1_outcome": "missed",
+      "R1_delay_ms": null,
+      "raw_hybrid_outcome": "indistinguishable",
+      "counter_outcome": "detected",
+      "counter_delay_ms": 66.00000000000028,
+      "counter_false_alarms": 0
+    }
+  ],
+  "disclosures": {
+    "lost_normal_events": 0,
+    "lost_release_events": 0,
+    "tool_contacts_present": false,
+    "tool_gate": "not exercised; no tool contact occurred in preregistered release cases",
+    "horizontal_impulse": "retained, +4ms vs R1",
+    "descending_impulse": "retained and 6ms earlier than R1",
+    "opposite_or_oblique_impulse": "R1 missed; counterfactual detected at 66ms",
+    "post_first_run_change": "only explicit preservation of coincident learned OR branches and result classification; deterministic model, cases, forces, thresholds and replay main/fast law unchanged; full matrix rerun produced the same scientific outcomes"
+  },
+  "pins": {
+    "plan": "ea1960c616260ccd49c28ef6ee03457d20e84c6a6a3feea29fba72b5cce1f33e",
+    "model": "5684d187ebf9a531f0b976fd5dc448c96ba56a8d94803bed4778f69c5f2be50b",
+    "freeze": "294b448f43534df44543681052aba0caa2b87f4292facac3d3f2bba44593d166",
+    "candidate": "62e40ff4d81b6d14643cb87bbebdfafb6f9d62835416ef47fe7215a5fff9aec9",
+    "qualification": "e5b955022bdab2994cfa121969c36faf96e901ee3f242810be54a5f1b9089c61",
+    "portable_model": "5684d187ebf9a531f0b976fd5dc448c96ba56a8d94803bed4778f69c5f2be50b",
+    "final_result": "239eb1ffaf3f47c9d4ba5a8eae675581ca8b3e2955ad2c5b15c604f9c8089304"
+  },
+  "retuning": false,
+  "conclusion": "Normal-only deterministic hybrid-minus-R1 subtraction eliminates release self-action alarms while preserving unit sensor slope and simultaneous collision response. It is detector-qualified in simulation, but hybrid adoption is blocked by offset G4 failures."
+}

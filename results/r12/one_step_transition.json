@@ -1,0 +1,89 @@
+{
+  "schema": "r12-transition-summary.v1",
+  "decision": "STOP_NEGATIVE",
+  "diagnosis": {
+    "exposed_normals_only": true,
+    "alarm_time_s": 3.903,
+    "main_branch": "alarm_count reaches 4; main scores 1.21 and 1.76 in exposed mid/heavy",
+    "fast_branch": "also crosses but only count 4 at alarm, below its persistence 8",
+    "normal_model": false,
+    "cause": "observer momentum switch already includes mass_dot compensation; table projection changes from prior support wrench to zero while observer/fast-filter memory retains that support wrench"
+  },
+  "new_normals": {
+    "count": 4,
+    "G4_passed": 4,
+    "cost_passed": 4,
+    "physics_exact": 4,
+    "transition_once": 4,
+    "baseline_FA": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "raw_hybrid_FA": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "coupled_FA": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "raw_hybrid_FA_times": [
+      [
+        3.903
+      ],
+      [
+        3.903
+      ],
+      [
+        3.903
+      ],
+      [
+        3.903
+      ]
+    ],
+    "coupled_FA_times": [
+      [
+        3.907
+      ],
+      [
+        3.907
+      ],
+      [
+        3.907
+      ],
+      [
+        3.907
+      ]
+    ],
+    "mean_support_gains_mg": [
+      0.7053012900653587,
+      0.6468094244775389,
+      0.730174358015459,
+      0.5931380995011374
+    ],
+    "predicted_release_wrench_z_n": [
+      31.80880370181945,
+      44.705360402731564,
+      46.75810895094715,
+      52.31620459564486
+    ],
+    "worst_cost_ratio": 1.0426016512250063
+  },
+  "impacts_opened": false,
+  "retuning": false,
+  "pins": {
+    "candidate": "90e76e0008ca3794b68d85929c10bc17562e9c7b175801d53f00158c54f2ae37",
+    "qualification": "f3e11c1c93b302eec8185158e30439b8ff973a9c943775c50e638c5dcf332fb5",
+    "hybrid": "d9fc2c3bc618e42fbed914b03257d442f44da39f7ac5b0033abafb333d493dc7",
+    "detector": "09f9a8573814a31b335b36ec5a78e0dedf262daa9039954568abd6bedd8dbc67",
+    "plan": "c5cfbad0010e09f02e8711e21ed6869ae385844bd2ae42f03c1e385c36c06a8e",
+    "diagnosis": "6d05a9146d65f3f687e1d2e1ce7976d217632492f76291e9f41dc09d011723c4"
+  },
+  "conclusion": "Exact self-action state projection removes the instantaneous prior table wrench but merely delays the false alarm by 4ms. The remaining filtered JTS/observer causal tail rebuilds main-branch persistence. Extending compensation over time would repeat prohibited release-memory/grace behavior; stop before collisions."
+}

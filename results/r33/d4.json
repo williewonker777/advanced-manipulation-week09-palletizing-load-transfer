@@ -1,0 +1,331 @@
+{
+  "actual_fresh_episodes": 385,
+  "counts": {
+    "new": {
+      "duplicates": 2,
+      "false_rises": 9,
+      "strict": 168
+    },
+    "old": {
+      "duplicates": 2,
+      "false_rises": 9,
+      "strict": 154
+    }
+  },
+  "data_sha256": "508aa98d9cb776bcbc25e26b5706e340caedae2af4010f9cf031f0e6bacd2a2f",
+  "default_changed": false,
+  "entrant": "experiments.r33_vertical_composition.candidate:Detector",
+  "entrant_sha256": "caef8fe6603ff658660c2ea2e3031946291b3028a73f51871aa082a532e878a0",
+  "fully_unchanged_alarm_traces": 371,
+  "lost_original_or_failed_guard_rows": [],
+  "other_checks": [
+    "fixed 6000 samples",
+    "exact 3D force schedule",
+    "9 identical physical trace hashes per case",
+    "matched no-force prefix",
+    "no new masks, duplicate, false, delayed or tool regressions"
+  ],
+  "phases": {
+    "pick": {
+      "r31": 50,
+      "r33": 57,
+      "total": 60
+    },
+    "place": {
+      "r31": 51,
+      "r33": 51,
+      "total": 60
+    },
+    "transport": {
+      "r31": 53,
+      "r33": 60,
+      "total": 60
+    }
+  },
+  "r31_reference_sha256": "7070f5f1651e07faa8701f28421082b7eaf32a16cb866dbf8e5d9ffa07018d43",
+  "recovered_during_applied_force": [
+    {
+      "alarm_intervals": [
+        [
+          1547,
+          1551
+        ]
+      ],
+      "amplitude_N": 5.0,
+      "delay_ms": 47,
+      "direction": "+z",
+      "id": 193,
+      "matched_reference": 125,
+      "phase": "pick"
+    },
+    {
+      "alarm_intervals": [
+        [
+          1482,
+          1486
+        ]
+      ],
+      "amplitude_N": 5.0,
+      "delay_ms": 102,
+      "direction": "-z",
+      "id": 194,
+      "matched_reference": 136,
+      "phase": "pick"
+    },
+    {
+      "alarm_intervals": [
+        [
+          1572,
+          1573
+        ]
+      ],
+      "amplitude_N": 5.0,
+      "delay_ms": 102,
+      "direction": "+xyz",
+      "id": 197,
+      "matched_reference": 34,
+      "phase": "pick"
+    },
+    {
+      "alarm_intervals": [
+        [
+          1553,
+          1557
+        ]
+      ],
+      "amplitude_N": 10.0,
+      "delay_ms": 53,
+      "direction": "+z",
+      "id": 203,
+      "matched_reference": 19,
+      "phase": "pick"
+    },
+    {
+      "alarm_intervals": [
+        [
+          1475,
+          1479
+        ]
+      ],
+      "amplitude_N": 10.0,
+      "delay_ms": 95,
+      "direction": "-z",
+      "id": 204,
+      "matched_reference": 30,
+      "phase": "pick"
+    },
+    {
+      "alarm_intervals": [
+        [
+          1549,
+          1553
+        ]
+      ],
+      "amplitude_N": 15.0,
+      "delay_ms": 49,
+      "direction": "+z",
+      "id": 213,
+      "matched_reference": 102,
+      "phase": "pick"
+    },
+    {
+      "alarm_intervals": [
+        [
+          1478,
+          1482
+        ]
+      ],
+      "amplitude_N": 15.0,
+      "delay_ms": 98,
+      "direction": "-z",
+      "id": 214,
+      "matched_reference": 113,
+      "phase": "pick"
+    },
+    {
+      "alarm_intervals": [
+        [
+          3456,
+          3460
+        ]
+      ],
+      "amplitude_N": 5.0,
+      "delay_ms": 56,
+      "direction": "+z",
+      "id": 253,
+      "matched_reference": 29,
+      "phase": "transport"
+    },
+    {
+      "alarm_intervals": [
+        [
+          1958,
+          1962
+        ]
+      ],
+      "amplitude_N": 5.0,
+      "delay_ms": 58,
+      "direction": "-z",
+      "id": 254,
+      "matched_reference": 67,
+      "phase": "transport"
+    },
+    {
+      "alarm_intervals": [
+        [
+          3451,
+          3455
+        ]
+      ],
+      "amplitude_N": 10.0,
+      "delay_ms": 51,
+      "direction": "+z",
+      "id": 263,
+      "matched_reference": 112,
+      "phase": "transport"
+    },
+    {
+      "alarm_intervals": [
+        [
+          1948,
+          1952
+        ]
+      ],
+      "amplitude_N": 10.0,
+      "delay_ms": 48,
+      "direction": "-z",
+      "id": 264,
+      "matched_reference": 150,
+      "phase": "transport"
+    },
+    {
+      "alarm_intervals": [
+        [
+          3450,
+          3454
+        ]
+      ],
+      "amplitude_N": 15.0,
+      "delay_ms": 50,
+      "direction": "+z",
+      "id": 273,
+      "matched_reference": 6,
+      "phase": "transport"
+    },
+    {
+      "alarm_intervals": [
+        [
+          1951,
+          1955
+        ]
+      ],
+      "amplitude_N": 15.0,
+      "delay_ms": 51,
+      "direction": "-z",
+      "id": 274,
+      "matched_reference": 44,
+      "phase": "transport"
+    },
+    {
+      "alarm_intervals": [
+        [
+          3449,
+          3453
+        ]
+      ],
+      "amplitude_N": 25.0,
+      "delay_ms": 49,
+      "direction": "+z",
+      "id": 283,
+      "matched_reference": 89,
+      "phase": "transport"
+    }
+  ],
+  "remaining": [
+    {
+      "amplitude_N": 5.0,
+      "direction": "-x",
+      "id": 190,
+      "matched_reference": 38,
+      "phase": "pick"
+    },
+    {
+      "amplitude_N": 5.0,
+      "direction": "+y",
+      "id": 191,
+      "matched_reference": 76,
+      "phase": "pick"
+    },
+    {
+      "amplitude_N": 5.0,
+      "direction": "+xy",
+      "id": 195,
+      "matched_reference": 174,
+      "phase": "pick"
+    },
+    {
+      "amplitude_N": 5.0,
+      "direction": "+x",
+      "id": 309,
+      "matched_reference": 51,
+      "phase": "place"
+    },
+    {
+      "amplitude_N": 5.0,
+      "direction": "-x",
+      "id": 310,
+      "matched_reference": 62,
+      "phase": "place"
+    },
+    {
+      "amplitude_N": 5.0,
+      "direction": "+z",
+      "id": 313,
+      "matched_reference": 149,
+      "phase": "place"
+    },
+    {
+      "amplitude_N": 5.0,
+      "direction": "-z",
+      "id": 314,
+      "matched_reference": 187,
+      "phase": "place"
+    },
+    {
+      "amplitude_N": 5.0,
+      "direction": "-xyz",
+      "id": 318,
+      "matched_reference": 96,
+      "phase": "place"
+    },
+    {
+      "amplitude_N": 10.0,
+      "direction": "+z",
+      "id": 323,
+      "matched_reference": 43,
+      "phase": "place"
+    },
+    {
+      "amplitude_N": 10.0,
+      "direction": "-z",
+      "id": 324,
+      "matched_reference": 54,
+      "phase": "place"
+    },
+    {
+      "amplitude_N": 15.0,
+      "direction": "+z",
+      "id": 333,
+      "matched_reference": 126,
+      "phase": "place"
+    },
+    {
+      "amplitude_N": 15.0,
+      "direction": "-z",
+      "id": 334,
+      "matched_reference": 137,
+      "phase": "place"
+    }
+  ],
+  "scope": "Disclosed D4 simulation, not an independent panel or the course original"
+}

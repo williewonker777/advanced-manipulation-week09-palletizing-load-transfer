@@ -1,0 +1,904 @@
+{
+  "schema": "r16-balanced-timing-summary.v1",
+  "decision": "base_C_active_height_fails_combined_1khz_soft_screen_cache_is_exact_p99_improvement_not_hard_rt",
+  "all_wrapper_parity": true,
+  "soft_1khz_screen": false,
+  "base_episodes": 36,
+  "impacts_run": 0,
+  "limitations": [
+    "simulation only",
+    "Python timing wrappers add small common measurement overhead",
+    "pinned single-thread measurements are not a hard real-time guarantee",
+    "active C p99 varied between repeated order-balanced runs",
+    "cache maximum worsened despite lower p99 and fewer overruns",
+    "no impacts opened"
+  ],
+  "benchmark_sha256": "161133eb16b7251987ce0de581d1f3afb02cca7b2100db05f4652d0d9ad90c48",
+  "cache_benchmark_sha256": "0c67c91802e5af9cf86fbad57ba5033de1ad42da22883f1b19ca54fe05c77f77",
+  "base_scope": "Controller + detector together. Timed candidate is C (including empty C), not the empty D fallback. Two measured episodes per arm/condition, 12000 ticks; separate wrapper-free replay.",
+  "arms_by_case": {
+    "ec1_down_active_height": {
+      "r10": {
+        "height_accepted": false,
+        "registered_height_mm": 0.0,
+        "wall": {
+          "p50_us": 185.515,
+          "p99_us": 377.4419000000001,
+          "max_us": 489.759,
+          "over_1ms": 0
+        },
+        "thread": {
+          "p50_us": 182.9445,
+          "p99_us": 373.16929999999996,
+          "max_us": 480.728,
+          "over_1ms": 0
+        },
+        "steady_wall": {
+          "p50_us": 185.485,
+          "p99_us": 377.4534999999998,
+          "max_us": 489.759,
+          "over_1ms": 0
+        },
+        "reset_wall_us": [
+          286.778,
+          232.639
+        ]
+      },
+      "r15": {
+        "height_accepted": true,
+        "registered_height_mm": 4.546789068423713,
+        "wall": {
+          "p50_us": 265.31899999999996,
+          "p99_us": 1130.6659100000004,
+          "max_us": 1907.713,
+          "over_1ms": 242
+        },
+        "thread": {
+          "p50_us": 262.4645,
+          "p99_us": 1127.4153900000003,
+          "max_us": 1903.574,
+          "over_1ms": 237
+        },
+        "steady_wall": {
+          "p50_us": 265.299,
+          "p99_us": 1126.0954499999966,
+          "max_us": 1907.713,
+          "over_1ms": 240
+        },
+        "reset_wall_us": [
+          354939.668,
+          400583.65
+        ]
+      },
+      "c": {
+        "height_accepted": true,
+        "registered_height_mm": 4.546789068423713,
+        "wall": {
+          "p50_us": 268.139,
+          "p99_us": 1043.7088999999999,
+          "max_us": 1691.734,
+          "over_1ms": 185
+        },
+        "thread": {
+          "p50_us": 265.2495,
+          "p99_us": 1040.25879,
+          "max_us": 1687.375,
+          "over_1ms": 180
+        },
+        "steady_wall": {
+          "p50_us": 268.12350000000004,
+          "p99_us": 1042.309449999999,
+          "max_us": 1691.734,
+          "over_1ms": 183
+        },
+        "reset_wall_us": [
+          468440.048,
+          388946.095
+        ]
+      }
+    },
+    "ec1_up_no_height": {
+      "r10": {
+        "height_accepted": false,
+        "registered_height_mm": 0.0,
+        "wall": {
+          "p50_us": 133.334,
+          "p99_us": 257.19110000000006,
+          "max_us": 361.538,
+          "over_1ms": 0
+        },
+        "thread": {
+          "p50_us": 130.9495,
+          "p99_us": 254.52171000000007,
+          "max_us": 357.819,
+          "over_1ms": 0
+        },
+        "steady_wall": {
+          "p50_us": 133.31400000000002,
+          "p99_us": 256.9324999999998,
+          "max_us": 361.538,
+          "over_1ms": 0
+        },
+        "reset_wall_us": [
+          218.63,
+          220.949
+        ]
+      },
+      "r15": {
+        "height_accepted": false,
+        "registered_height_mm": 0.0,
+        "wall": {
+          "p50_us": 281.109,
+          "p99_us": 704.907,
+          "max_us": 1331.465,
+          "over_1ms": 2
+        },
+        "thread": {
+          "p50_us": 278.21900000000005,
+          "p99_us": 700.5091000000001,
+          "max_us": 1326.986,
+          "over_1ms": 2
+        },
+        "steady_wall": {
+          "p50_us": 281.1085,
+          "p99_us": 704.8009999999999,
+          "max_us": 801.537,
+          "over_1ms": 0
+        },
+        "reset_wall_us": [
+          257753.03,
+          272392.072
+        ]
+      },
+      "c": {
+        "height_accepted": false,
+        "registered_height_mm": 0.0,
+        "wall": {
+          "p50_us": 228.469,
+          "p99_us": 461.80100000000004,
+          "max_us": 1144.946,
+          "over_1ms": 1
+        },
+        "thread": {
+          "p50_us": 225.734,
+          "p99_us": 458.02070000000003,
+          "max_us": 1141.447,
+          "over_1ms": 1
+        },
+        "steady_wall": {
+          "p50_us": 228.44400000000002,
+          "p99_us": 460.75345,
+          "max_us": 633.658,
+          "over_1ms": 0
+        },
+        "reset_wall_us": [
+          325250.048,
+          345173.279
+        ]
+      }
+    },
+    "sh3_no_height": {
+      "r10": {
+        "height_accepted": false,
+        "registered_height_mm": 0.0,
+        "wall": {
+          "p50_us": 125.529,
+          "p99_us": 238.74230000000009,
+          "max_us": 331.839,
+          "over_1ms": 0
+        },
+        "thread": {
+          "p50_us": 123.209,
+          "p99_us": 236.0531900000001,
+          "max_us": 328.609,
+          "over_1ms": 0
+        },
+        "steady_wall": {
+          "p50_us": 125.485,
+          "p99_us": 238.75549999999976,
+          "max_us": 331.839,
+          "over_1ms": 0
+        },
+        "reset_wall_us": [
+          220.048,
+          217.269
+        ]
+      },
+      "r15": {
+        "height_accepted": false,
+        "registered_height_mm": 0.0,
+        "wall": {
+          "p50_us": 194.904,
+          "p99_us": 409.6910000000001,
+          "max_us": 805.517,
+          "over_1ms": 0
+        },
+        "thread": {
+          "p50_us": 192.174,
+          "p99_us": 406.7420100000001,
+          "max_us": 802.318,
+          "over_1ms": 0
+        },
+        "steady_wall": {
+          "p50_us": 194.8595,
+          "p99_us": 408.72994999999986,
+          "max_us": 623.788,
+          "over_1ms": 0
+        },
+        "reset_wall_us": [
+          275265.099,
+          260197.606
+        ]
+      },
+      "c": {
+        "height_accepted": false,
+        "registered_height_mm": 0.0,
+        "wall": {
+          "p50_us": 194.684,
+          "p99_us": 423.0843000000001,
+          "max_us": 830.947,
+          "over_1ms": 0
+        },
+        "thread": {
+          "p50_us": 192.055,
+          "p99_us": 419.64130000000006,
+          "max_us": 827.737,
+          "over_1ms": 0
+        },
+        "steady_wall": {
+          "p50_us": 194.6695,
+          "p99_us": 420.1059999999984,
+          "max_us": 806.566,
+          "over_1ms": 0
+        },
+        "reset_wall_us": [
+          347995.524,
+          323443.639
+        ]
+      }
+    },
+    "empty": {
+      "r10": {
+        "height_accepted": false,
+        "registered_height_mm": 0.0,
+        "wall": {
+          "p50_us": 117.28450000000001,
+          "p99_us": 244.5398,
+          "max_us": 348.279,
+          "over_1ms": 0
+        },
+        "thread": {
+          "p50_us": 115.1045,
+          "p99_us": 241.94910000000002,
+          "max_us": 344.859,
+          "over_1ms": 0
+        },
+        "steady_wall": {
+          "p50_us": 117.27449999999999,
+          "p99_us": 244.54299999999992,
+          "max_us": 348.279,
+          "over_1ms": 0
+        },
+        "reset_wall_us": [
+          225.28,
+          226.41
+        ]
+      },
+      "r15": {
+        "height_accepted": false,
+        "registered_height_mm": 0.0,
+        "wall": {
+          "p50_us": 165.6295,
+          "p99_us": 307.1594,
+          "max_us": 425.458,
+          "over_1ms": 0
+        },
+        "thread": {
+          "p50_us": 163.2245,
+          "p99_us": 304.5791,
+          "max_us": 421.779,
+          "over_1ms": 0
+        },
+        "steady_wall": {
+          "p50_us": 165.61450000000002,
+          "p99_us": 307.16099999999994,
+          "max_us": 425.458,
+          "over_1ms": 0
+        },
+        "reset_wall_us": [
+          59468.577,
+          55170.684
+        ]
+      },
+      "c": {
+        "height_accepted": false,
+        "registered_height_mm": 0.0,
+        "wall": {
+          "p50_us": 161.3245,
+          "p99_us": 272.58090000000004,
+          "max_us": 483.429,
+          "over_1ms": 0
+        },
+        "thread": {
+          "p50_us": 158.8345,
+          "p99_us": 269.5691,
+          "max_us": 432.549,
+          "over_1ms": 0
+        },
+        "steady_wall": {
+          "p50_us": 161.3145,
+          "p99_us": 272.5884999999999,
+          "max_us": 483.429,
+          "over_1ms": 0
+        },
+        "reset_wall_us": [
+          56599.67,
+          55403.314
+        ]
+      }
+    }
+  },
+  "cache_abba": {
+    "all_exact": true,
+    "episodes": 5,
+    "counts": [
+      {
+        "hits": 976,
+        "misses": 1093
+      },
+      {
+        "hits": 976,
+        "misses": 1093
+      }
+    ],
+    "base": {
+      "all_wall": {
+        "p50_us": 236.124,
+        "p99_us": 885.3608000000002,
+        "max_us": 1208.036,
+        "over_1ms": 37
+      },
+      "all_thread": {
+        "p50_us": 233.244,
+        "p99_us": 882.2012000000001,
+        "max_us": 1204.667,
+        "over_1ms": 35
+      },
+      "steady_wall": {
+        "p50_us": 236.014,
+        "p99_us": 883.939499999999,
+        "max_us": 1208.036,
+        "over_1ms": 35
+      },
+      "steady_thread": {
+        "p50_us": 233.09949999999998,
+        "p99_us": 880.6584999999991,
+        "max_us": 1204.667,
+        "over_1ms": 33
+      },
+      "trial_wall_p99_us": [
+        909.2878900000005,
+        868.0284
+      ],
+      "trial_wall_max_us": [
+        1194.485,
+        1208.036
+      ],
+      "reset_wall_us": [
+        386435.744,
+        372617.538
+      ],
+      "reset_thread_us": [
+        339672.898,
+        338279.174
+      ],
+      "decisions": {
+        "2.463": [
+          {
+            "t_s": 2.463,
+            "wall_us": 704.127,
+            "thread_us": 701.068
+          },
+          {
+            "t_s": 2.463,
+            "wall_us": 699.487,
+            "thread_us": 696.657
+          }
+        ],
+        "3.550": [
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1135.635,
+            "thread_us": 1132.426
+          },
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1100.405,
+            "thread_us": 1097.267
+          }
+        ]
+      },
+      "top_samples": [
+        [
+          {
+            "t_s": 3.863,
+            "wall_us": 1194.485,
+            "thread_us": 1190.917
+          },
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1135.635,
+            "thread_us": 1132.426
+          },
+          {
+            "t_s": 3.864,
+            "wall_us": 1123.215,
+            "thread_us": 1119.787
+          },
+          {
+            "t_s": 3.86,
+            "wall_us": 1123.205,
+            "thread_us": 1120.026
+          },
+          {
+            "t_s": 3.85,
+            "wall_us": 1114.106,
+            "thread_us": 1110.706
+          },
+          {
+            "t_s": 3.742,
+            "wall_us": 1054.916,
+            "thread_us": 1051.957
+          },
+          {
+            "t_s": 3.806,
+            "wall_us": 1032.176,
+            "thread_us": 1029.087
+          },
+          {
+            "t_s": 3.9,
+            "wall_us": 1030.476,
+            "thread_us": 1027.476
+          }
+        ],
+        [
+          {
+            "t_s": 3.999,
+            "wall_us": 1208.036,
+            "thread_us": 1204.667
+          },
+          {
+            "t_s": 3.882,
+            "wall_us": 1174.816,
+            "thread_us": 1171.867
+          },
+          {
+            "t_s": 4.0360000000000005,
+            "wall_us": 1166.915,
+            "thread_us": 1163.027
+          },
+          {
+            "t_s": 3.879,
+            "wall_us": 1160.806,
+            "thread_us": 1157.466
+          },
+          {
+            "t_s": 3.8810000000000002,
+            "wall_us": 1158.815,
+            "thread_us": 1155.227
+          },
+          {
+            "t_s": 3.883,
+            "wall_us": 1154.126,
+            "thread_us": 1150.857
+          },
+          {
+            "t_s": 3.88,
+            "wall_us": 1151.036,
+            "thread_us": 1147.786
+          },
+          {
+            "t_s": 3.887,
+            "wall_us": 1142.526,
+            "thread_us": 1139.326
+          }
+        ]
+      ],
+      "over_1ms_samples": [
+        [
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1135.635
+          },
+          {
+            "t_s": 3.604,
+            "wall_us": 1002.255
+          },
+          {
+            "t_s": 3.642,
+            "wall_us": 1021.376
+          },
+          {
+            "t_s": 3.6590000000000003,
+            "wall_us": 1018.606
+          },
+          {
+            "t_s": 3.662,
+            "wall_us": 1019.926
+          },
+          {
+            "t_s": 3.68,
+            "wall_us": 1009.076
+          },
+          {
+            "t_s": 3.742,
+            "wall_us": 1054.916
+          },
+          {
+            "t_s": 3.745,
+            "wall_us": 1027.666
+          },
+          {
+            "t_s": 3.806,
+            "wall_us": 1032.176
+          },
+          {
+            "t_s": 3.807,
+            "wall_us": 1025.976
+          },
+          {
+            "t_s": 3.85,
+            "wall_us": 1114.106
+          },
+          {
+            "t_s": 3.86,
+            "wall_us": 1123.205
+          },
+          {
+            "t_s": 3.863,
+            "wall_us": 1194.485
+          },
+          {
+            "t_s": 3.864,
+            "wall_us": 1123.215
+          },
+          {
+            "t_s": 3.9,
+            "wall_us": 1030.476
+          },
+          {
+            "t_s": 4.123,
+            "wall_us": 1028.235
+          }
+        ],
+        [
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1100.405
+          },
+          {
+            "t_s": 3.734,
+            "wall_us": 1071.546
+          },
+          {
+            "t_s": 3.787,
+            "wall_us": 1116.045
+          },
+          {
+            "t_s": 3.839,
+            "wall_us": 1095.266
+          },
+          {
+            "t_s": 3.843,
+            "wall_us": 1074.345
+          },
+          {
+            "t_s": 3.86,
+            "wall_us": 1133.375
+          },
+          {
+            "t_s": 3.869,
+            "wall_us": 1003.156
+          },
+          {
+            "t_s": 3.879,
+            "wall_us": 1160.806
+          },
+          {
+            "t_s": 3.88,
+            "wall_us": 1151.036
+          },
+          {
+            "t_s": 3.8810000000000002,
+            "wall_us": 1158.815
+          },
+          {
+            "t_s": 3.882,
+            "wall_us": 1174.816
+          },
+          {
+            "t_s": 3.883,
+            "wall_us": 1154.126
+          },
+          {
+            "t_s": 3.884,
+            "wall_us": 1067.856
+          },
+          {
+            "t_s": 3.8850000000000002,
+            "wall_us": 1005.676
+          },
+          {
+            "t_s": 3.886,
+            "wall_us": 1040.506
+          },
+          {
+            "t_s": 3.887,
+            "wall_us": 1142.526
+          },
+          {
+            "t_s": 3.888,
+            "wall_us": 1140.826
+          },
+          {
+            "t_s": 3.9250000000000003,
+            "wall_us": 1040.106
+          },
+          {
+            "t_s": 3.963,
+            "wall_us": 1081.745
+          },
+          {
+            "t_s": 3.999,
+            "wall_us": 1208.036
+          },
+          {
+            "t_s": 4.0360000000000005,
+            "wall_us": 1166.915
+          }
+        ]
+      ]
+    },
+    "cached": {
+      "all_wall": {
+        "p50_us": 220.66899999999998,
+        "p99_us": 827.1942100000011,
+        "max_us": 1304.265,
+        "over_1ms": 16
+      },
+      "all_thread": {
+        "p50_us": 217.95499999999998,
+        "p99_us": 823.9360000000008,
+        "max_us": 1300.476,
+        "over_1ms": 15
+      },
+      "steady_wall": {
+        "p50_us": 220.594,
+        "p99_us": 821.7315499999966,
+        "max_us": 1304.265,
+        "over_1ms": 14
+      },
+      "steady_thread": {
+        "p50_us": 217.809,
+        "p99_us": 818.5329499999976,
+        "max_us": 1300.476,
+        "over_1ms": 13
+      },
+      "trial_wall_p99_us": [
+        826.2636100000012,
+        827.2090900000014
+      ],
+      "trial_wall_max_us": [
+        1247.765,
+        1304.265
+      ],
+      "reset_wall_us": [
+        384032.124,
+        375797.075
+      ],
+      "reset_thread_us": [
+        341118.574,
+        342776.42
+      ],
+      "decisions": {
+        "2.463": [
+          {
+            "t_s": 2.463,
+            "wall_us": 693.797,
+            "thread_us": 690.878
+          },
+          {
+            "t_s": 2.463,
+            "wall_us": 690.328,
+            "thread_us": 687.268
+          }
+        ],
+        "3.550": [
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1094.436,
+            "thread_us": 1091.257
+          },
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1055.985,
+            "thread_us": 1052.787
+          }
+        ]
+      },
+      "top_samples": [
+        [
+          {
+            "t_s": 3.7110000000000003,
+            "wall_us": 1247.765,
+            "thread_us": 1244.566
+          },
+          {
+            "t_s": 3.6430000000000002,
+            "wall_us": 1144.237,
+            "thread_us": 1140.356
+          },
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1094.436,
+            "thread_us": 1091.257
+          },
+          {
+            "t_s": 4.172,
+            "wall_us": 1086.856,
+            "thread_us": 1083.296
+          },
+          {
+            "t_s": 3.857,
+            "wall_us": 1019.736,
+            "thread_us": 1016.587
+          },
+          {
+            "t_s": 3.7800000000000002,
+            "wall_us": 1013.816,
+            "thread_us": 1010.606
+          },
+          {
+            "t_s": 3.7840000000000003,
+            "wall_us": 1011.926,
+            "thread_us": 1008.836
+          },
+          {
+            "t_s": 3.8080000000000003,
+            "wall_us": 958.447,
+            "thread_us": 955.097
+          }
+        ],
+        [
+          {
+            "t_s": 3.8200000000000003,
+            "wall_us": 1304.265,
+            "thread_us": 1300.476
+          },
+          {
+            "t_s": 3.8810000000000002,
+            "wall_us": 1219.065,
+            "thread_us": 1215.716
+          },
+          {
+            "t_s": 4.039,
+            "wall_us": 1201.616,
+            "thread_us": 1198.196
+          },
+          {
+            "t_s": 3.5700000000000003,
+            "wall_us": 1127.286,
+            "thread_us": 1123.956
+          },
+          {
+            "t_s": 4.167,
+            "wall_us": 1114.656,
+            "thread_us": 1111.046
+          },
+          {
+            "t_s": 4.196,
+            "wall_us": 1092.086,
+            "thread_us": 1088.847
+          },
+          {
+            "t_s": 3.5660000000000003,
+            "wall_us": 1070.416,
+            "thread_us": 1067.116
+          },
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1055.985,
+            "thread_us": 1052.787
+          }
+        ]
+      ],
+      "over_1ms_samples": [
+        [
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1094.436
+          },
+          {
+            "t_s": 3.6430000000000002,
+            "wall_us": 1144.237
+          },
+          {
+            "t_s": 3.7110000000000003,
+            "wall_us": 1247.765
+          },
+          {
+            "t_s": 3.7800000000000002,
+            "wall_us": 1013.816
+          },
+          {
+            "t_s": 3.7840000000000003,
+            "wall_us": 1011.926
+          },
+          {
+            "t_s": 3.857,
+            "wall_us": 1019.736
+          },
+          {
+            "t_s": 4.172,
+            "wall_us": 1086.856
+          }
+        ],
+        [
+          {
+            "t_s": 3.5500000000000003,
+            "wall_us": 1055.985
+          },
+          {
+            "t_s": 3.5660000000000003,
+            "wall_us": 1070.416
+          },
+          {
+            "t_s": 3.5700000000000003,
+            "wall_us": 1127.286
+          },
+          {
+            "t_s": 3.8200000000000003,
+            "wall_us": 1304.265
+          },
+          {
+            "t_s": 3.8810000000000002,
+            "wall_us": 1219.065
+          },
+          {
+            "t_s": 4.031,
+            "wall_us": 1001.306
+          },
+          {
+            "t_s": 4.039,
+            "wall_us": 1201.616
+          },
+          {
+            "t_s": 4.167,
+            "wall_us": 1114.656
+          },
+          {
+            "t_s": 4.196,
+            "wall_us": 1092.086
+          }
+        ]
+      ]
+    }
+  },
+  "controller_only_distinct_runs": {
+    "pinned_product": {
+      "passed": true,
+      "case_count": 28,
+      "max_p99_us": 755.6840025063142,
+      "over_800_us": {}
+    },
+    "independent": {
+      "passed": false,
+      "case_count": 28,
+      "max_p99_us": 1339.922390325228,
+      "over_800_us": {
+        "ec1:down": 1022.6384083216549,
+        "ec2:down": 1339.922390325228
+      }
+    }
+  }
+}

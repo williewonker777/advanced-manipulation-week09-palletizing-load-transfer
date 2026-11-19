@@ -1,0 +1,117 @@
+{
+  "schema": "R10_PATH_FINDINGS.v1",
+  "status": "REJECT_KEEP_R1",
+  "path_clock": {
+    "scope": {
+      "paired_conditions": 11,
+      "episodes": 22,
+      "release_grid_frozen": false,
+      "official": false
+    },
+    "failed_gates": [
+      "normal_costs",
+      "event_losses",
+      "G4_support_nonworse"
+    ],
+    "successful_but_insufficient": {
+      "baseline_saturated_samples": 18,
+      "candidate_saturated_samples": 0,
+      "minimum_actual_j2_margin_nm": 10.329486407225602,
+      "actual_worst_catchup_s": 0.073,
+      "candidate_worst_combined_p99_us": 362.13831000000005
+    },
+    "normal_counterexample": {
+      "condition": "N0-reference",
+      "rms_ratio": 1.0612160048546617,
+      "max_tcp_ratio": 1.1299729166189147,
+      "peak_tracking_delta_mm": 2.0898656632841246
+    },
+    "event_counterexample": {
+      "condition": "U1-collision",
+      "baseline": {
+        "outcome": "detected",
+        "delay_ms": 53.000000000000384,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      },
+      "candidate": {
+        "outcome": "missed",
+        "delay_ms": null,
+        "prealarm": false,
+        "false_alarms": 0,
+        "false_alarm_times": [],
+        "tool_present": false,
+        "tool_detected": false,
+        "tool_prealarm": false,
+        "tool_delay_ms": null
+      }
+    },
+    "G4_counterexample": {
+      "condition": "U0-reference",
+      "table_mean_ratio": 0.4986728637991845,
+      "baseline_table_mean_n": 0.039792787021774786,
+      "candidate_table_mean_n": 0.019843583062699455
+    },
+    "mechanism": "The endpoint-matched clock removes the planned torque peak by leading the same spatial path 2.4--3.0 ms and redistributing clock rate by about 3--3.6%. That creates a 1.6--2.1 mm transient plant-state deviation. Exact command parity at 3.88 s recovers tracking quickly but cannot erase detector history.",
+    "evaluator_incident": {
+      "first_run_result_written": false,
+      "cause": "G4 report attempted a zero-baseline ratio",
+      "correction": "A separately hashed wrapper reran the same frozen law and matrix; zero/zero is parity.",
+      "gate_changed": false
+    },
+    "pins": {
+      "plan": "306c63d4e3289c4383c13b366160a9e3dd8d2892579feee2542ca05146157692",
+      "controller.py": "4ae335173bd38b536815fb3fa1b458e7d3f63cf125f9fa5b246f1045dfd74c3b",
+      "runner.py": "135f006387d813ff0b3f495037811c561fc0f40d657cb26c6d2512a924bd9e35",
+      "run_development.py": "3a684278bc45dc341622075d495dc92a728d2e3f94892ba6c5562493debea421",
+      "FAST2.py": "2db6351f98a139137f20d835f940adb4e823aef273cc84117d37ee982611062d",
+      "r1_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
+      "run_development_v2.py": "2254bc0d10241881699f7dd219640dff31614ac0494465cc3dda6c2d34e7bd4e",
+      "development_plan_record": "306c63d4e3289c4383c13b366160a9e3dd8d2892579feee2542ca05146157692",
+      "development_result_record": "a36c224435d69ac09f37df6a15cfa1d39e884f2573165fe6ff84f0c224140339",
+      "development_decision_record": "62d23e664f3fdcd2506526a511662b6d8bf4e4acac272ac5101f0ae34dc5d7a7"
+    }
+  },
+  "bounded_envelope_solver": {
+    "status": "VERIFIED_FIXED_SOLVER_GATE_FAIL",
+    "decision": "STOP_NO_PLANT_OR_RELEASE_GRID",
+    "best_found": {
+      "baseline_worst_j2_peak_nm": 335.1913842474275,
+      "optimized_worst_j2_peak_nm": 333.7983663420921,
+      "planned_headroom_gain_nm": 1.3930179053353982,
+      "tcp_deviation_mm": 0.14999999872958486,
+      "phase_shift_ms": 0.2284593319967776,
+      "clock_rate_range": [
+        0.9959717551362782,
+        1.0029340957225652
+      ],
+      "clock_acceleration_abs_max": 0.126954915480105
+    },
+    "meaningful_gain_gate_nm": 5.0,
+    "tradeoff": {
+      "gain_per_mm_at_boundary": 9.286786114223146,
+      "empirical_tcp_mm_for_5nm_if_local_slope_persisted": 0.5383993922657772,
+      "budget_multiple": 3.589329281771848
+    },
+    "qualification": "Best point found by the deterministic projected coordinate solver over the declared five-term basis at 6.25 us terminal coefficient step; not a formal global optimum or upper-bound certificate. The 5 Nm TCP figure is a scale extrapolation if the local slope persisted, not a physical lower bound.",
+    "plant_episodes": 0,
+    "release_grid_frozen": false,
+    "pins": {
+      "solver.py": "0a1d64cbfe2c81dac42b0315356244af2057aeab0d89b6c94000bfcdd2c92055",
+      "run_solver.py": "5133726fba7640ca23782aae8794c090b36f1d188af77dda09059e133953e46d",
+      "verify_solver.py": "98a906caa5d7c1911a89e59baf1facd44f55c5f42723d652f5303877a381e3a0",
+      "solver_result": "4956e4d6d730558eaa16aa3ee808a3b1505f67d98ead85f2e299d21cf483dd21",
+      "solver_decision_record": "1073dd1b23d6eef69abe39e53cc2f834e07c06732def01075e2799a91405fc94"
+    }
+  },
+  "limits": [
+    "The 11-condition path-clock matrix is finite development evidence, not an official or hidden evaluation.",
+    "The fixed five-term solver result is the best point found in that basis and solver, not a global infeasibility proof.",
+    "The 0.538 mm figure is a same-direction local-slope extrapolation, not a physical lower bound."
+  ]
+}
