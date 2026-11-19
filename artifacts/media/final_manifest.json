@@ -1,29 +1,36 @@
 {
-  "schema_version": 1,
-  "generation_command": "env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 MUJOCO_GL=glfw LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe __GLX_VENDOR_LIBRARY_NAME=mesa python tools/render_final_demo.py --output-dir artifacts/media --raw-dir \"$RAW_DIR\" --ffmpeg ffmpeg",
-  "simulation_source": "two fresh unmodified sim.runner.run_episode episodes (servo A, torque B) with the submission/ files at the official 8 kg, 1.42 s, +y 10 N condition",
-  "scope_note": "Illustration of one official evaluator condition with the final hand-in; the evaluator outputs in results/final/official are the score record.",
-  "rendering_note": "qpos replay in separate MjData; desired TCP marker radius 15 mm; force arrow scale 0.20 m per 15 N; slow motion around pick, collision and release",
+  "schema_version": 2,
+  "generation_command": "env -u PYTHONPATH PYTHONDONTWRITEBYTECODE=1 MUJOCO_GL=glfw LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe __GLX_VENDOR_LIBRARY_NAME=mesa python tools/render_original_vs_final.py --output-dir artifacts/media --raw-dir \"$RAW_DIR\" --ffmpeg ffmpeg",
+  "simulation_source": "six fresh unmodified sim.runner.run_episode episodes at 8 kg: a no-collision reference and the official 1.42 s +y 10 N collision for the course servo controller + detector and for the submission/ servo A and torque B",
+  "scope_note": "Illustration of one official evaluator condition; cells use the evaluate.py rule. The evaluator outputs in results/final/official are the score record.",
+  "rendering_note": "qpos replay in separate MjData; desired TCP marker radius 15 mm; force arrow 0.20 m per 15 N; slow motion around pick, collision and release; one graph per row",
   "software_gl": {
     "vendor": "Mesa",
     "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
     "version": "4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2"
   },
   "ffmpeg": "ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers",
+  "kit_manifest_sha256": "7ea083e92b7fa9fd303ce91a69271f58dd6fb9ace22613039f469a84e2867294",
   "source_hashes": {
     "submission/my_servo.py": "40706968fb72ed8d7a864e44e828787ae8db0365c2927e5166e4a5b2d83bba8b",
     "submission/my_torque.py": "8f66f8f03cde65fcc6d8ef2f11643691cd8fe2e96dad6eaeaa17a0c7aa3db371",
     "submission/my_detector.py": "010f8a1c6363866d24ed3832b35eea34e946007679eab754f02ca98c958a4b7e"
   },
   "episodes": {
+    "original": {
+      "cell": "구분 불가",
+      "detect_delay_ms": 5.0000000000001155,
+      "false_alarms": 3,
+      "alarm_before_collision": false
+    },
     "servo": {
-      "selected_method": "r32-servo",
+      "cell": "66 ms",
       "detect_delay_ms": 66.00000000000006,
       "false_alarms": 0,
       "alarm_before_collision": false
     },
     "torque": {
-      "selected_method": "r31-torque",
+      "cell": "43 ms",
       "detect_delay_ms": 43.00000000000015,
       "false_alarms": 0,
       "alarm_before_collision": false
@@ -32,17 +39,13 @@
   "frames": 101,
   "fps": 15,
   "gif_fps": 8,
-  "gif_size": [
-    960,
-    540
-  ],
   "media": [
     {
-      "file": "artifacts/media/11_final_servo_torque.mp4",
-      "bytes": 230041,
-      "sha256": "9aea0f140f789fb968b2e3cf2f2c28ca08b2095969a24a63ad27886b95659ac4",
+      "file": "artifacts/media/11_original_vs_final.mp4",
+      "bytes": 311580,
+      "sha256": "042815d968c0837c23be58e42a5b5aca6fd57f39a27bfc03d0b71024e38fc5b4",
       "width": 1280,
-      "height": 720,
+      "height": 1100,
       "avg_frame_rate": "15/1",
       "r_frame_rate": "15/1",
       "fps": 15.000000742574294,
@@ -50,11 +53,11 @@
       "duration_s": 6.733333
     },
     {
-      "file": "artifacts/media/11_final_servo_torque.gif",
-      "bytes": 1020295,
-      "sha256": "70365a393869768eafd7d04b03887069b8acbb210ea986519ff9bc493e67a1d6",
+      "file": "artifacts/media/11_original_vs_final.gif",
+      "bytes": 1238071,
+      "sha256": "d3c60ccd00e0d6228f14d164faccf56c025c8056b4aebc86664cbd91f9671351",
       "width": 960,
-      "height": 540,
+      "height": 826,
       "avg_frame_rate": "25/3",
       "r_frame_rate": "8/1",
       "fps": 7.988165680473373,
@@ -62,5 +65,5 @@
       "duration_s": 6.76
     }
   ],
-  "total_media_bytes": 1250336
+  "total_media_bytes": 1549651
 }

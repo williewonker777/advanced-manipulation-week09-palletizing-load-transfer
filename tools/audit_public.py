@@ -35,7 +35,7 @@ MEDIA_STEMS = ("01_servo_no_collision", "02_torque_no_collision",
 R2_MEDIA_STEMS = ("07_r2_servo_comparison", "08_r2_torque_comparison")
 R6_MEDIA_STEMS = ("09_r6_servo_positive_comparison", "10_r6_servo_negative_comparison")
 R7_MEDIA_STEMS = ("09_r7_servo_positive_comparison", "10_r7_servo_negative_comparison")
-FINAL_MEDIA_STEMS = ("11_final_servo_torque",)
+FINAL_MEDIA_STEMS = ("11_original_vs_final",)
 ALLOWED_MEDIA_TAGS = {"encoder", "language", "handler_name", "vendor_id", "major_brand",
                       "minor_version", "compatible_brands"}
 # The course interface signature is an API contract, not prose redistribution.
